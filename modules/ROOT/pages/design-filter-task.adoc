@@ -1,0 +1,103 @@
+= To Transform from a Full Set of Data to a Subset (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In this procedure, you filter data that your app consumes from a REST service. When the flow executes, the code drills down into the full set of data, consisting of complete user profiles, and isolates just the user names. The key utility covered in this procedure is Transform. This utility transforms input from the complete profile of user data to only the user names. You can write the code yourself or use the visual mapper to generate the code. In this procedure, you use the visual mapper. You need to provide input and output data types for a successful mapping and code generation.
+
+This procedure builds on the flows you built earlier to create a basic Mule application and to add an expression for dynamic requests.
+
+== To Create the Input Data Type
+
+. In Design Center, after performing the procedure to dynamically change the URL of a request, proceed to the next step if the project is running. Otherwise, click Run. Execute the flow as follows:
+* Click options image:run-app-design-env-design-center-2428b.png[].
+* Click Copy Link.
+* Paste the link in a browser or client, and type */getpath?path=users* at the end.
++
+The HTTP Listener hears the request, and starts the app. The JSON Placeholder profile of each user appears in the browser. The green status indicators appear in all parts of the flow.
+. Copy the browser output, the user profiles, to the clipboard.
+. In Design Center, at the end of the flow, click image:arrange-cards-flow-design-center-e256e.png[].
+. Search for and select Transform.
+. In the center pane, click Create New Data Type.
+. In New Type, enter the following values:
++
+* Name: *userlist*
+* Format: JSON
+* Type: From example
+* In Add Your JSON Example Here, remove the {} and paste the browser output you copied.
++
+image::create-userlist.png[]
+* Click Save.
+
+== To Create the Output Data Type
+
+. Click Data Types + to create a second, output data type.
+. In New Type, enter the following values:
++
+* Name: *namelist*
+* Format: JSON
+* Type: From Example
+* In Add Your JSON Example Here, Remove the default type and add this:
++
+*["john doe", "john smith"]*
+* Click Save.
++
+. In Input Payload, click payload options.
++
+image::inputoptions.png[height=199,width=426]
++
+. Select Set.
+. In Select Type, double-click userlist.
++
+The preview of the example you provided during creation of the data type appears.
++
+image::selecttype.png[height=646,width=797]
+. Click Select.
++
+The payload reflects the structure of the array data type.
+. In Output Payload, click payload options, select Set, double-click the namelist type, and click Select.
+. Click Mappings, and drag `name String?` from Input to `item String` in Output payload.
++
+Preview shows the list of names:
++
+image::map-name-to-string.png[]
++
+DataWeave code is generated. Click Script to view the code:
++
+----
+%dw 2.0
+
+output application/json
+
+---
+(payload map (value0, index0) -> value0.name)
+----
++
+. Click Run to execute the flow:
+* Click options image:run-app-design-env-design-center-2428b.png[], click Copy Link.
+* Paste the link in a browser or client, and type */getpath?path=users* at the end.
++
+The list of names appears in the browser.
++
+----
+[
+  "Leanne Graham",
+  "Ervin Howell",
+  "Clementine Bauch",
+  "Patricia Lebsack",
+  "Chelsey Dietrich",
+  "Mrs. Dennis Schulist",
+  "Kurtis Weissnat",
+  "Nicholas Runolfsdottir V",
+  "Glenna Reichert",
+  "Clementina DuBuque"
+]
+----
+
+Now, if you remove Transform from the flow, you are ready to drill down into JSON.
+
+== See Also
+
+* link:/design-center/v/1.0/for-each-task-design-center[To Drill Down into JSON]
+* link:/design-center/v/1.0/to-create-a-new-project[To Create a Basic Mule Application]
+* link:/design-center/v/1.0/design-dynamic-request-task[To Dynamically Change the URL of a Request]

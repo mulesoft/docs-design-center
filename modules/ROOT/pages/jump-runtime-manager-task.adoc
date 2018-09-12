@@ -1,0 +1,19 @@
+= To Manage a Mule App in Runtime Manager
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When you run an app in Design Center, it appears in Runtime Manager. You can jump to Runtime Manager from Options to manage the app there. In Runtime Manager, you can configure runtime operations of designs you run in Design Center.
+
+. Create an app and click Run.
+. In Design Center, click image:manage-connector-versions-design-center-ced9a.png[] Options.
+. Select View in Runtime Manager.
++
+image::options-menu.png[]
+
+// image::log-options.png[]
+
+== See Also
+
+* xref:runtime-manager::index.adoc[Runtime Manager]
+* link:/design-center/v/1.0/promote-app-prod-env-design-center[To Deploy an Application to a Production Environment]

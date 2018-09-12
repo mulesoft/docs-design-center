@@ -1,0 +1,50 @@
+= To Change the Target Output of a Transformation (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+By default, the Transform component directs output to the payload of the Mule message object. You can change the target of the transformation to a variable or attribute if you use Transform instead of DataWeave through the Map control of a field you are editing.
+
+This procedure changes the target output of a transformation to an attribute:
+
+. In Transform, in Output Payload, in the default-selected payload, click Edit Transformation.
++
+image::edit-transformation.png[height=152,width=263]
+. In Edit Transformation, select a type: Attributes, Payload, or Vars. For example, select Attributes, and Save.
++
+In Output Attributes, the otherThing attribute and suggested type, number?, appears.
++
+image::otherthing.png[height=146,width=333]
+
+The output of the flow is now set to otherThing.
+
+This procedure changes the target output of a transformation to a variable. This procedure assumes you set up a custom data type of type string in JSON format.
+
+. Click Edit Transformation again, and in Type, select Vars.
+. In Name, type a name for the variable, for example, *foo*, and Save.
+. In the middle of the output pane, click Set Data Type.
+. Select the custom string data type in JSON format that you set up earlier.
+. Select Script, and replace null with the following script:
++
+----
+%dw 2.0
+
+output application/java
+---
+"my script"
+----
++
+. Select Mappings.
+. Select Output Vars - Foo > Edit Transformation.
++
+image::output-vars.png[]
++
+. In Type, select Payload, and Save.
++
+The target output of the payload changes to "my script".
+
+
+To remove the output attributes or variables:
+
+In the Output pane, click image:trash.png[].

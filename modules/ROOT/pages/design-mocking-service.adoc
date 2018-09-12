@@ -1,0 +1,63 @@
+= Simulate Calls to an API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Use the mocking service to mock HTTP requests to an API that you are creating the specification for. The service returns responses (both HTTP status codes and example payloads) that are defined in the specification.
+
+== Before you begin
+
+You must be working in a project to create an API specification in Design Center.
+
+== About this task
+Simulating calls to the API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to the API in Design Center before publishing the API specification or in Exchange after publishing the API specification there.
+
+When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI, the mocking service comments it out. When you deactivate the mocking service, it removes the base URI that it used and uncomments your base URI. For example, if your base URI is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://mocksvc.mulesoft.com/mocks/+`, etc. is the URI used by the mocking service:
+
+----
+#%RAML 1.0
+title: placeholder
+version: 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/d0422e05-e779-4016-9d9e-027e50cd15a7
+# baseUri: http://jsonplaceholder.typicode.com
+----
+
+You can run the mocking service from the code editor, the visual editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
+
+
+== Procedure
+
+* If you are using the code editor in Design Center:
++
+. Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
+. In the API summary panel, expand completely the resource with the endpoint that you want to test.
++
+_Result:_ After you expand the resource, you will see one or more buttons. The labels on the buttons match the different request types for the resource.
+. Click the button that matches the request type that you want to simulate.
++
+_Result:_ The panel displays information about the request type, its parameters, and the codes and messages that it returns.
+. Click *Try It* in the top-right corner of the editor.
++
+_Result:_ The URI for the endpoint is displayed. If the endpoint requires parameters, specify values for them. Also, you can view the headers and add custom headers.
+. Click *Send*.
++
+_Result:_ The panel displays the result below the *Send* button.
+
+* If you are using the visual editor in Design Center:
++
+. Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
+. In the left panel, select the resource with the endpoint that you want to test.
+. At the top of the center panel of the editor, select the request type that you want to test.
+. Click *Try It* in the lower-right corner of the editor.
++
+_Result:_ The right panel displays the request URL. It also requires you to specify the values for any parameters that the endpoint requires. Finally, it displays headers and allows you to add custom headers.
+. Click *Send*.
++
+_Result:_ The panel displays the result below the *Send* button.
+
+== What to do next
+
+If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI that it used to call your API and to uncomment the base URI that you provided in the specification.
+
+== See also
+* xref:exchange::ex2-to-simulate-api-data.adoc[To Simulate Data in REST APIs (in Anypoint Exchange)]

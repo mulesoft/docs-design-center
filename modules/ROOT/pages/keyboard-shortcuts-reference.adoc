@@ -1,0 +1,14 @@
+= Keyboard Shortcuts Reference
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can use the following keyboard shortcuts as you design flows for Mule apps. These shortcuts are _not_ supported in the IE browser:
+
+* Shift+Enter
++
+Applies changes and closes the expression editor within the mapping editor.
++
+* Esc
++
+Closes the expression editor inside the mapping editor.

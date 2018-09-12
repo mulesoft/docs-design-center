@@ -1,0 +1,26 @@
+= To View Logs
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In Design Center, expand the area at the bottom of the flow design.
+
+image::log-view.png[]
+
+Logs, if there are any, appear.
+
+image::to-debug-a-flow-designer-project-30b5a.png[]
+
+Alternatively, in Design Center:
+
+. Click image:manage-connector-versions-design-center-ced9a.png[] Options.
+. Select Open Logs.
+
+
+////
+. Select Options > Clear Logs.
++
+image::log-options.png[]
++
+The log window empties.
+////

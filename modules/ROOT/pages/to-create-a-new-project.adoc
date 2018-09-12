@@ -1,0 +1,30 @@
+= To Create a Design Center Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In Design Center, you develop a Mule app or an API, but first, you need to create a Design Center project. How you create a project varies slightly depending on how your Anypoint Platform set up. If the administrator of your organization created more than one design environment, you need to select which of the design environments you want to use. In this case, the Target Environment field is selected. If there is only one design environment, its selected by default. In this case, you aren't prompted to select a design environment.
+
+. Click Create image:plus-create.png[create button,height=25, width=64].
+. Select Mule Application, API Specification, or API Fragment.
+. If you select API Specification, select one of the following:
++
+* Start with API designer
++
+In this mode, you work in code view.
++
+* Try API designer visual editing capabilities
++
+If you select API Fragment, select the type of fragment, such as a trait.
++
+. In Project Name, enter the name of the project carefully. Give this step some thought because you cannot make project name changes later.
+. If Target Environment appears, select an environment.
+. Click Create.
+
+Now, you are ready to create a Mule application, API specification, or API fragment.
+
+== See Also
+
+* link:/design-center/v/1.0/create-basic-app-task[To Create a Basic Mule App]
+* link:/design-center/v/1.0/design-raml-api-task[To Design a RAML API Specification]
+* link:/design-center/v/1.0/create-reuse-part-task[To Create and Publish an API Fragment]

@@ -1,0 +1,33 @@
+= To Reference One Flow from Another (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+By placing a Flow Ref component in a flow you can execute one flow from another within the same application. When Flow Ref is executed, it triggers the referenced flow. The referenced flow executes and returns the Mule event object to the original flow where execution proceeds after the Flow Ref component. Flow Ref is handy for reusing groups of components within the same Mule application.
+
+. In Design Center, create an initial flow that starts with a trigger, and add one or more components.
+. Create a second flow:
++
+* Click Flows - Plus.
++
+image::flows-plus.png[add flow,height=34,width=237]
++
+* Rename the flow.
++
+image::rename-flow.png[]
++
+. Return to the first flow by clicking its name.
+
+. Add a Flow Ref component anywhere in this flow. In the Flow field, select your second flow.
+
+. In Flow Ref, click Go to go to second flow.
+. Add components other than a trigger. The Flow Ref Component in the first flow triggers the second flow.
++
+The first flow starts executing and continues from the beginning of the flow to the Flow Ref component. Execution of the second flow begins. At the end of the second flow, execution switches back to execute any unexecuted components in the first flow.
+
+
+== See also
+
+* xref:4.1@mule4-runtime::about-flows.adoc[About Flows]
+* link:/design-center/v/1.0/to-manage-mule-flows[To Manage Mule Flows]
+* link:/design-center/v/1.0/about-data-types[About Data Types]

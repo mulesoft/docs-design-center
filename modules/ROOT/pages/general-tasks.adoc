@@ -1,0 +1,19 @@
+= General Flow Design Tasks (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+After choosing and configuring a trigger for a flow, you select the next thing to add to the flow from a list of modules and APIs. You can filter the list to show only modules or only APIs:
+
+image::select-component.png[select a component]
+
+Design Center topics include tasks involving a few of the modules.
+
+== See Also
+
+* link:/design-center/v/1.0/logger-task-design-center[To Log Data]
+* link:/design-center/v/1.0/reference-flow-task-design-center[To Reference One Flow from Another]
+* link:/design-center/v/1.0/change-target-output-transformation-design-center-task[To Change the Target Output of a Transformation]
+* link:/design-center/v/1.0/error-handling-task-design-center[To Handle Errors]
+* link:/design-center/v/1.0/design-filter-task[To Transform from a Full Set of Data to a Subset]
+* link:/design-center/v/1.0/for-each-task-design-center[To Drill Down into JSON]

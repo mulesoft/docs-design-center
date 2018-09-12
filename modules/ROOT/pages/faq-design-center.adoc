@@ -1,0 +1,37 @@
+= FAQ: Design Center
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: design center, api designer
+
+* Why is Test for testing a component configuration sometimes disabled?
++
+The test button is greyed out until the application worker is created.
+Connectivity testing requires a worker running in the background.
++
+* Do I need to upload a JDBC driver to connect to Oracle DB?
++
+Yes
++
+* If a database is listed out of the box, why do I need to upload drivers?
++
+Due to legal restrictions, it’s necessary that you upload the driver. MuleSoft cannot distribute the drivers.
++
+* When using the FTP connector, I'm not able to connect to my computer as host, though I am able to connect with my locally installed Filezilla client.
++
+Mule Runtime isn’t able to connect to your local machine. Mule Runtime runs in a virtual worker on CloudHub.  The worker's local environment is the virtual machine itself.
++
+* Why does my app show up as Paused in Design Center but looks green when viewed in the Runtime Manager?
++
+The Pause option in Design Center doesn’t pause the CloudHub worker. Pause pauses the application that runs in it.
+* Why do I sometimes not see metadata listed on things in the flow?
++
+While the worker space is being created, metadata is not accessible. The processing of metadata can only be performed when the worker space is ready.
++
+* How can I unassociate a custom data type that has been set up in the Transform without needing to remove Transform?
++
+In Transform, select the tree root: payload, attributes, or vars (variables). Assuming you already assigned a custom data type, at the bottom of Input or Output pane, select Clear data type.
++
+* Can you use MEL expressions in Design Center?
++
+Yes, do not click Function image:flow-designer-88d35.png[f of x key]. Wrap text in `#[]`.

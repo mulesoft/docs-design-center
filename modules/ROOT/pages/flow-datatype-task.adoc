@@ -1,0 +1,24 @@
+= To Set Flow Data Types and Variables
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can define data types for an entire flow to describe expected input and output. A Flow Ref element that references this flow exposes the metadata to the rest of the flow. With the metadata in place, you can generate code for the transformation of matching data using drag-and-drop mapping.
+
+. Click options image:reference-flow-task-design-center-b93f3.png[] next to the flow name.
++
+image::flow-designer-d095a.png[]
++
+. Select Edit Types.
++
+Edit Flow Types appears.
++
+. Set the metadata for the different parts of the input and output of the flow by either selecting existing data types or adding new ones.
++
+You can also add variables in Edit Flow Types.
++
+image::edit-flow-types.png[]
+
+== See Also
+
+* link:/design-center/v/1.0/about-data-types[About Data Types]

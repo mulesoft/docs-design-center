@@ -1,0 +1,106 @@
+= To Drill Down into JSON (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This procedure describes how to use For Each to access nested JSON elements in an object. For Each iterates over and processes each element separately. For example purposes, each time the process repeats, you log the value of the element and the counter. In a real-world situation, instead of a simple log operation, you might insert each element in a database for analysis or perform other operations.
+
+To configure For Each, you use dot notation in the expression to specify the path to the JSON element of interest. For example, to apply some processing to _bs_ in the _company_ object, you set the Collection field to payload.*company.bs. The asterisk prefix accesses all members of _company_.
+
+[source,json,linenums]
+----
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+     ...
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  ...
+  }
+]
+----
+
+In the configuration, you use a default batch size of one because the example data you use consists of only 10 objects. If you have 200 objects and a batch size of 50, the app iterates over 50 objects at a time, returning four separate results, one for each batch.
+
+This procedure builds on the procedures to create a basic Mule app and to add an expression to dynamically change the URL of a request. After performing these procedures, you have HTTP listener and HTTP request in the Consume API flow, and you can perform the following steps to add For Each to the flow.
+
+. Proceed to the next step if the app is running. Otherwise, click Run. Execute the flow as follows:
++
+* Click Copy Link.
++
+* Paste the link in a browser or client, and type */getpath?path=users* at the end.
++
+The HTTP Listener hears the request, and starts the app. The JSON Placeholder profiles of all users appear in the browser.
++
+. In Design Center, add and configure For Each:
++
+* Click image:arrange-cards-flow-design-center-e256e.png[add For Each] after HTTP Request.
+* Select For Each.
+* Configure For Each as follows:
++
+** In Collection, type the expression, using dot expression, to access the list, array, or map you want to iterate over . For example, type the following expression to access the _bs_ element in _company_:
+*payload.*company.bs*
++
+** In Batch Size, accept the default 1.
+** Accept the defaults rootMessage.
+** In Counter Variable Name, change the default to drillcounter just for example purposes.
++
+image::foreach-configuration.png[]
++
+* Close For Each.
++
+. On the face of the For Each component, click Plus image:arrange-cards-flow-design-center-e256e.png[add Logger] and select Logger. Configure Logger as follows:
++
+* In Message, click image:graphically-construct-mapping-design-center-task-8a822.png[].
+* Type the following expression:
++
+*vars.drillcounter*
++
+* Close the Logger.
+. To the right of and outside of For Each, add another Logger. Configure Logger as follows:
++
+* In Message, click image:graphically-construct-mapping-design-center-task-8a822.png[].
+* Type the following expression:
++
+*payload*
++
+. Click Run, and execute the flow as described in step 1. Check the logs to see 10 messages, one for each iteration followed by the last message that contains the original input to the flow.
++
+----
+INFO21:37:16    1
+INFO21:37:16    "harness real-time e-markets"
+INFO21:37:16    2
+INFO21:37:16    "synergize scalable supply-chains"
+INFO21:37:16    3
+INFO21:37:16    "e-enable strategic applications"
+INFO21:37:16    4
+INFO21:37:16    "transition cutting-edge web services"
+INFO21:37:16    5
+INFO21:37:16    "revolutionize end-to-end systems"
+INFO21:37:16    6
+INFO21:37:16    "e-enable innovative applications"
+INFO21:37:16    7
+INFO21:37:16    "generate enterprise e-tailers"
+INFO21:37:16    8
+INFO21:37:16    "e-enable extensible e-tailers"
+INFO21:37:16    9
+INFO21:37:16    "aggregate real-time technologies"
+INFO21:37:16    10
+INFO21:37:16    "target end-to-end models"
+----
+
+
+== See also
+
+* link:/design-center/v/1.0/to-create-a-new-project[To Create a Basic Mule App]
+* link:/design-center/v/1.0/design-dynamic-request-task[To Dynamically Change the URL of a Request]
