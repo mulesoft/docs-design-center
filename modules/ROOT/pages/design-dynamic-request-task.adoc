@@ -101,5 +101,5 @@ Now, you're ready to inspect input and output payloads and attributes.
 
 == See Also
 
-* link:/design-center/v/1.0/to-create-a-new-project[To Create a Basic Mule App]
-* link:/design-center/v/1.0/inspect-data-task[To Inspect Input and Output]
+* xref:to-create-a-new-project.adoc.adoc[To Create a Basic Mule App]
+* xref:inspect-data-task.adoc.adoc[To Inspect Input and Output]

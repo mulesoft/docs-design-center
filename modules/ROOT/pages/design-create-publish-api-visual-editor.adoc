@@ -49,4 +49,4 @@ image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="lef
 
 
 == See also
-* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]
+* xref:design-mocking-service.adoc.adoc[Simulate Calls to an API]

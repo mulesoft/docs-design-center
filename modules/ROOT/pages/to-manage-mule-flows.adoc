@@ -14,4 +14,4 @@ image::flow-designer-d095a.png[]
 
 == See also
 
-* link:/design-center/v/1.0/about-data-types[About Data Types]
+* xref:about-data-types.adoc.adoc[About Data Types]

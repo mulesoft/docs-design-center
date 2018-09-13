@@ -45,6 +45,6 @@ The contents of the Mule message payload appear after Info along with .logs prod
 
 == See also
 
-* link:/design-center/v/1.0/about-data-types[About Data Types]
+* xref:about-data-types.adoc.adoc[About Data Types]
 
-* link:/design-center/v/1.0/error-handling-task-design-center[To Handle Errors]
+* xref:error-handling-task-design-center.adoc.adoc[To Handle Errors]

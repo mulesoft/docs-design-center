@@ -21,4 +21,4 @@ Within Anypoint Platform, you must be assigned the _Design Center Developer_ per
 
 == See Also
 
-xref:exchange::index.adoc[Anypoint Exchange]
+xref:exchange.adoc.adoc::index.adoc[Anypoint Exchange]

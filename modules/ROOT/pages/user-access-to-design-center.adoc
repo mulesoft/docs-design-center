@@ -20,6 +20,6 @@ You need to be assigned multiple roles to have the same permissions in separate 
 
 == See Also
 
-* xref:access-management::roles.adoc[Roles]
+* xref:access-management.adoc.adoc::roles.adoc[Roles]
 
-* xref:access-management::environments.adoc[CloudHub Environments]
+* xref:access-management.adoc.adoc::environments.adoc[CloudHub Environments]

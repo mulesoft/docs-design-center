@@ -69,7 +69,7 @@ image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="lef
 
 
 == See also
-* link:/design-center/v/1.0/design-export-files[Export Files from an API Project]
-* link:/design-center/v/1.0/design-import-files[Import Files into an API Project]
-* link:/design-center/v/1.0/design-add-api-dependency[Add an API Fragment to an API-Specification Project as a Dependency]
-* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]
+* xref:design-export-files.adoc.adoc[Export Files from an API Project]
+* xref:design-import-files.adoc.adoc[Import Files into an API Project]
+* xref:design-add-api-dependency.adoc.adoc[Add an API Fragment to an API-Specification Project as a Dependency]
+* xref:design-mocking-service.adoc.adoc[Simulate Calls to an API]
