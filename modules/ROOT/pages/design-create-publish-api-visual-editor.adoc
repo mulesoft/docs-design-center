@@ -1,0 +1,52 @@
+= Create and Publish an API Specification with the Visual Editor in Design Center
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can create API specifications by populating forms with values for RAML components.
+
+== Before you begin
+* Within Anypoint Platform, you must be assigned the _Design Center Developer_ permission.
+
+* Before using the visual editor, have a good idea of what you want your API to do and what its different components should be.
+
+== About this task
+
+The visual editor supports the following subset of RAML components:
+
+* Root properties
+* Data types (payloads)
+* Resources and methods
+* Headers
+* Query parameters and query strings
+* Request body
+* HTTP and HTTPS protocols
+* Responses and status codes, including associated headers and body
+
+As you fill in the forms, the visual editor generates the API specification, which is visible in a read-only pane on the right of the screen. If at any time you want to edit the specification directly (for example, to add RAML components that the visual editor does not support), click *Edit RAML* to switch to the code editor. After you switch, however, you cannot switch back to the visual editor to continue creating the API specification.
+
+// Mention the auto-mapper
+== Procedure
+. Create a project from the *Projects* page in Design Center by clicking *Create* and selecting *API Specification*.
+. In the *New API Specification* dialog, name your project and select the option *Try API designer's visual editing capabilities* to use the visual editor.
++
+_Result:_
++
+The visual editor opens. The editor is divided into three panels:
++
+* The left panel lists the resources and data types that you create in the specification.
+* The middle panel presents the forms in which you specify the properties of the components of the specification.
+* The right panel displays the RAML Viewer, which shows the content of the specification as you specify properties. This panel also lets you run the mocking service.
+. Specify the properties of your API specification, create resources, and create data types.
++
+As your API specification progresses, you can run the mocking service to simulate calls to your API. For more information, view the topic "Simulate Calls to an API", which is listed in the *See Also* section at the end of this topic.
+
+== What to do next
+Publish your API specification to Exchange. Click the icon that is in the top-right corner of the code editor to open the *Publish API specification to Exchange* dialog. The icon looks like this:
+
+image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
+
+
+
+== See also
+* link:/design-center/v/1.0/design-mocking-service[Simulate Calls to an API]

@@ -1,0 +1,32 @@
+= About Data Types (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+To build an integration application, you need to know what data is available at which step of the process and how to access the data.
+
+* Is the data a string or an array item?
+* Is the data within the structure of an object?
+* Which parent elements do I need to reference to reach the data?
+
+In the early stage of development, you define data types to answer these questions. You include an example or schema of the expected data that the app uses. Some formats require a schema. Provide a schema for a CSV or Java format in a RAML file.
+
+Defining data types helps you design the application in the following ways:
+
+* Provides auto-completion hints when writing expressions
+* Generates DataWeave code and a preview of transformation results when you map real or example input to output
+* Reveals metadata for troubleshooting problems
+
+Some designs, such as those using Salesforce, require no data type definitions. Salesforce objects have a well-defined structure that Design Center can easily reference.
+
+When you run the app, the flow starts executing when triggered. Real data appears in lieu of example data in the input and output. You can inspect payload, attributes, and vars (variables) at various stages of the flow.
+
+== Using RAML to Define Data
+
+The HTTP Request Connector does not expose any information by default, but you can configure the connector using a RAML API specification, which includes information about required inputs and expected outputs.
+
+== See Also
+
+* link:/design-center/v/1.0/design-filter-task[To Transform a Full Set of Data to a Subset]
+
+* link:/design-center/v/1.0/flow-datatype-task[To Set Data Types for a Flow]

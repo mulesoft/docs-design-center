@@ -1,0 +1,22 @@
+= To Refresh or Delete a Module Configuration (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Indicators and component metadata appear on each face of each module in the flow.
+
+image::green-bar.png[typical flow,height=110,width=727]
+
+If you make changes, for example to the path configured for the GET method of an HTTP Listener, the data that appears on the component becomes stale. You can refresh or delete the data by following the steps in this procedure:
+
+. Hover over the top right corner of the face of a closed module.
++
+image::fd13hover.png[]
++
+. Click the options control that appears, and select Refresh or Delete.
++
+image::fd13-refresh.png[]
+
+You can also refresh or delete the data from the options control of the opened module.
+
+image::refresh-delete-opened1.png[height=297,width=814]

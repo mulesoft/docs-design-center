@@ -1,0 +1,36 @@
+= Add an API Fragment to an API-Specification Project as a Dependency
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+In projects for API specifications or API fragments, you can add API fragments as dependencies directly from Anypoint Exchange.
+
+== About this task
+
+The fragments are listed in your projects, but they are not present in your projects. Instead, the code editor references them from their online location in Anypoint Exchange. Therefore, although you can include them in your specifications and fragments, you cannot edit them.
+
+If you export your project, the resulting `.zip` file contains the referenced API fragments. Whenever someone downloads your project as RAML after it is published to Anypoint Exchange, the resulting `.zip` file again contains the referenced API fragments.
+
+If you export your project to work on it in another editor, edit the referenced API fragments, then try to import the project back into the code editor, the import will fail.
+
+
+== Procedure
+
+. On the left side of the editor, click the *Exchange dependencies* icon, which looks like this:
++
+image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
+. Click the plus sign that is at the top of the left pane.
+. Select the API fragments that you want to import. You can select from API fragments that are visible to the organizations that you belong to.
+
+
+== Result
+The API fragments that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
+
+The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
+
+[NOTE]
+====
+
+If after you add a dependency on an API fragment an updated version of the fragement is published, and if you want your project to reference the updated version, you must update the dependency. To do so, click the *Exchange dependency* icon, click the dependency, and select *Change version*. In the *Change version* dialog, select the current version.
+
+====

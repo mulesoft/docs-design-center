@@ -1,0 +1,14 @@
+= To Clone a Mule App Project (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can duplicate existing projects, including custom data types and sample data.
+
+. Select an existing project.
+
+. Click Duplicate image:to-create-a-mule-application-project-cfeff.png[].
+
+. Name the duplicated project.
+
+. Select the target environment for designing and debugging the application.

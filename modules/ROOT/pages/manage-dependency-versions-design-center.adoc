@@ -1,0 +1,20 @@
+= To Update Components of the Flow (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: mozart
+
+This procedure covers how to update dependencies, which are connectors and other parts of the flow that are versioned independently from the Mule runtime. You can update an existing project to use a different version of a dependency without losing its configuration. However, if the change to the version affects configuration fields, you might need to change those settings as described in the release notes.
+
+. Click Dependencies image:manage-dependency-versions-design-center-d96c7.png[].
+
++
+A list of all project dependencies appears.
+
+. Hover over a dependency, click options image:manage-dependency-versions-design-center-018a5.png[].
+. Choose Change Version > Select New Version.
+. Check that the configuration of the new version meets your needs.
+
+== See also
+
+* link:/design-center/v/1.0/about-designing-a-mule-application[About Designing a Mule Application]
