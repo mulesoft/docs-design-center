@@ -33,6 +33,6 @@ After deployment, you can go to Runtime Manager to manage the application. Click
 
 == See also
 
-* xref:access-management::environments.adoc[CloudHub Environments]
+* xref:access-management.adoc::environments.adoc[CloudHub Environments]
 
-* xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]
+* xref:runtime-manager.adoc::managing-deployed-applications.adoc[Manage Deployed Applications]

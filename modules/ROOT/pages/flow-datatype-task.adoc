@@ -21,4 +21,4 @@ image::edit-flow-types.png[]
 
 == See Also
 
-* link:/design-center/v/1.0/about-data-types[About Data Types]
+* xref:about-data-types.adoc[About Data Types]

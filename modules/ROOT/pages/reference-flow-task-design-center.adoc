@@ -29,5 +29,5 @@ The first flow starts executing and continues from the beginning of the flow to 
 == See also
 
 * xref:4.1@mule4-runtime::about-flows.adoc[About Flows]
-* link:/design-center/v/1.0/to-manage-mule-flows[To Manage Mule Flows]
-* link:/design-center/v/1.0/about-data-types[About Data Types]
+* xref:to-manage-mule-flows.adoc[To Manage Mule Flows]
+* xref:about-data-types.adoc[About Data Types]

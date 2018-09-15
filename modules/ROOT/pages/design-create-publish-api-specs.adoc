@@ -5,8 +5,8 @@ endif::[]
 
 In Design Center, you can use two different tools to create API specifications in RAML and then publish those specifications to Anypoint Exchange:
 
-Visual editor:: Use this tool if you do not have much experience with writing API specifications. As you fill in various forms, the editor writes your API specification for you. The steps for using this tool are described in link:/design-center/v/1.0/design-create-publish-api-visual-editor[Create and Publish an API Specification with the Visual Editor in Design Center].
+Visual editor:: Use this tool if you do not have much experience with writing API specifications. As you fill in various forms, the editor writes your API specification for you. The steps for using this tool are described in xref:design-create-publish-api-visual-editor.adoc[Create and Publish an API Specification with the Visual Editor in Design Center].
 
-Code editor:: Use this tool if you do have experience with writing API specifications. Although the editor suggests RAML nodes, methods, and other elements as you type, it offers a larger degree of freedom for creating more complex specifications. It also displays errors and warnings as problems in your specification occur.  The steps for using this tool are described in link:/design-center/v/1.0/design-create-publish-api-raml-editor[Create and Publish an API Specification with the Code Editor in Design Center].
+Code editor:: Use this tool if you do have experience with writing API specifications. Although the editor suggests RAML nodes, methods, and other elements as you type, it offers a larger degree of freedom for creating more complex specifications. It also displays errors and warnings as problems in your specification occur.  The steps for using this tool are described in xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the Code Editor in Design Center].
 
-You can also use the code editor to create API fragments. The steps are described in link:/design-center/v/1.0/design-create-publish-api-fragment[Create and Publish an API Fragment in the Code Editor in Design Center].
+You can also use the code editor to create API fragments. The steps are described in xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment in the Code Editor in Design Center].

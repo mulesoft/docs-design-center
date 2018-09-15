@@ -34,4 +34,4 @@ A JAR containing your project is downloaded to the default location in your loca
 
 == See Also
 
-* xref:studio::index.adoc[Anypoint Studio]
+* xref:studio.adoc::index.adoc[Anypoint Studio]

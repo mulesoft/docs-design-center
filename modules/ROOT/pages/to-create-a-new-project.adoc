@@ -25,6 +25,6 @@ Now, you are ready to create a Mule application, API specification, or API fragm
 
 == See Also
 
-* link:/design-center/v/1.0/create-basic-app-task[To Create a Basic Mule App]
-* link:/design-center/v/1.0/design-raml-api-task[To Design a RAML API Specification]
-* link:/design-center/v/1.0/create-reuse-part-task[To Create and Publish an API Fragment]
+* xref:create-basic-app-task.adoc[To Create a Basic Mule App]
+* xref:design-raml-api-task.adoc[To Design a RAML API Specification]
+* xref:create-reuse-part-task.adoc[To Create and Publish an API Fragment]

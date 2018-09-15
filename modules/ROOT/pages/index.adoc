@@ -34,12 +34,12 @@ Design Center supports the reuse of API fragments and organizes dependencies. Af
 
 == See Also
 
-* link:/design-center/v/1.0/simulate-api-task[To Simulate Calling a RAML API (Mocking)]
+* xref:simulate-api-task.adoc[To Simulate Calling a RAML API (Mocking)]
 
-* link:/design-center/v/1.0/user-access-to-design-center[About Accessing Design Center]
+* xref:user-access-to-design-center.adoc[About Accessing Design Center]
 
-* link:/design-center/v/1.0/about-designing-a-mule-application[Designing a Mule App Overview]
+* xref:about-designing-a-mule-application.adoc[Designing a Mule App Overview]
 
-* link:/design-center/v/1.0/flow-design-basic-tasks[Flow Design Basics]
+* xref:flow-design-basic-tasks.adoc[Flow Design Basics]
 
-* link:/design-center/v/1.0/designing-api-about[Designing a RAML-based API]
+* xref:designing-api-about.adoc[Designing a RAML-based API]

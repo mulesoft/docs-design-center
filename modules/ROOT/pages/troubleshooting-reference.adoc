@@ -92,4 +92,4 @@ In all cases where you cannot resolve an error, open a support case for Design C
 
 == See Also
 
-* link:/design-center/v/1.0/promote-app-prod-env-design-center[To Deploy an Application to a Production Environment]
+* xref:promote-app-prod-env-design-center.adoc[To Deploy an Application to a Production Environment]

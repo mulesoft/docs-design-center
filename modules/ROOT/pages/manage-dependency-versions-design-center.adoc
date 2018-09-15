@@ -17,4 +17,4 @@ A list of all project dependencies appears.
 
 == See also
 
-* link:/design-center/v/1.0/about-designing-a-mule-application[About Designing a Mule Application]
+* xref:about-designing-a-mule-application.adoc[About Designing a Mule Application]
