@@ -20,5 +20,5 @@ When you select a suggested function, the editor displays a brief summary of the
 
 == See Also
 
-* xref:create-basic-app-task.adoc[To Create a Basic Mule App]
-* xref:4.1@mule4-runtime::dataweave-functions.adoc[About DataWeave Functions]
+* xref:create-basic-app-task.adoc.adoc[To Create a Basic Mule App]
+* xref:4.1@mule-runtime::dataweave-functions.adoc[About DataWeave Functions]

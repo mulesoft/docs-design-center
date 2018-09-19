@@ -35,6 +35,6 @@ Error conditions are matched from top to bottom, and only the first match is con
 
 == See also
 
-* xref:4.1@mule4-runtime::scopes-concept.adoc[About Scopes]
-* xref:4.1@mule4-runtime::try-scope-concept.adoc[About the Try Scope]
-* xref:4.1@mule4-runtime::error-handling.adoc[Error Handling]
+* xref:4.1@mule-runtime::scopes-concept.adoc[About Scopes]
+* xref:4.1@mule-runtime::try-scope-concept.adoc[About the Try Scope]
+* xref:4.1@mule-runtime::error-handling.adoc[Error Handling]

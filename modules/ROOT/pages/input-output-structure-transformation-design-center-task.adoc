@@ -140,6 +140,6 @@ These properties are written on the `output` directive of your DataWeave code.
 
 == See Also
 
-* xref:4.1@mule4-runtime::dataweave.adoc[DataWeave Language]
-* xref:4.1@mule4-runtime::dataweave-types.adoc[DataWeave Types]
-* xref:4.1@mule4-runtime::dataweave-formats.adoc[DataWeave Formats]
+* xref:4.1@mule-runtime::dataweave.adoc[DataWeave Language]
+* xref:4.1@mule-runtime::dataweave-types.adoc[DataWeave Types]
+* xref:4.1@mule-runtime::dataweave-formats.adoc[DataWeave Formats]
