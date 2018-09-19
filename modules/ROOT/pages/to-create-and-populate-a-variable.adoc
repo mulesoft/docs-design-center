@@ -53,5 +53,5 @@ For a list of the DataWeave functions that you can use in variable expressions, 
 
 == See also
 
-* xref:4.1@mule4-runtime::variable-transformer-reference.adoc[Set Variable]
-* xref:4.1@mule4-runtime::dw-core.adoc[Core]
+* xref:4.1@mule-runtime::variable-transformer-reference.adoc[Set Variable]
+* xref:4.1@mule-runtime::dw-core.adoc[Core]

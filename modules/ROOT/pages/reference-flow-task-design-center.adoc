@@ -28,6 +28,6 @@ The first flow starts executing and continues from the beginning of the flow to 
 
 == See also
 
-* xref:4.1@mule4-runtime::about-flows.adoc[About Flows]
-* xref:to-manage-mule-flows.adoc[To Manage Mule Flows]
-* xref:about-data-types.adoc[About Data Types]
+* xref:4.1@mule-runtime::about-flows.adoc[About Flows]
+* xref:to-manage-mule-flows.adoc.adoc[To Manage Mule Flows]
+* xref:about-data-types.adoc.adoc[About Data Types]
