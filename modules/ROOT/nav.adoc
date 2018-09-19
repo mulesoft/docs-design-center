@@ -1,4 +1,5 @@
 .xref:index.adoc[Design Center]
+* xref:index.adoc[About Design Center]
 * xref:design-create-publish-api-specs.adoc[Create and Publish an API Specification or API Fragment]
  ** xref:design-create-publish-api-visual-editor.adoc[Create and Publish an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the Code Editor]
