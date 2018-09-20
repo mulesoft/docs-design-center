@@ -15,5 +15,5 @@ image::options-menu.png[]
 
 == See Also
 
-* xref:runtime-manager.adoc::index.adoc[Runtime Manager]
+* xref:runtime-manager::index.adoc[Runtime Manager]
 * xref:promote-app-prod-env-design-center.adoc[To Deploy an Application to a Production Environment]

@@ -67,4 +67,4 @@ Now, you can adapt this flow to dynamically change the URL of a request.
 == See Also
 
 * xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]
-* xref:access-management.adoc::environments.adoc[CloudHub Environments]
+* xref:access-management::environments.adoc[CloudHub Environments]
