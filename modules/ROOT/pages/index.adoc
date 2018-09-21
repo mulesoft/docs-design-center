@@ -34,8 +34,6 @@ Design Center supports the reuse of API fragments and organizes dependencies. Af
 
 == See Also
 
-* xref:simulate-api-task.adoc[To Simulate Calling a RAML API (Mocking)]
-
 * xref:user-access-to-design-center.adoc[About Accessing Design Center]
 
 * xref:about-designing-a-mule-application.adoc[Designing a Mule App Overview]
