@@ -60,4 +60,4 @@ _Result:_ The panel displays the result below the *Send* button.
 If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI that it used to call your API and to uncomment the base URI that you provided in the specification.
 
 == See also
-* xref:exchange.adoc::ex2-to-simulate-api-data.adoc[To Simulate Data in REST APIs (in Anypoint Exchange)]
+* xref:exchange::ex2-to-simulate-api-data.adoc[To Simulate Data in REST APIs (in Anypoint Exchange)]

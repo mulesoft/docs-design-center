@@ -21,7 +21,7 @@ For a tutorial that will help you get started building Mule applications, see "T
 
 * xref:create-basic-app-task.adoc.adoc[To Create a Basic Mule Application (Design Center)]
 * xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
-* xref:connectors.adoc.adoc::index.adoc[Connectors and Modules (for Mule 4)]
+* xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
 * xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
 * xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
 * xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
