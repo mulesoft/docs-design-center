@@ -1,0 +1,92 @@
+= Correcting Common Errors in Conforming to RAML 0.8
+
+When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8.
+
+Validation fails for an example of a Boolean enum::
+If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string.
+[source,json]
+----
+#%RAML 0.8
+title: PSN
+version: v0.1
+/psn:
+  head:
+    responses:
+      204:
+        headers:
+          X-PSN-Exists:
+            enum: [true, false]
+            example: "true"
+----
+
+[source,json]
+----
+#%RAML 0.8
+title: PSN
+version: v0.1
+/psn:
+  head:
+    responses:
+      204:
+        headers:
+          X-PSN-Exists:
+            enum: ["true", "false"]
+            example: "true"
+----
+
+JSON files that are included as schemas must be valid::
+In this example, appSwitcher.json must contain valid JSON.
+[source,json]
+----
+#%RAML 0.8
+title: myApp
+version: v1
+securitySchemes:
+  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
+  - tokenSchema: !include securitySchemes/tokenSchema.raml
+schemas:
+  - appSwitscher: !include schemas/appSwitscher.json
+----
+
+An example of an integer type must also be an integer::
+[source,json]
+----
+#%RAML 0.8
+title: Mobile Experience API
+version: 1
+
+/products:
+  /product/{product_id}:
+    description: Get product instance details
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-03/schema",
+                  "id": "http://jsonschema.net",
+                  "properties": {
+                      "unit_price": {
+                          "type": "integer"
+                      }
+                  }
+                }
+              example: |
+                {
+                  "unit_price": 19.00
+                }
+----
+
+[source,json]
+----
+#%RAML 0.8
+title: Order Entry API
+/orders:
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: "451"
+----

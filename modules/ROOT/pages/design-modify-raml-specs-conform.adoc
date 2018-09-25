@@ -10,5 +10,3 @@ New, unpublished specifications must be error-free before you can publish them.
 
 * xref:design-correcting-common-errors-08.adoc[Correcting Common Errors in Conforming to RAML 0.8]
 * xref:design-correcting-common-errors-10.adoc[Correcting Common Errors in Conforming to RAML 1.0]
-
-When testing the new parser, MuleSoft identified eleven common errors in API specifications written in RAML 0.8 and eight common errors in API specifications written in RAML 1.0.
