@@ -2,8 +2,7 @@
 
 When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8.
 
-=== Common Error 1
-==== Validation fails for an example of a Boolean enum
+== Validation fails for an example of a Boolean enum
 If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string.
 [source,json]
 ----
@@ -35,8 +34,7 @@ version: v0.1
             example: "true"
 ----
 
-=== Common Error 2
-==== JSON files that are included as schemas must be valid
+== JSON files that are included as schemas must be valid
 In this example, appSwitcher.json must contain valid JSON.
 [source,json]
 ----
@@ -50,8 +48,7 @@ schemas:
   - appSwitscher: !include schemas/appSwitscher.json
 ----
 
-=== Common Error 3
-==== An example of an integer type must also be an integer
+== An example of an integer type must also be an integer
 [source,json]
 ----
 #%RAML 0.8
@@ -94,8 +91,7 @@ title: Order Entry API
         example: "451"
 ----
 
-=== Common Error 4
-==== An example of a schema that defines a required property must use that property
+== An example of a schema that defines a required property must use that property
 
 [source,json]
 ----
@@ -141,8 +137,7 @@ title: SFOrdersAPI
 }
 ----
 
-=== Common Error 5
-==== If a schema defines a data type that is an object, an example of that schema must also use an object
+== If a schema defines a data type that is an object, an example of that schema must also use an object
 
 [source,json]
 ----
@@ -196,8 +191,7 @@ resourceTypes:
 Content is not valid according to schema: Expected type object but found type array at (36, 14)
 ----
 
-=== Common Error 6
-==== An example for a boolean property must have a value of "true" or "false"
+== An example for a boolean property must have a value of "true" or "false"
 
 [source,json]
 ----
@@ -218,8 +212,7 @@ title: Photo-posting API
             example: 1
 ----
 
-=== Common Error 7
-==== Paths for included files must be relative
+== Paths for included files must be relative
 The path "/common/common_400.example" is an absolute path, relative to the root RAML file location. To be a relative path it must be "./common/common_400.example" or "common/common_400.example".
 
 ./api.raml
@@ -259,8 +252,7 @@ traits: !include ./common/traits.raml
 }
 ----
 
-=== Common Error 8
-==== Examples of JSON schemas must be valid
+== Examples of JSON schemas must be valid
 
 [source,json]
 ----
@@ -303,8 +295,7 @@ title: test
 title:
 ----
 
-=== Common Error 10
-==== If the type for a query parameter is string, then the example for the query parameter must also be string
+== If the type for a query parameter is string, then the example for the query parameter must also be string
 
 [source,json]
 ----
