@@ -6,7 +6,7 @@ When testing the new parser, MuleSoft identified ten common errors in API specif
 *_If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string._*
 
 .Incorrect `example`
-[source%linenums,json]
+[source,json]
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -40,22 +40,22 @@ title: ExampleRAML
 == Common Error 2
 *_JSON files that are included as schemas must be valid_*
 
-In this example, appSwitcher.json must contain valid JSON.
+In this example, `appSwitcher.json` must contain valid JSON.
+
+.Including a JSON schema
 [source,json,linenums]
 ----
 #%RAML 0.8
 title: ExampleRAML
-securitySchemes:
-  - oauth_2_0: !include securitySchemes/oauth_2_0.raml
-  - tokenSchema: !include securitySchemes/tokenSchema.raml
 schemas:
-  - appSwitscher: !include schemas/appSwitscher.json
+  - appSwitcher: !include schemas/appSwitcher.json
 ----
 
 == Common Error 3
 
 *_An example of an integer type must also be an integer_*
 
+.The type of the `example` does not match the type defined for `unit_price`
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -85,6 +85,7 @@ title: ExampleRAML
                 }
 ----
 
+.The type of the `example` does not match the type defined for `uriParameters`
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -100,6 +101,7 @@ title: Order Entry API
 == Common Error 4
 *_An example of a schema that defines a required property must use that property_*
 
+.The property that is defined in the `id` attribute is misspelled; therefore, the example is not in fact using it
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -130,6 +132,7 @@ title: ExampleRAML
                 }
 ----
 
+.The correct spelling of the property, as shown in the referenced JSON file, is `sOrderId`
 [source,json,linenums]
 ----
 {
@@ -147,6 +150,7 @@ title: ExampleRAML
 == Common Error 5
 *_If a schema defines a data type that is an object, an example of that schema must also use an object_*
 
+.The type of the schema is defined as an object; however, the example shows an array
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -159,21 +163,6 @@ schemas:
            "title":  { "type": "string" }
          }
       }
-resourceTypes:
-  - base:
-      get?:
-        responses: &standardResponses
-          200:
-            description: OK
-  - typedCollection:
-      type: base
-      get:
-        responses:
-          200:
-            body:
-              application/json:
-                schema: <<schema>>
-
 
 /presentations: &presentations
   type: { typedCollection: { schema: presentation } }
@@ -194,13 +183,11 @@ resourceTypes:
 
 ----
 
-----
-Content is not valid according to schema: Expected type object but found type array at (36, 14)
-----
 
 == Common Error 6
 *_An example for a boolean property must have a value of "true" or "false"_*
 
+.The example for `is_public` is incorrect
 [source,json,linenums]
 ----
 #%RAML 0.8
