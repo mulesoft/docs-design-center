@@ -5,7 +5,7 @@ When testing the new parser, MuleSoft identified ten common errors in API specif
 == Common Error 1
 *_If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string._*
 
-.Incorrect `example`
+.The example for the enum is incorrect
 [source,json]
 ----
 #%RAML 0.8
@@ -21,7 +21,7 @@ title: ExampleRAML
 ----
 
 
-.Correct `example`
+.The example for this enum is correct
 [source,json,linenums]
 ----
 ...
@@ -29,7 +29,7 @@ title: ExampleRAML
             example: "true"
 ----
 
-.Correct `example`
+.This example is also correct
 [source,json,linenums]
 ----
 ...
@@ -55,7 +55,7 @@ schemas:
 
 *_An example of an integer type must also be an integer_*
 
-.The type of the `example` does not match the type defined for `unit_price`
+.The type of the example does not match the type defined for `unit_price`
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -85,7 +85,7 @@ title: ExampleRAML
                 }
 ----
 
-.The type of the `example` does not match the type defined for `uriParameters`
+.The type of the example does not match the type defined for `uriParameters`
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -101,7 +101,7 @@ title: Order Entry API
 == Common Error 4
 *_An example of a schema that defines a required property must use that property_*
 
-.The property that is defined in the `id` attribute is misspelled; therefore, the example is not in fact using it
+.The property that is defined in the second `id` attribute is misspelled; therefore, the example is not in fact using it
 [source,json,linenums]
 ----
 #%RAML 0.8
