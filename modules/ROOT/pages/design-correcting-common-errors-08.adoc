@@ -3,7 +3,8 @@
 When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8.
 
 == Common Error 1
-=== Validation fails for an example of a Boolean enum
+*_Validation fails for an example of a Boolean enum_*
+
 If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string.
 [source,json]
 ----
@@ -36,7 +37,8 @@ version: v0.1
 ----
 
 == Common Error 2
-=== JSON files that are included as schemas must be valid
+*_JSON files that are included as schemas must be valid_*
+
 In this example, appSwitcher.json must contain valid JSON.
 [source,json]
 ----
@@ -51,7 +53,9 @@ schemas:
 ----
 
 == Common Error 3
-=== An example of an integer type must also be an integer
+
+*_An example of an integer type must also be an integer_*
+
 [source,json]
 ----
 #%RAML 0.8
@@ -95,7 +99,7 @@ title: Order Entry API
 ----
 
 == Common Error 4
-=== An example of a schema that defines a required property must use that property
+*_An example of a schema that defines a required property must use that property_*
 
 [source,json]
 ----
@@ -142,7 +146,7 @@ title: SFOrdersAPI
 ----
 
 == Common Error 5
-=== If a schema defines a data type that is an object, an example of that schema must also use an object
+*_If a schema defines a data type that is an object, an example of that schema must also use an object_*
 
 [source,json]
 ----
@@ -197,7 +201,7 @@ Content is not valid according to schema: Expected type object but found type ar
 ----
 
 == Common Error 6
-=== An example for a boolean property must have a value of "true" or "false"
+*_An example for a boolean property must have a value of "true" or "false"_*
 
 [source,json]
 ----
@@ -219,7 +223,8 @@ title: Photo-posting API
 ----
 
 == Common Error 7
-=== Paths for included files must be relative
+*_Paths for included files must be relative_*
+
 The path "/common/common_400.example" is an absolute path, relative to the root RAML file location. To be a relative path it must be "./common/common_400.example" or "common/common_400.example".
 
 ./api.raml
@@ -260,7 +265,7 @@ traits: !include ./common/traits.raml
 ----
 
 == Common Error 8
-=== Examples of JSON schemas must be valid
+*_Examples of JSON schemas must be valid_*
 
 [source,json]
 ----
@@ -295,7 +300,7 @@ title: test
 
 
 == Common Error 9
-=== The title node cannot lack a value
+*_The title node cannot lack a value_*
 
 [source,json]
 ----
@@ -304,7 +309,7 @@ title:
 ----
 
 == Common Error 10
-=== If the type for a query parameter is string, then the example for the query parameter must also be string
+*_If the type for a query parameter is string, then the example for the query parameter must also be string_*
 
 [source,json]
 ----
