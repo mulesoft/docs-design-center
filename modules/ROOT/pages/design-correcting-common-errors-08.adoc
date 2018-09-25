@@ -258,3 +258,62 @@ traits: !include ./common/traits.raml
   "transaction_id": "ABC123"
 }
 ----
+
+=== Common Error 8
+==== Examples of JSON schemas must be valid
+
+[source,json]
+----
+#%RAML 0.8
+title: test
+
+/api:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema:
+              {
+                "type": "object",
+                "required": true,
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                  "a": {
+                    "type": "boolean",
+                    "required": true
+                  }
+                }
+              }
+#              Invalid json
+            example:
+              {
+                "a: {
+                  "a": ""
+                }
+----
+
+
+=== Common Error 9
+==== The title node cannot lack a value
+
+[source,json]
+----
+#%RAML 0.8
+title:
+----
+
+=== Common Error 10
+==== If the type for a query parameter is string, then the example for the query parameter must also be string
+
+[source,json]
+----
+#%RAML 0.8
+title: HsbcBankingRaml
+/books:
+  get:
+    queryParameters:
+      publicationYear:
+        type: string
+        example: 2016
+----
