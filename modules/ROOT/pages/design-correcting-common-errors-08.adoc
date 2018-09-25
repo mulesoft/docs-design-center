@@ -6,7 +6,7 @@ When testing the new parser, MuleSoft identified ten common errors in API specif
 *_If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string._*
 
 .Incorrect `example`
-[source,json,linenums]
+[source%linenums,json]
 ----
 #%RAML 0.8
 title: ExampleRAML
