@@ -1,8 +1,8 @@
 = Common Errors in Conforming to RAML 0.8
 
-When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8. The errors are explained with examples below. The errors are not listed in any particular order, such as frequency of occurrence in the sample of API specifications that MuleSoft tested.
+When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8. The errors are explained with examples below. They are not listed in any particular order, such as frequency of occurrence in the sample of API specifications that MuleSoft tested.
 
-If you see other errors in your existing, published RAML API specifications, refer to the specification for RAML 0.8.
+If you see errors in an existing, published API specification that is written in RAML 0.8, this list of explanations might help you to resolve most of the errors. If you see other errors, refer to the specification for RAML 0.8, which you can access through https://raml.org/[raml.org].
 
 
 == Common Error 1
