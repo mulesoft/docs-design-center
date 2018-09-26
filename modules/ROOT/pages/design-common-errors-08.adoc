@@ -11,7 +11,6 @@ If you see other errors in your existing, published RAML API specifications, ref
 
 If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
 
-[source,json]
 ----
 #%RAML 0.8
 title: ExampleRAML
