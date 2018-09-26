@@ -28,7 +28,7 @@ title: ExampleRAML
 
 The data type for this example is correct:
 
-[source,json,linenums]
+
 ----
 ...
             enum: [true, false]
@@ -37,7 +37,7 @@ The data type for this example is correct:
 
 The data type for this example is also correct:
 
-[source,json,linenums]
+
 ----
 ...
             enum: ["true", "false"]
@@ -46,13 +46,13 @@ The data type for this example is also correct:
 
 == Common Error 2
 
-*_Including invalid JSON as a schema_*
+*_Including a schema that contains invalid JSON_*
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
 The first snippet includes the schema `appSwitcher.json`.  However, the second shows that there is an error in the JSON: an extra comma after the last key/value pair. The editor flags the error in the specification on the line with the `!include` statement.
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -60,7 +60,7 @@ schemas:
   - appSwitcher: !include schemas/appSwitcher.json
 ----
 
-[source,json,linenums]
+
 ----
 {
   "appMenuItems" : [
@@ -96,7 +96,7 @@ schemas:
 
 The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -127,7 +127,7 @@ title: ExampleRAML
 
 As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: Order Entry API
@@ -145,7 +145,7 @@ title: Order Entry API
 
 An example of a schema that defines a required property must use that property. In this snippet, the property that is defined in the second `id` attribute is misspelled: `sfOrderId` should be `sOrderId`. The second snippet shows the example JSON response in which `sOrderId` is defined. The example, therefore, is not in fact using the required property because the property was not defined correctly.
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -175,7 +175,7 @@ title: ExampleRAML
                 }
 ----
 
-[source,json,linenums]
+
 ----
 {
   "orderId": 14523,
@@ -196,7 +196,7 @@ title: ExampleRAML
 For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
 
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -235,7 +235,7 @@ schemas:
 
 An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -263,7 +263,7 @@ Paths to included files must be relative. The following two snippets together gi
 The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
 
 ./api.raml
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -278,7 +278,7 @@ traits: !include ./common/traits.raml
 ----
 
 ./common/traits.raml
-[source,json,linenums]
+
 ----
 - common_errors:
     responses:
@@ -295,7 +295,7 @@ traits: !include ./common/traits.raml
 
 Examples of JSON schemas must be valid, unlike the example in the following snippet:
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
@@ -332,7 +332,7 @@ title: ExampleRAML
 
 The `title` node cannot lack a value, as it does here:
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title:
@@ -344,7 +344,7 @@ title:
 
 For example, if the type for a query parameter is string, then the example for the query parameter must also be string. Here, the example is an integer, but the query parameter is defined as a string.
 
-[source,json,linenums]
+
 ----
 #%RAML 0.8
 title: ExampleRAML
