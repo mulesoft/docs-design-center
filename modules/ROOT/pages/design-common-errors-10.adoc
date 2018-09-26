@@ -7,7 +7,7 @@ If you see other errors in your existing, published RAML API specifications, ref
 == Common Error 1
 *_Appending references with hash symbols to filenames in `!include` statements_*
 
-In this example snippet, `IncrementType.raml#increment` is not a valid link.
+A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
 
 ----
 #%RAML 1.0 DataType
@@ -189,8 +189,78 @@ ____
 Any number of libraries can be applied by using the OPTIONAL uses node ONLY at the root of a ["master"] RAML or RAML fragment file. The value of the uses node is a map of key-value pairs. The keys are treated as library names, or namespaces, and the value MUST be the location of a RAML library file, usually an external RAML library fragment document.
 ____
 
+Therefore, the following snippet is incorrect, given that the file `financeDetail.raml` is a library.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          type: !include financeDetail.raml
+----
+
+This next snippet is correct.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          uses:
+            myLibrary: financeDetail.raml
+----
 
 == Common Error 7
 
+*_Specifying values for an enum that does not match the enum's data type_*
+
+
+To illustrate this error, here is an invalid declaration of an enum.
+
+----
+type: string
+enum: [1,2,3]
+----
+
+The next two declarations are valid.
+----
+type: string
+enum: ["1","2","3"]
+----
+
+----
+type: integer
+enum: [1,2,3]
+----
+
 
 == Common Error 8
+
+*_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
+
+Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+types:
+  collection:
+    type: integer
+    format: int8
+
+/search:
+  /code:
+      get:
+       body:
+        type: collection
+        example: 22342342
+----
