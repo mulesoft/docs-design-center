@@ -3,7 +3,10 @@
 When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8.
 
 == Common Error 1
-*_If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string._*
+
+*_Not using a data type of string for the example of an enum_*
+
+If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string.
 
 .The example for the enum is incorrect
 [source,json]
@@ -38,7 +41,10 @@ title: ExampleRAML
 ----
 
 == Common Error 2
-*_JSON files that are included as schemas must be valid_*
+
+*_Including invalid JSON as a schema_*
+
+The JSON in files that are included in the value of the `schemas` property must be valid.
 
 In this example, `appSwitcher.json` must contain valid JSON.
 
@@ -53,7 +59,9 @@ schemas:
 
 == Common Error 3
 
-*_An example of an integer type must also be an integer_*
+*_Using a non-integer data type for the example of a property that is an integer_*
+
+The data type for example of a property that is an integer must be an integer.
 
 .The type of the example does not match the type defined for `unit_price`
 [source,json,linenums]
@@ -99,7 +107,10 @@ title: Order Entry API
 ----
 
 == Common Error 4
-*_An example of a schema that defines a required property must use that property_*
+
+*_Not using a required property in the example of a schema that defines that property_*
+
+An example of a schema that defines a required property must use that property.
 
 .The property that is defined in the second `id` attribute is misspelled; therefore, the example is not in fact using it
 [source,json,linenums]
@@ -148,7 +159,10 @@ title: ExampleRAML
 ----
 
 == Common Error 5
-*_If a schema defines a data type that is an object, an example of that schema must also use an object_*
+
+*_Not using in an example of a schema the data type that a schema defines_*
+
+For example, if a schema defines a data type that is an object, an example of that schema must also use an object.
 
 .The type of the schema is defined as an object; however, the example shows an array
 [source,json,linenums]
@@ -185,7 +199,10 @@ schemas:
 
 
 == Common Error 6
-*_An example for a boolean property must have a value of "true" or "false"_*
+
+*_Using 0 or 1 as the value of an example of a Boolean property_*
+
+An example for a boolean property must have a value of "true" or "false".
 
 .The example for `is_public` is incorrect
 [source,json,linenums]
@@ -208,9 +225,12 @@ title: ExampleRAML
 ----
 
 == Common Error 7
-*_Paths for included files must be relative_*
 
-The path "/common/common_400.example" is an absolute path, relative to the root RAML file location. To be a relative path it must be "./common/common_400.example" or "common/common_400.example".
+*_Using absolute paths to included files_*
+
+Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
+
+The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
 
 ./api.raml
 [source,json,linenums]
@@ -238,25 +258,18 @@ traits: !include ./common/traits.raml
             example: !include /common/common_400.example
 ----
 
-./common/common_400.example
-[source,json,linenums]
-----
-{
-  "status": 400,
-  "code": "USR",
-  "message": "Invalid email address",
-  "transaction_id": "ABC123"
-}
-----
 
 == Common Error 8
-*_Examples of JSON schemas must be valid_*
+
+*_Using invalid JSON in examples of JSON schemas_*
+
+Examples of JSON schemas must be valid, unlike the example in the following snippet:
 
 [source,json,linenums]
 ----
 #%RAML 0.8
 title: ExampleRAML
-
+...
 /api:
   get:
     responses:
@@ -275,7 +288,6 @@ title: ExampleRAML
                   }
                 }
               }
-#              Invalid json
             example:
               {
                 "a: {
@@ -285,7 +297,10 @@ title: ExampleRAML
 
 
 == Common Error 9
-*_The title node cannot lack a value_*
+
+*_Not providing a value for the `title` node_*
+
+The `title` node cannot lack a value, as it does here:
 
 [source,json,linenums]
 ----
@@ -294,7 +309,10 @@ title:
 ----
 
 == Common Error 10
-*_If the type for a query parameter is string, then the example for the query parameter must also be string_*
+
+*_Not using in an example of a query parameter the data type that is in the definition of the query parameter_*
+
+For example, if the type for a query parameter is string, then the example for the query parameter must also be string. Here, the example is an integer, but the query parameter is defined as a string.
 
 [source,json,linenums]
 ----
