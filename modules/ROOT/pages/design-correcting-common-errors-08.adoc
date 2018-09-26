@@ -1,14 +1,13 @@
 = Correcting Common Errors in Conforming to RAML 0.8
 
-When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8.
+When testing the new parser, MuleSoft identified ten common errors in API specifications written in RAML 0.8. The errors are explained with examples below.
 
 == Common Error 1
 
-*_Not using a data type of string for the example of an enum_*
+*_Not using a data type of string for the example of a Boolean enum_*
 
-If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string.
+If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
 
-.The example for the enum is incorrect
 [source,json]
 ----
 #%RAML 0.8
@@ -24,7 +23,8 @@ title: ExampleRAML
 ----
 
 
-.The example for this enum is correct
+The data type for this example is correct:
+
 [source,json,linenums]
 ----
 ...
@@ -32,7 +32,8 @@ title: ExampleRAML
             example: "true"
 ----
 
-.This example is also correct
+The data type for this example is also correct:
+
 [source,json,linenums]
 ----
 ...
@@ -46,9 +47,8 @@ title: ExampleRAML
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
-In this example, `appSwitcher.json` must contain valid JSON.
+The first snippet includes the schema `appSwitcher.json`.  However, the second shows that there is an error in the JSON: an extra comma after the last key/value pair. The editor flags the error in the specification on the line with the `!include` statement.
 
-.Including a JSON schema
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -57,13 +57,42 @@ schemas:
   - appSwitcher: !include schemas/appSwitcher.json
 ----
 
+[source,json,linenums]
+----
+{
+  "appMenuItems" : [
+    {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Call Center" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Community" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "App Launcher" ,
+      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx",
+    }
+  ]
+}
+----
+
 == Common Error 3
 
 *_Using a non-integer data type for the example of a property that is an integer_*
 
-The data type for example of a property that is an integer must be an integer.
+The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`
 
-.The type of the example does not match the type defined for `unit_price`
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -93,7 +122,8 @@ title: ExampleRAML
                 }
 ----
 
-.The type of the example does not match the type defined for `uriParameters`
+As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -110,9 +140,8 @@ title: Order Entry API
 
 *_Not using a required property in the example of a schema that defines that property_*
 
-An example of a schema that defines a required property must use that property.
+An example of a schema that defines a required property must use that property. In this snippet, the property that is defined in the second `id` attribute is misspelled: `sfOrderId` should be `sOrderId`. The second snippet shows the example JSON response in which `sOrderId` is defined. The example, therefore, is not in fact using the required property because the property was not defined correctly.
 
-.The property that is defined in the second `id` attribute is misspelled; therefore, the example is not in fact using it
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -143,7 +172,6 @@ title: ExampleRAML
                 }
 ----
 
-.The correct spelling of the property, as shown in the referenced JSON file, is `sOrderId`
 [source,json,linenums]
 ----
 {
@@ -160,11 +188,11 @@ title: ExampleRAML
 
 == Common Error 5
 
-*_Not using in an example of a schema the data type that a schema defines_*
+*_Not using in an example of a schema the data type that the schema defines_*
 
-For example, if a schema defines a data type that is an object, an example of that schema must also use an object.
+For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
 
-.The type of the schema is defined as an object; however, the example shows an array
+
 [source,json,linenums]
 ----
 #%RAML 0.8
@@ -200,11 +228,10 @@ schemas:
 
 == Common Error 6
 
-*_Using 0 or 1 as the value of an example of a Boolean property_*
+*_Using 0 or 1 as the value of an example of a Boolean_*
 
-An example for a boolean property must have a value of "true" or "false".
+An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
 
-.The example for `is_public` is incorrect
 [source,json,linenums]
 ----
 #%RAML 0.8
