@@ -5,7 +5,7 @@ When testing its new RAML parser (which was released on October 24, 2018), MuleS
 If you open in the code editor a published API specification that is written in RAML 0.8 and you see error indicators, this topic might help you to resolve most of the errors. If you see errors that this topic does not mention, refer to the specification for RAML 1.0, which you can read on https://raml.org/[raml.org].
 
 == Common Error 1
-
+// APIMF-834
 *_Appending references with hash symbols to filenames in `!include` statements_*
 
 A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
@@ -28,7 +28,7 @@ If your specification contains an error of this type, but you meant to write a c
 
 
 == Common Error 2
-
+// APIMF-849
 *_Not correctly using curly braces and brackets in JSON examples_*
 
 There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
@@ -128,12 +128,14 @@ title: ExampleRAML
 
 
 == Common Error 3
+// APIMF-907
 
+Whoops! Forgot about this one...
 
 
 
 == Common Error 4
-
+// APIMF-966
 *_Not using a correct value for the `protocols` node_*
 
 The value of the `protocols` node must be an array. The array must be:
@@ -143,7 +145,7 @@ The value of the `protocols` node must be an array. The array must be:
 * `[http, https]` or `[HTTP, HTTPS]`
 
 == Common Error 5
-
+// APIMF-967
 *_Including an example response that contains invalid JSON_*
 
 When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
@@ -181,7 +183,7 @@ title: ExampleRAML
 
 
 == Common Error 6
-
+// APIMF-1030
 *_Referencing libraries by using the `type` key_*
 
 As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
@@ -220,7 +222,7 @@ title: ExampleRAML
 ----
 
 == Common Error 7
-
+// APIMF-1062
 *_Specifying values for an enum that does not match the enum's data type_*
 
 
@@ -244,7 +246,7 @@ enum: [1,2,3]
 
 
 == Common Error 8
-
+// APIMF-1070
 *_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
