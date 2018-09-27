@@ -5,6 +5,7 @@ When testing its new RAML parser (which was released on October 24, 2018), MuleS
 If you open in the code editor a published API specification that is written in RAML 0.8 and you see error indicators, this topic might help you to resolve most of the errors. If you see errors that this topic does not mention, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
 
 == Common Error 1
+// APIMF-824
 
 *_Not using a data type of string for the example of a Boolean enum_*
 
@@ -43,6 +44,7 @@ The data type for this example is also correct:
 ----
 
 == Common Error 2
+// APIMF-841
 
 *_Including a schema that contains invalid JSON_*
 
@@ -89,6 +91,8 @@ schemas:
 ----
 
 == Common Error 3
+// APIMF-852 and 853
+
 
 *_Using a non-integer data type for the example of a property that is an integer_*
 
@@ -138,6 +142,7 @@ title: Order Entry API
 ----
 
 == Common Error 4
+// APIMF-896
 
 *_Not using a required property in the example of a schema that defines that property_*
 
@@ -188,7 +193,7 @@ title: ExampleRAML
 ----
 
 == Common Error 5
-
+// APIMF-901
 *_Not using in an example of a schema the data type that the schema defines_*
 
 For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
@@ -228,7 +233,7 @@ schemas:
 
 
 == Common Error 6
-
+// APIMF-929
 *_Using 0 or 1 as the value of an example of a Boolean_*
 
 An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
@@ -253,7 +258,7 @@ title: ExampleRAML
 ----
 
 == Common Error 7
-
+// APIMF-1023
 *_Using absolute paths to included files_*
 
 Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
@@ -288,7 +293,7 @@ traits: !include ./common/traits.raml
 
 
 == Common Error 8
-
+// APIMF-1069
 *_Using invalid JSON in examples of JSON schemas_*
 
 Examples of JSON schemas must be valid, unlike the example in the following snippet:
@@ -325,7 +330,7 @@ title: ExampleRAML
 
 
 == Common Error 9
-
+// APIMF-1083
 *_Not providing a value for the `title` node_*
 
 The `title` node cannot lack a value, as it does here:
@@ -337,7 +342,7 @@ title:
 ----
 
 == Common Error 10
-
+// APIMF-1088
 *_Not using in an example of a query parameter the data type that is in the definition of the query parameter_*
 
 For example, if the type for a query parameter is string, then the example for the query parameter must also be string. Here, the example is an integer, but the query parameter is defined as a string.
