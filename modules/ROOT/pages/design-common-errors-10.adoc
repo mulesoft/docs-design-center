@@ -130,9 +130,65 @@ title: ExampleRAML
 == Common Error 3
 // APIMF-907
 
-Whoops! Forgot about this one...
+*_Not naming named examples_*
 
+The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+----
+
+The properties of the example then follow after. For example, suppose an API specification defines the following object:
+
+----
+user_name:
+    type: object
+    properties:
+        user: string
+----
+
+The NamedExample fragment would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user: Lionel
+----
+
+However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example. Because `Lionel` is not surrounded by quotation marks, the parser considers it to be a scalar, which does not match the type of the object that linked to the example.
+
+Suppose that the object was defined with a complex property:
+
+----
+user_name:
+    type: object
+    properties:
+        user:
+            name: string
+            lastName: string
+----
+
+The named example would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user:
+        name: Lionel
+        lastName: Ma
+----
+
+Suppose that instead it looked like this:
+
+----
+#%RAML 1.0 NamedExample
+user:
+    name: Lionel
+    lastName: Ma
+----
+
+The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
 
 == Common Error 4
 // APIMF-966
