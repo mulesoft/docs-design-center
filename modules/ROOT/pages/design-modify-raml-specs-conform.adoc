@@ -1,12 +1,15 @@
-= Modify Existing RAML API Specifications to Conform Better to RAML 0.8 or 1.0
+= Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0
 
-Design Center now uses a stricter parser to validate API specifications that are written in either RAML 0.8 or 1.0. This parser identifies errors that the previous parser overlooked. Therefore, when you open an existing, published RAML API specification in the API editor, you might see error indicators in places where the editor did not display such indicators in the past.
+Design Center, as of October 24, 2018, now uses a parser that is stricter than its original parser to validate API specifications that are written in either RAML 0.8 or 1.0. This parser identifies errors that the previous parser overlooked, and requires that API specifications conform 100% to whichever of the two RAML specifications that they declare in their first lines.
 
-You have until October 24, 2019 to fix all of the errors that the new parser identifies in your existing, published RAML API specifications. Until then, you can continue to republish specifications that contain these errors. However, all other types of error will, as usual, prevent you from republishing.
+Therefore, when you open in the API editor a specification that has already been  published to Anypoint Exchange and was necessarily error-free when it was published, you might see error indicators where none were the last time you opened the specification. The indicators will be pointing out parts of the specification that were validated by the previous parser but that are in fact mistakes in the RAML.
 
-New, unpublished specifications must be error-free before you can publish them.
+You have until October 24, 2019 to fix all of the errors that the new parser identifies in your published RAML API specifications. Until then, you can continue to republish specifications that contain these errors. After this date, however, published specifications must be error-free before you can re-publish them.
 
-== See Also
+API specifications that are not yet published on Exchange must be error-free before you can publish them for the first time.
+
+The two following topics list common errors that MuleSoft found when testing the new parser, explain them with examples, and describe how to fix them.
+
 
 * xref:design-common-errors-08.adoc[Common Errors in Conforming to RAML 0.8]
 * xref:design-common-errors-10.adoc[Common Errors in Conforming to RAML 1.0]
