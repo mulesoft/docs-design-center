@@ -9,7 +9,7 @@ If you open in the code editor a published API specification that is written in 
 
 *_Not using a data type of string for the example of a Boolean enum_*
 
-If the values for a Boolean enum are either both strings or both Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
+Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
 
 ----
 #%RAML 0.8
@@ -50,7 +50,7 @@ The data type for this example is also correct:
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
-The first snippet includes the schema `appSwitcher.json`.  However, the second shows that there is an error in the JSON: an extra comma after the last key/value pair. The editor flags the error in the specification on the line with the `!include` statement.
+The first snippet includes the schema `appSwitcher.json`.  However, the second shows that there is an error in the JSON: a quotation mark is missing at the end of the last value. 
 
 
 ----
@@ -84,7 +84,7 @@ schemas:
       "icons" : null ,
       "colors" : null ,
       "label" : "App Launcher" ,
-      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx",
+      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
     }
   ]
 }
