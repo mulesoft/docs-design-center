@@ -50,7 +50,7 @@ The data type for this example is also correct:
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
-The first snippet includes the schema `appSwitcher.json`.  However, the second shows that there is an error in the JSON: a quotation mark is missing at the end of the last value. 
+The first snippet includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: a quotation mark is missing at the end of the last value.
 
 
 ----

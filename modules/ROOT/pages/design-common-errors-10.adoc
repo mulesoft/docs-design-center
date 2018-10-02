@@ -267,14 +267,14 @@ This next snippet is correct.
 ----
 #%RAML 1.0
 title: ExampleRAML
-...
+uses:
+  lib: financeDetail.raml
 /claims:
   /{claim-id}:
     patch:
       body:
         application/json:
-          uses:
-            myLibrary: financeDetail.raml
+          type: lib.myType
 ----
 
 == Common Error 7
