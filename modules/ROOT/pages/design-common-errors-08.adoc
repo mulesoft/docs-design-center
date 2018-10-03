@@ -146,49 +146,61 @@ title: Order Entry API
 
 *_Not using a required property in the example of a schema that defines that property_*
 
-An example of a schema that defines a required property must use that property. In this snippet, the property that is defined in the second `id` attribute is misspelled: `sfOrderId` should be `sOrderId`. The second snippet shows the example JSON response in which `sOrderId` is defined. The example, therefore, is not in fact using the required property because the property was not defined correctly.
-
+If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
 
 ----
 #%RAML 0.8
 title: ExampleRAML
+version: 1.0
+...
 /order:
+  displayName: Orders API
+  /create:
+    ...
+
   /{id}:
+    displayName: Get Order by OrderId
+    description: This operation will get an order by order ID from Salesforce.
     get:
+      description: This operation returns the order from Salesforce by Fulfillment Order ID, not by the Salesforce unique ID.
       responses:
         200:
           body:
             application/json:
-              schema: |
-                {
-                  "type":"object",
-                  "$schema": "http://json-schema.org/draft-03/schema",
-                  "id": "http://com.mulesoft.demo.orders.get.json.order",
-                  "properties":{
-                      "property": {
-                        "type":"string",
-                        "id": "http://com.mulesoft.demo.orders.create.json.get.sfOrderId",
-                        "required":true
-                      }
-                  }
-                }
-              example: |
-                {
-                  "anotherProp": 14523
-                }
+              schema: !include get_order_response_schema.json
+              example: !include get_order_response.json
+
 ----
 
+The file `get_order_response_schema.json` defines the property `sfOrderId` as a required property.
+----
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://com.mulesoft.demo.orders.get.json.order",
+	"required":false,
+	"properties":{
+      ...
+      "sfOrderId": {
+        "type":"string",
+        "id": "http://com.mulesoft.demo.orders.create.json.get.sfOrderId",
+        "required":true
+      },
+  ...
+----
+
+The example of the schema is in `get_order_response.json`. However, the name of the required property is misspelled as `sOrderId`.
 
 ----
 {
   "orderId": 14523,
   "sOrderId": "fadfead3524523",
   "sfAccountId": "fedfes3653635",
-  "orderName": "Order From Someone",
+  "orderName": "Order From Manufacturing-Company, Inc.",
   "total": 174.92,
   "orderType": "E-Commerce Order",
-  "description": "A good order description",
-  "orderDate": "04-03-1980"
+  "description": "8 widgets",
+  "orderDate": "04-03-2018"
 }
 ----
 
