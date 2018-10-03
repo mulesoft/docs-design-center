@@ -156,7 +156,7 @@ MyExampleName:
     user: Lionel
 ----
 
-However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example. Because `Lionel` is not surrounded by quotation marks, the parser considers it to be a scalar, which does not match the type of the object that linked to the example.
+However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example, which it isn't. The example is `user: Lionel`.
 
 Suppose that the object was defined with a complex property:
 
