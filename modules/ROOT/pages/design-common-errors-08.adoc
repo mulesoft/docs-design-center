@@ -24,18 +24,11 @@ title: ExampleRAML
             example: true
 ----
 
+RAML 0.8 supports enum values as strings only, not as Boolean values. Also, in the example RAML above, no data type for the enum is declared. In RAML 0.8, when a data type is not declared, it is assumed to be `string`.
 
-The data type for this example is correct:
+Therefore, the values in the enum in the incorrect example above must be in quotation marks. Because the data type of an example must be the same as the data type of the element that it is an example of, the value in the example must be in quotation marks, too.
 
-
-----
-...
-            enum: [true, false]
-            example: "true"
-----
-
-The data type for this example is also correct:
-
+The last two line of the example RAML above should then be as they are in this correction:
 
 ----
 ...
