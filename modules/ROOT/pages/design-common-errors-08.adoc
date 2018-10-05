@@ -333,6 +333,9 @@ title: ExampleRAML
                 }
 ----
 
+For this problem, the editor displays the following warning:
+
+`Cannot parse JSON example: Cannot tokenize symbol at (x, y)`
 
 == Common Error 9
 // APIMF-1083
@@ -348,9 +351,11 @@ title:
 
 == Common Error 10
 // APIMF-1088
-*_Not using in an example of a query parameter the data type that is in the definition of the query parameter_*
+*_Not using the data type of the RAML element in the example for that element_*
 
-For example, if the type for a query parameter is string, then the example for the query parameter must also be string. Here, the example is an integer, but the query parameter is defined as a string.
+In all cases, the data type of an example must match the data type of the element that it is an example of.
+
+In this incorrect snippet of RAML, a query parameter is defined as a string; however, the example of the query parameter is an integer.
 
 
 ----
