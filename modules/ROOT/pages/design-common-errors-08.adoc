@@ -1,6 +1,6 @@
 = Common Errors in Conforming to RAML 0.8
 
-When testing its new RAML parser (which was released on October 24, 2018), MuleSoft identified ten common errors in API specifications written in RAML 0.8. This topic explains the errors with examples and describes how to fix them. They are not listed in any particular order, such as frequency of occurrence in the sample of API specifications that MuleSoft tested.
+When testing its new RAML parser (which was released on October 24, 2018), MuleSoft identified nine common errors in API specifications written in RAML 0.8. This topic explains the errors with examples and describes how to fix them. They are not listed in any particular order, such as frequency of occurrence in the sample of API specifications that MuleSoft tested.
 
 If you open in the code editor a published API specification that is written in RAML 0.8 and you see error indicators, this topic might help you to resolve most of the errors. If you see errors that this topic does not mention, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
 
@@ -262,42 +262,42 @@ title: ExampleRAML
             example: 1
 ----
 
-== Common Error 7
+// == Common Error 7
 // APIMF-1023
-*_Using absolute paths to included files_*
+// *_Using absolute paths to included files_*
 
-Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
+// Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
+//
+// The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
+//
+// ./api.raml
+//
+// ----
+// #%RAML 0.8
+// title: ExampleRAML
+// traits: !include ./common/traits.raml
+//
+// /booking/list:
+//     is: [common_errors]
+//     post:
+//         body:
+//             application/json:
+//                 example: {}
+// ----
+//
+// ./common/traits.raml
+//
+// ----
+// - common_errors:
+//     responses:
+//       400:
+//         body:
+//           application/json:
+//             example: !include /common/common_400.example
+// ----
 
-The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
 
-./api.raml
-
-----
-#%RAML 0.8
-title: ExampleRAML
-traits: !include ./common/traits.raml
-
-/booking/list:
-    is: [common_errors]
-    post:
-        body:
-            application/json:
-                example: {}
-----
-
-./common/traits.raml
-
-----
-- common_errors:
-    responses:
-      400:
-        body:
-          application/json:
-            example: !include /common/common_400.example
-----
-
-
-== Common Error 8
+== Common Error 7
 // APIMF-1069
 *_Using invalid JSON in examples of JSON schemas_*
 
@@ -337,7 +337,7 @@ For this problem, the editor displays the following warning:
 
 `Cannot parse JSON example: Cannot tokenize symbol at (x, y)`
 
-== Common Error 9
+== Common Error 8
 // APIMF-1083
 *_Not providing a value for the `title` node_*
 
@@ -349,7 +349,7 @@ The `title` node cannot lack a value, as it does here:
 title:
 ----
 
-== Common Error 10
+== Common Error 9
 // APIMF-1088
 *_Not using the data type of the RAML element in the example for that element_*
 

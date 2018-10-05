@@ -190,17 +190,17 @@ user:
 
 The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
 
-== Common Error 4
+// == Common Error 4
 // APIMF-966
-*_Not using a correct value for the `protocols` node_*
+// *_Not using a correct value for the `protocols` node_*
+//
+// The value of the `protocols` node must be an array. The array must be:
+//
+// * `[http]` or `[HTTP]`
+// * `[https]` or `[HTTPS]`
+// * `[http, https]` or `[HTTP, HTTPS]`
 
-The value of the `protocols` node must be an array. The array must be:
-
-* `[http]` or `[HTTP]`
-* `[https]` or `[HTTPS]`
-* `[http, https]` or `[HTTP, HTTPS]`
-
-== Common Error 5
+== Common Error 4
 // APIMF-967
 *_Including an example response that contains invalid JSON_*
 
@@ -238,7 +238,7 @@ title: ExampleRAML
 
 
 
-== Common Error 6
+== Common Error 5
 // APIMF-1030
 *_Referencing libraries by using the `type` key_*
 
@@ -277,7 +277,7 @@ uses:
           type: lib.myType
 ----
 
-== Common Error 7
+== Common Error 6
 // APIMF-1062
 *_Specifying values for an enum that does not match the enum's data type_*
 
@@ -301,7 +301,7 @@ enum: [1,2,3]
 ----
 
 
-== Common Error 8
+== Common Error 7
 // APIMF-1070
 *_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
 
