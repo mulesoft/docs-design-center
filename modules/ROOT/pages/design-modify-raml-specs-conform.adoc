@@ -1,10 +1,10 @@
 = Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0
 
-Design Center, as of October 24, 2018, now uses a parser that is stricter than its original parser to validate API specifications that are written in either RAML 0.8 or 1.0. This parser identifies errors that the previous parser overlooked, and requires that API specifications conform 100% to whichever of the two RAML specifications that they declare in their first lines.
+Design Center, as of November 1, 2018, now uses a parser that is stricter than its original parser to validate API specifications that are written in either RAML 0.8 or 1.0. This parser identifies errors that the previous parser overlooked, and requires that API specifications conform 100% to whichever of the two RAML specifications that they declare in their first lines.
 
 Therefore, when you open in the API editor a specification that has already been  published to Anypoint Exchange and was necessarily error-free when it was published, you might see error indicators where none were the last time you opened the specification. The indicators will be pointing out parts of the specification that were validated by the previous parser but that are in fact mistakes in the RAML.
 
-You have until October 24, 2019 to fix all of the errors that the new parser identifies in your published RAML API specifications. Until then, you can continue to republish specifications that contain these errors. After this date, however, published specifications must be error-free before you can re-publish them.
+You have until November 1, 2019 to fix all of the errors that the new parser identifies in your published RAML API specifications. Until then, you can continue to republish specifications that contain these errors. After this date, however, published specifications must be error-free before you can re-publish them.
 
 API specifications that are not yet published on Exchange must be error-free before you can publish them for the first time.
 

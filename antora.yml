@@ -1,5 +1,5 @@
 name: design-center
 title: Design Center
-version: master
+version: latest
 nav:
 - modules/ROOT/nav.adoc
