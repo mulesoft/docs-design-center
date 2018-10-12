@@ -1,5 +1,6 @@
 = Common Errors in Conforming to RAML 0.8
 
+
 When testing its new RAML parser (which was released on October 24, 2018), MuleSoft identified nine common errors in API specifications written in RAML 0.8. This topic explains the errors with examples and describes how to fix them. They are not listed in any particular order, such as frequency of occurrence in the sample of API specifications that MuleSoft tested.
 
 If you open in the code editor a published API specification that is written in RAML 0.8 and you see error indicators, this topic might help you to resolve most of the errors. If you see errors that this topic does not mention, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].

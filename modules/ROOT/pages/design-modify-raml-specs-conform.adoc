@@ -1,12 +1,784 @@
 = Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0
 
+[[bookmark-a,Back to the top]]
+
 As of November 1, 2018, Mule Runtime requires that APIs written in RAML conform 100% to the specification for the version of RAML (either 0.8 or 1.0) that their version nodes declare. It is possible that one or more of your published APIs includes invalid RAML. In previous releases of Design Center, the API editor did not enforce full compliance with the RAML specifications. Even if an API specification included some forms of invalid RAML, it could be published on Exchange and deployed.
 
 Check your published APIs by opening them in the API editor. You have until November 1, 2019 to correct any invalid RAML that they might include. After that date, you will be unable to republish and redeploy uncorrected APIs.
 
-The following two topics list common RAML errors in APIs that are already published, and describe how to fix them.
+The following two sections list common RAML errors in APIs that are already published, and describe how to fix them.
 
-include::{partialsdir}/content-for-amf.adoc[]
+* <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
+* <<bookmark-c,Common Errors in Conforming to RAML 1.0>>
 
-* xref:design-common-errors-08.adoc[Common Errors in Conforming to RAML 0.8]
-* xref:design-common-errors-10.adoc[Common Errors in Conforming to RAML 1.0]
+[[bookmark-b,Common Errors in Conforming to RAML 0.8]]
+== Common Errors in Conforming to RAML 0.8
+
+If you open in the API editor a published API specification that is written in RAML 0.8 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
+
+=== Common Error 1
+// APIMF-824
+
+*_Not using a data type of string for the example of a Boolean enum_*
+
+Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
+
+----
+#%RAML 0.8
+title: ExampleRAML
+/nob:
+  head:
+    responses:
+      204:
+        headers:
+          X-NOB-Exists:
+            enum: [true, false]
+            example: true
+----
+
+RAML 0.8 supports enum values as strings only, not as Boolean values. Also, in the example RAML above, no data type for the enum is declared. In RAML 0.8, when a data type is not declared, it is assumed to be `string`.
+
+Therefore, the values in the enum in the incorrect example above must be in quotation marks. Because the data type of an example must be the same as the data type of the element that it is an example of, the value in the example must be in quotation marks, too.
+
+The last two line of the example RAML above should then be as they are in this correction:
+
+----
+...
+            enum: ["true", "false"]
+            example: "true"
+----
+
+<<Back to the top>>
+
+=== Common Error 2
+// APIMF-841
+
+*_Including a schema that contains invalid JSON_*
+
+The JSON in files that are included in the value of the `schemas` property must be valid.
+
+The first snippet includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: a quotation mark is missing at the end of the last value.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+schemas:
+  - appSwitcher: !include schemas/appSwitcher.json
+----
+
+
+----
+{
+  "appMenuItems" : [
+    {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Call Center" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Community" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "App Launcher" ,
+      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
+    }
+  ]
+}
+----
+
+<<Back to the top>>
+
+=== Common Error 3
+// APIMF-852 and 853
+
+
+*_Using a non-integer data type for the example of a property that is an integer_*
+
+The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+
+/products:
+  /product/{product_id}:
+    description: Get product instance details
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-03/schema",
+                  "id": "http://jsonschema.net",
+                  "properties": {
+                      "unit_price": {
+                          "type": "integer"
+                      }
+                  }
+                }
+              example: |
+                {
+                  "unit_price": 19.00
+                }
+----
+
+As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+
+
+----
+#%RAML 0.8
+title: Order Entry API
+/orders:
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: "451"
+----
+
+<<Back to the top>>
+
+=== Common Error 4
+// APIMF-896
+
+*_Not using a required property in the example of a schema that defines that property_*
+
+If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
+
+----
+#%RAML 0.8
+title: ExampleRAML
+version: 1.0
+...
+/order:
+  displayName: Orders API
+  /create:
+    ...
+
+  /{id}:
+    displayName: Get Order by OrderId
+    description: This operation will get an order by order ID from Salesforce.
+    get:
+      description: This operation returns the order from Salesforce by Fulfillment Order ID, not by the Salesforce unique ID.
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include get_order_response_schema.json
+              example: !include get_order_response.json
+
+----
+
+The file `get_order_response_schema.json` defines the property `sfOrderId` as a required property.
+----
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://com.mulesoft.demo.orders.get.json.order",
+	"required":false,
+	"properties":{
+      ...
+      "sfOrderId": {
+        "type":"string",
+        "id": "http://com.mulesoft.demo.orders.create.json.get.sfOrderId",
+        "required":true
+      },
+  ...
+----
+
+The example of the schema is in `get_order_response.json`. However, the name of the required property is misspelled as `sOrderId`.
+
+----
+{
+  "orderId": 14523,
+  "sOrderId": "fadfead3524523",
+  "sfAccountId": "fedfes3653635",
+  "orderName": "Order From Manufacturing-Company, Inc.",
+  "total": 174.92,
+  "orderType": "E-Commerce Order",
+  "description": "8 widgets",
+  "orderDate": "04-03-2018"
+}
+----
+
+<<Back to the top>>
+
+=== Common Error 5
+// APIMF-901
+*_Not using in an example of a schema the data type that the schema defines_*
+
+For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
+
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+schemas:
+  - presentation: |
+      {  "$schema": "http://json-schema.org/draft-03/schema",
+         "type": "object",
+         "properties": {
+           "title":  { "type": "string" }
+         }
+      }
+
+/presentations: &presentations
+  type: { typedCollection: { schema: presentation } }
+  get:
+    responses:
+      200:
+       body:
+         application/json:
+           example: |
+             [
+              {
+                  "title": "Presentation Video"
+              },
+              {
+                  "title": "Environment Spec Report"
+              }
+              ]
+
+----
+
+<<Back to the top>>
+
+=== Common Error 6
+// APIMF-929
+*_Using 0 or 1 as the value of an example of a Boolean_*
+
+An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+
+/upload:
+  post:
+    description: |
+      Upload a photo
+    body:
+      multipart/form-data:
+        formParameters:
+          title:
+            description: The title of the photo.
+          is_public:
+            type: boolean
+            example: 1
+----
+
+// === Common Error 7
+// APIMF-1023
+// *_Using absolute paths to included files_*
+
+// Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
+//
+// The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
+//
+// ./api.raml
+//
+// ----
+// #%RAML 0.8
+// title: ExampleRAML
+// traits: !include ./common/traits.raml
+//
+// /booking/list:
+//     is: [common_errors]
+//     post:
+//         body:
+//             application/json:
+//                 example: {}
+// ----
+//
+// ./common/traits.raml
+//
+// ----
+// - common_errors:
+//     responses:
+//       400:
+//         body:
+//           application/json:
+//             example: !include /common/common_400.example
+// ----
+
+<<Back to the top>>
+
+=== Common Error 7
+// APIMF-1069
+*_Using invalid JSON in examples of JSON schemas_*
+
+Examples of JSON schemas must be valid, unlike the example in the following snippet:
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+...
+/api:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema:
+              {
+                "type": "object",
+                "required": true,
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                  "a": {
+                    "type": "boolean",
+                    "required": true
+                  }
+                }
+              }
+            example:
+              {
+                "a: {
+                  "a": ""
+                }
+----
+
+For this problem, the editor displays the following warning:
+
+`Cannot parse JSON example: Cannot tokenize symbol at (x, y)`
+
+<<Back to the top>>
+
+=== Common Error 8
+// APIMF-1083
+*_Not providing a value for the `title` node_*
+
+The `title` node cannot lack a value, as it does here:
+
+
+----
+#%RAML 0.8
+title:
+----
+
+<<Back to the top>>
+
+=== Common Error 9
+// APIMF-1088
+*_Not using the data type of the RAML element in the example for that element_*
+
+In all cases, the data type of an example must match the data type of the element that it is an example of.
+
+In this incorrect snippet of RAML, a query parameter is defined as a string; however, the example of the query parameter is an integer.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+/books:
+  get:
+    queryParameters:
+      publicationYear:
+        type: string
+        example: 2016
+----
+
+<<Back to the top>>
+
+[[bookmark-c,Common Errors in Conforming to RAML 1.0]]
+== Common Errors in Conforming to RAML 1.0
+
+If you open in the API editor a published API specification that is written in RAML 1.0 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 1.0, which you can read on https://raml.org/[raml.org].
+
+=== Common Error 1
+// APIMF-834
+*_Appending references with hash symbols to filenames in `!include` statements_*
+
+A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
+
+----
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  startValue: integer
+  endValue: integer
+  exclusiveEndValue: boolean
+  range:
+    type: array
+    items: !include IncrementType.raml#increment
+
+----
+
+If your specification contains an error of this type, but you meant to write a comment, place an empty space before the "#" symbol. If you meant to reference an element that is in the file, such references are not allowed. References to inner elements are valid only for XSD and JSON schemas.
+
+<<Back to the top>>
+
+=== Common Error 2
+// APIMF-849
+*_Not correctly using curly braces and brackets in JSON examples_*
+
+There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+             {
+               [{
+                "Name": "Superior King",
+                "Number": "201",
+                "Property": "SE030",
+                "Status": "Clean"
+                },
+                {
+                "Name": "Junior Suite",
+                "Number": "202",
+                "Property": "NO131",
+                "Status": "Clean"
+                }]
+              }
+----
+
+If the example was meant be an object, then a key must be specified for it.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+            {
+    	      "some_key": [
+                {
+                  "Name": "Superior King",
+          	  "Number": "201",
+          	  "Property": "SE030",
+          	  "Status": "Clean"
+          	},
+          	{
+          	  "Name": "Junior Suite",
+          	  "Number": "202",
+          	  "Property": "NO131",
+          	  "Status": "Clean"
+          	}
+              ]
+            }
+----
+
+If the example was meant be an array, then the outside curly braces must be removed.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+            [
+                {
+                  "Name": "Superior King",
+          	  "Number": "201",
+          	  "Property": "SE030",
+          	  "Status": "Clean"
+          	},
+          	{
+          	  "Name": "Junior Suite",
+          	  "Number": "202",
+          	  "Property": "NO131",
+          	  "Status": "Clean"
+          	}
+            ]
+----
+
+<<Back to the top>>
+
+=== Common Error 3
+// APIMF-907
+
+*_Not naming named examples_*
+
+The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+----
+
+The properties of the example then follow after. For example, suppose an API specification defines the following object:
+
+----
+user_name:
+    type: object
+    properties:
+        user: string
+----
+
+The NamedExample fragment would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user: Lionel
+----
+
+However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example, which it isn't. The example is `user: Lionel`.
+
+Suppose that the object was defined with a complex property:
+
+----
+user_name:
+    type: object
+    properties:
+        user:
+            name: string
+            lastName: string
+----
+
+The named example would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user:
+        name: Lionel
+        lastName: Ma
+----
+
+Suppose that instead it looked like this:
+
+----
+#%RAML 1.0 NamedExample
+user:
+    name: Lionel
+    lastName: Ma
+----
+
+The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
+
+// === Common Error 4
+// APIMF-966
+// *_Not using a correct value for the `protocols` node_*
+//
+// The value of the `protocols` node must be an array. The array must be:
+//
+// * `[http]` or `[HTTP]`
+// * `[https]` or `[HTTPS]`
+// * `[http, https]` or `[HTTP, HTTPS]`
+
+<<Back to the top>>
+
+=== Common Error 4
+// APIMF-967
+*_Including an example response that contains invalid JSON_*
+
+When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/resume:
+  description: "Gets candidate's resume."
+  get:
+    queryParameters:
+       ...
+    headers:
+      ...
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include exampleResumeData-200.json
+      500:
+        ...
+----
+
+
+----
+{
+...
+"assesments.characteristic.focusofattention.data"= "",
+}
+
+
+----
+
+<<Back to the top>>
+
+=== Common Error 5
+// APIMF-1030
+*_Referencing libraries by using the `type` key_*
+
+As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
+
+____
+Any number of libraries can be applied by using the OPTIONAL uses node ONLY at the root of a ["master"] RAML or RAML fragment file. The value of the uses node is a map of key-value pairs. The keys are treated as library names, or namespaces, and the value MUST be the location of a RAML library file, usually an external RAML library fragment document.
+____
+
+Therefore, the following snippet is incorrect, given that the file `financeDetail.raml` is a library.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          type: !include financeDetail.raml
+----
+
+This next snippet is correct.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+uses:
+  lib: financeDetail.raml
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          type: lib.myType
+----
+
+<<Back to the top>>
+
+=== Common Error 6
+// APIMF-1062
+*_Specifying values for an enum that does not match the enum's data type_*
+
+
+To illustrate this error, here is an invalid declaration of an enum.
+
+----
+type: string
+enum: [1,2,3]
+----
+
+The next two declarations are valid.
+----
+type: string
+enum: ["1","2","3"]
+----
+
+----
+type: integer
+enum: [1,2,3]
+----
+
+<<Back to the top>>
+
+=== Common Error 7
+// APIMF-1070
+*_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
+
+Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+types:
+  collection:
+    type: integer
+    format: int8
+
+/search:
+  /code:
+      get:
+       body:
+        type: collection
+        example: 22342342
+----
+
+<<Back to the top>>
+
+=== Common Error 8
+// APIMF-1158
+*_Not defining a media type for an empty body when no default media type is defined_*
+
+It is possible to specify media types globally for an entire API specification or locally for individual `body` nodes. According to the RAML 1.0 specification, a global definition looks like this:
+
+----
+#%RAML 1.0
+title: New API
+mediaType: application/json
+----
+
+This example, also from the RAML 1.0 specification, uses both a global and a local definition. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global definition with a local one, and returns only a JSON body.
+
+----
+#%RAML 1.0
+title: New API
+mediaType: [ application/json, application/xml ]
+types:
+  Person:
+  Another:
+/list:
+  get:
+    responses:
+      200:
+        body: Person[]
+/send:
+  post:
+    body:
+      application/json:
+        type: Another
+----
+
+The common error is demonstrated in this example:
+
+----
+#%RAML 1.0
+
+title: API
+
+/endpoint:
+  get:
+    body:
+    responses:
+      200:
+        body:
+----
+
+There is no `mediaType` node that defines the media types globally. Yet, the second `body` node incorrectly does not locally define its media type. If there is no global definition, an empty body must use a local definition.
+
+<<Back to the top>>
