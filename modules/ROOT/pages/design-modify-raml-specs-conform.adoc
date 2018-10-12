@@ -16,7 +16,7 @@ The following two sections list common RAML errors in APIs that are already publ
 
 If you open in the API editor a published API specification that is written in RAML 0.8 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
 
-=== Common Error 1
+=== Common Error 1 (RAML 0.8)
 // APIMF-824
 
 *_Not using a data type of string for the example of a Boolean enum_*
@@ -50,7 +50,7 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-=== Common Error 2
+=== Common Error 2 (RAML 0.8)
 // APIMF-841
 
 *_Including a schema that contains invalid JSON_*
@@ -99,7 +99,7 @@ schemas:
 
 <<Back to the top>>
 
-=== Common Error 3
+=== Common Error 3 (RAML 0.8)
 // APIMF-852 and 853
 
 
@@ -152,7 +152,7 @@ title: Order Entry API
 
 <<Back to the top>>
 
-=== Common Error 4
+=== Common Error 4 (RAML 0.8)
 // APIMF-896
 
 *_Not using a required property in the example of a schema that defines that property_*
@@ -217,7 +217,7 @@ The example of the schema is in `get_order_response.json`. However, the name of 
 
 <<Back to the top>>
 
-=== Common Error 5
+=== Common Error 5 (RAML 0.8)
 // APIMF-901
 *_Not using in an example of a schema the data type that the schema defines_*
 
@@ -258,7 +258,7 @@ schemas:
 
 <<Back to the top>>
 
-=== Common Error 6
+=== Common Error 6 (RAML 0.8)
 // APIMF-929
 *_Using 0 or 1 as the value of an example of a Boolean_*
 
@@ -319,7 +319,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 7
+=== Common Error 7 (RAML 0.8)
 // APIMF-1069
 *_Using invalid JSON in examples of JSON schemas_*
 
@@ -361,7 +361,7 @@ For this problem, the editor displays the following warning:
 
 <<Back to the top>>
 
-=== Common Error 8
+=== Common Error 8 (RAML 0.8)
 // APIMF-1083
 *_Not providing a value for the `title` node_*
 
@@ -375,7 +375,7 @@ title:
 
 <<Back to the top>>
 
-=== Common Error 9
+=== Common Error 9 (RAML 0.8)
 // APIMF-1088
 *_Not using the data type of the RAML element in the example for that element_*
 
@@ -402,7 +402,7 @@ title: ExampleRAML
 
 If you open in the API editor a published API specification that is written in RAML 1.0 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 1.0, which you can read on https://raml.org/[raml.org].
 
-=== Common Error 1
+=== Common Error 1 (RAML 1.0)
 // APIMF-834
 *_Appending references with hash symbols to filenames in `!include` statements_*
 
@@ -426,7 +426,7 @@ If your specification contains an error of this type, but you meant to write a c
 
 <<Back to the top>>
 
-=== Common Error 2
+=== Common Error 2 (RAML 1.0)
 // APIMF-849
 *_Not correctly using curly braces and brackets in JSON examples_*
 
@@ -527,7 +527,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 3
+=== Common Error 3 (RAML 1.0)
 // APIMF-907
 
 *_Not naming named examples_*
@@ -602,7 +602,7 @@ The parser would assume that `user` was the name of the example and that the obj
 
 <<Back to the top>>
 
-=== Common Error 4
+=== Common Error 4 (RAML 1.0)
 // APIMF-967
 *_Including an example response that contains invalid JSON_*
 
@@ -640,7 +640,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 5
+=== Common Error 5 (RAML 1.0)
 // APIMF-1030
 *_Referencing libraries by using the `type` key_*
 
@@ -681,7 +681,7 @@ uses:
 
 <<Back to the top>>
 
-=== Common Error 6
+=== Common Error 6 (RAML 1.0)
 // APIMF-1062
 *_Specifying values for an enum that does not match the enum's data type_*
 
@@ -706,7 +706,7 @@ enum: [1,2,3]
 
 <<Back to the top>>
 
-=== Common Error 7
+=== Common Error 7 (RAML 1.0)
 // APIMF-1070
 *_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
 
@@ -731,7 +731,7 @@ types:
 
 <<Back to the top>>
 
-=== Common Error 8
+=== Common Error 8 (RAML 1.0)
 // APIMF-1158
 *_Not defining a media type for an empty body when no default media type is defined_*
 
