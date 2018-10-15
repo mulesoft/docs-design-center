@@ -2,11 +2,12 @@
 
 [[bookmark-a,Back to the top]]
 
-As of November 1, 2018, Mule Runtime requires that APIs written in RAML conform 100% to the specification for the version of RAML (either 0.8 or 1.0) that their version nodes declare. It is possible that one or more of your published APIs includes invalid RAML. In previous releases of Design Center, the API editor did not enforce full compliance with the RAML specifications. Even if an API specification included some forms of invalid RAML, it could be published on Exchange and deployed.
+As of November 1, 2018, Design Center requires that APIs written in RAML be 100% compliant with the specification for the version of RAML (either 0.8 or 1.0) that their version nodes declare. RAML APIs that are not fully compliant cannot be published to Anypoint Exchange.
 
-Check your published APIs by opening them in the API editor. You have until November 1, 2019 to correct any invalid RAML that they might include. After that date, you will be unable to republish and redeploy uncorrected APIs.
+It is possible that one or more of your published APIs includes invalid RAML. In previous releases of Design Center, the API editor did not enforce full compliance with the RAML specifications. Even if an API specification included some forms of invalid RAML, it could be published on Exchange and deployed.
 
-The following two sections list common RAML errors in APIs that are already published, and describe how to fix them.
+Check your published APIs by opening them in the API editor in Design Center. You have until November 1, 2019 to correct any invalid RAML that they might include. After that date, you will be unable to republish and redeploy uncorrected APIs.
+
 
 * <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
 * <<bookmark-c,Common Errors in Conforming to RAML 1.0>>
