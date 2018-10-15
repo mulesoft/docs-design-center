@@ -356,9 +356,6 @@ title: ExampleRAML
                 }
 ----
 
-For this problem, the editor displays the following warning:
-
-`Cannot parse JSON example: Cannot tokenize symbol at (x, y)`
 
 <<Back to the top>>
 
