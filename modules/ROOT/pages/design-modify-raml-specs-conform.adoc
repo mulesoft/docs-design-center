@@ -762,21 +762,30 @@ types:
         type: Another
 ----
 
-The common error is demonstrated in this example:
+The common error is demonstrated in both of these two following examples. There is no `mediaType` node in either example that defines the media types globally. Moreover, neither of the `body` nodes defines its media type. If there is no global definition, an empty body must use a local definition.
 
 ----
 #%RAML 1.0
 
-title: API
+title: ExampleRAML
 
 /endpoint:
   get:
     body:
     responses:
       200:
-        body:
 ----
 
-There is no `mediaType` node that defines the media types globally. Yet, the second `body` node incorrectly does not locally define its media type. If there is no global definition, an empty body must use a local definition.
+----
+#%RAML 1.0
+
+title: ExampleRAML
+
+/endpoint:
+  get:
+    responses:
+      200:
+        body:
+----
 
 <<Back to the top>>
