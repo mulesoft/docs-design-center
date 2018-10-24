@@ -19,4 +19,4 @@ image::fd13-refresh.png[]
 
 You can also refresh or delete the data from the options control of the opened module.
 
-image::refresh-delete-opened1.png[height=297,width=814]
+image::refresh-delete-opened1.png[height=264,width=724]
