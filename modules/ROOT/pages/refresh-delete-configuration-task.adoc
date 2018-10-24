@@ -5,7 +5,7 @@ endif::[]
 
 Indicators and component metadata appear on each face of each module in the flow.
 
-image::green-bar.png[typical flow,height=110,width=727]
+image::green-bar.png[typical flow,height=183,width=724]
 
 If you make changes, for example to the path configured for the GET method of an HTTP Listener, the data that appears on the component becomes stale. You can refresh or delete the data by following the steps in this procedure:
 
