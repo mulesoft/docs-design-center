@@ -106,7 +106,7 @@ schemas:
 
 *_Using a non-integer data type for the example of a property that is an integer_*
 
-The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`
+The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`.
 
 
 ----
