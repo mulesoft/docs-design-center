@@ -2,7 +2,7 @@
 
 [[bookmark-a,Back to the top]]
 
-As of November 1, 2018, the API editor Design Center is now more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Anypoint Exchange includes invalid RAML that those previous versions did not flag.
+As of November 1, 2018, the API editor in Design Center is now more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Exchange includes invalid RAML that those previous versions did not flag.
 
 Check your published APIs by opening them in the API editor in Design Center. You can use the guide on this page to correct a number of errors that MuleSoft has found while testing the current API editor on a large number of RAML API specifications. If you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
