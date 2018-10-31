@@ -2,19 +2,11 @@
 
 [[bookmark-a,Back to the top]]
 
-<<<<<<< HEAD
 Soon, the API editor in Design Center will be more precise in ensuring that the RAML in your API specifications is valid. However, it will be possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Anypoint Exchange will include invalid RAML that those previous versions did not flag.
-=======
-As of November 1, 2018, the API editor in Design Center is now more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Exchange includes invalid RAML that those previous versions did not flag.
->>>>>>> d8fd8f92cbf18a9e36829d494f47a6c5b76811ce
 
 You will need to check your published APIs by opening them in the API editor in Design Center. You can use the guide on this page to correct a number of errors that MuleSoft has found while testing the changes to the API editor on a large number of RAML API specifications. If, after these changes to the API editor are released, you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
-<<<<<<< HEAD
-You will have a grace period of at least one year to correct any invalid RAML that your published API specifications might include. After that grace period expires, you will be unable to republish and redeploy APIs in which there is invalid RAML.
-=======
-You have until October 31, 2019 to correct any invalid RAML that your published API specifications might include. After that date, you will be unable to republish and redeploy APIs in which there is invalid RAML.
->>>>>>> d8fd8f92cbf18a9e36829d494f47a6c5b76811ce
+You will have a grace period to correct any invalid RAML that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy APIs in which there is invalid RAML.
 
 
 * <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
