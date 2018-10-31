@@ -2,11 +2,19 @@
 
 [[bookmark-a,Back to the top]]
 
+<<<<<<< HEAD
 Soon, the API editor in Design Center will be more precise in ensuring that the RAML in your API specifications is valid. However, it will be possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Anypoint Exchange will include invalid RAML that those previous versions did not flag.
+=======
+As of November 1, 2018, the API editor in Design Center is now more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Exchange includes invalid RAML that those previous versions did not flag.
+>>>>>>> d8fd8f92cbf18a9e36829d494f47a6c5b76811ce
 
 You will need to check your published APIs by opening them in the API editor in Design Center. You can use the guide on this page to correct a number of errors that MuleSoft has found while testing the changes to the API editor on a large number of RAML API specifications. If, after these changes to the API editor are released, you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
+<<<<<<< HEAD
 You will have a grace period of at least one year to correct any invalid RAML that your published API specifications might include. After that grace period expires, you will be unable to republish and redeploy APIs in which there is invalid RAML.
+=======
+You have until October 31, 2019 to correct any invalid RAML that your published API specifications might include. After that date, you will be unable to republish and redeploy APIs in which there is invalid RAML.
+>>>>>>> d8fd8f92cbf18a9e36829d494f47a6c5b76811ce
 
 
 * <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
@@ -37,9 +45,9 @@ title: ExampleRAML
             example: true
 ----
 
-RAML 0.8 supports enum values as strings only, not as Boolean values. Also, in the example RAML above, no data type for the enum is declared. In RAML 0.8, when a data type is not declared, it is assumed to be `string`.
+RAML 0.8 supports enum values as strings only, not as boolean values. Also, in the example RAML above, no data type for the enum is declared. In RAML 0.8, when a data type is not declared, it is assumed to be `string`.
 
-Therefore, the values in the enum in the incorrect example above must be in quotation marks. Because the data type of an example must be the same as the data type of the element that it is an example of, the value in the example must be in quotation marks, too.
+Therefore, the values in the enum in the incorrect example above must be in quotation marks. That's because the data type of an example must be the same as the data type of the element that it is an example of.
 
 The last two line of the example RAML above should then be as they are in this correction:
 
@@ -58,7 +66,7 @@ The last two line of the example RAML above should then be as they are in this c
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
-The first snippet includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: a quotation mark is missing at the end of the last value.
+The first snippet includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
 
 
 ----
@@ -106,7 +114,7 @@ schemas:
 
 *_Using a non-integer data type for the example of a property that is an integer_*
 
-The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`
+The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`.
 
 
 ----
