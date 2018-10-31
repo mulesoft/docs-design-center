@@ -1,5 +1,6 @@
 .xref:index.adoc[Design Center]
 * xref:index.adoc[About Design Center]
+* xref:design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0]
 * xref:design-create-publish-api-specs.adoc[Create and Publish an API Specification or API Fragment]
  ** xref:design-create-publish-api-visual-editor.adoc[Create and Publish an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the Code Editor]
