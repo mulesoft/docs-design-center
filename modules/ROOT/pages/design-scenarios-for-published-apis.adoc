@@ -1,28 +1,25 @@
-= d
+= How the Changes to the API Editor Affect Your Work in Anypoint Studio and Mule Runtime
 
 As described in xref::esign-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0], the API editor in Design Center will soon be more precise in ensuring that the RAML in your API specifications is valid. Although RAML API specifications that you have already published might contain invalid RAML, you will have a long grace period in which to make corrections.
 
-== Published from the API editor, implemented in Studio 6.x, then deployed to Mule Rumtime 3.x
+== Scenarios involving Anypoint Studio 6._x_ and Mule Runtime 3._x_
 
 * Both during and after the grace period, in the majority of cases, a valid RAML API spec that is published to Exchange from the API editor will not be flagged with additional RAML errors when opened in Studio 6. Moreover, the implementation that is created in Studio 6 will be able to run without errors in Mule Runtime 3.
 * During the grace period, it is possible to publish to Exchange an API spec that still has invalid RAML according to the API editor, yet open the spec in Studio 6 and see no invalid RAML flagged. In such cases, there is in fact invalid RAML in the spec, but Studio 6 is not flagging it. Also, the implementation that is created in Studio 6 will be able to run without errors in Mule Runtime 3.
-* Both during and after the grace period, in a very small number of cases, a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, Studio 6 will incorrectly "find" invalid RAML in the spec. In such cases, it will not be possible to create an implementation of the API specification and then run the implementation in Mule Runtime 3. If you experience this problem, contact MuleSoft Technical Support.
+* In a very small number of cases both during and after the grace period,  a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, Studio 6 will incorrectly "find" invalid RAML in the spec. In such cases, it will not be possible to create an implementation of the API specification and then run the implementation in Mule Runtime 3. If you experience this problem, contact MuleSoft Technical Support.
 
-== Published from the API editor, then deployed as an API proxy in Mule Runtime 3.x
+== Scenarios involving Mule Runtime 3._x_
 
 * Both during and after the grace period, in the majority of cases, a valid RAML API spec that is published to Exchange can deployed as an API proxy in Mule Runtime 3.
 * During the grace period, it is possible to publish to Exchange an API spec that still has invalid RAML according to the API editor. In that situation, you can still deploy the API specification as an API proxy in Mule Runtime 3.
-* Both during and after the grace period, in a very small number of cases, a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, it will not be possible to deploy an API proxy in Mule Runtime 3. If you experience this problem, contact MuleSoft Technical Support.
+* In a very small number of cases both during and after the grace period,  a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, it will not be possible to deploy an API proxy in Mule Runtime 3. If you experience this problem, contact MuleSoft Technical Support.
 
-== Published from the API editor, implemented in Anypoint Studio 7, then deployed in Mule Runtime 4.x
+== Scenarios involving Anypoint Studio 7 and Mule Runtime 4._x_
 
-* Both before and after the release of native support for OAS 2.0, in the majority of cases, a valid RAML API spec that is published to Exchange from the API editor will not be flagged with additional RAML errors when opened in Studio 7. Moreover, the implementation that is created in Studio 7 will be able to run without errors in Mule Runtime 4.
-            Why "before and after the release of native support for OAS 2.0"?
-* Before before and after the release of native support of OAS 2.0, it is possible to publish to Exchange an API spec that still has invalid RAML according to the API editor, yet open the spec in Studio 7 and see no invalid RAML flagged. In such cases, there is in fact invalid RAML in the spec, but Studio 6 is not flagging it. Also, the implementation that is created in Studio 7 will be able to run without errors in Mule Runtime 4.
-            Why "before and after the release of native support for OAS 2.0"?
-* Before the release of native support of OAS 2.0, in a very small number of cases, a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, Studio 7 will incorrectly "find" invalid RAML in the spec. In such cases, it will not be possible to create an implementation of the API specification and then run the implementation in Mule Runtime 4. If you experience this problem, contact MuleSoft Technical Support.
-            Why "before the release of native support for OAS 2.0"?
+* Both before and after the release of the changes to the API editor, in the majority of cases, a valid RAML API spec that is published to Exchange from the API editor will not be flagged with additional RAML errors when opened in Studio 7. Moreover, the implementation that is created in Studio 7 will be able to run without errors in Mule Runtime 4.
+* Before before and after the release of the changes to the API editor, it is possible to publish to Exchange an API spec that still has invalid RAML according to the API editor, yet open the spec in Studio 7 and see no invalid RAML flagged. Also, the implementation that is created in Studio 7 will be able to run without errors in Mule Runtime 4.
+* In a very small number of cases before the release of the changes to the API editor, a RAML API spec that the API editor deems free of invalid RAML will be published to Exchange; subsequently, Studio 7 will incorrectly "find" invalid RAML in the spec. In such cases, it will not be possible to create an implementation of the API specification and then run the implementation in Mule Runtime 4. If you experience this problem, contact MuleSoft Technical Support.
 
-            == Published from the API editor, then deployed as an API proxy in Mule Runtime 4.x
+== Scenarios involving Mule Runtime 4._x_
 
 * In all cases, a valid RAML API specification that is published to Exchange from API Designer can be deployed as an API proxy in Mule Runtime 4.
