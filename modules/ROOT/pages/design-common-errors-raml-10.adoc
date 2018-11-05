@@ -1,0 +1,395 @@
+= Common Errors Found in RAML 1.0 API Specifications
+
+[[bookmark-a,Back to the top]]
+
+If you open in the API editor a published API specification that is written in RAML 1.0 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 1.0, which you can read on https://raml.org/[raml.org].
+
+== Common Error 1 (RAML 1.0)
+// APIMF-834
+*_Appending references with hash symbols to filenames in `!include` statements_*
+
+A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
+
+----
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  startValue: integer
+  endValue: integer
+  exclusiveEndValue: boolean
+  range:
+    type: array
+    items: !include IncrementType.raml#increment
+
+----
+
+If your specification contains an error of this type, but you meant to write a comment, place an empty space before the "#" symbol. If you meant to reference an element that is in the file, such references are not allowed. References to inner elements are valid only for XSD and JSON schemas.
+
+<<Back to the top>>
+
+== Common Error 2 (RAML 1.0)
+// APIMF-849
+*_Not correctly using curly braces and brackets in JSON examples_*
+
+There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+             {
+               [{
+                "Name": "Superior King",
+                "Number": "201",
+                "Property": "SE030",
+                "Status": "Clean"
+                },
+                {
+                "Name": "Junior Suite",
+                "Number": "202",
+                "Property": "NO131",
+                "Status": "Clean"
+                }]
+              }
+----
+
+If the example was meant be an object, then a key must be specified for it.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+            {
+    	      "some_key": [
+                {
+                  "Name": "Superior King",
+          	  "Number": "201",
+          	  "Property": "SE030",
+          	  "Status": "Clean"
+          	},
+          	{
+          	  "Name": "Junior Suite",
+          	  "Number": "202",
+          	  "Property": "NO131",
+          	  "Status": "Clean"
+          	}
+              ]
+            }
+----
+
+If the example was meant be an array, then the outside curly braces must be removed.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/rooms:
+  displayName: rooms
+  get:
+    description: get all rooms
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+            [
+                {
+                  "Name": "Superior King",
+          	  "Number": "201",
+          	  "Property": "SE030",
+          	  "Status": "Clean"
+          	},
+          	{
+          	  "Name": "Junior Suite",
+          	  "Number": "202",
+          	  "Property": "NO131",
+          	  "Status": "Clean"
+          	}
+            ]
+----
+
+<<Back to the top>>
+
+== Common Error 3 (RAML 1.0)
+// APIMF-907
+
+*_Not naming named examples_*
+
+The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+----
+
+The properties of the example then follow after. For example, suppose an API specification defines the following object:
+
+----
+user_name:
+    type: object
+    properties:
+        user: string
+----
+
+The NamedExample fragment would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user: Lionel
+----
+
+However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example, which it isn't. The example is `user: Lionel`.
+
+Suppose that the object was defined with a complex property:
+
+----
+user_name:
+    type: object
+    properties:
+        user:
+            name: string
+            lastName: string
+----
+
+The named example would need to look like this:
+
+----
+#%RAML 1.0 NamedExample
+MyExampleName:
+    user:
+        name: Lionel
+        lastName: Ma
+----
+
+Suppose that instead it looked like this:
+
+----
+#%RAML 1.0 NamedExample
+user:
+    name: Lionel
+    lastName: Ma
+----
+
+The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
+
+// == Common Error 4
+// APIMF-966
+// *_Not using a correct value for the `protocols` node_*
+//
+// The value of the `protocols` node must be an array. The array must be:
+//
+// * `[http]` or `[HTTP]`
+// * `[https]` or `[HTTPS]`
+// * `[http, https]` or `[HTTP, HTTPS]`
+
+<<Back to the top>>
+
+== Common Error 4 (RAML 1.0)
+// APIMF-967
+*_Including an example response that contains invalid JSON_*
+
+When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/resume:
+  description: "Gets candidate's resume."
+  get:
+    queryParameters:
+       ...
+    headers:
+      ...
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include exampleResumeData-200.json
+      500:
+        ...
+----
+
+
+----
+{
+...
+"assesments.characteristic.focusofattention.data"= "",
+}
+
+
+----
+
+<<Back to the top>>
+
+== Common Error 5 (RAML 1.0)
+// APIMF-1030
+*_Referencing libraries by using the `type` key_*
+
+As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
+
+____
+Any number of libraries can be applied by using the OPTIONAL uses node ONLY at the root of a ["master"] RAML or RAML fragment file. The value of the uses node is a map of key-value pairs. The keys are treated as library names, or namespaces, and the value MUST be the location of a RAML library file, usually an external RAML library fragment document.
+____
+
+Therefore, the following snippet is incorrect, given that the file `financeDetail.raml` is a library.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          type: !include financeDetail.raml
+----
+
+This next snippet is correct.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+uses:
+  lib: financeDetail.raml
+/claims:
+  /{claim-id}:
+    patch:
+      body:
+        application/json:
+          type: lib.myType
+----
+
+<<Back to the top>>
+
+== Common Error 6 (RAML 1.0)
+// APIMF-1062
+*_Specifying values for an enum that does not match the enum's data type_*
+
+
+To illustrate this error, here is an invalid declaration of an enum.
+
+----
+type: string
+enum: [1,2,3]
+----
+
+The next two declarations are valid.
+----
+type: string
+enum: ["1","2","3"]
+----
+
+----
+type: integer
+enum: [1,2,3]
+----
+
+<<Back to the top>>
+
+== Common Error 7 (RAML 1.0)
+// APIMF-1070
+*_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
+
+Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+types:
+  collection:
+    type: integer
+    format: int8
+
+/search:
+  /code:
+      get:
+       body:
+        type: collection
+        example: 22342342
+----
+
+<<Back to the top>>
+
+== Common Error 8 (RAML 1.0)
+// APIMF-1158
+*_Not defining a media type for an empty body when no default media type is defined_*
+
+It is possible to specify media types globally for an entire API specification or locally for individual `body` nodes. According to the RAML 1.0 specification, a global definition looks like this:
+
+----
+#%RAML 1.0
+title: New API
+mediaType: application/json
+----
+
+This example, also from the RAML 1.0 specification, uses both a global and a local definition. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global definition with a local one, and returns only a JSON body.
+
+----
+#%RAML 1.0
+title: New API
+mediaType: [ application/json, application/xml ]
+types:
+  Person:
+  Another:
+/list:
+  get:
+    responses:
+      200:
+        body: Person[]
+/send:
+  post:
+    body:
+      application/json:
+        type: Another
+----
+
+The common error is demonstrated in both of these two following examples. There is no `mediaType` node in either example that defines the media types globally. Moreover, neither of the `body` nodes defines its media type. If there is no global definition, an empty body must use a local definition.
+
+----
+#%RAML 1.0
+
+title: ExampleRAML
+
+/endpoint:
+  get:
+    body:
+    responses:
+      200:
+----
+
+----
+#%RAML 1.0
+
+title: ExampleRAML
+
+/endpoint:
+  get:
+    responses:
+      200:
+        body:
+----
+
+<<Back to the top>>

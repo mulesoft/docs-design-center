@@ -9,8 +9,8 @@ You will need to check your published APIs by opening them in the API editor in 
 You will have a long grace period to correct any invalid RAML that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy APIs in which there is invalid RAML.
 
 
-* <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
-* <<bookmark-c,Common Errors in Conforming to RAML 1.0>>
+* xref:design-common-errors-raml-08.adoc[Common Errors Found in RAML 0.8 API Specifications]
+* xref:design-common-errors-raml-10.adoc[Common Errors Found in RAML 1.0 API Specifications]
 
 [[bookmark-b,Common Errors in Conforming to RAML 0.8]]
 == Common Errors in Conforming to RAML 0.8
