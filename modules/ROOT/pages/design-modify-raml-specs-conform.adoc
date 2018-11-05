@@ -13,6 +13,6 @@ You will need to check your published APIs by opening them in the API editor in 
 
 If, after the changes to the API editor are released, you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
-== How the Changes Affect the Use of Your Published RAML API Specifications in Studio and Mule Runtime
+== How Anypoint Studio and Mule Runtime Interact with the Changes to the API Editor
 
 You will have a long grace period to correct any invalid RAML that your published API specifications might include. The grace period will start on the date that the changes to the API editor are released. See xref::design-scenarios-for-published-apis.adoc[How the Changes to the API Editor Affect the Use of Published RAML API Specifications] to learn how RAML API specifications that you correct in the API editor before or after the grace period ends.
