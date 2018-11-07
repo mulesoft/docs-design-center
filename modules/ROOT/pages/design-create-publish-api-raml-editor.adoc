@@ -1,27 +1,12 @@
-= Create and Publish an API Specification with the Code Editor in Design Center
+= Create and Publish an API Specification with the Code Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create API specifications directly in RAML with the help of code suggestions that appear within the API editor.
+You can use Design Center’s API editor create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
 
 == Before you begin
-Within Anypoint Platform, you must be assigned the _Design Center Developer_ permission.
-// What guidance can I give for designing an API specification before using the API Designer?
-
-== About this task
-
-An API specification that is written in RAML typically includes the following things:
-
-* An optional baseURI node at the root of the RAML document
-+
-If you don’t have an implementation of the API and cannot provide a baseURI, you can still test the API using the mocking service baseURI described below.
-
-* API resources, for example the collection of all customers or a specific customer
-
-* HTTP methods, such as GET, POST, PUT, and DELETE, allowed on each resource
-
-* The representation of the request and response messages for each method,
+Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and select *API Specification*.
@@ -29,21 +14,20 @@ If you don’t have an implementation of the API and cannot provide a baseURI, y
 +
 _Result:_ The API editor opens. The editor is divided into three panels:
 +
-* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project.
+* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting Rename.
 +
 [TIP]
 ====
 
-You can create more than one API specification in a single project. If you want to include additional API specifications in your project, click the plus sign in the Files panel to create a new file or click the dots that are next to the plus sign to import a file.
-
+You can create more than one API specification or related file in a single project. Click the plus sign in the Files panel to create a new file or click the dots that are next to the plus sign to import a file.
 
 ====
-* The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a valid `.raml` file.
+* The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a valid RAML 1.0 file. You can change these lines if you want to use RAML 0.8 or OAS 2.0 (either JSON or YAML).
 * The right panel lists the types and resources that are in the API specification that is in the central panel.
 
 . Draft your API specification.
 +
-As you draft, the API editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor. While you are working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. This list also displays keyboard shortcuts for most of the commands.
+While you are working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. This list also displays keyboard shortcuts for most of the commands.
 +
 You can also perform these tasks:
 +
