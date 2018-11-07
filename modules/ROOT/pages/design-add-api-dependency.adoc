@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In projects for API specifications or API fragments, you can add API fragments as dependencies directly from Anypoint Exchange.
+In projects for API specifications or API fragments, you can add RAML API fragments as dependencies directly from Anypoint Exchange.
 
 == About this task
 

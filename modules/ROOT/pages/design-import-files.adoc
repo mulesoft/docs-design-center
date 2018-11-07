@@ -12,7 +12,7 @@ Importing API specifications::
 +
 You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
 +
-Additional specifications that you import can be in RAML or OAS. If a specification that you import is written in OAS, the API editor converts the specification to RAML. For information about how OAS 2.0 specifications are converted to RAML 1.0 specifications, see "Import from OAS 2.0 to RAML 1.0" in the documentation for the `oas-raml-converter` tool. A link to that documentation is in the *See also* section at the end of this topic.
+Additional specifications that you import can be in RAML or OAS.
 
 Importing API fragments::
 +
@@ -37,7 +37,7 @@ You can import annotation types, data types, examples of JSON response payloads,
 ====
 
 * If you want your imported files in a folder structure in your project, import a `.zip` file that contains the files in that folder structure. You cannot create folders in the API editor.
-* If you import a file that is available online by providing its URL, be sure that the file contains no `!include` statements. The editor imports only the file that is at the URL.
+* If you import a file that is available online by providing its URL, be sure that the file contains no `!include` statements (RAML) or `$ref` statements (OAS). The editor imports only the file that is at the URL.
 
 ====
 
@@ -50,19 +50,6 @@ You can import annotation types, data types, examples of JSON response payloads,
 *File or Zip*:: Select this option if you are importing one or more RAML or JSON files that are located on your computer.
 *URL*:: Select this option if you are importing a single RAML or JSON file that is available at a location online.
 *OAS file or ZIP*:: Select this option if you are importing one or more OAS files that are located on your computer.
-+
-[NOTE]
-====
-You cannot import a `.zip` file that contains an OAS specification and JSON files that the specification references. To get around this issue, follow either of these steps:
-
-* If the JSON files are in folders, convert the JSON files to RAML before creating the `.zip` file to import.
-* If the JSON files are not in folders and are at the same level as the specification, import the OAS specification. Then, import each JSON file into your project separately.
-====
 *OAS URL*:: Select this option if you are importing a single OAS file that is available at a location online.
-
 +
 _Result:_ After you click *Import*, the files are listed in the left pane of the editor. If you imported a `.zip` file that contains the files in a folder structure, the files are listed in that folder structure.
-
-== See also
-
-* https://github.com/mulesoft/oas-raml-converter/blob/master/docs/OAS20-to-RAML10.md[Import from OAS 2.0 to RAML 1.0]

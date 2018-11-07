@@ -3,12 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can export your API-specification or API-fragment project as a `.zip` file, if you want to work on it in another tool, such as API Workbench. You can also export an API specification, converting the specification from RAML 1.0 to OAS 2.0.
-
-[NOTE]
-====
-When you export a API specification to an OAS .json file or .yaml file, the conversion follows the rules that are documented at  https://github.com/mulesoft/oas-raml-converter/blob/master/docs/RAML10-to-OAS20.md[_Export from RAML 1.0 to OAS 2.0_] in the documentation for MuleSoft's oas-raml-converter tool.
-====
+You can export your API-specification or API-fragment project as a `.zip` file, if you want to work on it in another tool, such as API Workbench. You can also export an API specification for the same reason.
 
 == Procedure
 * If you are exporting a project, follow these steps:
@@ -16,7 +11,6 @@ When you export a API specification to an OAS .json file or .yaml file, the conv
 . Next to the *Files* heading in the left pane, click the dots and select *Export*.
 . Select *Project.zip* and name the `.zip` file.
 . Click *Export*.
-
 +
 _Result:_ The `.zip` file is downloaded to your computer.
 
@@ -24,9 +18,13 @@ _Result:_ The `.zip` file is downloaded to your computer.
 +
 . In the left pane, select the API specification that you want to export.
 . Next to the *Files* heading in the left pane, click the dots and select *Export*.
-. Select *OAS .json* or *OAS .yaml*, depending on the format that you want to convert the specification to.
+. Select one of these options for the language that you want to export the specification in:
++
+** RAML 1.0
+** RAML 0.8
+** OAS 2.0 (JSON)
+** OAS 2.0 (YAML)
 . Name the file.
 . Click *Export*.
-
 +
 _Result:_ The file is downloaded to your computer.
