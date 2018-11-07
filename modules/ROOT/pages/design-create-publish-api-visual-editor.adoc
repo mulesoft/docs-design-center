@@ -1,4 +1,4 @@
-= Create and Publish an API Specification with the Visual Editor in Design Center
+= Create and Publish an API Specification with the Visual API Editor in Design Center
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
