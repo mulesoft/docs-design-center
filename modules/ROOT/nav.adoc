@@ -9,7 +9,7 @@
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
  ** xref:design-import-files.adoc[Import Files into an API Project]
  ** xref:design-export-files.adoc[Export Files from an API Project]
- ** xref:design-add-api-dependency.adoc[Add an API Fragment to an API Project as a Dependency]
+ ** xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API Project as a Dependency]
  ** xref:upload-raml-task.adoc[Upload an Existing RAML File to Exchange from Design Center]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
 * xref:about-designing-a-mule-application.adoc[About Designing Mule Apps]

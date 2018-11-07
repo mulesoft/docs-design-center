@@ -1,4 +1,4 @@
-= Add an API Fragment to an API-Specification Project as a Dependency
+= Add a RAML API Fragment to an API-Specification Project as a Dependency
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
