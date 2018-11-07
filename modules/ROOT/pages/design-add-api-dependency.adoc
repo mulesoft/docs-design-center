@@ -7,11 +7,11 @@ In projects for API specifications or API fragments, you can add API fragments a
 
 == About this task
 
-The fragments are listed in your projects, but they are not present in your projects. Instead, the code editor references them from their online location in Anypoint Exchange. Therefore, although you can include them in your specifications and fragments, you cannot edit them.
+The fragments are listed in your projects, but they are not present in your projects. Instead, the API editor references them from their online location in Anypoint Exchange. Therefore, although you can include them in your specifications and fragments, you cannot edit them.
 
 If you export your project, the resulting `.zip` file contains the referenced API fragments. Whenever someone downloads your project as RAML after it is published to Anypoint Exchange, the resulting `.zip` file again contains the referenced API fragments.
 
-If you export your project to work on it in another editor, edit the referenced API fragments, then try to import the project back into the code editor, the import will fail.
+If you export your project to work on it in another editor, edit the referenced API fragments, then try to import the project back into the API editor, the import will fail.
 
 
 == Procedure

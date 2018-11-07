@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The example of using the code editor in Design Center to create an API specification creates the following RAML file.
+The example of using the API editor in Design Center to create an API specification creates the following RAML file.
 
 ----
 #%RAML 1.0

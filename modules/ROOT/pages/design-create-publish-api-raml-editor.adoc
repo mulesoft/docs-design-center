@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create API specifications directly in RAML with the help of code suggestions that appear within the code editor.
+You can create API specifications directly in RAML with the help of code suggestions that appear within the API editor.
 
 == Before you begin
 Within Anypoint Platform, you must be assigned the _Design Center Developer_ permission.
@@ -25,9 +25,9 @@ If you don’t have an implementation of the API and cannot provide a baseURI, y
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and select *API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the code editor.
+. In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the API editor.
 +
-_Result:_ The code editor opens. The editor is divided into three panels:
+_Result:_ The API editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project.
 +
@@ -43,7 +43,7 @@ You can create more than one API specification in a single project. If you want 
 
 . Draft your API specification.
 +
-As you draft, the code editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor. While you are working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. This list also displays keyboard shortcuts for most of the commands.
+As you draft, the API editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor. While you are working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. This list also displays keyboard shortcuts for most of the commands.
 +
 You can also perform these tasks:
 +
@@ -63,7 +63,7 @@ For more information, view the topic "Simulate Calls to an API", which is linked
 Export your API project:: At any time, you can export your project as a `.zip` file, or an API specification from RAML to OAS 2.0. For more information, view the topic "Export Files from an API Project", which is linked to from the *See also* section at the end of this topic.
 
 == What to do next
-Publish your API specification to Exchange. Click the icon that is in the top-right corner of the code editor to open the *Publish API specification to Exchange* dialog. The icon looks like this:
+Publish your API specification to Exchange. Click the icon that is in the top-right corner of the API editor to open the *Publish API specification to Exchange* dialog. The icon looks like this:
 
 image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
 
