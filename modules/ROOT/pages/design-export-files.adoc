@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can export your API-specification or API-fragment project as a `.zip` file, if you want to work on it in another tool, such as API Workbench. You can also export an API specification for the same reason.
+You can export your API-specification or API-fragment project as a `.zip` file, if you want to work on it in another tool, such as API Workbench. 
 
 == Procedure
 * If you are exporting a project, follow these steps:
@@ -13,18 +13,3 @@ You can export your API-specification or API-fragment project as a `.zip` file, 
 . Click *Export*.
 +
 _Result:_ The `.zip` file is downloaded to your computer.
-
-* If you are exporting an API specification as an OAS 2.0 file, follow these steps:
-+
-. In the left pane, select the API specification that you want to export.
-. Next to the *Files* heading in the left pane, click the dots and select *Export*.
-. Select one of these options for the language that you want to export the specification in:
-+
-** RAML 1.0
-** RAML 0.8
-** OAS 2.0 (JSON)
-** OAS 2.0 (YAML)
-. Name the file.
-. Click *Export*.
-+
-_Result:_ The file is downloaded to your computer.
