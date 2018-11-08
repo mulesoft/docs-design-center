@@ -90,6 +90,5 @@ Now, you are ready to transform a full set of data to a subset.
 
 == See Also
 
-* xref:to-create-a-new-project.adoc[To Create a Basic Mule App]
 * xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]
 * xref:design-filter-task.adoc[To Transform a Full Set of Data to a Subset]
