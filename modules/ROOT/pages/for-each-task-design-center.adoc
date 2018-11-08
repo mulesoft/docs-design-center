@@ -102,5 +102,4 @@ INFO21:37:16    "target end-to-end models"
 
 == See also
 
-* xref:to-create-a-new-project.adoc[To Create a Basic Mule App]
 * xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]
