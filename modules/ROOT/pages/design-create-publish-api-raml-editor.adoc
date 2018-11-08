@@ -10,11 +10,11 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and select *API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the API editor.
+. In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the API editor. You can also choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
 +
 _Result:_ The API editor opens. The editor is divided into three panels:
 +
-* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting Rename.
+* The left panel lists the files in your project. The stub specification file is listed. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
 +
 [TIP]
 ====
@@ -22,7 +22,7 @@ _Result:_ The API editor opens. The editor is divided into three panels:
 You can create more than one API specification or related file in a single project. Click the plus sign in the Files panel to create a new file or click the dots that are next to the plus sign to import a file.
 
 ====
-* The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a valid RAML 1.0 file. You can change these lines if you want to use RAML 0.8 or OAS 2.0 (either JSON or YAML).
+* The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a specification file in RAML or OAS, depending on which you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
 * The right panel lists the types and resources that are in the API specification that is in the central panel.
 
 . Draft your API specification.
@@ -44,7 +44,15 @@ Simulate calls to your API:: Even while you are drafting an API specification, y
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
-Export your API project or specification:: At any time, you can export your project as a `.zip` file. 
+Export your API project or specification:: At any time, you can export your project as a `.zip` file. Next to the *Files* heading in the left pane, click the dots and select *Export*.
+
+Download files:: You can either download a file as is, or you can download it in another format. For example, you can download a file written in RAML 0.8 as a file in OAS 2.0 YAML. Click the dots to the right of the file name and select *Download* or *Download As*.
+
+Convert files:: Convert a file in your project to another format. Click the dots to the right of the file name and select *Convert*.
+
+View files in other formats:: See what a file would look like in another format. For example, see what an OAS 2.0 JSON file would look like in RAML 1.0. Click the dots to the right of the file name and select *View As*.
+
+
 
 == What to do next
 After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the icon that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. The icon looks like this
