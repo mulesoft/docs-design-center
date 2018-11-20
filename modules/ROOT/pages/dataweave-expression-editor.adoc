@@ -1,0 +1,48 @@
+= Expression Editor
+
+Whenever you need to configure a DataWeave expression, you can use the expression editor to dynamically and easily edit and compose DataWeave expressions.
+
+When designing a flow in Design Center, every field from every card that takes a DataWeave expression features an expression editor. +
+When the input of your card is known by Datasense, the expression editor displays a list of blocks for every value of your Mule event's payload and attributes. You can drag and drop these expression blocks into your expression field to compose different Dataweave expressions.
+
+== Creating Expressions
+
+The editor needs Datasense metadata to generate the payload and attributes suggestions.
+
+Starting with a simple example, let's create a simple flow where your HTTP Listener receives a POST request with a JSON payload containing a person's first and last name. A payload like this:
+
+[source,JSON,linenums]
+----
+{
+	"first_name": "Thor",
+	"last_name": "Oddinson"
+}
+----
+
+When creating your HTTP Listener, you need to set up the output type of your card to this example.
+
+. Create a new HTTP Listener trigger and go to the *Output* tab.
+. Next to the *Data Type* drop-down menu, click *Add*.
+.. In the *Name* field use _name_ as an identifier.
+.. Select *JSON* from the *Format* drop-down menu.
+.. Select *From Example* in the *Type* field and use the JSON sample above.
++
+image::dataweave-expression-editor-629d7.png[]
+
+Now that you defined the output type of your trigger, Datasense can now understand your payload's structure so that the expression editor displays the proper blocks. +
+For example, create a Logger card next to your HTTP Listener, and observe the right navigation bar:
+
+image::dataweave-expression-editor-3e5cd.png[]
+
+The expression editor automatically picks up both your payload's values: `payload.first_name` and `payload.last_name`. +
+You can, for example, log a greeting to your user typing _Hello _ and drag and drop the *first_name* block:
+
+image::dataweave-expression-editor-e5dd8.png[]
+
+Additionally, you can drag and drop the *Custom Expression* block to use the function editor to create your expression.
+
+== See Also
+
+
+* xref:function-editor-concept.adoc[Function Editor]
+* xref:4.1@mule-runtime::dataweave-cookbook-extract-data.adoc[Extracting Data in Dataweave]

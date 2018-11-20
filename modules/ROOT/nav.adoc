@@ -30,6 +30,7 @@
   *** xref:promote-app-prod-env-design-center.adoc[To Deploy an Application to an Environment]
   *** xref:to-create-a-mule-application-project.adoc[To Clone a Mule App Project]
   *** xref:export-studio-design-center.adoc[To Export a Project]
+  *** xref:dataweave-expression-editor.adoc[Expression Editor]
   *** xref:logger-task-design-center.adoc[To Log Data]
   *** xref:view-clear-logs-task.adoc[To View Logs]
   *** xref:jump-runtime-manager-task.adoc[To Manage a Mule App in Runtime Manager]
