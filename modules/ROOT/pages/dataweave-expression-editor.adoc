@@ -3,19 +3,19 @@
 Whenever you need to configure a DataWeave expression, you can use the expression editor to dynamically and easily edit and compose DataWeave expressions.
 
 When designing a flow in Design Center, every field from every card that takes a DataWeave expression features an expression editor. +
-When the input of your card is known by Datasense, the expression editor displays a list of blocks for every value of your Mule event's payload and attributes. You can drag and drop these expression blocks into your expression field to compose different Dataweave expressions.
+When the input of your card is known by Datasense, the expression editor displays a list of blocks for every value of your Mule event's payload and attributes. You can drag and drop these expression blocks into your expression field to compose different DataWeave expressions.
 
 == Creating Expressions
 
 The editor needs Datasense metadata to generate the payload and attributes suggestions.
 
-Starting with a simple example, let's create a simple flow where your HTTP Listener receives a POST request with a JSON payload containing a person's first and last name. A payload like this:
+Starting with a simple example, let's create a simple flow where your HTTP Listener receives a POST request with a JSON payload containing a candidate's first and last name. A payload like this:
 
 [source,JSON,linenums]
 ----
 {
-	"firstName": "Thor",
-	"lastName": "Oddinson"
+	"firstName": "Michael",
+	"lastName": "Patrick"
 }
 ----
 
@@ -35,14 +35,69 @@ For example, create a Logger card next to your HTTP Listener, and observe the ri
 image::dataweave-expression-editor-3e5cd.png[]
 
 The expression editor automatically picks up both your payload's values: `payload.firstName` and `payload.lastName`. +
-You can, for example, log a greeting to your user typing _Hello_ and drag the *firstName* block next to it:
+You can, for example, log a greeting to your candidate typing _Hello_ and drag the *firstName* block next to it:
 
 image::dataweave-expression-editor-e5dd8.png[]
 
-Additionally, you can drag and drop the *Custom Expression* block to use the function editor to create your expression.
+Note that when picking up an expression block, the borders of the fields where you can drop the expression are highlighted:
+
+image::dataweave-expression-editor-828db.png[]
+
+The expression editor also picks up your message's variables. +
+For example, assume that your flow receives a payload with more than just one name:
+
+[source,java,linenums]
+----
+[{
+        "firstName": "Gunther",
+        "lastName": "Govan",
+        "score": 99
+},
+{
+        "firstName": "Michael",
+        "lastName": "Patrick",
+        "score": 35
+}]
+----
+
+And you want to log all the candidate's first names. You can send that data to a variable for later reuse.
+
+. Add a *Set Variable* card next to your trigger.
+. Name your variable *candidates*, and use a DataWeave multi-value selector to capture all candidate's names:
++
+[source,DataWeave,linenums]
+----
+payload.*firstName
+----
++
+image::dataweave-expression-editor-4e7fd.png[]
+. You can then change the logger components to log your newly created variable.
++
+image::dataweave-expression-editor-c2c3c.png[]
+
+=== Creating More Complex Expressions
+
+Additionally, you can drag and drop the *Custom Expression* block to use the function editor to create more complex expressions.
+
+Assume you want to log a greeting for both of users. Since your _candidates_ variable is an array, DataWeave won't be able to concatenate it next to a _Hello_ string. You need to use a custom expression to be able to log a proper greeting for both your candidates.
+
+. Open a logger card, and drag the *Custom Expression* block.
++
+image::dataweave-expression-editor-e725f.png[]
+. Double-click on it to open the custom expression editor, and type the following DataWeave expression:
++
+[source,DataWeave,linenums]
+----
+"Hello " ++ (vars.candidates joinBy (' and '))
+----
+. Click *OK*.
+
+Note that the expression editor automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
+
+image::dataweave-expression-editor-f1ef5.png[]
 
 == See Also
 
-
 * xref:function-editor-concept.adoc[Function Editor]
-* xref:4.1@mule-runtime::dataweave-cookbook-extract-data.adoc[Extracting Data in Dataweave]
+* xref:to-create-and-populate-a-variable.adoc[About Creating Variables]
+* xref:mule-runtime::dataweave-selectors.adoc[DataWeave Selectors]
