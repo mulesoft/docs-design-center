@@ -51,12 +51,10 @@ For example, assume that your flow receives a payload with more than just one na
 [{
         "firstName": "Gunther",
         "lastName": "Govan",
-        "score": 99
 },
 {
         "firstName": "Michael",
         "lastName": "Patrick",
-        "score": 35
 }]
 ----
 
