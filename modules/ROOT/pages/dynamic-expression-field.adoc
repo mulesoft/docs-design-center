@@ -1,15 +1,12 @@
-= Expression Editor
+= Dynamically Creating Expressions
 
-Whenever you need to configure a DataWeave expression, you can use the expression editor to dynamically and easily edit and compose DataWeave expressions.
+Whenever you need to configure a field, you can use dynamic and static values obtained from flow.
 
-When designing a flow in Design Center, every field from every card that takes a DataWeave expression features an expression editor. +
-When the input of your card is known by Datasense, the expression editor displays a list of blocks for every value of your Mule event's payload and attributes. You can drag and drop these expression blocks into your expression field to compose different DataWeave expressions.
+When the input of your card is known by Datasense, the card displays a list of blocks for every value of your payload, variables, and attributes. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of code.
 
 == Creating Expressions
 
-The editor needs Datasense metadata to generate the payload and attributes suggestions.
-
-Starting with a simple example, let's create a simple flow where your HTTP Listener receives a POST request with a JSON payload containing a candidate's first and last name. A payload like this:
+Starting with a simple example, let's create a flow where your HTTP Listener receives a POST request with a JSON payload containing a candidate's first and last name. A payload like this:
 
 [source,JSON,linenums]
 ----
@@ -19,31 +16,35 @@ Starting with a simple example, let's create a simple flow where your HTTP Liste
 }
 ----
 
+The editor needs Datasense metadata to generate the payload, variables, and attributes suggestions.
+
 When creating your HTTP Listener, you need to set up the output type of your card to this example.
 
 . Create a new HTTP Listener trigger and go to the *Output* tab.
 . Next to the *Data Type* drop-down menu, click *Add*.
-.. In the *Name* field use Name_ as an identifier.
+.. In the *Name* field use _Name_ as an identifier.
 .. Select *JSON* from the *Format* drop-down menu.
 .. Select *From Example* in the *Type* field and use the JSON sample above.
 +
 image::dataweave-expression-editor-629d7.png[]
+. Click *Save*.
 
-Now that you defined the output type of your trigger, Datasense can now understand your payload's structure so that the expression editor displays the proper blocks. +
-For example, create a Logger card next to your HTTP Listener, and observe the right navigation bar:
+Now that you defined the output type of your trigger, Datasense can understand your payload's structure so that the card displays the proper blocks. +
+For example, create a Logger card next to your HTTP Listener, and observe how the payload and attributes values are displayed in the right panel:
 
 image::dataweave-expression-editor-3e5cd.png[]
 
-The expression editor automatically picks up both your payload's values: `payload.firstName` and `payload.lastName`. +
+The card automatically picks up both your payload's values: `payload.firstName` and `payload.lastName`. +
 You can, for example, log a greeting to your candidate typing _Hello_ and drag the *firstName* block next to it:
 
 image::dataweave-expression-editor-e5dd8.png[]
+//_TODO: Add borders to images
 
-Note that when picking up an expression block, the borders of the fields where you can drop the expression are highlighted:
+Note that when picking up an expression block, the card highlights the borders of the fields where you can drop the expression:
 
 image::dataweave-expression-editor-828db.png[]
 
-The expression editor also picks up your message's variables. +
+The card also picks up your message's variables. +
 For example, assume that your flow receives a payload with more than just one name:
 
 [source,java,linenums]
@@ -58,7 +59,7 @@ For example, assume that your flow receives a payload with more than just one na
 }]
 ----
 
-And you want to log all the candidate's first names. You can send that data to a variable for later reuse.
+And you want to log all the candidate's first names and you want to send that data to a variable for later reuse.
 
 . Add a *Set Variable* card next to your trigger.
 . Name your variable *candidates*, and use a DataWeave multi-value selector to capture all candidate's names:
@@ -75,22 +76,22 @@ image::dataweave-expression-editor-c2c3c.png[]
 
 === Creating More Complex Expressions
 
-Additionally, you can drag and drop the *Custom Expression* block to use the function editor to create more complex expressions.
+Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
 
 Assume you want to log a greeting for both of users. Since your _candidates_ variable is an array, DataWeave won't be able to concatenate it next to a _Hello_ string. You need to use a custom expression to be able to log a proper greeting for both your candidates.
 
 . Open a logger card, and drag the *Custom Expression* block.
 +
 image::dataweave-expression-editor-e725f.png[]
-. Double-click on it to open the custom expression editor, and type the following DataWeave expression:
+. Double-click on it to open the custom expression field, and type the following DataWeave expression:
 +
 [source,DataWeave,linenums]
 ----
-"Hello " ++ (vars.candidates joinBy (' and '))
+"Hello " ++ (joinBy(vars.candidates, ' and '))
 ----
 . Click *OK*.
 
-Note that the expression editor automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
+Note that the field automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
 
 image::dataweave-expression-editor-f1ef5.png[]
 
