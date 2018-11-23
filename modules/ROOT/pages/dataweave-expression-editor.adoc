@@ -14,8 +14,8 @@ Starting with a simple example, let's create a simple flow where your HTTP Liste
 [source,JSON,linenums]
 ----
 {
-	"first_name": "Thor",
-	"last_name": "Oddinson"
+	"firstName": "Thor",
+	"lastName": "Oddinson"
 }
 ----
 
@@ -23,7 +23,7 @@ When creating your HTTP Listener, you need to set up the output type of your car
 
 . Create a new HTTP Listener trigger and go to the *Output* tab.
 . Next to the *Data Type* drop-down menu, click *Add*.
-.. In the *Name* field use _name_ as an identifier.
+.. In the *Name* field use Name_ as an identifier.
 .. Select *JSON* from the *Format* drop-down menu.
 .. Select *From Example* in the *Type* field and use the JSON sample above.
 +
@@ -34,8 +34,8 @@ For example, create a Logger card next to your HTTP Listener, and observe the ri
 
 image::dataweave-expression-editor-3e5cd.png[]
 
-The expression editor automatically picks up both your payload's values: `payload.first_name` and `payload.last_name`. +
-You can, for example, log a greeting to your user typing _Hello _ and drag and drop the *first_name* block:
+The expression editor automatically picks up both your payload's values: `payload.firstName` and `payload.lastName`. +
+You can, for example, log a greeting to your user typing _Hello_ and drag the *firstName* block next to it:
 
 image::dataweave-expression-editor-e5dd8.png[]
 
