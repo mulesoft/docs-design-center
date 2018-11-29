@@ -46,9 +46,8 @@ You can import annotation types, data types, examples of JSON response payloads,
 . In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
 . In the *Import* dialog, select one of these options:
 +
-*File or Zip*:: Select this option if you are importing one or more RAML or JSON files that are located on your computer.
-*URL*:: Select this option if you are importing a single RAML or JSON file that is available at a location online.
-*OAS file or ZIP*:: Select this option if you are importing one or more OAS files that are located on your computer.
-*OAS URL*:: Select this option if you are importing a single OAS file that is available at a location online.
+*File or Zip*:: Select this option if you are importing one or more files that are located on your computer.
+*URL*:: Select this option if you are importing a single file that is available at a location online.
+
 +
 _Result:_ After you click *Import*, the files are listed in the left pane of the editor. If you imported a `.zip` file that contains the files in a folder structure, the files are listed in that folder structure.

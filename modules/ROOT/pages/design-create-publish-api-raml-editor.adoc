@@ -61,7 +61,7 @@ image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="lef
 
 
 == See also
-* xref:design-export-files.adoc[Export Files from an API Project]
+// 181129: Deleting the file that this xref links to. * xref:design-export-files.adoc[Export Files from an API Project]
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API-Specification Project as a Dependency]
 * xref:design-mocking-service.adoc[Simulate Calls to an API]
