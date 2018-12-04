@@ -1,4 +1,4 @@
-= Create and Publish an API Specification with the Visual API Editor
+= Create an API Specification with the Visual API Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
