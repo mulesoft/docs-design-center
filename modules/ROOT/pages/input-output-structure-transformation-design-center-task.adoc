@@ -127,6 +127,7 @@ These properties are written on the `output` directive of your DataWeave code.
 
 == See Also
 
+* xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
 * xref:4.1@mule-runtime::dataweave.adoc[DataWeave Language]
 * xref:4.1@mule-runtime::dataweave-types.adoc[DataWeave Types]
 * xref:4.1@mule-runtime::dataweave-formats.adoc[DataWeave Formats]
