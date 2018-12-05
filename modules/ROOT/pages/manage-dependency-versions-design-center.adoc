@@ -1,4 +1,4 @@
-= To Update Components of the Flow (Design Center)
+= Update Components of the Flow (Design Center)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
