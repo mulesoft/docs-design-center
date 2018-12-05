@@ -1,0 +1,67 @@
+= Get a Recommendation for Mapping Payloads for a Transformation
+
+In a Transform card, you can view recommendations for how to map the data elements in an input payload to the data elements in an output payload.
+
+== About this task
+
+Recommendations are only for mapping the input payloads to output payloads, There are no recommendations for mapping input attributes to output attributes or input variables to output variables.
+
+Elements of an array that is itself an element in an array are ignored by the recommendation engine. For example, both d and e are ignored by the recommendation engine in this payload:
+
+----
+{
+	"a": [
+		"b": 1,
+		"c": [
+			"d": 2,
+			"e": 3
+			],
+		]
+}
+----
+
+In this payload, both e and f are ignored by the recommendation engine:
+
+----
+{
+	"a": [
+		"b": 1,
+		"c": {
+			"d": [
+				"e": 2,
+				"f": 3
+				],
+			},
+		"g": 4
+		],
+}
+----
+
+The recommendation engine also does not create mappings between different data types. For example, if an element in an input payload is an integer, the engine maps it only to another integer, never to a string or other data type.
+
+== Before you begin
+
+Ensure that the Automapping feature is enabled for your organization in Anypoint Platform.
+
+. In Anypoint Platform, open Access Management.
+. Under Settings on the left side of the screen, click Flow Designer.
+. On the Flow Designer General Settings page, click the circle in the Enable column.
+
+IMPORTANT: The recommendation system works by collecting and analyzing anonymized data from all users of Design Center who are using CloudHub. Enabling this feature enables the collection of anonymized data for improving recommendations. If you have any concerns about sharing even anonymized data, do not enable this feature.
+
+== Procedure
+
+. Set your output data type in the card that precedes the Transform card.
+. Set your input data type in the card that follows the Transform card.
+. Open the Transform card to the Mappings pane in the Configuration section.
+. Click the Preview button that is at the top of the pane.
+
+== Result
+
+The recommendation for mapping the input payload to the output payload appears in orange.
+
+== What to do next
+
+If you find the recommendation fits your needs, click the *Apply* button at the top of the Mappings pane.
+
+If the recommendation does not fit your needs, click *Discard*. The recommendation is removed from the pane. If you want to see a recommendation again, close and reopen the Transform card and click Preview.
