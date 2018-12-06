@@ -4,10 +4,26 @@ In a Transform card, you can view recommendations for how to map the data elemen
 
 == About this task
 
-Recommendations are only for mapping the input payloads to output payloads, There are no recommendations for mapping input attributes to output attributes or input variables to output variables.
+The Transform card works by converting messages from the previous card in a flow to an output messages that can be consumed by the next card. A message can consist of a payload, attributes, and variables. In this image, the Transform card is placed between and HTTP Listener card and an HTTP Request card. The Transform card can accept  messages (which contain data in JSON or in some other format) from the HTTP Listener and transform them into messages that the HTTP Request card is configured to accept.
 
-Elements of an array that is itself an element in an array are ignored by the recommendation engine. For example, both d and e are ignored by the recommendation engine in this payload:
+image::simple-flow.png[]
 
+There are two different views in the card that let you specify how to transform input messages to output messages: the Script view and the Mappings view.
+
+In the Script view, you can write a DataWeave script. However, if you are not familiar with DataWeave, you can use the Mappings view.
+
+This view shows the expected structures of the input and output messages. Mappings between these two trees are represented by lines that connect input to output fields. You can map input fields to output fields by dragging and dropping fields from the input to fields in the output.
+
+image::simple-transform-card-example.png[]
+
+If you are not sure how to map an input payload to an output payload, you can have the Transform card recommend mappings between them.
+
+== Limitations
+
+* The card does not make recommendations for mapping input attributes to output attributes or input variables to output variables.
+
+* Elements of an array that is itself an element in an array are ignored in the recommendations. For example, both d and e in this payload are ignored:
++
 ----
 {
 	"a": [
@@ -19,9 +35,9 @@ Elements of an array that is itself an element in an array are ignored by the re
 		]
 }
 ----
-
-In this payload, both e and f are ignored by the recommendation engine:
-
++
+In this payload, both e and f are ignored:
++
 ----
 {
 	"a": [
@@ -37,7 +53,7 @@ In this payload, both e and f are ignored by the recommendation engine:
 }
 ----
 
-The recommendation engine also does not create mappings between different data types. For example, if an element in an input payload is an integer, the engine maps it only to another integer, never to a string or other data type.
+* The card does not create mappings between different data types. For example, if an element in an input payload is an integer, the card maps it only to another integer, never to a string or other data type.
 
 == Before you begin
 
@@ -54,7 +70,7 @@ IMPORTANT: The recommendation system works by collecting and analyzing anonymize
 . Set your output data type in the card that precedes the Transform card.
 . Set your input data type in the card that follows the Transform card.
 . Open the Transform card to the Mappings pane in the Configuration section.
-. Click the Preview button that is at the top of the pane.
+. Click the *Preview* button that is at the top of the pane.
 
 == Result
 
