@@ -15,85 +15,48 @@ Before a list of elements for the payload of a message can appear, a payload mus
 
 == Procedure
 
-* Add a block to a field by...
+* Add a block to a field by...  Note that when you drag a block, the card highlights the borders of the fields that you can drop it into.
 * Remove a block from a field by clicking in the field immediately after the block and typing your Delete or Backspace key.
 
-== Result
+== Example: Creating a simple expression dynamically
+
+This example uses a flow in which an HTTP Listener receives a POST request that contains a JSON payload. The HTTP Listener then passes the payload to a Logger. This payload contains a person's first and last name:
 
 
+=== Procedure
 
-
-== Example: Creating a simple expression
-
-Starting with a simple example, let's create a flow where your HTTP Listener receives a POST request with a JSON payload containing a candidate's first and last name. A payload like this:
-
+. In a new Mule application project, add an HTTP Listener card for the trigger of a new flow.
+. Open the card and set the path to `/example`.
+. Set up the data type for the output of this card.
+.. Go to the *Output* section.
+.. Next to the *Data Type* drop-down menu, click *Add*.
+.. In the *Name* field, specify any name you like for the data type.
+.. Select *JSON* from the *Format* drop-down menu.
+.. Select *From Example* in the *Type* field and paste in the following JSON example for your payload.
++
 [source,JSON,linenums]
 ----
 {
-	"firstName": "Michael",
-	"lastName": "Patrick"
+	"firstName": "Sancho",
+	"lastName": "Panza"
 }
 ----
-
-The editor needs Datasense metadata to generate the payload, variables, and attributes suggestions.
-
-When creating your HTTP Listener, you need to set up the output type of your card to this example.
-
-. Create a new HTTP Listener trigger and go to the *Output* tab.
-. Next to the *Data Type* drop-down menu, click *Add*.
-.. In the *Name* field use _Name_ as an identifier.
-.. Select *JSON* from the *Format* drop-down menu.
-.. Select *From Example* in the *Type* field and use the JSON sample above.
+.. Click *Save*.
+. Add a Logger card after the HTTP Listener card and then open it.
 +
-image::dataweave-expression-editor-629d7.png[]
-. Click *Save*.
+*Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes "Ready to run" before you will see the elements listed.
+. Specify a message for the Logger to include in the log whenever it receives a payload.
+.. In the *Message* field, type `"Hello," + `.
+.. Click the payload element `payload.firstName` and drag it into the *Message* field.
+. Run the application by clicking the *Run* button at the top of the canvas.
+. Copy the URL for the application by clicking on it to the right of the *Run* button.
+. In Postman or cURL, post a JSON message to the `/example` endpoint, using the same format as the example you specified in the HTTP Listener card.
 
-Now that you defined the output type of your trigger, Datasense can understand your payload's structure so that the card displays the proper blocks. +
-For example, create a Logger card next to your HTTP Listener, and observe how the payload and attributes values are displayed in the right panel:
+=== Result
 
-image::dataweave-expression-editor-3e5cd.png[]
+After you post the message, return to your flow in Design Center, open the log, and look for your message.
 
-The card automatically picks up both your payload's values: `payload.firstName` and `payload.lastName`. +
-You can, for example, log a greeting to your candidate typing _Hello_ and drag the *firstName* block next to it:
-
-image::dataweave-expression-editor-e5dd8.png[]
-//_TODO: Add borders to images
-
-Note that when picking up an expression block, the card highlights the borders of the fields where you can drop the expression:
-
-image::dataweave-expression-editor-828db.png[]
-
-The card also picks up your message's variables. +
-For example, assume that your flow receives a payload with more than just one name:
-
-[source,java,linenums]
-----
-[{
-        "firstName": "Gunther",
-        "lastName": "Govan",
-},
-{
-        "firstName": "Michael",
-        "lastName": "Patrick",
-}]
-----
-
-And you want to log all the candidate's first names and you want to send that data to a variable for later reuse.
-
-. Add a *Set Variable* card next to your trigger.
-. Name your variable *candidates*, and use a DataWeave multi-value selector to capture all candidate's names:
-+
-[source,DataWeave,linenums]
-----
-payload.*firstName
-----
-+
-image::dataweave-expression-editor-4e7fd.png[]
-. You can then change the logger components to log your newly created variable.
-+
-image::dataweave-expression-editor-c2c3c.png[]
-
-=== Example: Creating a complex expression
+== Example: Creating a complex expression
 
 Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
 
