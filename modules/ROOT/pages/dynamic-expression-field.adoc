@@ -1,17 +1,26 @@
 = Create an Expression Dynamically
+:imagesdir: ../assets/images
 
-In fields that are in the cards in a flow, you can create expressions by dragging and dropping payload elements, variables, and attributes.
+In text fields that are in the cards in a flow, you can create DataWeave expressions by dragging and dropping payload elements, variables, and attributes. You can also create custom DataWeave expressions by dragging
 
 == About this task
 
 
-Whenever you need to configure a field that is in a card, you can use dynamic and static values that are obtained from your flow when your Mule application is running.
 
-When the input of your card is known by Datasense, the card displays a list of blocks for every element of your payload, every variable, and every attribute. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of code.
+
+When the input of your card is known by Datasense, the card displays a list of every element of your payload, every variable, and every attribute. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of DataWeave.
+
+At the top of the list appears an entry named "Custom Expression". You can click it and drop it into a text field if you want to compose a DataWeave expression within that field.
+
+image::logger-with-list.png[]
 
 == Before you begin
 
-Before a list of elements for the payload of a message can appear, a payload must be defined in the previous card.
+Payload elements, variables, and attributes that appear in the list in a card are passed in by the preceding card. Attributes, if there are any, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a payload in a previous card. Before a variable can appear in the list, you must define a variable in a previous card.
+
+For example, suppose you wanted a Logger to print to a log file messages that contain data from the output payload of an HTTP Listener.
+
+image::simple-flow-before-you-begin.png[]
 
 == Procedure
 
