@@ -1,10 +1,29 @@
-= Dynamically Creating Expressions
+= Create an Expression Dynamically
 
-Whenever you need to configure a field, you can use dynamic and static values obtained from flow.
+In fields that are in the cards in a flow, you can create expressions by dragging and dropping payload elements, variables, and attributes.
 
-When the input of your card is known by Datasense, the card displays a list of blocks for every value of your payload, variables, and attributes. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of code.
+== About this task
 
-== Creating Expressions
+
+Whenever you need to configure a field that is in a card, you can use dynamic and static values that are obtained from your flow when your Mule application is running.
+
+When the input of your card is known by Datasense, the card displays a list of blocks for every element of your payload, every variable, and every attribute. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of code.
+
+== Before you begin
+
+Before a list of elements for the payload of a message can appear, a payload must be defined in the previous card.
+
+== Procedure
+
+* Add a block to a field by...
+* Remove a block from a field by clicking in the field immediately after the block and typing your Delete or Backspace key.
+
+== Result
+
+
+
+
+== Example: Creating a simple expression
 
 Starting with a simple example, let's create a flow where your HTTP Listener receives a POST request with a JSON payload containing a candidate's first and last name. A payload like this:
 
@@ -74,7 +93,7 @@ image::dataweave-expression-editor-4e7fd.png[]
 +
 image::dataweave-expression-editor-c2c3c.png[]
 
-=== Creating More Complex Expressions
+=== Example: Creating a complex expression
 
 Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
 
