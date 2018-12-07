@@ -46,7 +46,7 @@ This example uses a flow in which an HTTP Listener receives a POST request that 
 +
 *Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes "Ready to run" before you will see the elements listed.
 . Specify a message for the Logger to include in the log whenever it receives a payload.
-.. In the *Message* field, type `"Hello," + `.
+.. In the *Message* field, type ```Hello, ```.
 .. Click the payload element `payload.firstName` and drag it into the *Message* field.
 . Run the application by clicking the *Run* button at the top of the canvas.
 . Copy the URL for the application by clicking on it to the right of the *Run* button.
@@ -55,6 +55,11 @@ This example uses a flow in which an HTTP Listener receives a POST request that 
 === Result
 
 After you post the message, return to your flow in Design Center, open the log, and look for your message.
+
+=== What to do next
+
+Try adding a Set Variable card after the HTTP Listener card, creating a variable that stores the value of `payload.firstName`, and then changing the message in the Logger to use the variable instead of the payload element. In the Logger card, the variable will appear in the list on the right. You can delete the payload element from the message and then drag in the variable.
+
 
 == Example: Creating a complex expression
 
