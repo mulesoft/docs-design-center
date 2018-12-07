@@ -16,11 +16,33 @@ image::logger-with-list.png[]
 
 == Before you begin
 
-Payload elements, variables, and attributes that appear in the list in a card are passed in by the preceding card. Attributes, if there are any, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a payload in a previous card. Before a variable can appear in the list, you must define a variable in a previous card.
+Payload elements, variables, and attributes that appear in the list in a card are passed in by the preceding card. Default payloads and attributes, if there are any attributes, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a custom data type for the output payload in the previous card. (If the previous card is a Set Variable card, you must define the custom data type for the output payload in the card before that). Before a variable can appear in the list, you must define a variable in a previous card.
 
-For example, suppose you wanted a Logger to print to a log file messages that contain data from the output payload of an HTTP Listener.
+For example, suppose you wanted a Logger to parse the output payload of an HTTP Listener and then to log messages that contain payload data. You would set up this simple flow, with `/example` being the endpoint for the HTTP Listener:
 
 image::simple-flow-before-you-begin.png[]
+
+The list in the Logger card looks like the list that is highlighted in blue in this image:
+
+image::logger-initial-list.png[]
+
+Next, suppose you create a custom data type for the output payload of the HTTP Listener, using this JSON example:
+
+[source,JSON,linenums]
+----
+{
+	"firstName": "Sancho",
+	"lastName": "Panza"
+}
+----
+
+When you reopen the Logger card after a moment (giving a brief amount of time to Design Center to recognize the custom data type in the flow), the `payload` entry in the list is now replaced by `firstName` and `lastName`.
+
+image::logger-with-list.png[]
+
+If you want to use a variable in an expression in the Logger card, you could add a Set Variable card just before it:
+
+image::first-name-basis.png[]
 
 == Procedure
 
@@ -53,7 +75,7 @@ This example uses a flow in which an HTTP Listener receives a POST request that 
 .. Click *Save*.
 . Add a Logger card after the HTTP Listener card and then open it.
 +
-*Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes "Ready to run" before you will see the elements listed.
+*Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes before you will see the elements listed.
 . Specify a message for the Logger to include in the log whenever it receives a payload.
 .. In the *Message* field, type ```Hello, ```.
 .. Click the payload element `payload.firstName` and drag it into the *Message* field.
