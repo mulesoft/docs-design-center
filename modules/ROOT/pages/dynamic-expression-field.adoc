@@ -5,15 +5,11 @@ You can drag and drop payload elements, attributes, and variables into plain tex
 
 == About this task
 
-
-
-In cards that make up a flow, there are several different types of fields: fields that offer choices, function fields for creating DataWeave expressions, and plain text fields. In this last type of field, it might be that you would like to specify a dynamic value, rather than a static one.
-
-In Design Center, such dynamic values are created with DataWeave expressions. However, you do not need to know DataWeave to create basic dynamic expressions. You can drag and drop the payload elements, attributes, and variables that you want to include.
-
-When the input of your card is known by Datasense, the card displays a list of every element of your payload, every variable, and every attribute. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of DataWeave.
-
-
+In cards that make up a flow, there are several different types of fields:
+* Fields that offer one or more options that you can select
+* Function fields for creating DataWeave expressions
+* Plain text fields, which are typically for static, unchanging values
+In plain text fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card. The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload elements, attributes, and variables that you want to include.
 
 image::logger-with-list.png[]
 
@@ -29,7 +25,9 @@ The list in the Logger card looks like the list that is highlighted in blue in t
 
 image::logger-initial-list.png[]
 
-Next, suppose you create a custom data type for the output payload of the HTTP Listener, using this JSON example:
+Because the HTTP Listener is using the default payload, it is not expecting the data that it receives to be in any particular format. If you dragged and dropped the list entry `payload` into the *Message* field, the Logger would attempt to print to its log file the entirety of every payload that it received from the HTTP Listener.
+
+Next, suppose you want to limit what parts of the payload the HTTP Listener sends to the Logger. You can create a custom data type for the output payload of the HTTP Listener, using this JSON example, to send only the `firstName` and `lastName` elements from the payload that the HTTP Listener received:
 
 [source,JSON,linenums]
 ----
@@ -43,19 +41,20 @@ When you reopen the Logger card after a moment (giving a brief amount of time to
 
 image::logger-with-list.png[]
 
-If you want to use a variable in an expression in the Logger card, you could add a Set Variable card just before it:
+See the example below for the steps for creating the custom data type in the HTTP Listener card, creating a dynamic message in the Logger card, and running a Mule application to log the dynamic message.
+
+If you want to use a variable in an expression in the Logger card, you could add a Set Variable card just before it. In this example, the Set Variable card defines the variable `firstNameBasis`, which is then passed to the Logger card:
 
 image::first-name-basis.png[]
 
 == Procedure
 
-* Add a block to a field by...  Note that when you drag a block, the card highlights the borders of the fields that you can drop it into.
-* Remove a block from a field by clicking in the field immediately after the block and typing your Delete or Backspace key.
+* Add a payload element, attribute, or variable to a text field by dragging and dropping it from the list on the right side of the card. When you drag a block, the card highlights the borders of the fields that you can drop it into.
+* Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 
-== Example: Creating a simple expression dynamically
+== Example: Creating a simple dynamic expression
 
 This example uses a flow in which an HTTP Listener receives a POST request that contains a JSON payload. The HTTP Listener then passes the payload to a Logger. This payload contains a person's first and last name:
-
 
 === Procedure
 
