@@ -66,6 +66,8 @@ If the payload contained a `lastName` element and you dragged it after the `firs
 ----
 "Hello, Shirley Jackson."
 ----
++
+NOTE: You can combine your simple value with a DataWeave expression, if you know the DataWeave language. Drag the list entry `Custom Expression` into your text field. Then, double-click it to open it.
 
 * Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 

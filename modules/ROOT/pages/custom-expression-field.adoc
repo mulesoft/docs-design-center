@@ -2,25 +2,18 @@
 
 If you know DataWeave, you can create expressions in plain text fields with the help of an editor.
 
-At the top of the list appears an entry named "Custom Expression". You can click it and drop it into a text field if you want to compose a DataWeave expression within that field.
+== About this task
 
-== Example: Creating a complex expression
+Every card in a flow presents a list on its right side. The first entry in the list is labelled `Custom Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Custom Expression` entry.)
 
-Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
+You can click the `Custom Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field.
 
-Assume you want to log a greeting for both of users. Since your _candidates_ variable is an array, DataWeave won't be able to concatenate it next to a _Hello_ string. You need to use a custom expression to be able to log a proper greeting for both your candidates.
+== Procedure
 
-. Open a logger card, and drag the *Custom Expression* block.
+. Open the card in which you want to add a DataWeave expression to a plain text field.
+. Click on `Custom Expression` in the list on the right side of the card and drag it into the text field.
+. Compose your expression with the help of the right side of the editor.
 +
-image::dataweave-expression-editor-e725f.png[]
-. Double-click on it to open the custom expression field, and type the following DataWeave expression:
+* Click a payload element, attribute, or variable to add it to the expression.
 +
-[source,DataWeave,linenums]
-----
-"Hello " ++ (joinBy(vars.candidates, ' and '))
-----
-. Click *OK*.
-
-Note that the field automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
-
-image::dataweave-expression-editor-f1ef5.png[]
+* Click a function to add it to the expression.
