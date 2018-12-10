@@ -1,16 +1,19 @@
-= Create an Expression Dynamically
+= Specify a Dynamic Value in a Text Field
 :imagesdir: ../assets/images
 
-In text fields that are in the cards in a flow, you can create DataWeave expressions by dragging and dropping payload elements, variables, and attributes. You can also create custom DataWeave expressions by dragging
+You can drag and drop payload elements, attributes, and variables into plain text fields in cards to specify dynamic, rather than static, values.
 
 == About this task
 
 
 
+In cards that make up a flow, there are several different types of fields: fields that offer choices, function fields for creating DataWeave expressions, and plain text fields. In this last type of field, it might be that you would like to specify a dynamic value, rather than a static one.
+
+In Design Center, such dynamic values are created with DataWeave expressions. However, you do not need to know DataWeave to create basic dynamic expressions. You can drag and drop the payload elements, attributes, and variables that you want to include.
 
 When the input of your card is known by Datasense, the card displays a list of every element of your payload, every variable, and every attribute. You can drag and drop these expression blocks into your field to compose different expressions without writing a single line of DataWeave.
 
-At the top of the list appears an entry named "Custom Expression". You can click it and drop it into a text field if you want to compose a DataWeave expression within that field.
+
 
 image::logger-with-list.png[]
 
@@ -92,26 +95,6 @@ After you post the message, return to your flow in Design Center, open the log, 
 Try adding a Set Variable card after the HTTP Listener card, creating a variable that stores the value of `payload.firstName`, and then changing the message in the Logger to use the variable instead of the payload element. In the Logger card, the variable will appear in the list on the right. You can delete the payload element from the message and then drag in the variable.
 
 
-== Example: Creating a complex expression
-
-Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
-
-Assume you want to log a greeting for both of users. Since your _candidates_ variable is an array, DataWeave won't be able to concatenate it next to a _Hello_ string. You need to use a custom expression to be able to log a proper greeting for both your candidates.
-
-. Open a logger card, and drag the *Custom Expression* block.
-+
-image::dataweave-expression-editor-e725f.png[]
-. Double-click on it to open the custom expression field, and type the following DataWeave expression:
-+
-[source,DataWeave,linenums]
-----
-"Hello " ++ (joinBy(vars.candidates, ' and '))
-----
-. Click *OK*.
-
-Note that the field automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
-
-image::dataweave-expression-editor-f1ef5.png[]
 
 == See Also
 

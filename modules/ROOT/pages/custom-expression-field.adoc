@@ -1,0 +1,26 @@
+= Create a DataWeave Expression in a Text Field
+
+If you know DataWeave, you can create expressions in plain text fields with the help of an editor.
+
+At the top of the list appears an entry named "Custom Expression". You can click it and drop it into a text field if you want to compose a DataWeave expression within that field.
+
+== Example: Creating a complex expression
+
+Additionally, you can drag and drop the *Custom Expression* block to create more complex expressions.
+
+Assume you want to log a greeting for both of users. Since your _candidates_ variable is an array, DataWeave won't be able to concatenate it next to a _Hello_ string. You need to use a custom expression to be able to log a proper greeting for both your candidates.
+
+. Open a logger card, and drag the *Custom Expression* block.
++
+image::dataweave-expression-editor-e725f.png[]
+. Double-click on it to open the custom expression field, and type the following DataWeave expression:
++
+[source,DataWeave,linenums]
+----
+"Hello " ++ (joinBy(vars.candidates, ' and '))
+----
+. Click *OK*.
+
+Note that the field automatically understood the concatenation between your _Hello_ and the rest of your custom expression.
+
+image::dataweave-expression-editor-f1ef5.png[]
