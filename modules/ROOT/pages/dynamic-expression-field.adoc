@@ -49,7 +49,24 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add a payload element, attribute, or variable to a text field by dragging and dropping it from the list on the right side of the card. When you drag a block, the card highlights the borders of the fields that you can drop it into.
+* Add a payload element, attribute, or variable to a text field by dragging and dropping it from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into.
++
+The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specified this entry in the *Messages* field of the Logger card:
++
+image::hello-firstname.png[]
++
+The Logger would add a message in this format to the log when it received a payload that contained a `firstName` element:
++
+----
+"Hello, Shirley."
+----
++
+If the payload contained a `lastName` element and you dragged it after the `firstName` element and placed a space between both of them, the Logger would log messages in this format:
++
+----
+"Hello, Shirley Jackson."
+----
+
 * Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 
 == Example: Creating a simple dynamic expression
