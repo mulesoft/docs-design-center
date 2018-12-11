@@ -11,12 +11,12 @@ You can click the `Coded Expression` entry and drop it into a text field if you 
 == Procedure
 
 . Open the card in which you want to add a DataWeave expression to a plain text field.
-. Click on `Coded Expression` in the list on the right side of the card and drag it into the text field.
+. Click on `Coded Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
 . Compose your expression with the help of the right side of the editor.
 +
-* Click a payload element, attribute, or variable to add it to the expression.
+* Click a payload element, attribute, or variable to add it to the expression where the cursor is located.
 +
-* Click a function to add it to the expression.
+* Click a function to add it to the expression where the cursor is located.
 
 == See also
 
