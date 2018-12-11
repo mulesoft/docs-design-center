@@ -1,6 +1,6 @@
 = Create a DataWeave Expression in a Plain Text Field
 
-You can create DataWeave expressions in plain text fields, mixing them together with text or using them alone, to create dynamic values when flows are triggered at runtime.
+You can create DataWeave expressions in plain text fields, mixing expressions with text or using them alone, to create dynamic values when flows are triggered at runtime. A new editor provides aids for creating expressions.
 
 == About this task
 

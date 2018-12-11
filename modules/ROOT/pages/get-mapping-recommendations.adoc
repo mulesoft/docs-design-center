@@ -1,6 +1,6 @@
 = Get a Recommendation for Mapping Payloads for a Transformation
 
-In a Transform card, you can view recommendations for how to map the data elements in an input payload to the data elements in an output payload.
+In the Transform card, you can view recommendations for how to map the data elements in an input payload to the data elements in an output payload. If a recommendation suits your needs, you can click *Apply* to save the mapping and use it in the card.
 
 == About this task
 
