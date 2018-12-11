@@ -1,1 +1,7 @@
 = Change the Version of Mule Runtime that a Mule App Uses
+
+You can change an existing Mule application to use a newer version of Mule Runtime. You might want to do this if the newer version includes updates or new features that you want your application to take advantage of.
+
+IMPORTANT: Changing the version of Mule runtime that your application uses might require you to update the connectors that are in the application's flows.  to the application before you can redeploy it. 
+
+If you decide to click *Apply* and change the version, you can revert to the current version later, if you need to. However, any changes that you have made to your application to use the new version will also have to be reverted.
