@@ -1,22 +1,22 @@
 = Create a DataWeave Expression in a Plain Text Field
 
-If you know DataWeave, you can create expressions in plain text fields with the help of an editor.
+You can create DataWeave expressions in plain text fields, mixing them together with text or using them alone, to create dynamic values when flows are triggered at runtime.
 
 == About this task
 
-Every card in a flow presents a list on its right side. The first entry in the list is labelled `Coded Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Coded Expression` entry.)
+Every card in a flow presents a list on its right side. The first entry in the list is labelled `Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Expression` entry.)
 
-You can click the `Coded Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field.
+You can click the `Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field. If field also contains text, the result of the expression is concatenated with the text at runtime.
 
 == Procedure
 
 . Open the card in which you want to add a DataWeave expression to a plain text field.
-. Click on `Coded Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
+. Click on `Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
 . Compose your expression with the help of the right side of the editor.
 +
-* Click a payload element, attribute, or variable to add it to the expression where the cursor is located.
+* Click payload elements, attributes, and variables to add them to the expression where the cursor is located.
 +
-* Click a function to add it to the expression where the cursor is located.
+* Click functions to add them to the expression where the cursor is located.
 
 == See also
 
