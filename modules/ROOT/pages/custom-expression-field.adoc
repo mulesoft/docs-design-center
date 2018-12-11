@@ -1,19 +1,23 @@
-= Create a DataWeave Expression in a Text Field
+= Create a DataWeave Expression in a Plain Text Field
 
 If you know DataWeave, you can create expressions in plain text fields with the help of an editor.
 
 == About this task
 
-Every card in a flow presents a list on its right side. The first entry in the list is labelled `Custom Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Custom Expression` entry.)
+Every card in a flow presents a list on its right side. The first entry in the list is labelled `Coded Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Coded Expression` entry.)
 
-You can click the `Custom Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field.
+You can click the `Coded Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field.
 
 == Procedure
 
 . Open the card in which you want to add a DataWeave expression to a plain text field.
-. Click on `Custom Expression` in the list on the right side of the card and drag it into the text field.
+. Click on `Coded Expression` in the list on the right side of the card and drag it into the text field.
 . Compose your expression with the help of the right side of the editor.
 +
 * Click a payload element, attribute, or variable to add it to the expression.
 +
 * Click a function to add it to the expression.
+
+== See also
+
+* xref:4.1@mule-runtime::dataweave.adoc[DataWeave Language]
