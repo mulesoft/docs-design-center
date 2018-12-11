@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
 :imagesdir: ../assets/images
 :keywords: mozart
 
@@ -19,4 +20,4 @@ Dependencies are connectors and other parts of a flow that are versioned indepen
 
 == What to do next
 
-Test the application with the new version until the application runs as expected. 
+Test the application with the new version until the application runs as expected.

@@ -1,4 +1,8 @@
 = Specify a Dynamic Value in a Text Field
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
 :imagesdir: ../assets/images
 
 You can drag and drop payload elements, attributes, and variables into plain text fields, mixing them together with text or using them alone, to specify dynamic, rather than static, values. The values are substituted when your Mule application is running and a flow is triggered.

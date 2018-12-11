@@ -1,4 +1,7 @@
 = Change the Version of Mule Runtime that a Mule App Uses
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 You can change an existing Mule application to use a newer version of Mule Runtime. You might want to do this if the newer version includes updates or new features that you want your application to take advantage of.
 

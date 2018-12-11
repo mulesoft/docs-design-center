@@ -1,0 +1,27 @@
+== Import a Mule Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can import a Mule application that was exported from Design Center or Anypoint Studio.
+
+// Which versions of Studio?
+Choice
+Flow Reference
+For Each
+Logger
+Scheduler
+Set Payload
+Set Variable
+Transform
+Try
+
+== Before you begin
+
+* If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
+
+image::project-export-studio-options.png[]
+
+image::project-export-studio-options-2.png[]

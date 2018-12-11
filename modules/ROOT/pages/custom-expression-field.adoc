@@ -1,4 +1,7 @@
 = Create a DataWeave Expression in a Plain Text Field
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 You can create DataWeave expressions in plain text fields, mixing expressions with text or using them alone, to create dynamic values when flows are triggered at runtime. A new editor provides aids for creating expressions.
 
