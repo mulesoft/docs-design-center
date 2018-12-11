@@ -8,7 +8,7 @@ You can create API fragments directly in RAML with the help of code suggestions 
 
 == About this task
 
-An API fragment is a RAML document that has a version and an identifier, but is not in itself a complete RAML specification. An API fragment is one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types and of situations in which you can use them.
+An API fragment is a RAML document that has a version and an identifier, but is not in itself a complete RAML specification. An API fragment is one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types.
 
 * Trait
 
