@@ -1,7 +1,7 @@
 = Specify a Dynamic Value in a Text Field
 :imagesdir: ../assets/images
 
-You can drag and drop payload elements, attributes, and variables into plain text fields in cards to specify dynamic, rather than static, values.
+You can drag and drop payload elements, attributes, and variables into plain text fields in cards to specify dynamic, rather than static, values. The values are substituted when your Mule application is running and a flow is triggered.
 
 == About this task
 
@@ -9,9 +9,11 @@ In cards that make up a flow, there are several different types of fields:
 * Fields that offer one or more options that you can select
 * Function fields for creating DataWeave expressions
 * Plain text fields, which are typically for static, unchanging values
-In plain text fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card. The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload elements, attributes, and variables that you want to include.
+In plain text fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card.
 
 image::logger-with-list.png[]
+
+The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload elements, attributes, and variables that you want to include. The field concatenates them together with any strings that you include.
 
 == Before you begin
 
@@ -49,7 +51,7 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add a payload element, attribute, or variable to a text field by dragging and dropping it from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into.
+* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into.
 +
 The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specified this entry in the *Messages* field of the Logger card:
 +
