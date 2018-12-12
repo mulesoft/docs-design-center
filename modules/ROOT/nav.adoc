@@ -5,7 +5,7 @@
  ** xref:design-common-errors-raml-10.adoc[Common Errors Found in RAML 1.0 API Specifications]
  ** xref:design-scenarios-s6m3-for-published-apis.adoc[Using Published RAML API Specifications in Studio 6.x and Mule Runtime 3.x]
  ** xref:design-scenarios-s7m4-for-published-apis.adoc[Using Published RAML API Specifications in Studio 7.x and Mule Runtime 4.x]
-* xref:design-create-publish-api-specs.adoc[Create and Publish an API Specification or API Fragment]
+* xref:design-create-publish-api-specs.adoc[Create an API Specification or API Fragment]
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Code Editor]
  ** xref:design-branching.adoc[Fork an API Project]
