@@ -1,9 +1,11 @@
 == Import a Mule Application
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
 
 You can import a Mule application that was exported from Design Center or Anypoint Studio.
 
@@ -25,3 +27,14 @@ Try
 image::project-export-studio-options.png[]
 
 image::project-export-studio-options-2.png[]
+
+== Procedure
+
+. On the Project page of Design Center, click the *Create* button and select *Import Application*.
+. Specify a name to give to the imported project.
+. Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.
+. Click *Import*.
+
+== Result
+
+The imported project is opened and includes all of its flows, reusable configurations, and data types.
