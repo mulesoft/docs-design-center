@@ -101,43 +101,12 @@ schemas:
 <<Back to the top>>
 
 === Common Error 3 (RAML 0.8)
-// APIMF-852 and 853
+// APIMF-853
 
 
 *_Using a non-integer data type for the example of a property that is an integer_*
 
-The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-
-/products:
-  /product/{product_id}:
-    description: Get product instance details
-    get:
-      responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                {
-                  "$schema": "http://json-schema.org/draft-03/schema",
-                  "id": "http://jsonschema.net",
-                  "properties": {
-                      "unit_price": {
-                          "type": "integer"
-                      }
-                  }
-                }
-              example: |
-                {
-                  "unit_price": 19.00
-                }
-----
-
-As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+The data type for the example of a property that is an integer must be an integer. As an example of the error, the data type of the example does not match the data type defined for `uriParameters`.
 
 
 ----
