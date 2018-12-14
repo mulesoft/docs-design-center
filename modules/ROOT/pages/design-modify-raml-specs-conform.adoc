@@ -6,7 +6,9 @@ As of ..., the API editor in Design Center is more precise in ensuring that the 
 
 Check your published APIs by opening them in the API editor in Design Center. You can use the guide on on xref:design-center::design-modify-raml-specs-conform.adoc[this page] to correct a number of errors that MuleSoft has found while testing the changes to the API editor on a large number of RAML API specifications. If you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
-You have a grace period of at least one year to correct any invalid RAML that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy APIs in which there is invalid RAML.
+In addition to checking more precisely for RAML errors, the API editor also validates regular expressions. Any invalid expressions in published API specifications that you reopen in the editor are now flagged as errors.
+
+You have a grace period of at least one year to correct any invalid RAML and invalid regular expressions that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy API specifications in which such problems still exist.
 
 
 * <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
@@ -17,10 +19,8 @@ You have a grace period of at least one year to correct any invalid RAML that yo
 
 If you open in the API editor a published API specification that is written in RAML 0.8 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
 
-=== Common Error 1 (RAML 0.8)
+=== Not using a data type of string for the example of a Boolean enum (RAML 0.8)
 // APIMF-824
-
-*_Not using a data type of string for the example of a Boolean enum_*
 
 Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
 
@@ -51,10 +51,8 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-=== Common Error 2 (RAML 0.8)
+=== Including a schema that contains invalid JSON (RAML 0.8)
 // APIMF-841
-
-*_Including a schema that contains invalid JSON_*
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
@@ -100,44 +98,10 @@ schemas:
 
 <<Back to the top>>
 
-=== Common Error 3 (RAML 0.8)
-// APIMF-852 and 853
+=== Using a non-integer data type for the example of a property that is an integer (RAML 0.8)
+// APIMF-853
 
-
-*_Using a non-integer data type for the example of a property that is an integer_*
-
-The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-
-/products:
-  /product/{product_id}:
-    description: Get product instance details
-    get:
-      responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                {
-                  "$schema": "http://json-schema.org/draft-03/schema",
-                  "id": "http://jsonschema.net",
-                  "properties": {
-                      "unit_price": {
-                          "type": "integer"
-                      }
-                  }
-                }
-              example: |
-                {
-                  "unit_price": 19.00
-                }
-----
-
-As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+The data type for the example of a property that is an integer must be an integer. As an example of the error, the data type of the example does not match the data type defined for `uriParameters`.
 
 
 ----
@@ -153,10 +117,8 @@ title: Order Entry API
 
 <<Back to the top>>
 
-=== Common Error 4 (RAML 0.8)
+=== Not using a required property in the example of a schema that defines that property (RAML 0.8)
 // APIMF-896
-
-*_Not using a required property in the example of a schema that defines that property_*
 
 If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
 
@@ -218,9 +180,8 @@ The example of the schema is in `get_order_response.json`. However, the name of 
 
 <<Back to the top>>
 
-=== Common Error 5 (RAML 0.8)
+=== Not using in an example of a schema the data type that the schema defines (RAML 0.8)
 // APIMF-901
-*_Not using in an example of a schema the data type that the schema defines_*
 
 For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
 
@@ -259,9 +220,8 @@ schemas:
 
 <<Back to the top>>
 
-=== Common Error 6 (RAML 0.8)
+=== Using 0 or 1 as the value of an example of a Boolean (RAML 0.8)
 // APIMF-929
-*_Using 0 or 1 as the value of an example of a Boolean_*
 
 An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
 
@@ -320,9 +280,8 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 7 (RAML 0.8)
+=== Using invalid JSON in examples of JSON schemas (RAML 0.8)
 // APIMF-1069
-*_Using invalid JSON in examples of JSON schemas_*
 
 Examples of JSON schemas must be valid, unlike the example in the following snippet:
 
@@ -359,9 +318,8 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 8 (RAML 0.8)
+=== Not providing a value for the `title` node (RAML 0.8)
 // APIMF-1083
-*_Not providing a value for the `title` node_*
 
 The `title` node cannot lack a value, as it does here:
 
@@ -373,9 +331,8 @@ title:
 
 <<Back to the top>>
 
-=== Common Error 9 (RAML 0.8)
+=== Not using the data type of the RAML element in the example for that element (RAML 0.8)
 // APIMF-1088
-*_Not using the data type of the RAML element in the example for that element_*
 
 In all cases, the data type of an example must match the data type of the element that it is an example of.
 
@@ -395,14 +352,55 @@ title: ExampleRAML
 
 <<Back to the top>>
 
+=== Using an invalid path for a reference inside a JSON schema
+// APIMF-833
+
+When you use the `$ref` keyword in a JSON schema, the path that you specify with it must start at the root of the schema. For example, the `$ref` keyword used for the property `input2` in the following schema uses an incorrect path to refer to the property `input`.
+----
+#%RAML 0.8
+title: ExampleRAML
+version: v1
+schemas:
+- authCodeResponse : |
+    {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "input"
+        }
+      },
+       "type": "object"
+    }
+----
+The path must start at the root level of the schema and descend through the tree structure. This example of the schema shows the same `$ref` keyword using the correct path.
+----
+{
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "#/properties/input"
+        }
+      },
+       "type": "object"
+    }
+
+----
+
+
+
 [[bookmark-c,Common Errors in Conforming to RAML 1.0]]
 == Common Errors in Conforming to RAML 1.0
 
 If you open in the API editor a published API specification that is written in RAML 1.0 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 1.0, which you can read on https://raml.org/[raml.org].
 
-=== Common Error 1 (RAML 1.0)
+=== Appending references with hash symbols to filenames in `!include` statements (RAML 1.0)
 // APIMF-834
-*_Appending references with hash symbols to filenames in `!include` statements_*
 
 A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
 
@@ -424,9 +422,8 @@ If your specification contains an error of this type, but you meant to write a c
 
 <<Back to the top>>
 
-=== Common Error 2 (RAML 1.0)
+=== Not correctly using curly braces and brackets in JSON examples (RAML 1.0)
 // APIMF-849
-*_Not correctly using curly braces and brackets in JSON examples_*
 
 There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
 
@@ -525,10 +522,8 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 3 (RAML 1.0)
+=== Not naming named examples (RAML 1.0)
 // APIMF-907
-
-*_Not naming named examples_*
 
 The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
@@ -600,9 +595,8 @@ The parser would assume that `user` was the name of the example and that the obj
 
 <<Back to the top>>
 
-=== Common Error 4 (RAML 1.0)
+=== Including an example response that contains invalid JSON (RAML 1.0)
 // APIMF-967
-*_Including an example response that contains invalid JSON_*
 
 When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
 
@@ -638,9 +632,8 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Common Error 5 (RAML 1.0)
+=== Referencing libraries by using the `type` key (RAML 1.0)
 // APIMF-1030
-*_Referencing libraries by using the `type` key_*
 
 As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
 
@@ -679,10 +672,8 @@ uses:
 
 <<Back to the top>>
 
-=== Common Error 6 (RAML 1.0)
+=== Specifying values for an enum that does not match the enum's data type (RAML 1.0)
 // APIMF-1062
-*_Specifying values for an enum that does not match the enum's data type_*
-
 
 To illustrate this error, here is an invalid declaration of an enum.
 
@@ -704,9 +695,8 @@ enum: [1,2,3]
 
 <<Back to the top>>
 
-=== Common Error 7 (RAML 1.0)
+=== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified (RAML 1.0)
 // APIMF-1070
-*_Using, in an example of a numeric type, an incorrect format for that type, if a format is specified_*
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
 
@@ -729,9 +719,8 @@ types:
 
 <<Back to the top>>
 
-=== Common Error 8 (RAML 1.0)
+=== Not defining a media type for an empty body when no default media type is defined (RAML 1.0)
 // APIMF-1158
-*_Not defining a media type for an empty body when no default media type is defined_*
 
 It is possible to specify media types globally for an entire API specification or locally for individual `body` nodes. According to the RAML 1.0 specification, a global definition looks like this:
 
