@@ -1,0 +1,39 @@
+== Import a Mule Application
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+
+You can import a Mule application that was exported from Design Center or Anypoint Studio.
+
+== Before you begin
+
+* If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
+** In the Export dialog: *Mule* > *Anypoint Studio Project to Mule Deployable Archive (includes Studio metadata)*
+** In the Export Mule Project dialog:
+*** Select *Attach project sources*.
+*** Select *Only export project sources*.
+* Studio supports all of the core components that come with Mule Runtime, while Design Center supports a subset. If you want to import a project that was exported from Studio, ensure that the project includes core components from the following list only:
+** Choice
+** Flow Reference
+** For Each
+** Logger
+** Scheduler
+** Set Payload
+** Set Variable
+** Transform
+** Try
+
+== Procedure
+
+. On the Project page of Design Center, click the *Create* button and select *Import Application*.
+. Specify a name to give to the imported project.
+. Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.
+. Click *Import*.
+
+== Result
+
+The imported project is opened and includes all of its flows, reusable configurations, and data types.

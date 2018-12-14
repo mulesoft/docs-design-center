@@ -4,5 +4,6 @@ include::_attributes.adoc[]
 endif::[]
 
 * xref:to-create-and-populate-a-variable.adoc[About Creating Variables (Design Center)]
-* xref:flow-datatype-task.adoc[To Set Flow Data Types and Variables]
-* xref:change-target-output-transformation-design-center-task.adoc[To Change the Target Output of a Transformation]
+* xref:flow-datatype-task.adoc[Set Flow Data Types and Variables]
+* xref:change-target-output-transformation-design-center-task.adoc[Change the Target Output of a Transformation]
+* xref:change-runtime-version.adoc[Change the Version of Mule Runtime that a Mule App Uses]

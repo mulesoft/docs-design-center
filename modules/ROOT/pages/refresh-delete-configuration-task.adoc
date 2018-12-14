@@ -1,4 +1,4 @@
-= To Refresh or Delete a Module Configuration (Design Center)
+= Refresh or Delete a Module Configuration (Design Center)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
