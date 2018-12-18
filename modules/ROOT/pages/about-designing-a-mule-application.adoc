@@ -18,14 +18,14 @@ In Design Center, you create a Mule application in a project having one or more 
 Cards are...
 
 Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
-// What types of card are there? Core components, connectors, etc.
+// What types of card are there? Core components (list the supported ones), connectors, etc.
 // What do cards contain?
 
 *Triggers*
-Triggers are a type of card and always are the initial card in a flow.
-* An HTTP listener at the beginning of a flow gets an outside event, an incoming HTTP request, which starts the flow.
-* A Scheduler at the beginning of a flow starts the flow at a configured time or restarts the flow after an elapsed time.
-* A Flow Ref in one flow starts another flow by referencing its name. A flow needs a trigger unless started by a Flow Ref in another flow.
+Triggers are a type of card and always are the initial card in a flow. The following are several examples of triggers.
+* An HTTP listener receives an incoming HTTP request.
+* A Scheduler starts a workflow at a configured time or restarts the flow after an elapsed time.
+* A Flow Ref (flow reference) in one flow starts another flow.
 
 
 == Procedure
@@ -43,20 +43,28 @@ For this card, Design Center lists only the objects and actions that you can use
 . Configure the trigger and then close it.
 . Add one or more cards to your workflow by clicking the plus symbol and configure each.
 
+== Result
 
 
 
+== What to do next
+
+Test
+Deploy
+
+== Example
+
+// I tried on 12/18 to create a small flow that used Email as a trigger and wrote the subject to the log. However, the documentation for the Email connector is too disorganized and imposing. I couldn't get this app to work.
 
 
 
+// == See also
 
-== See also
-
-* xref:create-basic-app-task.adoc.adoc[Automate a Basic Workflow]
-* xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
-* xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
-* xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
-* xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
-* xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
-* xref:4.1@mule-runtime::about-components.adoc[About Components]
-* xref:4.1@mule-runtime::about-flows.adoc[About Flows]
+// * xref:create-basic-app-task.adoc.adoc[Automate a Basic Workflow]
+// * xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
+// * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
+// * xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
+// * xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
+// * xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
+// * xref:4.1@mule-runtime::about-components.adoc[About Components]
+// * xref:4.1@mule-runtime::about-flows.adoc[About Flows]
