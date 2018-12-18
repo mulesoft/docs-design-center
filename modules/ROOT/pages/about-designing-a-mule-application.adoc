@@ -15,7 +15,11 @@ In Design Center, you create a Mule application in a project having one or more 
 == About this task
 
 *Cards*
+Cards are...
+
 Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
+// What types of card are there? Core components, connectors, etc.
+// What do cards contain?
 
 *Triggers*
 Triggers are a type of card and always are the initial card in a flow.
@@ -29,8 +33,15 @@ Triggers are a type of card and always are the initial card in a flow.
 . Create a new "Mule app" project in Design Center.
 .. On the *Projects* page, click *Create* and then select *Mule app*.
 .. Specify a name for the Mule app.
-*Result:* The canvas for your project is opened and the *Let's get started* wizard appears over it. If you have a simple workflow for which you need only a trigger and one other card, you can sequence the two cards with the help of this wizard. Otherwise, click *Go straight to the canvas*.
-. Specify a trigger card and an action that causes the trigger to start the workflow.
+*Result:* The canvas for your project is opened and the *Let's get started* wizard appears over it. If you have a simple workflow for which you need only a trigger and one other card, you can sequence the two cards with the help of this wizard. In this procedure, it is assumed that you click *Go straight to the canvas*.
+. Click a trigger card to select a trigger and an action that causes the trigger to start the workflow.
++
+[TIP]
+====
+For this card, Design Center lists only the objects and actions that you can use as triggers.
+====
+. Configure the trigger and then close it.
+. Add one or more cards to your workflow by clicking the plus symbol and configure each.
 
 
 
