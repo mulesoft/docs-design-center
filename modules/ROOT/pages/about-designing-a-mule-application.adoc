@@ -6,20 +6,42 @@ endif::[]
 
 In Design Center, you create a Mule application in a project having one or more flows. A flow typically consists of one trigger and one or more connectors, components, or APIs.
 
-A flow performs operations specified by its components when triggered. For example:
+== Before you begin
 
+* Ensure that your user ID is assigned the "Design Center Developer" permission in Access Management, if your user ID is not the owner of the organization that you are working in.
+* If you want to deploy your Mule application to the Design environment, ensure that your user ID is assigned the "CloudHub Admin" role.
+
+
+== About this task
+
+*Cards*
+Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
+
+*Triggers*
+Triggers are a type of card and always are the initial card in a flow.
 * An HTTP listener at the beginning of a flow gets an outside event, an incoming HTTP request, which starts the flow.
 * A Scheduler at the beginning of a flow starts the flow at a configured time or restarts the flow after an elapsed time.
 * A Flow Ref in one flow starts another flow by referencing its name. A flow needs a trigger unless started by a Flow Ref in another flow.
 
-Each component receives an input, carries out a specific function, and then transfers the output to the next part of the flow. The placement of components in a flow affects functionality.
 
-For a tutorial that will help you get started building Mule applications, see "To Create a Basic Mule Application", which is linked to from the *See also* section at the end of this topic.
+== Procedure
+
+. Create a new "Mule app" project in Design Center.
+.. On the *Projects* page, click *Create* and then select *Mule app*.
+.. Specify a name for the Mule app.
+*Result:* The canvas for your project is opened and the *Let's get started* wizard appears over it. If you have a simple workflow for which you need only a trigger and one other card, you can sequence the two cards with the help of this wizard. Otherwise, click *Go straight to the canvas*.
+. Specify a trigger card and an action that causes the trigger to start the workflow.
+
+
+
+
+
+
 
 
 == See also
 
-* xref:create-basic-app-task.adoc.adoc[To Create a Basic Mule Application (Design Center)]
+* xref:create-basic-app-task.adoc.adoc[Automate a Basic Workflow]
 * xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
 * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
 * xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]

@@ -1,4 +1,4 @@
-= To Create a Basic Mule Application (Design Center)
+= Automate a Basic Workflow
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

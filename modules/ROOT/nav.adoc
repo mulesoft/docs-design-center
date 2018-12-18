@@ -19,7 +19,7 @@
 * xref:about-designing-a-mule-application.adoc[Automate a Workflow]
  ** xref:flow-design-basic-tasks.adoc[Flow Design Basics]
   *** xref:function-editor-concept.adoc[About DataWeave Function Editor]
-  *** xref:create-basic-app-task.adoc[To Create a Basic Mule App]
+  *** xref:create-basic-app-task.adoc[Automate a Basic Workflow]
   *** xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]
   *** xref:inspect-data-task.adoc[To Inspect Input and Output]
   *** xref:design-filter-task.adoc[To Transform from a Full Set of Data to a Subset]

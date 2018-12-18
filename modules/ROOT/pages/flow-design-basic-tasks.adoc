@@ -5,7 +5,7 @@ endif::[]
 
 Test drive Design Center by creating a flow using the following procedures:
 
-* xref:create-basic-app-task.adoc[To Create a Basic Mule Application]
+* xref:create-basic-app-task.adoc[Automate a Basic Workflow]
 * xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]
 * xref:inspect-data-task.adoc[To Inspect Input and Output]
 * xref:design-filter-task.adoc[To Transform a Full Set of Data to a Subset]
