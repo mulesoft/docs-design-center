@@ -7,8 +7,9 @@ endif::[]
 :imagesdir: ../assets/images
 
 
-You can import a Mule application that was exported from Design Center or Anypoint Studio.
+You can import a Mule application that was exported from Design Center.
 
+////
 == Before you begin
 
 * If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
@@ -26,6 +27,7 @@ You can import a Mule application that was exported from Design Center or Anypoi
 ** Set Variable
 ** Transform
 ** Try
+////
 
 == Procedure
 
