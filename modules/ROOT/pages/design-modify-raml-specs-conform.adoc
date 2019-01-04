@@ -10,14 +10,14 @@ In addition to checking more precisely for RAML errors, the API editor also vali
 
 You have a grace period of at least one year to correct any invalid RAML and invalid regular expressions that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy API specifications in which such problems still exist.
 
+* xref:design-common-errors-raml-08.adoc[Common Errors Found in RAML 0.8 API Specifications]
+* xref:design-common-errors-raml-10.adoc[Common Errors Found in RAML 1.0 API Specifications]
 
-* <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
-* <<bookmark-c,Common Errors in Conforming to RAML 1.0>>
+If, after the changes to the API editor are released, you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
-[[bookmark-b,Common Errors in Conforming to RAML 0.8]]
-== Common Errors in Conforming to RAML 0.8
+== How Anypoint Studio and Mule Runtime Interact with the Changes to the API Editor
 
-If you open in the API editor a published API specification that is written in RAML 0.8 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
+You will have a long grace period to correct any invalid RAML that your published API specifications might include. The grace period will start on the date that the changes to the API editor are released. See xref::design-scenarios-s6m3-for-published-apis.adoc[How the Changes to the API Editor Affect the Use of Published RAML API Specifications by Studio 6._x_ and Mule Runtime 3._x_] to learn how RAML API specifications that you correct in the API editor before or after the grace period ends can be used in Anypoint Studio 6._x_ and Mule Runtime 3._x_.
 
 === Not using a data type of string for the example of a Boolean enum (RAML 0.8)
 // APIMF-824

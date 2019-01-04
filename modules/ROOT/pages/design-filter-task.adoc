@@ -99,5 +99,4 @@ Now, if you remove Transform from the flow, you are ready to drill down into JSO
 == See Also
 
 * xref:for-each-task-design-center.adoc[To Drill Down into JSON]
-* xref:to-create-a-new-project.adoc[To Create a Basic Mule Application]
 * xref:design-dynamic-request-task.adoc[To Dynamically Change the URL of a Request]

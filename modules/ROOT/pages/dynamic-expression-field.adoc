@@ -1,0 +1,129 @@
+= Specify a Dynamic Value in a Text Field
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can drag and drop payload elements, attributes, and variables into plain text fields, mixing them together with text or using them alone, to specify dynamic, rather than static, values. The values are substituted when your Mule application is running and a flow is triggered.
+
+== About this task
+
+In cards that make up a flow, there are several different types of fields:
+
+* Fields that offer one or more options that you can select
+* Function fields for creating DataWeave expressions
+* Plain text fields, which are typically for static, unchanging values
+
+In plain text fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card.
+
+image::logger-with-list.png[]
+
+The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload elements, attributes, and variables that you want to include. The field concatenates them together with any strings that you include.
+
+== Before you begin
+
+Payload elements, variables, and attributes that appear in the list in a card are passed in by the preceding card. Default payloads and attributes, if there are any attributes, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a custom data type for the output payload in the previous card. (If the previous card is a Set Variable card, you must define the custom data type for the output payload in the card before that). Before a variable can appear in the list, you must define a variable in a previous card.
+
+For example, suppose you wanted a Logger to parse the output payload of an HTTP Listener and then to log messages that contain payload data. You would set up this simple flow, with `/example` being the endpoint for the HTTP Listener:
+
+image::simple-flow-before-you-begin.png[]
+
+The list in the Logger card looks like the list that is highlighted in blue in this image:
+
+image::logger-initial-list.png[]
+
+Because the HTTP Listener is using the default payload, it is not expecting the data that it receives to be in any particular format. If you dragged and dropped the list entry `payload` into the *Message* field, the Logger would attempt to print to its log file the entirety of every payload that it received from the HTTP Listener.
+
+Next, suppose you want to limit what parts of the payload the HTTP Listener sends to the Logger. You can create a custom data type for the output payload of the HTTP Listener, using this JSON example, to send only the `firstName` and `lastName` elements from the payload that the HTTP Listener received:
+
+[source,JSON,linenums]
+----
+{
+	"firstName": "Sancho",
+	"lastName": "Panza"
+}
+----
+
+When you reopen the Logger card after a moment (giving a brief amount of time to Design Center to recognize the custom data type in the flow), the `payload` entry in the list is now replaced by `firstName` and `lastName`.
+
+image::logger-with-list.png[]
+
+See the example below for the steps for creating the custom data type in the HTTP Listener card, creating a dynamic message in the Logger card, and running a Mule application to log the dynamic message.
+
+If you want to use a variable in an expression in the Logger card, you could add a Set Variable card just before it. In this example, the Set Variable card defines the variable `firstNameBasis`, which is then passed to the Logger card:
+
+image::first-name-basis.png[]
+
+== Procedure
+
+* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into.
++
+The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specified this entry in the *Messages* field of the Logger card:
++
+image::hello-firstname.png[]
++
+The Logger would add a message in this format to the log when it received a payload that contained a `firstName` element:
++
+----
+"Hello, Shirley."
+----
++
+If the payload contained a `lastName` element and you dragged it after the `firstName` element and placed a space between both of them, the Logger would log messages in this format:
++
+----
+"Hello, Shirley Jackson."
+----
++
+NOTE: You can combine your simple value with a DataWeave expression, if you know the DataWeave language. Drag the list entry `Custom Expression` into your text field. Then, double-click it to open it.
+
+* Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
+
+== Example: Creating a simple dynamic expression
+
+This example uses a flow in which an HTTP Listener receives a POST request that contains a JSON payload. The HTTP Listener then passes the payload to a Logger. This payload contains a person's first and last name:
+
+=== Procedure
+
+. In a new Mule application project, add an HTTP Listener card for the trigger of a new flow.
+. Open the card and set the path to `/example`.
+. Set up the data type for the output of this card.
+.. Go to the *Output* section.
+.. Next to the *Data Type* drop-down menu, click *Add*.
+.. In the *Name* field, specify any name you like for the data type.
+.. Select *JSON* from the *Format* drop-down menu.
+.. Select *From Example* in the *Type* field and paste in the following JSON example for your payload.
++
+[source,JSON,linenums]
+----
+{
+	"firstName": "Sancho",
+	"lastName": "Panza"
+}
+----
+.. Click *Save*.
+. Add a Logger card after the HTTP Listener card and then open it.
++
+*Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes before you will see the elements listed.
+. Specify a message for the Logger to include in the log whenever it receives a payload.
+.. In the *Message* field, type ```Hello, ```.
+.. Click the payload element `payload.firstName` and drag it into the *Message* field.
+. Run the application by clicking the *Run* button at the top of the canvas.
+. Copy the URL for the application by clicking on it to the right of the *Run* button.
+. In Postman or cURL, post a JSON message to the `/example` endpoint, using the same format as the example you specified in the HTTP Listener card.
+
+=== Result
+
+After you post the message, return to your flow in Design Center, open the log, and look for your message.
+
+=== What to do next
+
+Try adding a Set Variable card after the HTTP Listener card, creating a variable that stores the value of `payload.firstName`, and then changing the message in the Logger to use the variable instead of the payload element. In the Logger card, the variable will appear in the list on the right. You can delete the payload element from the message and then drag in the variable.
+
+
+
+== See Also
+
+* xref:function-editor-concept.adoc[Function Editor]
+* xref:to-create-and-populate-a-variable.adoc[About Creating Variables]
+* xref:mule-runtime::dataweave-selectors.adoc[DataWeave Selectors]

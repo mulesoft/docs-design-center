@@ -59,10 +59,6 @@ The table below lists all of the error messages that can appear in this location
 |Either your flow is not yet built enough to run, or it contains errors.
 |Ensure that you have a trigger for all flows and at least one card after each trigger. Also, ensure that there are no error indicators on the cards.
 
-|Not Ready to Run
-|Either your flow is not yet built enough to run or it contains errors.
-|Ensure that you have a trigger for all flows and at least one card after each trigger. Also, ensure that there are no error indicators on the cards.
-
 |Operation Failed
 |The Mule runtime failed to process the request (while starting or stopping).
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure, what to do to resolve the problem, or both.

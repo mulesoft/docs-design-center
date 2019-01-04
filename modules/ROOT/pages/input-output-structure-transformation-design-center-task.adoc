@@ -9,19 +9,6 @@ If Transform cannot detect the structure of the data, you define the data type o
 
 Whether or not Transform can infer a structure is fairly predictable. For example, when the input to Transform comes from the database connector, the data structure is already defined; no need to define a data type. When the input to Transform is from the HTTP listener, the payload structure is unpredictable and you need to define a data type.
 
-== Automapper Feature
-
-The Transform message component features an automapper function to help you map related field types between your input and output data.
-
-image::input-output-structure-transformation-design-center-task-648ce.png[]
-
-By clicking the Preview button, the transform message component shows you the possible mapping suggestions:
-
-image::input-output-structure-transformation-design-center-task-e90ae.png[]
-
-To accept these suggestions, click the apply button displayed above. +
-
-
 == Transforming Multiple Output Parts
 
 In Output, in Mappings you can click Output Payload > Add Transformation to transform multiple parts of the output of a single Transform utility. You need to define separate DataWeave code for each part of the output. For example: if one tab defines the payload, and another a variable, both are parts of the same Mule message output. Execution order of multiple outputs might vary.
@@ -140,6 +127,7 @@ These properties are written on the `output` directive of your DataWeave code.
 
 == See Also
 
+// * xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
 * xref:4.1@mule-runtime::dataweave.adoc[DataWeave Language]
 * xref:4.1@mule-runtime::dataweave-types.adoc[DataWeave Types]
 * xref:4.1@mule-runtime::dataweave-formats.adoc[DataWeave Formats]
