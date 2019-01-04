@@ -1,6 +1,6 @@
 = Using Published RAML API Specifications in Studio 6._x_ and Mule Runtime 3._x_
 
-As described in xref::design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0], the API editor in Design Center will soon be more precise in ensuring that the RAML in your API specifications is valid. Although RAML API specifications that you have already published might contain invalid RAML, you will have a long grace period in which to make corrections.
+As described in xref::design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0], the API editor in Design Center is now (as of January 10, 2019) more precise in ensuring that the RAML in your API specifications is valid. Although RAML API specifications that you have already published might contain invalid RAML, you will have a long grace period in which to make corrections.
 
 The information below explains how Anypoint Studio 6._x_ and Mule Runtime 3._x_ interact with RAML API specifications that are published both during and after the grace period.
 

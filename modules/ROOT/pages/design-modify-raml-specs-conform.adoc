@@ -2,22 +2,22 @@
 
 [[bookmark-a,Back to the top]]
 
-As of ..., the API editor in Design Center is more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Anypoint Exchange includes invalid RAML that those previous versions did not flag.
+As of January 10, 2019, the API editor in Design Center is more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create and publish to Anypoint Exchange includes invalid RAML that those previous versions did not flag.
 
-Check your published APIs by opening them in the API editor in Design Center. You can use the guide on on xref:design-center::design-modify-raml-specs-conform.adoc[this page] to correct a number of errors that MuleSoft has found while testing the changes to the API editor on a large number of RAML API specifications. If you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
+Check your published APIs by opening them in the API editor in Design Center. You can use the guide on this page to correct a number of errors that MuleSoft has found while testing the changes to the API editor on a large number of RAML API specifications. If you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
 In addition to checking more precisely for RAML errors, the API editor also validates regular expressions. Any invalid expressions in published API specifications that you reopen in the editor are now flagged as errors.
 
-You have a grace period of at least one year to correct any invalid RAML and invalid regular expressions that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy API specifications in which such problems still exist.
+You have a long grace period to correct any invalid RAML and invalid regular expressions that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy API specifications in which such problems still exist.
 
-* xref:design-common-errors-raml-08.adoc[Common Errors Found in RAML 0.8 API Specifications]
-* xref:design-common-errors-raml-10.adoc[Common Errors Found in RAML 1.0 API Specifications]
+* <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
+* <<bookmark-c,Common Errors in Conforming to RAML 1.0>>
 
-If, after the changes to the API editor are released, you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
-== How Anypoint Studio and Mule Runtime Interact with the Changes to the API Editor
+[[bookmark-b,Common Errors in Conforming to RAML 0.8]]
+== Common Errors in Conforming to RAML 0.8
 
-You will have a long grace period to correct any invalid RAML that your published API specifications might include. The grace period will start on the date that the changes to the API editor are released. See xref::design-scenarios-s6m3-for-published-apis.adoc[How the Changes to the API Editor Affect the Use of Published RAML API Specifications by Studio 6._x_ and Mule Runtime 3._x_] to learn how RAML API specifications that you correct in the API editor before or after the grace period ends can be used in Anypoint Studio 6._x_ and Mule Runtime 3._x_.
+If you open in the API editor a published API specification that is written in RAML 1.0 and you see error indicators, this list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
 
 === Not using a data type of string for the example of a Boolean enum (RAML 0.8)
 // APIMF-824
