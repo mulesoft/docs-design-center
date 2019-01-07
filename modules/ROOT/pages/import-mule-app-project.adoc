@@ -7,10 +7,14 @@ endif::[]
 :imagesdir: ../assets/images
 
 
-You can import a Mule application that was exported from Design Center. 
+You can import a Mule-application project that was exported from Design Center. This feature lets you import a project into an environment in Anypoint Platform that is different from the environment in which the project was created.
+
+
+== Before you begin
+
+Ensure that all connectors that are referenced in the project are in fact available in the target environment. Design Center prevents you from importing if any of the referenced connectors are not available.
 
 ////
-== Before you begin
 
 * If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
 ** In the Export dialog: *Mule* > *Anypoint Studio Project to Mule Deployable Archive (includes Studio metadata)*
