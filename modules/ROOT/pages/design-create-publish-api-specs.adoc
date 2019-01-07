@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In Design Center, you can use two different tools to create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS), and then publish those specifications to Anypoint Exchange. There are two different tools that you can use to create and publish specifications:
+In Design Center, you can use two different tools to create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS), and then publish those specifications to Anypoint Exchange. 
 
 API  editor:: Use this tool if you do have experience with writing API specifications. It offers a larger degree of freedom for creating more complex specifications. It also displays errors and warnings as problems in your specification occur.  The steps for using this tool are described in xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the API Editor in Design Center].
 
