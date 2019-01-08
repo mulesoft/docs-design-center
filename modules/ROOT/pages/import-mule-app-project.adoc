@@ -10,10 +10,6 @@ endif::[]
 You can import a Mule-application project that was exported from Design Center. This feature lets you import a project into an environment in Anypoint Platform that is different from the environment in which the project was created.
 
 
-== Before you begin
-
-Ensure that all connectors that are referenced in the project are in fact available in the target environment. Design Center prevents you from importing if any of the referenced connectors are not available.
-
 ////
 
 * If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
@@ -40,7 +36,5 @@ Ensure that all connectors that are referenced in the project are in fact availa
 . Browse your filesystem for the `.jar` file that contains the project.
 // . Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.
 . Click *Import*.
-
-== Result
-
-The imported project is opened and includes all of its flows, reusable configurations, and data types.
++
+If one or more connectors referenced by the project are not available in your environment, then the import fails and a message lists the missing connectors. 
