@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-// * xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
+* xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
 * xref:dynamic-expression-field.adoc[Specify a Dynamic Value in a Text Field]
 * xref:custom-expression-field.adoc[Create a DataWeave Expression in a Text Field]
 * xref:refresh-delete-configuration-task.adoc[Refresh or Delete a Module Configuration]
