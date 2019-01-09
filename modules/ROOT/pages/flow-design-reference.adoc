@@ -4,4 +4,3 @@ include::_attributes.adoc[]
 endif::[]
 
 * xref:input-output-structure-transformation-design-center-task.adoc[Transform Utility Reference]
-* xref:keyboard-shortcuts-reference.adoc[Keyboard Shortcuts]
