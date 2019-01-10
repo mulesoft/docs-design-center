@@ -36,5 +36,21 @@ You can import a Mule-application project that was exported from Design Center. 
 . Browse your filesystem for the `.jar` file that contains the project.
 // . Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.
 . Click *Import*.
-+
-If one or more connectors referenced by the project are not available in your environment, then the import fails and a message lists the missing connectors. 
+
+[NOTE]
+====
+If one or more connectors, components, or modules referenced by the project are custom-developed and not available in your environment, then the import fails with a message like this one:
+
+....
+Unable to resolve dependency 2bacbe78-4300-965a-39fce81ee15d:mule-plugin-americanflights:jar:mule-plugin:1.0.0
+Where
+2bacbe78-4300-965a-39fce81ee15d is the Maven groupI for the artifact
+Mule-plugin-americanfligths is the Maven artifact ID
+jar is the type of the Maven artifact
+mule-plugin is the classifier of the Maven artifact
+1.0.0 is the version of the Maven artifact.
+....
+
+If you see such an error, ask the owner of the asset xref:exchange::to-publish-assets-maven.adoc[to publish it to Exchange by using Maven].
+
+====
