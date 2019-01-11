@@ -1,13 +1,13 @@
-= Upload an Existing RAML File to Exchange from Design Center
+= Upload an Existing API Specification to Exchange from Design Center
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You cannot publish an RAML API specification to Anypoint Exchange without going through Design Center. If you want to publish a specification that you have already authored outside of Design Center, you must create an API-specification project in Design Center, import your specification, and then publish to Anypoint Exchange.
+You cannot publish an API specification to Anypoint Exchange without going through Design Center. If you want to publish a specification that you have already authored outside of Design Center, you must create an API-specification project in Design Center, import your specification, and then publish to Anypoint Exchange.
 
 == Before you begin
 
-Within Anypoint Platform, you must be assigned the _Design Center Developer_ permission.
+Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
 
@@ -15,8 +15,8 @@ Within Anypoint Platform, you must be assigned the _Design Center Developer_ per
 . On the Projects page, click *Create* and select *API Specification*.
 . In the *New API Specification* dialog, specify a name for the new project, ensure that *Start with API Designer* is selected, and click *Create*.
 . In the project, click the three dots to the right of the heading *Files* and select *Import*.
-. In the *Import* dialog, select *File or Zip* and select the file from your computer, or select *URL* and specify the URL, if the RAML file is online. Then, click *Import*.
-. Delete the RAML file that Design Center created by default. This file has the same name as your project.
+. In the *Import* dialog, select *File or Zip* and select the file from your computer, or select *URL* and specify the URL, if the file is online. Then, click *Import*.
+. Delete the file that Design Center created by default. This file has the same name as your project.
 . Click the *Publish to Exchange* icon (image:publish-exchange.png[Publish to Exchange icon]).
 
 == See Also

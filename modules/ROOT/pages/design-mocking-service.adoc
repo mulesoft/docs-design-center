@@ -12,7 +12,7 @@ You must be working in a project to create an API specification in Design Center
 == About this task
 Simulating calls to the API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to the API in Design Center before publishing the API specification or in Exchange after publishing the API specification there.
 
-When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI, the mocking service comments it out. When you deactivate the mocking service, it removes the base URI that it used and uncomments your base URI. For example, if your base URI is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://mocksvc.mulesoft.com/mocks/+`, etc. is the URI used by the mocking service:
+When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI (RAML) or base path (OAS), the mocking service comments it out. When you deactivate the mocking service, it removes the base URI or base path that it used and uncomments your base URI or base path. For example, if the base URI in a RAML API specification is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://mocksvc.mulesoft.com/mocks/+`, etc. is the URI used by the mocking service:
 
 ----
 #%RAML 1.0
@@ -22,12 +22,12 @@ baseUri: https://mocksvc.mulesoft.com/mocks/d0422e05-e779-4016-9d9e-027e50cd15a7
 # baseUri: http://jsonplaceholder.typicode.com
 ----
 
-You can run the mocking service from the code editor, the visual editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
+You can run the mocking service from the API editor, the visual API editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
 
 
 == Procedure
 
-* If you are using the code editor in Design Center:
+* If you are using the API editor in Design Center:
 +
 . Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
 . In the API summary panel, expand completely the resource with the endpoint that you want to test.
@@ -43,7 +43,7 @@ _Result:_ The URI for the endpoint is displayed. If the endpoint requires parame
 +
 _Result:_ The panel displays the result below the *Send* button.
 
-* If you are using the visual editor in Design Center:
+* If you are using the visual API editor in Design Center:
 +
 . Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
 . In the left panel, select the resource with the endpoint that you want to test.
@@ -57,7 +57,7 @@ _Result:_ The panel displays the result below the *Send* button.
 
 == What to do next
 
-If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI that it used to call your API and to uncomment the base URI that you provided in the specification.
+If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI or base path that it used to call your API and to uncomment the base URI or base path that you provided in the specification.
 
 == See also
 * xref:exchange::ex2-to-simulate-api-data.adoc[To Simulate Data in REST APIs (in Anypoint Exchange)]

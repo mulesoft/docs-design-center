@@ -1,4 +1,4 @@
-= Fork a Project in the RAML Editor
+= Fork a Project in the API Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -18,13 +18,13 @@ You can publish any fork of an API specification to Anypoint Exchange.
 * To fork a project:
 +
 . Open the project.
-. Click “master” at the top of the code editor.
+. Click “master” at the top of the API editor.
 . Type a name in the search field and type *Enter*.
 +
-*Result:* The code editor automatically switches to the new fork.
+*Result:* The API editor automatically switches to the new fork.
 
 * To work in a fork of a project:
 +
 . Open the project.
-. Click “master” at the top of the code editor.
+. Click “master” at the top of the API editor.
 . Select the name of the fork that you want to work in.
