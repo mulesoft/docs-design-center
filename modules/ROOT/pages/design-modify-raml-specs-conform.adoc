@@ -704,7 +704,7 @@ enum: [
 
 The value `false` is a `boolean`, while the value `3.0` is a `float`. Neither is converted to a `string` value by the editor.
 
-The next two declarations are valid.
+The next three declarations are valid.
 ----
 type: string
 enum: ["1","2","3"]
