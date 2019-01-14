@@ -680,12 +680,29 @@ uses:
 === Specifying values for an enum that does not match the enum's data type (RAML 1.0)
 // APIMF-1062
 
-To illustrate this error, here is an invalid declaration of an enum.
+Casting to the declared data type is not done automatically. To illustrate the error, here is an invalid declaration of an enum:
 
 ----
 type: string
 enum: [1,2,3]
 ----
+
+The data type for the enum is `string`; however, the values are all integers and are not cast to `string` values automatically. Either the type is declared incorrectly and should be `integer`, or the enum values need to be in quotation marks.
+
+Here is another invalid declaration:
+
+----
+type: string
+enum: [
+        "a",
+        "b",
+        "c",
+        false,
+        3.0
+      ]
+----
+
+The value `false` is a `boolean`, while the value `3.0` is a `float`. Neither is converted to a `string` value by the editor.
 
 The next two declarations are valid.
 ----
@@ -696,6 +713,17 @@ enum: ["1","2","3"]
 ----
 type: integer
 enum: [1,2,3]
+----
+
+----
+type: string
+enum: [
+        "a",
+        "b",
+        "c",
+        "false",
+        "3.0"
+      ]
 ----
 
 <<Back to the top>>
