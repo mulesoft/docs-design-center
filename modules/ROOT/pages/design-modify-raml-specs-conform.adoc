@@ -2,7 +2,7 @@
 
 [[bookmark-a,Back to the top]]
 
-As of January 10, 2019, the API editor (part of API Designer in Design Center) is more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create includes invalid RAML that those previous versions did not flag.
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) is more precise in ensuring that the RAML in your API specifications is valid. However, it is possible that one or more of the APIs that you used previous versions of the API editor to create includes invalid RAML that those previous versions did not flag.
 
 Check your published APIs by opening them in the API editor in Design Center. You can use the guide on this page to correct a number of common RAML errors that were validated by the API editor in the past. If you see errors that this guide does not include, refer to the specifications for RAML 0.8 and 1.0, which you can read on https://raml.org/[raml.org].
 
@@ -12,7 +12,7 @@ You have a long grace period to correct any invalid RAML and invalid regular exp
 
 [IMPORTANT]
 ====
-You do not need to check any API specifications that were created with the visual API editor, the tool in API Designer with which you can create specifications by filling in forms. 
+You do not need to check any API specifications that were created with the visual API editor, the tool in API Designer with which you can create specifications by filling in forms.
 ====
 
 * <<bookmark-b,Common Errors in Conforming to RAML 0.8>>
