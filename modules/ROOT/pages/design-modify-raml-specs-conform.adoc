@@ -680,14 +680,31 @@ uses:
 === Specifying values for an enum that does not match the enum's data type (RAML 1.0)
 // APIMF-1062
 
-To illustrate this error, here is an invalid declaration of an enum.
+Because of the editor's strict parsing according to the YAML specification, it does not automatically cast values to declared data types. To illustrate the error, here is an invalid declaration of an enum:
 
 ----
 type: string
 enum: [1,2,3]
 ----
 
-The next two declarations are valid.
+The data type for the enum is `string`; however, the values are all integers. Because the editor stricly parses according to the YAML specification, it does not cast the integers to `string` values automatically. Therefore, either the type is declared incorrectly in this example and should be `integer`, or the enum values need to be in quotation marks.
+
+Here is another invalid declaration:
+
+----
+type: string
+enum: [
+        "a",
+        "b",
+        "c",
+        false,
+        3.0
+      ]
+----
+
+The value `false` is a `boolean`, while the value `3.0` is a `float`. Neither is converted to a `string` value by the editor.
+
+The next three declarations are valid.
 ----
 type: string
 enum: ["1","2","3"]
@@ -697,6 +714,22 @@ enum: ["1","2","3"]
 type: integer
 enum: [1,2,3]
 ----
+
+----
+type: string
+enum: [
+        "a",
+        "b",
+        "c",
+        "false",
+        "3.0"
+      ]
+----
+
+[NOTE]
+====
+This error can occur not just in enums, but also anywhere an `integer`, `nil` value, or value of some other data type is introduced where the parser expects a `string` value.
+====
 
 <<Back to the top>>
 
