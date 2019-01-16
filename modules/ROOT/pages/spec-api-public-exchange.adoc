@@ -14,11 +14,8 @@ https://anypoint.mulesoft.com/login/\#/signup[https://anypoint.mulesoft.com/logi
 .. In the *New API Specification* dialog, specify a name for your project, select *Start with API Designer*, and click *Create*.
 .. On the left side of the screen, click the action menu (the three-dot icon) at the top of the file list and select *Import*.
 +
-* If you want to import a RAML file, select _File or ZIP_ or _URL_.
-* If you want to import a Swagger/OAS file, select _OAS File or ZIP_ or _OAS URL_.
-
-+
-API Designer converts Swagger/OAS files to RAML. If any errors are reported during the conversion, address them by following the instructions in the error messages.
+* If you want to import a RAML 0.8 or 1.0 file, select _File or ZIP_ or _URL_.
+* If you want to import a Swagger/OAS 2.0 file, select _OAS File or ZIP_ or _OAS URL_.
 .. After importing, test your API to make sure it works as you expect it to.
 ... In the top-right corner of the screen, switch on the mocking service.
 ... In the file list, select your API specification.
