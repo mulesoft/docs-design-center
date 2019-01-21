@@ -527,9 +527,49 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Not naming named examples (RAML 1.0)
+=== Problems with named examples (RAML 1.0)
 // APIMF-907
 
+In
+
+==== Not using the "examples" facet when referencing to a named example
+
+If you see this warning message in the API editor, then your API specification is incorrectly referencing a named example:
+
+----
+Named example fragments should be included in 'examples' facet
+----
+
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+     properties:
+        a: string
+        b: integer
+     example: !include fragment.raml
+----
+
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+     properties:
+        a: string
+        b: integer
+     examples: !include fragment.raml
+----
+
+
+
+==== Not naming named examples
+
+If you see this warning message in the API editor, then a NamedExample fragment is missing a name:
+----
+Invalid fragment body in [[root.location]] , external fragment will be created
+----
 The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
 ----
@@ -554,9 +594,16 @@ MyExampleName:
     user: Lionel
 ----
 
-However, if MyExampleName is missing, then `user` is parsed as the name and `Lionel` is parsed as the example, which it isn't. The example is `user: Lionel`.
+Suppose that instead the fragment looked like this:
 
-Suppose that the object was defined with a complex property:
+----
+#%RAML 1.0 NamedExample
+user: Lionel
+----
+
+In this case, `user` is incorrectly parsed as the name and `Lionel` is incorrectly parsed as the example.
+
+To look at another example, suppose that an API specification defined a more complex object:
 
 ----
 user_name:
@@ -567,7 +614,7 @@ user_name:
             lastName: string
 ----
 
-The named example would need to look like this:
+The named example would need to look like this, again with the name of the example immediately following the fragment's declaration:
 
 ----
 #%RAML 1.0 NamedExample
@@ -577,7 +624,7 @@ MyExampleName:
         lastName: Ma
 ----
 
-Suppose that instead it looked like this:
+Suppose that instead the named example looked like this:
 
 ----
 #%RAML 1.0 NamedExample
@@ -587,6 +634,16 @@ user:
 ----
 
 The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
+
+
+
+==== Including more than one named example in a single NamedExample fragment
+
+----
+
+----
+
+
 
 // === Common Error 4
 // APIMF-966
