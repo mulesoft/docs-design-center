@@ -668,9 +668,9 @@ user:
     lastName: Ma
 ----
 
-The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
+The editor would not return the warning message in this case. Instead, it would assume that `user` was the name of the example and that the object had two properties, not one complex property.
 
-If a data type includes a `value` facet and your NamedExample for the type does not include the type's name, the parser assumes that `value` is the name of the type, as in this example:
+Here is another case in which the editor would not return the warning message. If a data type includes a `value` facet and your NamedExample for the type does not include the type's name, the editor assumes that `value` is the name of the type, as in this example:
 
 ----
 #%RAML 1.0 NamedExample
@@ -679,7 +679,7 @@ value:
    b: 1
 ----
 
-To resolve the warning, simply add the name of the type:
+The editor does not issue a warning message and interprets `value` as the name of the example. However, it is better for you to include the name of the example, so that nobody reading through your API specification and related files gets confused about the type that the example is for.
 
 ----
 #%RAML 1.0 NamedExample
