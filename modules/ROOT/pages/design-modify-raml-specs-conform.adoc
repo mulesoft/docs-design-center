@@ -564,7 +564,7 @@ If you see this warning message in the API editor, then your API specification i
 Named example fragments should be included in 'examples' facet
 ----
 
-You must use an `examples` (with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
+You must use an `examples` (`example` with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
 
 ----
 #%RAML 1.0
@@ -592,13 +592,9 @@ types:
 
 
 
-==== Not naming named examples or including more than one example in a NamedExample fragment
+==== Not naming named examples
 
-If you see this warning message in the API editor, then a NamedExample fragment is missing a name or contains more than one named example:
-----
-Invalid fragment body in [[root.location]] , external fragment will be created
-----
-The first line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
+The second line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
 ----
 #%RAML 1.0 NamedExample
@@ -680,6 +676,12 @@ Name2:
     b: 5
 ----
 
+This is the warning message that you will see:
+
+----
+Invalid fragment body in [[root.location]] , external fragment will be created
+----
+
 To resolve the problem, you would need to split the fragment into two fragments:
 ----
 #%RAML 1.0 NamedExample
@@ -694,6 +696,24 @@ Name2:
     a: "h"
     b: 5
 ----
+
+In this next example, there are two properties in a single example. However, the warning message appears because `a` and `b` are parsed as two examples.
+
+----
+#%RAML 1.0 NamedExample
+  a: "b"
+  b: 1
+----
+
+If you add the name of the type, then the warning message no longer appears:
+
+----
+#%RAML 1.0 NamedExample
+Name:
+  a: "b"
+  b: 1
+----
+
 
 // === Common Error 4
 // APIMF-966
