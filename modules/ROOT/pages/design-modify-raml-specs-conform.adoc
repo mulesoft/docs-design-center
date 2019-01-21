@@ -975,3 +975,74 @@ title: ExampleRAML
 ----
 
 <<Back to the top>>
+
+=== Using the `schema` or `schemas` keyword instead of `type` or `types`
+
+The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
+
+---
+‘schema' keyword it's deprecated for 1.0 version, should use 'type' instead
+
+'schemas' keyword it's deprecated for 1.0 version, should use 'types' instead
+---
+
+For example, the following API specification generates both warning messages:
+
+----
+#%RAML 1.0
+title: Incorrect API with schema and schemas
+
+schemas:
+ User:
+   type: object
+   properties:
+     firstname: string
+     lastname:  string
+     age:       number
+
+/users/{id}:
+ get:
+   responses:
+     200:
+       body:
+         application/json:
+           schema: User
+----
+
+To resolve the problem, you would replace `schema` and `schemas` with `type` and `types`:
+
+----
+#%RAML 1.0
+title: Correct API with type and types
+
+types:
+ User:
+   type: object
+   properties:
+     firstname: string
+     lastname:  string
+     age:       number
+
+/users/{id}:
+ get:
+   responses:
+     200:
+       body:
+         application/json:
+           type: User
+----
+
+<<Back to the top>>
+
+
+
+
+
+
+
+
+
+
+
+
+<<Back to the top>>
