@@ -554,7 +554,7 @@ Name:
     b: 1
 ----
 
-If you do not follow these rules, you will see the warning messages that are described in the next two sections.
+If you do not follow these rules, you will see the warning messages that are described in the next three sections.
 
 ==== Not using the "examples" facet when referencing to a named example
 
@@ -593,6 +593,17 @@ types:
 
 
 ==== Not naming named examples
+
+When a named example does not have a name, the editor returns this warning message:
+
+----
+Invalid fragment body in [[root.location]] , external fragment will be created
+----
+
+[NOTE]
+====
+This is the same warning message that appears when there is more than one example in a NamedExample fragment. See the next section for examples of that problem.
+====
 
 The second line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
@@ -659,6 +670,25 @@ user:
 
 The parser would assume that `user` was the name of the example and that the object had two properties, not one complex property.
 
+If a data type includes a `value` facet and your NamedExample for the type does not include the type's name, the parser assumes that `value` is the name of the type, as in this example:
+
+----
+#%RAML 1.0 NamedExample
+value:
+   a: "b"
+   b: 1
+----
+
+To resolve the warning, simply add the name of the type:
+
+----
+#%RAML 1.0 NamedExample
+Name:
+  value:
+      a: "b"
+      b: 1
+----
+
 
 
 ==== Including more than one named example in a single NamedExample fragment
@@ -681,6 +711,11 @@ This is the warning message that you will see:
 ----
 Invalid fragment body in [[root.location]] , external fragment will be created
 ----
+
+[NOTE]
+====
+This is the same warning message that appears when the example in a NamedExample fragment is missing a name. See the previous section for examples of that problem.
+====
 
 To resolve the problem, you would need to split the fragment into two fragments:
 ----
@@ -705,7 +740,7 @@ In this next example, there are two properties in a single example. However, the
   b: 1
 ----
 
-If you add the name of the type, then the warning message no longer appears:
+If you add the name of the type, then the warning message no longer appears because the parser correctly interprets the two properties as belonging to a single named example:
 
 ----
 #%RAML 1.0 NamedExample
