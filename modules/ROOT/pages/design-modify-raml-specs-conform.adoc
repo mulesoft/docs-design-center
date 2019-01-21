@@ -530,15 +530,41 @@ title: ExampleRAML
 === Problems with named examples (RAML 1.0)
 // APIMF-907
 
-In
+To avoid common problems with referencing a named example with an `!include` tag, follow these two rules:
+
+* In your API specification, use the `examples` facet and only one `!include` tag, as in this example:
++
+----
+#%RAML 1.0
+title: test
+types:
+ A:
+    properties:
+       a: string
+       b: integer
+    examples: !include fragment.raml
+----
+
+* In the NamedExample fragment, ensure that there is only one entry, and that the entry consists of a name and a value, as in this example:
++
+----
+#%RAML 1.0 NamedExample
+Name:
+    a: "b"
+    b: 1
+----
+
+If you do not follow these rules, you will see the warning messages that are described in the next two sections.
 
 ==== Not using the "examples" facet when referencing to a named example
 
-If you see this warning message in the API editor, then your API specification is incorrectly referencing a named example:
+If you see this warning message in the API editor, then your API specification is incorrectly referencing a named example by using an `example` facet:
 
 ----
 Named example fragments should be included in 'examples' facet
 ----
+
+You must use an `examples` (with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
 
 ----
 #%RAML 1.0
@@ -550,6 +576,8 @@ types:
         b: integer
      example: !include fragment.raml
 ----
+
+The resolution is merely to add an `s` to the end of the name of the `example` facet:
 
 ----
 #%RAML 1.0
@@ -564,9 +592,9 @@ types:
 
 
 
-==== Not naming named examples
+==== Not naming named examples or including more than one example in a NamedExample fragment
 
-If you see this warning message in the API editor, then a NamedExample fragment is missing a name:
+If you see this warning message in the API editor, then a NamedExample fragment is missing a name or contains more than one named example:
 ----
 Invalid fragment body in [[root.location]] , external fragment will be created
 ----
@@ -639,11 +667,33 @@ The parser would assume that `user` was the name of the example and that the obj
 
 ==== Including more than one named example in a single NamedExample fragment
 
+A NamedExample fragment can contain only one example. The following fragment would generate a warning:
+
+----
+#%RAML 1.0 NamedExample
+Name1:
+   a: "b"
+   b: 1
+
+Name2:
+    a: "h"
+    b: 5
+----
+
+To resolve the problem, you would need to split the fragment into two fragments:
+----
+#%RAML 1.0 NamedExample
+Name1:
+   a: "b"
+   b: 1
 ----
 
 ----
-
-
+#%RAML 1.0 NamedExample
+Name2:
+    a: "h"
+    b: 5
+----
 
 // === Common Error 4
 // APIMF-966
