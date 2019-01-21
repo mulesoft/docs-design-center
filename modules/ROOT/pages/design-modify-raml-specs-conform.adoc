@@ -638,6 +638,23 @@ user: Lionel
 
 In this case, `user` is incorrectly parsed as the name and `Lionel` is incorrectly parsed as the example.
 
+In this next example, there are two properties in a single example. However, the warning message appears because there is no name for the example.
+
+----
+#%RAML 1.0 NamedExample
+  a: "b"
+  b: 1
+----
+
+If you add the name of the type, then the warning message no longer appears:
+
+----
+#%RAML 1.0 NamedExample
+Name:
+  a: "b"
+  b: 1
+----
+
 To look at another example, suppose that an API specification defined a more complex object:
 
 ----
@@ -727,22 +744,7 @@ Name1:
 
 A single type declaration in an API specification can use only one `!include` tag in an `examples` facet. Therefore, you cannot split the NamedExample fragment into two NamedExample fragments and use both named examples.
 
-In this next example, there are two properties in a single example. However, the warning message appears because `a` and `b` are parsed as two examples.
 
-----
-#%RAML 1.0 NamedExample
-  a: "b"
-  b: 1
-----
-
-If you add the name of the type, then the warning message no longer appears because the parser correctly interprets the two properties as belonging to a single named example:
-
-----
-#%RAML 1.0 NamedExample
-Name:
-  a: "b"
-  b: 1
-----
 
 
 // === Common Error 4
