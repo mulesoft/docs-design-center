@@ -717,7 +717,7 @@ Invalid fragment body in [[root.location]] , external fragment will be created
 This is the same warning message that appears when the example in a NamedExample fragment is missing a name. See the previous section for examples of that problem.
 ====
 
-To resolve the problem, you would need to split the fragment into two fragments:
+To resolve the problem, you would need to use only one of the examples:
 ----
 #%RAML 1.0 NamedExample
 Name1:
@@ -725,12 +725,7 @@ Name1:
    b: 1
 ----
 
-----
-#%RAML 1.0 NamedExample
-Name2:
-    a: "h"
-    b: 5
-----
+A single type declaration in an API specification can use only one `!include` tag in an `examples` facet. Therefore, you cannot split the NamedExample fragment into two NamedExample fragments and use both named examples.
 
 In this next example, there are two properties in a single example. However, the warning message appears because `a` and `b` are parsed as two examples.
 
