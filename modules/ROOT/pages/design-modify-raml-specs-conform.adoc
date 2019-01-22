@@ -1154,6 +1154,43 @@ types:
 
 Either add the property to the example or, in the type declaration, declare the property as optional.
 
+In this case, the property is added to the example:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+In this case, the property is declared as optional:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age?: integer
+   example:
+     firstName: John
+     lastName: Smith
+----
+
 <<Back to the top>>
 
 
