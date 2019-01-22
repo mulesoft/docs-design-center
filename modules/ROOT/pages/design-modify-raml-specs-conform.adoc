@@ -976,7 +976,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Using the `schema` or `schemas` keyword instead of `type` or `types`
+=== Using the `schema` or `schemas` keyword instead of `type` or `types` (RAML 1.0)
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
 
@@ -1035,9 +1035,72 @@ types:
 <<Back to the top>>
 
 
+=== Declaring a URI parameter that is never used (RAML 1.0)
 
+If an API specification declares a URI parameter, but then does not use that parameter, the editor returns this warning message:
 
+----
+unused uri parameter “parameter”
+----
 
+If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
+----
+unused base uri parameter “parameter”
+----
+
+For example, the following API specification would generate two warning messages:
+
+----
+unused uri parameter "unusedParam"
+----
+
+----
+unused base uri parameter "unusedUriParam"
+----
+
+----
+#%RAML 1.0
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+   type: string
+ baseUriParam2:
+     type: string
+ unusedParam:
+   type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+   unusedUriParam:
+     type: string
+----
+
+To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
+
+----
+#%RAML 1.0
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+   type: string
+ baseUriParam2:
+     type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+----
+
+<<Back to the top>>
 
 
 
