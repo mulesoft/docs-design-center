@@ -1193,6 +1193,153 @@ types:
 
 <<Back to the top>>
 
+=== Including undeclared properties in an example (RAML 1.0)
+
+If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
+
+----
+should NOT have additional properties
+----
+
+The editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+There are three different methods that you can choose from to resolve the problem:
+
+* Delete the extra property from the example
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+* Add the property in the type declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+* Add the field `additionalProperties` with a value of `true` in the type declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   additionalProperties: true
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+<<Back to the top>>
+
+=== Not declaring a media type for a payload
+
+If the declaration of a payload does not declare a media type, the editor displays this message:
+
+----
+Payload media type is mandatory
+----
+
+For example, the editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+There are two methods that you can choose from to resolve the problem:
+
+* Declare the media type in the payload declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+        application/json:
+         type: string
+----
+
+* Specify the default media type for the API specification.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+mediaType: application/json
+
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+<<Back to the top>>
+
+
+
+
+
+
+
+
 
 
 
