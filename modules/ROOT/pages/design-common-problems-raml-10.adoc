@@ -4,7 +4,7 @@
 
 If you open in the API editor a published API specification that is written in RAML 1.0 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
 
-=== Appending references with hash symbols to filenames in `!include` statements (RAML 1.0)
+== Appending references with hash symbols to filenames in `!include` statements (RAML 1.0)
 // APIMF-834
 
 A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
@@ -27,7 +27,7 @@ If your specification contains an error of this type, but you meant to write a c
 
 <<Back to the top>>
 
-=== Not correctly using curly braces and brackets in JSON examples (RAML 1.0)
+== Not correctly using curly braces and brackets in JSON examples (RAML 1.0)
 // APIMF-849
 
 There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
@@ -127,7 +127,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Problems with named examples (RAML 1.0)
+== Problems with named examples (RAML 1.0)
 // APIMF-907
 
 To avoid common problems with referencing a named example with an `!include` tag, follow these two rules:
@@ -156,7 +156,7 @@ Name:
 
 If you do not follow these rules, you will see the warning messages that are described in the next three sections.
 
-==== Not using the "examples" facet when referencing to a named example
+=== Not using the "examples" facet when referencing to a named example
 
 If you see this warning message in the API editor, then your API specification is incorrectly referencing a named example by using an `example` facet:
 
@@ -192,7 +192,7 @@ types:
 
 
 
-==== Not naming named examples
+=== Not naming named examples
 
 When a named example does not have a name, the editor displays this warning message:
 
@@ -201,9 +201,9 @@ Invalid fragment body in [[root.location]] , external fragment will be created
 ----
 
 [NOTE]
-====
+===
 This is the same warning message that appears when there is more than one example in a NamedExample fragment. See the next section for examples of that problem.
-====
+===
 
 The second line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
 
@@ -308,7 +308,7 @@ Name:
 
 
 
-==== Including more than one named example in a single NamedExample fragment
+=== Including more than one named example in a single NamedExample fragment
 
 A NamedExample fragment can contain only one example. The following fragment would generate a warning:
 
@@ -330,9 +330,9 @@ Invalid fragment body in [[root.location]] , external fragment will be created
 ----
 
 [NOTE]
-====
+===
 This is the same warning message that appears when the example in a NamedExample fragment is missing a name. See the previous section for examples of that problem.
-====
+===
 
 To resolve the problem, you would need to use only one of the examples:
 ----
@@ -347,7 +347,7 @@ A single type declaration in an API specification can use only one `!include` ta
 
 
 
-// === Common Error 4
+// == Common Error 4
 // APIMF-966
 // *_Not using a correct value for the `protocols` node_*
 //
@@ -359,7 +359,7 @@ A single type declaration in an API specification can use only one `!include` ta
 
 <<Back to the top>>
 
-=== Including an example response that contains invalid JSON (RAML 1.0)
+== Including an example response that contains invalid JSON (RAML 1.0)
 // APIMF-967
 
 When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
@@ -396,7 +396,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-=== Referencing libraries by using the `type` key (RAML 1.0)
+== Referencing libraries by using the `type` key (RAML 1.0)
 // APIMF-1030
 
 As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
@@ -443,7 +443,7 @@ uses:
 
 <<Back to the top>>
 
-=== Specifying values for an enum that does not match the enum's data type (RAML 1.0)
+== Specifying values for an enum that does not match the enum's data type (RAML 1.0)
 // APIMF-1062
 
 Because of the editor's strict parsing according to the YAML specification, it does not automatically cast values to declared data types. To illustrate the error, here is an invalid declaration of an enum:
@@ -493,13 +493,13 @@ enum: [
 ----
 
 [NOTE]
-====
+===
 This error can occur not just in enums, but also anywhere an `integer`, `nil` value, or value of some other data type is introduced where the parser expects a `string` value.
-====
+===
 
 <<Back to the top>>
 
-=== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified (RAML 1.0)
+== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified (RAML 1.0)
 // APIMF-1070
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
@@ -523,67 +523,8 @@ types:
 
 <<Back to the top>>
 
-=== Not defining a media type for an empty body when no default media type is defined (RAML 1.0)
-// APIMF-1158
 
-It is possible to specify media types globally for an entire API specification or locally for individual `body` nodes. According to the RAML 1.0 specification, a global definition looks like this:
-
-----
-#%RAML 1.0
-title: New API
-mediaType: application/json
-----
-
-This example, also from the RAML 1.0 specification, uses both a global and a local definition. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global definition with a local one, and returns only a JSON body.
-
-----
-#%RAML 1.0
-title: New API
-mediaType: [ application/json, application/xml ]
-types:
-  Person:
-  Another:
-/list:
-  get:
-    responses:
-      200:
-        body: Person[]
-/send:
-  post:
-    body:
-      application/json:
-        type: Another
-----
-
-The common error is demonstrated in both of these two following examples. There is no `mediaType` node in either example that defines the media types globally. Moreover, neither of the `body` nodes defines its media type. If there is no global definition, an empty body must use a local definition.
-
-----
-#%RAML 1.0
-
-title: ExampleRAML
-
-/endpoint:
-  get:
-    body:
-    responses:
-      200:
-----
-
-----
-#%RAML 1.0
-
-title: ExampleRAML
-
-/endpoint:
-  get:
-    responses:
-      200:
-        body:
-----
-
-<<Back to the top>>
-
-=== Using the `schema` or `schemas` keyword instead of `type` or `types` (RAML 1.0)
+== Using the `schema` or `schemas` keyword instead of `type` or `types` (RAML 1.0)
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
 
@@ -641,306 +582,7 @@ types:
 
 <<Back to the top>>
 
-
-=== Declaring a URI parameter that is never used (RAML 1.0)
-
-If an API specification declares a URI parameter, but then does not use that parameter, the editor displays this warning message:
-
-----
-unused uri parameter “parameter”
-----
-
-If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
-----
-unused base uri parameter “parameter”
-----
-
-For example, the following API specification would generate two warning messages:
-
-----
-unused uri parameter "unusedParam"
-----
-
-----
-unused base uri parameter "unusedUriParam"
-----
-
-----
-#%RAML 1.0
-title: test
-
-baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
-
-baseUriParameters:
- baseUriParam1:
-   type: string
- baseUriParam2:
-     type: string
- unusedParam:
-   type: string
-
-/endpoint/{uriParam1}/{nonExistsUri}:
- uriParameters:
-   uriParam1:
-     type: string
-   unusedUriParam:
-     type: string
-----
-
-To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
-
-----
-#%RAML 1.0
-title: test
-
-baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
-
-baseUriParameters:
- baseUriParam1:
-   type: string
- baseUriParam2:
-     type: string
-
-/endpoint/{uriParam1}/{nonExistsUri}:
- uriParameters:
-   uriParam1:
-     type: string
-----
-
-<<Back to the top>>
-
-=== Not putting quotation marks around integers that are used as example values for strings (RAML 1.0)
-
-If an example value is required to be a `string`, but the value is instead an `integer`, then the editor displays this error message:
-
-----
-expecting !!str and !!int provided
-----
-
-For example, the example value for `a` must be in quotation marks for the editor to parse it as a `string`:
-----
-#%RAML 1.0
-title: test
-types:
- A:
-    properties:
-       a: string
-       b: integer
-    examples:
-       a: 50
-       b: 1
-----
-
-<<Back to the top>>
-
-=== Not including a property in an example (RAML 1.0)
-
-If an example is missing a property of the type that it is exemplifying, the editor displays this error message:
-
-----
-should have required property 'property name'
-----
-
-For example, the property `age` is missing in the example:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-     age: integer
-   example:
-     firstName: John
-     lastName: Smith
-----
-
-Either add the property to the example or, in the type declaration, declare the property as optional.
-
-In this case, the property is added to the example:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-     age: integer
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-In this case, the property is declared as optional:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-     age?: integer
-   example:
-     firstName: John
-     lastName: Smith
-----
-
-<<Back to the top>>
-
-=== Including undeclared properties in an example (RAML 1.0)
-
-If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
-
-----
-should NOT have additional properties
-----
-
-The editor would display this message for the following API specification:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-There are three different methods that you can choose from to resolve the problem:
-
-* Delete the extra property from the example
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-----
-
-* Add the property in the type declaration.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-     age: integer
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-* Add the field `additionalProperties` with a value of `true` in the type declaration.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-   additionalProperties: true
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-<<Back to the top>>
-
-=== Not declaring a media type for a payload (RAML 1.0)
-
-If the declaration of a payload does not declare a media type, the editor displays this message:
-
-----
-Payload media type is mandatory
-----
-
-For example, the editor would display this message for the following API specification:
-
-----
-#%RAML 1.0
-title: Example API Spec
-/media:
- get:
-   responses:
-     200:
-       body:
-         type: string
-----
-
-There are two methods that you can choose from to resolve the problem:
-
-* Declare the media type in the payload declaration.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-/media:
- get:
-   responses:
-     200:
-       body:
-        application/json:
-         type: string
-----
-
-* Specify the default media type for the API specification.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-mediaType: application/json
-
-/media:
- get:
-   responses:
-     200:
-       body:
-         type: string
-----
-
-<<Back to the top>>
-
-=== Using a reserved name for a type (RAML 1.0)
+== Using a reserved name for a type (RAML 1.0)
 
 If you use a reserved name as the name of a type, the editor displays this message:
 ----
@@ -972,10 +614,5 @@ types:
  customString:
    type: string
 ----
-
-
-
-
-
 
 <<Back to the top>>
