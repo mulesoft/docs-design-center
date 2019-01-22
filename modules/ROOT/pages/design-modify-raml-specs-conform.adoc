@@ -15,5 +15,6 @@ You have a long grace period to correct any invalid RAML and invalid regular exp
 You do not need to check any API specifications that were created with the visual API editor, the tool in API Designer with which you can create specifications by filling in forms.
 ====
 
-* <<bookmark-b,Common Problems in Conforming to RAML 0.8>>
-* <<bookmark-c,Common Problems in Conforming to RAML 1.0>>
+* xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
+* xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
+* xref:design-common-problems-raml-08-10.adoc[Common Problems in Conforming Either to RAML 0.8 or 1.0]

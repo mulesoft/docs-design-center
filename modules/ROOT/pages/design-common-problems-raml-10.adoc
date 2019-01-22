@@ -2,12 +2,12 @@
 
 [[bookmark-a,Back to the top]]
 
-If you open in the API editor a published API specification that is written in RAML 1.0 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. If you open in the API editor a published API specification that is written in RAML 1.0 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
 
-== Appending references with hash symbols to filenames in `!include` statements (RAML 1.0)
+== Appending references with hash symbols to filenames in `!include` statements
 // APIMF-834
 
-A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example snippet, `IncrementType.raml#increment` is not a valid link.
+A filename cannot be followed by a hash symbol and a reference to a location within the named file. In this example, `IncrementType.raml#increment` is not a valid link.
 
 ----
 #%RAML 1.0 DataType
@@ -27,10 +27,10 @@ If your specification contains an error of this type, but you meant to write a c
 
 <<Back to the top>>
 
-== Not correctly using curly braces and brackets in JSON examples (RAML 1.0)
+== Not correctly using curly braces and brackets in JSON examples
 // APIMF-849
 
-There are many ways to misuse curly braces and brackets. This snippet illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
+There are many ways to misuse curly braces and brackets. This example illustrates one of them. An array of groups of JSON key/value pairs is improperly enclosed in a pair of curly braces.
 
 ----
 #%RAML 1.0
@@ -127,7 +127,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Problems with named examples (RAML 1.0)
+== Problems with named examples
 // APIMF-907
 
 To avoid common problems with referencing a named example with an `!include` tag, follow these two rules:
@@ -205,7 +205,7 @@ Invalid fragment body in [[root.location]] , external fragment will be created
 This is the same warning message that appears when there is more than one example in a NamedExample fragment. See the next section for examples of that problem.
 ===
 
-The second line in a NamedExample fragment must be a key that is the name given to the example, as in this snippet:
+The second line in a NamedExample fragment must be a key that is the name given to the example, as shown here:
 
 ----
 #%RAML 1.0 NamedExample
@@ -359,7 +359,7 @@ A single type declaration in an API specification can use only one `!include` ta
 
 <<Back to the top>>
 
-== Including an example response that contains invalid JSON (RAML 1.0)
+== Including an example response that contains invalid JSON
 // APIMF-967
 
 When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the error, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
@@ -396,7 +396,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Referencing libraries by using the `type` key (RAML 1.0)
+== Referencing libraries by using the `type` key
 // APIMF-1030
 
 As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
@@ -410,7 +410,6 @@ If you apply a library with a `type` node, the editor displays this message:
 ----
 Libraries must be applied by using 'uses'
 ----
-
 
 Therefore, the following example is incorrect, given that the file `financeDetail.raml` is a library.
 
@@ -426,7 +425,7 @@ title: ExampleRAML
           type: !include financeDetail.raml
 ----
 
-This next snippet is correct.
+This next example is correct.
 
 ----
 #%RAML 1.0
@@ -443,7 +442,7 @@ uses:
 
 <<Back to the top>>
 
-== Specifying values for an enum that does not match the enum's data type (RAML 1.0)
+== Specifying values for an enum that does not match the enum's data type
 // APIMF-1062
 
 Because of the editor's strict parsing according to the YAML specification, it does not automatically cast values to declared data types. To illustrate the error, here is an invalid declaration of an enum:
@@ -499,7 +498,7 @@ This error can occur not just in enums, but also anywhere an `integer`, `nil` va
 
 <<Back to the top>>
 
-== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified (RAML 1.0)
+== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified
 // APIMF-1070
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the error, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
@@ -524,7 +523,7 @@ types:
 <<Back to the top>>
 
 
-== Using the `schema` or `schemas` keyword instead of `type` or `types` (RAML 1.0)
+== Using the `schema` or `schemas` keyword instead of `type` or `types`
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
 
@@ -582,7 +581,7 @@ types:
 
 <<Back to the top>>
 
-== Using a reserved name for a type (RAML 1.0)
+== Using a reserved name for a type
 
 If you use a reserved name as the name of a type, the editor displays this message:
 ----
