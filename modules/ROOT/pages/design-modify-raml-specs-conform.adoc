@@ -397,6 +397,44 @@ The path must start at the root level of the schema and descend through the tree
 
 ----
 
+<<Back to the top>>
+
+
+=== Using a reserved name for a schema (RAML 1.0)
+
+If you use a reserved name as the name of a schema, the editor displays this message:
+----
+‘schemaName’ cannot be used to name a custom schema
+----
+
+Examples of reserved names are `string`, `object`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
+
+For example, this API specification would cause the editor to display the message:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ string:
+   type: string
+----
+
+To resolve the problem, you would need to use a different name in the schema declaration:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ customString:
+   type: string
+----
+
+<<Back to the top>>
+
 
 
 [[bookmark-c,Common Errors in Conforming to RAML 1.0]]
@@ -1278,7 +1316,7 @@ types:
 
 <<Back to the top>>
 
-=== Not declaring a media type for a payload
+=== Not declaring a media type for a payload (RAML 1.0)
 
 If the declaration of a payload does not declare a media type, the editor displays this message:
 
@@ -1333,11 +1371,38 @@ mediaType: application/json
 
 <<Back to the top>>
 
+=== Using a reserved name for a type (RAML 1.0)
 
+If you use a reserved name as the name of a type, the editor displays this message:
+----
+‘typeName’ cannot be used to name a custom type
+----
 
+Examples of reserved names are `string`, `object`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a type.
 
+For example, this API specification would cause the editor to display the message:
 
+----
+#%RAML 1.0
 
+title: Example API Spec
+
+types:
+ string:
+   type: string
+----
+
+To resolve the problem, you would need to use a different name in the type declaration:
+
+----
+#%RAML 1.0
+
+title: Example API Spec
+
+types:
+ customString:
+   type: string
+----
 
 
 
