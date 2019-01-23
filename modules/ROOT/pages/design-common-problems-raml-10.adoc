@@ -528,11 +528,12 @@ types:
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
 
----
+----
 ‘schema' keyword it's deprecated for 1.0 version, should use 'type' instead
-
+----
+----
 'schemas' keyword it's deprecated for 1.0 version, should use 'types' instead
----
+----
 
 For example, the following API specification generates both warning messages:
 
