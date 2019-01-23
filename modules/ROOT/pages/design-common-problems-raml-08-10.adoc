@@ -246,6 +246,7 @@ title: Example API Spec
 types:
  User:
    type: object
+   additionalProperties: false
    properties:
      firstName: string
      lastName: string
@@ -263,6 +264,7 @@ title: Example API Spec
 types:
  User:
    type: object
+   additionalProperties: false
    properties:
      firstName: string
      lastName: string
@@ -273,7 +275,7 @@ types:
      age: 49
 ----
 
-* Add the field `additionalProperties` with a value of `true` in the type declaration.
+* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
 +
 ----
 #%RAML 1.0
