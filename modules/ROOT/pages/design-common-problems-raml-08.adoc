@@ -1,15 +1,13 @@
-= Common Errors Found in RAML 0.8 API Specifications
+= Common Problems Found in RAML 0.8 API Specifications
 
 [[bookmark-a,Back to the top]]
 
-Starting soon (as explained in xref::design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0]), if you open in the API editor a published API specification that is written in RAML 0.8, you might see error indicators where you saw none before. This list might help you to resolve the errors. If you see errors that this list does not include, refer to the specification for RAML 0.8, which you can read on https://raml.org/[raml.org].
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. Therefore, it is possible that one or more of the APIs that you used previous versions of the API editor to create include invalid RAML that those previous versions did not flag. If you open in the API editor a published API specification that is written in RAML 0.8 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
 
-== Common Error 1 (RAML 0.8)
+== Not using a data type of string for the example of a Boolean enum
 // APIMF-824
 
-*_Not using a data type of string for the example of a Boolean enum_*
-
-Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this snippet shows an example using the wrong data type.
+Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this API specification shows an example using the wrong data type.
 
 ----
 #%RAML 0.8
@@ -38,14 +36,12 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-== Common Error 2 (RAML 0.8)
+== Including a schema that contains invalid JSON
 // APIMF-841
-
-*_Including a schema that contains invalid JSON_*
 
 The JSON in files that are included in the value of the `schemas` property must be valid.
 
-The first snippet includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
+The first example includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
 
 
 ----
@@ -87,44 +83,10 @@ schemas:
 
 <<Back to the top>>
 
-== Common Error 3 (RAML 0.8)
-// APIMF-852 and 853
+== Using a non-integer data type for the example of a property that is an integer
+// APIMF-853
 
-
-*_Using a non-integer data type for the example of a property that is an integer_*
-
-The data type for the example of a property that is an integer must be an integer. As an example of the error, this snippet shows that the data type of the example does not match the data type defined for `unit_price`.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-
-/products:
-  /product/{product_id}:
-    description: Get product instance details
-    get:
-      responses:
-        200:
-          body:
-            application/json:
-              schema: |
-                {
-                  "$schema": "http://json-schema.org/draft-03/schema",
-                  "id": "http://jsonschema.net",
-                  "properties": {
-                      "unit_price": {
-                          "type": "integer"
-                      }
-                  }
-                }
-              example: |
-                {
-                  "unit_price": 19.00
-                }
-----
-
-As another example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+The data type for the example of a property that is an integer must be an integer. As an example of the error, the data type of the example does not match the data type defined for `uriParameters`.
 
 
 ----
@@ -140,10 +102,8 @@ title: Order Entry API
 
 <<Back to the top>>
 
-== Common Error 4 (RAML 0.8)
+== Not using a required property in the example of a schema that defines that property
 // APIMF-896
-
-*_Not using a required property in the example of a schema that defines that property_*
 
 If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
 
@@ -205,11 +165,10 @@ The example of the schema is in `get_order_response.json`. However, the name of 
 
 <<Back to the top>>
 
-== Common Error 5 (RAML 0.8)
+== Not using in an example of a schema the data type that the schema defines
 // APIMF-901
-*_Not using in an example of a schema the data type that the schema defines_*
 
-For example, the schema in the following snippet defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
+For example, the schema in the following API specification defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
 
 
 
@@ -246,11 +205,10 @@ schemas:
 
 <<Back to the top>>
 
-== Common Error 6 (RAML 0.8)
+== Using 0 or 1 as the value of an example of a Boolean
 // APIMF-929
-*_Using 0 or 1 as the value of an example of a Boolean_*
 
-An example for a Boolean must have a value of "true" or "false". In this snippet illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
+An example for a Boolean must have a value of "true" or "false". In this API specification illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
 
 
 ----
@@ -307,11 +265,10 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Common Error 7 (RAML 0.8)
+== Using invalid JSON in examples of JSON schemas
 // APIMF-1069
-*_Using invalid JSON in examples of JSON schemas_*
 
-Examples of JSON schemas must be valid, unlike the example in the following snippet:
+Examples of JSON schemas must be valid, unlike the example in the following API specification:
 
 
 ----
@@ -346,9 +303,8 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Common Error 8 (RAML 0.8)
+== Not providing a value for the `title` node
 // APIMF-1083
-*_Not providing a value for the `title` node_*
 
 The `title` node cannot lack a value, as it does here:
 
@@ -360,13 +316,12 @@ title:
 
 <<Back to the top>>
 
-== Common Error 9 (RAML 0.8)
+== Not using the data type of the RAML element in the example for that element
 // APIMF-1088
-*_Not using the data type of the RAML element in the example for that element_*
 
 In all cases, the data type of an example must match the data type of the element that it is an example of.
 
-In this incorrect snippet of RAML, a query parameter is defined as a string; however, the example of the query parameter is an integer.
+In this incorrect API specification, a query parameter is defined as a string; however, the example of the query parameter is an integer.
 
 
 ----
@@ -378,6 +333,85 @@ title: ExampleRAML
       publicationYear:
         type: string
         example: 2016
+----
+
+<<Back to the top>>
+
+== Using an invalid path for a reference inside a JSON schema
+// APIMF-833
+
+When you use the `$ref` keyword in a JSON schema, the path that you specify with it must start at the root of the schema. For example, the `$ref` keyword used for the property `input2` in the following schema uses an incorrect path to refer to the property `input`.
+----
+#%RAML 0.8
+title: ExampleRAML
+version: v1
+schemas:
+- authCodeResponse : |
+    {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "input"
+        }
+      },
+       "type": "object"
+    }
+----
+The path must start at the root level of the schema and descend through the tree structure. This example of the schema shows the same `$ref` keyword using the correct path.
+----
+{
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "#/properties/input"
+        }
+      },
+       "type": "object"
+    }
+
+----
+
+<<Back to the top>>
+
+// Review from here down
+
+== Using a reserved name for a schema
+
+If you use a reserved name as the name of a schema, the editor displays this message:
+----
+‘schemaName’ cannot be used to name a custom schema
+----
+
+Examples of reserved names are `string`, `object`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
+
+For example, this API specification would cause the editor to display the message:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ string:
+   type: string
+----
+
+To resolve the problem, you would need to use a different name in the schema declaration:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ customString:
+   type: string
 ----
 
 <<Back to the top>>
