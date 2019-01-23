@@ -75,26 +75,68 @@ baseUriParameters:
 
 <<Back to the top>>
 
-== Not putting quotation marks around integers that are used as example values for strings
+== Not putting quotation marks around integers that are used as the names of types
 
-If an example value is required to be a `string`, but the value is instead an `integer`, then the editor displays this error message:
+If an integer is used as the name of a type, but the integer is not in quotation marks, then the editor displays this error message:
 
 ----
 expecting !!str and !!int provided
 ----
 
-For example, the example value for `a` must be in quotation marks for the editor to parse it as a `string`:
+For example, the name of the type in this specification would generate the error message:
+----
+#%RAML 1.0
+title: test
+  types:
+    400:
+      type: string
+----
+
+To resolve the problem, you would put `400` in quotation marks:
+
 ----
 #%RAML 1.0
 title: test
 types:
- A:
+  "400":
+    type: string
+----
+
+In the next example, the names of the examples for the type `A` are both integers and would generate this error message twice:
+
+----
+#%RAML 1.0
+title: test
+types:
+  A:
     properties:
-       a: string
-       b: integer
+      a: string
+      b: integer
     examples:
-       a: 50
-       b: 1
+      1:
+        a: some
+        b: 16
+      2:
+        a: other
+        b: 32
+----
+
+To resolve the problem, you would put `1` and `2` in quotation marks:
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      a: string
+      b: integer
+    examples:
+      "1":
+        a: some
+        b: 16
+      "2":
+        a: other
+        b: 32
 ----
 
 <<Back to the top>>
