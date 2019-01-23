@@ -388,7 +388,7 @@ If you use a reserved name as the name of a schema, the editor displays this mes
 ‘schemaName’ cannot be used to name a custom schema
 ----
 
-Examples of reserved names are `string`, `object`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
+Examples of reserved names are `string`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
 
 For example, this API specification would cause the editor to display the message:
 
