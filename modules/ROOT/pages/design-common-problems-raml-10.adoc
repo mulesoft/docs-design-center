@@ -2,7 +2,7 @@
 
 [[bookmark-a,Back to the top]]
 
-As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. If you open in the API editor a published API specification that is written in RAML 1.0 and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) can use stricter validation for specifications that are written in RAML. If you open in the API editor a published API specification that is written in RAML 1.0, enable the stricter validation in the top-right corner of the editor, and see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
 [IMPORTANT]
 ====
