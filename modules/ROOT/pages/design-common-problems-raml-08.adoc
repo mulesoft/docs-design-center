@@ -2,12 +2,53 @@
 
 [[bookmark-a,Back to the top]]
 
-As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. Therefore, it is possible that one or more of the APIs that you used previous versions of the API editor to create include invalid RAML that those previous versions did not flag. If you open in the API editor a published API specification that is written in RAML 0.8 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. If you open in the API editor a published API specification that is written in RAML 0.8 and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
+
+[IMPORTANT]
+====
+After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
+====
+
+== Using a reserved name for a schema
+
+If you use a reserved name as the name of a schema, the editor displays this message:
+----
+‘schemaName’ cannot be used to name a custom schema
+----
+
+Examples of reserved names are `string`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
+
+For example, this API specification would cause the editor to display the message:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ string:
+   type: string
+----
+
+To resolve the problem, you would need to use a different name in the schema declaration:
+
+----
+#%RAML 0.8
+
+title: Example API Spec
+
+schemas:
+ customString:
+   type: string
+----
+
+<<Back to the top>>
+
 
 == Not using a data type of string for the example of a Boolean enum
 // APIMF-824
 
-Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the error, this API specification shows an example using the wrong data type.
+Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the violation, this API specification shows an example using the wrong data type.
 
 ----
 #%RAML 0.8
@@ -86,7 +127,7 @@ schemas:
 == Using a non-integer data type for the example of a property that is an integer
 // APIMF-853
 
-The data type for the example of a property that is an integer must be an integer. As an example of the error, the data type of the example does not match the data type defined for `uriParameters`.
+The data type for the example of a property that is an integer must be an integer. As an example of the violation, the data type of the example does not match the data type defined for `uriParameters`.
 
 
 ----
@@ -208,7 +249,7 @@ schemas:
 == Using 0 or 1 as the value of an example of a Boolean
 // APIMF-929
 
-An example for a Boolean must have a value of "true" or "false". In this API specification illustrating the error, the value of the example for the form parameter `is_public` is incorrect.
+An example for a Boolean must have a value of "true" or "false". In this API specification illustrating the violation, the value of the example for the form parameter `is_public` is incorrect.
 
 
 ----
@@ -375,43 +416,6 @@ The path must start at the root level of the schema and descend through the tree
        "type": "object"
     }
 
-----
-
-<<Back to the top>>
-
-// Review from here down
-
-== Using a reserved name for a schema
-
-If you use a reserved name as the name of a schema, the editor displays this message:
-----
-‘schemaName’ cannot be used to name a custom schema
-----
-
-Examples of reserved names are `string`, `integer`, `number`, and `object`. Any name that is used in the RAML specification cannot be used as the name for a schema.
-
-For example, this API specification would cause the editor to display the message:
-
-----
-#%RAML 0.8
-
-title: Example API Spec
-
-schemas:
- string:
-   type: string
-----
-
-To resolve the problem, you would need to use a different name in the schema declaration:
-
-----
-#%RAML 0.8
-
-title: Example API Spec
-
-schemas:
- customString:
-   type: string
 ----
 
 <<Back to the top>>
