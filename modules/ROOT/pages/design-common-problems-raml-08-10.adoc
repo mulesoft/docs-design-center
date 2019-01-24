@@ -5,6 +5,8 @@
 
 As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the API editor a published API specification that is written in either RAML 0.8 or RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
+All of the problems listed below are among the top 10 most common (as determined by MuleSoft).
+
 [IMPORTANT]
 ====
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
