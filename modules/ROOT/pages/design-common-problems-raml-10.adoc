@@ -307,8 +307,8 @@ Name:
 ----
 
 
-
-=== Including more than one named example in a single NamedExample fragment
+////
+//=== Including more than one named example in a single NamedExample fragment
 
 A NamedExample fragment can contain only one example. The following fragment would generate a warning:
 
@@ -356,7 +356,7 @@ A single type declaration in an API specification can use only one `!include` ta
 // * `[http]` or `[HTTP]`
 // * `[https]` or `[HTTPS]`
 // * `[http, https]` or `[HTTP, HTTPS]`
-
+////
 <<Back to the top>>
 
 == Including an example response that contains invalid JSON
