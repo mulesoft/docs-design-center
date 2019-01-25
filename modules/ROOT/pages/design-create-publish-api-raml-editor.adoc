@@ -52,7 +52,7 @@ Download files:: Click the dots to the right of the file name and select *Downlo
 
 Convert files:: Convert a file in your project to another format. Click the dots to the right of the file name and select *Convert*.
 
-View files in other formats:: See what a file would look like in another format. For example, see what an OAS 2.0 JSON file would look like in RAML 1.0. Click the dots to the right of the file name and select *View As*.
+// View files in other formats:: See what a file would look like in another format. For example, see what an OAS 2.0 JSON file would look like in RAML 1.0. Click the dots to the right of the file name and select *Copy As*.
 
 
 
