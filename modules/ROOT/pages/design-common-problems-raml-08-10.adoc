@@ -3,10 +3,15 @@
 [[bookmark-a,Back to the top]]
 
 
-As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation for specifications that are written in RAML. If you open in the API editor a published API specification that is written in either RAML 0.8 or RAML 1.0 and you see error or warning indicators, this list might help you to resolve the problems in your RAML.
+As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the API editor a published API specification that is written in either RAML 0.8 or RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
+All of the problems listed below are among the top 10 most common (as determined by MuleSoft).
 
-// Review from here down
+[IMPORTANT]
+====
+After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
+====
+
 
 == Declaring a URI parameter that is never used
 
@@ -77,13 +82,13 @@ baseUriParameters:
 
 == Not putting quotation marks around integers that are used as the names of types
 
-If an integer is used as the name of a type, but the integer is not in quotation marks, then the editor displays this error message:
+If an integer is used as the name of a type, but the integer is not in quotation marks, then the editor displays this violation message:
 
 ----
 expecting !!str and !!int provided
 ----
 
-For example, the name of the type in this specification would generate the error message:
+For example, the name of the type in this specification would generate the violation message:
 ----
 #%RAML 1.0
 title: test
@@ -102,7 +107,7 @@ types:
     type: string
 ----
 
-In the next example, the names of the examples for the type `A` are both integers and would generate this error message twice:
+In the next example, the names of the examples for the type `A` are both integers and would generate this violation message twice:
 
 ----
 #%RAML 1.0
@@ -143,7 +148,7 @@ types:
 
 == Not including a property in an example
 
-If an example is missing a property of the type that it is exemplifying, the editor displays this error message:
+If an example is missing a property of the type that it is exemplifying, the editor displays this violation message:
 
 ----
 should have required property 'property name'

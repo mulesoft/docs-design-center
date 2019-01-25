@@ -46,7 +46,9 @@ For more information, view the topic "Simulate Calls to an API", which is linked
 
 Export your API project or specification:: At any time, you can export your project as a `.zip` file. Next to the *Files* heading in the left pane, click the dots and select *Export*.
 
-Download files:: You can either download a file as is, or you can download it in another format. For example, you can download a file written in RAML 0.8 as a file in OAS 2.0 YAML. Click the dots to the right of the file name and select *Download* or *Download As*.
+Download files:: Click the dots to the right of the file name and select *Download*.
+
+// Download files:: You can either download a file as is, or you can download it in another format. For example, you can download a file written in RAML 0.8 as a file in OAS 2.0 YAML. Click the dots to the right of the file name and select *Download* or *Download As*.
 
 Convert files:: Convert a file in your project to another format. Click the dots to the right of the file name and select *Convert*.
 
