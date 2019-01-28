@@ -464,42 +464,6 @@ title: ExampleRAML
 
 
 
-== Including an example response that contains invalid JSON
-// APIMF-967
-
-When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the violation, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
-
-----
-#%RAML 1.0
-title: ExampleRAML
-...
-/resume:
-  description: "Gets candidate's resume."
-  get:
-    queryParameters:
-       ...
-    headers:
-      ...
-    responses:
-      200:
-        body:
-          application/json:
-            example: !include exampleResumeData-200.json
-      500:
-        ...
-----
-
-
-----
-{
-...
-"assesments.characteristic.focusofattention.data"= "",
-}
-
-
-----
-
-<<Back to the top>>
 
 == Referencing libraries by using the `type` key
 // APIMF-1030
