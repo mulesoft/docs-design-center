@@ -79,52 +79,6 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-== Including a schema that contains invalid JSON
-// APIMF-841
-
-The JSON in files that are included in the value of the `schemas` property must be valid.
-
-The first example includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-schemas:
-  - appSwitcher: !include schemas/appSwitcher.json
-----
-
-
-----
-{
-  "appMenuItems" : [
-    {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "Call Center" ,
-      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
-    } , {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "Community" ,
-      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
-    } , {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "App Launcher" ,
-      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
-    }
-  ]
-}
-----
-
-<<Back to the top>>
 
 == Using a non-integer data type for the example of a property that is an integer
 // APIMF-853
@@ -308,43 +262,6 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Using invalid JSON in examples of JSON schemas
-// APIMF-1069
-
-Examples of JSON schemas must be valid, unlike the example in the following API specification:
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-...
-/api:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            schema:
-              {
-                "type": "object",
-                "required": true,
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "properties": {
-                  "a": {
-                    "type": "boolean",
-                    "required": true
-                  }
-                }
-              }
-            example:
-              {
-                "a: {
-                  "a": ""
-                }
-----
-
-
-<<Back to the top>>
 
 == Not providing a value for the `title` node
 // APIMF-1083
