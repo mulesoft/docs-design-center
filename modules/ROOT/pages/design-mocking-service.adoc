@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Use the mocking service to mock HTTP requests to an API that you are creating the specification for. The service returns responses (both HTTP status codes and example payloads) that are defined in the specification.
+Use the mocking service to mock HTTP requests via a public URI to an API that you are creating the specification for. The service returns responses (both HTTP status codes and example payloads) that are defined in the specification.
 
 == Before you begin
 
@@ -26,7 +26,7 @@ You can run the mocking service from the API editor, the visual API editor, and 
 
 [NOTE]
 ====
-In Design Center's API editor and visual API editor, the URI that the mocking service uses is public. However, in Exchange, the URI uses authentication and can be accessed only by Exchange. Therefore, the URI in Design Center is never the same as the URI in Exchange.
+The public URI that the mocking service uses for an API specfication in Design Center's API editor and visual API editor is also available in Exchange. Therefore, people who discover your API specification can try it out by turning on the mocking service there and sending requests.
 ====
 
 == Procedure
