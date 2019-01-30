@@ -24,6 +24,10 @@ baseUri: https://mocksvc.mulesoft.com/mocks/d0422e05-e779-4016-9d9e-027e50cd15a7
 
 You can run the mocking service from the API editor, the visual API editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
 
+[NOTE]
+====
+In Design Center's API editor and visual API editor, the URI that the mocking service uses is public. However, in Exchange, the URI uses authentication and can be accessed only by Exchange. Therefore, the URI in Design Center is never the same as the URI in Exchange.
+====
 
 == Procedure
 
