@@ -26,7 +26,7 @@ You can run the mocking service from the API editor, the visual API editor, and 
 
 [NOTE]
 ====
-Design Center's public, mocked URI is also visible in Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI in their own code or in their API testing tool of choice.
+Design Center's public, mocked URI is also visible in Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI either in their code or in a tool for testing API implementations.
 ====
 
 == Procedure
