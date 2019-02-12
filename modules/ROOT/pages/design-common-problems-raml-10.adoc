@@ -124,11 +124,11 @@ types:
     examples: !include fragment.raml
 ----
 
-* In the NamedExample fragment, ensure that there is only one entry, and that the entry consists of a name and a value, as in this example:
+* In the NamedExample fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
 +
 ----
 #%RAML 1.0 NamedExample
-Name:
+myExample:
     a: "b"
     b: 1
 ----
