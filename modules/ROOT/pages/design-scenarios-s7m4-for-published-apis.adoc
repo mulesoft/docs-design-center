@@ -1,4 +1,4 @@
-= Using Published RAML API Specifications in Published RAML API Specifications in Studio 7._x_ and Mule Runtime 4._x_
+= Using Published RAML API Specifications in Studio 7._x_ and Mule Runtime 4._x_
 
 As described in xref::design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0], the API editor in Design Center is now (as of January 10, 2019) more precise in ensuring that the RAML in your API specifications is valid. The only way in which the changes to the editor will affect how published RAML API specifications are used in Studio 7._x_ and Mule Runtime 4._x_ will be to prevent a small percentage of cases where a specification published as valid from the API editor is flagged with invalid RAML in Studio. With the changes, the API editor and Studio will be consistent in how they check for invalid RAML.
 
