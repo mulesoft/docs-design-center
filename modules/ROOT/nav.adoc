@@ -34,7 +34,6 @@
   *** xref:promote-app-prod-env-design-center.adoc[Deploy an Application to an Environment]
   *** xref:to-create-a-mule-application-project.adoc[Clone a Mule App Project]
   *** xref:export-studio-design-center.adoc[Export a Project]
-  // *** xref:import-mule-app-project.adoc[Import a Project]
   *** xref:dynamic-expression-field.adoc[Dynamically Creating Expressions]
   *** xref:logger-task-design-center.adoc[Log Data]
   *** xref:view-clear-logs-task.adoc[View Logs]
