@@ -14,11 +14,9 @@ You can import a Mule-application project that was exported from Design Center. 
 
 [IMPORTANT]
 ====
-An exported project does not include items that the project linked to in its original location.
+An imported project does not include drivers or other types of library that the project included its original location. If an imported project contains any connectors that require libraries, you must open those connectors and set up the required libraries.
 
-For example, if the project contains a Database connector, the database driver for that connector is not included in the exported project. After you import the project, you must open the Database connector, browse to the location of the database driver, and select it.
-
-If the project contains any connectors that require a driver or another type of library, you must open those connectors and select the required libraries.
+For example, if an imported project contains a Database connector, the database driver for that connector is not included in the project. You must open the Database connector and set up the driver.
 ====
 
 ////
