@@ -1,0 +1,90 @@
+= Google Drive Connector (Design Center)
+
+== Purpose
+
+
+== Configuring
+
+
+
+== Trigger: On New File
+
+
+
+== Trigger: On Updated File
+
+
+
+== Operation: Copy File
+
+
+
+== Operation: Create File
+
+
+== Operation: List Files
+
+
+
+== Operation: Move File
+
+
+
+== Operation: Read File
+
+
+
+== Operation: Rename File
+
+.Fields
+[%header,cols=4*]
+|===
+|Name |Required? |Default Value |Description
+|New file name
+|Y
+|N/A
+|The name to give to the new file.
+
+|Path
+|Y
+|N/A
+|The path to the file. Includes the filename.
+
+|Overwrite
+|Y
+|False
+|Whether to overwrite a file that has the same name. Values are True and False.
+|===
+
+
+
+== Operation: Write File
+
+
+.Fields
+[%header,cols=4*]
+|===
+|Name |Required? |Default Value |Description
+|Content
+|Y
+|N/A
+|?
+
+|Path
+|Y
+|N/A
+|The path to the file. Includes the filename.
+
+|Write Mode
+|Y
+|Overwrite
+|The type of write to perform on the file.
+
+Can be one of three values:
+
+* Append
+
+* Create
+
+* Overwrite
+|===
