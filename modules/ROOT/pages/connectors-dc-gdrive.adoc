@@ -61,14 +61,15 @@
 == Operation: Write File
 
 
-.Fields
+=== Fields
+
 [%header,cols=4*]
 |===
 |Name |Required? |Default Value |Description
 |Content
 |Y
 |N/A
-|?
+| ? Question about this in the Google Doc.
 
 |Path
 |Y
@@ -88,3 +89,7 @@ Can be one of three values:
 
 * Overwrite
 |===
+
+=== Result
+
+The ID of the file that was created or updated. ? Question about this in the Google Doc.
