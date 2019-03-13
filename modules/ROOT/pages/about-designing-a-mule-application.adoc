@@ -48,10 +48,15 @@ The following are several examples of triggers.
 +
 [TIP]
 ====
-For this card, Design Center lists only the objects and actions that you can use as triggers.
+For this card, Design Center lists only the connectors or components, as well as the actions, that you can use as triggers. After you select a connector or component, the list of trigger actions appears. Hover over the information icon for an action for a description of that action.
 ====
 . Configure the trigger card and then close it.
-. Add one or more cards to your workflow by clicking the plus symbol and configure each.
+. Add one or more cards to your workflow by clicking the plus symbol, choosing a component, connector, or module for a card to represent, selecting an operation, and configuring the card.
++
+[TIP]
+====
+To configure a card, it is often necessary for you to specify what the input to the card is...
+====
 
 == Result
 
