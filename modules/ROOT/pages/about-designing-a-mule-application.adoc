@@ -4,6 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 :keywords:
 
+In Design Center, you can create automated workflows that span multiple applications, retrieve or store records in databases...
+
+Suppose that you wanted to send a Slack message to your team every time that there is an update to an opportunity in your Salesforce database.
+
 In Design Center, you create a Mule application in a project having one or more flows. A flow typically consists of one trigger and one or more connectors, components, or APIs.
 
 == Before you begin
@@ -14,18 +18,24 @@ In Design Center, you create a Mule application in a project having one or more 
 
 == About this task
 
-*Cards*
-Cards are...
+You build flows by assembling sequences of cards. Each card represents a connector (an interface to a third-party application, such as Slack, Box, Salesforce, or ZenDesk), a core component from Mule Runtime, or a module.
 
-Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
-// What types of card are there? Core components (list the supported ones), connectors, etc.
-// What do cards contain?
+Each flow begins with a trigger card and continues with one or more operation cards. Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
 
 *Triggers*
-Triggers are a type of card and always are the initial card in a flow. The following are several examples of triggers.
+The following are several examples of triggers.
 * An HTTP listener receives an incoming HTTP request.
 * A Scheduler starts a workflow at a configured time or restarts the flow after an elapsed time.
 * A Flow Ref (flow reference) in one flow starts another flow.
+
+*Operations*
+
+
+
+// What types of card are there? Core components (list the supported ones), connectors, etc.
+// What do cards contain?
+
+
 
 
 == Procedure
@@ -34,13 +44,13 @@ Triggers are a type of card and always are the initial card in a flow. The follo
 .. On the *Projects* page, click *Create* and then select *Mule app*.
 .. Specify a name for the Mule app.
 *Result:* The canvas for your project is opened and the *Let's get started* wizard appears over it. If you have a simple workflow for which you need only a trigger and one other card, you can sequence the two cards with the help of this wizard. In this procedure, it is assumed that you click *Go straight to the canvas*.
-. Click a trigger card to select a trigger and an action that causes the trigger to start the workflow.
+. Select a connector or component to select a trigger that initiates your workflow.
 +
 [TIP]
 ====
 For this card, Design Center lists only the objects and actions that you can use as triggers.
 ====
-. Configure the trigger and then close it.
+. Configure the trigger card and then close it.
 . Add one or more cards to your workflow by clicking the plus symbol and configure each.
 
 == Result
