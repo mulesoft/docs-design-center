@@ -5,7 +5,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can view the log for a Mule app project. Doing so can be helpful when you test an app or when you are trying to diagnose problems running it. The log file lists two primary categories of message:
+You can view the log for a Mule app project. Doing so can be helpful when you test an app or when you are working with MuleSoft support to diagnose problems running an app.
+
+The log file lists two primary categories of message:
 
 System messages:: These are messages from CloudHub. Here are some example messages that show CloudHub assigning a worker to a project and then starting the application in that project.
 +

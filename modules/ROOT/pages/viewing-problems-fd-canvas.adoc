@@ -1,0 +1,18 @@
+= Viewing Errors in a Mule-App Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can get help understanding the errors in a project and finding out where to fix the errors. The *Problems* pane lists and describes errors, and you can click an error to be taken to the location of the error in a project.
+
+== Procedure
+
+. Open the *Problems* pane by clicking *Problems* in the lower-right corner of the canvas.
++
+image::view-problems.png[]
+
+image::view-problems-select.png[]
+
+image::view-problems-email-config.png[]
