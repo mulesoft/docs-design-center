@@ -1,7 +1,12 @@
-= View Logs
+= View the Log for a Mule App Project in Design Center
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
+:imagesdir: ../assets/images
+
+You can view the log for a Mule app project.
+
 
 In Design Center, expand the area at the bottom of the flow design.
 
@@ -15,12 +20,3 @@ Alternatively, in Design Center:
 
 . Click image:manage-connector-versions-design-center-ced9a.png[] Options.
 . Select Open Logs.
-
-
-////
-. Select Options > Clear Logs.
-+
-image::log-options.png[]
-+
-The log window empties.
-////
