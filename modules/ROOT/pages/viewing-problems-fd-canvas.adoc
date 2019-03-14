@@ -1,4 +1,4 @@
-= Listing and Navigating to Errors in a Mule-App Project
+= List and Navigate to Errors that are in a Mule-App Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
