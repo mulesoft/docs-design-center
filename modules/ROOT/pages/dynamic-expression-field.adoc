@@ -75,7 +75,14 @@ If the payload contained a `lastName` element and you dragged it after the `firs
 "Hello, Shirley Jackson."
 ----
 +
-NOTE: You can combine your simple value with a DataWeave expression, if you know the DataWeave language. Drag the list entry `Custom Expression` into your text field. Then, double-click it to open it.
+[NOTE]
+====
+You can combine your simple value with a DataWeave expression, if you know the DataWeave language. Drag the list entry `Custom Expression` into your text field. Then, double-click it to open it.
+
+Also, if you want to change the value, click the down arrow in the element to see a list of the functions that you can choose from. For example, for a text value you can choose from transformations to lower case or to upper case. Select one of the functions to see a preview of the change, as in the following image.
+====
++
+image::vfe-preview-2.png[]
 
 * Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 
