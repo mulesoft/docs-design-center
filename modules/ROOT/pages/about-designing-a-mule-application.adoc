@@ -1,29 +1,85 @@
-= About Designing Mule Apps
+= Automate a Workflow
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
 
+In Design Center, you can create automated workflows that span multiple applications, retrieve or store records in databases...
+
+Suppose that you wanted to send a Slack message to your team every time that there is an update to an opportunity in your Salesforce database.
+
 In Design Center, you create a Mule application in a project having one or more flows. A flow typically consists of one trigger and one or more connectors, components, or APIs.
 
-A flow performs operations specified by its components when triggered. For example:
+== Before you begin
 
-* An HTTP listener at the beginning of a flow gets an outside event, an incoming HTTP request, which starts the flow.
-* A Scheduler at the beginning of a flow starts the flow at a configured time or restarts the flow after an elapsed time.
-* A Flow Ref in one flow starts another flow by referencing its name. A flow needs a trigger unless started by a Flow Ref in another flow.
-
-Each component receives an input, carries out a specific function, and then transfers the output to the next part of the flow. The placement of components in a flow affects functionality.
-
-For a tutorial that will help you get started building Mule applications, see "To Create a Basic Mule Application", which is linked to from the *See also* section at the end of this topic.
+* Ensure that your user ID is assigned the "Design Center Developer" permission in Access Management, if your user ID is not the owner of the organization that you are working in.
+* If you want to deploy your Mule application to the Design environment, ensure that your user ID is assigned the "CloudHub Admin" role.
 
 
-== See also
+== About this task
 
-* xref:create-basic-app-task.adoc.adoc[To Create a Basic Mule Application (Design Center)]
-* xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
-* xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
-* xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
-* xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
-* xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
-* xref:4.1@mule-runtime::about-components.adoc[About Components]
-* xref:4.1@mule-runtime::about-flows.adoc[About Flows]
+You build flows by assembling sequences of cards. Each card represents a connector (an interface to a third-party application, such as Slack, Box, Salesforce, or ZenDesk), a core component from Mule Runtime, or a module.
+
+Each flow begins with a trigger card and continues with one or more operation cards. Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
+
+*Triggers*
+The following are several examples of triggers.
+* An HTTP listener receives an incoming HTTP request.
+* A Scheduler starts a workflow at a configured time or restarts the flow after an elapsed time.
+* A Flow Ref (flow reference) in one flow starts another flow.
+
+*Operations*
+
+
+
+// What types of card are there? Core components (list the supported ones), connectors, etc.
+// What do cards contain?
+
+
+
+
+== Procedure
+
+. Create a new "Mule app" project in Design Center.
+.. On the *Projects* page, click *Create* and then select *Mule app*.
+.. Specify a name for the Mule app.
+*Result:* The canvas for your project is opened and the *Let's get started* wizard appears over it. If you have a simple workflow for which you need only a trigger and one other card, you can sequence the two cards with the help of this wizard. In this procedure, it is assumed that you click *Go straight to the canvas*.
+. Select a connector or component to select a trigger that initiates your workflow.
++
+[TIP]
+====
+For this card, Design Center lists only the connectors or components, as well as the actions, that you can use as triggers. After you select a connector or component, the list of trigger actions appears. Hover over the information icon for an action for a description of that action.
+====
+. Configure the trigger card and then close it.
+. Add one or more cards to your workflow by clicking the plus symbol, choosing a component, connector, or module for a card to represent, selecting an operation, and configuring the card.
++
+[TIP]
+====
+To configure a card, it is often necessary for you to specify what the input to the card is...
+====
+
+== Result
+
+
+
+== What to do next
+
+Test
+Deploy
+
+== Example
+
+// I tried on 12/18 to create a small flow that used Email as a trigger and wrote the subject to the log. However, the documentation for the Email connector is too disorganized and imposing. I couldn't get this app to work.
+
+
+
+// == See also
+
+// * xref:create-basic-app-task.adoc.adoc[Automate a Basic Workflow]
+// * xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
+// * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
+// * xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
+// * xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
+// * xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
+// * xref:4.1@mule-runtime::about-components.adoc[About Components]
+// * xref:4.1@mule-runtime::about-flows.adoc[About Flows]
