@@ -1,4 +1,4 @@
-= Viewing Errors in a Mule-App Project
+= Listing and Navigating to Errors in a Mule-App Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,7 +12,13 @@ You can get help understanding the errors in a project and finding out where to 
 . Open the *Problems* pane by clicking *Problems* in the lower-right corner of the canvas.
 +
 image::view-problems.png[]
++
+*Result:* The *Problems* pane is opened at the bottom of the canvas. The pane presents a list of the errors in your project, if there are any errors. Along with each item in the list is a description.
 
+. Click one of the items in the list, as in this image.
++
 image::view-problems-select.png[]
-
++
+*Result:* Design Center displays the location of the error. In this image, the error is that no configuration is set up for the Email Connector. A configuration is a collection of settings that allow your Mule app to connect to a system. In this case, the system is an SMTP server.
++
 image::view-problems-email-config.png[]
