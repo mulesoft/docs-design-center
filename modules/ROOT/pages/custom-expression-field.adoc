@@ -7,19 +7,20 @@ You can create DataWeave expressions in plain text fields, mixing expressions wi
 
 == About this task
 
-Every card in a flow presents a list on its right side. The first entry in the list is labelled `Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Expression` entry.)
+Every card in a flow presents a list on its right side. The first entry in the list is labelled `Custom Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Expression` entry.)
 
-You can click the `Expression` entry and drop it into a text field if you want to compose a DataWeave expression within that field. If field also contains text, the result of the expression is concatenated with the text at runtime.
+You can click the `Custom Expression` entry, drag it, and drop it into a text field if you want to compose a DataWeave expression within that field. If field also contains text, the result of the expression is concatenated with the text at runtime.
 
 == Procedure
 
 . Open the card in which you want to add a DataWeave expression to a plain text field.
-. Click on `Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
+. Click `Custom Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
+. Click the arrow in `expression` entry, then click *Expand* in the window that appears below the entry.
 . Compose your expression with the help of the right side of the editor.
 +
-* Click payload elements, attributes, and variables to add them to the expression where the cursor is located.
+* Select the *Add Data* pane to choose from payload elements, attributes, and variables to add to the expression. Click to add them at the point in the expression where the cursor is located.
 +
-* Click functions to add them to the expression where the cursor is located.
+* Select the *Add Functions* pane to choose from DataWeave functions. Click to add them at the point in the expression where the cursor is located. Clicking a function also displays a description of it.
 
 == See also
 
