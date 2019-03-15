@@ -40,6 +40,7 @@
   *** xref:to-create-and-populate-a-variable.adoc[About Creating Variables]
   *** xref:flow-datatype-task.adoc[Set Flow Data Types and Variables]
   *** xref:change-target-output-transformation-design-center-task.adoc[Change the Target Output of a Transformation]
+ ** xref:auto-upgrade-runtime-version-used.adoc[Automatic Upgrades of Mule-App Projects to the Latest Mule Runtime]
  ** xref:about-data-types.adoc[About Data Types]
  ** xref:troubleshooting-reference.adoc[Troubleshooting]
 * xref:user-access-to-design-center.adoc[About Accessing Design Center]
