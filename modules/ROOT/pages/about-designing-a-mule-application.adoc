@@ -15,10 +15,13 @@ In Design Center, you create a Mule application in a project having one or more 
 * Ensure that your user ID is assigned the "Design Center Developer" permission in Access Management, if your user ID is not the owner of the organization that you are working in.
 * If you want to deploy your Mule application to the Design environment, ensure that your user ID is assigned the "CloudHub Admin" role.
 
-
 == About this task
 
-You build flows by assembling sequences of cards. Each card represents a connector (an interface to a third-party application, such as Slack, Box, Salesforce, or ZenDesk), a core component from Mule Runtime, or a module.
+You build flows by assembling sequences of cards. Each card represents
+
+Connector:: An interface to a third-party application, such as Slack, Box, Salesforce, or ZenDesk
+Core component:: from Mule Runtime
+Module:: a
 
 Each flow begins with a trigger card and continues with one or more operation cards. Each card receives an input, carries out a specific function that is based on the input, and passes an output to the next card in the workflow. Cards that are at the end of a flow can, for example, return messages to a client application that made a request that triggered the flow.
 
