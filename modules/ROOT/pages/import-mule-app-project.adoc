@@ -33,7 +33,7 @@ You can import a Mule-application project that was exported from Design Center. 
 
 == Procedure
 
-. On the Project page of Design Center, click the *Create* button and select *Import Application*.
+. On the *Projects* page of Design Center, click the *Create* button and then click *Import Application*.
 . Specify a name to give to the imported project.
 . Browse your filesystem for the `.jar` file that contains the project.
 // . Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.

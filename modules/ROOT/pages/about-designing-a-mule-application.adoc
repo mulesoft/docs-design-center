@@ -4,7 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :keywords:
 
+The Sales team at the company Mythical Logistics is trying to find a creative way to motivate its team members. John Black, one of the company's Salesforce administrators, reports to the Sales Operations team. He is tasked with helping to improve the team's morale by finding a way for them to celebrate wins as they happen. John decides to send the team a message on Slack to congratulate the team every time an opportunity closes.
 
+To do this, John logs into Anypoint Platform and creates a Mule-app project in Design Center.  
 
 In Design Center, you create a Mule application as a project having one or more flows. A flow consists of a sequence of _cards_, each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific function, and then sends the output of that function to the next card in the flow.
 
