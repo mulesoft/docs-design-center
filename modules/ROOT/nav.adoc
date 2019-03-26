@@ -17,7 +17,7 @@
  ** xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API Project as a Dependency]
  ** xref:upload-raml-task.adoc[Upload an Existing RAML File to Exchange from Design Center]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
-* xref:about-designing-a-mule-application.adoc[About Designing Mule Apps]
+* xref:about-designing-a-mule-application.adoc[Flow Designer]
  ** xref:key-flow-design-tasks.adoc[Key Flow Design Tasks]
   *** xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
   *** xref:dynamic-expression-field.adoc[Specify a Dynamic Value in a Text Field]
