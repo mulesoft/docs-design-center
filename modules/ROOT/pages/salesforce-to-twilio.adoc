@@ -1,0 +1,65 @@
+= Creating Your First Mule App with Flow Designer
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+== What will you learn from this example
+In FD, you assemble sequences of cards that represent the systems that you want to integrate together for a purpose. A sequence of cards is called a flow...
+What a card is
+What a trigger is
+What an operation is
+How to configure a connector
+How to create a flow
+How to transform data
+
+
+== The problem
+
+You are the connectivity lead for Salesforce Sales Cloud at Northern Trail Outfitters (NTO). NTO makes stylish and comfortable apparel, and gear for outdoor recreation and fitness.
+
+NTO uses Sales Cloud to track the opportunities in the pipeline for bulk swag orders. After they close opportunities, sales reps need to go into the order management system and place the orders.  Also, their customers often call NTO to check on orders.
+
+NTO wants to place orders automatically when opportunities are closed, and to notify customers via SMS about their order status and ETA.
+
+Your task is to put this process in place within a tight deadline. You realize that it is critical for four systems that NTO uses to be integrated with each other for this process to work
+
+[%header,cols=2*]
+|===
+|System
+|Purpose
+
+|Salesforce Sales Cloud
+|Manages opportunities
+
+|MySQL database
+|Stores product information and SKUs
+
+|NTO Order system
+|Internal system that can place orders and return tracking information + order ETA. Callable through the NTO Order API.
+
+|Twilio
+|Sending notifications to customers
+|===
+
+== Your approach
+To automate this process, you have to overcome a few integration challenges. You come up with this list of what needs to happen in order to automate this order to cash cycle.
+
+. Salesforce triggers a message to start the process when the status of an opportunity is changed to “Closed Won”.
+. The process retrieves the appropriate product information from the products database.
+. After the process has retrieved the information, it places an order with the NTO Orders API.
+. The Orders API returns the order number, tracking information, and ETA for delivery.
+. The information returned by the API is translated into human readable text and sent to as an SMS to the customer.
+
+Visually, the process should look like this:
+
+image::salesforce-to-twilio-flowchart.png[]
+
+Fortunately, you know just the tool to help you carry out this plan...
+
+== Before you begin
+
+* Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to
+* Sign up for xref::https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
+* Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need your trial number (question to Jimil about this in his QSG doc). You'll also need your account SID and authentication token.
