@@ -151,3 +151,56 @@ Result: The New Type dialog is opened.
 +
 Result: The fields from the example are parsed automatically in the right sidebar of the dialog.
 . Click *Save*.
+
+=== Create the type for the data sent to and returned from the Orders API
+
+Following the same steps, create the following two data types:
+
+==== `Order Information`
+
+The process sends data to the Orders API in this format.
+Here is an example to use in the New Type dialog:
+
+```
+{
+       "OppId": "fsjf3439d993",
+       "OrderAmount": 500000,
+       "orderdate": "2018-11-13T11:15:45",
+       "productInfo": {
+           "productID": "CK111274",
+           "category": "Small",
+           "SKU": "CKS0",
+           "productName": "Old School Classic Kicks",
+           "inventory": 9999
+       }
+}
+```
+
+==== `Order Tracking`
+
+The Orders API returns this information after an order is placed.
+Here is example JSON:
+
+```
+{
+ "OrderID": 50122,
+ "TrackingNo": "Z34342211",
+ "ETA": "2018-11-13T11:15:45"
+}
+```
+
+=== Create the type for the data stored in the products database
+
+Call this data type `Product Information` and use this example JSON:
+
+```
+[
+ {
+   "productID": "CK989603",
+   "category": "Medium",
+   "SKU": "CKS50",
+   "productName": "Air Fly High Quality Sneakers",
+   "inventory": 22333
+ }
+]
+```
