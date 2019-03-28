@@ -314,3 +314,49 @@ The flow should now look like this:
 image
 
 == Change the format of the information before passing it to the NTO Order API
+
+The flow has obtained information about the opportunity from Salesforce and about the product from the product database. Before using this information to place an order with the NTO Order API, the flow needs to format it in the way that the API is expecting.
+
+. Click the plus sign to the right of the Choice router block and add a Transform component.
+. Set the data types for the values on the left side.
+.. Click the three dots next to `payload`.
+.. Select *Set*.
+.. Select the `Product Information` data type that you created earlier.
+.. Click the three dots next to `OppDetails` under `vars` and set the data type to `Salesforce Opportunity`.
+. On the right side of the Transform card, set the data type for `payload` to `Order Information`.
++
+*Result:* The Transform card should look like this:
++
+image
+. Drag and drop elements from the left side to right side according to the mappings below:
++
+[%header,cols=2*]
+|===
+|This Element on the Left Side
+|Maps to This Element on the Right Side
+
+|`productID`
+|`productID`
+
+|`category`
+|`category`
+
+|SKU
+|SKU
+
+|productName
+|productName
+
+|inventory
+|inventory
+
+|Amount
+|OrderAmount
+
+|Id
+|OppId
+
+|CloseDate
+|orderDate
+
+|===
