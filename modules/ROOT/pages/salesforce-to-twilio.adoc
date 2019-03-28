@@ -21,7 +21,7 @@ You are the connectivity lead for Salesforce Sales Cloud at Northern Trail Outfi
 
 NTO uses Sales Cloud to track the opportunities in the pipeline for bulk swag orders. After they close opportunities, sales reps need to go into the order management system and place the orders.  Also, their customers often call NTO to check on orders.
 
-NTO wants to place orders automatically when opportunities are closed, and to notify customers via SMS about their order status and ETA.
+NTO wants to use MuleSoft to create a process that places orders automatically when opportunities are closed, and that notifies customers via SMS about their order status and ETA.
 
 Your task is to put this process in place within a tight deadline. You realize that it is critical for four systems that NTO uses to be integrated with each other for this process to work
 
@@ -63,3 +63,91 @@ Fortunately, you know just the tool to help you carry out this plan...
 * Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to
 * Sign up for xref::https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
 * Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need your trial number (question to Jimil about this in his QSG doc). You'll also need your account SID and authentication token.
+
+== Capture closures of opportunities in real-time
+You need to ensure that your application is triggered as soon as an Opportunity is marked with the ‘Closed Won’ status within Salesforce. To ensure this, you use the Salesforce Streaming API.
+In Salesforce, you need to specify which fields to send and our criteria for triggering the application. You can do this with an SOQL query. After you build the query, you can set up a PushTopic that can serve as the trigger for your MuleSoft integration.
+
+. Navigate to the SOQL query builder. (You need to log in with your Salesforce credentials.)
+. Select *Opportunity* as the Object. Select *Amount*, *CloseDate*, *Id*, and *Name* from the *Fields* menu.
+. In the *Filter results by* fields, add `StageName = ‘Closed Won’`.
+. Test using the *Query* button. You should get a list of all closed Opportunities. Copy the query to your clipboard. Your query should look like this : `SELECT Amount,CloseDate,Id,Name FROM Opportunity WHERE StageName = 'Closed Won'`
++
+image::soql-query-screen-1.png[]
+
+. Copy the query to your clipboard.
+. Navigate to the Streaming Push topics page from the *query* menu at the top of the workbench.
+. Create a new PushTopic using the dropdown option. Name it `ClosedOpps` and paste in the query that you built.
+. Save the PushTopic.
++
+image::streaming-push-topics.png[]
+
+Now, everytime the query criterion is met, Salesforce will push an event into the ClosedOpps PushTopic
+
+== Create a project in Flow Designer
+
+. From the homepage, navigate to Design Center and create a new Mule application using the ‘Create’ button on the top. Call your project ‘Order-to-cash automation’.
+. In the Let’s Get Started wizard, click the link Go straight to canvas, which is in the bottom-left corner.
++
+*Result:* Flow Designer appears, an empty trigger displayed in the middle of the canvas.
++
+image::canvas-empty-trigger.png[]
+
+== Configure the trigger for the flow
+
+. Click the Trigger card.
++
+*Result:* A list of the available connectors is displayed in the card.
+. In the *Search* field, type “Salesforce”.
++
+*Result:* The Salesforce connector appears in the list.
+. Select the Salesforce connector.
++
+*Result:* A list of operations that you can use to trigger Mule applications with the Salesforce connector is displayed. For the application that you are building, select “Subscribe Topic”, which will allow you to subscribe to the PushTopic that you created in the previous procedure.
+. Specify how Flow Designer can authenticate to Salesforce.
+.. Open the Salesforce card by clicking on it once. At the top of the card is the message “You need to set up the Salesforce configuration. Click here to set it up.”
+.. Click the link.
+.. In the *Connection Type* field, select *Username Password (Deprecated)*.
+.. Specify your username, password, and security token.
+.. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
+. Add your PushTopic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card.
+
+== Configure the card for Twilio
+
+. Select a target. Because you want to notify the customer with an SMS, we will choose the Twilio connector with the ‘Send Message’ operation.
++
+Add an image
++
+Result:
+. Specify how Flow Designer can connect to Twilio.
+.. Open the Twilio card. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
+.. Click the link.
+.. In the *Username* field, specify your account SID.
+.. In the *Password* field, specify your authentication token.
+.. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
+. In the *Account SID* field, specify your account SID again. Then, close the card.
+
+== Create data types
+
+The NTO systems do not share data types. Because the process that you are creating needs to pass data through those systems, Flow Designer requires you to give examples of those data types.
+
+=== Create the type for the data sent by Salesforce
+
+. In the Project sidebar, click the plus icon that is next to the heading of the Data Types section.
++
+Result: The New Type dialog is opened.
+. Create the data type that represents a Salesforce opportunity and that the PushTopic `ClosedOpps` sends to trigger the flow.
+.. Name the data type ‘Salesforce Opportunity’.
+.. Paste this JSON into the Add your JSON example field.
++
+```
+{
+ "Amount": 15000,
+ "Id": "0061U0000079dWXQAY",
+ "CloseDate": "2019-01-25T00:00:00.000Z",
+ "Name": "Dickenson Mobile Generators"
+}
+```
++
+Result: The fields from the example are parsed automatically in the right sidebar of the dialog.
+. Click *Save*.
