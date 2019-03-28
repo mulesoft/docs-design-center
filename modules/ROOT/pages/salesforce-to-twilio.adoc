@@ -204,3 +204,113 @@ Call this data type `Product Information` and use this example JSON:
  }
 ]
 ```
+
+== Save the opportunity data into a variable
+
+Because you’ll be using data from the opportunity later in the flow, and cards that follow the trigger will be creating their own outputs, you need to store the opportunity data into a variable.
+
+. Click the plus sign between the Salesforce card and the Transform card to add a new component.
+. Search for and select the ‘Set Variable’ component
+. Name the variable `OppDetails`.
+. Click the *f(x)* button to enable script mode, then set the value to `payload`.
+. Close the card. Your flow should look like this:
++
+image
+
+== Add SKUs that are based on the size of the deal
+
+NTO has different SKUs (stock keeping units) for their enterprise customers, small business customers and retail customers. You need to add the appropriate product information from the product database to the opportunity based on the deal size. The table below explains how products are segmented.
+
+[%header,cols=2*]
+|===
+|Deal Size (Opportunity Amount)
+|Product Category
+
+|More than $100,000
+|Enterprise
+
+|More than $50,000
+|Small Business
+
+|$50,000 or less
+|Retail
+
+|===
+
+You can use the Choice router component together with the Database component to achieve this branching, if-else logic.  For example, with the Choice router, you can specify that, if the deal size is greater than $100,000, the process should search in the database among the SKUs that are in the Enterprise product category.
+
+[NOTE]
+====
+The Choice Router component is part of Mule Runtime. There are several other components that are part of Mule Runtime. These components don’t connect to other systems, but instead help you to create the logic of a flow.
+====
+
+. Add a Choice card to the flow.
+.. Click the plus sign that is between the Set Variable card and the Transform card.
+.. Select the Choice component.
++
+*Result:* The Choice router appears in the flow. There are a Choice card and two subcards. The subcards are for the routing choices.
++
+image::choice-router-card.png[]
+. Set up the routing choices.
+.. Click the three dots in the first subcard and select *Add Below*. The current subcard closes and another opens beneath it.
+.. Click the first subcard.
+.. Paste `payload.Amount > 100000` into the *Expression* field.
+.. Name the subcard `Enterprise`.
+.. Click the second subcard.
+.. Paste `payload.Amount > 50000` into the *Expression* field.
+.. Name the subcard `Small Business`.
+
++
+*Result:* The Choice card now has the three routing options that you need in your flow. The Default option works for the Retail SKUs because it is for amounts of $50,000 and below. Your flow now looks like this:
++
+image
+. Query the product database according to whether the size of the deal is “Enterprise” or “Small Business”.
+.. Click the plus icon next to the Enterprise subcard and add a Database card.
+.. Configure the database driver by using the following information:
++
+* Connection Type: `MySQL Connection`
+* Host: `ntoproducts.c3w6upfzlwwe.us-west-1.rds.amazonaws.com`
+* Port: `3306`
+* User: `mulesoft`
+* Password: `mulesoft`
+* Database: `nto_products`
+.. Test the connection and click *Save* if it is successful.
+.. Add this query to the Database card:
++
+```
+select * from products where category = "Enterprise" and inventory > 1 limit 1
+```
+.. Close the Database card.
+.. Add a Database card after the Small Business subcard.
++
+[NOTE]
+====
+Notice that you do not have to configure the database driver again. That’s because, when you configured it earlier, Flow Designer saved the configuration. If you look under the heading “Reusable Configurations” in the Projects sidebar, you’ll see an entry labelled “Database”.
+====
+.. Add this query to this Database card:
++
+```
+select * from products where category = "Small Business" and inventory > 1 limit 1
+```
+. Set up the default option for when the size of the deal is $50,000 or less. In this case, you do not need to query the database.
+.. Add a Set Payload card after the Default subcard.
+.. In the open Set Payload card, click the *f(x)* button to enter script mode in the *Value* field.
+.. Paste the following JSON data into the field:
++
+```
+[
+ {
+   "productID": "CK111274",
+   "category": "Retail",
+   "SKU": "CKS0",
+   "productName": "Old School Classic Kicks",
+   "inventory": 9999
+ }
+]
+```
+
+The flow should now look like this:
++
+image
+
+== Change the format of the information before passing it to the NTO Order API
