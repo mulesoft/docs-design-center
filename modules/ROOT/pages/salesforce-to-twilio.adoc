@@ -401,3 +401,19 @@ Body: "Order for " ++ vars.OppDetails.Name ++ " has been placed. Details:
 ```
 +
 Using DataWeave scripts is another way of mapping input fields to output fields. Click the *Mappings* tab to see how the fields are mapped as the script specifies.
+
+*Result:* The *Preview* pane shows an example of the JSON messages that the Transform card will send to the Twilio card.
+
+== Test your application
+
+You can now try out your Mule application.
+
+. Make sure there are no errors in the flow. If there are errors, you can open the *Problems* pane at the bottom of the canvas to read descriptions of them. Click an error to be taken to its location in the project.
+. When there are no errors and the *Run~ button is enabled in the top-right corner of Flow Designer, run the application.
+. Log in to your Salesforce instance using the credentials you used in the Salesforce card.
+. Open the Sales app from the app switcher.
+. Go to *Opportunities* and change the view to *All Opportunities*.
+. Find an opportunity which is not in the `Closed Won` stage.
+. Open and edit the opportunity by changing the value of `Stage` to `Closed Won`.
+. Update the amount to be greater than $100,000, and then click *Save*.
+. Go back to your Mule application in Flow Designer. If you see a green line in each card, the flow was triggered and a text message with the order details was sent to your mobile phone.
