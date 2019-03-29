@@ -330,17 +330,17 @@ image::flow-with-complete-choice.png[]
 
 The flow has obtained information about the opportunity from Salesforce and about the product from the product database. Before using this information to place an order with the NTO Order API, the flow needs to format it in the way that the API is expecting.
 
-. Click the plus sign to the right of the Choice router block and add a Transform component.
-. Set the data types for the values on the left side.
+. Click the plus sign to the right of the Choice router block and add a Transform card.
+. In the *Input* pane, specify input data types.
 .. Click the three dots next to `payload`.
 .. Select *Set*.
 .. Select the `Product Information` data type that you created earlier.
 .. Click the three dots next to `OppDetails` under `vars` and set the data type to `Salesforce Opportunity`.
-. On the right side of the Transform card, set the data type for `payload` to `Order Information`.
+. In the *Output* pane, set the data type for `payload` to `Order Information`.
 +
 *Result:* The Transform card should look like this:
 +
-image
+image::transform-first-after-input-output.png[]
 . Drag and drop elements from the left side to right side according to the mappings below:
 +
 [%header,cols=2*]
@@ -377,8 +377,8 @@ image
 If you see the message `Output media type differs from expected one`, click the `Fix it` link to resolve the problem.
 
 When you are done changing the format, the Transform card looks like this:
-+
-image
+
+image::transform-first-final.png[]
 
 The JSON that the card displays in the *Preview* pane is an example of the JSON that the flow will send to the NTO Order API when placing an order.
 
@@ -413,7 +413,11 @@ Body: "Order for " ++ vars.OppDetails.Name ++ " has been placed. Details:
 " ++ "OrderID: " ++ payload.OrderID as String ++ ", Tracking: " ++ payload.TrackingNo ++ ", ETA:" ++ payload.ETA as Date
 ```
 +
+image::transform-second-script-panel.png[]
++
 Using DataWeave scripts is another way of mapping input fields to output fields. Click the *Mappings* tab to see how the fields are mapped as the script specifies.
++
+image::transform-second-mappings-panel.png[]
 
 *Result:* The *Preview* pane shows an example of the JSON messages that the Transform card will send to the Twilio card.
 
