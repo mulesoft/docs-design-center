@@ -65,25 +65,45 @@ Fortunately, you know just the tool to help you carry out this plan: Flow Design
 * Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need a trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
 
 == Capture opportunities that are won
-You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, you specify in Salesforce which fields to send and our criteria for triggering the application. You can specify all of this with an SOQL query. After you build the query, you can set up a PushTopic that can serve as the trigger for your MuleSoft application.
+You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, you specify in Salesforce which fields to send and our criteria for triggering the application. You can specify all of this with an SOQL query. After you build the query, you can set up a Push Topic that can serve as the trigger for your MuleSoft application.
 
-. Navigate to the SOQL query builder. (You need to log in with your Salesforce credentials.)
-. Select *Opportunity* as the Object. Select *Amount*, *CloseDate*, *Id*, and *Name* from the *Fields* menu.
+. Navigate to the xref::https://workbench.developerforce.com/query.php[SOQL query builder]. (You have to log in with your Salesforce credentials.)
+. Select *Opportunity* as the Object.
+. Select *Amount*, *CloseDate*, *Id*, and *Name* from the *Fields* menu.
 . In the *Filter results by* fields, add `StageName = ‘Closed Won’`.
-. Test using the *Query* button. You should get a list of all closed Opportunities. Copy the query to your clipboard. Your query should look like this : `SELECT Amount,CloseDate,Id,Name FROM Opportunity WHERE StageName = 'Closed Won'`
+. Test the query by using the *Query* button. You should get a list of all closed Opportunities. Your query should look like this : `SELECT Amount,CloseDate,Id,Name FROM Opportunity WHERE StageName = 'Closed Won'`
 +
 image::soql-query-screen-1.png[]
 
 . Copy the query to your clipboard.
 . Navigate to the Streaming Push topics page from the *query* menu at the top of the workbench.
-. Create a new PushTopic using the dropdown option. Name it `ClosedOpps` and paste in the query that you built.
-. Save the PushTopic.
+. Create a new Push Topic by selecting the option *Create New*.
+. Name the Push Topic `ClosedOpps` and paste in the query that you built.
+. Save the Push Topic.
 +
 image::streaming-push-topics.png[]
 
-Now, everytime the query criterion is met, Salesforce will push an event into the ClosedOpps PushTopic
+Now, every time the query criterion is met, Salesforce will push an event into the `ClosedOpps` Push Topic.
 
 == Create a project in Flow Designer
+
+When you are working in Flow Designer, you create your Mule applications in projects. A project can contain only one Mule application.
+
+A Mule application consists of one or more _flows_. According to the MuleSoft glossary, a flow is "a simple, flexible mechanism that enables orchestration of services using the sophisticated message flow capabilities of Mule runtime engine. Also referred to as service orchestration." In Flow Designer, what this means is a sequence of _cards_ that represent core components in Mule Runtime or the operations of connectors. (Cards can represent a couple of other things, too; however, for this tutorial, you need know only about those two.)
+
+Data moves from the beginning of a flow to the end of the flow. Along the way, the cards can update systems, query systems, send messages, delete database rows, or do any of the things that core components and connectors can do.
+
+There is a good number of core components and there are many connectors. For this tutorial, you'll use these:
+
+* Salesforce connector
+* Set Variable component
+* Choice router component
+* Database connector
+* Set Payload component
+* Transform component
+* Twilio connector
+
+For this project, you'll create only a single flow.
 
 . Log into Anypoint Platform.
 . Open Design Center and create a new Mule application.
@@ -117,7 +137,7 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 .. In the *Connection Type* field, select *Username Password (Deprecated)*.
 .. Specify your username, password, and security token.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
-. Add your PushTopic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card either by clicking the X in the top-right corner or by clicking an empty space on the canvas.
+. Add your Push Topic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card either by clicking the X in the top-right corner or by clicking an empty space on the canvas.
 
 == Configure the card for Twilio
 
@@ -143,7 +163,7 @@ The NTO systems do not share data types. Because the process that you are creati
 . In the Project sidebar, click the plus icon that is next to the heading of the Data Types section.
 +
 Result: The New Type dialog is opened.
-. Create the data type that represents a Salesforce opportunity and that the PushTopic `ClosedOpps` sends to trigger the flow.
+. Create the data type that represents a Salesforce opportunity and that the Push Topic `ClosedOpps` sends to trigger the flow.
 .. Name the data type ‘Salesforce Opportunity’.
 .. Paste this JSON into the Add your JSON example field.
 +
