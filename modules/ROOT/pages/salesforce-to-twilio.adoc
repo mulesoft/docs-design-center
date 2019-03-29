@@ -105,6 +105,8 @@ There is a good number of core components and there are many connectors. For thi
 
 For this project, you'll create only a single flow.
 
+Follow these steps to create the project.
+
 . Log into Anypoint Platform.
 . Open Design Center and create a new Mule application.
 .. Click *Create* next to the search field.
@@ -118,7 +120,7 @@ image::canvas-empty-trigger.png[]
 
 == Configure the trigger for the flow
 
-A trigger is an event that starts a flow in a Mule application. In your project, the trigger is the change in status of an opportunity in Salesforce Sales Cloud to `Closed Won`. You can configure the trigger card to represent a Salesforce connector that is subscribed to the topic `ClosedOpps`, which you created above in "Capture closures of opportunities in real-time".
+A trigger is an event that starts a flow in a Mule application. In your project, the trigger is the change in status of an opportunity in Salesforce Sales Cloud to `Closed Won`. You can configure the trigger card to represent a Salesforce connector that is subscribed to the topic `ClosedOpps`, which you created above in "Capture opportunities that are won".
 
 . Click the Trigger card.
 +
@@ -141,10 +143,10 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 
 == Configure the card for Twilio
 
-Because you want to notify the customer with an SMS, you can a Twilio connector and its `Send Message` operation.
+Because you want to notify the customer with an SMS, you can a Twilio connector and its Send Message operation.
 
 . Click the plus sign that is to the right of the Salesforce card.
-. Select the Twilio connector and the operation `Send Message`.
+. Select the Twilio connector and the operation *Send Message*.
 +
 *Result:* The Twilio card is opened. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
 . Specify how you want Flow Designer to authenticate to Twilio.
