@@ -62,7 +62,7 @@ Fortunately, you know just the tool to help you carry out this plan...
 
 * Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to
 * Sign up for xref::https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
-* Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need your trial number (question to Jimil about this in his QSG doc). You'll also need your account SID and authentication token.
+* Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need the trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
 
 == Capture closures of opportunities in real-time
 You need to ensure that your application is triggered as soon as an Opportunity is marked with the ‘Closed Won’ status within Salesforce. To ensure this, you use the Salesforce Streaming API.
@@ -156,7 +156,7 @@ Result: The fields from the example are parsed automatically in the right sideba
 
 Following the same steps, create the following two data types:
 
-==== `Order Information`
+==== Name: `Order Information`
 
 The process sends data to the Orders API in this format.
 Here is an example to use in the New Type dialog:
@@ -176,7 +176,7 @@ Here is an example to use in the New Type dialog:
 }
 ```
 
-==== `Order Tracking`
+==== Name: `Order Tracking`
 
 The Orders API returns this information after an order is placed.
 Here is example JSON:
@@ -341,22 +341,63 @@ image
 |`category`
 |`category`
 
-|SKU
-|SKU
+|`SKU`
+|`SKU`
 
-|productName
-|productName
+|`productName`
+|`productName`
 
-|inventory
-|inventory
+|`inventory`
+|`inventory`
 
-|Amount
-|OrderAmount
+|`Amount`
+|`OrderAmount`
 
-|Id
-|OppId
+|`Id`
+|`OppId`
 
-|CloseDate
-|orderDate
+|`CloseDate`
+|`orderDate`
 
 |===
+
+If you see the message `Output media type differs from expected one`, click the `Fix it` link to resolve the problem.
+
+When you are done changing the format, the Transform card looks like this:
++
+image
+
+The JSON that the card displays in the *Preview* pane is an example of the JSON that the flow will send to the NTO Order API when placing an order.
+
+== Place an order using NTO Order API
+
+Now the flow is ready to place an order. The flow can place it with the NTO Order API, which is a REST API, by sending a POST request. In response, the API will return the order ID, the tracking number for the order, and the estimated arrival time for the order at the customer's location.
+
+. Add an HTTP Request card on the right side of the Transform card you just configured.
+. In the card, specify these details:
++
+* Method: POST
+* URL (this is the URL for the NTO Order API):
+https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/org.mule.examples/quick-start-nto-orders-api/1.0.0/m/orders
+
+
+== Transform data for the Twilio API
+
+At this point, the NTO Order API has returned the order ID, tracking number for the shipment of the order, and the ETA for the shipment at the customer's location. The last step is to send this information to the Twilio API, which will then send an SMS with the details to the customer. For Twilio to accept this information, you need to format the message in the format that Twilio requires.
+
+. Add a Transform card to the left of the Twilio card.
+. In the *Input* section, set two data types:
+.. Set the data type for `payload` to `Order Tracking`.
+.. Set the data type for `OppDetails` to `Salesforce Opportunity`.
+. In the *Output* section, follow these steps:
+.. Double-click the `To` field and add your phone number, together with the country prefix. (For example, the country prefix for the United States is 1, so a telephone number would look like this: 12223334444.)
+.. Double-click the `From` field and add the free phone number that you obtained when you opened your Twilio developer account.
+. At the bottom of the Transform card, click the *Script* tab.
+. Paste the following DataWeave script into the *Transformation script* panel:
++
+```
+Body: "Order for " ++ vars.OppDetails.Name ++ " has been placed. Details:
+" ++ "OrderID: " ++ payload.OrderID as String ++ ", Tracking: " ++ payload.TrackingNo ++ ", ETA:" ++ payload.ETA as Date
+```
++
+Using DataWeave scripts is another way of mapping input fields to output fields. Click the *Mappings* tab to see how the fields are mapped as the script specifies.
