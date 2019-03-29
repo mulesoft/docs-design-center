@@ -158,13 +158,13 @@ Because you want to notify the customer with an SMS, you can a Twilio connector 
 
 == Create data types
 
-The NTO systems do not share data types. Because the process that you are creating needs to pass data through those systems, Flow Designer requires you to give examples of those data types.
+The NTO systems all use different formats for data. Because the flow that you are creating needs to pass data through those systems, Flow Designer requires you to give examples of those data types. Because you'll reuse a few of the data types, you can create them at the project level, rather than at the points in the flow where you need them.
 
 === Create the type for the data sent by Salesforce
 
 . In the Project sidebar, click the plus icon that is next to the heading of the Data Types section.
 +
-Result: The New Type dialog is opened.
+*Result:* The New Type dialog is opened.
 . Create the data type that represents a Salesforce opportunity and that the Push Topic `ClosedOpps` sends to trigger the flow.
 .. Name the data type ‘Salesforce Opportunity’.
 .. Paste this JSON into the Add your JSON example field.
@@ -178,7 +178,7 @@ Result: The New Type dialog is opened.
 }
 ```
 +
-Result: The fields from the example are parsed automatically in the right sidebar of the dialog.
+*Result:* The fields from the example are parsed automatically in the right sidebar of the dialog.
 . Click *Save*.
 
 === Create the type for the data sent to and returned from the Orders API
@@ -270,17 +270,17 @@ You can use the Choice router component together with the Database component to 
 
 [NOTE]
 ====
-The Choice Router component is part of Mule Runtime. There are several other components that are part of Mule Runtime. These components don’t connect to other systems, but instead help you to create the logic of a flow.
+The Choice router component is part of Mule Runtime. There are several other components that are part of Mule Runtime. These components don’t connect to other systems, but instead help you to create the logic of a flow.
 ====
 
-. Add a Choice card to the flow.
+. Add a Choice router block (which consists of a Choice card and two or more subcards for the routing options) to the flow.
 .. Click the plus sign that is between the Set Variable card and the Twilio card.
-.. Select the Choice component.
+.. Select the Choice router.
 +
-*Result:* The Choice router appears in the flow. There are a Choice card and two subcards. The subcards are for the routing choices.
+*Result:* The Choice router block appears in the flow.
 +
 image::choice-router-card.png[]
-. Set up the routing choices.
+. Set up the routing options.
 .. Click the first subcard to open it.
 .. Click the three dots in the subcard's top-right corner and select *Add Below*. The current subcard closes and another opens beneath it.
 .. Click the first subcard.
@@ -291,7 +291,7 @@ image::choice-router-card.png[]
 .. Name the subcard `Small Business`.
 
 +
-*Result:* The Choice card now has the three routing options that you need in your flow. The Default option works for the Retail SKUs because it is for amounts of $50,000 and below. Your flow now looks like this:
+*Result:* The Choice router block now has the three routing options that you need in your flow. The Default option is used for the Retail SKUs because it is for orders in the amount of $50,000 and below. Your flow now looks like this:
 +
 
 image::flow-with-choice.png[]
@@ -325,7 +325,7 @@ Notice that you do not have to configure the database driver again. That’s bec
 select * from products where category = "Small Business" and inventory > 1 limit 1
 ```
 . Set up the default option for when the size of the deal is $50,000 or less. In this case, you do not need to query the database.
-.. Add a Set Payload card after the Default subcard.
+.. Add a Set Payload card after the Default subcard. You use the Set Payload card here so that, if the Choice router block routes to this default option, the flow simply adds the required SKU and associated information.
 .. In the open Set Payload card, click the *f(x)* button to enter script mode in the *Value* field.
 .. Paste the following JSON data into the field:
 +
