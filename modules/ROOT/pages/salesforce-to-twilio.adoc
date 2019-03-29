@@ -347,7 +347,7 @@ image::flow-with-complete-choice.png[]
 
 == Change the format of the information before passing it to the NTO Order API
 
-The flow has obtained information about the opportunity from Salesforce and about the product from the product database. Before using this information to place an order with the NTO Order API, the flow needs to format it in the way that the API is expecting.
+By this point, the flow has obtained information about the opportunity from Salesforce and about the product from the product database. Before using this information to place an order with the NTO Order API, the flow needs to format it in the way that the API is expecting.
 
 . Click the plus sign to the right of the Choice router block and add a Transform card.
 . In the *Input* pane, specify input data types.
@@ -415,7 +415,7 @@ https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/org.mule.ex
 
 == Transform data for the Twilio API
 
-At this point, the NTO Order API has returned the order ID, tracking number for the shipment of the order, and the ETA for the shipment at the customer's location. The last step is to send this information to the Twilio API, which will then send an SMS with the details to the customer. For Twilio to accept this information, you need to format the message in the format that Twilio requires.
+At this point, the NTO Order API has returned the order ID, the tracking number for the shipment of the order, and the ETA for the shipment at the customer's location. The last step is to send this information to the Twilio API, which will then send an SMS with the details to the customer. For Twilio to accept this information, you need to format the message in the format that Twilio requires.
 
 . Add a Transform card to the left of the Twilio card.
 . In the *Input* section, set two data types:
@@ -425,7 +425,7 @@ At this point, the NTO Order API has returned the order ID, tracking number for 
 .. Double-click the `To` field and add your phone number, together with the country prefix. (For example, the country prefix for the United States is 1, so a telephone number would look like this: 12223334444.)
 .. Double-click the `From` field and add the free phone number that you obtained when you opened your Twilio developer account.
 . At the bottom of the Transform card, click the *Script* tab.
-. Paste the following DataWeave script into the *Transformation script* panel:
+. Rather than map fields, create the transformation an alternative way. Paste the following DataWeave script into the position in the *Transformation script* panel that the screenshot shows:
 +
 ```
 Body: "Order for " ++ vars.OppDetails.Name ++ " has been placed. Details:
@@ -442,14 +442,24 @@ image::transform-second-mappings-panel.png[]
 
 == Test your application
 
-You can now try out your Mule application.
+You are just about ready to test your Mule application. First, though, make sure there are no errors in the flow. If there are errors, you can open the *Problems* pane at the bottom of the canvas to read descriptions of them. Click an error to be taken to its location in the project.
 
-. Make sure there are no errors in the flow. If there are errors, you can open the *Problems* pane at the bottom of the canvas to read descriptions of them. Click an error to be taken to its location in the project.
-. When there are no errors and the *Run* button is enabled in the top-right corner of Flow Designer, run the application.
+If there are no errors and if the *Run* button is enabled in the top-right corner of Flow Designer, click *Run* to run the application. Then, follow these steps:
+
 . Log in to your Salesforce instance using the credentials you used in the Salesforce card.
-. Open the Sales app from the app switcher.
+. In the top-left corner of your browser window, open the Sales app from the app switcher, which looks like this:
++
+image::salesforce-app-switcher.png[]
 . Go to *Opportunities* and change the view to *All Opportunities*.
 . Find an opportunity which is not in the `Closed Won` stage.
 . Open and edit the opportunity by changing the value of `Stage` to `Closed Won`.
 . Update the amount to be greater than $100,000, and then click *Save*.
 . Go back to your Mule application in Flow Designer. If you see a green line in each card, the flow was triggered and a text message with the order details was sent to your mobile phone.
+
+== Nice job!
+
+You've received your text message, run around the office showing it to everyone, and rerun the application several times to admiring audiences and many congratulatory remarks. You've replied with modesty, explaining what Flow Designer is, proudly showing the cards, explaining what connectors and components you use in the application, and indicating with your forefinger how the flow is triggered and how data moves through it. You've even received a thunbs-up for making your application available outside of the Design environment where you created it.
+
+So, you are now ready for the very last step: xref::promote-app-prod-env-design-center.adoc[deploying your Mule application]. This tutorial doesn't cover that, but the link does take you to help that shows the steps, if you are inclined to deploy this example Mule application.
+
+We hope this tutorial was easy enough to follow, yet complex enough to show you how you can use Flow Designer to your benefit in real-world scenarios. Happy flow-designing!
