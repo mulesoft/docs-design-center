@@ -86,14 +86,20 @@ Now, everytime the query criterion is met, Salesforce will push an event into th
 
 == Create a project in Flow Designer
 
-. From the homepage, navigate to Design Center and create a new Mule application using the ‘Create’ button on the top. Call your project ‘Order-to-cash automation’.
-. In the Let’s Get Started wizard, click the link Go straight to canvas, which is in the bottom-left corner.
+. Log into Anypoint Platform.
+. Open Design Center and create a new Mule application.
+.. Click *Create* next to the search field.
+.. In the *Create a Mule Application* section of the overlay, click *Create New Application*.
+.. Name your project `Order-to-cash automation`.
+. In the *Let’s Get Started* wizard, click the link `Go straight to canvas`, which is in the bottom-left corner.
 +
-*Result:* Flow Designer appears, an empty trigger displayed in the middle of the canvas.
+*Result:* Flow Designer appears, an empty trigger card displayed in the middle of the canvas.
 +
 image::canvas-empty-trigger.png[]
 
 == Configure the trigger for the flow
+
+A trigger is an event that starts a flow in a Mule application. In your project, the trigger is the change in status of an opportunity in Salesforce Sales Cloud to `Closed Won`. You can configure the trigger card to represent a Salesforce connector that is subscribed to the topic `ClosedOpps`, which you created above in "Capture closures of opportunities in real-time".
 
 . Click the Trigger card.
 +
@@ -103,25 +109,29 @@ image::canvas-empty-trigger.png[]
 *Result:* The Salesforce connector appears in the list.
 . Select the Salesforce connector.
 +
-*Result:* A list of operations that you can use to trigger Mule applications with the Salesforce connector is displayed. For the application that you are building, select “Subscribe Topic”, which will allow you to subscribe to the PushTopic that you created in the previous procedure.
+*Result:* A list of operations that you can use to trigger Mule applications with the Salesforce connector is displayed.
+. Select the operation *Subscribe Topic*.
++
+*Result:* The card is opened. In its top-left corner, it is identified as a Salesforce connector. The name of the operation -- Subscribe Topic -- is also displayed. At the top of the card is the message “You need to set up the Salesforce configuration. Click here to set it up.”
 . Specify how Flow Designer can authenticate to Salesforce.
-.. Open the Salesforce card by clicking on it once. At the top of the card is the message “You need to set up the Salesforce configuration. Click here to set it up.”
-.. Click the link.
+.. Click the linked text.
 .. In the *Connection Type* field, select *Username Password (Deprecated)*.
 .. Specify your username, password, and security token.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
-. Add your PushTopic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card.
+. Add your PushTopic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card either by clicking the X in the top-right corner or by clicking an empty space on the canvas.
 
 == Configure the card for Twilio
 
-. Select a target. Because you want to notify the customer with an SMS, we will choose the Twilio connector with the ‘Send Message’ operation.
+Because you want to notify the customer with an SMS, you can a Twilio connector and its `Send Message` operation.
+
+. Click the plus sign that is to the right of the Salesforce card.
+. Select the Twilio connector and the operation `Send Message`.
 +
 Add an image
 +
-Result:
+Result: The Twilio card is opened. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
 . Specify how Flow Designer can connect to Twilio.
-.. Open the Twilio card. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
-.. Click the link.
+.. Click the linked text.
 .. In the *Username* field, specify your account SID.
 .. In the *Password* field, specify your authentication token.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
@@ -209,13 +219,13 @@ Call this data type `Product Information` and use this example JSON:
 
 Because you’ll be using data from the opportunity later in the flow, and cards that follow the trigger will be creating their own outputs, you need to store the opportunity data into a variable.
 
-. Click the plus sign between the Salesforce card and the Transform card to add a new component.
+. Mouse over the arrow between the Salesforce card and the Transform card to change the arrow to a plus sign. Then, click the plus sign to add a new component.
 . Search for and select the ‘Set Variable’ component
 . Name the variable `OppDetails`.
 . Click the *f(x)* button to enable script mode, then set the value to `payload`.
 . Close the card. Your flow should look like this:
 +
-image
+image::flow-with-set-variable-card.png[]
 
 == Add SKUs that are based on the size of the deal
 
@@ -245,14 +255,15 @@ The Choice Router component is part of Mule Runtime. There are several other com
 ====
 
 . Add a Choice card to the flow.
-.. Click the plus sign that is between the Set Variable card and the Transform card.
+.. Click the plus sign that is between the Set Variable card and the Twilio card.
 .. Select the Choice component.
 +
 *Result:* The Choice router appears in the flow. There are a Choice card and two subcards. The subcards are for the routing choices.
 +
 image::choice-router-card.png[]
 . Set up the routing choices.
-.. Click the three dots in the first subcard and select *Add Below*. The current subcard closes and another opens beneath it.
+.. Click the first subcard to open it.
+.. Click the three dots in the subcard's top-right corner and select *Add Below*. The current subcard closes and another opens beneath it.
 .. Click the first subcard.
 .. Paste `payload.Amount > 100000` into the *Expression* field.
 .. Name the subcard `Enterprise`.
@@ -263,9 +274,11 @@ image::choice-router-card.png[]
 +
 *Result:* The Choice card now has the three routing options that you need in your flow. The Default option works for the Retail SKUs because it is for amounts of $50,000 and below. Your flow now looks like this:
 +
-image
+
+image::flow-with-choice.png[]
 . Query the product database according to whether the size of the deal is “Enterprise” or “Small Business”.
-.. Click the plus icon next to the Enterprise subcard and add a Database card.
+.. Click the plus icon next to the *Enterprise* subcard.
+.. Add a Database card and choose the *Select* operation.
 .. Configure the database driver by using the following information:
 +
 * Connection Type: `MySQL Connection`
@@ -281,7 +294,7 @@ image
 select * from products where category = "Enterprise" and inventory > 1 limit 1
 ```
 .. Close the Database card.
-.. Add a Database card after the Small Business subcard.
+.. Add a Database card after the *Small Business* subcard, and select the *Select* operation.
 +
 [NOTE]
 ====
@@ -310,8 +323,8 @@ select * from products where category = "Small Business" and inventory > 1 limit
 ```
 
 The flow should now look like this:
-+
-image
+
+image::flow-with-complete-choice.png[]
 
 == Change the format of the information before passing it to the NTO Order API
 
