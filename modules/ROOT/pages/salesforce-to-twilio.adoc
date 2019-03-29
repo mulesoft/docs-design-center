@@ -458,7 +458,7 @@ image::salesforce-app-switcher.png[]
 
 == Nice job!
 
-You've received your text message, run around the office showing it to everyone, and triggered the application several times to admiring audiences and many congratulatory remarks. You've replied with modesty, jovially and collegially explaining what Flow Designer is, pointing to the cards, explaining what connectors and components you use in the application, and indicating with your forefinger how the flow is triggered and how data moves through it. You've even received a thunbs-up for making your application available outside of the Design environment where you created it.
+You've received your text message, run around the office showing it to everyone, and triggered the application several times to admiring audiences and many congratulatory remarks. You've replied with modesty, jovially and collegially explaining what Flow Designer is, pointing to the cards, explaining what connectors and components you use in the application, and indicating with your forefinger how the flow is triggered and how data moves through it. You've even received a thumbs-up for making your application available outside of the Design environment where you created it.
 
 So, you are now ready for the very last step: xref::promote-app-prod-env-design-center.adoc[deploying your Mule application]. This tutorial doesn't cover that, but the link does take you to help that shows the steps, if you are inclined to deploy this example Mule application.
 
