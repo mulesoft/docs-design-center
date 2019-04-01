@@ -5,14 +5,14 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-== What will you learn from this example
-In FD, you assemble sequences of cards that represent the systems that you want to integrate together for a purpose. A sequence of cards is called a flow...
-What a card is
-What a trigger is
-What an operation is
-How to configure a connector
-How to create a flow
-How to transform data
+== What will you learn
+
+* How to create a flow
+* How to start a flow with a trigger
+* How to configure a connector
+* How to transform data
+* How to route a flow according to data
+
 
 
 == The problem

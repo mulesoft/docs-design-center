@@ -4,23 +4,13 @@ include::_attributes.adoc[]
 endif::[]
 :keywords:
 
-The Sales team at the company Mythical Logistics is trying to find a creative way to motivate its team members. John Black, one of the company's Salesforce administrators, reports to the Sales Operations team. He is tasked with helping to improve the team's morale by finding a way for them to celebrate wins as they happen. John decides to send the team a message on Slack to congratulate the team every time an opportunity closes.
+In Flow Designer, you create Mule applications as projects having one or more flows. A project contains the flows for one Mule application. A Mule application can have one or more flows. A flow consists of a sequence of _cards_, each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific task, and then sends the output of that task to the next card in the flow. The final card is a flow is usually one that sends a notification that the Mule application has completed its task or that sends data.
 
-To do this, John logs into Anypoint Platform and creates a Mule-app project in Design Center.
 
-In Design Center, you create a Mule application as a project having one or more flows. A flow consists of a sequence of _cards_, each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific function, and then sends the output of that function to the next card in the flow.
+// Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
 
-Connectors represent other applications, such as Salesforce, Slack, a database, Marketo, NetSuite, and many other applications. You configure them to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use a triggers for flows. All connectors have operations that receive an input from a flow and perform an action, such as deleting rows from databases, sending emails, and more.
+// Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
 
-Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
-
-Examples of triggers:
-
-* An HTTP listener receives an incoming HTTP request.
-
-* A Scheduler starts a flow at a configured time or or after an elapsed time.
-
-* A Flow Ref in one flow starts another flow by referencing its name. A flow needs a trigger unless started by a Flow Ref in another flow.
 
 
 == See also
