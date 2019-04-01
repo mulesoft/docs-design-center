@@ -40,8 +40,8 @@ Next, suppose you want to limit what parts of the payload the HTTP Listener send
 [source,JSON,linenums]
 ----
 {
-	"firstName": "Sancho",
-	"lastName": "Panza"
+	"firstName": "Ian",
+	"lastName": "Stewart"
 }
 ----
 
@@ -57,34 +57,35 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into.
+* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a data pill.
 +
-The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specified this entry in the *Messages* field of the Logger card:
+The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specify this entry in the *Messages* field of the Logger card:
 +
 image::hello-firstname.png[]
 +
-The Logger would add a message in this format to the log when it received a payload that contained a `firstName` element:
+Click the arrow in the data pill to see a list of the functions that you can apply to the value. You can also see a preview of the value, whether or not any functions are applied to it. If the application is not running, the preview comes from the example that was specified for the data type the data type was defined. If the application is running, the preview can show live data.
++
+image::hello-firstname-expanded.png[]
++
+The Logger will add a message in this format to the log when it receives a payload that contains a `firstName` element:
 +
 ----
-"Hello, Shirley."
+"Hello, Ian."
 ----
 +
-If the payload contained a `lastName` element and you dragged it after the `firstName` element and placed a space between both of them, the Logger would log messages in this format:
+If the payload contains a `lastName` data pill after the `firstName` data pill and a space is added between them, the Logger will log messages in this format:
 +
 ----
-"Hello, Shirley Jackson."
+"Hello, Ian Stewart."
 ----
 +
 [NOTE]
 ====
 You can combine your simple value with a DataWeave expression, if you know the DataWeave language. Drag the list entry `Custom Expression` into your text field. Then, double-click it to open it.
 
-Also, if you want to change the value, click the down arrow in the element to see a list of the functions that you can choose from. For example, for a text value you can choose from transformations to lower case or to upper case. Select one of the functions to see a preview of the change, as in the following image.
 ====
-+
-image::vfe-preview-2.png[]
 
-* Remove a payload element, attribute, or variable from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
+* Remove a data pill from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 
 == Example: Creating a simple dynamic expression
 
