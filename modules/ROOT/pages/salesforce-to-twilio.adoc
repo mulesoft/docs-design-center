@@ -5,17 +5,6 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-== What will you learn
-
-* How to create a flow
-* How to start a flow with a trigger
-* How to configure a connector
-* How to transform data
-* How to route a flow according to data
-
-
-
-== The problem
 
 You are the connectivity lead for Salesforce Sales Cloud at Northern Trail Outfitters (NTO). NTO makes stylish and comfortable apparel, and gear for outdoor recreation and fitness.
 
