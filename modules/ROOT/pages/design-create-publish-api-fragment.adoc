@@ -51,7 +51,7 @@ As you draft, the API editor suggests RAML nodes, methods, and other elements th
 +
 You can import files into your project, either separately or bundled together in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
 +
-For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
+//For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
 
 
 
@@ -63,7 +63,7 @@ image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="lef
 
 The fragment can then be included as a dependency in an API-specification project. After revising a fragment, update API specifications that use the fragment to include the new version. +
 
-When you publish the API Fragment to Exchange it creates automatically its API Portal. See "Exchange Public Portals" linked in the *See also* section at the end of this topic.
+When you publish the API Fragment to Exchange, it automatically creates its API Portal. 
 
 == See also
 
