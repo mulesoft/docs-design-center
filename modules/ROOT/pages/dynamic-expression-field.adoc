@@ -63,7 +63,9 @@ The field concatenates the entries together, along with any string values that a
 +
 image::hello-firstname.png[]
 +
-Click the arrow in the data pill to see a list of the functions that you can apply to the value. You can also see a preview of the value, whether or not any functions are applied to it. If the application is not running, the preview comes from the sample data that was specified when the data type was defined. If the application is running, the preview can show live data.
+Click the arrow in the data pill to see a list of the functions that you can apply to the value. The functions are applied in the order in which you select them.
++
+You can also see a preview of the value, whether or not any functions are applied to it. If the application is not running, the preview comes from the sample data that was specified when the data type was defined. If the application is running, the preview can show live data.
 +
 image::hello-firstname-expanded.png[]
 +
@@ -134,4 +136,3 @@ Try adding a Set Variable card after the HTTP Listener card, creating a variable
 
 * xref:function-editor-concept.adoc[Function Editor]
 * xref:to-create-and-populate-a-variable.adoc[About Creating Variables]
-* xref:mule-runtime::dataweave-selectors.adoc[DataWeave Selectors]
