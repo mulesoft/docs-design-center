@@ -1,4 +1,4 @@
-= Create and Publish a RAML API Fragment in the Code Editor in Design Center
+= Create and Publish an API Fragment
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -61,8 +61,11 @@ You can publish the API fragment to Anypoint Exchange. Click the icon that is in
 
 image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
 
-The fragment can then be included as a dependency in an API-specification project. After revising a fragment, update API specifications that use the fragment to include the new version.
+The fragment can then be included as a dependency in an API-specification project. After revising a fragment, update API specifications that use the fragment to include the new version. +
+
+When you publish the API Fragment to Exchange it creates automatically its API Portal. See "Exchange Public Portals" linked in the *See also* section at the end of this topic.
 
 == See also
 
 * xref:design-import-files.adoc[Import Files into an API Project]
+* xref:exchange::about-portals.adoc[Exchange Public Portals]
