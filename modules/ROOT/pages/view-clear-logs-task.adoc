@@ -1,4 +1,4 @@
-= View the Log for a Mule App Project in Design Center
+= View the Log for a Mule App Project in Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -63,6 +63,8 @@ The log pane expands and displays the log file.
 image::log-file.png[]
 
 == What to do next
+
+* You can copy a line of the log by clicking the *Copy* option to its left.
 
 * If you want to delete the content of the log file, click the dots to the right of the *Logs* label and select *Clear Logs*.
 
