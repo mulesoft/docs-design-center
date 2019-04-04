@@ -20,7 +20,7 @@ Your task is to put this process in place within a tight deadline. You realize t
 |Purpose
 
 |Salesforce Sales Cloud
-|Manages opportunities
+|Manages sales opportunities
 
 |MySQL database
 |Stores product information and SKUs
@@ -35,7 +35,7 @@ Your task is to put this process in place within a tight deadline. You realize t
 == Your approach
 To automate this process, you have to overcome a few integration challenges. You come up with this list of what needs to happen in order to automate this order to cash cycle.
 
-. Salesforce triggers a message to start the process when the status of an opportunity is changed to “Closed Won”.
+. Salesforce starts the workflow automation process when a sale is made. This process is triggered in Salesforce when an opportunity is changed to "Closed Won".
 . The process retrieves the appropriate product information from the products database.
 . After the process has retrieved the information, it places an order with the NTO Orders API.
 . The Orders API returns the order number, tracking information, and ETA for delivery.
@@ -49,7 +49,7 @@ Fortunately, you know just the tool to help you carry out this plan: Flow Design
 
 == Before you begin
 
-* Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to
+* Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to it.
 * Sign up for xref::https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
 * Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need a trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
 
@@ -78,7 +78,7 @@ Now, every time the query criterion is met, Salesforce will push an event into t
 
 When you are working in Flow Designer, you create your Mule applications in projects. A project can contain only one Mule application.
 
-A Mule application consists of one or more _flows_. According to the MuleSoft glossary, a flow is "a simple, flexible mechanism that enables orchestration of services using the sophisticated message flow capabilities of Mule runtime engine. Also referred to as service orchestration." In Flow Designer, what this means is a sequence of _cards_ that represent core components in Mule Runtime or the operations of connectors. (Cards can represent a couple of other things, too; however, for this tutorial, you need know only about those two.)
+A Mule application consists of one or more _flows_. A flow, as MuleSoft defines the term, is a simple, flexible mechanism that enables orchestration of services using the sophisticated message flow capabilities of Mule runtime engine. Also referred to as service orchestration. In Flow Designer specifically, a flow is a sequence of _cards_ that represent core components (such as loops, conditionals, transformations, and more) or connectors to systems and APIs (such as Salesforce, SAP, Google Docs, and more). Cards can represent a couple of other things, too; however, for this tutorial, you need know only about those two.
 
 Data moves from the beginning of a flow to the end of the flow. Along the way, the cards can update systems, query systems, send messages, delete database rows, or do any of the things that core components and connectors can do.
 
@@ -125,7 +125,7 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 *Result:* The card is opened. In its top-left corner, it is identified as a Salesforce connector. The name of the operation -- Subscribe Topic -- is also displayed. At the top of the card is the message “You need to set up the Salesforce configuration. Click here to set it up.”
 . Specify how you want Flow Designer to authenticate to Salesforce.
 .. Click the linked text that is in the message.
-.. In the *Connection Type* field, select *Username Password (Deprecated)*.
+.. In the *Connection Type* field, select *Basic Username Password*.
 .. Specify your username, password, and security token.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
 . Add your Push Topic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card either by clicking the X in the top-right corner or by clicking an empty space on the canvas.
