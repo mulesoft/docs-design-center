@@ -64,9 +64,9 @@ image::log-file.png[]
 
 == What to do next
 
-* You can copy a line of the log by clicking the *Copy* option to its left.
+* To copy a line of the log, click the *Copy* option to its left.
 
-* If you want to delete the content of the log file, click the dots to the right of the *Logs* label and select *Clear Logs*.
+* To delete the content of the log file, click the dots to the right of the *Logs* label and select *Clear Logs*.
 
 * To view the log file in Runtime Manager, click the dots to the right of the *Logs* label and select *View in Runtime Manager*.
 +
