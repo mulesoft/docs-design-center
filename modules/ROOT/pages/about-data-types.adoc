@@ -27,6 +27,4 @@ The HTTP Request Connector does not expose any information by default, but you c
 
 == See Also
 
-* xref:design-filter-task.adoc[To Transform a Full Set of Data to a Subset]
-
 * xref:flow-datatype-task.adoc[To Set Data Types for a Flow]
