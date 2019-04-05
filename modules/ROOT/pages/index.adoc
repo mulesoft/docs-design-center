@@ -37,5 +37,3 @@ Design Center supports the reuse of API fragments and organizes dependencies. Af
 * xref:user-access-to-design-center.adoc[About Accessing Design Center]
 
 * xref:about-designing-a-mule-application.adoc[Designing a Mule App Overview]
-
-* xref:flow-design-basic-tasks.adoc.adoc[Flow Design Basics]
