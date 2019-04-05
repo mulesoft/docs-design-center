@@ -132,7 +132,7 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 
 == Configure the card for Twilio
 
-Because you want to notify the customer with an SMS, you can use a Twilio connector and its Send Message operation.
+Because you want to notify the customer with an SMS, you can use the Twilio connector and its Send Message operation.
 
 . Click the plus sign that is to the right of the Salesforce card.
 . Select the Twilio connector and the operation *Send Message*.
@@ -230,7 +230,7 @@ Because you’ll be using data from the opportunity later in the flow, and cards
 . Mouse over the arrow between the Salesforce card and the Transform card to change the arrow to a plus sign. Then, click the plus sign to add a new component.
 . Search for and select the ‘Set Variable’ component
 . Name the variable `OppDetails`.
-. Click the *f(x)* button to enable script mode, then set the value to `payload`.
+. Click *payload* in the list of items on the right side of the card and drag it into the *Value* field.
 . Close the card. Your flow should look like this:
 +
 image::flow-with-set-variable-card.png[]
