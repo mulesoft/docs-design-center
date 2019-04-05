@@ -103,7 +103,7 @@ Follow these steps to create the project.
 .. Name your project `Order-to-cash automation`.
 . In the *Let’s Get Started* wizard, click the link `Go straight to canvas`, which is in the bottom-left corner.
 +
-*Result:* Flow Designer appears, an empty trigger card displayed in the middle of the canvas.
+*Result:* Flow Designer appears with an empty trigger card displayed in the middle of the canvas.
 +
 image::canvas-empty-trigger.png[]
 
@@ -132,7 +132,7 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 
 == Configure the card for Twilio
 
-Because you want to notify the customer with an SMS, you can a Twilio connector and its Send Message operation.
+Because you want to notify the customer with an SMS, you can use a Twilio connector and its Send Message operation.
 
 . Click the plus sign that is to the right of the Salesforce card.
 . Select the Twilio connector and the operation *Send Message*.
@@ -209,7 +209,7 @@ Here is example JSON:
 
 === Create the type for the data stored in the products database
 
-Call this data type `Product Information` and use this example JSON:
+Name this data type `Product Information` and use this example JSON:
 
 ```
 [
@@ -237,7 +237,7 @@ image::flow-with-set-variable-card.png[]
 
 == Add SKUs that are based on the size of the deal
 
-NTO has different SKUs (stock keeping units) for their enterprise customers, small business customers and retail customers. You need to add the appropriate product information from the product database to the opportunity based on the deal size. The table below explains how products are segmented.
+NTO has different SKUs (stock keeping units) for their enterprise customers, small business customers, and retail customers. You need to add the appropriate product information from the product database to the opportunity based on the deal size. The table below explains how products are segmented.
 
 [%header,cols=2*]
 |===
@@ -440,7 +440,7 @@ If there are no errors and if the *Run* button is enabled in the top-right corne
 +
 image::salesforce-app-switcher.png[]
 . Go to *Opportunities* and change the view to *All Opportunities*.
-. Find an opportunity which is not in the `Closed Won` stage.
+. Find an opportunity that is not in the `Closed Won` stage.
 . Open and edit the opportunity by changing the value of `Stage` to `Closed Won`.
 . Update the amount to be greater than $100,000, and then click *Save*.
 . Go back to your Mule application in Flow Designer. If you see a green line in each card, the flow was triggered and a text message with the order details was sent to your mobile phone.
@@ -449,6 +449,6 @@ image::salesforce-app-switcher.png[]
 
 You've received your text message, run around the office showing it to everyone, and triggered the application several times to admiring audiences and many congratulatory remarks. You've replied with modesty, jovially and collegially explaining what Flow Designer is, pointing to the cards, explaining what connectors and components you use in the application, and indicating with your forefinger how the flow is triggered and how data moves through it. You've even received a thumbs-up for making your application available outside of the Design environment where you created it.
 
-So, you are now ready for the very last step: xref::promote-app-prod-env-design-center.adoc[deploying your Mule application]. This tutorial doesn't cover that, but the link does take you to help that shows the steps, if you are inclined to deploy this example Mule application.
+So, you are now ready for the very last step: xref::promote-app-prod-env-design-center.adoc[deploying your Mule application]. This tutorial doesn't cover that, but the link takes you to help that shows the steps, if you want to deploy this example Mule application.
 
 We hope this tutorial was easy enough to follow, yet complex enough to show you how you can use Flow Designer to your benefit in real-world scenarios. Happy flow-designing!
