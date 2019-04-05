@@ -28,7 +28,7 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 == Procedure
 
-. On the *Projects* page in Design Center, click *Create* and select *API Fragment*.
+. On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
 . In the *New API Fragment* dialog, type a name for the project and select the type of API fragment that you want to create. Then, click *Create*.
 +
 _Result:_ The API editor opens. The editor is divided into three panels:

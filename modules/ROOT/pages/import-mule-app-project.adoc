@@ -12,6 +12,13 @@ You can import a Mule-application project that was exported from Design Center. 
 * Importing a project that was exported from a different environment within a single organization
 * Importing a project that was exported from an environment that is in a different organization
 
+[IMPORTANT]
+====
+An exported project does not include items that the project linked to in its original location.	An imported project does not include drivers or other types of library that the project included its original location. If an imported project contains any connectors that require libraries, you must open those connectors and set up the required libraries.
+
+For example, if the project contains a Database connector, the database driver for that connector is not included in the exported project. After you import the project, you must open the Database connector, browse to the location of the database driver, and select it.	For example, if an imported project contains a Database connector, the database driver for that connector is not included in the project. You must open the Database connector and set up the driver.
+====
+
 ////
 
 * If you plan to import a Mule application that was exported from Anypoint Studio, ensure that, when it was exported, these options were selected:
@@ -33,7 +40,7 @@ You can import a Mule-application project that was exported from Design Center. 
 
 == Procedure
 
-. On the Project page of Design Center, click the *Create* button and select *Import Application*.
+. On the *Projects* page of Design Center, click the *Create* button and then click *Import Application*.
 . Specify a name to give to the imported project.
 . Browse your filesystem for the `.jar` file that contains the project.
 // . Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.

@@ -1,4 +1,4 @@
-= Create an API Specification (in RAML or OAS) or a RAML API Fragment
+= API Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

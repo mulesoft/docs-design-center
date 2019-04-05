@@ -9,7 +9,7 @@ You can use Design Center’s API editor create API specifications directly in R
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
-. On the *Projects* page in Design Center, click *Create* and select *API Specification*.
+. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
 . In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the API editor. You can also choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
 +
 _Result:_ The API editor opens. The editor is divided into three panels:

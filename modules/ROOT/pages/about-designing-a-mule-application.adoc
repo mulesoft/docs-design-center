@@ -1,29 +1,25 @@
-= About Designing Mule Apps
+= Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
 
-In Design Center, you create a Mule application in a project having one or more flows. A flow typically consists of one trigger and one or more connectors, components, or APIs.
+In Flow Designer, you create Mule applications as projects having one or more flows. A project contains the flows for one Mule application. A Mule application can have one or more flows. A flow consists of a sequence of _cards_, with each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific task, and then sends the output of that task to the next card in the flow. The final card in a flow is usually one that sends a notification that the Mule application has completed its task or that sends data.
 
-A flow performs operations specified by its components when triggered. For example:
+To get started with Flow Designer by building an example Mule application, see xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
 
-* An HTTP listener at the beginning of a flow gets an outside event, an incoming HTTP request, which starts the flow.
-* A Scheduler at the beginning of a flow starts the flow at a configured time or restarts the flow after an elapsed time.
-* A Flow Ref in one flow starts another flow by referencing its name. A flow needs a trigger unless started by a Flow Ref in another flow.
 
-Each component receives an input, carries out a specific function, and then transfers the output to the next part of the flow. The placement of components in a flow affects functionality.
+// Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
 
-For a tutorial that will help you get started building Mule applications, see "To Create a Basic Mule Application", which is linked to from the *See also* section at the end of this topic.
+// Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
+
 
 
 == See also
 
-* xref:create-basic-app-task.adoc.adoc[To Create a Basic Mule Application (Design Center)]
-* xref:4.1@mule-runtime::about-components.adoc[About Mule Components]
+* xref:4.1@mule-runtime::about-components.adoc[Components]
 * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
-* xref:4.1@mule-runtime::mule-application-about.adoc[About Mule Applications]
-* xref:4.1@mule-runtime::about-mule-event.adoc[About Mule Events]
-* xref:4.1@mule-runtime::about-mule-message.adoc[About Mule Messages]
-* xref:4.1@mule-runtime::about-components.adoc[About Components]
-* xref:4.1@mule-runtime::about-flows.adoc[About Flows]
+* xref:4.1@mule-runtime::about-flows.adoc[Flows]
+* xref:4.1@mule-runtime::mule-application-about.adoc[Mule Applications]
+* xref:4.1@mule-runtime::about-mule-event.adoc[Mule Events]
+* xref:4.1@mule-runtime::about-mule-message.adoc[Mule Messages]

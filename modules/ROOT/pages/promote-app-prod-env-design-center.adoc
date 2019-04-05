@@ -1,10 +1,10 @@
-= Deploy an App (Design Center)
+= Deploy a Mule Application (Design Center)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: mozart, deploy, environments
 
-When an app that you develop in the design environment is ready to publish, you can deploy it using the procedure in this topic. You need to select an target environment, such as production, that has been set up with vCores for deployment. You deploy an app to a specific environment for a number of reasons:
+When a Mule application that you've developed in the Design environment is ready to go live, you can deploy it to another environment. You must select an target environment, such as Production, that has been set up with vCores for deployment. You deploy an app to a specific environment for a number of reasons:
 
 * Security
 +
