@@ -16,4 +16,4 @@ Changing the version of Mule runtime might require you to update the connectors 
 
 == See also
 
-* xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project (Design Center)]
+* xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project (Flow Designer)]

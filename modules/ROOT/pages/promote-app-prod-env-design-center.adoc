@@ -1,4 +1,4 @@
-= Deploy a Mule Application (Design Center)
+= Deploy a Mule Application (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

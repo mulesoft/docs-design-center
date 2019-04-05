@@ -1,4 +1,4 @@
-= To Dynamically Change the URL of a Request (Design Center)
+= To Dynamically Change the URL of a Request (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

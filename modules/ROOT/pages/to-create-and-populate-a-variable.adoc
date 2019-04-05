@@ -1,4 +1,4 @@
-= About Creating Variables (Design Center)
+= About Creating Variables (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

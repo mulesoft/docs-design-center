@@ -1,4 +1,4 @@
-= Update Dependencies in a Mule-Application Project (Design Center)
+= Update Dependencies in a Mule-Application Project (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
