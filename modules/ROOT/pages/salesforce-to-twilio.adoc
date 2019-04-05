@@ -33,7 +33,7 @@ Your task is to put this process in place within a tight deadline. You realize t
 |===
 
 == Your approach
-To automate this process, you have to overcome a few integration challenges. You come up with this list of what needs to happen in order to automate this order to cash cycle.
+To automate this process, you have to overcome a few integration challenges. You come up with this list of what needs to happen in order to automate this order-to-cash cycle.
 
 . Salesforce starts the workflow automation process when a sale is made. This process is triggered in Salesforce when an opportunity is changed to "Closed Won".
 . The process retrieves the appropriate product information from the products database.
@@ -54,7 +54,7 @@ Fortunately, you know just the tool to help you carry out this plan: Flow Design
 * Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need a trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
 
 == Capture opportunities that are won
-You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, you specify in Salesforce which fields to send and our criteria for triggering the application. You can specify all of this with an SOQL query. After you build the query, you can set up a Push Topic that can serve as the trigger for your MuleSoft application.
+You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, use an SOQL query in Salesforce which fields to send and our criteria for triggering the application. After you build the query, you can set up a Push Topic that can serve as the trigger for your MuleSoft application.
 
 . Navigate to the xref::https://workbench.developerforce.com/query.php[SOQL query builder]. (You have to log in with your Salesforce credentials.)
 . Select *Opportunity* as the Object.
@@ -72,7 +72,7 @@ image::soql-query-screen-1.png[]
 +
 image::streaming-push-topics.png[]
 
-Now, every time the query criterion is met, Salesforce will push an event into the `ClosedOpps` Push Topic.
+Now, every time the query criteria are met, Salesforce will push an event into the `ClosedOpps` Push Topic.
 
 == Create a project in Flow Designer
 
