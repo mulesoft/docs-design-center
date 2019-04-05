@@ -1,22 +1,21 @@
-= Refresh or Delete a Module Configuration (Design Center)
+= Refresh or Delete Data that Appears on Cards (Design Center)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Indicators and component metadata appear on each face of each module in the flow.
+:imagesdir: ../assets/images
+
+
+Indicators and component metadata appear on each face of each card in the flow.
 
 image::green-bar.png[typical flow,height=183,width=724]
 
-If you make changes, for example to the path configured for the GET method of an HTTP Listener, the data that appears on the component becomes stale. You can refresh or delete the data by following the steps in this procedure:
+If you make any changes to a card, for example to the path configured for the GET method of an HTTP Listener, the indicators and metadata that appear on the card become stale. You can refresh or delete this information by following these steps:
 
-. Hover over the top right corner of the face of a closed module.
+. Hover over the top right corner of the face of a closed or open card.
 +
 image::fd13hover.png[]
 +
-. Click the options control that appears, and select Refresh or Delete.
+. Click the three-dot icon that appears, and select *Refresh* or *Delete*.
 +
 image::fd13-refresh.png[]
-
-You can also refresh or delete the data from the options control of the opened module.
-
-image::refresh-delete-opened1.png[height=264,width=724]
