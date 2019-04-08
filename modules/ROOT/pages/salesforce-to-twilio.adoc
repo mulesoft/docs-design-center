@@ -39,7 +39,7 @@ To automate this process, you have to overcome a few integration challenges. You
 . The process retrieves the appropriate product information from the products database.
 . After the process has retrieved the information, it places an order with the NTO Orders API.
 . The Orders API returns the order number, tracking information, and ETA for delivery.
-. The information returned by the API is translated into human readable text and sent to as an SMS to the customer.
+. The information returned by the API is translated into human readable text and sent as an SMS to the customer.
 
 Visually, the process should look like this:
 
