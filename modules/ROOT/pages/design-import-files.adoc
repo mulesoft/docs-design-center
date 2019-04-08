@@ -3,14 +3,23 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can import files, either separately or bundled together in `.zip` files, into the projects in which you are creating API specifications and API fragments. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
+You can import API specifications and RAML fragments into a project. There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
+
+The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0.
+
+[NOTE]
+====
+You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
+====
+
+The fragments that you import can be written in RAML 0.8 or RAML 1.0.
 
 
 == About this task
 
 Importing API specifications::
 +
-You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
+
 +
 Additional specifications that you import can be in RAML or OAS.
 
@@ -31,8 +40,20 @@ securedBy: [ oauth_2_0 ]
 +
 You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits. If you import an example of a JSON response payload, you can also import the JSON schema, so that developers creating their own response payloads can refer to the schema when doing so.
 
+== Procedure
 
+* To import a file or the content of a .zip file that is stored on your computer:
+. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. In the *Import* dialog, select *File or Zip*.
 
++
+*Result:* The file or files are listed in the left pane of the editor. If you imported a `.zip` file that contains files that are in a folder structure, the folder structure is represented in the pane.
+
+* To import a file that is available through a URL:
+
+. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. In the *Import* dialog, select *URL*.
++
 [NOTE]
 ====
 
@@ -40,14 +61,14 @@ You can import annotation types, data types, examples of JSON response payloads,
 
 ====
 
-
-== Procedure
-
-. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
-. In the *Import* dialog, select one of these options:
 +
-*File or Zip*:: Select this option if you are importing one or more files that are located on your computer.
-*URL*:: Select this option if you are importing a single file that is available at a location online.
+*Result:* The file is listed in the left pane of the editor.
 
+* To import an API specification or API fragment from Exchange, together with its dependencies:
+. Open the *Import Asset from Exchange* dialog by using either of these methods:
 +
-_Result:_ After you click *Import*, the files are listed in the left pane of the editor. If you imported a `.zip` file that contains the files in a folder structure, the files are listed in that folder structure.
+** If your project contains only the default file that API Designer created together with the project, click the linked text in the sentence "Start project from an existing example".
++
+** If your project contains at least one file that you have created, click the three-dot icon at the top of the left pane and select *Import from Exchange*.
+
+. dd
