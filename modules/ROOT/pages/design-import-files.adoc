@@ -64,3 +64,6 @@ If you want to import the copy. you might need to correct errors in it after you
 +
 *Created by*:: The user ID of the person who published the currently selected version of the currently selected asset.
 . Click *Import Asset*.
+
++
+*Result:* The file or files are listed in the left pane of the editor. 
