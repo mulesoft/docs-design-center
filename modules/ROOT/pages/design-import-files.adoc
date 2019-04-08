@@ -54,9 +54,11 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 +
 *Type*:: The type of asset. The value can be either *API Specification* or *RAML Fragment*.
 +
-*Language* (for API specifications):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
+*Language* (for API specifications being imported into the API editor):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
 +
 If you want to import the copy, you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
++
+*Language* (for API specifications being imported into the visual API editor):: The language is always RAML. API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
 +
 *Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
 +
