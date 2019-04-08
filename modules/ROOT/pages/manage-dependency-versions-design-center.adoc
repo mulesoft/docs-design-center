@@ -6,9 +6,9 @@ endif::[]
 :imagesdir: ../assets/images
 :keywords: mozart
 
-Dependencies are connectors and other parts of a flow that are versioned independently from Mule Runtime. For example, suppose you are using the Sharepoint connector in a flow; although you might be using Mule Runtime 4.1.5, you might be using version 3.1.1 of the Sharepoint connector. You can switch to a different version of a dependency. For example, you might want to switch to the latest version of a connector, so that your Mule application can use a new feature that is included in that version.
+Dependencies are connectors and other parts of a flow that are versioned independently from Mule. For example, if you are using Sharepoint connector 3.1.1 in a flow and Mule 4.1.5, you can switch to a different version of the connector and continue to use Mule 4.1.5. You might want to switch to the latest version of a connector so that your Mule application can use a new feature that is included in that version.
 
-Switching will not cause your project to delete the reusable configuration that you have created for for the connector. However, if the changes that are introduced in the version that you switch to include configuration changes, you might need to edit the configuration for the connector. To check whether editing is necessary, refer to the release notes for the connector.
+Switching will not cause your project to delete the reusable configuration that you have created for the connector. However, if the changes that are introduced in the version that you switch to include configuration changes, you might need to edit the configuration for the connector. To check whether editing is necessary, refer to the release notes for the connector.
 
 == Procedure
 

@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In the Transform card, you can view recommendations for how to map the data elements in an input data type to the data elements in an output type. If a recommendation suits your needs, you can click *Apply* to save the mapping and use it in the card.
+In the Transform card, you can view recommendations for how to map the data elements in an input data type to the data elements in an output type. If a recommendation suits your needs, you can save the mapping and use it in the card.
 
 == About this task
 
@@ -25,7 +25,7 @@ If you are not sure how to map an input data type to an output type, you can hav
 
 * The card does not make recommendations for mapping input attributes to output attributes or input variables to output variables.
 
-* Elements of an array that is itself an element in an array are ignored in the recommendations. For example, both d and e in this data type are ignored:
+* Elements of an array that is itself an element in an array are ignored in the recommendations. For example, both `d` and `e` in this data type are ignored:
 +
 ----
 {
@@ -39,7 +39,7 @@ If you are not sure how to map an input data type to an output type, you can hav
 }
 ----
 +
-In this data type, both e and f are ignored:
+In this data type, both `e` and `f` are ignored:
 +
 ----
 {
@@ -63,8 +63,8 @@ In this data type, both e and f are ignored:
 Ensure that the Automapping feature is enabled for your organization in Anypoint Platform.
 
 . In Anypoint Platform, open Access Management.
-. Under Settings on the left side of the screen, click Flow Designer.
-. On the Flow Designer General Settings page, click the circle in the Enable column.
+. Under *Settings* on the left side of the screen, click *Flow Designer*.
+. On the *Flow Designer General Settings* page, click the circle in the *Enable* column.
 
 IMPORTANT: The recommendation system works by collecting and analyzing anonymized data from all users of Design Center who are using CloudHub. Enabling this feature enables the collection of anonymized data for improving recommendations. If you have any concerns about sharing even anonymized data, do not enable this feature.
 

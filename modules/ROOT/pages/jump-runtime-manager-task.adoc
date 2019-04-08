@@ -5,8 +5,8 @@ endif::[]
 
 When you run an app in Flow Designer, it appears in the list of running applications in Runtime Manager. You can jump to Runtime Manager from Flow Designer to manage the app there. In Runtime Manager, you can configure runtime operations of Mule apps that you are designing.
 
-. If the status message in the toolbar above the canvas says, "Ready to Run", click *Run*.
-. In Design Center, click the three-dots icon to the left of the *Deploy* button.
+. If the status message in the toolbar above the canvas is `Ready to Run`, click *Run*.
+. Click the three-dots icon to the left of the *Deploy* button.
 . Select *View in Runtime Manager*.
 
 
