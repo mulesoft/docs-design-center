@@ -7,10 +7,10 @@ Use the mocking service to provide a public link to the API you are designing. T
 
 == Before you begin
 
-You must be working in a project to create an API specification in Design Center.
+You must be working in a project to create an API specification in API Designer.
 
 == About this task
-Simulating calls to the API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to the API in Design Center before publishing the API specification or in Exchange after publishing the API specification there.
+Simulating calls to the API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to the API in API Designer before publishing the API specification or in Exchange after publishing the API specification there.
 
 When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI (RAML) or base path (OAS), the mocking service comments it out. When you deactivate the mocking service, it removes the base URI or base path that it used and uncomments your base URI or base path. For example, if the base URI in a RAML API specification is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://anypoint.mulesoft.com/mocking/api/v1/links/+`, etc. is the URI used by the mocking service:
 
@@ -26,12 +26,12 @@ You can run the mocking service from the API editor, the visual API editor, and 
 
 [NOTE]
 ====
-Design Center's public, mocked URI is also visible in Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI either in their code or in a tool for testing API implementations.
+API Designer's public, mocked URI is also visible in Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI either in their code or in a tool for testing API implementations.
 ====
 
 == Procedure
 
-* If you are using the API editor in Design Center:
+* If you are using the API editor in API Designer:
 +
 . Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
 . In the API summary panel, expand completely the resource with the endpoint that you want to test.
@@ -47,7 +47,7 @@ _Result:_ The URI for the endpoint is displayed. If the endpoint requires parame
 +
 _Result:_ The panel displays the result below the *Send* button.
 
-* If you are using the visual API editor in Design Center:
+* If you are using the visual API editor in API Designer:
 +
 . Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
 . In the left panel, select the resource with the endpoint that you want to test.

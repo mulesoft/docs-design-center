@@ -12,33 +12,7 @@ The API specifications that you import can be written in RAML 0.8, RAML 1.0, or 
 You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
 ====
 
-The fragments that you import can be written in RAML 0.8 or RAML 1.0.
-
-
-== About this task
-
-Importing API specifications::
-+
-
-+
-Additional specifications that you import can be in RAML or OAS.
-
-Importing API fragments::
-+
-Both API specifications and API fragments can include reusable portions that are contained in separate files. For example, suppose you want to use OAuth 2.0 for securing implementations of your API. You might have a security scheme defined in a RAML file named `oauth_2_0.raml` that explains the settings for implementations to use, as well as other info such as headers and responses. You would import `oauth_2_0.raml` into your project. Then, in your API specification, you would include the security scheme, as in this example:
-+
-....
-securitySchemes:
-  - oauth_2_0: !include oauth_2_0.raml
-....
-+
-Then, use the `securedBy` keyword to refer to the scheme, as in this example:
-+
-....
-securedBy: [ oauth_2_0 ]
-....
-+
-You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits. If you import an example of a JSON response payload, you can also import the JSON schema, so that developers creating their own response payloads can refer to the schema when doing so.
+The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits. 
 
 == Procedure
 
