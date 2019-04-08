@@ -1,4 +1,4 @@
-= About Running an App (Design Center)
+= About Running an App (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

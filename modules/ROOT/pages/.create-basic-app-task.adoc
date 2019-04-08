@@ -1,4 +1,4 @@
-= To Create a Basic Mule Application (Design Center)
+= To Create a Basic Mule Application (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

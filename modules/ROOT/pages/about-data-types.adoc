@@ -1,4 +1,4 @@
-= About Data Types (Design Center)
+= About Data Types (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

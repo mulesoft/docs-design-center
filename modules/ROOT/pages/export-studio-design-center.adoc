@@ -1,4 +1,4 @@
-= Export a Project (Design Center)
+= Export a Project (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
