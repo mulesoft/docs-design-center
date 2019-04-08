@@ -45,4 +45,22 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 ** *In the API editor only:* If your project contains at least one file that you have created, click the three-dot icon at the top of the left pane and select *Import from Exchange*.
 ** *In the visual API editor only:* If your project does not yet contain any resources or data types, click the linked text that appears in the *New API* pane.
 
-. n
+. In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
+. Select one of the assets, which are listed in a table that has these columns:
++
+*Name*:: The name of an API specification or RAML fragment.
++
+*Version*:: The version of a specification or fragment. Select the *Include snapshots* check box in the bottom-left corner of the dialog to include snapshots in this column.
++
+*Type*:: The type of asset. The value can be either *API Specification* or *RAML Fragment*.
++
+*Language* (for API specifications):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
++
+If you want to import the copy. you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
++
+*Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
++
+*Date modified*:: The date that the currently selected version of the currently selected asset was published.
++
+*Created by*:: The user ID of the person who published the currently selected version of the currently selected asset.
+. Click *Import Asset*.
