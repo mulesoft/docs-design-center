@@ -523,3 +523,22 @@ title: ExampleRAML
 ----
 
 <<Back to the top>>
+
+== Error message: `should be integer`
+// APIMF-853
+
+The data type for the example of a property that is an integer must be an integer. As an example of the violation, the data type of the example does not match the data type defined for `uriParameters`.
+
+
+----
+#%RAML 0.8
+title: Order Entry API
+/orders:
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+        example: "451"
+----
+
+<<Back to the top>>
