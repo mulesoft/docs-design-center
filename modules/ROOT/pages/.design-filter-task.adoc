@@ -1,4 +1,4 @@
-= To Transform from a Full Set of Data to a Subset (Design Center)
+= To Transform from a Full Set of Data to a Subset (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

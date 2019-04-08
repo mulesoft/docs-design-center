@@ -1,4 +1,4 @@
-= Reference One Flow from Another (Design Center)
+= Reference One Flow from Another (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

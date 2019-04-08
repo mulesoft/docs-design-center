@@ -1,4 +1,4 @@
-= Update Dependencies in a Mule-Application Project (Design Center)
+= Update Dependencies in a Mule-Application Project (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,7 +6,9 @@ endif::[]
 :imagesdir: ../assets/images
 :keywords: mozart
 
-Dependencies are connectors and other parts of a flow that are versioned independently from the Mule runtime. You can update an existing project to use a different version of a dependency without losing its configuration. However, if the change to the version affects configuration fields, you might need to change those settings as described in the release notes.
+Dependencies are connectors and other parts of a flow that are versioned independently from Mule. For example, if you are using Sharepoint connector 3.1.1 in a flow and Mule 4.1.5, you can switch to a different version of the connector and continue to use Mule 4.1.5. You might want to switch to the latest version of a connector so that your Mule application can use a new feature that is included in that version.
+
+Switching will not cause your project to delete the reusable configuration that you have created for the connector. However, if the changes that are introduced in the version that you switch to include configuration changes, you might need to edit the configuration for the connector. To check whether editing is necessary, refer to the release notes for the connector.
 
 == Procedure
 

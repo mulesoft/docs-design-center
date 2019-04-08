@@ -1,4 +1,4 @@
-= Key Flow Design Tasks (Design Center)
+= Key Flow Design Tasks (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

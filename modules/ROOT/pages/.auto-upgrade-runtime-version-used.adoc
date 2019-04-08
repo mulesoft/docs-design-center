@@ -8,5 +8,5 @@ This process ensures that Mule applications are always using the latest version 
 ====
 The upgrade might require you to update the connectors that are used in the application. If so, you cannot redeploy the application until you update the connectors.
 
-For the steps required to update a connector, see xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project (Design Center)].
+For the steps required to update a connector, see xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project (Flow Designer)].
 ====

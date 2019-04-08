@@ -28,7 +28,6 @@
  ** xref:to-create-a-mule-application-project.adoc[Clone a Mule App Project]
  ** xref:import-mule-app-project.adoc[Import a Mule Application]
  ** xref:export-studio-design-center.adoc[Export a Project]
- ** xref:dynamic-expression-field.adoc[Dynamically Creating Expressions]
  ** xref:viewing-problems-fd-canvas.adoc[List and Navigate to Errors that are in a Mule-App Project]
  ** xref:logger-task-design-center.adoc[Log Data]
  ** xref:view-clear-logs-task.adoc[View the Log for a Mule App Project in Flow Designer]

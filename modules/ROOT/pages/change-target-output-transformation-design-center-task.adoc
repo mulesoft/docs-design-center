@@ -1,4 +1,4 @@
-= To Change the Target Output of a Transformation (Design Center)
+= To Change the Target Output of a Transformation (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
