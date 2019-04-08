@@ -56,7 +56,7 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 +
 *Language* (for API specifications):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
 +
-If you want to import the copy. you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
+If you want to import the copy, you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
 +
 *Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
 +
@@ -66,4 +66,4 @@ If you want to import the copy. you might need to correct errors in it after you
 . Click *Import Asset*.
 
 +
-*Result:* The file or files are listed in the left pane of the editor. 
+*Result:* The file or files are listed in the left pane of the editor.
