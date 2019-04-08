@@ -1,4 +1,4 @@
-= To Inspect Input and Output (Design Center)
+= To Inspect Input and Output (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
