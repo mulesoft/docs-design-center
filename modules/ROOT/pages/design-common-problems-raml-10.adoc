@@ -140,7 +140,7 @@ If you do not follow these rules, you will see the messages that are explained i
 If you see this violation message in the API editor, then your API specification is incorrectly referencing a named example by using an `example` facet:
 
 ----
-Named example fragments should be included in 'examples' facet
+Named example fragments must be included in 'examples' facet
 ----
 
 You must use an `examples` (`example` with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
