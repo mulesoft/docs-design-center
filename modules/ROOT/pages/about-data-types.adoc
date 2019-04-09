@@ -1,4 +1,4 @@
-= About Data Types (Design Center)
+= About Data Types (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -26,7 +26,5 @@ When you run the app, the flow starts executing when triggered. Real data appear
 The HTTP Request Connector does not expose any information by default, but you can configure the connector using a RAML API specification, which includes information about required inputs and expected outputs.
 
 == See Also
-
-* xref:design-filter-task.adoc[To Transform a Full Set of Data to a Subset]
 
 * xref:flow-datatype-task.adoc[To Set Data Types for a Flow]

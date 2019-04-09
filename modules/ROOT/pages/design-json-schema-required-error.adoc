@@ -1,0 +1,92 @@
+= Common Mistake in Specifying Required Fields in JSON Schemas
+
+Design Center supports both JSON Schema Draft 3 and JSON Schema Draft 4. The method of specifying fields as `required` differs in Draft 3 from the method used in Draft 4. In your API specifications, an error is indicated if you mix the method that you are using with a declaration of the wrong draft.
+
+In Draft 3, you specify fields as `required` in the definition of each field, as in this example:
+----
+{
+  "$schema": "http://json-schema.org/draft-03/schema#",
+  "type": "object",
+  "properties": {
+    "pageNum": {
+      "type": "integer",
+      "title": "Page number",
+      "description": "...",
+      "default": 1,
+      "required": true
+    },
+    "pageSize": {
+      "type": "integer",
+      "title": "Page size",
+      "description": "...",
+      "required": true,
+      "default": 50,
+      "enum": [
+         10,
+         20,
+         30,
+         40,
+         50
+         ]
+      }
+...
+----
+
+In Draft 4, you specify that fields are `required` by creating an array that is at the same level as the definitions of the fields, like this:
+----
+{
+  "$schema": "http://json-schema.org/draft-4/schema#",
+  "type": "object",
+  "properties": {
+    "pageNum": {
+      "type": "integer",
+      "title": "Page number",
+      "description": "...",
+      "default": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "title": "Page size",
+      "description": "...",
+      "default": 50,
+      "enum": [
+         10,
+         20,
+         30,
+         40,
+         50
+         ]
+      },
+    "required": [
+      "pageNum",
+      "pageSize"
+      ]
+    },
+...
+----
+
+Here is another example of the method used in Draft 4:
+----
+{
+  "$schema": "http://json-schema.org/draft-4/schema#",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "streetAddress": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "required": [
+          "streetAddress",
+          "city"
+        ]
+      },
+      "phoneNumber": {
+...
+----
+
+If you have used the Draft 3 method after declaring that the schema uses Draft 4, or vice versa, in most cases you can simply change the schema declaration. For example, if you declared that your schema uses Draft 3, but the schema uses the method from Draft 4, you can change your schema declaration to point to Draft 4.

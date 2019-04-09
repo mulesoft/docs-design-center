@@ -1,34 +1,30 @@
-= Deploy an App (Design Center)
+= Deploy a Mule Application (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: mozart, deploy, environments
 
-When an app that you develop in the design environment is ready to publish, you can deploy it using the procedure in this topic. You need to select an target environment, such as production, that has been set up with vCores for deployment. You deploy an app to a specific environment for a number of reasons:
+When a Mule application that you've developed in the Design environment is ready to go live, you can deploy it to another environment. The target environment must have enough vCores to accommodate the application; otherwise, deployment will fail.
 
-* Security
-+
-You can restrict the environment, as the organization administrator, to certain users.
-* Traffic Management
-+
-You can change the connector configuration and reconnection strategy per environment. For example, you can connect to a different server to send requests based on the environment.
+As you deploy your application, you can change connector configurations and reconnection strategies. You need to do this if there are differences between the Design and target environments that would necessitate such changes.
 
-Be aware of the public exposure to your app as a consequence of deploying an app to a selected environment.
-
+== Procedure
 . Click Deploy.
 +
 image::deploy-dialog.png[]
 
 . Select the CloudHub environment to deploy the application to.
 . Accept the default name for the deployed application or enter a new one.
-
-. Set up the connection configurations of your project for the deployment environment.
+. Edit the connection configurations to be compatible with the target environment.
 +
 image::deploying-your-project-9cee7.png[]
-+
-Connector configuration fields are the same from one environment to another.
 
-After deployment, you can go to Runtime Manager to manage the application. Click the options menu to the left of the *Deploy* button and select *View in Runtime Manager*.
+== What to do next
+
+You can go to Runtime Manager to manage the application. To get there from Flow Designer, click the three-dots icon to the left of the *Deploy* button and select *View in Runtime Manager*.
+
+// April 5, 2019: I'm rewriting this topic today and can't find in our docs any info about securing apps. So, I'll comment this out for now:
+// You can restrict access to the application in the target environment to specific users, if you do not want access available to the general public. To restrict access, your user ID must be an organization administrator in Anypoint Platform.
 
 
 == See also

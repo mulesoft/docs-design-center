@@ -1,4 +1,4 @@
-= General Flow Design Tasks (Design Center)
+= General Flow Design Tasks (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -15,5 +15,3 @@ Design Center topics include tasks involving a few of the modules.
 * xref:reference-flow-task-design-center.adoc[Reference One Flow from Another]
 * xref:change-target-output-transformation-design-center-task.adoc[Change the Target Output of a Transformation]
 * xref:error-handling-task-design-center.adoc[Handle Errors]
-* xref:design-filter-task.adoc[Transform from a Full Set of Data to a Subset]
-* xref:for-each-task-design-center.adoc[Drill Down into JSON]
