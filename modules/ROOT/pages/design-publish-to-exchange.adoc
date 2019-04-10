@@ -1,10 +1,10 @@
-= Publish an API Specification or RAML Fragment to Exchange
+= Publish a Project to Exchange
 
+When you want to share an API specification or a RAML fragment, whether it is ready to use or is only a draft, you can publish your project to Anypoint Exchange. Other users in your organization will be able to use the specification or fragment in their own projects in Design Center, Studio, or other tools.
 
+// == Before you begin
 
-== Before you begin
-
-Ensure that 
+// Ensure that...what permission does the user need, or what role does the user ID need to play?
 
 
 == Procedure
@@ -13,7 +13,7 @@ Ensure that
 . Fill in the following fields or accept the default values:
 +
 Name:: The name to give to the specification or fragment on Exchange. By default, the value is the name of the project.
-Main file:: The name of the primary specification (if your project has more than one), the only specification in the project, or the RAML fragment.
+Main file:: The name of the primary specification (if your project has more than one), the only specification in the project, or the RAML fragment. All other files in your project are published, too.
 Asset version:: The version number that appears on Exchange. This version number also is included in the three-part ID of the asset in Exchange.
 API version:: (_Not applicable if you are publishing a RAML fragment_) If a version number is specified in the specification, this value matches that number; moreover, if you change the number here, API Designer changes it in the specification. If, however, the specification does not specify a version number, API Designer adds the value you specify here to the specification as the version number.
 Group ID:: (_Advanced option_) The ID of the business group in which you are publishing the asset. Only those users who belong to the specified business group will see your asset on Exchange. The group ID is included in the three-part ID of the asset in Exchange.
@@ -22,3 +22,7 @@ Asset ID:: (_Advanced option_) The ID to give to the asset on Exchange. The asse
 +
 *Result:* The asset version is appended with `-SNAPSHOT`.
 . Click *Publish*.
+
+== Result
+
+API Designer presents a confirmation dialog to let you know whether the project was published. If it was, you can click on the link to open another browser tab and view the Exchange asset that was created from your project.
