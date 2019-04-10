@@ -18,9 +18,11 @@ Asset version:: The version number that appears on Exchange on the page for the 
 API version:: (_Not applicable if you are publishing a RAML fragment_) If a version number is specified in the specification, this value matches that number; moreover, if you change the number here, API Designer changes it in the specification. If, however, the specification does not specify a version number, API Designer adds the value you specify here to the specification as the version number.
 Group ID:: (_Advanced option_) The ID of the business group in which you are publishing the asset. Only those users who belong to the specified business group will see your asset on Exchange. The group ID is included in the three-part ID of the asset in Exchange.
 Asset ID:: (_Advanced option_) The ID to give to the asset on Exchange. The asset ID is included in the three-part ID of the asset in Exchange.
-. If you are publishing a draft of the asset and want to make it clear on Exchange that the asset is not read for use in production, expand *Show advanced* and select the *Snapshot* check box.
+. If you are publishing a draft of a version of the asset and want to make it clear on Exchange that the asset is not read for use in production, expand *Show advanced* and select the *Snapshot* check box. A _snapshot_ in Exchange is a published draft of an asset.
 +
-*Result:* The asset version is appended with `-SNAPSHOT`. In Exchange, this addition to the asset version indicates that the asset is a draft.
+*Result:* The asset version number is appended with `-SNAPSHOT`. 
++
+Every time you use the same asset version number and you select this option when publishing, you will replace the previous snapshot. For example, suppose you publish a draft of a specification, using the asset version number `1.1.0-SNAPSHOT`. Subsequently, you modify the draft and publish it with the same asset version number: `1.1.0-SNAPSHOT`. Exchange does not display both snapshots. Instead, it replaces the first snapshot with the second.
 . Click *Publish*.
 
 == Result
