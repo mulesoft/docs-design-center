@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use Design Center’s API editor create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
+You can use Design Center’s API editor create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML). When your specification is ready to be shared, either as a version ready for use or as a draft, you can publish it to Anypoint Exchange.
 
 == Before you begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
@@ -65,9 +65,7 @@ The converted file is not guaranteed to be a correct specification.
 
 
 == What to do next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the icon that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. The icon looks like this
-
-image::publish-to-exchange.png[title="Publish to Exchange icon",align="left"]
+When you are satisfied with your specification, you can publish it to Anypoint Exchange to share it with other people. See xref:design-publish-to-exchange.adoc[Publish an API Specification or RAML Fragment to Exchange].
 
 
 == See also
