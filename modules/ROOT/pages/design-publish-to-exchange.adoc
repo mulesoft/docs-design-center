@@ -2,6 +2,10 @@
 
 
 
+== Before you begin
+
+Ensure that 
+
 
 == Procedure
 
