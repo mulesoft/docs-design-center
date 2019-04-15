@@ -11,7 +11,7 @@ Problems that are among the top 10 most common (as determined by MuleSoft) are i
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
-
+[.schemaInsteadOfType]
 == _Top 10:_ Using the `schema` or `schemas` keyword instead of `type` or `types`
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
