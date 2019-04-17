@@ -106,7 +106,7 @@ types:
 
 <<Back to the top>>
 
-[.parser\\#named-example-used-inlined-example]
+[.parser\*named-example-used-inlined-example]
 == Problems with named examples
 // APIMF-907
 
