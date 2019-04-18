@@ -701,7 +701,7 @@ title: Example API Spec
 
 <<Back to the top>>
 
-== YAML map expected
+== Not providing a YAML map when a facet requires one
 
 When a facet is described in the RAML 0.8 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
 
@@ -741,6 +741,44 @@ version: 1.0
 securitySchemes:
   basic:
     type: Basic Authentication
+----
+
+<<Back to the top>>
+
+== Unresolved reference
+
+When a type is used, but is not first defined, the editor returns the message `Unresolved message`.
+
+In this example of the error, the type `mytype` is not defined.
+
+----
+#%RAML 1.0
+
+title: test
+/path:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: mytype
+----
+
+To resolve the problem, define the type that you are using.
+
+----
+#%RAML 1.0
+
+title: test
+types:
+  mytype: string
+/path:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: mytype
 ----
 
 <<Back to the top>>
