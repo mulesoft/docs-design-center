@@ -4,8 +4,6 @@
 
 As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the API editor a published API specification that is written in RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
-Problems that are among the top 10 most common (as determined by MuleSoft) are indicated with _Top 10:_ in their titles.
-
 [IMPORTANT]
 ====
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
@@ -955,6 +953,50 @@ title: ExampleRAML
 "assesments.characteristic.focusofattention.data"= "",
 }
 
+----
+
+<<Back to the top>>
+
+== YAML map expected
+
+When a facet is described in the RAML 1.0 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
+
+Here is an example of the error:
+
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+    settings:
+----
+
+There are two ways to fix the error.
+
+* Provide a map as a value.
++
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+    settings:
+      requestTokenUri: https://api.mysampleapi.com/1/oauth/request_token
+----
+
+* Delete the facet -- in this case, `settings` -- that requires a map.
++
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
 ----
 
 <<Back to the top>>
