@@ -11,7 +11,7 @@ Problems that are among the top 10 most common (as determined by MuleSoft) are i
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
-== _Top 10:_ Using a reserved name for a schema
+== Using a reserved name for a schema
 
 If you use a reserved name as the name of a schema, the editor displays this message:
 ----
@@ -316,6 +316,388 @@ The path must start at the root level of the schema and descend through the tree
        "type": "object"
     }
 
+----
+
+<<Back to the top>>
+
+== Declaring a URI parameter that is never used
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+// How should the examples change for RAML 0.8?
+
+If an API specification declares a URI parameter, but then does not use that parameter, the editor displays this warning message:
+
+----
+unused uri parameter “parameter”
+----
+
+If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
+----
+unused base uri parameter “parameter”
+----
+
+For example, the following API specification would generate two warning messages:
+
+----
+unused uri parameter "unusedParam"
+----
+
+----
+unused base uri parameter "unusedUriParam"
+----
+
+----
+#%RAML 0.8
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+    type: string
+ baseUriParam2:
+    type: string
+ unusedParam:
+    type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+   unusedUriParam:
+     type: string
+----
+
+To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
+
+----
+#%RAML 0.8
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+   type: string
+ baseUriParam2:
+     type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+----
+
+<<Back to the top>>
+
+
+
+== Not declaring a media type for a payload
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If the declaration of a payload does not declare a media type, the editor displays this message:
+
+----
+Payload media type is mandatory
+----
+
+For example, the editor would display this message for the following API specification:
+
+----
+#%RAML 0.8
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+There are two methods that you can choose from to resolve the problem:
+
+* Declare the media type locally in the payload declaration.
++
+----
+#%RAML 0.8
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+        application/json:
+         type: string
+----
+
+* Specify the default media type globally for the API specification.
++
+----
+#%RAML 0.8
+title: Example API Spec
+
+mediaType: application/json
+
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+The following example uses both a global and a local declaration. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global declaration with a local one, and returns only a JSON body.
+
+----
+#%RAML 0.8
+title: New API
+mediaType: [ application/json, application/xml ]
+schemas:
+  Person:
+  Another:
+/list:
+  get:
+    responses:
+      200:
+        body: Person
+/send:
+  post:
+    body:
+      application/json:
+        schema: Another
+----
+
+<<Back to the top>>
+
+
+== Not referencing fragments by using the `!include` tag
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the key `uses` to reference fragments, the editor displays this message:
+
+----
+Fragments must be imported by using '!include'
+----
+
+<<Back to the top>>
+
+
+== Not applying libraries by using the `uses` key
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the `!include` tag to apply a library, the editor displays this message:
+
+----
+Libraries must be applied by using 'uses'
+----
+
+<<Back to the top>>
+
+
+== Including a schema that contains invalid JSON
+// APIMF-841
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+
+The JSON in files that are included in the value of the `schemas` property must be valid.
+
+The first example includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+schemas:
+  - appSwitcher: !include schemas/appSwitcher.json
+----
+
+
+----
+{
+  "appMenuItems" : [
+    {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Call Center" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Community" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "App Launcher" ,
+      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
+    }
+  ]
+}
+----
+
+<<Back to the top>>
+
+== Using invalid JSON in examples of JSON schemas
+// APIMF-1069
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+
+Examples of JSON schemas must be valid, unlike the example in the following API specification:
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+...
+/api:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema:
+              {
+                "type": "object",
+                "required": true,
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                  "a": {
+                    "type": "boolean",
+                    "required": true
+                  }
+                }
+              }
+            example:
+              {
+                "a: {
+                  "a": ""
+                }
+----
+
+
+<<Back to the top>>
+
+== Not including a property in an example
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+// How should the examples change for RAML 0.8?
+
+If an example is missing a property of the type that it is exemplifying, the editor displays this violation message:
+
+----
+should have required property 'property name'
+----
+
+For example, the property `age` is missing in the example:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": true
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
+----
+
+Either add the property to the example or, in the type declaration, declare the property as optional.
+
+In this case, the property is added to the example:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": true
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
+              age: 30
+----
+
+In this case, the property is declared as optional:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": false
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
 ----
 
 <<Back to the top>>
