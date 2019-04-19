@@ -11,8 +11,8 @@ Problems that are among the top 10 most common (as determined by MuleSoft) are i
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
-
-== _Top 10:_ Using the `schema` or `schemas` keyword instead of `type` or `types`
+[.schemaInsteadOfType]
+== Using the `schema` or `schemas` keyword instead of `type` or `types`
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
 
@@ -71,7 +71,7 @@ types:
 
 <<Back to the top>>
 
-== _Top 10:_ Using a reserved name for a type
+== Using a reserved name for a type
 
 If you use a reserved name as the name of a type, the editor displays this message:
 ----
@@ -106,7 +106,8 @@ types:
 
 <<Back to the top>>
 
-[#try-ID]
+[.parser\*named-example-used-inlined-example]
+
 == Problems with named examples
 // APIMF-907
 
@@ -588,6 +589,373 @@ types:
        body:
         type: collection
         example: 22342342
+----
+
+<<Back to the top>>
+
+== Declaring a URI parameter that is never used
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification declares a URI parameter, but then does not use that parameter, the editor displays this warning message:
+
+----
+unused uri parameter “parameter”
+----
+
+If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
+----
+unused base uri parameter “parameter”
+----
+
+For example, the following API specification would generate two warning messages:
+
+----
+unused uri parameter "unusedParam"
+----
+
+----
+unused base uri parameter "unusedUriParam"
+----
+
+----
+#%RAML 1.0
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+    type: string
+ baseUriParam2:
+    type: string
+ unusedParam:
+    type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+   unusedUriParam:
+     type: string
+----
+
+To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
+
+----
+#%RAML 1.0
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+   type: string
+ baseUriParam2:
+     type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+----
+
+<<Back to the top>>
+
+
+== Not including a property in an example
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an example is missing a property of the type that it is exemplifying, the editor displays this violation message:
+
+----
+should have required property 'property name'
+----
+
+For example, the property `age` is missing in the example:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+Either add the property to the example or, in the type declaration, declare the property as optional.
+
+In this case, the property is added to the example:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+In this case, the property is declared as optional:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+     age?: integer
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+<<Back to the top>>
+
+
+== Including undeclared properties in an example when additionalProperties is set to `false`
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
+
+----
+should NOT have additional properties
+----
+
+The editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+There are three different methods that you can choose from to resolve the problem:
+
+* Delete the extra property from the example
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+* Add the property in the type declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   additionalProperties: true
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+<<Back to the top>>
+
+
+== Not declaring a media type for a payload
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If the declaration of a payload does not declare a media type, the editor displays this message:
+
+----
+Payload media type is mandatory
+----
+
+For example, the editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+There are two methods that you can choose from to resolve the problem:
+
+* Declare the media type locally in the payload declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+        application/json:
+         type: string
+----
+
+* Specify the default media type globally for the API specification.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+mediaType: application/json
+
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+The following example uses both a global and a local declaration. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global declaration with a local one, and returns only a JSON body.
+
+----
+#%RAML 1.0
+title: New API
+mediaType: [ application/json, application/xml ]
+types:
+  Person:
+  Another:
+/list:
+  get:
+    responses:
+      200:
+        body: Person[]
+/send:
+  post:
+    body:
+      application/json:
+        type: Another
+----
+
+<<Back to the top>>
+
+
+== Not referencing fragments by using the `!include` tag
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the key `uses` to reference fragments, the editor displays this message:
+
+----
+Fragments must be imported by using '!include'
+----
+
+<<Back to the top>>
+
+
+== Not applying libraries by using the `uses` key
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the `!include` tag to apply a library, the editor displays this message:
+
+----
+Libraries must be applied by using 'uses'
+----
+
+<<Back to the top>>
+
+
+== Including an example response that contains invalid JSON
+// APIMF-967
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+When a JSON file is included as the example of a response message, the JSON in the file must be valid. In this example of the violation, the example of the response for the 200 response code contains an `!include` statement. The JSON in the included file incorrectly contains a comma after the last key/value pair.
+
+----
+#%RAML 1.0
+title: ExampleRAML
+...
+/resume:
+  description: "Gets candidate's resume."
+  get:
+    queryParameters:
+       ...
+    headers:
+      ...
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include exampleResumeData-200.json
+      500:
+        ...
+----
+
+
+----
+{
+...
+"assesments.characteristic.focusofattention.data"= "",
+}
+
 ----
 
 <<Back to the top>>
