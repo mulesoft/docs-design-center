@@ -1038,3 +1038,45 @@ types:
 ----
 
 <<Back to the top>>
+
+
+== Using an unsupported property
+
+This error occurs when a facet or data type is defined as having a specific set of properties, yet an API specification defines the facet with a property that is not in that set. The error can also occur if you use an undefined facet.
+
+Example error message
+* `Property minimum not supported in a RAML 1.0 stringScalarShape node`, where `minimum` is the name of the unsupported property. A `string` does not have a minimum value.
+* `Property invalidfacet not supported in a RAML 0.8 webApi node`, where `invalidfacet` is the name of a facet that is not defined in the RAML specification.
+
+Here are examples that would generate these errors:
+
+----
+#%RAML 1.0
+title: Test
+types:
+  top:
+    type: string
+    minimum: 1
+
+#%RAML 1.0
+title: Test
+invalidfacet:
+version:
+----
+
+Here are corrected examples:
+
+----
+#%RAML 1.0
+title: Test
+types:
+  top:
+    type: string
+    minLength: 1
+
+#%RAML 1.0
+title: Test
+version:
+----
+
+<<Back to the top>>

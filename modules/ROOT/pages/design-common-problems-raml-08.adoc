@@ -744,3 +744,29 @@ securitySchemes:
 ----
 
 <<Back to the top>>
+
+== Using an unsupported property
+
+This error occurs if you use an undefined facet.
+
+Example error message
+* `Property invalidfacet not supported in a RAML 0.8 webApi node`, where `invalidfacet` is the name of a facet that is not defined in the RAML specification.
+
+Here is an example that would generate this error:
+
+----
+#%RAML 0.8
+title: Test
+invalidfacet:
+version:
+----
+
+Here is a corrected example:
+
+----
+#%RAML 0.8
+title: Test
+version:
+----
+
+<<Back to the top>>
