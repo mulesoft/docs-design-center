@@ -3,36 +3,31 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can import files, either separately or bundled together in `.zip` files, into the projects in which you are creating API specifications and API fragments. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
+You can import API specifications and RAML fragments into a project. There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
 
+The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0.
 
-== About this task
-
-Importing API specifications::
-+
+[NOTE]
+====
 You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
-+
-Additional specifications that you import can be in RAML or OAS.
+====
 
-Importing API fragments::
-+
-Both API specifications and API fragments can include reusable portions that are contained in separate files. For example, suppose you want to use OAuth 2.0 for securing implementations of your API. You might have a security scheme defined in a RAML file named `oauth_2_0.raml` that explains the settings for implementations to use, as well as other info such as headers and responses. You would import `oauth_2_0.raml` into your project. Then, in your API specification, you would include the security scheme, as in this example:
-+
-....
-securitySchemes:
-  - oauth_2_0: !include oauth_2_0.raml
-....
-+
-Then, use the `securedBy` keyword to refer to the scheme, as in this example:
-+
-....
-securedBy: [ oauth_2_0 ]
-....
-+
-You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits. If you import an example of a JSON response payload, you can also import the JSON schema, so that developers creating their own response payloads can refer to the schema when doing so.
+The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
 
+== Procedure
 
+* In the API editor only: To import a file or the content of a .zip file that is stored on your computer:
+. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. In the *Import* dialog, select *File or Zip*.
 
++
+*Result:* The file or files are listed in the left pane of the editor. If you imported a `.zip` file that contains files that are in a folder structure, the folder structure is represented in the pane.
+
+* *In the API editor only:* To import a file that is available through a URL:
+
+. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. In the *Import* dialog, select *URL*.
++
 [NOTE]
 ====
 
@@ -40,14 +35,37 @@ You can import annotation types, data types, examples of JSON response payloads,
 
 ====
 
-
-== Procedure
-
-. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
-. In the *Import* dialog, select one of these options:
 +
-*File or Zip*:: Select this option if you are importing one or more files that are located on your computer.
-*URL*:: Select this option if you are importing a single file that is available at a location online.
+*Result:* The file is listed in the left pane of the editor.
+
+* To import an API specification or API fragment from Exchange, together with its dependencies:
+. Open the *Import Asset from Exchange* dialog by using either of these methods:
++
+** In the API editor only: If your project contains only the default file that API Designer created together with the project, click the linked text that appears in the *Files* pane.
+** In the API editor only: If your project contains at least one file that you have created, click the three-dot icon at the top of the left pane and select *Import from Exchange*.
+** In the visual API editor only: If your project does not yet contain any resources or data types, click the linked text that appears in the *New API* pane.
+
+. In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
+. Select one of the assets, which are listed in a table that has these columns:
++
+*Name*:: The name of an API specification or RAML fragment.
++
+*Version*:: The version of a specification or fragment. Select the *Include snapshots* check box in the bottom-left corner of the dialog to include snapshots in this column.
++
+*Type*:: The type of asset. The value can be either *API Specification* or *RAML Fragment*.
++
+*Language* (for API specifications being imported into the API editor):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
++
+If you want to import the copy, you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
++
+*Language* (for API specifications being imported into the visual API editor):: The language is always RAML. API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
++
+*Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
++
+*Date modified*:: The date that the currently selected version of the currently selected asset was published.
++
+*Created by*:: The user ID of the person who published the currently selected version of the currently selected asset.
+. Click *Import Asset*.
 
 +
-_Result:_ After you click *Import*, the files are listed in the left pane of the editor. If you imported a `.zip` file that contains the files in a folder structure, the files are listed in that folder structure.
+*Result:* The file or files are listed in the left pane of the editor.

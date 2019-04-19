@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use Design Center's visual API editor to create RAML or OAS API specifications by populating language-neutral forms.
+You can use API Designer's visual API editor to create RAML or OAS API specifications by populating language-neutral forms.
 
 == Before you begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
