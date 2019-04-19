@@ -1080,3 +1080,57 @@ version:
 ----
 
 <<Back to the top>>
+
+== Merging two types incorrectly
+
+This type of error occurs when you try to perform one of these actions:
+* Merge a defined type with an undefined type
+* Merge two undefined types
+
+The error also occurs when you try to perform a merge with the wrong syntax.
+
+Example error message:: `Resolution error: Incompatible types [class amf.plugins.domain.shapes.models.ScalarShape, class amf.plugins.domain.shapes.models.NodeShape]`
+
+The following example both tries to merge two undefined types and uses incorrect syntax for the merge. The resolution of the error involves defining the types before the merge, and also using a pipe for the merge syntax, not brackets and a comma.
+
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
+----
+#%RAML 1.0
+title: test
+types:
+  Device:
+    type: [ Phone , Notebook ]
+  Phone: string
+  Notebook:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: test
+types:
+  Phone: string
+  Notebook:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+  Device:
+    type: Phone \| Notebook
+----
+|====
+
+
+For more information, see the section "Union Types" in the xref:https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
+
+<<Back to the top>>
