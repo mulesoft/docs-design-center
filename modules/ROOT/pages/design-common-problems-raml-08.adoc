@@ -753,20 +753,28 @@ Example error message:: `Property invalidfacet not supported in a RAML 0.8 webAp
 
 Here is an example that would generate this error:
 
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
 ----
 #%RAML 0.8
 title: Test
 invalidfacet:
 version:
 ----
-
-Here is a corrected example:
-
+|
+[Fixed example]
 ----
 #%RAML 0.8
 title: Test
 version:
 ----
+|====
+
 
 <<Back to the top>>
 

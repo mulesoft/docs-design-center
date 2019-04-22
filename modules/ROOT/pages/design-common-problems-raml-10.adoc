@@ -1050,6 +1050,14 @@ Example error message
 
 Here are examples that would generate these errors:
 
+
+.Incorrect Examples vs. Corrected Examples
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect examples]
 ----
 #%RAML 1.0
 title: Test
@@ -1063,9 +1071,8 @@ title: Test
 invalidfacet:
 version:
 ----
-
-Here are corrected examples:
-
+|
+[Fixed example]
 ----
 #%RAML 1.0
 title: Test
@@ -1077,7 +1084,9 @@ types:
 #%RAML 1.0
 title: Test
 version:
+
 ----
+|====
 
 <<Back to the top>>
 
