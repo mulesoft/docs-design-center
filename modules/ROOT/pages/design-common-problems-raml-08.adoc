@@ -749,8 +749,7 @@ securitySchemes:
 
 This error occurs if you use an undefined facet.
 
-Example error message
-* `Property invalidfacet not supported in a RAML 0.8 webApi node`, where `invalidfacet` is the name of a facet that is not defined in the RAML specification.
+Example error message:: `Property invalidfacet not supported in a RAML 0.8 webApi node`, where `invalidfacet` is the name of a facet that is not defined in the RAML specification.
 
 Here is an example that would generate this error:
 
@@ -768,5 +767,45 @@ Here is a corrected example:
 title: Test
 version:
 ----
+
+<<Back to the top>>
+
+
+== Declaring an undefined type in a header
+
+This error occurs when a non-existent type is specified in a header.
+
+Error message:: `Cannot declare unresolved parameter`
+
+In the incorrect example below, the value for the header `myHeader` has a typo. It is specified as `strang`, not as `string`.
+
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
+----
+#%RAML 0.8
+title: test
+
+/endpoint:
+  post:
+    headers:
+      myHeader: strang
+----
+|
+[Fixed example]
+----
+#%RAML 0.8
+title: test
+
+/endpoint:
+  post:
+    headers:
+      myHeader: string
+----
+|====
 
 <<Back to the top>>

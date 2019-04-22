@@ -1134,3 +1134,45 @@ types:
 For more information, see the section "Union Types" in the xref:https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
 
 <<Back to the top>>
+
+== Declaring an undefined type in a header
+
+This error occurs when a non-existent type is specified in a header. To fix the error, specify a type that is defined in the RAML specification.
+
+Error message:: `Cannot declare unresolved parameter`
+
+In the incorrect example below, the value for the header `myHeader` has a typo. It is specified as `someTypo`, not as `someType`.
+
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
+----
+#%RAML 1.0
+title: test
+types:
+  SomeType: string
+/endpoint:
+  post:
+    headers:
+      MyHeader: someTypo
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: test
+types:
+  SomeType: string
+/endpoint:
+  post:
+    headers:
+      MyHeader: someType
+
+----
+|====
+
+<<Back to the top>>
