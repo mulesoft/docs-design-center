@@ -1004,7 +1004,7 @@ securitySchemes:
 
 == Not defining a type that is used
 
-When a type is used, but is not first defined, the editor returns the message `Unresolved message`.
+When a type is used, but is not first defined, the editor returns the message `Unresolved reference`.
 
 In this example of the error, the type `mytype` is not defined.
 
