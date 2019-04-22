@@ -1,4 +1,5 @@
-= Create and Publish an API Fragment
+= Create and Publish a RAML API Fragment in the API editor in API Designer
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

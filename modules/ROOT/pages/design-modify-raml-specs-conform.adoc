@@ -8,7 +8,6 @@ Check your published APIs by opening them in the API editor in Design Center and
 
 * xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
 * xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
-* xref:design-common-problems-raml-08-10.adoc[Common Problems in Conforming Either to RAML 0.8 or 1.0]
 
 In addition to checking more precisely for RAML problems, the API editor also validates regular expressions. Any invalid expressions in published API specifications that you reopen in the editor are now flagged as errors.
 
