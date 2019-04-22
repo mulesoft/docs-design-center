@@ -1,0 +1,17 @@
+= Create a Mule Application Quickly from a Template
+
+MuleSoft provides templates that you can use to create Mule apps for a number of tasks.
+
+== Procedure
+
+. In Exchange, locate a template that you want to use.
+.. Click on a template to see details about it.
+.. Look for the button *Open template* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer.
+. Click *Open template*.
++
+*Result:* The template is opened in Read-Only mode in Flow Designer. You can look at the overall flow and inspect each card.
+. If you think the template will suit your needs, click *Use this template* in the top-right corner of Flow Designer.
++
+*Result:* The template is opened in Edit mode. Flow Designer indicates that the template contains one or more errors. These are places in the application where you must provide credentials for authenticating to systems that are represented by cards, or where you must provide some information for how to access systems.
+. Click the *Problems* tab at the bottom of the screen to see the list of problems.
+. Click a problem in the list to be taken to a place in the application where you must provide information.
