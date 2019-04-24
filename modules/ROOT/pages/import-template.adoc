@@ -1,6 +1,6 @@
 = Create a Mule Application Quickly from a Template
 
-MuleSoft provides templates that you can use to create Mule apps for a number of tasks.
+MuleSoft provides sample projects, called _templates_, in Anypoint Exchange that you can use to create Mule apps in Flow Designer for a number of common use cases. The purpose of each template is explained in Exchange. You can open templates in read-only mode in Flow Designer and review them. If you believe that a template will help you create the Mule app that you need, you can switch to edit mode, customize it, and then test and deploy it.
 
 
 
@@ -14,10 +14,10 @@ MuleSoft provides templates that you can use to create Mule apps for a number of
 .. Look for the option *Open template* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is *Download*, then the template is compatible only with Anypoint Studio.
 . Click *Open template*.
 +
-*Result:* The template is opened in Read-Only mode in Flow Designer. You can review at the overall flow and look through each card.
+*Result:* The template is opened in read-only mode in Flow Designer. You can review at the overall flow and look through each card.
 . If you think the template will suit your needs, click *Use this template* in the top-right corner of Flow Designer.
 +
-*Result:* The template is opened in Edit mode. Flow Designer indicates that the template contains one or more errors. These are places in the application where you must provide credentials for authenticating to systems that are represented by cards, or where you must provide some information for how to access systems.
+*Result:* The template is opened in edit mode. Flow Designer indicates that the template contains one or more errors. These are places in the application where you must provide credentials for authenticating to systems that are represented by cards, or where you must provide some information for how to access systems.
 . Provide information for authenticating to or connecting to the systems that the cards represent.
 .. Click the *Problems* tab at the bottom of the screen to see the list of problems.
 .. Click a problem in the list to be taken to a place in the application where you must provide information.
