@@ -4,8 +4,6 @@
 
 As of January 10, 2019, the API editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the API editor a published API specification that is written in RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
-Problems that are among the top 10 most common (as determined by MuleSoft) are indicated with _Top 10:_ in their titles.
-
 [IMPORTANT]
 ====
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
@@ -142,7 +140,7 @@ If you do not follow these rules, you will see the messages that are explained i
 If you see this violation message in the API editor, then your API specification is incorrectly referencing a named example by using an `example` facet:
 
 ----
-Named example fragments should be included in 'examples' facet
+Named example fragments must be included in 'examples' facet
 ----
 
 You must use an `examples` (`example` with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
@@ -957,5 +955,234 @@ title: ExampleRAML
 }
 
 ----
+
+<<Back to the top>>
+
+== Not providing a YAML map when a facet requires one
+
+When a facet is described in the RAML 1.0 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
+
+Here is an example of the error:
+
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+    settings:
+----
+
+There are two ways to fix the error.
+
+* Provide a map as a value.
++
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+    settings:
+      requestTokenUri: https://api.mysampleapi.com/1/oauth/request_token
+----
+
+* Delete the facet -- in this case, `settings` -- that requires a map.
++
+----
+#%RAML 1.0
+title: Test
+version: 1.0
+securitySchemes:
+  basic:
+    type: Basic Authentication
+----
+
+<<Back to the top>>
+
+== Not defining a type that is used
+
+When a type is used, but is not first defined, the editor returns the message `Unresolved reference`.
+
+In this example of the error, the type `mytype` is not defined.
+
+----
+#%RAML 1.0
+
+title: test
+/path:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: mytype
+----
+
+To resolve the problem, define the type that you are using.
+
+----
+#%RAML 1.0
+
+title: test
+types:
+  mytype: string
+/path:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: mytype
+----
+
+<<Back to the top>>
+
+
+== Using an unsupported property
+
+This error occurs when a facet or data type is defined as having a specific set of properties, yet an API specification defines the facet with a property that is not in that set. The error can also occur if you use an undefined facet.
+
+Example error message
+* `Property minimum not supported in a RAML 1.0 stringScalarShape node`, where `minimum` is the name of the unsupported property. A `string` does not have a minimum value.
+* `Property invalidfacet not supported in a RAML 0.8 webApi node`, where `invalidfacet` is the name of a facet that is not defined in the RAML specification.
+
+Here are examples that would generate these errors:
+
+
+.Incorrect Examples vs. Corrected Examples
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect examples]
+----
+#%RAML 1.0
+title: Test
+types:
+  top:
+    type: string
+    minimum: 1
+
+#%RAML 1.0
+title: Test
+invalidfacet:
+version:
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: Test
+types:
+  top:
+    type: string
+    minLength: 1
+
+#%RAML 1.0
+title: Test
+version:
+
+----
+|====
+
+<<Back to the top>>
+
+== Merging two types incorrectly
+
+This type of error occurs when you try to perform one of these actions:
+* Merge a defined type with an undefined type
+* Merge two undefined types
+
+The error also occurs when you try to perform a merge with the wrong syntax.
+
+Example error message:: `Resolution error: Incompatible types [class amf.plugins.domain.shapes.models.ScalarShape, class amf.plugins.domain.shapes.models.NodeShape]`
+
+The following example both tries to merge two undefined types and uses incorrect syntax for the merge. The resolution of the error involves defining the types before the merge, and also using a pipe for the merge syntax, not brackets and a comma.
+
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
+----
+#%RAML 1.0
+title: test
+types:
+  Device:
+    type: [ Phone , Notebook ]
+  Phone: string
+  Notebook:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: test
+types:
+  Phone: string
+  Notebook:
+    type: object
+    properties:
+      manufacturer:
+        type: string
+  Device:
+    type: Phone \| Notebook
+----
+|====
+
+
+For more information, see the section "Union Types" in the xref:https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
+
+<<Back to the top>>
+
+== Declaring an undefined type in a header
+
+This error occurs when a non-existent type is specified in a header. To fix the error, specify a type that is defined in the RAML specification.
+
+Error message:: `Cannot declare unresolved parameter`
+
+In the incorrect example below, the value for the header `myHeader` has a typo. It is specified as `someTypo`, not as `someType`.
+
+.Incorrect Example vs. Corrected Example
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect example]
+----
+#%RAML 1.0
+title: test
+types:
+  SomeType: string
+/endpoint:
+  post:
+    headers:
+      MyHeader: someTypo
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: test
+types:
+  SomeType: string
+/endpoint:
+  post:
+    headers:
+      MyHeader: someType
+
+----
+|====
 
 <<Back to the top>>
