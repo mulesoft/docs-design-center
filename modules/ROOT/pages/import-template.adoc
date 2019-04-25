@@ -1,24 +1,33 @@
 = Create a Mule Application Quickly from a Template
 
-MuleSoft provides sample projects, called _templates_, in Anypoint Exchange that you can use to create Mule apps in Flow Designer for a number of common use cases. The purpose of each template is explained in Exchange. You can open templates in read-only mode in Flow Designer and review them. If you believe that a template will help you create the Mule app that you need, you can switch to edit mode, customize it, and then test and deploy it.
-
-
+The easiest way to get started in Flow Designer is to use a template.  A template is a pre-built integration that you can customize.  Go to Anypoint Exchange to see templates for the most popular integration use cases. You can open templates in read-only mode in Flow Designer and review them. If you believe that a template will help you create the Mule application that you need, you can create a new project from it, customize the project, and then test and deploy your application.
 
 == Procedure
-
 . In Exchange, locate a template that you want to use.
-.. Under *All assets* on the left side of the screen, click *Provided by MuleSoft*.
-.. Select *Templates* in the drop-down list to the left of the search bar.
+.. Under All assets on the left side of the screen, click Provided by MuleSoft.
+.. Select Templates in the drop-down list to the left of the search bar.
 .. Search on a term to filter the list of templates.
-.. Click on a template to see details about it.
-.. Look for the option *Open template* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is *Download*, then the template is compatible only with Anypoint Studio.
-. Click *Open template*.
+.. Click on a template to see details about it. The details include:
 +
-*Result:* The template is opened in read-only mode in Flow Designer. You can review at the overall flow and look through each card.
-. If you think the template will suit your needs, click *Use this template* in the top-right corner of Flow Designer.
+* An overview of what the template does
+* A list of prerequisites for using it
+* A list of steps for configuring it
+.. Look for the option Open template in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is Download, then the template is compatible only with Anypoint Studio.
+. Click Open template.
 +
-*Result:* A dialog asks you to name the project that is based on the template. The project is opened in edit mode. Flow Designer indicates that the project contains one or more errors. These are places in the application where you must provide credentials for authenticating to systems that are represented by cards, or where you must provide some information for how to access systems.
-. Provide information for authenticating to or connecting to the systems that the cards represent.
-.. Click the *Problems* tab at the bottom of the screen to see the list of problems.
-.. Click a problem in the list to be taken to a place in the application where you must provide information.
+*Result:* The template is opened in read-only mode in Flow Designer. Read-only mode lets you find out which connectors and operations are used, how data changes as it moves through the flow, and what configurations for connecting to your systems are already set up.
+. If you think the template will suit your needs, click Use this template in the top-right corner of Flow Designer.
++
+*Result:* A dialog box asks you to name the new project based on the template and to select the environment to create it in. After you click Create, the project is opened in edit mode. Red dots above the cards indicate places where you have to fill in fields before you can run the application. For example, you must provide credentials for authenticating to systems that are represented by cards.
+. Provide the required information.
+.. Click the Problems tab at the bottom of the screen to see the list of problems.
+.. Click a problem in the list to be taken to a place in the application where you must provide information. For guidance about what information you need to provide in a card, refer to the notes for that card by clicking the Notes tab.
 .. Continue down the list of problems until none remain.
+
++
+*Result:* All of the red dots that were above the cards should now be gone. At this point, you could run the application. However, you might first need to customize it for your particular use case. You can do that in the next step.
+. Open each card, review the values in its fields, and customize any values that you might need to for your use case. For example, if a flow has a card for the Slack connector and posts a message to a Slack channel, you would need to provide the message. Also, the default name of the channel is `general`. You might need to change that name to match the name of the actual channel that you want the flow to post to.
+For guidance while you are customizing, refer to the Notes section in each card.
+. When you are ready, click Run to run the application temporarily and test it. While an application is running, you can trigger its flows and verify that data moves through the flows correctly. After you click Run, the application continues to run for 60 hours unless you make changes to it. Whenever you make a change, the application stops running.
+. When you are satisfied with the application, click the Deploy button to run the application in a sandbox environment or in a production environment.
+Link to documentation about how to ‘Deploy’ an app
