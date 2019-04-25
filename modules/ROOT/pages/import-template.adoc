@@ -4,30 +4,32 @@ The easiest way to get started in Flow Designer is to use a template.  A templat
 
 == Procedure
 . In Exchange, locate a template that you want to use.
-.. Under All assets on the left side of the screen, click Provided by MuleSoft.
-.. Select Templates in the drop-down list to the left of the search bar.
+.. Under *All assets* on the left side of the screen, click *Provided by MuleSoft*.
+.. Select *Templates* in the drop-down list to the left of the search bar.
 .. Search on a term to filter the list of templates.
 .. Click on a template to see details about it. The details include:
 +
 * An overview of what the template does
 * A list of prerequisites for using it
 * A list of steps for configuring it
-.. Look for the option Open template in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is Download, then the template is compatible only with Anypoint Studio.
-. Click Open template.
+.. Look for the option *Open template* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is *Download*, then the template is compatible only with Anypoint Studio.
+. Click *Open template*.
 +
 *Result:* The template is opened in read-only mode in Flow Designer. Read-only mode lets you find out which connectors and operations are used, how data changes as it moves through the flow, and what configurations for connecting to your systems are already set up.
-. If you think the template will suit your needs, click Use this template in the top-right corner of Flow Designer.
+. If you think the template will suit your needs, click *Use this template* in the top-right corner of Flow Designer.
 +
-*Result:* A dialog box asks you to name the new project based on the template and to select the environment to create it in. After you click Create, the project is opened in edit mode. Red dots above the cards indicate places where you have to fill in fields before you can run the application. For example, you must provide credentials for authenticating to systems that are represented by cards.
+*Result:* A dialog box asks you to name the new project based on the template and to select the environment to create it in. After you click *Create*, the project is opened in edit mode. Red dots above the cards indicate places where you have to fill in fields before you can run the application. For example, you must provide credentials for authenticating to systems that are represented by cards.
 . Provide the required information.
-.. Click the Problems tab at the bottom of the screen to see the list of problems.
-.. Click a problem in the list to be taken to a place in the application where you must provide information. For guidance about what information you need to provide in a card, refer to the notes for that card by clicking the Notes tab.
+.. Click the *Problems* tab at the bottom of the screen to see the list of problems.
+.. Click a problem in the list to be taken to a place in the application where you must provide information. For guidance about what information you need to provide in a card, refer to the notes for that card by clicking the *Notes* tab.
 .. Continue down the list of problems until none remain.
 
 +
 *Result:* All of the red dots that were above the cards should now be gone. At this point, you could run the application. However, you might first need to customize it for your particular use case. You can do that in the next step.
-. Open each card, review the values in its fields, and customize any values that you might need to for your use case. For example, if a flow has a card for the Slack connector and posts a message to a Slack channel, you would need to provide the message. Also, the default name of the channel is `general`. You might need to change that name to match the name of the actual channel that you want the flow to post to.
-For guidance while you are customizing, refer to the Notes section in each card.
-. When you are ready, click Run to run the application temporarily and test it. While an application is running, you can trigger its flows and verify that data moves through the flows correctly. After you click Run, the application continues to run for 60 hours unless you make changes to it. Whenever you make a change, the application stops running.
-. When you are satisfied with the application, click the Deploy button to run the application in a sandbox environment or in a production environment.
+For example, if a flow has a card for the Slack connector and posts a message to a Slack channel, you would need to provide the message. Also, the default name of the channel is `general`. You might need to change that name to match the name of the actual channel that you want the flow to post to.
+. Open each card, review the values in its fields, and customize any values that you might need to for your use case.
++
+For guidance while you are customizing, refer to the *Notes* section in each card.
+. When you are ready, click *Run* to run the application temporarily and test it. While an application is running, you can trigger its flows and verify that data moves through the flows correctly. After you click *Run*, the application continues to run for 60 hours unless you make changes to it. Whenever you make a change, the application stops running.
+. When you are satisfied with the application, click the *Deploy* button to run the application in a sandbox environment or in a production environment.
 Link to documentation about how to ‘Deploy’ an app
