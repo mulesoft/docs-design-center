@@ -1,4 +1,9 @@
 = Create a Mule Application Quickly from a Template
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 The easiest way to get started in Flow Designer is to use a template.  A template is a pre-built integration that you can customize.  Go to Anypoint Exchange to see templates for the most popular integration use cases. You can open templates in read-only mode in Flow Designer and review them. If you believe that a template will help you create the Mule application that you need, you can create a new project from it, customize the project, and then test and deploy your application.
 
@@ -32,4 +37,7 @@ For example, if a flow has a card for the Slack connector and posts a message to
 For guidance while you are customizing, refer to the *Notes* section in each card.
 . When you are ready, click *Run* to run the application temporarily and test it. While an application is running, you can trigger its flows and verify that data moves through the flows correctly. After you click *Run*, the application continues to run for 60 hours unless you make changes to it. Whenever you make a change, the application stops running.
 . When you are satisfied with the application, click the *Deploy* button to run the application in a sandbox environment or in a production environment.
-Link to documentation about how to ‘Deploy’ an app
+
+== See also
+
+xref:promote-app-prod-env-design-center.adoc[Deploy a Mule Application (Flow Designer)]
