@@ -134,5 +134,4 @@ Try adding a Set Variable card after the HTTP Listener card, creating a variable
 
 == See Also
 
-* xref:function-editor-concept.adoc[Function Editor]
 * xref:to-create-and-populate-a-variable.adoc[About Creating Variables]
