@@ -57,13 +57,13 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a data pill.
+* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a data element.
 +
 The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specify this entry in the *Messages* field of the Logger card:
 +
 image::hello-firstname.png[]
 +
-Click the arrow in the data pill to see a list of the functions that you can apply to the value. The functions are applied in the order in which you select them.
+Click the arrow in the data element to see a list of the functions that you can apply to the value. The functions are applied in the order in which you select them.
 +
 You can also see a preview of the value, whether or not any functions are applied to it. If the application is not running, the preview comes from the sample data that was specified when the data type was defined. If the application is running, the preview can show live data.
 +
@@ -75,7 +75,7 @@ The Logger will add a message in this format to the log when it receives a paylo
 "Hello, Ian."
 ----
 +
-If the payload contains a `lastName` data pill after the `firstName` data pill and a space is added between them, the Logger will log messages in this format:
+If the payload contains a `lastName` data element after the `firstName` data element and a space is added between them, the Logger will log messages in this format:
 +
 ----
 "Hello, Ian Stewart."
@@ -87,7 +87,7 @@ You can combine your simple value with a DataWeave expression, if you know the D
 
 ====
 
-* Remove a data pill from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
+* Remove a data element from a field by clicking in the field immediately after it and typing your Delete or Backspace key.
 
 == Example: Creating a simple dynamic expression
 
