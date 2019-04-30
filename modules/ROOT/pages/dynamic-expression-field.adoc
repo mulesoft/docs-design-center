@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can drag and drop payload elements, attributes, and variables into plain text fields, mixing them together with text or using them alone, to specify dynamic, rather than static, values. The values are substituted when your Mule application is running and a flow is triggered.
+You can drag and drop payload items, attributes, and variables into plain text fields, mixing them together with text or using them alone, to specify dynamic, rather than static, values. The values are substituted when your Mule application is running and a flow is triggered.
 
 == About this task
 
@@ -19,11 +19,11 @@ In plain text fields, Design Center gives you the option of specifying a dynamic
 
 image::logger-with-list.png[]
 
-The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload elements, attributes, and variables that you want to include. The field concatenates them together with any strings that you include.
+The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload items, attributes, and variables that you want to include. The field concatenates them together with any strings that you include.
 
 == Before you begin
 
-Payload elements, variables, and attributes that appear in the list in a card are passed in by the preceding card. Default payloads and attributes, if there are any attributes, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a custom data type for the output payload in the previous card. (If the previous card is a Set Variable card, you must define the custom data type for the output payload in the card before that). Before a variable can appear in the list, you must define a variable in a previous card.
+Payload items, variables, and attributes that appear in the list in a card are passed in by the preceding card. Default payloads and attributes, if there are any attributes, always appear without any action required from you. However, before a list of elements for the payload of a message can appear, you must define a custom data type for the output payload in the previous card. (If the previous card is a Set Variable card, you must define the custom data type for the output payload in the card before that). Before a variable can appear in the list, you must define a variable in a previous card.
 
 For example, suppose you wanted a Logger to parse the output payload of an HTTP Listener and then to log messages that contain payload data. You would set up this simple flow, with `/example` being the endpoint for the HTTP Listener:
 
@@ -57,7 +57,7 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a _data element_.
+* Add one or more payload items, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a _data element_.
 +
 The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specify this entry in the *Messages* field of the Logger card:
 +
@@ -117,7 +117,7 @@ This example uses a flow in which an HTTP Listener receives a POST request that 
 *Result:* The elements of the payload -- `payload.firstName` and `payload.lastName`-- and the attributes from the HTTP Listener are listed on the right side of the card. If the message next to the *Run* button at the top of the canvas is "Creating...", you must wait until the message changes before you will see the elements listed.
 . Specify a message for the Logger to include in the log whenever it receives a payload.
 .. In the *Message* field, type ```Hello, ```.
-.. Click the payload element `payload.firstName` and drag it into the *Message* field.
+.. Click the payload item `payload.firstName` and drag it into the *Message* field.
 . Run the application by clicking the *Run* button at the top of the canvas.
 . Copy the URL for the application by clicking on it to the right of the *Run* button.
 . In Postman or cURL, post a JSON message to the `/example` endpoint, using the same format as the example you specified in the HTTP Listener card.
@@ -128,7 +128,7 @@ After you post the message, return to your flow in Design Center, open the log, 
 
 === What to do next
 
-Try adding a Set Variable card after the HTTP Listener card, creating a variable that stores the value of `payload.firstName`, and then changing the message in the Logger to use the variable instead of the payload element. In the Logger card, the variable will appear in the list on the right. You can delete the payload element from the message and then drag in the variable.
+Try adding a Set Variable card after the HTTP Listener card, creating a variable that stores the value of `payload.firstName`, and then changing the message in the Logger to use the variable instead of the payload item. In the Logger card, the variable will appear in the list on the right. You can delete the payload item from the message and then drag in the variable.
 
 
 
