@@ -10,7 +10,9 @@ In Flow Designer, you create Mule applications as projects having one or more fl
 
 == Getting Started
 
-To get started with Flow Designer by building an example Mule application, see the tutorial xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]. The tutorial guides you in creating a Mule app that places bulk orders for company swag automatically when opportunities are closed, and that notifies customers via SMS about their order status and ETA.
+To learn about Flow Designer by building an example Mule application, you can try the tutorial xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]. The tutorial guides you in creating a Mule app that places bulk orders for company swag automatically when opportunities are closed, and that notifies customers via SMS about their order status and ETA.
+
+To start creating your own Mule applications, 
 
 == Tour of the Flow Designer Interface
 
