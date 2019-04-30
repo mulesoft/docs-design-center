@@ -13,6 +13,20 @@ To get started with Flow Designer by building an example Mule application, see x
 
 image::FD-annotated.png[]
 
+. The toolbar
++
+Lets you undo and redo changes in a project, download a project, and change the zoom level of the canvas.
+. The project pane
++
+Lists the project's flows, the configurations that are being used, and any global data types that have been defined.
++
+When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resuable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards that connect to the same systems as cards that are already in the project.
++
+Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
+. The canvas
+. The control bar
+. The *Problems* and *Logs* tabs
+
 // Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
 
 // Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
