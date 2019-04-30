@@ -8,17 +8,21 @@ endif::[]
 
 In Flow Designer, you create Mule applications as projects having one or more flows. A project contains the flows for one Mule application. A Mule application can have one or more flows. A flow consists of a sequence of _cards_, with each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific task, and then sends the output of that task to the next card in the flow. The final card in a flow is usually one that sends a notification that the Mule application has completed its task or that sends data.
 
-To get started with Flow Designer by building an example Mule application, see xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
+== Getting Started
 
+To get started with Flow Designer by building an example Mule application, see the tutorial xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]. The tutorial guides you in creating a Mule app that places bulk orders for company swag automatically when opportunities are closed, and that notifies customers via SMS about their order status and ETA.
 
+== Tour of the Flow Designer Interface
+
+.The five areas of the Flow Designer interface
 image::FD-annotated.png[]
 
 . The toolbar
 +
-Lets you undo and redo changes in a project, download a project, and change the zoom level of the canvas.
-. The project pane
+Here you can undo and redo changes in a project, download a project, and change the zoom level of the canvas.
+. The panes
 +
-Click the top icon to list the project's flows, the configurations that are being used, and any global data types that have been defined. Click the bottom icon to list the project's dependencies.
+Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined. Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
 +
 What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resuable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards that connect to the same systems as cards that are already in the project.
 +
@@ -27,10 +31,10 @@ What are data types?:: Data types show the formats in which data are used in a f
 What is are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange, the update fixes bugs or introducing enhancements. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
 . The canvas
 +
-Here is where you create a flow. In the top-left corner are the names of the project and the flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
+Here you can create a flow. In the top-left corner are the names of the project and the flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
 . The control bar
 +
-Lets you run the application for testing, as well as deploy the application to another environment.
+Here you can run the application for testing, as well as deploy the application to another environment.
 . The *Problems* and *Logs* tabs
 +
 Click the first tab to see a list of any errors that are in a project. You can click a listed error to open the location in which the error occurs.
@@ -45,9 +49,4 @@ Click the second tab to see the log file for a project. The file can be helpful 
 
 == See also
 
-* xref:4.1@mule-runtime::about-components.adoc[Components]
 * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
-* xref:4.1@mule-runtime::about-flows.adoc[Flows]
-* xref:4.1@mule-runtime::mule-application-about.adoc[Mule Applications]
-* xref:4.1@mule-runtime::about-mule-event.adoc[Mule Events]
-* xref:4.1@mule-runtime::about-mule-message.adoc[Mule Messages]
