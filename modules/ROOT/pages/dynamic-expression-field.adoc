@@ -57,7 +57,7 @@ image::first-name-basis.png[]
 
 == Procedure
 
-* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a data element.
+* Add one or more payload elements, attributes, or variables to a text field in a card by dragging and dropping them from the list on the right side of the card. When you drag a list entry, the card highlights the borders of the fields that you can drop it into. When you drop the entry into a field, the entry becomes a _data element_.
 +
 The field concatenates the entries together, along with any string values that are in the field. For example, suppose you specify this entry in the *Messages* field of the Logger card:
 +

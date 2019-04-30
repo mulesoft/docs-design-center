@@ -18,14 +18,24 @@ image::FD-annotated.png[]
 Lets you undo and redo changes in a project, download a project, and change the zoom level of the canvas.
 . The project pane
 +
-Lists the project's flows, the configurations that are being used, and any global data types that have been defined.
+Click the top icon to list the project's flows, the configurations that are being used, and any global data types that have been defined. Click the bottom icon to list the project's dependencies.
 +
-When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resuable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards that connect to the same systems as cards that are already in the project.
+What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resuable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards that connect to the same systems as cards that are already in the project.
 +
-Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
+What are data types?:: Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
++
+What is are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange, the update fixes bugs or introducing enhancements. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
 . The canvas
++
+Here is where you create a flow. In the top-left corner are the names of the project and the flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
 . The control bar
++
+Lets you run the application for testing, as well as deploy the application to another environment.
 . The *Problems* and *Logs* tabs
++
+Click the first tab to see a list of any errors that are in a project. You can click a listed error to open the location in which the error occurs.
++
+Click the second tab to see the log file for a project. The file can be helpful when you are troubleshooting problems running an application.
 
 // Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
 
