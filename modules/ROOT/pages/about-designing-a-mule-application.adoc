@@ -12,7 +12,11 @@ In Flow Designer, you create Mule applications as projects having one or more fl
 
 To learn about Flow Designer by building an example Mule application, you can try the tutorial xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]. The tutorial guides you in creating a Mule app that places bulk orders for company swag automatically when opportunities are closed, and that notifies customers via SMS about their order status and ETA.
 
-To start creating your own Mule applications, 
+To start creating Mule applications:
+
+* Try the easiest option, which is to import a template into Flow Designer from Anypoint Exchange. See xref:import-templat.adoc[Create a Mule Application Quickly from a Template].
+* Create a new Mule-app project in Design Center and use the wizard that automatically opens to start a project with a trigger card and a target card.
+* Create a new Mule-app project and click *Go straight to the canvas* in the wizard to start building a flow from a blank canvas.
 
 == Tour of the Flow Designer Interface
 
@@ -24,7 +28,9 @@ image::FD-annotated.png[]
 Here you can create a flow. In the top-left corner are the names of the project and the flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
 . The panes
 +
-Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined. Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
+Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
++
+Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
 +
 What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resuable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards that connect to the same systems as cards that are already in the project.
 +
