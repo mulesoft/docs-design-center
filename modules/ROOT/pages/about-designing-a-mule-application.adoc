@@ -15,7 +15,7 @@ To learn about Flow Designer by building an example Mule application, you can tr
 To start creating Mule applications:
 
 * Try the easiest option, which is to import a template into Flow Designer from Anypoint Exchange. See xref:import-templat.adoc[Create a Mule Application Quickly from a Template].
-* Create a new Mule-app project in Design Center and use the wizard that automatically opens to start a project with a trigger card and a target card.
+* Create a new Mule-app project in Design Center and use the wizard that automatically opens to walk you through scaffolding a flow with a trigger card and a target card.
 * Create a new Mule-app project and click *Go straight to the canvas* in the wizard to start building a flow from a blank canvas.
 
 == Tour of the Flow Designer Interface
@@ -27,7 +27,7 @@ image::FD-annotated.png[]
 +
 Here you can create a flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
 +
-In the top-left corner of the canvas are the names of the project and the flow. 
+In the top-left corner of the canvas are the names of the project and the flow.
 . The panes
 +
 Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
