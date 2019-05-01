@@ -25,7 +25,9 @@ image::FD-annotated.png[]
 
 . The canvas
 +
-Here you can create a flow. In the top-left corner are the names of the project and the flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
+Here you can create a flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
++
+In the top-left corner of the canvas are the names of the project and the flow. 
 . The panes
 +
 Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
