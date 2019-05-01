@@ -36,7 +36,7 @@ What are reusable configurations?:: When you add a card that connects to another
 +
 What are data types?:: Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
 +
-What is are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange, the update fixes bugs or introducing enhancements. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
+What are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange, the update fixes bugs or introducing enhancements. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
 . The toolbar
 +
 Here you can undo and redo changes in a project, download a project, and change the zoom level of the canvas.
