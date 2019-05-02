@@ -10,7 +10,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 
 == About this task
 
-As you populate the forms, the visual API editor generates two API specifications: one in RAML 1.0, the other in OAS 2.0 (in JSON). Both are visible in a read-only pane on the right of the screen. If at any time you want to edit the specification directly or customize it (import RAML fragments, add a security scheme, and more), click *Edit RAML*  or *Edit OAS* to switch to the API editor. After you switch, however, you cannot switch back to the visual API editor to continue creating the API specification.
+As you populate the forms, the visual API editor generates two API specifications: one in RAML 1.0, the other in OAS 2.0 (in JSON). Both are visible in a read-only pane on the right of the screen. If at any time you want to edit the specification directly or customize it (import RAML fragments and more), click *Edit RAML*  or *Edit OAS* to switch to the API editor. After you switch, however, you cannot switch back to the visual API editor to continue creating the API specification.
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
