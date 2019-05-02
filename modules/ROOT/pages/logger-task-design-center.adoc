@@ -2,6 +2,8 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:imagesdir: ../assets/images
+
 :keywords: mozart, deploy, environments
 
 You add one or more Logger utilities to a flow to log information from the Mule event or static messages that you specify in the log. Logging information is helpful for troubleshooting and taking a quick look at the output at some point in the flow. You can use expresssions to create the log message. The following table lists some examples.
