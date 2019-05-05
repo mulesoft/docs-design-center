@@ -10,6 +10,7 @@ As of January 10, 2019, the API editor (one of the two editors in Design Center'
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
+[.parser\*invalid-type-definition#parser\*invalid-type-definition]
 == Using a reserved name for a schema
 
 If you use a reserved name as the name of a schema, the editor displays this message:
@@ -242,7 +243,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-
+[.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
 == Not providing a value for the `title` node
 // APIMF-1083
 
@@ -277,6 +278,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
+[.parser\*unresolved-reference#parser\*unresolved-reference]
 == Using an invalid path for a reference inside a JSON schema
 // APIMF-833
 
@@ -319,6 +321,7 @@ The path must start at the root level of the schema and descend through the tree
 
 <<Back to the top>>
 
+[.parser\*unused-base-uri-parameter#parser\*unused-base-uri-parameter]
 == Declaring a URI parameter that is never used
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 // How should the examples change for RAML 0.8?
@@ -389,7 +392,7 @@ baseUriParameters:
 <<Back to the top>>
 
 
-
+[.parser\*Payload-mediaType-minCount#parser\*Payload-mediaType-minCount]
 == Not declaring a media type for a payload
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -745,6 +748,7 @@ securitySchemes:
 
 <<Back to the top>>
 
+[.parser\*closed-shape#parser\*closed-shape]
 == Using an unsupported property
 
 This error occurs if you use an undefined facet.
@@ -778,7 +782,7 @@ version:
 
 <<Back to the top>>
 
-
+[.parser\*unresolved-parameter#parser\*unresolved-parameter]
 == Declaring an undefined type in a header
 
 This error occurs when a non-existent type is specified in a header.
