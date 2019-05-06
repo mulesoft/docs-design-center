@@ -511,7 +511,9 @@ uses:
 
 <<Back to the top>>
 
-== Specifying values for an enum that does not match the enum's data type
+[.parser\*example-validation-error#parser\*example-validation-error]
+== Problems when validating examples
+=== Specifying values for an enum that does not match the enum's data type
 // APIMF-1062
 
 Because of the editor's strict parsing according to the YAML specification, it does not automatically cast values to declared data types. To illustrate the violation, here is an invalid declaration of an enum:
@@ -567,7 +569,7 @@ This violation can occur not just in enums, but also anywhere an `integer`, `nil
 
 <<Back to the top>>
 
-== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified
+=== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified
 // APIMF-1070
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the violation, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
@@ -575,7 +577,6 @@ Examples of numeric types must conform to restrictions specified in the `format`
 ----
 #%RAML 1.0
 title: ExampleRAML
-...
 types:
   collection:
     type: integer
@@ -583,10 +584,100 @@ types:
 
 /search:
   /code:
-      get:
-       body:
-        type: collection
-        example: 22342342
+    get:
+      body:
+        application/json:
+          type: collection
+          example: 22342342
+----
+
+<<Back to the top>>
+
+=== Including undeclared properties in an example when additionalProperties is set to `false`
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
+
+----
+should NOT have additional properties
+----
+
+The editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+There are three different methods that you can choose from to resolve the problem:
+
+* Delete the extra property from the example
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+* Add the property in the type declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   additionalProperties: true
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
 ----
 
 <<Back to the top>>
@@ -729,96 +820,6 @@ types:
 
 <<Back to the top>>
 
-
-== Including undeclared properties in an example when additionalProperties is set to `false`
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
-
-----
-should NOT have additional properties
-----
-
-The editor would display this message for the following API specification:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-There are three different methods that you can choose from to resolve the problem:
-
-* Delete the extra property from the example
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-----
-
-* Add the property in the type declaration.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-     age: integer
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-   additionalProperties: true
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-<<Back to the top>>
-
 [.parser\*Payload-mediaType-minCount#parser\*Payload-mediaType-minCount]
 == Not declaring a media type for a payload
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
@@ -921,8 +922,9 @@ Libraries must be applied by using 'uses'
 
 <<Back to the top>>
 
-
-== Including an example response that contains invalid JSON
+[.parser\*syaml-error#parser\*syaml-error]
+== Problems with syntax
+=== Including an example response that contains invalid JSON
 // APIMF-967
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -959,7 +961,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Not providing a YAML map when a facet requires one
+=== Not providing a YAML map when a facet requires one
 
 When a facet is described in the RAML 1.0 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
 

@@ -46,8 +46,9 @@ schemas:
 
 <<Back to the top>>
 
-
-== Not using a data type of string for the example of a Boolean enum
+[.parser\*example-validation-error#parser\*example-validation-error]
+== Problems when validating examples
+=== Not using a data type of string for the example of a Boolean enum
 // APIMF-824
 
 Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the violation, this API specification shows an example using the wrong data type.
@@ -79,8 +80,7 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-
-== Not using a required property in the example of a schema that defines that property
+=== Not using a required property in the example of a schema that defines that property
 // APIMF-896
 
 If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
@@ -183,7 +183,7 @@ schemas:
 
 <<Back to the top>>
 
-== Using 0 or 1 as the value of an example of a Boolean
+=== Using 0 or 1 as the value of an example of a Boolean
 // APIMF-929
 
 An example for a Boolean must have a value of "true" or "false". In this API specification illustrating the violation, the value of the example for the form parameter `is_public` is incorrect.
@@ -206,6 +206,127 @@ title: ExampleRAML
             type: boolean
             example: 1
 ----
+
+=== Not including a property in an example
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+// How should the examples change for RAML 0.8?
+
+If an example is missing a property of the type that it is exemplifying, the editor displays this violation message:
+
+----
+should have required property 'property name'
+----
+
+For example, the property `age` is missing in the example:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": true
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
+----
+
+Either add the property to the example or, in the type declaration, declare the property as optional.
+
+In this case, the property is added to the example:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": true
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
+              age: 30
+----
+
+In this case, the property is declared as optional:
+
+----
+#%RAML 0.8
+title: Example API Spec
+
+/clients:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type": "number",
+                      "required": false
+                    }
+                },
+                "required": false,
+                "type": "object"
+              }
+            example:
+              firstName: John
+              lastName: Smith
+----
+
+<<Back to the top>>
+
 
 // == Common Error 7
 // APIMF-1023
@@ -494,8 +615,9 @@ Libraries must be applied by using 'uses'
 
 <<Back to the top>>
 
-
-== Including a schema that contains invalid JSON
+[.parser\*syaml-error#parser\*syaml-error]
+== Problems with syntax
+=== Including a schema that contains invalid JSON
 // APIMF-841
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -544,7 +666,7 @@ schemas:
 
 <<Back to the top>>
 
-== Using invalid JSON in examples of JSON schemas
+=== Using invalid JSON in examples of JSON schemas
 // APIMF-1069
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -584,127 +706,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Not including a property in an example
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-// How should the examples change for RAML 0.8?
-
-If an example is missing a property of the type that it is exemplifying, the editor displays this violation message:
-
-----
-should have required property 'property name'
-----
-
-For example, the property `age` is missing in the example:
-
-----
-#%RAML 0.8
-title: Example API Spec
-
-/clients:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "properties": {
-                    "firstName": {
-                      "type": "string"
-                    },
-                    "lastName": {
-                      "type": "string"
-                    },
-                    "age": {
-                      "type": "number",
-                      "required": true
-                    }
-                },
-                "required": false,
-                "type": "object"
-              }
-            example:
-              firstName: John
-              lastName: Smith
-----
-
-Either add the property to the example or, in the type declaration, declare the property as optional.
-
-In this case, the property is added to the example:
-
-----
-#%RAML 0.8
-title: Example API Spec
-
-/clients:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "properties": {
-                    "firstName": {
-                      "type": "string"
-                    },
-                    "lastName": {
-                      "type": "string"
-                    },
-                    "age": {
-                      "type": "number",
-                      "required": true
-                    }
-                },
-                "required": false,
-                "type": "object"
-              }
-            example:
-              firstName: John
-              lastName: Smith
-              age: 30
-----
-
-In this case, the property is declared as optional:
-
-----
-#%RAML 0.8
-title: Example API Spec
-
-/clients:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            schema: |
-              {
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "properties": {
-                    "firstName": {
-                      "type": "string"
-                    },
-                    "lastName": {
-                      "type": "string"
-                    },
-                    "age": {
-                      "type": "number",
-                      "required": false
-                    }
-                },
-                "required": false,
-                "type": "object"
-              }
-            example:
-              firstName: John
-              lastName: Smith
-----
-
-<<Back to the top>>
-
-== Not providing a YAML map when a facet requires one
+=== Not providing a YAML map when a facet requires one
 
 When a facet is described in the RAML 0.8 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
 
