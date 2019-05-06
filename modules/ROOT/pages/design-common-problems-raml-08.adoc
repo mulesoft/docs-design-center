@@ -10,6 +10,7 @@ As of January 10, 2019, the API editor (one of the two editors in Design Center'
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
+[.parser\*invalid-type-definition#parser\*invalid-type-definition]
 == Using a reserved name for a schema
 
 If you use a reserved name as the name of a schema, the editor displays this message:
@@ -45,8 +46,9 @@ schemas:
 
 <<Back to the top>>
 
-
-== Not using a data type of string for the example of a Boolean enum
+[.parser\*example-validation-error#parser\*example-validation-error]
+== Problems when validating examples
+=== Not using a data type of string for the example of a Boolean enum
 // APIMF-824
 
 Whether the values for a Boolean enum are both strings or Boolean values, the example of the enum must be a string. To illustrate the violation, this API specification shows an example using the wrong data type.
@@ -78,8 +80,7 @@ The last two line of the example RAML above should then be as they are in this c
 
 <<Back to the top>>
 
-
-== Not using a required property in the example of a schema that defines that property
+=== Not using a required property in the example of a schema that defines that property
 // APIMF-896
 
 If a schema defines a required property, the example of that schema must use that property. In this example of the problem, the following API specification defines a response for the endpoint `/order/{id}`. The definition includes two files: `get_order_response_schema.json` and `get_order_response.json`.
@@ -182,7 +183,7 @@ schemas:
 
 <<Back to the top>>
 
-== Using 0 or 1 as the value of an example of a Boolean
+=== Using 0 or 1 as the value of an example of a Boolean
 // APIMF-929
 
 An example for a Boolean must have a value of "true" or "false". In this API specification illustrating the violation, the value of the example for the form parameter `is_public` is incorrect.
@@ -206,382 +207,7 @@ title: ExampleRAML
             example: 1
 ----
 
-// == Common Error 7
-// APIMF-1023
-// *_Using absolute paths to included files_*
-
-// Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
-//
-// The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
-//
-// ./api.raml
-//
-// ----
-// #%RAML 0.8
-// title: ExampleRAML
-// traits: !include ./common/traits.raml
-//
-// /booking/list:
-//     is: [common_errors]
-//     post:
-//         body:
-//             application/json:
-//                 example: {}
-// ----
-//
-// ./common/traits.raml
-//
-// ----
-// - common_errors:
-//     responses:
-//       400:
-//         body:
-//           application/json:
-//             example: !include /common/common_400.example
-// ----
-
-<<Back to the top>>
-
-
-== Not providing a value for the `title` node
-// APIMF-1083
-
-The `title` node cannot lack a value, as it does here:
-
-
-----
-#%RAML 0.8
-title:
-----
-
-<<Back to the top>>
-
-== Not using the data type of the RAML element in the example for that element
-// APIMF-1088
-
-In all cases, the data type of an example must match the data type of the element that it is an example of.
-
-In this incorrect API specification, a query parameter is defined as a string; however, the example of the query parameter is an integer.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-/books:
-  get:
-    queryParameters:
-      publicationYear:
-        type: string
-        example: 2016
-----
-
-<<Back to the top>>
-
-== Using an invalid path for a reference inside a JSON schema
-// APIMF-833
-
-When you use the `$ref` keyword in a JSON schema, the path that you specify with it must start at the root of the schema. For example, the `$ref` keyword used for the property `input2` in the following schema uses an incorrect path to refer to the property `input`.
-----
-#%RAML 0.8
-title: ExampleRAML
-version: v1
-schemas:
-- authCodeResponse : |
-    {
-      "$schema": "http://json-schema.org/draft-04/schema",
-      "properties": {
-        "input": {
-          "type": "string"
-        },
-        "input2": {
-          "$ref": "input"
-        }
-      },
-       "type": "object"
-    }
-----
-The path must start at the root level of the schema and descend through the tree structure. This example of the schema shows the same `$ref` keyword using the correct path.
-----
-{
-      "$schema": "http://json-schema.org/draft-04/schema",
-      "properties": {
-        "input": {
-          "type": "string"
-        },
-        "input2": {
-          "$ref": "#/properties/input"
-        }
-      },
-       "type": "object"
-    }
-
-----
-
-<<Back to the top>>
-
-== Declaring a URI parameter that is never used
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-// How should the examples change for RAML 0.8?
-
-If an API specification declares a URI parameter, but then does not use that parameter, the editor displays this warning message:
-
-----
-unused uri parameter “parameter”
-----
-
-If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
-----
-unused base uri parameter “parameter”
-----
-
-For example, the following API specification would generate two warning messages:
-
-----
-unused uri parameter "unusedParam"
-----
-
-----
-unused base uri parameter "unusedUriParam"
-----
-
-----
-#%RAML 0.8
-title: test
-
-baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
-
-baseUriParameters:
- baseUriParam1:
-    type: string
- baseUriParam2:
-    type: string
- unusedParam:
-    type: string
-
-/endpoint/{uriParam1}/{nonExistsUri}:
- uriParameters:
-   uriParam1:
-     type: string
-   unusedUriParam:
-     type: string
-----
-
-To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
-
-----
-#%RAML 0.8
-title: test
-
-baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
-
-baseUriParameters:
- baseUriParam1:
-   type: string
- baseUriParam2:
-     type: string
-
-/endpoint/{uriParam1}/{nonExistsUri}:
- uriParameters:
-   uriParam1:
-     type: string
-----
-
-<<Back to the top>>
-
-
-
-== Not declaring a media type for a payload
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-If the declaration of a payload does not declare a media type, the editor displays this message:
-
-----
-Payload media type is mandatory
-----
-
-For example, the editor would display this message for the following API specification:
-
-----
-#%RAML 0.8
-title: Example API Spec
-/media:
- get:
-   responses:
-     200:
-       body:
-         type: string
-----
-
-There are two methods that you can choose from to resolve the problem:
-
-* Declare the media type locally in the payload declaration.
-+
-----
-#%RAML 0.8
-title: Example API Spec
-/media:
- get:
-   responses:
-     200:
-       body:
-        application/json:
-         type: string
-----
-
-* Specify the default media type globally for the API specification.
-+
-----
-#%RAML 0.8
-title: Example API Spec
-
-mediaType: application/json
-
-/media:
- get:
-   responses:
-     200:
-       body:
-         type: string
-----
-
-The following example uses both a global and a local declaration. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global declaration with a local one, and returns only a JSON body.
-
-----
-#%RAML 0.8
-title: New API
-mediaType: [ application/json, application/xml ]
-schemas:
-  Person:
-  Another:
-/list:
-  get:
-    responses:
-      200:
-        body: Person
-/send:
-  post:
-    body:
-      application/json:
-        schema: Another
-----
-
-<<Back to the top>>
-
-
-== Not referencing fragments by using the `!include` tag
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-If an API specification uses the key `uses` to reference fragments, the editor displays this message:
-
-----
-Fragments must be imported by using '!include'
-----
-
-<<Back to the top>>
-
-
-== Not applying libraries by using the `uses` key
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-If an API specification uses the `!include` tag to apply a library, the editor displays this message:
-
-----
-Libraries must be applied by using 'uses'
-----
-
-<<Back to the top>>
-
-
-== Including a schema that contains invalid JSON
-// APIMF-841
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-
-The JSON in files that are included in the value of the `schemas` property must be valid.
-
-The first example includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-schemas:
-  - appSwitcher: !include schemas/appSwitcher.json
-----
-
-
-----
-{
-  "appMenuItems" : [
-    {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "Call Center" ,
-      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
-    } , {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "Community" ,
-      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
-    } , {
-      "type" : "Tabset" ,
-      "content" : null ,
-      "icons" : null ,
-      "colors" : null ,
-      "label" : "App Launcher" ,
-      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
-    }
-  ]
-}
-----
-
-<<Back to the top>>
-
-== Using invalid JSON in examples of JSON schemas
-// APIMF-1069
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-
-Examples of JSON schemas must be valid, unlike the example in the following API specification:
-
-
-----
-#%RAML 0.8
-title: ExampleRAML
-...
-/api:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            schema:
-              {
-                "type": "object",
-                "required": true,
-                "$schema": "http://json-schema.org/draft-03/schema",
-                "properties": {
-                  "a": {
-                    "type": "boolean",
-                    "required": true
-                  }
-                }
-              }
-            example:
-              {
-                "a: {
-                  "a": ""
-                }
-----
-
-
-<<Back to the top>>
-
-== Not including a property in an example
+=== Not including a property in an example
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 // How should the examples change for RAML 0.8?
 
@@ -701,7 +327,386 @@ title: Example API Spec
 
 <<Back to the top>>
 
-== Not providing a YAML map when a facet requires one
+
+// == Common Error 7
+// APIMF-1023
+// *_Using absolute paths to included files_*
+
+// Paths to included files must be relative. The following two snippets together give an example of the error. The `traits` node in the specification `api.raml` includes the file `traits.raml`, and correctly includes it with a relative path. However, the file `traits.raml` includes an example that is located in the file `common_400.example`. However, the `!include` statement uses an absolute path. The error is flagged in `api.raml` at the `traits` node.
+//
+// The `!include` statement in `traits.raml` should use either `./common/common_400.example` or `common/common_400.example`, rather than the absolute path.
+//
+// ./api.raml
+//
+// ----
+// #%RAML 0.8
+// title: ExampleRAML
+// traits: !include ./common/traits.raml
+//
+// /booking/list:
+//     is: [common_errors]
+//     post:
+//         body:
+//             application/json:
+//                 example: {}
+// ----
+//
+// ./common/traits.raml
+//
+// ----
+// - common_errors:
+//     responses:
+//       400:
+//         body:
+//           application/json:
+//             example: !include /common/common_400.example
+// ----
+
+<<Back to the top>>
+
+[.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
+== Not providing a value for the `title` node
+// APIMF-1083
+
+The `title` node cannot lack a value, as it does here:
+
+
+----
+#%RAML 0.8
+title:
+----
+
+<<Back to the top>>
+
+== Not using the data type of the RAML element in the example for that element
+// APIMF-1088
+
+In all cases, the data type of an example must match the data type of the element that it is an example of.
+
+In this incorrect API specification, a query parameter is defined as a string; however, the example of the query parameter is an integer.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+/books:
+  get:
+    queryParameters:
+      publicationYear:
+        type: string
+        example: 2016
+----
+
+<<Back to the top>>
+
+[.parser\*unresolved-reference#parser\*unresolved-reference]
+== Using an invalid path for a reference inside a JSON schema
+// APIMF-833
+
+When you use the `$ref` keyword in a JSON schema, the path that you specify with it must start at the root of the schema. For example, the `$ref` keyword used for the property `input2` in the following schema uses an incorrect path to refer to the property `input`.
+----
+#%RAML 0.8
+title: ExampleRAML
+version: v1
+schemas:
+- authCodeResponse : |
+    {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "input"
+        }
+      },
+       "type": "object"
+    }
+----
+The path must start at the root level of the schema and descend through the tree structure. This example of the schema shows the same `$ref` keyword using the correct path.
+----
+{
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "properties": {
+        "input": {
+          "type": "string"
+        },
+        "input2": {
+          "$ref": "#/properties/input"
+        }
+      },
+       "type": "object"
+    }
+
+----
+
+<<Back to the top>>
+
+[.parser\*unused-base-uri-parameter#parser\*unused-base-uri-parameter]
+== Declaring a URI parameter that is never used
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+// How should the examples change for RAML 0.8?
+
+If an API specification declares a URI parameter, but then does not use that parameter, the editor displays this warning message:
+
+----
+unused uri parameter “parameter”
+----
+
+If the parameter is declared as a base URI parameter, but is not used, then this is the warning message:
+----
+unused base uri parameter “parameter”
+----
+
+For example, the following API specification would generate two warning messages:
+
+----
+unused uri parameter "unusedParam"
+----
+
+----
+unused base uri parameter "unusedUriParam"
+----
+
+----
+#%RAML 0.8
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+    type: string
+ baseUriParam2:
+    type: string
+ unusedParam:
+    type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+   unusedUriParam:
+     type: string
+----
+
+To resolve the warning messages, you would simply need to remove the lines that declare these parameters:
+
+----
+#%RAML 0.8
+title: test
+
+baseUri: http://param.raml/a/{baseUriParam1}/{nonExists}/{baseUriParam2}
+
+baseUriParameters:
+ baseUriParam1:
+   type: string
+ baseUriParam2:
+     type: string
+
+/endpoint/{uriParam1}/{nonExistsUri}:
+ uriParameters:
+   uriParam1:
+     type: string
+----
+
+<<Back to the top>>
+
+
+[.parser\*Payload-mediaType-minCount#parser\*Payload-mediaType-minCount]
+== Not declaring a media type for a payload
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If the declaration of a payload does not declare a media type, the editor displays this message:
+
+----
+Payload media type is mandatory
+----
+
+For example, the editor would display this message for the following API specification:
+
+----
+#%RAML 0.8
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+There are two methods that you can choose from to resolve the problem:
+
+* Declare the media type locally in the payload declaration.
++
+----
+#%RAML 0.8
+title: Example API Spec
+/media:
+ get:
+   responses:
+     200:
+       body:
+        application/json:
+         type: string
+----
+
+* Specify the default media type globally for the API specification.
++
+----
+#%RAML 0.8
+title: Example API Spec
+
+mediaType: application/json
+
+/media:
+ get:
+   responses:
+     200:
+       body:
+         type: string
+----
+
+The following example uses both a global and a local declaration. In this case, the `mediaType` node defines acceptable media types as `application/json` and `application/xml`. The first type, `Person`, returns a body that is in either media type. However, the second type, `Another`, overrides the global declaration with a local one, and returns only a JSON body.
+
+----
+#%RAML 0.8
+title: New API
+mediaType: [ application/json, application/xml ]
+schemas:
+  Person:
+  Another:
+/list:
+  get:
+    responses:
+      200:
+        body: Person
+/send:
+  post:
+    body:
+      application/json:
+        schema: Another
+----
+
+<<Back to the top>>
+
+
+== Not referencing fragments by using the `!include` tag
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the key `uses` to reference fragments, the editor displays this message:
+
+----
+Fragments must be imported by using '!include'
+----
+
+<<Back to the top>>
+
+
+== Not applying libraries by using the `uses` key
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an API specification uses the `!include` tag to apply a library, the editor displays this message:
+
+----
+Libraries must be applied by using 'uses'
+----
+
+<<Back to the top>>
+
+[.parser\*syaml-error#parser\*syaml-error]
+== Problems with syntax
+=== Including a schema that contains invalid JSON
+// APIMF-841
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+
+The JSON in files that are included in the value of the `schemas` property must be valid.
+
+The first example includes the schema `appSwitcher.json`. However, the second shows that there is an error in the JSON: at the end of the last value, there is a comma, though there should instead be a quotation mark.
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+schemas:
+  - appSwitcher: !include schemas/appSwitcher.json
+----
+
+
+----
+{
+  "appMenuItems" : [
+    {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Call Center" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sr"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "Community" ,
+      "url" : "/home/home.jsp?tsid=02uxx00000056Sw"
+    } , {
+      "type" : "Tabset" ,
+      "content" : null ,
+      "icons" : null ,
+      "colors" : null ,
+      "label" : "App Launcher" ,
+      "url" : "/app/mgmt/applauncher/appLauncher.apexp?tsid=02uxx00000056Sx,
+    }
+  ]
+}
+----
+
+<<Back to the top>>
+
+=== Using invalid JSON in examples of JSON schemas
+// APIMF-1069
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+
+Examples of JSON schemas must be valid, unlike the example in the following API specification:
+
+
+----
+#%RAML 0.8
+title: ExampleRAML
+...
+/api:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema:
+              {
+                "type": "object",
+                "required": true,
+                "$schema": "http://json-schema.org/draft-03/schema",
+                "properties": {
+                  "a": {
+                    "type": "boolean",
+                    "required": true
+                  }
+                }
+              }
+            example:
+              {
+                "a: {
+                  "a": ""
+                }
+----
+
+
+<<Back to the top>>
+
+=== Not providing a YAML map when a facet requires one
 
 When a facet is described in the RAML 0.8 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
 
@@ -745,6 +750,7 @@ securitySchemes:
 
 <<Back to the top>>
 
+[.parser\*closed-shape#parser\*closed-shape]
 == Using an unsupported property
 
 This error occurs if you use an undefined facet.
@@ -778,7 +784,7 @@ version:
 
 <<Back to the top>>
 
-
+[.parser\*unresolved-parameter#parser\*unresolved-parameter]
 == Declaring an undefined type in a header
 
 This error occurs when a non-existent type is specified in a header.

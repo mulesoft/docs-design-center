@@ -9,7 +9,7 @@ As of January 10, 2019, the API editor (one of the two editors in Design Center'
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
 ====
 
-[.schemaInsteadOfType]
+[.parser\*schema-deprecated#parser\*schema-deprecated]
 == Using the `schema` or `schemas` keyword instead of `type` or `types`
 
 The specification for RAML 1.0 replaced the keywords `schema` and `schemas` with `type` and `types`. If you use `schema` or `schemas`, the editor displays one of these warning messages:
@@ -69,6 +69,7 @@ types:
 
 <<Back to the top>>
 
+[.parser\*invalid-type-definition#parser\*invalid-type-definition]
 == Using a reserved name for a type
 
 If you use a reserved name as the name of a type, the editor displays this message:
@@ -104,8 +105,7 @@ types:
 
 <<Back to the top>>
 
-[.parser\*named-example-used-inlined-example]
-
+[.parser\*named-example-used-inlined-example#parser\*named-example-used-inlined-example]
 == Problems with named examples
 // APIMF-907
 
@@ -338,7 +338,7 @@ A single type declaration in an API specification can use only one `!include` ta
 ////
 <<Back to the top>>
 
-
+[.parser\*invalid-fragment-ref#parser\*invalid-fragment-ref]
 == Appending references with hash symbols to filenames in `!include` statements
 // APIMF-834
 
@@ -464,7 +464,7 @@ title: ExampleRAML
 
 
 
-
+[.parser\*expected-module#parser\*expected-module]
 == Referencing libraries by using the `type` key
 // APIMF-1030
 
@@ -511,7 +511,9 @@ uses:
 
 <<Back to the top>>
 
-== Specifying values for an enum that does not match the enum's data type
+[.parser\*example-validation-error#parser\*example-validation-error]
+== Problems when validating examples
+=== Specifying values for an enum that does not match the enum's data type
 // APIMF-1062
 
 Because of the editor's strict parsing according to the YAML specification, it does not automatically cast values to declared data types. To illustrate the violation, here is an invalid declaration of an enum:
@@ -567,7 +569,7 @@ This violation can occur not just in enums, but also anywhere an `integer`, `nil
 
 <<Back to the top>>
 
-== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified
+=== Using, in an example of a numeric type, an incorrect format for that type, if a format is specified
 // APIMF-1070
 
 Examples of numeric types must conform to restrictions specified in the `format` node. In this example of the violation, the format specified for the numeric type `collection` is int8. However, the value of the example is greater than 127.
@@ -575,7 +577,6 @@ Examples of numeric types must conform to restrictions specified in the `format`
 ----
 #%RAML 1.0
 title: ExampleRAML
-...
 types:
   collection:
     type: integer
@@ -583,14 +584,105 @@ types:
 
 /search:
   /code:
-      get:
-       body:
-        type: collection
-        example: 22342342
+    get:
+      body:
+        application/json:
+          type: collection
+          example: 22342342
 ----
 
 <<Back to the top>>
 
+=== Including undeclared properties in an example when additionalProperties is set to `false`
+// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
+
+If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
+
+----
+should NOT have additional properties
+----
+
+The editor would display this message for the following API specification:
+
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+There are three different methods that you can choose from to resolve the problem:
+
+* Delete the extra property from the example
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+   example:
+     firstName: John
+     lastName: Smith
+----
+
+* Add the property in the type declaration.
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   additionalProperties: false
+   properties:
+     firstName: string
+     lastName: string
+     age: integer
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
++
+----
+#%RAML 1.0
+title: Example API Spec
+
+types:
+ User:
+   type: object
+   properties:
+     firstName: string
+     lastName: string
+   additionalProperties: true
+   example:
+     firstName: John
+     lastName: Smith
+     age: 49
+----
+
+<<Back to the top>>
+
+[.parser\*unused-base-uri-parameter#parser\*unused-base-uri-parameter]
 == Declaring a URI parameter that is never used
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -728,97 +820,7 @@ types:
 
 <<Back to the top>>
 
-
-== Including undeclared properties in an example when additionalProperties is set to `false`
-// Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
-
-If an example for a type includes one or more properties that were not in the type declaration, the editor displays this message:
-
-----
-should NOT have additional properties
-----
-
-The editor would display this message for the following API specification:
-
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-There are three different methods that you can choose from to resolve the problem:
-
-* Delete the extra property from the example
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-   example:
-     firstName: John
-     lastName: Smith
-----
-
-* Add the property in the type declaration.
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   additionalProperties: false
-   properties:
-     firstName: string
-     lastName: string
-     age: integer
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-* Change the value of `additionalProperties` to `true` or remove the line for `additionalProperties` (because `additionalProperties` is `true` by default).
-+
-----
-#%RAML 1.0
-title: Example API Spec
-
-types:
- User:
-   type: object
-   properties:
-     firstName: string
-     lastName: string
-   additionalProperties: true
-   example:
-     firstName: John
-     lastName: Smith
-     age: 49
-----
-
-<<Back to the top>>
-
-
+[.parser\*Payload-mediaType-minCount#parser\*Payload-mediaType-minCount]
 == Not declaring a media type for a payload
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -920,8 +922,9 @@ Libraries must be applied by using 'uses'
 
 <<Back to the top>>
 
-
-== Including an example response that contains invalid JSON
+[.parser\*syaml-error#parser\*syaml-error]
+== Problems with syntax
+=== Including an example response that contains invalid JSON
 // APIMF-967
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
 
@@ -958,7 +961,7 @@ title: ExampleRAML
 
 <<Back to the top>>
 
-== Not providing a YAML map when a facet requires one
+=== Not providing a YAML map when a facet requires one
 
 When a facet is described in the RAML 1.0 specification as requiring a map as a value, but the API specification doesn't provide a map, the editor returns the message `YAML map expected`.
 
@@ -1002,6 +1005,7 @@ securitySchemes:
 
 <<Back to the top>>
 
+[.parser\*unresolved-reference#parser\*unresolved-reference]
 == Not defining a type that is used
 
 When a type is used, but is not first defined, the editor returns the message `Unresolved reference`.
@@ -1040,7 +1044,7 @@ types:
 
 <<Back to the top>>
 
-
+[.parser\*closed-shape#parser\*closed-shape]
 == Using an unsupported property
 
 This error occurs when a facet or data type is defined as having a specific set of properties, yet an API specification defines the facet with a property that is not in that set. The error can also occur if you use an undefined facet.
@@ -1091,6 +1095,7 @@ version:
 
 <<Back to the top>>
 
+[.resolution\*invalid-type-inheritance#resolution\*invalid-type-inheritance]
 == Merging two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
@@ -1145,6 +1150,7 @@ For more information, see the section "Union Types" in the xref:https://github.c
 
 <<Back to the top>>
 
+[.parser\*unresolved-parameter#parser\*unresolved-parameter]
 == Declaring an undefined type in a header
 
 This error occurs when a non-existent type is specified in a header. To fix the error, specify a type that is defined in the RAML specification.
