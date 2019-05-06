@@ -33,9 +33,7 @@ As you make progress, you can run the mocking service to simulate calls to your 
 
 
 // After you are satisfied with your API specification, you can publish it to Exchange in RAML or OAS. If you want to publish it both in RAML and in OAS, publish it twice, the second time changing the name. For example, the first time you publish the specification, you might choose to publish in RAML and specify the name as `myAPI (RAML 1.0)`; the second time, you would choose to publish in OAS and could specify the name `myAPI (OAS 2.0 JSON)`.
-If you are satisfied with your API specification, you can publish it to Exchange in RAML. To publish, click the icon that is in the top-right corner of the visual API editor to open the *Publish API specification to Exchange* dialog. The icon looks like this:
-
-image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
+If you are satisfied with your API specification, you can publish it to Exchange in RAML. To publish, click the *Publish to Exchange* button that is in the top-right corner of the visual API editor to open the *Publish API specification to Exchange* dialog. 
 
 Alternatively, you can customize the specification in the API editor by clicking *Edit RAML*  or *Edit OAS*.
 

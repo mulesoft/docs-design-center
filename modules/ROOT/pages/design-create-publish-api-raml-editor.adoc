@@ -65,9 +65,7 @@ The converted file is not guaranteed to be a correct specification.
 
 
 == What to do next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the icon that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. The icon looks like this
-
-image::publish-to-exchange.png[title="Publish to Exchange icon",46,52,align="left"]
+After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. 
 
 
 == See also
