@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
 You can use API Designer's visual API editor to scaffold RAML or OAS API specifications by populating language-neutral forms.
 
 == Before you begin
