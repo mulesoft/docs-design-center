@@ -143,7 +143,7 @@ The example of the schema is in `get_order_response.json`. However, the name of 
 
 <<Back to the top>>
 
-== Not using in an example of a schema the data type that the schema defines
+=== Not using in an example of a schema the data type that the schema defines
 // APIMF-901
 
 For example, the schema in the following API specification defines the data type for the property `title` as an object; however, an array is used in the example of the schema.
