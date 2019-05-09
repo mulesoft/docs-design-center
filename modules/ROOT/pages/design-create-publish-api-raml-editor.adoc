@@ -50,22 +50,11 @@ Download files:: Click the dots to the right of the file name and select *Downlo
 
 Download files in a different format:: Click the dots to the right of the file name of a specification and select *Download as*. You can download your specification in one of the other supported formats. If your specification is in RAML, you can download it in OAS YAML or in OAS JSON. If your specification is in OAS, you can download it in RAML 0.8 or in RAML 1.0.
 +
-[WARNING]
-====
-The downloaded file is not guaranteed to be a correct specification.
-====
-
-Convert files:: Convert a file in your project to another format. Click the dots to the right of the file name and select *Convert*. You can convert your specification to one of the other supported formats. If your specification is in RAML, you can convert it to OAS in YAML or in JSON. If your specification is in OAS, you can convert it to RAML 0.8 or to RAML 1.0.
-+
-[WARNING]
-====
-The converted file is not guaranteed to be a correct specification.
-====
-
+The files downloaded through this option are not guaranteed to be valid. This option is intended to provide the basis for the development of a new specification or the continuation of the original specification in a new format. It is _not_ intended to provide a valid specification.
 
 
 == What to do next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. 
+After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog.
 
 
 == See also
