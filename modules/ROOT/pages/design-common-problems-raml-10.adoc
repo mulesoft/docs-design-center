@@ -750,6 +750,20 @@ types:
 
 <<Back to the top>>
 
+[.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
+== Not providing a value for the `title` node
+// APIMF-1083
+
+The `title` node cannot lack a value, as it does here:
+
+
+----
+#%RAML 1.0
+title:
+----
+
+<<Back to the top>>
+
 [.parser\*unused-base-uri-parameter#parser\*unused-base-uri-parameter]
 == Declaring a URI parameter that is never used
 // Originally from "Common Problems in Conforming Either to RAML 0.8 or 1.0", which I'm removing.
