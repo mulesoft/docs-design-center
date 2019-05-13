@@ -17,8 +17,8 @@ The easiest way to get started in Flow Designer is to use a template.  A templat
 * An overview of what the template does
 * A list of prerequisites for using it
 * A list of steps for configuring it
-.. Look for the option *Open template* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is *Download*, then the template is compatible only with Anypoint Studio.
-. Click *Open template*.
+.. Look for the option *Open flow* in the top-right corner of the details page. The presence of this button indicates that the template is compatible with Flow Designer. If the only option is *Download*, then the template is compatible only with Anypoint Studio.
+. Click *Open flow*.
 +
 *Result:* The template is opened in read-only mode in Flow Designer. Read-only mode lets you find out which connectors and operations are used, how data changes as it moves through the flow, and what configurations for connecting to your systems are already set up.
 . If you think the template will suit your needs, click *Use this template* in the top-right corner of Flow Designer.
