@@ -50,7 +50,7 @@ Download files:: Click the dots to the right of the file name and select *Downlo
 
 Download files in a different format:: Click the dots to the right of the file name of a specification and select *Download as*. You can download your specification in one of the other supported formats. If your specification is in RAML, you can download it in OAS YAML or in OAS JSON. If your specification is in OAS, you can download it in RAML 0.8 or in RAML 1.0.
 +
-The files downloaded through this option are not guaranteed to be valid. This option is intended to provide the basis for the development of a new specification or the continuation of the development of the original specification in a new format. It is _not_ intended to provide a valid specification.
+The files downloaded through this option are not guaranteed to be valid. This option is intended to provide the basis for the development of a new specification or the continuation of the development of the original specification in a new format.
 
 
 == What to do next
