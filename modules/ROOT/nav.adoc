@@ -8,7 +8,7 @@
  ** xref:design-scenarios-s7m4-for-published-apis.adoc[Using Published RAML API Specifications in Studio 7.x and Mule Runtime 4.x]
 * xref:design-create-publish-api-specs.adoc[API Designer]
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
- ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the API Editor]
+ ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Code Editor]
  ** xref:design-branching.adoc[Fork an API Project]
  ** xref:design-mocking-service.adoc[Simulate Calls to an API]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]

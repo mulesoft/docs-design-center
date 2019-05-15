@@ -49,9 +49,9 @@ Fortunately, you know just the tool to help you carry out this plan: Flow Design
 
 == Before you begin
 
-* Sign up for a 30-day trial of xref::https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to it.
-* Sign up for xref::https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
-* Sign up for xref::https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need a trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
+* Sign up for a 30-day trial of https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to it.
+* Sign up for https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.
+* Sign up for https://www.twilio.com/try-twilio[a free Twilio developer account]. You'll need a trial phone number that Twilio provides for your account. You'll also need your account SID and authentication token.
 
 == Capture opportunities that are won
 You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, use an SOQL query in Salesforce which fields to send and our criteria for triggering the application. After you build the query, you can set up a Push Topic that can serve as the trigger for your MuleSoft application.
