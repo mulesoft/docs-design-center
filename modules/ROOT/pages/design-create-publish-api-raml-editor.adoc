@@ -1,18 +1,18 @@
-= Create an API Specification with the API Editor
+= Create an API Specification with the Code Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use API Designer's API editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
+You can use API Designer's code editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
 
 == Before you begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Start with API Designer* to use the API editor. You can also choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
+. In the *New API Specification* dialog, name your project and select the option *Code editor* to use the code editor. You can also choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
 +
-_Result:_ The API editor opens. The editor is divided into three panels:
+_Result:_ The code editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project. The stub specification file is listed. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
 +
@@ -65,7 +65,7 @@ The converted file is not guaranteed to be a correct specification.
 
 
 == What to do next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the API editor to open the *Publish API Specification to Exchange* dialog. 
+After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the code editor to open the *Publish API Specification to Exchange* dialog.
 
 
 == See also

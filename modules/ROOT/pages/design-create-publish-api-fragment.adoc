@@ -1,10 +1,10 @@
-= Create and Publish a RAML API Fragment in the API editor in API Designer
+= Create and Publish a RAML API Fragment in the Code Editor in API Designer
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create API fragments directly in RAML with the help of code suggestions that appear within the API editor.
+You can create API fragments directly in RAML with the help of code suggestions that appear within the code editor.
 
 
 == About this task
@@ -32,7 +32,7 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 . On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
 . In the *New API Fragment* dialog, type a name for the project and select the type of API fragment that you want to create. Then, click *Create*.
 +
-_Result:_ The API editor opens. The editor is divided into three panels:
+_Result:_ The code editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project.
 +
@@ -48,7 +48,7 @@ You can create more than one API specification in a single project. If you want 
 
 . Draft your API fragment.
 +
-As you draft, the API editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor.
+As you draft, the code editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor.
 +
 You can import files into your project, either separately or bundled together in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
 +
@@ -58,7 +58,7 @@ You can import files into your project, either separately or bundled together in
 
 == What to do next
 
-You can publish the API fragment to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the API editor to open the *Publish API specification to Exchange* dialog.
+You can publish the API fragment to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the code editor to open the *Publish API specification to Exchange* dialog.
 
 The fragment can then be included as a dependency in an API-specification project. After revising a fragment, update API specifications that use the fragment to include the new version. +
 
