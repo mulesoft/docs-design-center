@@ -1,26 +1,26 @@
-= Create an API Specification with the Visual API Editor
+= Create an API Specification with the Visual Code Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-You can use API Designer's visual API editor to scaffold RAML or OAS API specifications by populating language-neutral forms.
+You can use API Designer's visual editor to scaffold RAML or OAS API specifications by populating language-neutral forms.
 
 == Before you begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == About this task
 
-As you populate the forms, the visual API editor generates two API specifications: one in RAML 1.0, the other in OAS 2.0 (in JSON). Both are visible in a read-only pane on the right of the screen. If at any time you want to edit the specification directly or customize it (import RAML fragments and more), click *Edit RAML*  or *Edit OAS* to switch to the API editor. After you switch, however, you cannot switch back to the visual API editor to continue creating the API specification.
+As you populate the forms, the visual editor generates two API specifications: one in RAML 1.0, the other in OAS 2.0 (in JSON). Both are visible in a read-only pane on the right of the screen. If at any time you want to edit the specification directly or customize it (import RAML fragments and more), click *Edit RAML*  or *Edit OAS* to switch to the code editor. After you switch, however, you cannot switch back to the visual editor to continue creating the API specification.
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Try API designer's visual editing capabilities* to use the visual API editor.
+. In the *New API Specification* dialog, name your project and select the option *Try API designer's visual editing capabilities* to use the visual editor.
 +
 _Result:_
 +
-The visual API editor opens. The editor is divided into three panels:
+The visual editor opens. The editor is divided into three panels:
 +
 * The left panel lists the resources and data types that you create in the specification.
 * The middle panel presents the forms in which you specify the properties of the components of the specification.
@@ -33,9 +33,9 @@ As you make progress, you can run the mocking service to simulate calls to your 
 
 
 // After you are satisfied with your API specification, you can publish it to Exchange in RAML or OAS. If you want to publish it both in RAML and in OAS, publish it twice, the second time changing the name. For example, the first time you publish the specification, you might choose to publish in RAML and specify the name as `myAPI (RAML 1.0)`; the second time, you would choose to publish in OAS and could specify the name `myAPI (OAS 2.0 JSON)`.
-If you are satisfied with your API specification, you can publish it to Exchange in RAML. To publish, click the *Publish to Exchange* button that is in the top-right corner of the visual API editor to open the *Publish API specification to Exchange* dialog. 
+If you are satisfied with your API specification, you can publish it to Exchange in RAML. To publish, click the *Publish to Exchange* button that is in the top-right corner of the visual editor to open the *Publish API specification to Exchange* dialog. 
 
-Alternatively, you can customize the specification in the API editor by clicking *Edit RAML*  or *Edit OAS*.
+Alternatively, you can customize the specification in the code editor by clicking *Edit RAML*  or *Edit OAS*.
 
 == See also
 * xref:design-mocking-service.adoc[Simulate Calls to an API]
