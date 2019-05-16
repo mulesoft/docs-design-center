@@ -180,9 +180,9 @@ Invalid fragment body in [[root.location]] , external fragment will be created
 ----
 
 [NOTE]
-===
+====
 This is the same warning message that appears when there is more than one example in a NamedExample fragment. See the next section for examples of that problem.
-===
+====
 
 The second line in a NamedExample fragment must be a key that is the name given to the example, as shown here:
 
