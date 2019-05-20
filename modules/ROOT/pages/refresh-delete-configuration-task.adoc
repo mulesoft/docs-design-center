@@ -1,4 +1,4 @@
-= Refresh or Delete Data that Appears on Cards (Flow Designer)
+= Refresh Data that Appears on Cards (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -10,12 +10,12 @@ Indicators and component metadata appear on each face of each card in the flow.
 
 image::green-bar.png[typical flow,height=183,width=724]
 
-If you make any changes to a card, for example to the path configured for the GET method of an HTTP Listener, the indicators and metadata that appear on the card become stale. You can refresh or delete this information by following these steps:
+If you make any changes to a card, for example to the path configured for the GET method of an HTTP Listener, the indicators and metadata that appear on the card become stale. You can refresh this information by following these steps:
 
 . Hover over the top right corner of the face of a closed or open card.
 +
 image::fd13hover.png[]
 +
-. Click the three-dot icon that appears, and select *Refresh* or *Delete*.
+. Click the three-dot icon that appears, and select *Refresh*.
 +
 image::fd13-refresh.png[]
