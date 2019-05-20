@@ -1,4 +1,4 @@
-= Refresh or Delete Data that Appears on Cards (Flow Designer)
+= Refresh Data that Appears on Cards (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
