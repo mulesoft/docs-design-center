@@ -18,7 +18,7 @@ You can base a new Mule-application project on one an existing one. Your new pro
 
 == Result
 
-Flow Designer opens the new project. Red circles indicate that you need to provide authentication information for connecting to the systems that the cards represent. Click an entry in the *Reusable Configurations* list in the *Project* pane, which is on the left side of the canvas. Flow Designer opens the configuration and displays a red border on either side of each field that requires information from you.
+Flow Designer opens the new project. Red circles indicate that you need to provide authentication information, so that  Flow Designer can connect to the systems that the cards represent. Click an entry in the *Reusable Configurations* list in the *Project* pane, which is on the left side of the canvas. Flow Designer opens the configuration and displays a red border on either side of each field that requires information from you.
 
 Another way of finding these fields is to click the *Problems* tab in the bottom-right corner of the Flow Designer screen to open the *Problems* pane. When you click an entry in the pane, Flow Designer displays the field that corresponds to it.
 
