@@ -1,14 +1,27 @@
-= To Clone a Mule App Project (Flow Designer)
+= Start Creating a Mule Application from an Existing One (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can duplicate existing projects, including custom data types and sample data.
+:imagesdir: ../assets/images
 
-. Select an existing project.
 
-. Click Duplicate image:to-create-a-mule-application-project-cfeff.png[].
+You can base a new Mule-application project on one an existing one. Your new project includes almost everything that is in the existing project, even any custom data types and sample data that are defined in that project. However, authentication information is not copied into your new project.
 
-. Name the duplicated project.
+== Procedure
 
-. Select the target environment for designing and debugging the application.
+. Select an existing Mule-application project in the list of projects in Design Center.
+
+. Click the *Clone* icon, which looks like this: image:to-create-a-mule-application-project-cfeff.png[].
+
+. Name your new project.
+
+== Result
+
+Flow Designer opens the new project. Red circles indicate that you need to provide authentication information for connecting to the systems that the cards represent. Click an entry in the *Reusable Configurations* list in the *Project* pane, which is on the left side of the canvas. Flow Designer opens the configuration and displays a red border on either side of each field that requires information from you.
+
+Another way of finding these fields is to click the *Problems* tab in the bottom-right corner of the Flow Designer screen to open the *Problems* pane. When you click an entry in the pane, Flow Designer displays the field that corresponds to it.
+
+== What to do next
+
+After you provide the required information, you can change the application as you like, developing it as you would any other Mule application.
