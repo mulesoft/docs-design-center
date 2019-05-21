@@ -20,7 +20,6 @@
  ** xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]
  ** xref:import-template.adoc[Create a Mule Application Quickly from a Template]
  ** xref:to-create-a-mule-application-project.adoc[Start Creating a Mule Application from an Existing One]
- ** xref:import-mule-app-project.adoc[Import a Mule Application]
  ** xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
  ** xref:dynamic-expression-field.adoc[Specify a Dynamic Value in a Text Field]
  ** xref:custom-expression-field.adoc[Create a DataWeave Expression in a Text Field]
