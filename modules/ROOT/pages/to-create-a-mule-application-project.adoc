@@ -6,9 +6,12 @@ endif::[]
 :imagesdir: ../assets/images
 
 There are two ways that you can start creating a Mule application from an existing one:
-* Clone an existing Mule-application project
-* Import an existing Mule-application project
 
+* <<Clone an existing Mule-application project>>
+* <<Import an existing Mule-application project>>
+
+
+[[bookmark-a,Clone an existing Mule-application project]]
 == Clone an existing project
 
 You can base a new Mule-application project on one an existing one. Your new project includes almost everything that is in the existing project, even any custom data types and sample data that are defined in that project. However, authentication information is not copied into your new project.
@@ -31,6 +34,7 @@ Another way of finding these fields is to click the *Problems* tab in the bottom
 
 After you provide the required information, you can change the application as you like, developing it as you would any other Mule application.
 
+[[bookmark-b,Import an existing Mule-application project]]
 == Import an existing project
 
 You can import a Mule-application project that was exported from Design Center. This feature supports two different scenarios:
