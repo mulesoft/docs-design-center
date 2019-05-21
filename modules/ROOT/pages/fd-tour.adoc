@@ -6,10 +6,14 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+== What a flow looks like
+
+A flow consists of cards that are in a sequence from left to right. The cards each represent a core component, an operation of a connector, a module, or an API.
+
 .The cards in an example flow
 image::FD-annotated-2.png[]
 
-The cards in a flow each represent a core component, an operation of a connector, a module, or an API. In this example, the cards represent the following core components and connectors:
+In this example, the cards represent the following core components and connectors:
 
 . The Subscribe Topic operation of the Salesforce connector
 . The core component Set Variable
@@ -22,11 +26,15 @@ The cards in a flow each represent a core component, an operation of a connector
 
 To learn how to create this flow, see xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
 
-The cards are displayed in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
+The first card in a flow is the trigger card, which represents the connector and operation that you want to use to start the movement of data through the flow.
 
 To add a card to the end of a flow, you click the plus icon that follows the previous card.
 
 To add a card between two cards, mouse over the arrow that appears between them. The arrow turns in to the plus icon, which you can then click.
+
+== The features of the Flow Designer interface
+
+The features are organized into five areas.
 
 .The five areas of the Flow Designer interface
 image::FD-annotated.png[]
