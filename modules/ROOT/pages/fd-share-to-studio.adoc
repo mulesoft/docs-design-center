@@ -1,4 +1,4 @@
-= Get Help for a Project from Someone who Works in Studio
+= Get Help with a Project from Someone who Works in Studio
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

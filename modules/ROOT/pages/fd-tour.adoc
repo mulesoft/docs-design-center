@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Flow Designer's visual orientation gives you the tools to build Mule applications visually, so that you can see from end to end how data moves through each flow. 
+Flow Designer's visual orientation gives you the tools to build Mule applications visually, so that you can see from end to end how data moves through each flow.
 
 == What a flow looks like
 
@@ -26,7 +26,7 @@ In this example, the cards represent the following core components and connector
 . Another instance of the core component Transform
 . The Send Message operation of the Twilio connector
 
-To learn how to create this flow, see xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
+To learn how to create this flow and what each card does, see xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
 
 The first card in a flow is the trigger card, which represents the connector and operation that you want to use to start the movement of data through the flow.
 

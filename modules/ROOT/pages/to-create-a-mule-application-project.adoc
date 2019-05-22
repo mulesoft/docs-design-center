@@ -20,7 +20,9 @@ You can base a new Mule-application project on one an existing one. Your new pro
 
 . Select an existing Mule-application project in the list of projects in Design Center.
 
-. Click the *Clone* icon, which looks like this: image:to-create-a-mule-application-project-cfeff.png[].
+. Click the *Clone* icon, which looks like this:
++
+image:to-create-a-mule-application-project-cfeff.png[]
 
 . Name your new project.
 
