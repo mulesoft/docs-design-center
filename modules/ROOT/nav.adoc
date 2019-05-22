@@ -29,7 +29,7 @@
  ** xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project]
  ** xref:promote-app-prod-env-design-center.adoc[Deploy an Application to an Environment]
  ** xref:export-studio-design-center.adoc[Export a Project]
-
+ ** xref:fd-share-to-studio.adoc[Get Help for a Project from Someone who Works in Studio]
  ** xref:jump-runtime-manager-task.adoc[Manage a Mule App in Runtime Manager]
  ** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another]
  ** xref:error-handling-task-design-center.adoc[Handle Errors]

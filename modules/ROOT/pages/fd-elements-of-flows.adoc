@@ -1,4 +1,8 @@
 = The Elements of Flows in Mule Applications (Design Center)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
 The cards in a flow each represent a core component, an operation of a connector, a module, or an API.
 

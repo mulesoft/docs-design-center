@@ -1,4 +1,8 @@
 = Troubleshooting in Flow Designer
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
 Here are several resources that you can refer to when troubleshooting problems in Flow Designer.
 
