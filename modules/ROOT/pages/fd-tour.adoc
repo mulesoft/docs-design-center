@@ -1,4 +1,4 @@
-= Tour of the Flow Designer Interface
+= Tour of Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,11 +6,13 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+
+
 == What a flow looks like
 
-A flow consists of cards that are in a sequence from left to right. The cards each represent a core component, an operation of a connector, a module, or an API.
+Here is an example of a Mule application that consists of a single flow.
 
-.The cards in an example flow
+.The cards in the example flow from "Create Your First Mule Application with Flow Designer"
 image::FD-annotated-2.png[]
 
 In this example, the cards represent the following core components and connectors:
@@ -22,7 +24,7 @@ In this example, the cards represent the following core components and connector
 . The core component Transform
 . The HTTP Request operation of the HTTP connector
 . Another instance of the core component Transform
-. The Send Message operationg of the Twilio connector
+. The Send Message operation of the Twilio connector
 
 To learn how to create this flow, see xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer].
 
@@ -49,6 +51,8 @@ In the top-left corner of the canvas are the names of the project and the flow.
 Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
 +
 Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
++
+You can hide the panes by clicking the icon of whichever pane is open. To show the panes again, click either icon.
 +
 What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resusable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards.
 +
