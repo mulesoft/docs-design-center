@@ -1,4 +1,4 @@
-= Log Data (Flow Designer)
+= Log Data with Logger (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,7 +6,7 @@ endif::[]
 
 :keywords: mozart, deploy, environments
 
-You add one or more Logger utilities to a flow to log information from the Mule event or static messages that you specify in the log. Logging information is helpful for troubleshooting and taking a quick look at the output at some point in the flow. You can use expresssions to create the log message. The following table lists some examples.
+You add one or more Logger core components to a flow to log information from the flow at runtime. Logging information is helpful for troubleshooting and taking a quick look at the output at some point in the flow. You can use expresssions to create the log message. The following table lists some examples.
 
 [%header,cols="30,70"]
 |===
