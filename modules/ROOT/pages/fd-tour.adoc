@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-
+Flow Designer's visual orientation gives you the tools to build Mule applications visually, so that you can see from end to end how data moves through each flow. 
 
 == What a flow looks like
 
