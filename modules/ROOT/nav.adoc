@@ -38,7 +38,7 @@
   *** xref:flow-datatype-task.adoc[Set Flow Data Types and Variables]
   *** xref:change-target-output-transformation-design-center-task.adoc[Change the Target Output of a Transformation]
  ** xref:about-data-types.adoc[About Data Types]
- ** xref:fd-troubleshooting.adoc[Troubleshooting in Flow Designer]
+ ** xref:fd-troubleshooting.adoc[Troubleshoot in Flow Designer]
   *** xref:troubleshooting-reference.adoc[Error Messages for Flow Designer]
   *** xref:viewing-problems-fd-canvas.adoc[List and Navigate to Errors that are in a Mule-App Project]
   *** xref:view-clear-logs-task.adoc[View the Log for a Mule App Project in Flow Designer]
