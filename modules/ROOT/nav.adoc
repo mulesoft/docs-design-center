@@ -17,6 +17,8 @@
  ** xref:upload-raml-task.adoc[Upload an Existing RAML File to Exchange from API Designer]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
 * xref:about-designing-a-mule-application.adoc[Flow Designer]
+ ** xref:fd-elements-of-flows.adoc[The Elements of Flows in Mule Applications]
+ ** xref:fd-tour.adoc[Tour of Flow Designer]
  ** xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]
  ** xref:import-template.adoc[Create a Mule Application Quickly from a Template]
  ** xref:to-create-a-mule-application-project.adoc[Start Creating a Mule Application from an Existing One]
