@@ -1,4 +1,9 @@
 = Deploy a Mule Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 There are two methods that you can use to deploy a Mule application.
 
