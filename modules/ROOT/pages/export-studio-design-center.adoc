@@ -6,18 +6,6 @@ endif::[]
 
 This procedure describes how to download your Design Center project.
 
-// Check GUI changes before 11/18 release
-
-== Export Source to Studio
-
-You download the source if you want to import the project into Studio as an Anypoint Studio Deployable Archive. You can keep the project in Design Center and Studio in sync if you configure your Anypoint Platform organization user and password in Studio in Preferences > Anypoint Studio > Authentication.
-
-. In Design Center, first make sure there are no errors marked in your project.
-
-. Click Download Mule Application image:export-studio-design-center-24d8a.png[] and select Download Source.
-
-+
-A JAR containing your project is downloaded to the default location in your local disk.
 
 == Export Package to Runtime Manager
 
