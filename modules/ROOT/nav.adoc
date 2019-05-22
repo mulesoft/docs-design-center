@@ -28,7 +28,7 @@
  ** xref:refresh-delete-configuration-task.adoc[Refresh or Delete a Module Configuration]
  ** xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project]
  ** xref:fd-share-to-studio.adoc[Get Help with a Project from Someone who Works in Studio]
- ** xref:jump-runtime-manager-task.adoc[Manage a Mule App in Runtime Manager]
+ ** xref:jump-runtime-manager-task.adoc[View Runtime Information about Running Applications You are Creating]
  ** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another]
  ** xref:error-handling-task-design-center.adoc[Handle Errors]
  ** xref:logger-task-design-center.adoc[Log Data]
