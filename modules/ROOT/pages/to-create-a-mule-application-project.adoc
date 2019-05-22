@@ -37,7 +37,7 @@ After you provide the required information, you can change the application as yo
 [[bookmark-b,Import an existing Mule-application project]]
 == Import an existing project
 
-You can import a Mule-application project that was exported from Design Center. This feature supports two different scenarios:
+You can import a Mule-application project that was exported from Flow Designer by using the *Download source* option. This feature supports two different scenarios:
 
 * Importing a project that was exported from a different environment within a single organization
 * Importing a project that was exported from an environment that is in a different organization

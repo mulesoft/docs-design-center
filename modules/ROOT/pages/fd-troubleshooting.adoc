@@ -1,6 +1,6 @@
 = Troubleshooting in Flow Designer
 
-Here are several resources for troubleshooting problems in Flow Designer.
+Here are several resources that you can refer to when troubleshooting problems in Flow Designer.
 
 xref:viewing-problems-fd-canvas.adoc[List and Navigate to Errors that are in a Mule-App Project]:: Learn where to find out about any errors that might be in your flows and how to locate where the errors occur.
 
