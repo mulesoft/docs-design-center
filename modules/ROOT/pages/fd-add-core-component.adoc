@@ -1,9 +1,9 @@
-= Add Logic to Flows (Flow Designer)
+= Add Features to Flows (Flow Designer)
 
-You can add cards that represent core components to a flow if 
+You can add cards that represent core components to a flow if
 
-xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flowref]:: By placing a Flow Ref core component in a flow, you can execute one flow from another within the same application.
+xref:to-create-and-populate-a-variable.adoc[Set Flow Variables]::
+
+xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flow Ref]:: By placing a Flow Ref core component in a flow, you can execute one flow from another within the same application.
 
 xref:error-handling-task-design-center.adoc[Handle Errors with Try]:: You can put specific parts of a flow that are prone to errors inside Try. If an attempt to use the part of the flow in Try fails, Try can catch the errors and apply a fix or an alternative.
-
-xref:logger-task-design-center.adoc[Log Data with Logger]:: You add one or more Logger core components to a flow to log information from the flow at runtime.
