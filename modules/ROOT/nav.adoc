@@ -35,7 +35,6 @@
  ** xref:jump-runtime-manager-task.adoc[View Runtime Information about Running Applications You are Creating]
  ** xref:input-output-structure-transformation-design-center-task.adoc[Transform Utility Reference]
  ** xref:design-advanced-features.adoc[Advanced Features for Designing Mule Applications]
-  *** xref:flow-datatype-task.adoc[Set Flow Data Types and Variables]
   *** xref:change-target-output-transformation-design-center-task.adoc[Change the Target Output of a Transformation]
  ** xref:about-data-types.adoc[About Data Types]
  ** xref:fd-troubleshooting.adoc[Troubleshoot in Flow Designer]
