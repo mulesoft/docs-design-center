@@ -7,12 +7,12 @@ endif::[]
 
 You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
 
-For example, in the tutorial xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer], you used a Set Variable card after the trigger card, so that you could save the trigger card's payload. The reason was that you needed to use information from the payload after using the Choice router, and none of the three possible outputs from the Choice router would preserve that information.
+For example, in the tutorial xref::salesforce-to-twilio.adoc["Create Your First Mule Application with Flow Designer"], you used a Set Variable card after the trigger card, so that you could save the trigger card's payload. The reason was that you needed to use information from the payload after using the Choice router, and none of the three possible outputs from the Choice router would preserve that information.
 
 .The Set Variable card from the tutorial
 image::fd-set-var-oppdetails.png[]
 
-Where you used the variable, which you named `OppDetails`, was in the Transform card that followed the Choice router.
+You used the variable, which you named `OppDetails`, in the Transform card that followed the Choice router.
 
 .The Transform card that followed the Choice router, with the variable `OppDetails` highlighted
 image::fd-set-var-transform.png[]
@@ -43,41 +43,34 @@ image::fd-set-var-value-field-fmode.png[]
 +
 .The Custom Expression window and its panes
 image::fd-set-var-custom-expression-dialog.png[]
++
+[NOTE]
+====
+For the *Add data* pane to appear, at least one of the previous cards must output a data type that is other than `Default`.
+====
 . Click the canvas to close the card.
-
-
 
 == Examples
 
-This example sets the variable to a string:
-
-* Name = `myVar`
-* Value = `my first variable`
-
-This example sets the variable by using a DataWeave operation that results in a value of `5`:
-
-* Name = `myVar`
-* Value = `max([1,2,3] ++ [3,4,5])`
-
 This example sets the variable to the message payload:
 
-* Name = `myVar`
-* Value = `payload`
+* Name: `myVar`
+* Value: `payload`
 
 This example sets the variable to the message attributes:
 
-* Name = `myVar`
-* Value = `attributes`
+* Name: `myVar`
+* Value: `attributes`
 
 This example sets the variable to the entire message:
 
-* Name = `myVar`
-* Value = `message`
+* Name: `myVar`
+* Value: `message`
 
 These examples set the variable to a Boolean value, `true`:
 
-* Name = `myVar`
-* Value =
+* Name: `myVar`
+* Value:
 ** `true`
 ** `true as Boolean`
 ** `(1 + 1 == 2)` evaluates to `true`
