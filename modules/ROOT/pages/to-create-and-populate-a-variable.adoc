@@ -17,16 +17,13 @@ Where you used the variable, which you named `OppDetails`, was in the Transform 
 .The Transform card that followed the Choice router, with the variable `OppDetails` highlighted
 image::fd-set-var-transform.png[]
 
-The Set Variable component is for creating or updating a variable to store values for use within the flow of a Mule app. You can store simple literal values such as strings or messages, message payloads, or attribute objects. For example, you might store the original payload of a message (before it is processed) so you can use it later in the flow or within an error handler.
+However, if you had wanted to use `OppDetails` later in the flow, it was still available, as you can see here in the Twilio card, which was the last card in the flow.
 
-For more information, see "About Set Variable", which is linked to from the *See also* section at the end of this topic.
+.The Twilio card, with the `OppDetails` variable highlighted
+image::fd-set-var-twilio.png[]
 
 When a variable is no longer needed in a flow, you can remove the variable with the Remove Variable component.
 
-The Set Variable (`set-variable`) component is for creating or updating a variable to store values for use within the flow of a Mule app. You can store simple literal values such as strings or messages, message payloads, or attribute objects. For example, you might store the original payload of a message (before it is processed) so you can use it later in the flow or within an error handler.
-
-The `set-variable` component is not recommended for complex expressions or transformations. You should instead use it for simple ones, such as selections, and use the xref:transform-component-about.adoc[Transform Component]
-for complex scenarios.
 
 == Procedure
 
