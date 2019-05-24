@@ -1,4 +1,4 @@
-= Set Flow Variables (Flow Designer)
+= Store and Reuse Data from the Output of a Card (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -24,28 +24,84 @@ For more information, see "About Set Variable", which is linked to from the *See
 
 When a variable is no longer needed in a flow, you can remove the variable with the Remove Variable component.
 
-== Enhancing Data with Target Parameters
+The Set Variable (`set-variable`) component is for creating or updating a variable to store values for use within the flow of a Mule app. You can store simple literal values such as strings or messages, message payloads, or attribute objects. For example, you might store the original payload of a message (before it is processed) so you can use it later in the flow or within an error handler.
 
-When creating a flow in a Mule app, you might need to store data in a variable so that any component in the flow can use it. Non-void operations (such as the Read operation to the File connector) can store the message data that they return in a variable. Once defined, variables created with the target parameter are available for use within the flow, and you can access them like you access any other variable.
+The `set-variable` component is not recommended for complex expressions or transformations. You should instead use it for simple ones, such as selections, and use the xref:transform-component-about.adoc[Transform Component]
+for complex scenarios.
 
-You often define variables through these parameters:
 
-* Target (`target`): Name of the variable in which you want to store message data. Names can only include numbers, characters, and underscores. For example, hyphens are not allowed in the name.
-* Target Value (`targetValue`): Value of the data to store in the target variable. By default, the value is the message payload (`payload`). The field accepts any value that a variable accepts: any supported data type, DataWeave expressions, the keywords `payload`, `attributes`, and `message`, but _not_ the keyword `vars`.
+[%header,cols="20a,20a,60a"]
+|===
+|Field | Usage | Description
 
-It is important to understand that setting a target variable changes the typical course of the message through the flow. Normally, an operation outputs a different message than it receives as input. However, when you set a variable from an operation, the operation outputs to the _next_ component in the flow the same message that it received as input. For example, assume you have a flow consisting of component A, followed by component B with a target value of `myMessage`, and then component C. In this case, component C will receive the same message that B received from A.
+| Variable Name (`variableName`)
+| Required
+| Name of the variable. Names can only include numbers, characters, and underscores. For example, hyphens are not allowed in the name.
 
-In this image, the Read operation of an FTP connector stores its payload in the variable `myVar`:
+| Value (`value`)
+| Required
+| Value for the variable, which can be a string or a DataWeave expression.
 
-image::ftp-read-output-target.png[]
+| Mime Type (`mimeType`)
+| Optional
+| Sets the variable MIME type, such as `text/plain` or `application/json`.
 
-. The *Output* fields for the target variable are in the *Advanced* section of the component card, as is the case for all components that have these fields.
-. The name `myVar` has been specified as the name of the target variable. There is no default name. The target variable stores the payload by default. You need to specify a target value only if you want to store something other than the full payload.
+| Encoding (`encoding`)
+| Optional
+| Sets the variable encoding, such as `ISO 10646/Unicode(UTF-8)`.
 
-To access the content of `myVar` in another operation in the flow, you would use the expression `myVar.payload`.
+|===
 
-For a list of the DataWeave functions that you can use in variable expressions, see "Core" in the DataWeave Function Reference. "Core" is linked to from the *See also* section at the end of this topic.
+[WARNING]
+--
+The `mimeType` and `encoding` attributes do not affect a DataWeave expression used as `value`. They only affect the output value stored. If a transformation is required, the DataWeave expression must contain an explicit output directive.
+--
 
+== Examples
+
+This example sets the variable to a string:
+
+* Name = `myVar`
+* Value = `my first variable`
+
+This example sets the variable by using a DataWeave operation that results in a value of `5`:
+
+* Name = `myVar`
+* Value = `#[max([1,2,3] ++ [3,4,5])]` in Anypoint Studio.
+
+This example sets the variable to the message payload:
+
+* Name = `myVar`
+* Value = `payload` in Design Center, `#[payload]` in Anypoint Studio.
+
+This example sets the variable to the message attributes:
+
+* Name = `myVar`
+* Value = `attributes` in Design Center, `#[attributes]` in Anypoint Studio.
+
+This example sets the variable to the entire message:
+
+* Name = `myVar`
+* Value = `message` in Design Center, `#[message]` in Anypoint Studio.
+
+This XML example sets a variable that takes a map as a value:
+`<set-variable variableName="employee" value="{ 'name' : 'Ana', 'office' : 'BA' }" mimeType="application/json" encoding="UTF-8/>`
+
+This example sets the same variable using selectors in a DataWeave script. It assumes the `name` attribute is available as input to Set Variable:
+`<set-variable variableName="employee" value="#[output application/java --- payload.name]"/>`
+
+These examples set the variable to a Boolean value, `true`:
+
+* Name = `myVar`
+* Value =
+** `true` in Design Center, `#[true]` in Anypoint Studio
+** `true as Boolean` in Design Center, `#[true as Boolean]` in Anypoint Studio
+** `(1 + 1 == 2)` evaluates to `true` in Design Center, `#[(1 + 1 == 2)]` evaluates to `true` in Anypoint Studio
+
+To display the value of a variable through the Logger component in Design Center, you might need to use the Anypoint Studio syntax to display the value of a variable, for example, `#[vars.myVar]` instead of `vars.myVar`.
+
+== Accessing Variables in Other Event Processors
+Set Variable sets a variable in the current Mule event, and the variables then travel with the Mule event to downstream event processors. You can access any variable with DataWeave using `vars`. So if you set a variable named lastMessage, you can access it as `vars.lastMessage`.  You can set variables in a Transform Message component, and also many connectors and event processors have a Target that can be set in the Advanced tab. These all set flow variables and they are accessed the same way, through the keyword `vars.`.
 
 
 
