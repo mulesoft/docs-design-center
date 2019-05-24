@@ -3,20 +3,19 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Variables are used to store per-event values for use within a flow of a Mule app. The stored data can be any supported data type, such as an object, number, or string. It is also possible to store the current message (using the `message` keyword), the current message payload (using the `payload` keyword) or just the current message attributes (using the `attributes` keyword). You can even use a DataWeave expression as the value. However, the keyword `vars` (for example, `vars.someOtherVar`) is not allowed.
+:imagesdir: ../assets/images
 
-You can create or update variables in these ways:
+You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
 
-* Using the Set Variable core component.
-* Using a Target Variable from within an operation, such as the Read operation to the File connector or the Store operation to the Database connector.
+For example, in the tutorial xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer], you used a Set Variable card after the trigger card, so that you could save the trigger card's payload. The reason was that you needed to use information from the payload after using the Choice router, and none of the three possible outputs from the Choice router would preserve that information.
 
-After creating a variable, you can access and use it within the scope of a Mule flow where you created it, which includes any flows that are joined with it through a Flow Ref component.
+.The Set Variable card from the tutorial
+image::fd-set-var-oppdetails.png[]
 
-* `vars`: Keyword for accessing a variable, for example, through a DataWeave expression in a Mule component, such as the Logger, or from an Input or Output parameter of an operation. If the name of your variable is `myVar`, you can access it like this: `vars.myVar`
+Where you used the variable, which you named `OppDetails`, was in the Transform card that followed the Choice router.
 
-Note that a variable in the Mule event is different from variables defined in a DataWeave script, which are local to the script and not accessible outside of it.
-
-== About the Set Variable Component
+.The Transform card that followed the Choice router, with the variable `OppDetails` highlighted
+image::fd-set-var-transform.png[]
 
 The Set Variable component is for creating or updating a variable to store values for use within the flow of a Mule app. You can store simple literal values such as strings or messages, message payloads, or attribute objects. For example, you might store the original payload of a message (before it is processed) so you can use it later in the flow or within an error handler.
 
@@ -29,33 +28,30 @@ The Set Variable (`set-variable`) component is for creating or updating a variab
 The `set-variable` component is not recommended for complex expressions or transformations. You should instead use it for simple ones, such as selections, and use the xref:transform-component-about.adoc[Transform Component]
 for complex scenarios.
 
+== Procedure
 
-[%header,cols="20a,20a,60a"]
-|===
-|Field | Usage | Description
+. Click the plus icon that follows the card that outputs the data you want to store and reuse.
+. Add a Set Variable card.
+. Specify a name for the variable. Names can include only numbers, characters, and underscores.
+. Specify a value for the variable.
+* If you want to specify a string value, ensure that the *f(x)* button appears to the right of the *Value* field. The presence of this button means that the field is in string mode, not function mode. You can type directly into the *Value* field.
++
+.The *Value* field in string mode, highlighted in the Set Variable card
+image::fd-set-var-value-field-smode.png[]
 
-| Variable Name (`variableName`)
-| Required
-| Name of the variable. Names can only include numbers, characters, and underscores. For example, hyphens are not allowed in the name.
+* If you want to specify a DataWeave expression, ensure that `f(x)` appears in the right side of the *Value* field. The presence of `f(x)` means that the field is in expression mode. Clicking in the field opens the *Custom Expression* dialog, where you can compose an expression with the help of the *Add data* and *Add functions* panes on the right.
++
+.The *Value* field in expression mode, highlighted in the Set Variable card
+image::fd-set-var-value-field-fmode.png[]
++
+.The Custom Expression window and its panes
+image::fd-set-var-custom-expression-dialog.png[]
 
-| Value (`value`)
-| Required
-| Value for the variable, which can be a string or a DataWeave expression.
 
-| Mime Type (`mimeType`)
-| Optional
-| Sets the variable MIME type, such as `text/plain` or `application/json`.
 
-| Encoding (`encoding`)
-| Optional
-| Sets the variable encoding, such as `ISO 10646/Unicode(UTF-8)`.
 
-|===
 
-[WARNING]
---
-The `mimeType` and `encoding` attributes do not affect a DataWeave expression used as `value`. They only affect the output value stored. If a transformation is required, the DataWeave expression must contain an explicit output directive.
---
+
 
 == Examples
 
@@ -67,38 +63,31 @@ This example sets the variable to a string:
 This example sets the variable by using a DataWeave operation that results in a value of `5`:
 
 * Name = `myVar`
-* Value = `#[max([1,2,3] ++ [3,4,5])]` in Anypoint Studio.
+* Value = `max([1,2,3] ++ [3,4,5])`
 
 This example sets the variable to the message payload:
 
 * Name = `myVar`
-* Value = `payload` in Design Center, `#[payload]` in Anypoint Studio.
+* Value = `payload`
 
 This example sets the variable to the message attributes:
 
 * Name = `myVar`
-* Value = `attributes` in Design Center, `#[attributes]` in Anypoint Studio.
+* Value = `attributes`
 
 This example sets the variable to the entire message:
 
 * Name = `myVar`
-* Value = `message` in Design Center, `#[message]` in Anypoint Studio.
-
-This XML example sets a variable that takes a map as a value:
-`<set-variable variableName="employee" value="{ 'name' : 'Ana', 'office' : 'BA' }" mimeType="application/json" encoding="UTF-8/>`
-
-This example sets the same variable using selectors in a DataWeave script. It assumes the `name` attribute is available as input to Set Variable:
-`<set-variable variableName="employee" value="#[output application/java --- payload.name]"/>`
+* Value = `message`
 
 These examples set the variable to a Boolean value, `true`:
 
 * Name = `myVar`
 * Value =
-** `true` in Design Center, `#[true]` in Anypoint Studio
-** `true as Boolean` in Design Center, `#[true as Boolean]` in Anypoint Studio
-** `(1 + 1 == 2)` evaluates to `true` in Design Center, `#[(1 + 1 == 2)]` evaluates to `true` in Anypoint Studio
+** `true`
+** `true as Boolean`
+** `(1 + 1 == 2)` evaluates to `true`
 
-To display the value of a variable through the Logger component in Design Center, you might need to use the Anypoint Studio syntax to display the value of a variable, for example, `#[vars.myVar]` instead of `vars.myVar`.
 
 == Accessing Variables in Other Event Processors
 Set Variable sets a variable in the current Mule event, and the variables then travel with the Mule event to downstream event processors. You can access any variable with DataWeave using `vars`. So if you set a variable named lastMessage, you can access it as `vars.lastMessage`.  You can set variables in a Transform Message component, and also many connectors and event processors have a Target that can be set in the Advanced tab. These all set flow variables and they are accessed the same way, through the keyword `vars.`.
@@ -107,5 +96,4 @@ Set Variable sets a variable in the current Mule event, and the variables then t
 
 == See also
 
-* xref:4.1@mule-runtime::variable-transformer-reference.adoc[Set Variable]
-* xref:4.1@mule-runtime::dw-core.adoc[Core]
+* xref::fd-store-data-top.adoc[Store and Reuse Data within a Flow]
