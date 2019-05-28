@@ -7,6 +7,21 @@ endif::[]
 
 You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
 
+.An ordinary flow contrasted with a flow in which a Set Variable card is used
+image::fd-regular-variables.png[]
+
+The first flow carries out these steps:
+
+. Card A produces an output.
+. Card B receives the entire output from Card A.
+
+The second flow carries out these steps:
+
+. Card A produces an output.
+. The Set Variable card stores all or part of the output from Card A in a variable.
+. Card B receives the entire set of data from Card A (payload and attributes) and the variable. It outputs its own set of data and the variable. The output from Card A, except for the part that was stored in the variable, is no longer part of the flow
+. Card C receives the entire set of data from Card B and the variable.
+
 For example, in the tutorial xref::salesforce-to-twilio.adoc["Create Your First Mule Application with Flow Designer"], you used a Set Variable card after the trigger card, so that you could save the trigger card's payload. The reason was that you needed to use information from the payload after using the Choice router, and none of the three possible outputs from the Choice router would preserve that information.
 
 .The Set Variable card from the tutorial
