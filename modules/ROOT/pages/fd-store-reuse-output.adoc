@@ -8,7 +8,7 @@ endif::[]
 
 You can store a value that is based on output of a card -- that is, the entire output, part of the output, or a manipulation of the output -- and then pass that variable to the next card, together with the output from the previous card.
 
-Normally, a card outputs data that is different from the data that it received as input, as depicted in the first flow in the diagram.
+Normally, a card outputs data that is different from the data that it received as input, as depicted by the first flow in the diagram.
 
 .An ordinary flow contrasted with a flow in which a card outputs to a target variable
 image::fd-target-variables.png[]
