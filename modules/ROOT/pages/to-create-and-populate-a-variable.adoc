@@ -1,11 +1,13 @@
-= Store All or Some of the Data from the Output of a Card in a Variable (Flow Designer)
+= Store a Value that is Based on the Output that has been Passed from a Card (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
+You can use a Set Variable card to create a variable that stores all of the output from the preceding card, stores part of the output, or manipulates the output by using functions in a DataWeave expression. You can then reuse that value in a later card by using the variable.
+
+Normally, a card outputs data that is received in its entirety by the next card in the same flow, as depicted by the first flow in this diagram.
 
 .An ordinary flow contrasted with a flow in which a Set Variable card is used
 image::fd-regular-variables.png[]
@@ -15,10 +17,10 @@ The first flow carries out these steps:
 . Card A produces an output.
 . Card B receives the entire output from Card A.
 
-The second flow carries out these steps:
+However, when you create a variable with a Set Variable card, both the variable and the output from the previous card are passed to the next card in the flow, as the second flow depicts:
 
 . Card A produces an output.
-. The Set Variable card stores all or part of the output from Card A in a variable.
+. The Set Variable card creates a variable to store all of the output from Card A, store part of the output, or manipulate the output by using functions in a DataWeave expression.
 . Card B receives the entire set of data from Card A (payload and attributes) and the variable. It outputs its own set of data and the variable. The output from Card A, except for the part that was stored in the variable, is no longer part of the flow
 . Card C receives the entire set of data from Card B and the variable.
 
@@ -43,7 +45,9 @@ If you believe that you no longer need to use a variable after using it one or m
 
 == Procedure
 
-. Click the plus icon that follows the card that outputs the data you want to store and reuse.
+To store a value that is based on the data from a card:
+
+. Click the plus icon that follows the card that outputs the data on which you want to base a value to store.
 . Add a Set Variable card.
 . Specify a name for the variable. Names can include only numbers, characters, and underscores.
 . Specify a value for the variable.

@@ -1,4 +1,4 @@
-= Direct the Entire Output of a Card into a Target Variable (Flow Designer)
+= Store a Value that is Based on the Output that has not yet been Passed from a Card (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,7 +6,9 @@ endif::[]
 :imagesdir: ../assets/images
 
 
-You can store the entire output of a card, rather than pass the output on to the next card in a flow. Normally, a card outputs data that is different from the data that it received as input. However, when you create a target variable, the card stores its output into that variable and passes to the next card both the variable and the same message that it received as input.
+You can store a value that is based on output of a card -- that is, the entire output, part of the output, or a manipulation of the output -- and then pass that variable to the next card, together with the output from the previous card.
+
+Normally, a card outputs data that is different from the data that it received as input, as depicted in the first flow in the diagram.
 
 .An ordinary flow contrasted with a flow in which a card outputs to a target variable
 image::fd-target-variables.png[]
@@ -16,12 +18,11 @@ The first flow carries out these steps:
 . Card A produces an output.
 . Card B receives the entire output from Card A.
 
-The second flow carries out these steps:
+However, when you create a target variable, the flow changes, as depicted in the second flow in the diagram, which carries out these steps:
 
 . Card A produces an output.
 . Card B receives the entire output from Card A. It stores its own output in a variable, and then passes the variable and the output from Card A to Card C.
 . Card C receives the output from Card A and the variable that contains the output of Card B.
-
 
 When you want to a variable, it will appear in cards later in the flow. To use the flow from the tutorial xref::salesforce-to-twilio.adoc["Create Your First Mule Application with Flow Designer"] as an example, the variable `OppDetails` is created early in the flow. The variable is still available in the Twilio card, which is the last card in the flow.
 
