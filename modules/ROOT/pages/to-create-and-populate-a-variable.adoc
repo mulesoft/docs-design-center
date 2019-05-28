@@ -48,32 +48,22 @@ image::fd-set-var-custom-expression-dialog.png[]
 ====
 For the *Add data* pane to appear, at least one of the previous cards must output a data type that is other than `Default`.
 ====
++
+*Example based on the screenshot of the Custom Expression windo:* If you wanted to save the payload's error message into a variable, you would click `error_message`. The *Expression* field would then contain the expression `error_message`. You would then click *OK*.
++
+Or you could also choose to type in a value. For example, if you wanted to store the entire payload in a variable, you could type `payload` in the *Custom Expression* field.
 . Click the canvas to close the card.
 
 == Examples
 
-This example sets the variable to the message payload:
+To store the payload from the previous card, set the value of the variable to `payload`.
 
-* Name: `myVar`
-* Value: `payload`
+To store the attributes from the previous card, set the value of the variable to `attributes`.
 
-This example sets the variable to the message attributes:
+To store the entire set of data at the current point in a flow, set the value of the variable to `message`.
 
-* Name: `myVar`
-* Value: `attributes`
+To store a Boolean value, set the value of the variable to `true` or `false`.
 
-This example sets the variable to the entire message:
-
-* Name: `myVar`
-* Value: `message`
-
-These examples set the variable to a Boolean value, `true`:
-
-* Name: `myVar`
-* Value:
-** `true`
-** `true as Boolean`
-** `(1 + 1 == 2)` evaluates to `true`
 
 
 

@@ -1,8 +1,8 @@
 = Add Features to Flows (Flow Designer)
 
-You can add cards that represent core components to a flow if
+// Unfinished
 
-xref:to-create-and-populate-a-variable.adoc[Set Flow Variables]::
+You can add cards that represent core components to a flow if
 
 xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flow Ref]:: By placing a Flow Ref core component in a flow, you can execute one flow from another within the same application.
 

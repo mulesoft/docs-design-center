@@ -1,14 +1,25 @@
 = Store and Reuse Data within a Flow (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+
+// Rewrite the whole damn thing!
 
 Variables are used to store per-event values for use within a flow of a Mule app. The stored data can be any supported data type, such as an object, number, or string. It is also possible to store the current message (using the `message` keyword), the current message payload (using the `payload` keyword) or just the current message attributes (using the `attributes` keyword). You can even use a DataWeave expression as the value. However, the keyword `vars` (for example, `vars.someOtherVar`) is not allowed.
 
 You can create or update variables in these ways:
 
 * Using the Set Variable core component.
-* Using a Target Variable from within an operation, such as the Read operation to the File connector or the Store operation to the Database connector.
+* Using a Target Variable from within an operation.
 
 After creating a variable, you can access and use it within the scope of a Mule flow where you created it, which includes any flows that are joined with it through a Flow Ref component.
 
-* `vars`: Keyword for accessing a variable, for example, through a DataWeave expression in a Mule component, such as the Logger, or from an Input or Output parameter of an operation. If the name of your variable is `myVar`, you can access it like this: `vars.myVar`
 
-Note that a variable in the Mule event is different from variables defined in a DataWeave script, which are local to the script and not accessible outside of it.
+
+
+Store and Reuse Data from the Output of a Card:: You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
+
+Store the Output of a Card, Rather than Pass the Output to the Next Card::
