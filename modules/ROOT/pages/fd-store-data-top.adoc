@@ -6,11 +6,9 @@ endif::[]
 :imagesdir: ../assets/images
 
 
-// Rewrite the whole damn thing!
-
-Variables are used to store values for use within a flow of a Mule app. After creating a variable, you can access and use it within the scope of a Mule flow where you created it, which includes any flows that are joined with it through a Flow Ref component.
+Variables are used to store values for use within a flow of a Mule app. After you create a variable, you can use it in any subsequent cards in the flow.
 
 
-Store and Reuse Data from the Output of a Card:: You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
+xref::to-create-and-populate-a-variable.adoc[Store All or Some of the Data from the Output of a Card in a Variable]:: You can use a Set Variable card to create a variable that stores data from the output of a card. You can then reuse that data in a later card by using the variable.
 
-Store the Output of a Card, Rather than Pass the Output to the Next Card::
+xref::fd-store-data-top.adoc[Direct the Entire Output of a Card into a Target Variable]:: You can store the entire output of a card, rather than pass the output on to the next card in a flow. Normally, a card outputs data that is different from the data that it received as input. However, when you create a target variable, the card stores its output into that variable and passes to the next card both the variable and the same message that it received as input.
