@@ -14,21 +14,22 @@ A card in a flow might require the data that is sent to it to be in a certain fo
 
 |
 ----
-[
- {
-   "productID": string,
-   "category": string,
-   "SKU": string,
-   "productName": string,
-   "inventory": string
- }
-]
-
 {
- "Amount": number,
- "Id": string,
- "CloseDate": string,
- "Name": string
+  [
+    {
+      "productID": string,
+      "category": string,
+      "SKU": string,
+      "productName": string,
+      "inventory": string
+    }
+  ]
+  {
+    "Amount": number,
+    "Id": string,
+    "CloseDate": string,
+    "Name": string
+  }
 }
 ----
 |
@@ -48,7 +49,7 @@ A card in a flow might require the data that is sent to it to be in a certain fo
 ----
 |====
 
-To do the mapping, you used a Transform card
+To do the mapping, you used a Transform card, clicking and dragging elements from the *Input* side to elements on the *Output* side. (In the Transform card, "input" and "output" are terms that are relative to the Transform card itself. The "input" to the Transform card was the output of the Choice card, and the "output" of the Transform card was the input to the Order API.)
 
 .The Transform card that mapped the output of the Choice card to the input required by the API
 image::transform-first-final.png[]
