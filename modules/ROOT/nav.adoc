@@ -28,7 +28,7 @@
  ** xref:fd-store-data-top.adoc[Store and Reuse Data within a Flow]
   *** xref:to-create-and-populate-a-variable.adoc[Store a Value that is Based on the Output that has been Passed from a Card]
   *** xref:fd-store-reuse-output.adoc[Store a Value that is Based on the Output that has not yet been Passed from a Card]
- ** xref:fd-add-core-component.adoc[Add Features to Flows]
+ ** xref:fd-add-core-component.adoc[Add Logic, Data Transformations, Error Catching, and More to Flows]
   *** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flowref]
   *** xref:error-handling-task-design-center.adoc[Handle Errors with Try]
  ** xref:refresh-delete-configuration-task.adoc[Refresh or Delete a Module Configuration]
