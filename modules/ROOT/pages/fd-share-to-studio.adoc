@@ -19,14 +19,14 @@ As the other person works on the project, the changes are applied to your projec
 +
 *Result:* A `.jar` file that contains a copy of your project is downloaded to the default location on your computer.
 . Have the person who works in Studio follow these steps:
-.. Enable Studio to access your organization from Studio by selecting *Preferences* > *Anypoint Studio* > *Authentication* and entering your user ID and password for Anypoint Platform.
+.. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication* and entering your user ID and password for Anypoint Platform.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
 *Result:* Studio opens the project.
 
 == What to do next
 
-Delete the project from Studio. If you need help again later, repeat the procedure to share your project.
+The person who works in Studio can work on the project. All changes are made automatically to the project in Design Center. When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
 
 == See also
 

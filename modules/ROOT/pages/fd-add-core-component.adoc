@@ -1,8 +1,16 @@
 = Add Features to Flows (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
+:imagesdir: ../assets/images
 // Unfinished
 
 You can add cards that represent core components to a flow if
+
+
+image::fd-supported-core-components.png[]
 
 xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flow Ref]:: By placing a Flow Ref core component in a flow, you can execute one flow from another within the same application.
 
