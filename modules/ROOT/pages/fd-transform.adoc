@@ -1,0 +1,88 @@
+= Mapping the Output of a Card to the Expected Input of the Next Card
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+A card in a flow might require the data that is sent to it to be in a certain format or to contain certain elements. For example, in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", you needed to map the output of the Choice card to the input that was required by the NTO Order API.
+
+.Output of the Choice card and the required input of the NTO Order API
+[cols="1a,1a"]
+|====
+| Output of the Choice card | Required input of the NTO Order API
+
+|
+----
+[
+ {
+   "productID": string,
+   "category": string,
+   "SKU": string,
+   "productName": string,
+   "inventory": string
+ }
+]
+
+{
+ "Amount": number,
+ "Id": string,
+ "CloseDate": string,
+ "Name": string
+}
+----
+|
+----
+{
+  "OppId": string,
+  "OrderAmount": number,
+  "orderdate": string,
+  "productInfo": {
+     "productID": string,
+     "category": string,
+     "SKU": string,
+     "productName": string,
+     "inventory": number
+       }
+}
+----
+|====
+
+To do the mapping, you used a Transform card
+
+.The Transform card that mapped the output of the Choice card to the input required by the API
+image::transform-first-final.png[]
+
+You had to do the mapping because the Order API (which was a REST API that you sent a POST message to) did not require all of the data that was in the output of the Choice card. Moreover, some of the elements of the data required by the API had names that differed from the corresponding elements in the Choice card's output
+
+.The requirement for mapping data from the Choice card to data for the Order API
+[%header,cols=2*]
+|===
+|This Element from the Choice card
+|Mapped to This Element for the Order API
+
+|`productID`
+|`productID`
+
+|`category`
+|`category`
+
+|`SKU`
+|`SKU`
+
+|`productName`
+|`productName`
+
+|`inventory`
+|`inventory`
+
+|`Amount`
+|`OrderAmount`
+
+|`Id`
+|`OppId`
+
+|`CloseDate`
+|`orderDate`
+
+|===
