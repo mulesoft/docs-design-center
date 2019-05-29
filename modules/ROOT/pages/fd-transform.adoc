@@ -5,34 +5,43 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-A card in a flow might require the data that is sent to it to be in a certain format or to contain certain elements. For example, in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", you needed to map the output of the Choice card to the input that was required by the NTO Order API.
+A card in a flow might require that the data that is sent to it be in a certain format or contain certain elements. In such a situation, that card expects a particular data type. You might have to map the output of the preceding card to that data type.
 
-.Output of the Choice card and the required input of the NTO Order API
+For example, suppose that a card contains Card A and Card B, and that Card B follows Card A. If the output of Card A uses the same data type that Card B requires for its input, then you do not have to map the output of Card A to the input of Card B. However, if the two data types do not match, you have to map data from the output of Card A to the data type required by Card B.
+
+== Example from the tutorial
+If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. The first time, you needed to map the output of the Choice card to the input that was required by the NTO Order API.
+
+.Data types output by the Choice card and the data type required by the NTO Order API
 [cols="1a,1a"]
 |====
-| Output of the Choice card | Required input of the NTO Order API
+| Data types output by the Choice card | Data type required as input by the NTO Order API
 
 |
+.The Product Information data type
+----
+[
+  {
+    "productID": string,
+    "category": string,
+    "SKU": string,
+    "productName": string,
+    "inventory": string
+  }
+]
+----
+
+.The Salesforce Opportunity data type
 ----
 {
-  [
-    {
-      "productID": string,
-      "category": string,
-      "SKU": string,
-      "productName": string,
-      "inventory": string
-    }
-  ]
-  {
-    "Amount": number,
-    "Id": string,
-    "CloseDate": string,
-    "Name": string
-  }
+  "Amount": number,
+  "Id": string,
+  "CloseDate": string,
+  "Name": string
 }
 ----
 |
+.The Order Information data type
 ----
 {
   "OppId": string,
@@ -44,7 +53,7 @@ A card in a flow might require the data that is sent to it to be in a certain fo
      "SKU": string,
      "productName": string,
      "inventory": number
-       }
+     }
 }
 ----
 |====
@@ -87,3 +96,8 @@ You had to do the mapping because the Order API (which was a REST API that you s
 |`orderDate`
 
 |===
+
+The second time you mapped in the tutorial, you did not need to set a data type explicitly for the input of the Twilio card. The Transform card was able to determine the data structure that the Twilio card required. Also, you did not map data elements. Rather, in the output of the Transform card, you used a DataWeave script to pull data from the input of the Transform card into a message to send customers.
+
+.The DataWeave script that used data from the input to the Transformation card
+image::transform-second-script-panel.png[]
