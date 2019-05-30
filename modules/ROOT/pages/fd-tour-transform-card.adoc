@@ -1,16 +1,35 @@
 = Tour of the Transform Card (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 The Transform card contains numerous features to make it easy for you to map data.
 
+== The static features of the Transform card
 
-.The *Configuration* section of the Transform card, showing the *Mappings* pane
-image::fd-tour-of-the-transform-card.png[]
+The Transform card has four sections: *Configuration*, *Input*, *Output*, and *Notes*. The last three sections are common to all cards. While the *Notes* section can be very useful for explaining the work you have done in the Transform card or writing instructions to other people who might use your application as a template, you do not use the *Input* and *Output* sections in this card.
+
+.The features of the Transform card that always appear, no matter which pane in the *Configuration* section is open
+image::fd-tour-of-the-transform-card-static.png[]
+
+. The card's type and name. As with other cards, you can rename the card from the default name `DataWeave` to any name that suits your purposes.
 
 . This banner indicates whether Flow Designer has mapping suggestions for you. When it does, the banner looks like this:
 +
 image::fd-automapper-banner-true.png[]
 +
 See "xref::get-mapping-recommendations.adoc[Get a Recommendation for Mapping Data Types for a Transformation]" to learn when Flow Designer can make mapping suggestions for you.
+
+== The *Mappings* pane and unchanging features of the Transform card
+
+The first part of the tour covers
+
+.The *Mappings* pane in the *Configuration* section of the Transform card
+image::fd-tour-of-the-transform-card.png[]
+
+
 
 . The *Input* pane shows the output from the previous card. The Transform card displays the three parts of the output: the payload, attributes, and variables. If the payload is not a simple data type, you might need to specify the data type that it uses. You might need to do the same for attributes, variables, or both.
 +
@@ -37,3 +56,9 @@ ddddd
 Setting expressions for values in the output pane.
 
 . The tabs that open the different panes in the *Configuration* section of the Transform card. The *Mappings* tab is currently selected to show the *Mappings* pane.
+
+= See also
+
+* xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
+* xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]
+* xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]

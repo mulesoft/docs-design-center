@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
 In the Transform card, you can view recommendations for how to map the data elements in an input data type to the data elements in an output type. If a recommendation suits your needs, you can save the mapping and use it in the card.
 
 == About this task
@@ -83,4 +85,10 @@ The recommendation for mapping the input data type to the output data type appea
 
 If you find the recommendation fits your needs, click the *Apply* button at the top of the Mappings pane.
 
-If the recommendation does not fit your needs, click *Discard*. The recommendation is removed from the pane. If you want to see a recommendation again, close and reopen the Transform card and click Preview.
+If the recommendation does not fit your needs, click *Discard*. The recommendation is removed from the pane. If you want to see a recommendation again, close and reopen the Transform card and click *Preview*.
+
+== See also
+
+* xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
+* xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]
+* xref:fd-tour-transform-card.adoc[Tour of the Transform Card]

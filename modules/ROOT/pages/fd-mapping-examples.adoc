@@ -1,4 +1,10 @@
 = Examples of Mapping with the Transform Card (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
 
 If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. Let's take another look at both mappings.
 
@@ -103,3 +109,9 @@ The *Mappings* pane showed this view:
 image::transform-second-mappings-panel.png[]
 
 The `f(x)` markers on three of the field in the output payload show that those fields are populated with values that you supplied via strings or DataWeave expressions. Notice that `OrderID`, `TrackingNo`, and `ETA` in the input payload all map to `Body` in the output payload because the script in `Body` references those three payload elements.
+
+== See also
+
+* xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
+* xref:fd-tour-transform-card.adoc[Tour of the Transform Card]
+* xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
