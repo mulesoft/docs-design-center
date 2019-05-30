@@ -1,4 +1,4 @@
-= Tour of the Transform Card (Flow Designer(
+= Tour of the Transform Card (Flow Designer)
 
 The Transform card contains numerous features to make it easy for you to map data.
 
