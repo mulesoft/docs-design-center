@@ -15,6 +15,6 @@ image::fd-transform-parent-topic-match.png[]
 .The output of Card A does not match the input that Card B requires; therefore, you must use a Transform card to map Card A's output to the input for Card B
 image::fd-transform-parent-topic-nomatch.png[]
 
-xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]::
+xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]:: If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. Let's take another look at both mappings.
 
-xref:fd-tour-transform-card.adoc[Tour of the Transform Card]::
+xref:fd-tour-transform-card.adoc[Tour of the Transform Card]:: The Transform card contains numerous features to make it easy for you to map data.

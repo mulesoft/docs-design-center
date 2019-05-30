@@ -1,7 +1,9 @@
 = Examples of Mapping with the Transform Card (Flow Designer)
 
-== First example from the tutorial
-If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. The first time, you needed to map the output of the Choice card to the input that was required by the NTO Order API.
+If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. Let's take another look at both mappings.
+
+== First example
+The first time, you needed to map the output of the Choice card to the input that was required by the NTO Order API.
 
 .Data types output by the Choice card and the data type required by the NTO Order API
 [cols="1a,1a"]
@@ -88,7 +90,7 @@ You had to do the mapping because the Order API (which was a REST API that you s
 
 |===
 
-== Second example from the tutorial
+== Second example
 
 The second time you mapped in the tutorial, you did not need to set a data type explicitly for the input of the Twilio card. The Transform card was able to determine the data structure that the Twilio card required. Also, you did not map data elements. Rather, in the output of the Transform card, you used a DataWeave script to pull data from the input of the Transform card into a message to send customers. You also explicitly set the values of the `To` and `From` fields to particular phone numbers, as you can see here in the *Script* pane of the Transform card.
 

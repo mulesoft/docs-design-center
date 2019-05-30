@@ -1,5 +1,8 @@
 = Tour of the Transform Card (Flow Designer(
 
+The Transform card contains numerous features to make it easy for you to map data.
+
+
 .The *Configuration* section of the Transform card, showing the *Mappings* pane
 image::fd-tour-of-the-transform-card.png[]
 
