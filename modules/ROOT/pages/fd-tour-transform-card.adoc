@@ -1,0 +1,36 @@
+= Tour of the Transform Card (Flow Designer(
+
+.The *Configuration* section of the Transform card, showing the *Mappings* pane
+image::fd-tour-of-the-transform-card.png[]
+
+. This banner indicates whether Flow Designer has mapping suggestions for you. When it does, the banner looks like this:
++
+image::fd-automapper-banner-true.png[]
++
+See "xref::get-mapping-recommendations.adoc[Get a Recommendation for Mapping Data Types for a Transformation]" to learn when Flow Designer can make mapping suggestions for you.
+
+. The *Input* pane shows the output from the previous card. The Transform card displays the three parts of the output: the payload, attributes, and variables. If the payload is not a simple data type, you might need to specify the data type that it uses. You might need to do the same for attributes, variables, or both.
++
+Supported simple data types:: Boolean, Date, DateTime, Integer, Number, String
+
+Other supported data types:: CSV, JSON, Object, XML
++
+You can specify the data type by clicking the three dots to the right of `payload` or `vars` to open the *Data Type Actions* menu.
++
+.The menu for setting the data type for a payload, attributes, and variables in the *Input* pane
+image::fd-transform-payload-menu.png[]
++
+You can create the data type that you need or select it if you created it earlier. See "xref::about-data-types.adoc[Data Types]" to learn more.
+
+. This area shows which elements of the input to the Transform card are mapped to which elements of the output.
+
+. The *Output* pane displays the elements that will be in the payload of the output of the Transform card and passed to the next card in the flow. If the Flow Designer is unable to detect the data structure that is required by the next card in the flow, you can specify the data type to use for the payload.
++
+.The *Output* pane when Flow Designer cannot detect the required data type for the card that comes after the Transform card
+image::fd-output-pane-empty.png[]
++
+ddddd
++
+Setting expressions for values in the output pane.
+
+. The tabs that open the different panes in the *Configuration* section of the Transform card. The *Mappings* tab is currently selected to show the *Mappings* pane.
