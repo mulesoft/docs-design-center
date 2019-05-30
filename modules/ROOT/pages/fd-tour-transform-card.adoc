@@ -68,6 +68,12 @@ Setting expressions for values in the output pane.
 
 == The *Script* pane
 
+image:fd-tour-of-the-transform-card-script.png[]
+
+== The *Sample Data* pane
+
+image::fd-tour-of-the-transform-card-sample.png[]
+
 
 
 = See also
