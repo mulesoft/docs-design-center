@@ -45,24 +45,34 @@ image::fd-empty-preview-pane.png[]
 
 == The *Mappings* pane
 
-The first part of the tour cover
+This pane provides one method of mapping data. You can drag elements of the *Input* pane onto elements of the *Output* pane.
 
 .The *Mappings* pane in the *Configuration* section of the Transform card
 image::fd-tour-of-the-transform-card.png[]
 
 
-. The *Output* pane displays the elements that will be in the payload of the output of the Transform card and passed to the next card in the flow. If the Flow Designer is unable to detect the data structure that is required by the next card in the flow, you can specify the data type to use for the payload.
+. The *Output* pane displays the elements that will be in the payload of the output of the Transform card and passed to the next card in the flow. Flow Designer usually populates this pane by detecting the data structure that is required by the next card in the flow.
++
+If any of the elements in the output require data that they cannot acquire by being mapped to an element of the input, you can specify that data with a string, a number, or a DataWeave expression. Double-click the element to open this small dialog for editing the element's value:
++
+.The dialog that is opened when you double-click an element of the output
+image::fd-output-expression-dialog.png[]
++
+By default, the value is `null`. You can specify the value you want by typing directly in the dialog.
++
+.Changing the value to a telephone number
+image::fd-output-expression-dialog-number.png[]
++
+After you click *OK*, both the `f(x)` symbol and a trash-can icon appear to the left of the element. The `f(x)` symbol indicates that the value is set manually to a string, number, or DataWeave expression. Clicking the trash-can icon removes the value, but it does not remove the element.
++
+image::fd-output-expression-dialog-fx.png[]
++
+If the Flow Designer is unable to detect the data structure that is required by the next card in the flow, the *Output* pane looks like this:
 +
 .The *Output* pane when Flow Designer cannot detect the required data type for the card that comes after the Transform card
 image::fd-output-pane-empty.png[]
 +
-image::fd-output-expression-dialog.png[]
-+
-image::fd-output-expression-dialog-number.png[]
-+
-image::fd-output-expression-dialog-fx.png[]
-+
-Setting expressions for values in the output pane.
+You can create or specify the data type to use for the payload.
 
 . This area shows which elements of the input to the Transform card are mapped to which elements of the output. To map elements together, you can click an element of the input and drag it to an element of the output. An alternative is to create a DataWeave script that maps elements. You can do this in the *Script* pane.
 
@@ -76,7 +86,7 @@ image::fd-tour-of-the-transform-card-sample.png[]
 
 
 
-= See also
+== See also
 
 * xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
 * xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]
