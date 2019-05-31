@@ -14,7 +14,7 @@ When you build a flow, you must be aware of the data types that each card requir
 
 For example, Figure 1 depicts a simple flow in which each card receives as input data that is in exactly the same data type as the data that the previous card produces as output.
 
-.A simple flow for thinking about data types
+.A simple flow
 image::fd-inputs-outputs-easy.png[]
 
 . A process outside of the application triggers the flow by sending data that is in a certain data type.
@@ -26,7 +26,7 @@ For this flow, you would need to be aware of the data type that is output by Car
 
 Figure 2 depicts a flow that requires at least one transformation.
 
-.A slightly less simple flow for thinking about data types
+.A slightly less simple flow
 image::fd-inputs-outpus-harder.png[]
 
 . As in Figure 1, a process outside of the application triggers the flow by sending data that is in a certain data type.
@@ -151,6 +151,10 @@ XML:: XML is a format that structures data in between tags. When you use this da
 == Ways to set data types
 
 
+
+
 == See Also
+
+* Link to the parent topic about transforming
 
 * xref:flow-datatype-task.adoc[To Set Data Types for a Flow]

@@ -1,4 +1,4 @@
-= Mapping the Output of a Card to the Required Input of the Next Card (Flow Designer)
+= Mapping Data Types (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
