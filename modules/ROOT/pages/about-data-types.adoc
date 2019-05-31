@@ -3,6 +3,17 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+:imagesdir: ../assets/images
+
+When you build a flow, you must be aware of the structure of the data a) that each card requires as input, and b) that each card produces as output. The structure of the output of a card might not match the structure of the input that the next card requires.
+
+.A simple flow for thinking about data types
+image::fd-inputs-outputs-easy.png[]
+
+.A slightly less simple flow for thinking about data types
+image::fd-inputs-outpus-harder.png[]
+
+
 To build an integration application, you need to know what data is available at which step of the process and how to access the data.
 
 * Is the data a string or an array item?
