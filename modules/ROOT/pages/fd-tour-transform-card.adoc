@@ -78,7 +78,7 @@ You can create or specify the data type to use for the payload.
 
 == The *Script* pane
 
-If you know DataWeave scripts, you can map elements together by writing DataWeave scripts in this pane. To learn about DataWeave, see "xref:4.2@mule-runtime::dataweave.adoc[DataWeave Language]".
+As you map on the *Mappings* pane, the Transform card generates the corresponding DataWeave script in this pane. If you know DataWeave scripts, you can customize the mapping. You could even skip using the *Mappings* pane and write your own DataWeave script instead. To learn about DataWeave, see "xref:4.2@mule-runtime::dataweave.adoc[DataWeave Language]".
 
 .The *Script* pane in the *Configuration* section of the Transform card
 image::fd-tour-of-the-transform-card-script.png[]
