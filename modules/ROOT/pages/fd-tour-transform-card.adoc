@@ -78,10 +78,21 @@ You can create or specify the data type to use for the payload.
 
 == The *Script* pane
 
-image:fd-tour-of-the-transform-card-script.png[]
+If you know DataWeave scripts, you can map elements together by writing DataWeave scripts in this pane. To learn about DataWeave, see "xref:4.2@mule-runtime::dataweave.adoc[DataWeave Language]".
+
+.The *Script* pane in the *Configuration* section of the Transform card
+image::fd-tour-of-the-transform-card-script.png[]
+
 
 == The *Sample Data* pane
 
+When the following three conditions are true, you can use this pane to provide an example usage of the data type that is used for the output of the previous card:
+
+* You want to see a preview of the output of the Transform card.
+* The data type used for the output of the previous card is not a simple type. The simple types are string, number, integer, boolean, date, and dateTime.
+* The data type used for the output of the previous card was defined with a schema, not an example.
+
+.The *Sample data* pane in the *Configuration* section of the Transfrom card
 image::fd-tour-of-the-transform-card-sample.png[]
 
 

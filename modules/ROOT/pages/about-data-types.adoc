@@ -21,6 +21,31 @@ Some designs, such as those using Salesforce, require no data type definitions. 
 
 When you run the app, the flow starts executing when triggered. Real data appears in lieu of example data in the input and output. You can inspect payload, attributes, and vars (variables) at various stages of the flow.
 
+
+[%header,cols=3*]
+|===
+|Format
+|Can provide example?
+|Can provide schema?
+
+|JSON
+|Yes
+|Yes
+
+|XML
+|Yes
+|Yes
+
+|CSV
+|No
+|Yes, as a RAML definition
+
+|Object
+|No
+|Yes, as a RAML definition
+
+|===
+
 == Using RAML to Define Data
 
 The HTTP Request Connector does not expose any information by default, but you can configure the connector using a RAML API specification, which includes information about required inputs and expected outputs.
