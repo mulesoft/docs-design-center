@@ -5,10 +5,19 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-When you build a flow, you must be aware of the structure of the data a) that each card requires as input, and b) that each card produces as output. The structure of the output of a card might not match the structure of the input that the next card requires.
+When you build a flow, you must be aware of the format and structure, or _data type_, of the data that each card requires as input, and that each card produces as output. The data type of the output of a card might not match the data type of the input that the next card requires. To overcome the problem, you would need to map elements in the data types by using a Transform card.
+
+For example, Figure 1 shows a simple flow in which each card receives as input data that is in exactly the same data type as the data that the previous card produces as output.
 
 .A simple flow for thinking about data types
 image::fd-inputs-outputs-easy.png[]
+
+. A process outside of the application triggers the flow by sending data that is in a certain data type.
+. Card 1 receives that data and sends it as output to Card 2.
+. Card 2 happens to require data in the same data type, so it is able to receive Card 1's output as input. Card 2 produces an output that is in a different data type.
+. Fortunately, the next card in the flow can receive that output as its input.
+
+For this flow, you would need to be aware of the data type that is output by Card 1, the required data type for input to Card 2, the data type output by Card 2, and the required data type for the next card.
 
 .A slightly less simple flow for thinking about data types
 image::fd-inputs-outpus-harder.png[]
