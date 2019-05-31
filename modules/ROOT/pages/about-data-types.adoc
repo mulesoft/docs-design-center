@@ -97,7 +97,7 @@ JSON:: JavaScript Object Notatation (JSON) is a format that structures data in k
 }
 ----
 +
-.Corresponding example JSON file
+.Example JSON file that is based on the schema
 ----
 {
   "firstName": "Olafur",
@@ -122,108 +122,33 @@ properties:
                 type: string
 ----
 
-XML::
-
-s
-=== Table of data types
-
-[%header,cols=4*]
-|===
-|Format
-|Category
-|Requires an example?
-|Requires a schema?
-
-|Boolean
-|Simple
-|No
-|No
-
-|Date
-|Simple
-|No
-|No
-
-|DateTime
-|Simple
-|No
-|No
-
-|Integer
-|Simple
-|No
-|No
-
-|Number
-|Simple
-|No
-|No
-
-|String
-|Simple
-|No
-|No
-|CSV
-|Structured
-|No
-|Yes, as a RAML definition
-
-|JSON
-|Structured
-|Yes, if you don't provide a schema.
-|Yes, if you don't provide an example.
-
-|Object
-|Structured
-|No
-|Yes, as a RAML definition
-
-|XML
-|Structured
-|Yes, if you don't provide a schema.
-|Yes, if you don't provide an example.
-
-|===
-
-
-Not all data types need to
-
-
-
-
-CSV:: Example of a RAML schema:
+XML:: XML is a format that structures data in between tags. When you use this data type, you must provide either an example that contains sample data or the JSON schema on which the data type is based.
 +
+.Example XML schema
 ----
-#%RAML 1.0 DataType
-type: array
-items:
-    properties:
-        firstname:
-            type: string
-        lastname:
-            type: string
-        age:
-            type: number
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="person">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element type="xs:string" name="firstName"/>
+        <xs:element type="xs:string" name="lastName"/>
+        <xs:element type="xs:byte" name="age"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
 ----
-
-Object:: Example of a RAML schema:
 +
+.Example XML file that is based on the schema
 ----
-#%RAML 1.0 DataType
-type: object
-properties:
-    field1:
-        type: string
-    field2:
-        properties:
-            field21:
-                type: string
-            field22:
-                type: string
+<person>
+  "<firstName>Olafur</firstName>
+  <lastName>Karlsson</lastName>
+  <age>45</age>
+</person>
 ----
 
-When you run the app, the flow starts executing when triggered. Real data appears in lieu of example data in the input and output. You can inspect payload, attributes, and vars (variables) at various stages of the flow.
-
+== Ways to set data types
 
 
 == See Also
