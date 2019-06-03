@@ -1,4 +1,4 @@
-= View Runtime Information about Running Applications You are Creating
+= View Runtime Information about Applications You are Creating
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
