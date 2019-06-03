@@ -1,1 +1,7 @@
 = Integrating Systems into Mule Applications
+
+Cards can represent connectors.
+
+In the tutorial, the connectors used were the Salesforce connector, the Database connector, and the Twilio connector.
+
+xref:connectors:index.adoc[About Connectors and Modules (for Mule 4)]
