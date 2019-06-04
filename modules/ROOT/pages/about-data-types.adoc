@@ -148,8 +148,9 @@ XML:: XML is a format that structures data in between tags. When you use this da
 </person>
 ----
 
-== Ways to set data types
+== How to define the data types used in a flow
 
+=== Set data types
 
 
 
