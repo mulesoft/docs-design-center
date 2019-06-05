@@ -5,9 +5,11 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-A _data type_ explains to Flow Designer the format and structure of the data that is received by a card and that a card produces as output.
+Each card in a flow requires input data that is of a certain type, and each card outputs data that is of a certain type. As you build your flows, you should specify the data types that your cards require as inputs and produce as outputs.
 
+A _data type_ explains to Flow Designer the formats and structures of the data that is in inputs and outputs. Simple data types (such as strings and integers) have a format only, but other data types (such as data types based on JSON schemas or XML schemas) have both formats and structures.
 
+////
 == Why you need to know the data types used in your flows
 
 When you build a flow, you must be aware of the data types that each card requires as input, and that each card produces as output. The data type of the output of a card might not match the data type of the input that the next card requires. To overcome the problem, you would need to map elements in the data types by using a Transform card.
@@ -32,7 +34,7 @@ image::fd-inputs-outpus-harder.png[]
 . As in Figure 1, a process outside of the application triggers the flow by sending data that is in a certain data type.
 . Again, Card 1 receives that data and produces its output.
 . However, Card 2 requires its input to use a different data type. Therefore, you must place a Transform card between Card 1 and Card 2. In the Transform card, you must map elements from Card 1's output data type to elements in Card 2's required input data type.
-
+////
 
 == Data types that are supported in flows
 
