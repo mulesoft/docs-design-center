@@ -8,6 +8,43 @@ endif::[]
 
 Flow Designer's visual orientation gives you the tools to build Mule applications visually, so that you can see from end to end how data moves through each flow.
 
+== The features of the Flow Designer interface
+
+The Flow Designer's features are organized into five areas.
+
+.The five areas of the Flow Designer interface
+image::FD-annotated.png[]
+
+. The canvas
++
+Here you create flows in a project.
++
+In the top-left corner of the canvas are the names of the project and the flow.
+. The panes
++
+Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
++
+Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
++
+You can hide the panes by clicking the icon of whichever pane is open. To show the panes again, click either icon.
++
+What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resusable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards.
++
+What are data types?:: Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
++
+What are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
+. The toolbar
++
+Here you can undo and redo changes in a project, download a project, and change the zoom level of the canvas.
+. The control bar
++
+Here you can run the application for testing, as well as deploy the application to another environment.
+. The *Problems* and *Logs* tabs
++
+Click the first tab to see a list of any errors that are in a project. You can click a listed error to open the location in which the error occurs.
++
+Click the second tab to see the log file for a project. The file can be helpful when you are troubleshooting problems running an application.
+
 == What a flow looks like
 
 Here is an example of a Mule application that consists of a single flow.
@@ -34,6 +71,7 @@ To add a card to the end of a flow, you click the plus icon that follows the pre
 
 To add a card between two cards, mouse over the arrow that appears between them. The arrow turns in to the plus icon, which you can then click.
 
+////
 == The meaning of the information in the grey area on cards
 
 As you create a flow, specifying the data that cards receive as input and the data that cards produce as output, each card displays a gray area that contains information about the card's output.
@@ -96,43 +134,4 @@ You might be wondering why the card shows that it did not modify the attributes,
 Recall that the Choice router always selects only one path to move data through, and does not move data through each of the paths that it contains. Moreover, one of the paths in a Choice router is the default path. When you are creating a flow, the Choice router routes to the default path. In the Choice router that we looked at above, the default path did not remove the attributes.
 . The last card in this illustration is an HTTP Request card. It modifies the payload and the attributes, but keeps the variable unchanged.
 
-== The features of the Flow Designer interface
-
-The features are organized into five areas.
-
-.The five areas of the Flow Designer interface
-image::FD-annotated.png[]
-
-. The canvas
-+
-Here you create flows in a project.
-+
-In the top-left corner of the canvas are the names of the project and the flow.
-. The panes
-+
-Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
-+
-Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
-+
-You can hide the panes by clicking the icon of whichever pane is open. To show the panes again, click either icon.
-+
-What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resusable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards.
-+
-What are data types?:: Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
-+
-What are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
-. The toolbar
-+
-Here you can undo and redo changes in a project, download a project, and change the zoom level of the canvas.
-. The control bar
-+
-Here you can run the application for testing, as well as deploy the application to another environment.
-. The *Problems* and *Logs* tabs
-+
-Click the first tab to see a list of any errors that are in a project. You can click a listed error to open the location in which the error occurs.
-+
-Click the second tab to see the log file for a project. The file can be helpful when you are troubleshooting problems running an application.
-
-// Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
-
-// Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
+////
