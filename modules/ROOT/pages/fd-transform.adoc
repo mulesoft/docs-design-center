@@ -9,10 +9,10 @@ A card in a flow might require that the data that is sent to it use a custom dat
 
 For example, suppose that a flow contains Card A and Card B, and that Card B follows Card A. If the output of Card A uses the same custom data type that Card B requires for its input, then you do not have to map the output of Card A to the input of Card B. However, if the two custom data types do not match, you must use a Transform card to map elements in the custom data type output from Card A to elements in the custom data type required by Card B.
 
-.The output of Card A matches the input that Card B requires, so Card B can immediately follow Card A in the flow
+.The custom data type output by Card A matches the custom data type that Card B requires, so Card B can immediately follow Card A in the flow
 image::fd-transform-parent-topic-match.png[]
 
-.The output of Card A does not match the input that Card B requires; therefore, you must use a Transform card to map Card A's output to the input for Card B
+.The custom data type output of Card A does not match the custom data type that Card B requires; therefore, you must use a Transform card to map elements of Card A's output to elements in the required input for Card B
 image::fd-transform-parent-topic-nomatch.png[]
 
 [NOTE]
