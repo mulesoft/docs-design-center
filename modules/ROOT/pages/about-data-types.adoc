@@ -30,7 +30,7 @@ You can create custom data types in any of the following formats: CSV, JSON, Jav
 
 [NOTE]
 ====
-If a card produces an output in one custom data type, the next card might require a different custom data type as input. In such a situation, you would need to place a Transform card between the two cards. In a Transform card, you can explain to Flow Designer how the elements of a custom data type map to the elements of another custom data type. See "xref:fd-transform.adoc[Mapping Output Data to Input Data]".
+A card might require as input a different custom data type from the custom data type that the previous card created as output. In such a situation, you need to place a Transform card between the two cards. In a Transform card, you can explain to Flow Designer how the elements of a custom data type map to the elements of another custom data type. See "xref:fd-transform.adoc[Mapping Output Data to Input Data]".
 ====
 
 CSV:: Data can enter a card as comma-separated values. This data format is frequently used for exporting the content of spreadsheets. When you use this format for custom data types in Flow Designer, you must provide a schema in REST API Modeling Language (RAML) that explains to Flow Designer how to read the data type. Here is an example of a simple schema:
