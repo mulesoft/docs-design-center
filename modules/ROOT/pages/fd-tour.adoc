@@ -67,28 +67,34 @@ Part of data:: The data structure that passes through a flow can have up to thre
 
 Data type:: The type of data that is contains the payload, the attributes, or variables. See "xref:about-data-types.adoc[Data Types]" for documentation of the data types that Flow Designer supports.
 
-For an illustration of how the information in the gray areas can help you understand how data moves through your flows, let's walk through part of the flow from Figure 1.
+For an illustration of how the information in the gray areas can help you understand how data moves through your flows, let's walk through part of the flow from Figure 1. To see the gray areas better, we can break the flow into chunks and zoom in to see each chunk in more detail.
 
-.Part of the same flow shown in Figure 1, but with the grey areas of the cards indicated
-image::fd-grey-matter-in-card-faces.png[]
-
-To see the gray areas better, we can break the flow into chunks and zoom in to see each chunk in more detail.
-
-.The first and second cards
+.The first two cards
 image::fd-gray-matter-1.png[]
 
-1. The first card is the trigger for the flow. It receives input from Salesforce, and the card produces output in the form of a new payload of data and a new set of attributes about the data.
-2. The second card produces output that leaves the payload and the attributes unchanged, but includes a new variable that is named `OppDetails`.
+. The first card is the trigger for the flow. It receives input from Salesforce, and the card produces output in the form of a new payload of data and a new set of attributes about the data.
+. The second card produces output that leaves the payload and the attributes unchanged, but includes a new variable that is named `OppDetails`.
+//-
 
 .The Choice router
 image::fd-gray-matter-2.png[]
 
-3. The third card is a Choice router, which evaluates a condition that you specify and then, according to the result of the evaluation, routes the flow's data through one or two or more possible paths. In this case there are three mutually exclusive paths. The gray area on the Choice card shows that the card produces output that passes the payload, attributes, and variable without changing any of them.
-4. The first possible path contains a Database Connector card. The gray area shows that the output of the card contains a modified payload and the same variable `OppDetails` with the value unchanged. However, the output removes the attributes.
-5. The next possible path also contains a Database Connector card, The gray area on this card is the same as for the previous card. That does not mean, however, that the changes to the payload are identical. The icon gives no information about the content of the changes to the payload.
-6. The last possible path contains a Set Payload card, which shows that it modified the payload and kept unchanged both the attributes and the variable.
+[start=3]
+. The third card is a Choice router, which evaluates a condition that you specify and then, according to the result of the evaluation, routes the flow's data through one or two or more possible paths. In this case there are three mutually exclusive paths. The gray area on the Choice card shows that the card produces output that passes the payload, attributes, and variable without changing any of them.
+. The first possible path contains a Database Connector card. The gray area shows that the output of the card contains a modified payload and the same variable `OppDetails` with the value unchanged. However, the output removes the attributes.
+. The next possible path also contains a Database Connector card, The gray area on this card is the same as for the previous card. That does not mean, however, that the changes to the payload are identical. The icon gives no information about the content of the changes to the payload.
+. The last possible path contains a Set Payload card, which shows that it modified the payload and kept unchanged both the attributes and the variable.
 
+.The next two cards
 image::fd-gray-matter-3.png[]
+
+[start=7]
+. The next card is a Transform card. The gray area shows that the card modified the payload, but kept the attributes and the variable unchanged.
++
+You might be wondering why the card shows that it did not modify the attributes, given that in the Choice router two Database Connector cards removed the attributes. How can the Transform card contain the attributes that had been moving through the flow until the Database Connector cards?
++
+Recall that the Choice router always selects only one path to move data through, and does not move data through each of the paths that it contains. Moreover, one of the paths in a Choice router is the default path. When you are creating a flow, the Choice router routes to the default path. In the Choice router that we looked at above, the default path did not remove the attributes.
+. The last card in this illustration is an HTTP Request card. It modifies the payload and the attributes, but keeps the variable unchanged.
 
 == The features of the Flow Designer interface
 
