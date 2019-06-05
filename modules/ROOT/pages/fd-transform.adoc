@@ -57,7 +57,7 @@ In the custom data type in example 3, there are two elements. Because the `strin
 
 * Finally, if Card A output a custom data type and Card B required data to use a simple data type, it might be possible to map an element from the custom data type to the simple data type. The element would need to use the same simple data type.
 +
-For example, suppose Card A output data that used the custom data type in example 3. If Card B required input data to be a `string`, you could map element `a` to the input for Card B. Mapping would also be possible if Card B required input data to be a `number'.
+For example, suppose Card A output data that used the custom data type in example 3. If Card B required input data to be a `string`, you could map element `a` to the input for Card B. Mapping would also be possible if Card B required input data to be a `number`.
 +
 However, if Card B required input data to be a `date` or some other simple data type, mapping in this case would not be possible.
 ====
