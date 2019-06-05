@@ -1,4 +1,4 @@
-= Collaborate Someone who Works in Studio
+= Collaborate with Someone who Works in Studio
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

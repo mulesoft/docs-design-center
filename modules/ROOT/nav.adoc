@@ -39,7 +39,7 @@
   *** xref:to-create-and-populate-a-variable.adoc[Store a Value that is Based on the Output that has been Passed from a Card]
   *** xref:fd-store-reuse-output.adoc[Store a Value that is Based on the Output that has not yet been Passed from a Card]
  ** xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project]
- ** xref:fd-share-to-studio.adoc[Collaborate Someone who Works in Studio]
+ ** xref:fd-share-to-studio.adoc[Collaborate with Someone who Works in Studio]
  ** xref:jump-runtime-manager-task.adoc[View Runtime Information about Applications You are Creating]
  ** xref:fd-troubleshooting.adoc[Troubleshoot in Flow Designer]
   *** xref:logger-task-design-center.adoc[Log Flow Information at Runtime with Logger]
