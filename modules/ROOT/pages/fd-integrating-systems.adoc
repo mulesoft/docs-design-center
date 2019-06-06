@@ -1,7 +1,42 @@
 = Integrate a System into a Mule Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
-Cards can represent connectors.
+:imagesdir: ../assets/images
 
-In the tutorial, the connectors used were the Salesforce connector, the Database connector, and the Twilio connector.
+The purpose of creating a Mule application is to integrate different systems together in an automated workflow to achieve an outcome. For example, the Flow Designer template "Slack message to Twilio" integrates together both Slack and Twilio to send a text message whenever there is a new message in a particular Slack channel.
+
+.The Mule application that is created by the template "Slack message to Twilio"
+image::fd-slack-to-twilio.png[]
+
+Flow Designer supports the integration of a large variety of systems, and supports multiple operations within each system. For example, the Slack connector supports these operations:
+
+On New Message
+
+Channels - Info
+Channels - INvite
+Channels - List
+Channels - Rename
+Channels - Set Purpose
+Channels - Set Topic
+Chat - Post Message
+Chat - Update Message
+Dialog - Open
+File - Upload
+Groups - Info
+Groups - List
+Groups - Rename
+Groups - Set Purpose
+Groups - Set Topic
+IM - List
+IM - Open
+Unauthorize
+User - Info
+User - List
+
+with each system represented by its own card.
+
 
 xref:connectors::index.adoc[About Connectors and Modules (for Mule 4)]
