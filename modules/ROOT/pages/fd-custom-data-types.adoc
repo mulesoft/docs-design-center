@@ -1,0 +1,108 @@
+= Custom Data Types in Flow Designer
+
+You can create custom data types in any of the following formats: CSV, JSON, Java Object, and XML. Custom data types are structured as key:value pairs or XML. The values that they contain are of simple data types.
+
+[NOTE]
+====
+A card might require as input a different custom data type from the custom data type that the previous card created as output. In such a situation, you need to place a Transform card between the two cards. In a Transform card, you can explain to Flow Designer how the elements of a custom data type map to the elements of another custom data type. See "xref:fd-transform.adoc[Mapping Output Data to Input Data]".
+====
+
+CSV:: Data can enter a card as comma-separated values. This data format is frequently used for exporting the content of spreadsheets. When you use this format for custom data types in Flow Designer, you must provide a schema in REST API Modeling Language (RAML) that explains to Flow Designer how to read the data type. Here is an example of a simple schema:
++
+----
+#%RAML 1.0 DataType
+type: array
+items:
+    properties:
+        firstname:
+            type: string
+        lastname:
+            type: string
+        age:
+            type: number
+----
+
+JSON:: JavaScript Object Notatation (JSON) is a format that structures data in key/value pairs. When you use this format, you must provide either an example that contains sample data or the JSON schema on which the data type is based.
++
+.Example JSON schema
+----
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "The person's first name."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "The person's last name."
+    },
+    "age": {
+      "description": "Age in years which must be equal to or greater than zero.",
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
+----
++
+.Example JSON file that is based on the schema
+----
+{
+  "firstName": "Olafur",
+  "lastName": "Karlsson",
+  "age": "45"
+}
+----
+
+Object:: This format is a Java object. When you use this format in Flow Designer, you must provide a schema in REST API Modeling Language (RAML) that explains to Flow Designer how to read the data. Here is an example of a simple schema:
++
+----
+#%RAML 1.0 DataType
+type: object
+properties:
+    field1:
+        type: string
+    field2:
+        properties:
+            field21:
+                type: string
+            field22:
+                type: string
+----
+
+XML:: XML is a format that structures data in between tags. When you use this format, you must provide either an example that contains sample data or the JSON schema on which the data type is based.
++
+.Example XML schema
+----
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="person">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element type="xs:string" name="firstName"/>
+        <xs:element type="xs:string" name="lastName"/>
+        <xs:element type="xs:byte" name="age"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+----
++
+.Example XML file that is based on the schema
+----
+<person>
+  "<firstName>Olafur</firstName>
+  <lastName>Karlsson</lastName>
+  <age>45</age>
+</person>
+----
+
+
+
+== See also
+
+* xref:about-data-types.adoc[Define and Use Data Types in a Flow]
+* xref:fd-supported-simple-data-types.adoc[Simple Data Types that are Supported in Flow Designer]

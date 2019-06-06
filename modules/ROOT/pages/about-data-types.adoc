@@ -1,4 +1,4 @@
-= Data Types (Flow Designer)
+= Define and Use Data Types in a Flow (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,137 +7,34 @@ endif::[]
 
 Each card in a flow requires input data that is of a certain type, and each card outputs data that is of a certain type. As you build your flows, you should specify the data types that your cards require as inputs and produce as outputs. Doing so helps you plan the flows you create, because you know what data type is required by each card in the flow.
 
-A _data type_ explains to Flow Designer the formats and structures of the data that are in inputs and outputs. There are two categories of data types that are supported in Flow Designer: simple and custom.
+A _data type_ explains to Flow Designer the formats and structures of the data that are in inputs and outputs. There are two categories of data types that are supported in Flow Designer: simple and custom. See these topics for information about these categories of data types:
 
-== Simple data types
-These data types are called simple because, though they store data in particular formats, they have no structures, such as custom data types do. The simple data types are boolean, date, dateTime, integer, number, and string.
+* xref:fd-supported-simple-data-types.adoc[Simple Data Types that are Supported in Flow Designer]
+* xref:fd-custom-data-types.adoc[Custom Data Types in Flow Designer]
 
-Boolean:: Evaluates to true or false. Possible values: `true`, `false`
+== Procedure
 
-Date:: Stores a year, month, and day as `yyyy-MM-dd`.
+Although there is more than one way to define and use a data type, MuleSoft recommends the method that is used in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]".
 
-DateTime:: Stores a date and time within a time zone, where a time zone is the time relative to Greenwich Mean Time (GMT). A time zone must include a + or a -. For example, `03:00:00` is a time, while `+03:00` is a time zone. Example that represents 12:30 p.m. on June 1, 2019 in Macau: `2019-06-01T12:30:00+08:00`
-
-Integer:: Stores whole numbers that range from -2,147,483,647 to 2,147,483,647. An integer has no decimal point.
-
-Number:: A `number` stores a float number, which can range from 1.40129846432481707e-45 to 3.40282346638528860e+38 and include a decimal point, or an integer.
-
-String:: Stores text, numbers (not `number` data types), or a combination of both. Examples: "94u0sfjlk*(f!`lkkjd", "18005555555", "Fred"
-
-== Custom data types
-
-You can create custom data types in any of the following formats: CSV, JSON, Java Object, and XML. Custom data types are structured as key:value pairs or XML. The values that they contain are of simple data types.
-
-[NOTE]
-====
-A card might require as input a different custom data type from the custom data type that the previous card created as output. In such a situation, you need to place a Transform card between the two cards. In a Transform card, you can explain to Flow Designer how the elements of a custom data type map to the elements of another custom data type. See "xref:fd-transform.adoc[Mapping Output Data to Input Data]".
-====
-
-CSV:: Data can enter a card as comma-separated values. This data format is frequently used for exporting the content of spreadsheets. When you use this format for custom data types in Flow Designer, you must provide a schema in REST API Modeling Language (RAML) that explains to Flow Designer how to read the data type. Here is an example of a simple schema:
+. In the *Project* pane, click the plus sign to the right of the heading *Data Types*.
+. Define the data type in the *New Type* dialog.
 +
-----
-#%RAML 1.0 DataType
-type: array
-items:
-    properties:
-        firstname:
-            type: string
-        lastname:
-            type: string
-        age:
-            type: number
-----
-
-JSON:: JavaScript Object Notatation (JSON) is a format that structures data in key/value pairs. When you use this format, you must provide either an example that contains sample data or the JSON schema on which the data type is based.
+*Result:* The new data type is listed in the *Data Types* section of the *Project* pane.
+. Where you need to use the data type in your flow, follow these steps:
 +
-.Example JSON schema
-----
-{
-  "$id": "https://example.com/person.schema.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Person",
-  "type": "object",
-  "properties": {
-    "firstName": {
-      "type": "string",
-      "description": "The person's first name."
-    },
-    "lastName": {
-      "type": "string",
-      "description": "The person's last name."
-    },
-    "age": {
-      "description": "Age in years which must be equal to or greater than zero.",
-      "type": "integer",
-      "minimum": 0
-    }
-  }
-}
-----
-+
-.Example JSON file that is based on the schema
-----
-{
-  "firstName": "Olafur",
-  "lastName": "Karlsson",
-  "age": "45"
-}
-----
-
-Object:: This format is a Java object. When you use this format in Flow Designer, you must provide a schema in REST API Modeling Language (RAML) that explains to Flow Designer how to read the data. Here is an example of a simple schema:
-+
-----
-#%RAML 1.0 DataType
-type: object
-properties:
-    field1:
-        type: string
-    field2:
-        properties:
-            field21:
-                type: string
-            field22:
-                type: string
-----
-
-XML:: XML is a format that structures data in between tags. When you use this format, you must provide either an example that contains sample data or the JSON schema on which the data type is based.
-+
-.Example XML schema
-----
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="person">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element type="xs:string" name="firstName"/>
-        <xs:element type="xs:string" name="lastName"/>
-        <xs:element type="xs:byte" name="age"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>
-----
-+
-.Example XML file that is based on the schema
-----
-<person>
-  "<firstName>Olafur</firstName>
-  <lastName>Karlsson</lastName>
-  <age>45</age>
-</person>
-----
-
-== How to define the data types used in a flow
-
-=== Set data types
-
+* To use the data type for the input to a card, open the card, select the *Input* tab at the top of the card, and select the data type from the *Data type* drop-down list.
+* To use the data type for the output of a card, open the card, select the *Output* tab at the top of the card, and select the data type from the *Data type* drop-down list.
 
 
 == See Also
 
-* Link to the parent topic about transforming
+xref:fd-transform.adoc[Mapping Output Data to Input Data]
+
 
 
 ////
+
+6/5/19: Hiding this section until Badi and Ryan decide what to do about the gray area on card faces.
 == Why you need to know the data types used in your flows
 
 When you build a flow, you must be aware of the data types that each card requires as input, and that each card produces as output. The data type of the output of a card might not match the data type of the input that the next card requires. To overcome the problem, you would need to map elements in the data types by using a Transform card.
