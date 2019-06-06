@@ -46,7 +46,7 @@ Remove Variable:: The Remove Variable core component takes the name of a variabl
 
 Set Payload:: The Set Payload core component lets you modify the payload in the current data at a point in a flow. You can replace the payload with a string, or you can modify or replace it with a DataWeave expression.
 
-Set Variable:: You can use a Set Variable core component to create a variable that stores all of the output from the preceding card, stores part of the output, or manipulates the output by using functions in a DataWeave expression. You can then reuse that value in a later card by using the variable. See xref:to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card].
+Set Variable:: You can use a Set Variable core component to create a variable that stores all of the output from the preceding card, stores part of the output, or manipulates the output by using functions in a DataWeave expression. You can then reuse that value in a later card by using the variable. See xref:to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card in a Variable].
 
 Transform:: The Transform core component converts input data to a new output structure or format.
 

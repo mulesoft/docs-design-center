@@ -36,7 +36,7 @@
   *** xref:fd-tour-transform-card.adoc[Tour of the Transform Card]
   *** xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]
  ** xref:fd-store-data-top.adoc[Store and Reuse Data within a Flow]
-  *** xref:to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card]
+  *** xref:to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card in a Variable]
   *** xref:fd-store-reuse-output.adoc[Store the Entire Output of a Card in a Variable]
  ** xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project]
  ** xref:fd-share-to-studio.adoc[Collaborate with Someone who Works in Studio]
