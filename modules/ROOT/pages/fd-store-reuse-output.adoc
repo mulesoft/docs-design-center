@@ -1,4 +1,4 @@
-= Store a Value that is Based on the Output that has not yet been Passed from a Card (Flow Designer)
+= Store the Entire Output of a Card in a Variable(Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

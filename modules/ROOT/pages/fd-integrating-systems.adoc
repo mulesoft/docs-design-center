@@ -1,4 +1,4 @@
-= Integrating Systems into Mule Applications
+= Integrate a System into a Mule Application
 
 Cards can represent connectors.
 
