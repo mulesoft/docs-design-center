@@ -8,6 +8,8 @@ endif::[]
 
 Variables are used to store values for use within a flow of a Mule app. After you create a variable, you can use it in any subsequent cards in the flow.
 
+There are two methods for storing values in variables.
+
 
 xref::to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card in a Variable]:: You can use a Set Variable card to create a variable that stores or manipulates data from the output of a card. You can then reuse that data in a later card by using the variable.
 
