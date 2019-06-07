@@ -19,7 +19,7 @@ You add one or more Logger core components to a flow to log information from the
 |`upper(payload.user.name)`| The value of "name", a child element of "user" in the payload, converted to upper case characters.
 |===
 
-To view logs, you expand the area at the bottom of Design Center:
+To view logs, you expand the area at the bottom of Flow Designer:
 
 image::log-view.png[]
 

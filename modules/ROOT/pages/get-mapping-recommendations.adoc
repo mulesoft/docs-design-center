@@ -68,7 +68,7 @@ Ensure that the Automapping feature is enabled for your organization in Anypoint
 . Under *Settings* on the left side of the screen, click *Flow Designer*.
 . On the *Flow Designer General Settings* page, click the circle in the *Enable* column.
 
-IMPORTANT: The recommendation system works by collecting and analyzing anonymized data from all users of Design Center who are using CloudHub. Enabling this feature enables the collection of anonymized data for improving recommendations. If you have any concerns about sharing even anonymized data, do not enable this feature.
+IMPORTANT: The recommendation system works by collecting and analyzing anonymized data from all users of Flow Designer who are using CloudHub. Enabling this feature enables the collection of anonymized data for improving recommendations. If you have any concerns about sharing even anonymized data, do not enable this feature.
 
 == Procedure
 

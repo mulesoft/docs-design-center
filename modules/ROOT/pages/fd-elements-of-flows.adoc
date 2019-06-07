@@ -1,4 +1,4 @@
-= The Elements of Flows in Mule Applications (Design Center)
+= The Elements of Flows in Mule Applications (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

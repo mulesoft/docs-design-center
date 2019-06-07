@@ -8,7 +8,7 @@ endif::[]
 
 When you are creating a Mule application, there might come a time when you would like help from someone in your Anypoint-Platform organization, such as a developer, who works in Studio. You can download your project as a `.jar` file and then place that file in a location from which the other person can import it into Studio.
 
-As the other person works on the project, the changes are applied to your project online in Design Center. When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
+As the other person works on the project, the changes are applied to your project online in Flow Designer. When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
 == Procedure
 
