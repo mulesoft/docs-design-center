@@ -1,12 +1,19 @@
 = Share a Mule Application as a Template on Exchange
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
 
 You can publish a Mule application as a template on Exchange, which makes it easy for you and other people to create similar Mule applications in the future.
 
-== About this task
+== Benefits of sharing a Mule application as a template
 
-Publishing Mule applications as templates is a great way to share your work with other people. When they need to build a similar application, they can get a head start by downloading and using your template to start their own project. You might even find in the future that you need to create Mule applications that are similar to one that you've already created.
+Publishing Mule applications as templates is a great way to share your work with other people. When they need to build a similar application, they can get a head start by downloading and using your template to start their own project. If you accompany your template in Exchange with a good description, screenshots, and perhaps even a video, those other people could get going even more quickly.
 
-You might have figured out that it would be possible for you and other people in your organization simply to clone a project that you have created, and to start a new Mule application from that cloned project, rather than use a template. However, those other people would need to know the name of your project. The benefit of publishing a template is that they could search Exchange for a template that suits their needs and read descriptions for each template that appears in their search results. A Mule-application project might be harder to find and a project does not let you provide a description of a Mule application or explain how to use it.
+You might even find in the future that you need to create Mule applications that are similar to one that you've already created. Rather than seek out its project in Design Center, clone it, and then try to remember what it does and how it works, you can read the page that you wrote for the template in Exchange.
+
 
 == Before you begin
 
