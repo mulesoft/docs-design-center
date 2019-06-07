@@ -1,4 +1,4 @@
-= Specify a Dynamic Value in a Text Field
+= Fill in Cards with Values that Change at Runtime
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

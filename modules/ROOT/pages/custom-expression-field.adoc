@@ -1,20 +1,24 @@
-= Create a DataWeave Expression in a Plain Text Field
+= Create a DataWeave Expression in a Card (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create DataWeave expressions in plain text fields, mixing expressions with text or using them alone, to create dynamic values when flows are triggered at runtime. A new editor provides aids for creating expressions.
+You can create DataWeave expressions in fields in cards, mixing expressions with text or using them alone, to create dynamic values when flows are triggered at runtime. A new editor provides aids for creating expressions.
 
 == About this task
 
-Every card in a flow presents a list on its right side. The first entry in the list is labelled `Custom Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Expression` entry.)
-
-You can click the `Custom Expression` entry, drag it, and drop it into a text field if you want to compose a DataWeave expression within that field. If field also contains text, the result of the expression is concatenated with the text at runtime.
+Every card in a flow presents a list on its right side. The first entry in the list is labelled `Custom Expression`. (Other entries in the list appear when a card is preceded by at least one other card. However, for this task, you need only the `Custom Expression` entry.)
 
 == Procedure
 
-. Open the card in which you want to add a DataWeave expression to a plain text field.
-. Click `Custom Expression` in the list on the right side of the card and drag it into the text field. When you drag it, the card highlights the borders of the fields that you can drop it into.
+. Open the card in which you want to add a DataWeave expression to a field.
+. If the field is a text field, click `Custom Expression` in the list on the right side of the card and drag it into the text field.
++
+[NOTE]
+====
+When you drag the *Custom Expression* element, the card highlights the borders of the fields that you can drop it into.
+====
+. If the field is a select field, scroll down in the field and select *Custom*. A new text field appears below the select field. Click `Custom Expression` in the list on the right side of the card and drag it into the new field.
 . Click the arrow in `expression` entry, then click *Expand* in the window that appears below the entry.
 . Compose your expression with the help of the right side of the editor.
 +
