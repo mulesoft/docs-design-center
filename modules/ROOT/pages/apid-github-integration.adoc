@@ -26,9 +26,4 @@ To rename a project, you must rename the repository in GitHub.
 
 You must install the GitHub application into Design Center. Install once and everyone in your org who has access to API Designer can use the integration.
 
-When you go to create a new API-specification project, if the GitHub integration application is not yet installed in Design Center, an overlay on top of the dialog asks whether you want to install it. Clicking the overlay starts the process. The screens for the installation include instructions.
-
-
-
-
-After you install GitHub in Design Center for your Anypoint organization, the dialog for creating a new API-specification project includes a new option: Import from GitHub. The repositories that you have access to in GitHub are listed when you select that option. You can import only API-specification projects.
+When you go to create a new API-specification project, and if the GitHub integration application is not yet installed in Design Center, an overlay on top of the dialog asks whether you want to install it. Clicking the overlay starts the process. The screens for the installation include instructions.
