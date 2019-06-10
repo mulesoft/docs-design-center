@@ -18,7 +18,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
  +
  * If you save your project in Design Center, you or other people in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Code Editor].
  +
- * If you save your project in a repository in GitHub, you and other people in your organization who also have access to the repository can use GitHub's features to manage the project. See xref:apid-github-integration.adoc[Manage a Project in GitHub] for details.
+ * If you save your project in a repository in GitHub, you and other people in your organization who also have access to the repository can use GitHub's features to manage the project. The name given to the repository is the name that you specify for your project. See xref:apid-github-integration.adoc[Manage a Project in GitHub] for details.
 
 +
 *Result:* The code editor opens. The editor is divided into three panels:
