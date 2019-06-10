@@ -9,7 +9,6 @@
 * xref:design-create-publish-api-specs.adoc[API Designer]
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Code Editor]
- ** xref:apid-github-integration.adoc[Manage an API-specification Project in GitHub]
  ** xref:design-branching.adoc[Fork an API Project]
  ** xref:design-mocking-service.adoc[Simulate Calls to an API]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
