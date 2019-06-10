@@ -15,7 +15,7 @@ In cards that make up a flow, there are several different types of fields:
 * Function fields for creating DataWeave expressions
 * Plain text fields, which are typically for static, unchanging values
 
-In plain text fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card.
+In regular fields, Design Center gives you the option of specifying a dynamic value, rather than a static one. As shown in this image of a Logger card, every card that is preceded by another card displays a list (here highlighted with a blue border) of every attribute and every element of the payload from that preceding card.
 
 image::logger-with-list.png[]
 
