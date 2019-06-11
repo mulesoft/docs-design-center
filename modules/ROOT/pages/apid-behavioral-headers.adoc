@@ -1,0 +1,35 @@
+= Adding Behavioral Headers to Simulated API Calls
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+image:apid-behavioral-headers.png[]
+
+MS2-Delay:: Indicates how many milliseconds the request should take to answer. MS2-Delay header can be expressed in two ways: as an integer number or as a range.
++
+In case of sending it as a range, the value should have the form `min-max`. For example, given the value 500-1000, the request will take a random time between 500 and 1000 milliseconds.
+
+MS2-Error-Level:: Indicates which range of codes will be considered as an error. MS2-Error-Level accepts one of the following three values (case-sensitive):
++
+* REQUEST_ONLY: only 4XX codes will be considered as errors
+* SERVER_ONLY: only 5XX codes will be considered as errors
+* ALL: (default) both 4XX and 5XX codes will be considered as error
+
+MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header should be a decimal between 0 and 1.
++
+This header works in a complementary way with MS2-Status-Code and MS2-Error-Level, so that whether Mocking Service determines that an error code should be returned, that code will be chosen according to the codes filtered by MS2-Status-Code and the error level determined by MS2-Error-Level.
++
+[NOTE]
+====
+The usage of this header requires to define at least one success and one error code (according to the error level), otherwise, Mocking Service will return an error
+====
+
+MS2-Randomize:: When this header is sent as true, whether there is no example defined for the response, Mocking Service will auto generate a payload response
+
+MS2-Status-Code:: Specifies a list of status codes expected to be returned by the Mock. Those codes are expressed as a CSV that can combine integers and ranges.
++
+This list will work as a filter over the codes defined in the API. In that sense, the result of applying this header will be a new list containing the status codes that exist both in the API and in the list provided by MS2-Status-Code. If the result of applying MS2-Status-Code is a non empty list, those status codes will be the only ones considered when building the response, otherwise, Mocking Service will return an error
+
+MS2-Strict-Model-Validations:: When turning on the Mocking Service, the mock is created even when the API has errors. In this scenario, each time a request arrives, Mocking services try to validate the request and build the response according to the stored partial model. However, if MS2-Strict-Model-Validations is sent as true, Mocking Service will answer with the error found in the API.
