@@ -44,3 +44,7 @@ MS2-Status-Code:: Specifies a list of status codes expected to be returned by th
 This list will work as a filter over the codes defined in the API. In that sense, the result of applying this header will be a new list containing the status codes that exist both in the API and in the list provided by MS2-Status-Code. If the result of applying MS2-Status-Code is a non empty list, those status codes will be the only ones considered when building the response, otherwise, Mocking Service will return an error
 
 MS2-Strict-Model-Validations:: When turning on the Mocking Service, the mock is created even when the API has errors. In this scenario, each time a request arrives, Mocking services try to validate the request and build the response according to the stored partial model. However, if MS2-Strict-Model-Validations is sent as true, Mocking Service will answer with the error found in the API.
+
+== See also
+
+* xref:adesign-mocking-service.adoc[Simulate Calls to an API]
