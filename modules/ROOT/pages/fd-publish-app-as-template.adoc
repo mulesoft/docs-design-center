@@ -6,11 +6,11 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can publish a Mule application as a template on Exchange, which makes it easy for you and other people to create similar Mule applications in the future.
+You can share a Mule application as a template on Exchange, which makes it easy for you and other people to create similar Mule applications in the future.
 
 == Benefits of sharing a Mule application as a template
 
-Publishing Mule applications as templates is a great way to share your work with other people. When they need to build a similar application, they can get a head start by downloading and using your template to start their own project. If you accompany your template in Exchange with a good description, screenshots, and perhaps even a video, those other people could get going even more quickly.
+Sharing Mule applications as templates is a great way to share your work with other people. When they need to build a similar application, they can get a head start by downloading and using your template to start their own project. If you accompany your template in Exchange with a good description, screenshots, and perhaps even a video, those other people could get going even more quickly.
 
 You might even find in the future that you need to create Mule applications that are similar to one that you've already created. Rather than search for a project in Design Center, clone it, and then try to remember what it does and how it works, you can read the page that you wrote for the corresponding template in Exchange.
 
