@@ -12,13 +12,13 @@ Every card in a flow presents a list on its right side. The first entry in the l
 == Procedure
 
 . Open the card in which you want to add a DataWeave expression to a field.
-. If the field is a text field, click `Custom Expression` in the list on the right side of the card and drag it into the text field.
+. Click `Custom Expression` in the list on the right side of the card and drag it into the field.
 +
 [NOTE]
 ====
 When you drag the *Custom Expression* element, the card highlights the borders of the fields that you can drop it into.
 ====
-. If the field is a select field, scroll down in the field and select *Custom*. A new text field appears below the select field. Click `Custom Expression` in the list on the right side of the card and drag it into the new field.
+// .If the field is a select field, scroll down in the field and select *Custom*. A new text field appears below the select field. Click `Custom Expression` in the list on the right side of the card and drag it into the new field.
 . Click the arrow in `expression` entry, then click *Expand* in the window that appears below the entry.
 . Compose your expression with the help of the right side of the editor.
 +
