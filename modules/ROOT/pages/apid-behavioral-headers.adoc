@@ -1,21 +1,22 @@
-= Adding Behavioral Headers to Simulated API Calls
+= Add Behavioral Headers to Simulated API Calls
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
+You can use behavioral headers to change the behavior of the mocking service.
 image:apid-behavioral-headers.png[]
 
-MS2-Delay:: Indicates how many milliseconds the request should take to answer. MS2-Delay header can be expressed in two ways: as an integer number or as a range.
+MS2-Delay:: Indicates how many milliseconds the request should take to answer. You can specify a value for this header as an integer number or as a range of integer numbers.
 +
-In case of sending it as a range, the value should have the form `min-max`. For example, given the value 500-1000, the request will take a random time between 500 and 1000 milliseconds.
+If you specify a range, the value must have the form `min-max`. For example, given the value 500-1000, the request will take a random time between 500 and 1000 milliseconds.
 
-MS2-Error-Level:: Indicates which range of codes will be considered as an error. MS2-Error-Level accepts one of the following three values (case-sensitive):
+MS2-Error-Level:: Indicates which range of codes will be considered errors. You can specify one of the following three case-sensitive values:
 +
-* REQUEST_ONLY: only 4XX codes will be considered as errors
-* SERVER_ONLY: only 5XX codes will be considered as errors
-* ALL: (default) both 4XX and 5XX codes will be considered as error
+* `REQUEST_ONLY`: Only 4XX codes are considered to be errors.
+* `SERVER_ONLY`: Only 5XX codes are considered to be errors.
+* `ALL`: Both 4XX and 5XX codes are considered to be error. This is the default value.
 
 MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header should be a decimal between 0 and 1.
 +
