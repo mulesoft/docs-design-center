@@ -12,7 +12,7 @@ Switching will not cause your project to delete the reusable configuration that 
 
 [IMPORTANT]
 ====
-After a new version of Mule runtime is released, opening an existing Mule-app project causes the application to use that new version. The application is updated immediately, Flow Designer then restarting it in the Design environment only. If Flow Designer is unable to update an application, the application is not restarted.
+After a new version of Mule runtime is released, opening an existing Mule-app project causes the application to use that new version. Flow Designer updates the application immediately and then restarts it in the Design environment only. If Flow Designer is unable to update an application, it does not restart the application.
 
 This process ensures that Mule applications are always using the latest version of Mule Runtime.
 
