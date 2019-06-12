@@ -10,6 +10,6 @@ xref:logger-task-design-center.adoc[Log Data with Logger]:: You add one or more 
 
 xref:viewing-problems-fd-canvas.adoc[List and Navigate to Errors that are in a Mule-App Project]:: Learn where to find out about any errors that might be in your flows and how to locate where the errors occur.
 
-xref:view-clear-logs-task.adoc[View the Log for a Mule App Project in Flow Designer]:: Learn how to view the log for a Mule-application project. This log can be helpful when you test an app or when you are working with MuleSoft support to diagnose problems running an app.
+xref:view-clear-logs-task.adoc[View the Log for a Mule-App Project in Flow Designer]:: Learn how to view the log for a Mule-application project. This log can be helpful when you test an app or when you are working with MuleSoft support to diagnose problems running an app.
 
 xref:troubleshooting-reference.adoc[Error Messages for Flow Designer]:: Learn how to resolve problems Flow Designer might encounter when initializing, running, and deploying Mule-application projects.

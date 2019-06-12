@@ -45,7 +45,7 @@
   *** xref:logger-task-design-center.adoc[Log Flow Information at Runtime with Logger]
   *** xref:troubleshooting-reference.adoc[Error Messages for Flow Designer]
   *** xref:viewing-problems-fd-canvas.adoc[List and Navigate to Errors that are in a Mule-App Project]
-  *** xref:view-clear-logs-task.adoc[View the Log for a Mule App Project in Flow Designer]
+  *** xref:view-clear-logs-task.adoc[View the Log for a Mule-App Project in Flow Designer]
  ** xref:fd-deploy.adoc[Deploy a Mule Application]
   *** xref:promote-app-prod-env-design-center.adoc[Deploy a Mule Application from Flow Designer]
   *** xref:fd-deploy-app-from-rm.adoc[Deploy a Mule Application from Runtime Manager]

@@ -1,11 +1,11 @@
-= View the Log for a Mule App Project in Flow Designer
+= View the Log for a Mule-App Project in Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-You can view the log for a Mule app project. Doing so can be helpful when you test an app or when you are working with MuleSoft support to diagnose problems running an app.
+You can view the log for a Mule-app project. Doing so can be helpful when you test an app or when you are working with MuleSoft support to diagnose problems running an app.
 
 The log file lists two primary categories of message:
 
