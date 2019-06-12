@@ -7,7 +7,7 @@ endif::[]
 
 Each card in a flow requires input data that is of a certain type, and each card outputs data that is of a certain type. As you build your flows, you should specify the data types that your cards require as inputs and produce as outputs. Doing so helps you plan the flows you create, because you know what data type is required by each card in the flow.
 
-A _data type_ explains to Flow Designer the formats and structures of the data that are in inputs and outputs. There are two categories of data types that are supported in Flow Designer: simple and custom. See these topics for information about these categories of data types:
+A _data type_ explains to Flow Designer the formats and structures of the data that are in inputs and outputs. Flow Designer supports two categories of data type: simple and custom. See these topics for information about these categories:
 
 * xref:fd-supported-simple-data-types.adoc[Simple Data Types that are Supported in Flow Designer]
 * xref:fd-custom-data-types.adoc[Custom Data Types in Flow Designer]
