@@ -17,11 +17,11 @@ You can specify a value for this header as an integer or as a range of integers.
 It is possible for the delay to be longer than a single integer value or the high end of a range, depending on the latency of your network.
 ====
 
-MS2-Error-Level:: Indicates which range of error status codes to use. You can specify one of the following three case-sensitive values:
+MS2-Error-Level:: Indicates which range of error status codes the mocking service is restricted to using. You can specify one of the following three case-sensitive values:
 +
-* `REQUEST_ONLY`: Only 4XX codes are considered to be errors.
-* `SERVER_ONLY`: Only 5XX codes are considered to be errors.
-* `ALL`: Both 4XX and 5XX codes are considered to be error. This is the default value.
+* `REQUEST_ONLY`: The mocking service uses only 4XX codes.
+* `SERVER_ONLY`: The mocking service uses only 5XX codes.
+* `ALL`: The mocking service can use both 4XX and 5XX codes. This is the default value.
 
 MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header must be a decimal number between 0 and 1.
 +
