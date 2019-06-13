@@ -44,7 +44,7 @@ This header works together with MS2-Status-Code, MS2-Error-Level, or both at the
 
 |MS2-Error-Level and MS2-Status-Code
 |MS uses the first error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
-|MS uses the first non-error status code that is defined for the method.
+|MS uses the first non-error status code that is specified in MS2-Status-Code.
 
 |None
 |MS uses the first error status code that is defined for the method.
