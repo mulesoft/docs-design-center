@@ -29,7 +29,7 @@ MS2-Error-Level:: Indicates which range of codes will be considered errors. You 
 
 MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header must be a decimal number between 0 and 1.
 +
-This header works together with MS2-Status-Code and MS2-Error-Level, but not both at the same time.
+This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
 +
 * If you use this header together with MS2-Status-Code and the mocking service (based on the probability) determines that an error code should be returned, the mocking service uses the error code that is specified by MS2-Status-Code.
 * If you use this header together with MS2-Error-Level and the mocking service (based on the probability) determines that an error code should be returned, the mocking service uses one of the error codes that is in the range specified by MS2-Error-Level. If the mocking service determines that a non-error code should be returned, it uses the first non-error code that is defined for the method.
