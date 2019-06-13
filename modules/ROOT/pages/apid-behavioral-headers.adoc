@@ -95,4 +95,4 @@ When you set this parameter to `true`, the mocking service responds only by retu
 
 == See also
 
-* xref:adesign-mocking-service.adoc[Simulate Calls to an API]
+* xref:design-mocking-service.adoc[Simulate Calls to an API]
