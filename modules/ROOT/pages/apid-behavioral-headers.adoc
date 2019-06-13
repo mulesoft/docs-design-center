@@ -36,14 +36,14 @@ This header works together with MS2-Status-Code and MS2-Error-Level, but not bot
 
 MS2-Randomize:: When this header is sent as true, the mocking service auto-generates a payload response if no example is defined for the response.
 
-MS2-Status-Code:: Specifies one or more status codes that the mocking service can choose from for the return message. Separate multiple status codes with commas. For example, you might want the mocking service to return your message for the 201 status code only; in this case, you would specify `201` for the value of this header. As another example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
+MS2-Status-Code:: Specifies the non-error code and the error code that the mocking service can choose from for the return message. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
 +
 If you use this header and you do not provide a non-error status code, the mocking service throws an error if the API does not return an error. Also, if you use this header and you do not provide an error status code, the mocking service throws an error if the API returns an error.
 +
 If you do not use this header, the mocking service behaves as follows:
 +
-* If the API does not return an error, the mocking service returns the first non-error status code that is listed for the method.
-* If the API does return an error, the mocking service returns the first error status code that is listed for the method.
+* If the API returns a non-error status code, the mocking service returns the first non-error status code that is listed for the method.
+* If the API returns an error status code, the mocking service returns the first error status code that is listed for the method.
 
 MS2-Strict-Model-Validations:: When turning on the Mocking Service, the mock is created even when the API has errors. In this scenario, each time a request arrives, Mocking services try to validate the request and build the response according to the stored partial model. However, if MS2-Strict-Model-Validations is sent as true, Mocking Service will answer with the error found in the API.
 
