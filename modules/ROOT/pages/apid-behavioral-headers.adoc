@@ -23,7 +23,7 @@ MS2-Error-Level:: Indicates which range of error status codes the mocking servic
 * `SERVER_ONLY`: The mocking service uses only 5XX codes.
 * `ALL`: The mocking service can use both 4XX and 5XX codes. This is the default value.
 
-MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header must be a decimal number between 0 and 1.
+MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
 +
 This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
 +
