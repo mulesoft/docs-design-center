@@ -72,7 +72,7 @@ If you did not provide an example, but you used the header MS2-Randomize, set to
 }
 ----
 +
-Moreover, the header respects more detailed definition of types. For example, you might change your type definition to look like this:
+Moreover, the header supports more detailed definition of types. For example, you might change your type definition to look like this:
 +
 ----
 types:
