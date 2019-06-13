@@ -51,7 +51,7 @@ This header works together with MS2-Status-Code, MS2-Error-Level, or both at the
 |MS uses the first non-error status code that is defined for the method.
 |===
 
-MS2-Randomize:: When this header is sent as true, the mocking service auto-generates a payload response if no example is defined for the response.
+MS2-Randomize:: When this header is set to `true`, the mocking service auto-generates a payload response if no example is defined for the response.
 +
 For example, suppose that an API specification contained the definitions of this type:
 +
