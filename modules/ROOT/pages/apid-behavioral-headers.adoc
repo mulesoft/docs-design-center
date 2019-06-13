@@ -17,7 +17,7 @@ You can specify a value for this header as an integer or as a range of integers.
 It is possible for the delay to be longer than a single integer value or the high end of a range, depending on the latency of your network.
 ====
 
-MS2-Error-Level:: Indicates which range of codes will be considered errors. You can specify one of the following three case-sensitive values:
+MS2-Error-Level:: Indicates which range of error status codes to use. You can specify one of the following three case-sensitive values:
 +
 * `REQUEST_ONLY`: Only 4XX codes are considered to be errors.
 * `SERVER_ONLY`: Only 5XX codes are considered to be errors.
