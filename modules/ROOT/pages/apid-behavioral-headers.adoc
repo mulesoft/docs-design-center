@@ -100,8 +100,6 @@ MS2-Status-Code:: Specifies the status code or codes that the mocking service ca
 [IMPORTANT]
 ====
 If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
-+
-If you use this header and you do not provide a non-error status code, the mocking service throws an error if, based on the probability in MS2-Error-Rate, the mocking service does not attempt to respond with an error. Also, if you use this header and you do not provide an error status code, the mocking service throws an error if the mocking service does attempt to respond with an error.
 ====
 
 MS2-Strict-Model-Validations:: This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
