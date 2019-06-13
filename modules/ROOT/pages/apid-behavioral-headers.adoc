@@ -5,11 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can use behavioral headers to change the behavior of the mocking service.
-
-
-.Use behavioral headers where you would normally specify other types of header in the API Console
-image::apid-behavioral-headers.png[]
+You can use the following behavioral headers to change the behavior of the mocking service. Use behavioral headers where you would normally specify other types of header in the API Console
 
 
 MS2-Delay:: Indicates how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
@@ -31,8 +27,25 @@ MS2-Error-Rate:: Indicates the probability of getting an error status code as a 
 +
 This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
 +
-* If you use this header together with MS2-Status-Code and the mocking service (based on the probability) determines that an error code should be returned, the mocking service uses the error code that is specified by MS2-Status-Code.
-* If you use this header together with MS2-Error-Level and the mocking service (based on the probability) determines that an error code should be returned, the mocking service uses one of the error codes that is in the range specified by MS2-Error-Level. If the mocking service determines that a non-error code should be returned, it uses the first non-error code that is defined for the method.
+[cols="1,2,2", options="header"]
+.How the mocking service determines which status code to respond with when you use MS2-Error-Rate
+|===
+|Other header used with MS2-Error-Rate
+|Mocking service (MS) responds with an error code
+|Mocking service does not respond with an error code
+
+|MS2-Status-Code
+|MS uses the error code specified in MS2-Status-Code.
+|MS uses the non-error status code specified in MS2-Status-Code.
+
+|MS2-Error-Level
+|MS uses the first error status code that is defined for the method.
+|MS uses the first non-error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
+
+|None
+|MS uses the first error status code that is defined for the method.
+|MS uses the first non-error status code that is defined for the method.
+|===
 
 MS2-Randomize:: When this header is sent as true, the mocking service auto-generates a payload response if no example is defined for the response.
 +
@@ -78,14 +91,14 @@ If MS2-Randomize were set to `true`, the payload in the response from the mockin
 }
 ----
 
-MS2-Status-Code:: Specifies the non-error code and the error code that the mocking service can choose from for the return message. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
+MS2-Status-Code:: Specifies the status code or codes that the mocking service can choose from for the return message. This header behaves as a filter on the list of status codes that are defined for a method. For example, suppose a method has several non-error status codes defined; if you wanted the mocking service to respond with only one of those status codes, you would specify it with this header.
 +
-If you use this header and you do not provide a non-error status code, the mocking service throws an error if the API does not return an error. Also, if you use this header and you do not provide an error status code, the mocking service throws an error if the API returns an error.
+[IMPORTANT]
+====
+If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
 +
-If you do not use this header, the mocking service behaves as follows:
-+
-* If the API returns a non-error status code, the mocking service returns the first non-error status code that is listed for the method.
-* If the API returns an error status code, the mocking service returns the first error status code that is listed for the method.
+If you use this header and you do not provide a non-error status code, the mocking service throws an error if, based on the probability in MS2-Error-Rate, the mocking service does not attempt to respond with an error. Also, if you use this header and you do not provide an error status code, the mocking service throws an error if the mocking service does attempt to respond with an error.
+====
 
 MS2-Strict-Model-Validations:: This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
 +
