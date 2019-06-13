@@ -91,7 +91,7 @@ MS2-Strict-Model-Validations:: This header can be helpful when you are simulatin
 +
 When you set this parameter to `false`, you can use the mocking service even when the API specification contains errors.
 +
-When you set this parameter to `true`, the mocking service responds by returning the first error status code that is defined in the specification.
+When you set this parameter to `true`, the mocking service responds only by returning the first error status code that is defined in the specification.
 
 == See also
 
