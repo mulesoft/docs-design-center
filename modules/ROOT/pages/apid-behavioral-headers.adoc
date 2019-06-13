@@ -10,7 +10,7 @@ You can use the following behavioral headers to change the behavior of the mocki
 
 MS2-Delay:: Indicates how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
 +
-You can specify a value for this header as an integer number or as a range of integer numbers. If you specify a range, the value must have the form `min-max`. For example, given the value `500-1000`, the request will take a random time between 500 and 1000 milliseconds.
+You can specify a value for this header as an integer or as a range of integers. If you specify a range, the value must have the form `min-max`. For example, given the value `500-1000`, the request will take a random time between 500 and 1000 milliseconds.
 +
 [NOTE]
 ====
