@@ -1,59 +1,92 @@
-= About Creating Variables (Flow Designer)
+= Store All or Part of the Output of a Card in a Variable (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-== About Variables
+:imagesdir: ../assets/images
 
-Variables are used to store per-event values for use within a flow of a Mule app. The stored data can be any supported data type, such as an object, number, or string. It is also possible to store the current message (using the `message` keyword), the current message payload (using the `payload` keyword) or just the current message attributes (using the `attributes` keyword). You can even use a DataWeave expression as the value. However, the keyword `vars` (for example, `vars.someOtherVar`) is not allowed.
+You can use a Set Variable card to create a variable that stores all of the output from the preceding card, stores part of the output, or manipulates the output by using functions in a DataWeave expression. You can then reuse that value in a later card by using the variable.
 
-You can create, or update, variables in these ways:
+Normally, a card outputs data that is received in its entirety by the next card in the same flow, as depicted by the first flow in this diagram.
 
-* Using the Set Variable component.
-* Using a Target Variable from within an operation, such as the Read operation to the File connector or the Store operation to the Database connector.
+.An ordinary flow contrasted with a flow in which a Set Variable card is used
+image::fd-regular-variables.png[]
 
-There are other ways of setting variables; however, they are used less much less frequently.
+The first flow carries out these steps:
 
-After creating a variable, you can access and use it within the scope of a Mule flow where you created it, which includes any flows that are joined with it through a Flow Ref component.
+. Card A produces an output.
+. Card B receives the entire output from Card A.
 
-* `vars`: Keyword for accessing a variable, for example, through a DataWeave expression in a Mule component, such as the Logger, or from an Input or Output parameter of an operation. If the name of your variable is `myVar`, you can access it like this: `vars.myVar`
+However, when you create a variable with a Set Variable card, both the variable and the output from the previous card are passed to the next card in the flow, as the second flow depicts:
 
-Note that a variable in the Mule event is different from variables defined in a DataWeave script, which are local to the script and not accessible outside of it.
+. Card A produces an output.
+. The Set Variable card creates a variable to store all of the output from Card A, store part of the output, or manipulate the output by using functions in a DataWeave expression.
+. Card B receives the entire set of data from Card A (payload and attributes) and the variable. It outputs its own set of data and the variable. The output from Card A, except for the part that was stored in the variable, is no longer part of the flow
+. Card C receives the entire set of data from Card B and the variable.
 
-== About the Set Variable Component
+For example, in the tutorial xref::salesforce-to-twilio.adoc["Create Your First Mule Application with Flow Designer"], you used a Set Variable card after the trigger card, so that you could save the trigger card's payload. The reason was that you needed to use information from the payload after using the Choice router, and none of the three possible outputs from the Choice router would preserve that information.
 
-The Set Variable component is for creating or updating a variable to store values for use within the flow of a Mule app. You can store simple literal values such as strings or messages, message payloads, or attribute objects. For example, you might store the original payload of a message (before it is processed) so you can use it later in the flow or within an error handler.
+.The Set Variable card from the tutorial
+image::fd-set-var-oppdetails.png[]
 
-For more information, see "About Set Variable", which is linked to from the *See also* section at the end of this topic.
+You used the variable, which you named `OppDetails`, in the Transform card that followed the Choice router.
 
-When a variable is no longer needed in a flow, you can remove the variable with the Remove Variable component.
+.The Transform card that followed the Choice router, with the variable `OppDetails` highlighted
+image::fd-set-var-transform.png[]
 
-== Enhancing Data with Target Parameters
+However, if you had wanted to use `OppDetails` later in the flow, it was still available, as you can see here in the Twilio card, which was the last card in the flow.
 
-When creating a flow in a Mule app, you might need to store data in a variable so that any component in the flow can use it. Non-void operations (such as the Read operation to the File connector) can store the message data that they return in a variable. Once defined, variables created with the target parameter are available for use within the flow, and you can access them like you access any other variable.
+.The Twilio card, with the `OppDetails` variable highlighted
+image::fd-set-var-twilio.png[]
 
-You often define variables through these parameters:
+To use the variable in this Twilio card (or in any card where a variable is available, other than the Transform card), you would simply drag it into a field.
 
-* Target (`target`): Name of the variable in which you want to store message data. Names can only include numbers, characters, and underscores. For example, hyphens are not allowed in the name.
-* Target Value (`targetValue`): Value of the data to store in the target variable. By default, the value is the message payload (`payload`). The field accepts any value that a variable accepts: any supported data type, DataWeave expressions, the keywords `payload`, `attributes`, and `message`, but _not_ the keyword `vars`.
+If you believe that you no longer need to use a variable after using it one or more times, you can add the Remove Variable card after the card in which the variable is last used.
 
-It is important to understand that setting a target variable changes the typical course of the message through the flow. Normally, an operation outputs a different message than it receives as input. However, when you set a variable from an operation, the operation outputs to the _next_ component in the flow the same message that it received as input. For example, assume you have a flow consisting of component A, followed by component B with a target value of `myMessage`, and then component C. In this case, component C will receive the same message that B received from A.
+== Procedure
 
-In this image, the Read operation of an FTP connector stores its payload in the variable `myVar`:
+To store a value that is based on the data from a card:
 
-image::ftp-read-output-target.png[]
+. Click the plus icon that follows the card that outputs the data on which you want to base a value to store.
+. Add a Set Variable card.
+. Specify a name for the variable. Names can include only numbers, characters, and underscores.
+. Specify a value for the variable.
+* If you want to specify a string value, ensure that the *f(x)* button appears to the right of the *Value* field. The presence of this button means that the field is in string mode, not function mode. You can type directly into the *Value* field and do not need to use quotation marks, unless you are specifying a string within a string.
++
+.The *Value* field in string mode, highlighted in the Set Variable card
+image::fd-set-var-value-field-smode.png[]
 
-. The *Output* fields for the target variable are in the *Advanced* section of the component card, as is the case for all components that have these fields.
-. The name `myVar` has been specified as the name of the target variable. There is no default name. The target variable stores the payload by default. You need to specify a target value only if you want to store something other than the full payload.
+* If you want to specify a DataWeave expression, ensure that `f(x)` appears in the right side of the *Value* field. The presence of `f(x)` means that the field is in expression mode. Clicking in the field opens the *Custom Expression* dialog, where you can compose an expression with the help of the *Add data* and *Add functions* panes on the right.
++
+.The *Value* field in expression mode, highlighted in the Set Variable card
+image::fd-set-var-value-field-fmode.png[]
++
+.The Custom Expression window and its panes
+image::fd-set-var-custom-expression-dialog.png[]
++
+[NOTE]
+====
+For the *Add data* pane to appear, at least one of the previous cards must output a data type that is other than `Default`.
 
-To access the content of `myVar` in another operation in the flow, you would use the expression `myVar.payload`.
+For documentation about the DataWeave functions that are listed in the *Add functions* pane, see "xref:4.1@mule-runtime::dw-core.adoc[Core]" in the DataWeave Function Reference.
 
-For a list of the DataWeave functions that you can use in variable expressions, see "Core" in the DataWeave Function Reference. "Core" is linked to from the *See also* section at the end of this topic.
+====
++
+*Example based on the screenshot of the Custom Expression window:* If you wanted to save the payload's error message into a variable, you would click `error_message`. The *Expression* field would then contain the expression `error_message`. You would then click *OK*.
++
+Or you could also choose to type in a value. For example, if you wanted to store the entire payload in a variable, you could type `payload` in the *Custom Expression* field.
+. Click *OK* in the *Custom Expression* dialog and then click the canvas to close the card.
 
+== Examples
 
+To store the payload from the previous card, set the value of the variable to `payload`.
 
+To store the attributes from the previous card, set the value of the variable to `attributes`.
+
+To store the entire set of data at the current point in a flow, set the value of the variable to `message`.
+
+To store a Boolean value, set the value of the variable to `true` or `false`.
 
 == See also
 
-* xref:4.1@mule-runtime::variable-transformer-reference.adoc[Set Variable]
-* xref:4.1@mule-runtime::dw-core.adoc[Core]
+* xref::fd-store-data-top.adoc[Store and Reuse Data within a Flow]

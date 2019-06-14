@@ -1,0 +1,25 @@
+= Deploy a Mule Application from Runtime Manager
+
+It might be the case that you are not allowed to deploy an application directly from Flow Designer. Your organization might require someone with the proper authority to deploy applications from Runtime Manager. You can share with that person a copy of your project as a `.jar` file to deploy your application with.
+
+== Procedure
+
+. In Flow Designer, follow these steps:
+.. Ensure that your project is free of errors.
+.. Click the download icon, which is to the right of the Undo and Redo arrows in the top-left corner of the screen.
+.. Select *Download Package*.
++
+*Result:* A `.jar` file that contains a copy of your project is downloaded to the default location on your computer.
+. Place the `.jar` file in a location that the other person can access.
+. Have the person receiving the `.jar` file follow these steps in Runtime Manager:
+.. Switch to the environment in which the Mule application is to be deployed.
+.. Click *Deploy Application*.
++
+*Result:* The Deploy Application page is opened.
+.. Select *Choose File* > *Upload File* and upload the `.jar` file.
+.. Follow the instructions in xref:runtime-manager::deploying-to-cloudhub.adoc[Deploying to CloudHub].
+
+== See also
+
+* xref:access-management::environments.adoc[CloudHub Environments]
+* xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]

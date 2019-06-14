@@ -1,0 +1,43 @@
+= Share a Mule Application as a Template on Exchange
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
+
+You can share a Mule application as a template on Exchange, which makes it easy for you and other people to create similar Mule applications in the future.
+
+== Benefits of sharing a Mule application as a template
+
+Sharing Mule applications as templates is a great way to share your work with other people. When they need to build a similar application, they can begin by downloading and using your template to start their own project. If you accompany your template in Exchange with a good description, screenshots, and perhaps even a video, those other people could get going even more quickly.
+
+You might even find in the future that you need to create Mule applications that are similar to one that you've already created. Rather than search for a project in Design Center, clone it, and then try to remember what it does and how it works, you can read the page that you wrote for the corresponding template in Exchange.
+
+
+== Before you begin
+
+* Ensure that your Mule application is free of errors.
+
+* Ensure that your user ID has permission to publish to Exchange in your Anypoint Platform organization. An administrator in your organization can grant you this permission by assigning your user ID the role of Exchange Contributor, Exchange Admin, or Organization Administrator.
+
+* Ensure that you have written notes in the *Notes* section of each card to explain the purpose of the card and any information that someone might need to configure the card.
+
+* Open the project in which you created the Mule application.
+
+
+== Procedure
+
+. Click the *Publish* button, which is in the top-right corner of the Flow Designer screen.
+. Specify a name for the template.
+. Click *Publish*.
+
+== Result
+
+You can view the new page in Exchange that has been created for your template.
+
+If Flow Designer was unable to publish the template, check that your user ID has permission to publish to Exchange.
+
+== What to do next
+
+On the template's page in Exchange, provide a description, screeshots, or videos to explain the purpose of the template and how to use it.

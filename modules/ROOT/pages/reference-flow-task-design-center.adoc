@@ -1,32 +1,35 @@
-= Reference One Flow from Another (Flow Designer)
+= Reference One Flow from Another with Flow Ref (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-By placing a Flow Ref component in a flow you can execute one flow from another within the same application. When Flow Ref is executed, it triggers the referenced flow. The referenced flow executes and returns the Mule event object to the original flow where execution proceeds after the Flow Ref component. Flow Ref is handy for reusing groups of components within the same Mule application.
+:imagesdir: ../assets/images
 
-. In Design Center, create an initial flow that starts with a trigger, and add one or more components.
-. Create a second flow:
+
+By placing a Flow Ref core component in a flow, you can run one flow from another within the same application. When Flow Ref is reached in a flow, it triggers the referenced flow. The referenced flow runs and returns the Mule event object to the original flow where execution proceeds after the Flow Ref component. Flow Ref is handy for reusing groups of components within the same Mule application.
+
+.A Flow Ref card referencing one flow from the main flow
+image::fd-flow-ref.png[]
+
+. The trigger card starts the main flow.
+. The Flow Ref card passes the output from the second card to the first card in the referenced flow, triggering that flow.
+. The last card in the referenced flow passes its output to the card that comes after the Flow Ref card in the main flow.
+. This card processes processes the input, creates its own output, and continues the main flow.
+
+== Procedure for creating and referencing a second flow
+
+. Create a second flow by following these steps:
 +
-* Click Flows - Plus.
+.. Click the plus sign to the right of *Flows* in the *Project* pane..
 +
 image::flows-plus.png[add flow,height=34,width=237]
-+
-* Rename the flow.
+.. In the bottom-left corner of the *Let's get started* wizard, click *Go straight to the canvas*. The wizard creates a flow that begins with a trigger. However, a flow that you reference with a Flow Ref card must not begin with a trigger. The Flow Ref card is its trigger.
+.. Rename the flow.
 +
 image::rename-flow.png[]
 +
-. Return to the first flow by clicking its name.
+. Return to the first flow by clicking its name under *Flows* in the *Project* pane..
 
-. Add a Flow Ref component anywhere in this flow. In the Flow field, select your second flow.
+. Add a Flow Ref card at the point in the flow that you want to run the other flow. In the *Flow* field of the card, select the second flow. Then, click *Go*.
 
-. In Flow Ref, click Go to go to second flow.
-. Add components other than a trigger. The Flow Ref Component in the first flow triggers the second flow.
-+
-The first flow starts executing and continues from the beginning of the flow to the Flow Ref component. Execution of the second flow begins. At the end of the second flow, execution switches back to execute any unexecuted components in the first flow.
-
-
-== See also
-
-* xref:4.1@mule-runtime::about-flows.adoc[About Flows]
-* xref:about-data-types.adoc.adoc[About Data Types]
+. Add cards to the second flow, but do not add a trigger card. Ensure that the last card in this flow produces an output that you want to use as input for the card that comes after the Flow Ref card in the main flow. If the output needs to be transformed before it can be used in that next card in the main flow, use a Transform card after the Flow Ref card.

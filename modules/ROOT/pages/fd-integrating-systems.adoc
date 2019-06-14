@@ -1,0 +1,42 @@
+= Integrate a System into a Mule Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
+
+The purpose of creating a Mule application is to integrate different systems together in an automated workflow to achieve an outcome. For example, the Flow Designer template "Slack message to Twilio" integrates together both Slack and Twilio to send a text message whenever there is a new message in a particular Slack channel.
+
+.The Mule application that is created by the template "Slack message to Twilio"
+image::fd-slack-to-twilio.png[]
+
+Flow Designer supports the integration of a large variety of systems, and supports multiple operations within each system. For example, the Slack connector supports these operations:
+
+* On New Message
+* Channels - Info
+* Channels - INvite
+* Channels - List
+* Channels - Rename
+* Channels - Set Purpose
+* Channels - Set Topic
+* Chat - Post Message
+* Chat - Update Message
+* Dialog - Open
+* File - Upload
+* Groups - Info
+* Groups - List
+* Groups - Rename
+* Groups - Set Purpose
+* Groups - Set Topic
+* IM - List
+* IM - Open
+* Unauthorize
+* User - Info
+* User - List
+
+Some connectors support over one hundred operations. So, the number of tasks that you can automate with Mule applications that you create in Flow Designer is almost limitless.
+
+For documentation about connectors and their operations, including information that you need to understand the type of information connectors require you to provide when you use them in Mule applications, see xref:connectors::index.adoc[About Connectors and Modules (for Mule 4)].
+
+The documentation about connectors is written for both users of Flow Designer and users of Anypoint Studio. You can ignore information about using connectors in Studio. You can also ignore any examples that use XML; you never need to write in XML while you're using Flow Designer, unless you are defining custom data types that use XML as their format.

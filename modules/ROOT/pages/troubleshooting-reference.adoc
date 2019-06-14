@@ -1,13 +1,13 @@
-= Troubleshooting
+= Error Messages for Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Error messages can appear in two places:
+Error messages can appear in two places in Flow Designer:
 
 * The bottom-right corner of your screen displays error messages in red boxes.
 +
-When you see an error message in this location and you are unable to resolve the error, open a support case for Design Center and paste the content of the message into the support case.
+When you see an error message in this location and you are unable to resolve the error, open a support case for Flow Designer and paste the content of the message into the support case.
 * The top-right corner of your screen displays them between the *Run* and *Deploy* buttons.
 +
 The table below lists all of the error messages that can appear in this location, as well as the actions that you can take to resolve the errors.
@@ -20,16 +20,16 @@ The table below lists all of the error messages that can appear in this location
 |Action That You Can Take
 
 |Can't Connect to Mule
-|Design Center can’t connect to the Runtime Manager Agent
+|Flow Designer can’t connect to the Runtime Manager Agent
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure. Then, open a support case for Runtime Manager and paste the error message into the support case.
 
 |Can't Retrieve App (CloudHub)
 |You either lack permissions to retrieve applications in the current organization or the application has been deleted.
-|Check Runtime Manager to find out whether your application is running. If it isn't, open a support case for Design Center.
+|Check Runtime Manager to find out whether your application is running. If it isn't, open a support case for Flow Designer.
 
 |Can't Retrieve App (Project Manager)
-|Design Center failed to retrieve information about your project.
-|Open a support case for Design Center. Provide the name of your project in the support case.
+|Flow Designer failed to retrieve information about your project.
+|Open a support case for Flow Designer. Provide the name of your project in the support case.
 
 |Cloudhub Internal Error
 |CloudHub failed to process the request.
@@ -44,7 +44,7 @@ The table below lists all of the error messages that can appear in this location
 |Find the flow or flows missing a trigger and add a trigger to each.
 
 |Mule Agent Internal Error
-|Design Center failed to deploy or to stop your mule app in the Mule runtime.
+|Flow Designer failed to deploy or to stop your mule app in the Mule runtime.
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure, what to do to resolve the problem, or both.
 
 |Not Enough Permissions
@@ -64,11 +64,11 @@ The table below lists all of the error messages that can appear in this location
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure, what to do to resolve the problem, or both.
 
 |Packaging Failed
-|Design Center failed to build your Mule app package. The Design Center builds a package of your app as part of the process of running it.
+|Flow Designer failed to build your Mule app package. The Flow Designer builds a package of your app as part of the process of running it.
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure, what to do to resolve the problem, or both.
 
 |Service unavailable
-|The status was retrieved by Design Center, the response is *503 Service Unavailable*. During planned maintenance, a 503 error is to be expected for a short time.
+|The status was retrieved by Flow Designer, the response is *503 Service Unavailable*. During planned maintenance, a 503 error is to be expected for a short time.
 |Check http://status.mulesoft.com[status.mulesoft.com] to see whether there is any planned maintenance taking place.
 
 |Undeployed
@@ -76,15 +76,15 @@ The table below lists all of the error messages that can appear in this location
 |Click *Run* if you want to redeploy your application. (Note: The *Deploy* button actually promotes your application to another environment. The *Run* button runs your application by deploying it to the Design environment.)
 
 |Unknown
-|The status was retrieved by Design Center, but the response is an unknown worker state.
-|Open a support case for Design Center. In the support case, include both the name of your project and the name of your application in CloudHub.
+|The status was retrieved by Flow Designer, but the response is an unknown worker state.
+|Open a support case for Flow Designer. In the support case, include both the name of your project and the name of your application in CloudHub.
 
 |Workspace Creation Failed
 |There was an unknown error while creating the worker.
 |View the log for your project, which you can do by clicking *Log* in the bottom-left corner of the screen. There should be an error message that indicates the reason for the failure, what to do to resolve the problem, or both. You can also look in the log for Runtime Manager.
 |===
 
-In all cases where you cannot resolve an error, open a support case for Design Center. In the support case, include the text of any messages that appear on the screen and the text of any error messages that are in the log for your project.
+In all cases where you cannot resolve an error, open a support case for Flow Designer. In the support case, include the text of any messages that appear on the screen and the text of any error messages that are in the log for your project.
 
 == See Also
 

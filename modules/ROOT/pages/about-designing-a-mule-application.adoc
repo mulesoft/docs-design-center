@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-In Flow Designer, you create Mule applications as projects that have one or more flows. A project contains the flows for one Mule application. A flow consists of a sequence of _cards_, with each card representing a connector, core Mule Runtime component, API, or module. Each card receives an input, carries out a specific task, and then sends the output of that task to the next card in the flow. The final card in a flow is usually one that sends a notification that the Mule application has completed its task or that sends data.
+In Flow Designer, you create Mule applications to integrate systems into workflows. You create them as projects that have one or more flows. A project contains the flows for one Mule application. A _flow_ consists of a sequence of _cards_, with each card representing a core component, connector, module, or API. Each card receives input data, carries out a specific task that makes use of the input data, and then sends the output data from that task to the next card in the flow. The final card in a flow is usually one that sends a notification that the Mule application has completed its task or that sends data.
 
 == Getting Started
 
@@ -18,45 +18,10 @@ To start creating Mule applications:
 * Create a new Mule-app project in Design Center and use the wizard that automatically opens to walk you through scaffolding a flow with a trigger card and a target card.
 * Create a new Mule-app project and click *Go straight to the canvas* in the wizard to start building a flow from a blank canvas.
 
-== Tour of the Flow Designer Interface
-
-.The five areas of the Flow Designer interface
-image::FD-annotated.png[]
-
-. The canvas
-+
-Here you can create a flow. The cards in a flow appear in the middle, in a sequence from left to right. The first card in a flow is the trigger card, which represents the connector and operation that you want to use to trigger the flow.
-+
-In the top-left corner of the canvas are the names of the project and the flow.
-. The panes
-+
-Click the top icon to open the *Project* pane, which lists a project's flows, the configurations that are being used, and any global data types that have been defined.
-+
-Click the bottom icon to open the *Dependencies* pane, which lists a project's dependencies.
-+
-What are reusable configurations?:: When you add a card that connects to another system, you specify how Flow Designer can locate and authenticate to that system. For example, if you add a Database card to a flow, you need to specify the type of database, its host, other connectivity information, and how to authenticate. The set of this information is called a _configuration_. After you add one Database card, the next Database card you add uses the same configuration by default, though you can change it. In the Project pane, the list of resusable configurations is the list of all of the configurations that you have created in a project and that can be used in additional cards.
-+
-What are data types?:: Data types show the formats in which data are used in a flow. A local data type is defined within a particular card. A global data type is defined for a project and can be reused in multiple cards. See xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer] for examples of how you can create and use global data types.
-+
-What are dependencies?:: A dependency is any connector, core Mule Runtime component, API, or module that you use in a flow. The first time that you add one of those objects to a flow, you add the current version of it. Every time afterward that you use that object again in the flow, you use the same version of it. From time to time, that object might be updated in Exchange. If you would like your flow to benefit from the update, you can update the version of the object that you are using in your flow.
-. The toolbar
-+
-Here you can undo and redo changes in a project, download a project, and change the zoom level of the canvas.
-. The control bar
-+
-Here you can run the application for testing, as well as deploy the application to another environment.
-. The *Problems* and *Logs* tabs
-+
-Click the first tab to see a list of any errors that are in a project. You can click a listed error to open the location in which the error occurs.
-+
-Click the second tab to see the log file for a project. The file can be helpful when you are troubleshooting problems running an application.
-
-// Connectors:: These provide access to other applications, such as Salesforce, Slack, databases, Marketo, NetSuite, and many others. You configure connectors to tell Design Center where an application is located, how to connect to it, and which operation to perform with the application. Some connectors have operations that you can use as triggers that provide data that start flows. All connectors have operations that receive an input and perform an action, such as deleting rows from databases, sending emails, and more.
-
-// Core Mule Runtime components represent functionality that is available in Mule Runtime. For example, you can use the Transform component to change the output of a card to a data type that the next card in a flow can accept. You can use the Choice component to choose which branch of a flow data should take, the choice being determined by the data itself.
-
 
 
 == See also
 
+* xref::fd-elements-of-flows.adoc[The Elements of Flows in Mule Applications]
+* xref::fd-tour.adoc[Tour of Flow Designer]
 * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]

@@ -1,4 +1,4 @@
-= Handle Errors (Flow Designer)
+= Handle Errors with Try (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
