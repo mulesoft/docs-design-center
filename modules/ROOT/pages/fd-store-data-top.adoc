@@ -1,0 +1,16 @@
+= Store and Reuse Values that are Based on Data within a Flow (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+
+Variables are used to store values for use within a flow of a Mule app. After you create a variable, you can use it in any subsequent cards in the flow.
+
+There are two methods for storing values in variables.
+
+
+xref::to-create-and-populate-a-variable.adoc[Store All or Part of the Output of a Card in a Variable]:: You can use a Set Variable card to create a variable that stores or manipulates data from the output of a card. You can then reuse that data in a later card by using the variable.
+
+xref::fd-store-reuse-output.adoc[Store the Entire Output of a Card in a Variable]:: You can store the output of a card, rather than pass the output on to the next card in a flow. Normally, a card outputs data that is different from the data that it received as input. However, when you create a target variable, the card stores its output -- as is, reduced, or manipulated -- into that variable and passes to the next card both the variable and the same message that it received as input.

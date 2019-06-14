@@ -1,0 +1,104 @@
+= Tour of the Transform Card (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+The Transform card contains numerous features to make it easy for you to map data.
+
+== The static features of the Transform card
+
+The Transform card has four sections: *Configuration*, *Input*, *Output*, and *Notes*. The last three sections are common to all cards. While the *Notes* section can be very useful for explaining the work you have done in the Transform card or writing instructions to other people who might use your application as a template, you do not use the *Input* and *Output* sections in this card.
+
+.The features of the Transform card that always appear, no matter which pane in the *Configuration* section is open
+image::fd-tour-of-the-transform-card-static.png[]
+
+. The card's type and name. As with other cards, you can rename the card from the default name `DataWeave` to any name that suits your purposes.
+
+. This banner indicates whether Flow Designer has mapping suggestions for you. When it does, the banner looks like this:
++
+image::fd-automapper-banner-true.png[]
++
+See "xref::get-mapping-recommendations.adoc[Get a Recommendation for Mapping Data Types for a Transformation]" to learn when Flow Designer can make mapping suggestions for you.
+
+. The *Input* pane shows the output from the previous card. The Transform card displays the three parts of the output: the payload, attributes, and variables. If the payload is not a simple data type, you might need to specify the data type that it uses. You might need to do the same for attributes, variables, or both.
++
+Supported simple data types:: Boolean, Date, DateTime, Integer, Number, String
+
+Other supported data types:: CSV, JSON, Object, XML
++
+You can specify the data type by clicking the three dots to the right of `payload` or `vars` to open the *Data Type Actions* menu.
++
+.The menu for setting the data type for a payload, attributes, and variables in the *Input* pane
+image::fd-transform-payload-menu.png[]
++
+You can create the data type that you need or select it if you created it earlier. See "xref::about-data-types.adoc[Data Types]" to learn more.
+
+. Here you can switch between sections of the Transform card by clicking their names. (The name of the *Notes* section is not pictured.)
+
+. Here you can switch between the panes of the *Configuration* section. In the image, the *Mappings* pane is selected and open.
+
+. The *Preview* pane shows a preview of the output of the Transform card. Before a preview can appear, you must map the input of the Transform card to the output. When no preview is yet available, the pane looks like this:
++
+image::fd-empty-preview-pane.png[]
+
+== The *Mappings* pane
+
+This pane provides one method of mapping data. You can drag elements of the *Input* pane onto elements of the *Output* pane.
+
+.The *Mappings* pane in the *Configuration* section of the Transform card
+image::fd-tour-of-the-transform-card.png[]
+
+
+. The *Output* pane displays the elements that will be in the payload of the output of the Transform card and passed to the next card in the flow. Flow Designer usually populates this pane by detecting the data structure that is required by the next card in the flow.
++
+If any of the elements in the output require data that they cannot acquire by being mapped to an element of the input, you can specify that data with a string, a number, or a DataWeave expression. Double-click the element to open this small dialog for editing the element's value:
++
+.The dialog that is opened when you double-click an element of the output
+image::fd-output-expression-dialog.png[]
++
+By default, the value is `null`. You can specify the value you want by typing directly in the dialog.
++
+.Changing the value to a telephone number
+image::fd-output-expression-dialog-number.png[]
++
+After you click *OK*, both the `f(x)` symbol and a trash-can icon appear to the left of the element. The `f(x)` symbol indicates that the value is set manually to a string, number, or DataWeave expression. Clicking the trash-can icon removes the value, but it does not remove the element.
++
+image::fd-output-expression-dialog-fx.png[]
++
+If the Flow Designer is unable to detect the data structure that is required by the next card in the flow, the *Output* pane looks like this:
++
+.The *Output* pane when Flow Designer cannot detect the required data type for the card that comes after the Transform card
+image::fd-output-pane-empty.png[]
++
+You can create or specify the data type to use for the payload.
+
+. This area shows which elements of the input to the Transform card are mapped to which elements of the output. To map elements together, you can click an element of the input and drag it to an element of the output. An alternative is to create a DataWeave script that maps elements. You can do this in the *Script* pane.
+
+== The *Script* pane
+
+As you map on the *Mappings* pane, the Transform card generates the corresponding DataWeave script in this pane. If you know DataWeave scripts, you can customize the mapping. You could even skip using the *Mappings* pane and write your own DataWeave script instead. To learn about DataWeave, see "xref:4.2@mule-runtime::dataweave.adoc[DataWeave Language]".
+
+.The *Script* pane in the *Configuration* section of the Transform card
+image::fd-tour-of-the-transform-card-script.png[]
+
+
+== The *Sample Data* pane
+
+When the following three conditions are true, you can use this pane to provide an example usage of the data type that is used for the output of the previous card:
+
+* You want to see a preview of the output of the Transform card.
+* The data type used for the output of the previous card is not a simple type. The simple types are string, number, integer, boolean, date, and dateTime.
+* The data type used for the output of the previous card was defined with a schema, not an example.
+
+.The *Sample data* pane in the *Configuration* section of the Transfrom card
+image::fd-tour-of-the-transform-card-sample.png[]
+
+
+
+== See also
+
+* xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
+* xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]
+* xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]

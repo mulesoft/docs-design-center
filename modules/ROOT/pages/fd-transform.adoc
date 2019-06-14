@@ -1,0 +1,74 @@
+= Mapping Output Data to Input Data (Flow Designer)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+A card in a flow might require that the data that is sent to it use a custom data type. If the output of the previous card uses a different custom data type, you must map elements of the previous card's custom data type to elements in the custom data type that the next card requires.
+
+For example, suppose that a flow contains Card A and Card B, and that Card B follows Card A. If the output of Card A uses the same custom data type that Card B requires for its input, then you do not have to map the output of Card A to the input of Card B.
+
+.The custom data type output by Card A matches the custom data type that Card B requires, so Card B can immediately follow Card A in the flow
+image::fd-transform-parent-topic-match.png[]
+
+However, if the two custom data types do not match, you must use a Transform card to map elements in the custom data type output from Card A to elements in the custom data type required by Card B.
+
+.The custom data type output of Card A does not match the custom data type that Card B requires; therefore, you must use a Transform card to map elements of Card A's output to elements in the required input for Card B
+image::fd-transform-parent-topic-nomatch.png[]
+
+[NOTE]
+====
+If both of the cards were using simple data types, then either of these two scenarios are possible:
+
+* If Card A output data that used a simple data type, such as string, number, or date, and Card B required data to be in the same simple data type, no mapping would be required.
+
+* If Card A output data that used a simple data type and Card B required data to be in a different simple data type, Card B could not follow Card A. No mapping between the data types would be possible.
+
+If only one card used a simple data type and the other used a custom data type, then these two scenarios are possible:
+
+* If Card A output data that used a simple data type and Card B required data to use a custom data type, no mapping would be possible unless the custom data type for Card B had only one element that was of the same simple data type.
++
+For example, suppose that Card A output a string and Card B required input in this custom data type:
++
+.Example 1
+----
+{
+  "a": <string>
+}
+----
+In this case, you could map the string output from Card A to the element `a` in the custom data type required by Card B.
++
+However, suppose the custom data type for Card B were one of these two data types:
++
+.Example 2
+----
+{
+  "a": <number>
+}
+----
++
+.Example 3
+----
+{
+  "a": <string>,
+  "b": <number>
+}
+----
++
+The only element in the custom data type in example 2 uses the `number` data type. A `string` cannot be mapped to a `number`.
++
+In the custom data type in example 3, there are two elements. Because the `string` from Card A can map only to element `a`, element `b` would be left without a value. Because Card B requires this custom data type, all of the elements in it must contain data. So, you could not map the `string` from Card A to this custom data type.
+
+* If Card A output a custom data type and Card B required data to use a simple data type, it might be possible to map an element from the custom data type to the simple data type. The element would need to use the same simple data type.
++
+For example, suppose Card A output data that used the custom data type in example 3. If Card B required input data to be a `string`, you could map element `a` to the input for Card B. Mapping would also be possible if Card B required input data to be a `number`.
++
+However, if Card B required input data to be a `date` or some other simple data type, mapping in this case would not be possible.
+====
+
+xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]:: If you followed the steps in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]", then you have already performed such a mapping twice. Let's take another look at both mappings.
+
+xref:fd-tour-transform-card.adoc[Tour of the Transform Card]:: The Transform card contains numerous features to make it easy for you to map data.
+
+xref:get-mapping-recommendations.adoc[Get a Recommendation for Mapping Payloads for a Transformation]:: In the Transform card, you can view recommendations for how to map the data elements in an input data type to the data elements in an output type. If a recommendation suits your needs, you can save the mapping and use it in the card.

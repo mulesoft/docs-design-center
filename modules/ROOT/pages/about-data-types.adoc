@@ -1,30 +1,62 @@
-= About Data Types (Flow Designer)
+= Define and Use Data Types in a Flow (Flow Designer)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To build an integration application, you need to know what data is available at which step of the process and how to access the data.
+:imagesdir: ../assets/images
 
-* Is the data a string or an array item?
-* Is the data within the structure of an object?
-* Which parent elements do I need to reference to reach the data?
+Each card in a flow requires input data that is of a certain type, and each card outputs data that is of a certain type. As you build your flows, you should specify the data types that your cards require as inputs and produce as outputs. Doing so helps you plan the flows you create, because you know what data type is required by each card in the flow.
 
-In the early stage of development, you define data types to answer these questions. You include an example or schema of the expected data that the app uses. Some formats require a schema. Provide a schema for a CSV or Java format in a RAML file.
+A _data type_ explains to Flow Designer the formats and structures of the data that are in inputs and outputs. Flow Designer supports two categories of data type: simple and custom. See these topics for information about these categories:
 
-Defining data types helps you design the application in the following ways:
+* xref:fd-supported-simple-data-types.adoc[Simple Data Types that are Supported in Flow Designer]
+* xref:fd-custom-data-types.adoc[Custom Data Types in Flow Designer]
 
-* Provides auto-completion hints when writing expressions
-* Generates DataWeave code and a preview of transformation results when you map real or example input to output
-* Reveals metadata for troubleshooting problems
+== Procedure
 
-Some designs, such as those using Salesforce, require no data type definitions. Salesforce objects have a well-defined structure that Design Center can easily reference.
+Although there is more than one way to define and use a data type, MuleSoft recommends the method that is used in the tutorial "xref::salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]".
 
-When you run the app, the flow starts executing when triggered. Real data appears in lieu of example data in the input and output. You can inspect payload, attributes, and vars (variables) at various stages of the flow.
+. In the *Project* pane, click the plus sign to the right of the heading *Data Types*.
+. Define the data type in the *New Type* dialog.
++
+*Result:* The new data type is listed in the *Data Types* section of the *Project* pane.
+. Where you need to use the data type in your flow, follow these steps:
++
+* To use the data type for the input to a card, open the card, select the *Input* tab at the top of the card, and select the data type from the *Data type* drop-down list.
+* To use the data type for the output of a card, open the card, select the *Output* tab at the top of the card, and select the data type from the *Data type* drop-down list.
 
-== Using RAML to Define Data
-
-The HTTP Request Connector does not expose any information by default, but you can configure the connector using a RAML API specification, which includes information about required inputs and expected outputs.
 
 == See Also
 
-* xref:flow-datatype-task.adoc[To Set Data Types for a Flow]
+xref:fd-transform.adoc[Mapping Output Data to Input Data]
+
+
+
+////
+
+6/5/19: Hiding this section until Badi and Ryan decide what to do about the gray area on card faces.
+== Why you need to know the data types used in your flows
+
+When you build a flow, you must be aware of the data types that each card requires as input, and that each card produces as output. The data type of the output of a card might not match the data type of the input that the next card requires. To overcome the problem, you would need to map elements in the data types by using a Transform card.
+
+For example, Figure 1 depicts a simple flow in which each card receives as input data that is in exactly the same data type as the data that the previous card produces as output.
+
+.A simple flow
+image::fd-inputs-outputs-easy.png[]
+
+. A process outside of the application triggers the flow by sending data that is in a certain data type.
+. Card 1 receives that data and produces its output.
+. Card 2 happens to require data in the same data type, so it is able to receive Card 1's output as input. Card 2 produces an output that is in a different data type.
+. Fortunately, the next card in the flow can receive that output as its input.
+
+For this flow, you would need to be aware of the data type that is output by Card 1, the required data type for input to Card 2, the data type output by Card 2, and the required data type for the next card. Because each output of a card can be used _as is_ for the input of the next card, you do not have to transform any of the outputs into required inputs.
+
+Figure 2 depicts a flow that requires at least one transformation.
+
+.A slightly less simple flow
+image::fd-inputs-outpus-harder.png[]
+
+. As in Figure 1, a process outside of the application triggers the flow by sending data that is in a certain data type.
+. Again, Card 1 receives that data and produces its output.
+. However, Card 2 requires its input to use a different data type. Therefore, you must place a Transform card between Card 1 and Card 2. In the Transform card, you must map elements from Card 1's output data type to elements in Card 2's required input data type.
+////

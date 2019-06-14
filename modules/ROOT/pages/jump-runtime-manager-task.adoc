@@ -1,9 +1,9 @@
-= Manage a Mule App in Runtime Manager
+= View Runtime Information about Applications You are Creating
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When you run an app in Flow Designer, it appears in the list of running applications in Runtime Manager. You can jump to Runtime Manager from Flow Designer to manage the app there. In Runtime Manager, you can configure runtime operations of Mule apps that you are designing.
+When you run an app in Flow Designer, it appears in the list of running applications in Runtime Manager. You can jump to Runtime Manager from Flow Designer to view runtime information about the app, such as the version of Mule Runtime that it uses, the number of vCores that it uses, and more.
 
 . If the status message in the toolbar above the canvas is `Ready to Run`, click *Run*.
 . Click the three-dots icon to the left of the *Deploy* button.
@@ -13,4 +13,3 @@ When you run an app in Flow Designer, it appears in the list of running applicat
 == See Also
 
 * xref:runtime-manager::index.adoc[Runtime Manager]
-* xref:promote-app-prod-env-design-center.adoc[To Deploy an Application to a Production Environment]
