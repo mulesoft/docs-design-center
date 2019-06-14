@@ -2,5 +2,3 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
-* xref:input-output-structure-transformation-design-center-task.adoc[Transform Utility Reference]
