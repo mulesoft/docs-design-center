@@ -9,11 +9,15 @@ You can use API Designer's code editor to create API specifications directly in 
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
-. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Code editor* to use the code editor. You can also choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
+
+. Create an API-specification project that you can work in.
+ .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
+ .. In the *New Specification* section of the dialog that is opened, name your project and select the option *Code editor* to use the code editor.
+ .. Choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
+
 +
-_Result:_ The code editor opens. The editor is divided into three panels:
-+
+*Result:* The code editor opens. The editor is divided into three panels:
+
 * The left panel lists the files in your project. The stub specification file is listed. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
 +
 [TIP]
@@ -62,3 +66,12 @@ After you are satisfied with your specification, you can publish it to Anypoint 
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API-Specification Project as a Dependency]
 * xref:design-mocking-service.adoc[Simulate Calls to an API]
+
+////
+Text to add at line 17 when the GitHub integration is no longer "dark":
+ .. Choose whether to save your project in Design Center or in a repository in GitHub.
+ +
+ * If you save your project in Design Center, you or other people in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Code Editor].
+ +
+ * If you save your project in a repository in GitHub, you and other people in your organization who also have access to the repository can use GitHub's features to manage the project. The name given to the repository is the name that you specify for your project. See xref:apid-github-integration.adoc[Manage a Project in GitHub] for details.
+////

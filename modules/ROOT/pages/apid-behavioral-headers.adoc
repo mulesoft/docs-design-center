@@ -1,0 +1,113 @@
+= Add Behavioral Headers to Simulated API Calls
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can use the following behavioral headers to change the behavior of the mocking service. Use behavioral headers where you would normally specify other types of header in the API Console
+
+
+MS2-Delay:: Indicates how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
++
+You can specify a value for this header as an integer or as a range of integers. If you specify a range, the value must have the form `min-max`. For example, given the value `500-1000`, the request will take a random time between 500 and 1000 milliseconds.
++
+[NOTE]
+====
+It is possible for the delay to be longer than a single integer value or the high end of a range, depending on the latency of your network.
+====
+
+MS2-Error-Level:: Indicates which range of error status codes the mocking service is restricted to using. You can specify one of the following three case-sensitive values:
++
+* `REQUEST_ONLY`: The mocking service uses only 4XX codes.
+* `SERVER_ONLY`: The mocking service uses only 5XX codes.
+* `ALL`: The mocking service can use both 4XX and 5XX codes. This is the default value.
+
+MS2-Error-Rate:: Indicates the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
++
+This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
++
+[cols="1,2,2", options="header"]
+.How the mocking service determines which status code to respond with when you use MS2-Error-Rate
+|===
+|Other header used with MS2-Error-Rate
+|Mocking service (MS) responds with an error code
+|Mocking service does not respond with an error code
+
+|MS2-Status-Code
+|MS uses the error code specified in MS2-Status-Code.
+|MS uses the non-error status code specified in MS2-Status-Code.
+
+|MS2-Error-Level
+|MS uses the first error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
+|MS uses the first non-error status code that is defined for the method.
+
+|MS2-Error-Level and MS2-Status-Code
+|MS uses the first error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
+|MS uses the first non-error status code that is specified in MS2-Status-Code.
+
+|None
+|MS uses the first error status code that is defined for the method.
+|MS uses the first non-error status code that is defined for the method.
+|===
+
+MS2-Randomize:: When this header is set to `true`, the mocking service auto-generates a payload response if no example is defined for the response.
++
+For example, suppose that an API specification contained the definitions of this type:
++
+----
+types:
+  Person:
+    properties:
+      id: integer
+      name: string
+----
++
+If you did not provide an example, but you used the header MS2-Randomize, set to `true`, with the mocking service, the payload of the returned message would contain an example with random values that matched the data types, like this:
++
+----
+{
+  "id": 98358,
+  "name": "OVCKr"
+}
+----
++
+Moreover, the header supports more detailed definition of types. For example, you might change your type definition to look like this:
++
+----
+types:
+  Person:
+    properties:
+      id:
+        type: integer
+        minimum: 3
+        maximum: 30
+        multipleOf: 3
+      name: string
+----
++
+If MS2-Randomize were set to `true`, the payload in the response from the mocking service might look like this, with the value of `id` conforming to the constraints:
++
+----
+{
+  "id": 9,
+  "name": "rul68"
+}
+----
+
+MS2-Status-Code:: Specifies the status code or codes that the mocking service can choose from for the return message. This header behaves as a filter on the list of status codes that are defined for a method. For example, suppose a method has several non-error status codes defined; if you wanted the mocking service to respond with only one of those status codes, you would specify it with this header.
++
+[IMPORTANT]
+====
+If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
+====
+
+MS2-Strict-Model-Validations:: This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
++
+When you set this header to `false`, you can use the mocking service even when the API specification contains errors.
++
+When you set this header to `true`, the mocking service validates the specification before responding. If there is an error in the specification, the mocking service fails with that error. Otherwise, the mocking service works as usual.
+
+== See also
+
+* xref:design-mocking-service.adoc[Simulate Calls to an API]
