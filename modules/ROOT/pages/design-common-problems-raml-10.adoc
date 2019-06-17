@@ -176,6 +176,13 @@ types:
 
 === Not naming named examples
 
+////
+6/17/19
+In the Google Doc, I asked Lucas this question:
+If there no longer is a warning, can't I simply remove the section "Not naming named examples"?
+
+////
+
 When a named example does not have a name, the editor displays this warning message:
 
 ----
@@ -288,6 +295,40 @@ Name:
       b: 1
 ----
 
+=== Naming named examples twice
+
+If a named example is named twice, the editor displays this message, where `<name-of-property>` is the name of the property that the named example is an example of:
+
+----
+should have required property '<name-of-property>'
+----
+
+For example, suppose that a specification defines the property `firstName` and links to a NamedExample fragment by giving the named example the name `someName`:
+----
+#%RAML 1.0
+title: Example API Spec
+/tiers:
+ post:
+   body:
+     application/json:
+       properties:
+         firstName: string
+       examples:
+         someName: !include ex.raml
+----
+
+If the fragment also names the example that it contains
+////
+6/17/19
+In the Google Doc, I have a question to Lucas about this error:
+What about changing "someFragmentName" to "someName"? Or, alternatively, changing "someName" to "someFragmentName"? Will doing one of those resolve the error?
+In other words, is the error that the example is named twice or is the error that the names are different?
+////
+----
+#%RAML 1.0 NamedExample
+someFragmentName:
+  firstName: Martin Gutierrez
+----
 
 ////
 //=== Including more than one named example in a single NamedExample fragment
@@ -752,6 +793,8 @@ types:
 ----
 
 <<Back to the top>>
+
+
 
 [.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
 == Not providing a value for the `title` node
