@@ -50,7 +50,7 @@ Click the second tab to see the log file for a project. The file can be helpful 
 Here is an example of a Mule application that consists of a single flow.
 
 .The cards in the example flow from "Create Your First Mule Application with Flow Designer"
-image::FD-annotated-2.png[]
+image::fd-annotated-2.png[]
 
 In this example, the cards represent the following core components and connectors:
 
