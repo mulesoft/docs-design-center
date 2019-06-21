@@ -1,1 +1,106 @@
 = Guide to Using NamedExample Fragments
+
+To name one or more example, you must use the `examples` facet. You can name an example either in the `examples` fact or in the NamedExample fragment.
+
+== Naming a single example in the `examples` facet
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      givenName: string
+      familyName: string
+    examples:
+      fullName: !include fragment.raml
+----
+
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+givenName: ”Chiaki”
+familyName: "Mukai"
+----
+
+
+== Naming a single example in a NamedExample fragment
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      givenName: string
+      familyName: string
+    examples: !include fragment.raml
+----
+
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+fullName:
+  givenName: ”Chiaki”
+  familyName: "Mukai"
+----
+
+== Naming two examples in an `examples` facet
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      givenName: string
+      familyName: string
+    examples:
+      fullName: !include fragment1.raml
+      otherFullName: !include fragment2.raml
+----
+
+.fragment1.raml
+----
+#%RAML 1.0 NamedExample
+givenName: ”Chiaki”
+familyName: "Mukai"
+----
+
+.fragment2.raml
+----
+#%RAML 1.0 NamedExample
+givenName: "Kyung-won"
+familyName: "Park"
+----
+
+== Naming two examples in a NamedExample fragment
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      givenName: string
+      familyName: string
+    examples: !include fragment.raml
+----
+
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+fullName:
+  givenName: ”Chiaki”
+  familyName: "Mukai"
+
+otherFullName:
+  givenName: "Kyung-won"
+  familyName: "Park"
+----
+
+To use one example without naming it, you must use the `example` facet.
