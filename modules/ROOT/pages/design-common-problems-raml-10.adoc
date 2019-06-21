@@ -290,15 +290,15 @@ Name:
 ----
 ////
 
-=== Naming named examples twice
+=== Naming examples twice
 
-If a named example is named twice, the editor displays this message, where `<name-of-property>` is the name of the property that the named example is an example of:
+If an example is named twice, the editor displays this message, where `<name-of-property>` is the name of the property that the named example is an example of:
 
 ----
 should have required property '<name-of-property>'
 ----
 
-For example, suppose that a specification defines the property `firstName` and links to a NamedExample fragment by giving the named example the name `someName`:
+For example, suppose that a specification defines the property `firstName` and links to a NamedExample fragment by giving the example the name `someName`:
 ----
 #%RAML 1.0
 title: Example API Spec
