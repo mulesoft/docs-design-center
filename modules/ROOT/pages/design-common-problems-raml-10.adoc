@@ -109,7 +109,7 @@ types:
 == Problems with named examples
 // APIMF-907
 
-To avoid common problems with referencing a named example with an `!include` tag, follow these two rules:
+To avoid common problems with referencing a named example with an `!include` tag, follow these two guidelines:
 
 * In your API specification, use the `examples` facet and only one `!include` tag, as in this example:
 +
@@ -133,6 +133,7 @@ myExample:
     b: 1
 ----
 
+For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Named Examples].
 
 ////
 6/21/19: Removed these two errors at the request of Lucas Block. See https://docs.google.com/document/d/1p9Cyycb_Bz2Vv3HNSsmcFAtHohoNLGZbo67rZX6Tou4/edit#heading=h.i7g4n12fr6cm.
