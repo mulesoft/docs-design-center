@@ -116,7 +116,7 @@ otherFullName:
 
 == Naming an example in the definition of a trait
 
-As in other cases, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
+As in the previous sections, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
 
 In this case, the example is named in the `examples` facet.
 
@@ -152,7 +152,7 @@ fullName:
 
 == Naming an example in the definition of a resource type
 
-As in other cases, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
+As in the previous sections, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
 
 In this case, the example is named in the `examples` facet.
 
