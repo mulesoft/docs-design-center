@@ -1,6 +1,9 @@
-= Guide to NamedExample Fragments
+= Guide to Named Examples
 
-If you want to use more than one example for a type, resource type, or trait, you must name the examples. To name one or more example, you must use the `examples` facet. You can name an example either in the `examples` fact or in the NamedExample fragment.
+If you want to use more than one example for a type, resource type, or trait, you must name the examples. You can also name a single example. When you name examples, you must use the `examples` facet.
+
+To use one example without naming it, you must use the `example` facet.
+
 
 == Naming a single example in the `examples` facet
 
@@ -111,4 +114,106 @@ otherFullName:
   familyName: "Park"
 ----
 
-To use one example without naming it, you must use the `example` facet.
+== Naming an example in the definition of a trait
+
+As in other cases, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
+
+In this case, the example is named in the `examples` facet.
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+traits:
+  myTrait:
+    responses:
+      200:
+        description: desc
+        body:
+          application/json:
+            type:
+              properties:
+                givenName: string
+                familyName: string
+            examples: !include fragment.raml
+
+/end:
+  post:
+    is: myTrait
+----
+
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+fullName:
+  givenName: ”Chiaki”
+  familyName: "Mukai"
+----
+
+== Naming an example in the definition of a resource type
+
+As in other cases, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
+
+In this case, the example is named in the `examples` facet.
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+resourceTypes:
+  myResourceType:
+    get:
+      body:
+        application/json:
+          type:
+            properties:
+              givenName: string
+              familyName: string
+          examples: <<myParam>>
+
+/end:
+  type:
+    myResourceType:
+----
+
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+fullName:
+  givenName: ”Chiaki”
+  familyName: "Mukai"
+----
+
+== Using a single, unnamed example
+
+If you do not want to use more than one example and you do not want to name your single example, use the `example` facet instead of the `examples` facet.
+
+Here, the `example` facet includes `fragment1.raml`. Neither the facet nor the fragment names the example. Also, the fragment is not a NamedExample fragment.
+
+If you wanted the `example` facet to point to `fragment2.raml`, you would need to change the filename in the facet. You could not include both fragments at the same time.
+
+.api.raml
+----
+#%RAML 1.0
+title: test
+types:
+  A:
+    properties:
+      givenName: string
+      familyName: string
+   example: !include fragment1.raml
+----
+
+.fragment1.raml
+----
+#%RAML 1.0
+givenName: ”Chiaki”
+familyName: "Mukai"
+----
+
+.fragment2.raml
+----
+#%RAML 1.0
+givenName: "Kyung-won"
+familyName: "Park"
+----
