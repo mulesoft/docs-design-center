@@ -176,10 +176,6 @@ types:
 
 === Not naming named examples
 
-6/17/19
-In the Google Doc, I asked Lucas this question:
-If there no longer is a warning, can't I simply remove the section "Not naming named examples"?
-
 
 When a named example does not have a name, the editor displays this warning message:
 
