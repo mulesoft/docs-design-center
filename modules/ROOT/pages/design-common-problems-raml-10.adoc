@@ -133,10 +133,9 @@ myExample:
     b: 1
 ----
 
-If you do not follow these rules, you will see the messages that are explained in the next two sections.
 
 ////
-6/17/19: Removed this error at the request of Lucas Block. See https://docs.google.com/document/d/1p9Cyycb_Bz2Vv3HNSsmcFAtHohoNLGZbo67rZX6Tou4/edit#heading=h.i7g4n12fr6cm.
+6/21/19: Removed these two errors at the request of Lucas Block. See https://docs.google.com/document/d/1p9Cyycb_Bz2Vv3HNSsmcFAtHohoNLGZbo67rZX6Tou4/edit#heading=h.i7g4n12fr6cm.
 
 === Not using the "examples" facet when referencing to a named example
 
@@ -172,16 +171,14 @@ types:
      examples: !include fragment.raml
 ----
 
-////
+
 
 === Not naming named examples
 
-////
 6/17/19
 In the Google Doc, I asked Lucas this question:
 If there no longer is a warning, can't I simply remove the section "Not naming named examples"?
 
-////
 
 When a named example does not have a name, the editor displays this warning message:
 
@@ -294,6 +291,7 @@ Name:
       a: "b"
       b: 1
 ----
+////
 
 === Naming named examples twice
 
