@@ -7,7 +7,7 @@ To use one example without naming it, you must use the `example` facet.
 
 == Naming a single example in the `examples` facet
 
-The `examples` facet names the example `fullName`. The fragment is not declared as a NamedExample fragment because it does not provide a name.
+In the illustration in this section, the `examples` facet names the example `fullName`. The fragment is not declared as a NamedExample fragment because it does not provide a name.
 
 .api.raml
 ----
@@ -32,7 +32,7 @@ familyName: "Mukai"
 
 == Naming a single example in a NamedExample fragment
 
-The `examples` facet does not name the example. The NamedExample fragment names the example `fullName`.
+In the illustration in this section, the `examples` facet does not name the example. The NamedExample fragment names the example `fullName`.
 
 .api.raml
 ----
@@ -56,7 +56,7 @@ fullName:
 
 == Naming two examples in an `examples` facet
 
-The `examples` facet names the examples `fullName` and `otherFullName`. The fragments are not declared as NamedExample fragments because they do not provide names.
+In the illustration in this section, the `examples` facet names the examples `fullName` and `otherFullName`. The fragments are not declared as NamedExample fragments because they do not provide names.
 
 .api.raml
 ----
@@ -88,7 +88,7 @@ familyName: "Park"
 
 == Naming two examples in a NamedExample fragment
 
-The `examples` facet does not name the examples.  The NamedExample fragment names the examples `fullName` and `otherFullName`.
+In the illustration in this section, the `examples` facet does not name the examples.  The NamedExample fragment names the examples `fullName` and `otherFullName`.
 
 .api.raml
 ----
