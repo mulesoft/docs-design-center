@@ -118,7 +118,7 @@ otherFullName:
 
 When you name an example in a trait, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
 
-In this case, the example is named in the `examples` facet.
+In this case, the example is named in the NamedExample fragment.
 
 .api.raml
 ----
@@ -154,7 +154,7 @@ fullName:
 
 When you name an example in a resource type, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
 
-In this case, the example is named in the `examples` facet.
+In this case, the example is named in the NamedExample fragment.
 
 .api.raml
 ----
