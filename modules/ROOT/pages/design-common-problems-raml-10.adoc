@@ -292,7 +292,7 @@ Name:
 
 === Naming examples twice
 
-If an example is named twice, the editor displays this message, where `<name-of-property>` is the name of the property that the named example is an example of:
+If an example is named twice, the editor displays this message:
 
 ----
 should have required property '<name-of-property>'
