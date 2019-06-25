@@ -6,7 +6,7 @@ If you want to use one or more named examples for a type, trait, or resource typ
 
 * To use more than one named example, you must use the `examples` facet when you include the corresponding NamedExample fragments.
 
-Use the `example` facet only If you want to provide a single, unnamed example.
+Use the `example` facet only if you want to provide a single, unnamed example.
 
 
 == Naming a single example for a type by using an `examples` facet
