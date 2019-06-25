@@ -1,8 +1,12 @@
 = Guide to Named Examples in RAML 1.0
 
-If you want to use more than one example for a type, resource type, or trait, you must name the examples. You can also name a single example. When you name examples, you must use the `examples` facet.
+If you want to use one or more named examples for a type, resource type, or trait in your RAML 1.0 API specification, you must follow these two rules:
 
-To use one example without naming it, you must use the `example` facet.
+* To use a single, named example, you must use the `examples` facet when you include the corresponding NamedExample fragment.
+
+* To use more than one named example, you must use the `examples` facet when you include the corresponding NamedExample fragments.
+
+Use the `example` facet only If you want to provide a single, unnamed example.
 
 
 == Naming a single example in the `examples` facet
