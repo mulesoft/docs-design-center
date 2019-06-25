@@ -1,6 +1,6 @@
 = Guide to Named Examples in RAML 1.0
 
-If you want to use one or more named examples for a type, resource type, or trait in your RAML 1.0 API specification, you must follow these two rules:
+If you want to use one or more named examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these two rules:
 
 * To use a single, named example, you must use the `examples` facet when you include the corresponding NamedExample fragment.
 
@@ -9,7 +9,7 @@ If you want to use one or more named examples for a type, resource type, or trai
 Use the `example` facet only If you want to provide a single, unnamed example.
 
 
-== Naming a single example with an `examples` facet
+== Naming a single example for a type by using an `examples` facet
 
 In the following sample files, the `examples` facet names the example `fullName`. The fragment is not declared as a NamedExample fragment because it does not provide a name.
 
@@ -34,7 +34,7 @@ familyName: "Mukai"
 ----
 
 
-== Naming a single example in a NamedExample fragment
+== Naming a single example for a type by using a NamedExample fragment
 
 In the following sample files, the `examples` facet does not name the example. The NamedExample fragment names the example `fullName`.
 
@@ -58,7 +58,7 @@ fullName:
   familyName: "Mukai"
 ----
 
-== Naming two examples with an `examples` facet
+== Naming two examples for a type by using an `examples` facet
 
 In the following sample files, the `examples` facet names the examples `fullName` and `otherFullName`. The fragments are not declared as NamedExample fragments because they do not provide names.
 
@@ -90,7 +90,7 @@ givenName: "Kyung-won"
 familyName: "Park"
 ----
 
-== Naming two examples in a NamedExample fragment
+== Naming two examples for a type in a NamedExample fragment
 
 In the following sample files, the `examples` facet does not name the examples.  The NamedExample fragment names the examples `fullName` and `otherFullName`.
 
