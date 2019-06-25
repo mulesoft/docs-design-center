@@ -9,7 +9,7 @@ If you want to use one or more named examples for a type, resource type, or trai
 Use the `example` facet only If you want to provide a single, unnamed example.
 
 
-== Naming a single example in the `examples` facet
+== Naming a single example with an `examples` facet
 
 In the sample files in this section, the `examples` facet names the example `fullName`. The fragment is not declared as a NamedExample fragment because it does not provide a name.
 
@@ -58,7 +58,7 @@ fullName:
   familyName: "Mukai"
 ----
 
-== Naming two examples in an `examples` facet
+== Naming two examples with an `examples` facet
 
 In the sample files in this section, the `examples` facet names the examples `fullName` and `otherFullName`. The fragments are not declared as NamedExample fragments because they do not provide names.
 
