@@ -1,17 +1,19 @@
 = Guide to Named Examples in RAML 1.0
 
-If you want to use one or more named examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these two rules:
+If you want to use one or more named examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these three rules:
 
 * To use a single, named example, you must use the `examples` facet when you include the corresponding NamedExample fragment.
 
 * To use more than one named example, you must use the `examples` facet when you include the corresponding NamedExample fragments.
+
+* All example fragments must have the header "#%RAML 1.0 NamedExample"
 
 Use the `example` facet only if you want to provide a single, unnamed example.
 
 
 == Naming a single example for a type by using an `examples` facet
 
-In the following sample files, the `examples` facet names the example `fullName`. The fragment is not declared as a NamedExample fragment because it does not provide a name.
+In the following sample files, the `examples` facet names the example `fullName`.
 
 .api.raml
 ----
@@ -28,7 +30,7 @@ types:
 
 .fragment.raml
 ----
-#%RAML 1.0
+#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
@@ -60,7 +62,7 @@ fullName:
 
 == Naming two examples for a type by using an `examples` facet
 
-In the following sample files, the `examples` facet names the examples `fullName` and `otherFullName`. The fragments are not declared as NamedExample fragments because they do not provide names.
+In the following sample files, the `examples` facet names the examples `fullName` and `otherFullName`.
 
 .api.raml
 ----
@@ -78,14 +80,14 @@ types:
 
 .fragment1.raml
 ----
-#%RAML 1.0
+#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
 .fragment2.raml
 ----
-#%RAML 1.0
+#%RAML 1.0 NamedExample
 givenName: "Kyung-won"
 familyName: "Park"
 ----
@@ -178,6 +180,7 @@ resourceTypes:
 /end:
   type:
     myResourceType:
+      myParam: !include fragment.raml
 ----
 
 .fragment.raml
@@ -192,7 +195,7 @@ fullName:
 
 If you do not want to use more than one example and you do not want to name your single example, use the `example` facet instead of the `examples` facet.
 
-Here, the `example` facet includes `fragment1.raml`. Neither the facet nor the fragment names the example. Also, the fragment is not a NamedExample fragment.
+Here, the `example` facet includes `fragment1.raml`. Neither the facet nor the fragment names the example.
 
 If you wanted the `example` facet to point to `fragment2.raml`, you would need to change the filename in the facet. You could not include both fragments at the same time.
 
@@ -210,14 +213,14 @@ types:
 
 .fragment1.raml
 ----
-#%RAML 1.0
+#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
 .fragment2.raml
 ----
-#%RAML 1.0
+#%RAML 1.0 NamedExample
 givenName: "Kyung-won"
 familyName: "Park"
 ----
