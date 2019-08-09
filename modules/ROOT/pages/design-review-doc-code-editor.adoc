@@ -1,0 +1,15 @@
+= Review the Documentation of an API in the Code Editor
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+As you write an API specification, you document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor.
+
+
+image::apid-doc-start.png[]
+
+image::apid-doc-start-2.png[]
+
+image::apid-doc-start-3.png[]
