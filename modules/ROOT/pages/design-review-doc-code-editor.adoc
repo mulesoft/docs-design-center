@@ -13,3 +13,9 @@ image::apid-doc-start.png[]
 image::apid-doc-start-2.png[]
 
 image::apid-doc-start-3.png[]
+
+image::apid-doc-complex.png[]
+
+image::apid-doc-full-panel-get-overview.png[]
+
+image::apid-doc-type-full-panel.png[]
