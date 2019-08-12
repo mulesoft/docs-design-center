@@ -7,32 +7,54 @@ endif::[]
 
 As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor.
 
-.Where documentation for an API specification appears in API Designer's code editor
+== Tour of the Documentation Pane
+
+Let's have a look at the documentation for a complex RAML API specification. To view the documentation, you open the *Documentation* pane.
+
+.The *Documentation* pane in API Designer's code editor
 image::apic-summary-page.png[]
 
+
+
 . The *Documentation* tab: click this to view the documentation for your specification.
-. Summary page: the first time you click the *Documentation* tab, the summary of the API specification appears. It lists all of the API endpoints and their methods. Click the hyperlinks to go to the overview page for each endpoint. Click a colored box for a method to go to the page that documents the method.
-. Title and version: at the top of the summary page appear the title and version of the API specification.
-. Navigation icon: click this to display a pane that lets you navigate to the different overview pages of the documentation. The table of contents that appears contains three sections:
-* Summary: Click this to go to the summary page of the specification.
-* Endpoints: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the overview pages for the endpoint's methods.
-* Types: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its overview page.
+. The content of the current page: the first time you click the *Documentation* tab, the summary of the API specification appears, as in this image. This summary page lists all of the API endpoints and their methods. Click the hyperlinks to go to the overview page for each endpoint. Click a colored box for a method to go to the page that documents the method.
+. The entity overview: At the top of each page appears information about the entity (entire specification, endpoint, method, or type) that the page displays documentation for. In this image, the title and version of the API specification are displayed. In the dark gray box appears the base URI. The mocking service is on and the base URI for testing endpoints with the mocking service is displayed.
+. The navigation icon: click this to display a pane that lets you navigate to the different overview pages of the documentation. The table of contents that appears contains three sections:
+* *Summary*: Click this to go to the summary page of the specification.
+* *Endpoints*: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the overview pages for the endpoint's methods.
+* *Types*: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its overview page.
+
+[width="80%", frame="none", grid="none"]
+|===
+| |
+a| .The navigation pane, with the *Summary* link and expanded *Endpoints* section displayed
+image::apid-list-of-endpoints.png[]
+a| This image and the next one display the pane that appears when you click the navigation icon. At the top of the pane is a link to the summary page for the specification. After that is a list of the endpoints that the specification defines. When you expand the entry for an endpoint, the pane displays links to the overview page for the endpoint and to the overview pages for the methods in the endpoint.
+
+|
+|
+
+a| .The navigation pane, with the *Summary* link, collapsed *Endpoints* section, and expanded *Types* section displayed
+image::apid-list-of-types.png[]
+a| Scroll to the end of the *Endpoints* section or collapse it to see the *Types* section, which lists the types that the specification defines. Click a type to go directly to its overview page.
+
+|===
 
 
-image::apid-list-of-endpoints.png[float="left"]
-
-image::apid-list-of-types.png[float="left"]
-These two images display the lists of endpoints and types that are in a complex specification. When you click the navigation icon, these lists appear in a single pane. The image on the left shows what appears at the top of the pane for this specification, and the image on the right shows the start of the list of types, which you can see either by scrolling down the pane or by collapsing the *Endpoints* section.
-
-The list of endpoints appears first, and the list of types appears after that. Expand an endpoint to see links to its overview page and the overview pages for the endpoints methods. Click a type to go directly to its overview page.
-
-image::apid-doc-start.png[]
-
-image::apid-doc-start-2.png[]
-
-image::apid-doc-start-3.png[]
 
 
-image::apid-doc-full-panel-get-overview.png[]
 
-image::apid-doc-type-full-panel.png[]
+
+image::apid-doc-full-panel-get-overview.png[float="left"]
+
+
+
+image::apid-doc-type-full-panel.png[float="left"]
+
+
+
+// image::apid-doc-start.png[]
+
+// image::apid-doc-start-2.png[]
+
+// image::apid-doc-start-3.png[]
