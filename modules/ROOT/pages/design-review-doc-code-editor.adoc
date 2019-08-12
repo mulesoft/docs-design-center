@@ -54,8 +54,29 @@ image::apid-endpoint-overview.png[]
 
 == Documentation for Methods
 
-.Documentation of a GET method
-image::apid-doc-full-panel-get-overview.png[]
+[width="100%", frame="none", grid="none"]
+|===
+| |
+a| image::apid-doc-full-panel-get-top.png[]
+a| At the top of the documentation is the display name for the method, if the specification defines a display name for it. Next is the URI for accessing the endpoints. The URI is an extension of the base URI. The description of the method follows.
+
+In the top-right corner of the documentation is the *Try It* button, which you can click if you want to test the method by simulating a call to it.
+
+a| image::apid-doc-full-panel-get-codeex.png[]
+a| The *Code examples* section provides samples that you can use in applications for sending requests to the method. Each sample uses the URI that appears at the top of the page.
+
+a| image::apid-doc-full-panel-get-query-parms.png[]
+a| The *Query parameters* section lists the parameters that you can add to the end of the request URI. If a parameter is required to be in the request URI, the abel `Required` appears in its description.
+
+a| .The documentation of a GET method
+image::apid-doc-full-panel-get-response.png[]
+a| The *Response* section displays the different responses that the specification defines for the method. In this image, the response for the 200 response code is visible. Clicking the 400 and 500 response codes to the left of the 200 response code would show the responses for those two codes.
+
+For each response code, the body of the response is shown. The details include the media type, the name of the type being used for the response, an example of a response message, and descriptions of the elements that are allowed in the response.
+
+If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
+
+|===
 
 == Documentation for Types
 
