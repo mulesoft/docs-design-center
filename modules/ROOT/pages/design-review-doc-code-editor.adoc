@@ -13,15 +13,18 @@ image::apic-summary-page.png[]
 . The *Documentation* tab: click this to view the documentation for your specification.
 . Summary page: the first time you click the *Documentation* tab, the summary of the API specification appears. It lists all of the API endpoints and their methods. Click the hyperlinks to go to the overview page for each endpoint. Click a colored box for a method to go to the page that documents the method.
 . Title and version: at the top of the summary page appear the title and version of the API specification.
-. Navigation icon: click this to navigate to the different overview pages of the documentation. The table of contents that appears contains three sections:
+. Navigation icon: click this to display a pane that lets you navigate to the different overview pages of the documentation. The table of contents that appears contains three sections:
 * Summary: Click this to go to the summary page of the specification.
 * Endpoints: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the overview pages for the endpoint's methods.
 * Types: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its overview page.
 
 
-image::apid-list-of-endpoints.png[]
+image::apid-list-of-endpoints.png[float="left"]
 
-image::apid-list-of-types.png[]
+image::apid-list-of-types.png[float="left"]
+These two images display the lists of endpoints and types that are in a complex specification. When you click the navigation icon, these lists appear in a single pane. The image on the left shows what appears at the top of the pane for this specification, and the image on the right shows the start of the list of types, which you can see either by scrolling down the pane or by collapsing the *Endpoints* section.
+
+The list of endpoints appears first, and the list of types appears after that. Expand an endpoint to see links to its overview page and the overview pages for the endpoints methods. Click a type to go directly to its overview page.
 
 image::apid-doc-start.png[]
 
