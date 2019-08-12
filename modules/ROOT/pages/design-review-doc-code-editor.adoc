@@ -64,12 +64,15 @@ a| This image and the next one display the pane that appears when you click the 
 {empty} +
 {empty} +
 {empty} +
+{empty} +
+{empty} +
 
 |
 |
 
 a| image::apid-list-of-types.png[]
 | Scroll to the end of the *Endpoints* section or collapse it to see the *Types* section, which lists the types that the specification defines. Click a type to go directly to its documentation.
+{empty} +
 {empty} +
 {empty} +
 {empty} +
@@ -285,9 +288,45 @@ a| .The documentation of a type
 image::apid-doc-type-full-panel.png[]
 a| At the top of the documentation is the name of the type and its description, if the specification defines a description.
 
+{empty} +
+
 Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings.
 
+{empty} +
+
 After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
 |===
 
 
