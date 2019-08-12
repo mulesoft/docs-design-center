@@ -54,7 +54,7 @@ image::apid-endpoint-overview.png[]
 
 == Documentation for Methods
 
-[cols="<.<,<.<", width="100%", frame="none", grid="none"]
+[width="100%", valign="top", frame="none", grid="none"]
 |===
 | |
 a| image::apid-doc-full-panel-get-top.png[]
@@ -70,7 +70,7 @@ a| The *Query parameters* section lists the parameters that you can add to the e
 
 a| .The documentation of a GET method
 image::apid-doc-full-panel-get-response.png[]
-<.<| The *Response* section displays the different responses that the specification defines for the method. In this image, the response for the 200 response code is visible. Clicking the 400 and 500 response codes to the left of the 200 response code would show the responses for those two codes.
+| The *Response* section displays the different responses that the specification defines for the method. In this image, the response for the 200 response code is visible. Clicking the 400 and 500 response codes to the left of the 200 response code would show the responses for those two codes.
 
 For each response code, the body of the response is shown. The details include the media type, the name of the type being used for the response, an example of a response message, and descriptions of the elements that are allowed in the response. Elements that are required to be in the body are labelled `Required`.
 
