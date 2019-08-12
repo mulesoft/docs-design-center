@@ -5,8 +5,23 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-As you write an API specification, you document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor.
+As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor.
 
+.Where documentation for an API specification appears in API Designer's code editor
+image::apic-summary-page.png[]
+
+. The *Documentation* tab: click this to view the documentation for your specification.
+. Summary page: the first time you click the *Documentation* tab, the summary of the API specification appears. It lists all of the API endpoints and their methods. Click the hyperlinks to go to the overview page for each endpoint. Click a colored box for a method to go to the page that documents the method.
+. Title and version: at the top of the summary page appear the title and version of the API specification.
+. Navigation icon: click this to navigate to the different overview pages of the documentation. The table of contents that appears contains three sections:
+* Summary: Click this to go to the summary page of the specification.
+* Endpoints: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the overview pages for the endpoint's methods.
+* Types: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its overview page.
+
+
+image::apid-list-of-endpoints.png[]
+
+image::apid-list-of-types.png[]
 
 image::apid-doc-start.png[]
 
@@ -14,7 +29,6 @@ image::apid-doc-start-2.png[]
 
 image::apid-doc-start-3.png[]
 
-image::apid-doc-complex.png[]
 
 image::apid-doc-full-panel-get-overview.png[]
 
