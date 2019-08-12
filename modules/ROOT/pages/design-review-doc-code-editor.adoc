@@ -369,24 +369,7 @@ After the example, the elements of the type are listed and described. Any elemen
 {empty} +
 {empty} +
 {empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
+
 
 |===
 
