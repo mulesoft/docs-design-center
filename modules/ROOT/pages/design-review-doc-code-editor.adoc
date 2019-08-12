@@ -28,7 +28,7 @@ The table of contents that appears contains three sections:
 * *Endpoints*: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the documentation of the endpoint's methods.
 * *Types*: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
 
-[cols="<.<, <.<", width="80%", frame="none", grid="none"]
+[cols="<.<,<.<", width="80%", frame="none", grid="none"]
 |===
 | |
 a| .The table of contents, with the *Summary* link and expanded *Endpoints* section displayed
@@ -54,7 +54,7 @@ image::apid-endpoint-overview.png[]
 
 == Documentation for Methods
 
-[cols="<.<, <.<", width="100%", frame="none", grid="none"]
+[cols="<.<,<.<", width="100%", frame="none", grid="none"]
 |===
 | |
 a| image::apid-doc-full-panel-get-top.png[]
@@ -80,7 +80,7 @@ If the specification does not define an example response, and if the specificati
 
 == Documentation for Types
 
-[cols="<.<, <.<", width="100%", frame="none", grid="none"]
+[cols="<.<,<.<", width="100%", frame="none", grid="none"]
 |===
 | |
 a| .The documentation of a type
