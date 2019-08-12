@@ -42,7 +42,7 @@ This image and the next one display the pane that appears when you click the nav
 
 
 
-[cols="2*<.<", width="80%", frame="none", grid="none"]
+[valign=top, width="80%", frame="none", grid="none"]
 |===
 | |
 a| .The table of contents, with the *Summary* link and expanded *Endpoints* section displayed
