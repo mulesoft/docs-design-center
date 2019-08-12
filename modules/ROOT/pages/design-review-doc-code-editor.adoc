@@ -46,18 +46,20 @@ a| Scroll to the end of the *Endpoints* section or collapse it to see the *Types
 
 == Overviews for Endpoints
 
-Click the overview page for an endpoint to see its description and a list of its methods. For each method, the *Documentation* pane shows the display name and description. Click on the colored box for a method or its display name (if the method has one) to view the method's documentation.
+Click the overview page for an endpoint to see its description and a list of its methods. For each method, the *Documentation* pane shows the display name and description. Click the colored box for a method or its display name (if the method has one) to view the method's documentation.
+At the bottom of the page are links to the previous and next endpoints in the table of contents.
 
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
 
 == Documentation for Methods
 
-image::apid-doc-full-panel-get-overview.png[float="left"]
+.Documentation of a GET method
+image::apid-doc-full-panel-get-overview.png[]
 
 == Documentation for Types
 
-image::apid-doc-type-full-panel.png[float="left"]
+image::apid-doc-type-full-panel.png[]
 
 
 
