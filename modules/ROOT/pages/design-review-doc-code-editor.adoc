@@ -66,6 +66,18 @@ a| The *Code examples* section provides samples that you can use in applications
 
 a| image::apid-doc-full-panel-get-query-parms.png[]
 a| The *Query parameters* section lists the parameters that you can add to the end of the request URI. If a parameter is required to be in the request URI, the abel `Required` appears in its description.
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
 
 a| .The documentation of a GET method
 image::apid-doc-full-panel-get-response.png[]
