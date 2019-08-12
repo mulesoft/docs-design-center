@@ -72,7 +72,7 @@ a| .The documentation of a GET method
 image::apid-doc-full-panel-get-response.png[]
 a| The *Response* section displays the different responses that the specification defines for the method. In this image, the response for the 200 response code is visible. Clicking the 400 and 500 response codes to the left of the 200 response code would show the responses for those two codes.
 
-For each response code, the body of the response is shown. The details include the media type, the name of the type being used for the response, an example of a response message, and descriptions of the elements that are allowed in the response.
+For each response code, the body of the response is shown. The details include the media type, the name of the type being used for the response, an example of a response message, and descriptions of the elements that are allowed in the response. Elements that are required to be in the body are labelled `Required`.
 
 If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
@@ -80,7 +80,17 @@ If the specification does not define an example response, and if the specificati
 
 == Documentation for Types
 
+[width="100%", frame="none", grid="none"]
+|===
+| |
+a| .The documentation of a type
 image::apid-doc-type-full-panel.png[]
+a| At the top of the documentation is the name of the type and its description, if the specification defines a description.
+
+Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings.
+
+After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
+|===
 
 
 
