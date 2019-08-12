@@ -49,12 +49,42 @@ a| This image and the next one display the pane that appears when you click the 
 {empty} +
 {empty} +
 {empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
 
 |
 |
 
 a| image::apid-list-of-types.png[]
 | Scroll to the end of the *Endpoints* section or collapse it to see the *Types* section, which lists the types that the specification defines. Click a type to go directly to its documentation.
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
 {empty} +
 {empty} +
 {empty} +
