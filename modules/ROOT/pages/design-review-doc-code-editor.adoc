@@ -30,7 +30,6 @@ The table of contents that appears contains three sections:
 
 [cols="2*<.<", width="100%", frame="none", grid="none"]
 |===
-| |
 | This image and the next one display the pane that appears when you click the navigation icon. At the top of the pane is a link to the summary page for the specification. After that is a list of the endpoints that the specification defines. When you expand the entry for an endpoint, the pane displays links to the overview page for the endpoint and to the documentation of the methods in the endpoint.
 a| .The table of contents, with the *Summary* link and expanded *Endpoints* section displayed
 image::apid-list-of-endpoints.png[]
