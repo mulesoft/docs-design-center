@@ -27,7 +27,7 @@ include::partial$MS2-Status-Code.adoc[]
 
 == Generate Payload Responses for Status Codes That Don't Have Examples Defined
 
-MS2-Randomize
+include::partial$MS2-Randomize.adoc[]
 
 
 == Randomize the Probability of Receiving Particular Status Codes
