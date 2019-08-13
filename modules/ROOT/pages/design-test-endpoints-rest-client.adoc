@@ -17,17 +17,17 @@
 *Result:*
 
 
-== Test API Specifications Written Before API Designer Switched to a Stricter Parser
+== Test API Specifications That Contain Errors
 
-MS2-Strict-Model-Validations
+include::partial$MS2-Strict-Model-Validations.adoc[]
 
 == Test Particular Status Codes
 
-MS2-Status-Code
+include::partial$MS2-Status-Code.adoc[]
 
 == Generate Payload Responses for Status Codes That Don't Have Examples Defined
 
-MS2-Randomize
+include::partial$MS2-Randomize.adoc[]
 
 
 == Randomize the Probability of Receiving Particular Status Codes
