@@ -30,16 +30,6 @@ The table of contents that appears can contain several sections when you select 
 * *Types*: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
 * *Security*: Expand this section to see a list of the security schemes that are defined in the specification. Click a scheme to open its documentation.
 
-This image and the next one display the table of contents for a complex API specification that appears when the navigation icon is clicked. At the top of the pane is a link to the summary page for the specification. After that is a list of the endpoints that the specification defines. When you expand the entry for an endpoint, the table of contents displays links to the overview page for the endpoint and to the documentation of the methods in the endpoint.
-
-.Example table of contents that shows the *Summary* and *Endpoints* sections
-image::apid-list-of-endpoints.png[]
-
-Scrolling to the end of the *Endpoints* section of this table of contents, or collapse this section, displays the *Types* section, which lists the types that the specification defines. Clicking a type open its documentation.
-
-.Example table of contents that shows the *Summary*, *Endpoints*, and *Types* sections
-image::apid-list-of-types.png[]
-
 
 == Overviews for Endpoints
 
