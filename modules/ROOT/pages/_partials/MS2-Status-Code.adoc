@@ -4,3 +4,9 @@ For example, suppose a method has several status codes defined. If you wanted a 
 ====
 If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
 ====
+
+////
+Used in
+design-test-endpoints-code-editor.adoc
+design-test-endpoints-code-editor.adoc
+////

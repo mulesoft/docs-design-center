@@ -65,3 +65,9 @@ If MS2-Randomize were set to `true`, the payload in the response from the mockin
   "name": "rul68"
 }
 ----
+
+////
+Used in
+design-test-endpoints-code-editor.adoc
+design-test-endpoints-code-editor.adoc
+////
