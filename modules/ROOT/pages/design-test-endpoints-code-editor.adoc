@@ -7,6 +7,15 @@ While you are creating an API specification, you can test the endpoints that you
 . Turn on the mocking service.
 . Open the documentation for the method that you want to the method that you want to simulate calls to.
 . Click *Try It*.
+. Fill in values for required parameters, if there are any.
+. Select any options that you want to add to the simulation.
++
+* Add optional query parameters to test whether these are defined correctly.
+* Add optional headers (why? I mean headers other than the behavioral headers.)
+* For methods that send a request body, modify the body to trigger an error status code.
+. Click *Send*.
+
+*Result*:
 
 == Test API Specifications Written Before API Designer Switched to a Stricter Parser
 

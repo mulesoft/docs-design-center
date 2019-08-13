@@ -1,1 +1,45 @@
 = Test Endpoints with a REST Client
+
+
+== General Procedure
+. In the code editor in API Designer, follow these steps:
+.. Turn on the mocking service.
+.. Open the documentation for the method that you want to simulate a call to.
+.. Copy the URL that is at the top of the page.
+. In the REST client, follow these steps:
+.. Paste the URL into the client.
+.. Specify values for required parameters, if there are any.
+.. *Optional:* Add optional query parameters to test whether these are defined correctly.
+.. *Optional:* Add optional headers (why? I mean headers other than the behavioral headers.)
+.. *Optional:* For methods that send a request body, modify the body to trigger an error status code.
+.. Send the request.
+
+*Result:*
+
+
+== Test API Specifications Written Before API Designer Switched to a Stricter Parser
+
+MS2-Strict-Model-Validations
+
+== Test Particular Status Codes
+
+MS2-Status-Code
+
+== Generate Payload Responses for Status Codes That Don't Have Examples Defined
+
+MS2-Randomize
+
+
+== Randomize the Probability of Receiving Particular Status Codes
+
+MS2-Error-Rate
+
+
+== Restrict the Range of Error Status Codes That Can Be Returned
+
+MS2-Error-Level
+
+
+== Introduce Delays into Response Times
+
+MS2-Delay

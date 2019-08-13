@@ -24,10 +24,11 @@ image::apic-summary-page.png[]
 
 == The Table of Contents
 
-The table of contents that appears contains three sections:
+The table of contents that appears can contain several sections when you select the main file in a RAML API-specification project or the file in an OAS project:
 * *Summary*: Click this to go to the summary page of the specification.
 * *Endpoints*: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the documentation of the endpoint's methods.
 * *Types*: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
+* *Security*: Expand this section to see a list of the security schemes that are defined in the specification. Click a scheme to open its documentation.
 
 [width="100%", valign="top", frame="none", grid="none"]
 |===
@@ -108,6 +109,9 @@ After the example, the elements of the type are listed and described. Any elemen
 
 |===
 
+== Documentation of Security Schemes
+
+image::apid-apic-fragment-security-scheme.png[]
 
 
 // image::apid-doc-start.png[]
