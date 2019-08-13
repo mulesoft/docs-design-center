@@ -23,7 +23,7 @@ include::partial$MS2-Strict-Model-Validations.adoc[]
 
 == Test Particular Status Codes
 
-MS2-Status-Code
+include::partial$MS2-Status-Code.adoc[]
 
 == Generate Payload Responses for Status Codes That Don't Have Examples Defined
 

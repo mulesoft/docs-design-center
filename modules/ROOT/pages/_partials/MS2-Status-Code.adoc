@@ -1,0 +1,8 @@
+In the *Headers* section, add the header MS2-Status-Code if you want to specify a specific status code for the return message or multiple status codes, one of which will be randomly selected for the return message. This header behaves as a filter on the list of status codes that are defined for a method.
+
+For example, suppose a method has several status codes defined. If you wanted a return message for only one of those status codes, you would specify that status code with this header.
+
+[IMPORTANT]
+====
+If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
+====
