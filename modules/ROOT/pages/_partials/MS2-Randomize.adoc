@@ -1,0 +1,69 @@
+In the *Headers* section, add the header `MS2-Randomize` to generates a payload response if no example is defined for the response.
+
+These are the possible values:
+
+`false`:: Specifies not to generate examples.
+
+`true`:: Specifies to generate examples.
+
+=== Example 1
+
+For example, suppose that an API specification contained this type definition:
+
+----
+PaymentCard:
+  type: PaymentMethod
+  description: |
+    an abstract data type that is the super type for
+    payment card data types
+  properties:
+    cvv2:
+      type: string
+      pattern: /\d{3}/
+    accountHolderName:
+      type: string
+    expiration:
+      type: object
+      properties:
+        month:
+          type: integer
+          minimum: 1
+          maximum: 12
+        year:
+          type: integer
+          minimum: 2017
+----
+
+If you do not provide an example for `PaymentMethodType` and you do not specify examples for responses that use this type, setting MS2-Randomize to `true` generates an example payload that contains random values that matched the data types, like this:
+
+----
+{
+  "id": 98358,
+  "name": "OVCKr"
+}
+----
+
+=== Example 2
+
+Moreover, the header supports more detailed definition of types. For example, you might change your type definition to look like this:
+
+----
+types:
+  Person:
+    properties:
+      id:
+        type: integer
+        minimum: 3
+        maximum: 30
+        multipleOf: 3
+      name: string
+----
+
+If MS2-Randomize were set to `true`, the payload in the response from the mocking service might look like this, with the value of `id` conforming to the constraints:
+
+----
+{
+  "id": 9,
+  "name": "rul68"
+}
+----
