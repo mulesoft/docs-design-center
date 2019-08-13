@@ -1,5 +1,5 @@
 This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
-+
+
 When you set this header to `false`, you can use the mocking service even when the API specification contains errors.
-+
+
 When you set this header to `true`, the mocking service validates the specification before responding. If there is an error in the specification, the mocking service fails with that error. Otherwise, the mocking service works as usual.
