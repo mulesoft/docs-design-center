@@ -1,5 +1,7 @@
-This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
+In the *Headers* section, add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
 
-When you set this header to `false`, you can use the mocking service even when the API specification contains errors.
+These are the possible values:
 
-When you set this header to `true`, the mocking service validates the specification before responding. If there is an error in the specification, the mocking service fails with that error. Otherwise, the mocking service works as usual.
+`false`:: Lets you can simulate a call to a method even when the API specification contains errors.
+
+`true`:: The specification is validated before the call is simulated. If there is an error in the specification, the call fails.

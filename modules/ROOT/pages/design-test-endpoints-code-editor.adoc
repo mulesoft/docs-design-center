@@ -17,9 +17,7 @@ While you are creating an API specification, you can test the endpoints that you
 
 *Result*:
 
-== Test API Specifications Written Before API Designer Switched to a Stricter Parser
-
-MS2-Strict-Model-Validations
+== Test API Specifications That Contain Errors
 
 include::partial$MS2-Strict-Model-Validations.adoc[]
 
