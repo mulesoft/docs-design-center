@@ -33,81 +33,11 @@ The table of contents that appears contains three sections:
 |===
 | |
 a| image::apid-list-of-endpoints.png[]
-a| This image and the next one display the pane that appears when you click the navigation icon. At the top of the pane is a link to the summary page for the specification. After that is a list of the endpoints that the specification defines. When you expand the entry for an endpoint, the pane displays links to the overview page for the endpoint and to the documentation of the methods in the endpoint.
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
+a| This image and the next one display the table of contents for a complex API specification that appears when the navigation icon is clicked. At the top of the pane is a link to the summary page for the specification. After that is a list of the endpoints that the specification defines. When you expand the entry for an endpoint, the table of contents displays links to the overview page for the endpoint and to the documentation of the methods in the endpoint.
 
-|
-|
 
 a| image::apid-list-of-types.png[]
 | Scroll to the end of the *Endpoints* section or collapse it to see the *Types* section, which lists the types that the specification defines. Click a type to go directly to its documentation.
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
 
 |===
 
@@ -137,32 +67,10 @@ In the top-right corner of the documentation is the *Try It* button, which you c
 
 a| image::apid-doc-full-panel-get-codeex.png[]
 a| The *Code examples* section provides samples that you can use in applications for sending requests to the method. Each sample uses the URI that appears at the top of the page.
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
+
 
 a| image::apid-doc-full-panel-get-query-parms.png[]
 a| The *Query parameters* section lists the parameters that you can add to the end of the request URI. If a parameter is required to be in the request URI, the abel `Required` appears in its description.
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
 
 a| .The documentation of a GET method
 image::apid-doc-full-panel-get-response.png[]
@@ -176,106 +84,6 @@ For each response code, the body of the response is shown. The details include t
 
 If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
 
 |===
 
@@ -295,63 +103,6 @@ Next appears an example of the type. If the specification does not define an exa
 {empty} +
 
 After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
-
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
-{empty} +
 
 
 
