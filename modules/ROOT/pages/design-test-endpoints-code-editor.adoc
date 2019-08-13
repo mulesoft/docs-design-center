@@ -21,6 +21,8 @@ While you are creating an API specification, you can test the endpoints that you
 
 MS2-Strict-Model-Validations
 
+include::partial$MS2-Strict-Model-Validations.adoc[]
+
 == Test Particular Status Codes
 
 MS2-Status-Code
