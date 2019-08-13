@@ -1,0 +1,36 @@
+= Test Endpoints by Simulating Calls to Methods in the Code Editor
+
+While you are creating an API specification, you can test the endpoints that you define by using the code editor to simulate calls to them. You can test whether required query parameters are defined as required or optional, the bodies of responses are correct, and more.
+
+== General Procedure
+
+. Turn on the mocking service.
+. Open the documentation for the method that you want to the method that you want to simulate calls to.
+. Click *Try It*.
+
+== Test API Specifications Written Before API Designer Switched to a Stricter Parser
+
+MS2-Strict-Model-Validations
+
+== Test Particular Status Codes
+
+MS2-Status-Code
+
+== Generate Payload Responses for Status Codes That Don't Have Examples Defined
+
+MS2-Randomize
+
+
+== Randomize the Probability of Receiving Particular Status Codes
+
+MS2-Error-Rate
+
+
+== Restrict the Range of Error Status Codes That Can Be Returned
+
+MS2-Error-Level
+
+
+== Introduce Delays into Response Times
+
+MS2-Delay

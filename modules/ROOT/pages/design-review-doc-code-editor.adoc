@@ -49,7 +49,7 @@ At the bottom of the page are links to the previous and next endpoints in the ta
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
 
-== Documentation for Methods
+== Documentation of Methods
 
 [width="100%", valign="top", frame="none", grid="none"]
 |===
@@ -87,7 +87,7 @@ If the specification does not define an example response, and if the specificati
 
 |===
 
-== Documentation for Types
+== Documentation of Types
 
 [cols="<.<,<.<", width="100%", frame="none", grid="none"]
 |===
