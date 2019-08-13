@@ -1,5 +1,3 @@
-In the *Headers* section, add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
-
 These are the possible values:
 
 `false`:: Lets you can simulate a call to a method even when the API specification contains errors.

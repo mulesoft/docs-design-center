@@ -19,13 +19,19 @@ While you are creating an API specification, you can test the endpoints that you
 
 == Test API Specifications That Contain Errors
 
+In the *Headers* section, add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
+
 include::partial$MS2-Strict-Model-Validations.adoc[]
 
 == Test Particular Status Codes
 
+In the *Headers* section, add the header `MS2-Status-Code` to specify a specific status code for the return message or multiple status codes, one of which will be randomly selected for the return message. This header behaves as a filter on the list of status codes that are defined for a method.
+
 include::partial$MS2-Status-Code.adoc[]
 
 == Generate Payload Responses for Status Codes That Don't Have Examples Defined
+
+In the *Headers* section, add the header `MS2-Randomize` to generate a payload response if no example is defined for the response.
 
 include::partial$MS2-Randomize.adoc[]
 
