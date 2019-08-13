@@ -2,7 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:page-aliases: /general/getting-started/design-an-api.adoc
+:page-aliases: :general:getting-started:design-an-api.adoc
 
 In API Designer, you can use two different tools to create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS), and then publish those specifications to Anypoint Exchange.
 
