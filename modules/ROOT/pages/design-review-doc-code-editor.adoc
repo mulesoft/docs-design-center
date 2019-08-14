@@ -6,7 +6,7 @@ endif::[]
 :imagesdir: ../assets/images
 
 
-As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor.
+As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor to ensure that it is rendered correctly and says what you want it to say.
 
 == Tour of the Documentation Pane
 
