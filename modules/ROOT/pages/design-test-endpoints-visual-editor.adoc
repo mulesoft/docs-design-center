@@ -1,0 +1,1 @@
+= Test Endpoints by Simulating Calls to Methods in the Visual Editor
