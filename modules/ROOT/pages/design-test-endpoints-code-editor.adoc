@@ -17,6 +17,9 @@ While you are creating an API specification, you can test the endpoints that you
 
 *Result*:
 
+_Describe where the response appears._
+_Describe how to view the response._
+
 == Test API Specifications That Contain Errors
 
 In the *Headers* section, add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
