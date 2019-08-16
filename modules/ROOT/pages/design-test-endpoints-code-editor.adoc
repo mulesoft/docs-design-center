@@ -19,6 +19,15 @@ While you are creating an API specification, you can test the endpoints that you
 
 _Describe where the response appears._
 _Describe how to view the response._
+_Describe that the request URL in the response section includes the proxy info for the mocking service. It is not the same URL as the request._
+
+Example:
+Original request for a GET:
+https://anypoint.mulesoft.com/mocking/api/v1/links/bc88372b-f66e-47f6-a1fc-aba75de27fee/api/customers?firstName=Tim&lastName=Mit
+
+Reported request for the GET:
+https://anypoint.mulesoft.com/apiconsoleproxy/api/v1/proxy/https://anypoint.mulesoft.com/mocking/api/v1/links/bc88372b-f66e-47f6-a1fc-aba75de27fee/api/customers?firstName=Tim&lastName=Mit
+
 
 == Test API Specifications That Contain Errors
 
