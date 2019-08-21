@@ -15,17 +15,31 @@ If an API-specification project is older than January 10, 2019 and the mocking s
 
 . In the notification that appears in the top-right corner after you open the project, click *Upgrade*. The text of the notification reads “A new mocking service is available. Upgrading takes just seconds.”
 +
-*Result:* The mocking service is switched off and then on. The format of the base URI that the mocking service generates now differs from the format of the previous base URI.
+*Result:* The mocking service is switched off and then on. The form of the base URI that the mocking service generates now differs from the form of the previous base URI.
 +
-Version 1 of the mocking service used base URIs that began with `https://mocksvc.mulesoft.com`.
+Version 1 of the mocking service used base URIs of the form `+https://mocksvc.mulesoft.com/mocks/{link-ID}+`.
 +
-Version 2 uses base URIs that begin with `https://anypoint.mulesoft.com/mocking/api/v1/links/`.
+Version 2 uses base URIs of the form `+https://anypoint.mulesoft.com/mocking/api/v1/links/{link-ID}+`.
++
+For example, a link to a GET method for an endpoint named `/customers` in a particular specification might have looked like this with version 1 of the mocking service:
++
+`+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
++
+Version 2 of the mocking service changes the link to this, keeping the same link ID:
++
+`+https://anypoint.mulesoft.com/mocking/api/v1/links/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 
 . If any third-party tools are testing endpoints in the API specification for that project, replace the previous base URI with the new base URI in the links that those tools are using.
++
+For example, suppose that this URI is being used in a tool:
++
+`+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
++
+You would need to replace `+https://mocksvc.mulesoft.com/mocks/+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/+`.
 
 == New Features in Version 2 That You Can Use in API Designer
 
-Version 2 of the mocking service, which was released on January 10, 2019, introduced the following features that you can use in API Designer. 
+Version 2 of the mocking service, which was released on January 10, 2019, introduced the following features that you can use in API Designer.
 
 === Support for OAS 2.0
 
