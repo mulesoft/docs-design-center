@@ -63,7 +63,7 @@ Add headers to your simulated calls to methods, changing the behavior of the moc
 The mocking service uses fewer resources, and responds to requests in less time on average.
 
 
-=== Authenticated Access to API Specifications That are Shared on Exchange
+=== Authenticated Access to API Specifications That Are Shared on Exchange
 
 Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Exchange, whether they are simulating calls in Exchange or using third-party tools. The mocking service now uses a base URI in Exchange that differs from the one that you can test with in API Designer.
 
