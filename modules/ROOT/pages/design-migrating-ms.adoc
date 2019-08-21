@@ -29,7 +29,7 @@ Version 1 of the mocking service used base URIs of the form `+https://mocksvc.mu
 +
 Version 2 uses base URIs of the form `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`.
 +
-For example, a link to a GET method for an endpoint named `/customers` in a particular specification might have looked like this with version 1 of the mocking service:
+For example, the URI for a GET method for an endpoint named `/customers` in a particular specification might have looked like this with version 1 of the mocking service:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
