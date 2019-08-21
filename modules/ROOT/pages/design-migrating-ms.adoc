@@ -18,17 +18,17 @@ If the mocking service was switched on for an API-specification project before J
 +
 *Result:* The mocking service is switched off and then on. The form of the base URI that the mocking service generates now differs from the form of the previous base URI.
 +
-Version 1 of the mocking service used base URIs of the form `+https://mocksvc.mulesoft.com/mocks/{link-ID}+`.
+Version 1 of the mocking service used base URIs of the form `+https://mocksvc.mulesoft.com/mocks/{ID}+`.
 +
-Version 2 uses base URIs of the form `+https://anypoint.mulesoft.com/mocking/api/v1/links/{link-ID}+`.
+Version 2 uses base URIs of the form `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`.
 +
 For example, a link to a GET method for an endpoint named `/customers` in a particular specification might have looked like this with version 1 of the mocking service:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
-Version 2 of the mocking service changes the link to this, keeping the same link ID:
+Version 2 of the mocking service changes the link to this and uses a different ID:
 +
-`+https://anypoint.mulesoft.com/mocking/api/v1/links/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
+`+https://anypoint.mulesoft.com/mocking/api/v1/links/62a7d6af-ebc7-43fa-a815-e415e329f2ff/api/customers+`
 
 . If any third-party tools are testing endpoints in the API specification for that project, replace the previous base URI with the new base URI in the links that those tools are using.
 +
@@ -36,7 +36,9 @@ For example, suppose that this URI is being used in a tool:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
-You would need to replace `+https://mocksvc.mulesoft.com/mocks/+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/+`.
+You would need to replace `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`, where `new-ID` is the ID that version 2 of the mocking service generates.
++
+You can get the new base URI from version 2 of the mocking service after step 1 above.
 
 == New Features in Version 2 That You Can Use in API Designer
 
