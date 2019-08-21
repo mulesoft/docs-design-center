@@ -12,7 +12,7 @@ All Mule applications that you create with Flow Designer are created in the Desi
 As you deploy your application, you can change connector configurations and reconnection strategies. You need to do this if there are differences between the Design and target environments that would necessitate such changes.
 
 == Procedure
-. Select *Deploy Application* under the down arrow in the top-right corner of Flow Designer.
+. Select *Deploy Application* under the drop-down menu in the top-right corner of Flow Designer.
 +
 image::deploy-dialog.png[]
 
