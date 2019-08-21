@@ -56,7 +56,6 @@ If a person is in Exchange and trying to simulate a call to a method, that perso
 
 If a person is using a third-party tool to simulate a call, that person first needs to send a `POST` request that sends the username and password for that person’s Anypoint Platform account.
 
-.Example authentication request to the mocking service from a third-party tool
 ```
 $ curl -X POST \
   https://anypoint.mulesoft.com/accounts/login \
@@ -65,23 +64,20 @@ $ curl -X POST \
 ```
 The mocking service responds with an access token, like this:
 
-.Example authentication sent by the mocking service in response to the request
 ```
 {"access_token": "071e65a7-35c7-465a-8e33-ea68659099bf","token_type": "bearer","redirectUrl": "/home/"}
 ```
 
 In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Exchange.
 
-.Example asset shared on Exchange
 ```
 groupId: cb0e4f00-5026-4999-b5a5-dc2307b886c5
 assetId: api-example
 version: 1.0.0
 ```
 
-This asset contains this API specification:
+Assume that this asset contains this API specification:
 
-.Example API specification
 ```
 #%RAML 1.0
 title: API Example
@@ -99,7 +95,6 @@ version: v1
 
 A `GET` request would look like this:
 
-. Example `GET` request that uses an authentication token
 ```
 $ curl -X GET \
   \https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
@@ -108,7 +103,6 @@ $ curl -X GET \
 
 Assuming that the request uses the correct ID, URI, and authentication token, the mocking service would send this response:
 
-.Response from the mocking service
 ```
 {"status":"OK"}
 ```
