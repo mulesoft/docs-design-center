@@ -24,7 +24,7 @@ image::deploying-your-project-9cee7.png[]
 
 == What to do next
 
-You can go to Runtime Manager to manage the application. To get there from Flow Designer, click the three-dots icon to the right of the down arrow and select *View in Runtime Manager*.
+You can go to Runtime Manager to manage the application. To get there from Flow Designer, click the three-dots icon to the right of the drop-down menu and select *View in Runtime Manager*.
 
 // April 5, 2019: I'm rewriting this topic today and can't find in our docs any info about securing apps. So, I'll comment this out for now:
 // You can restrict access to the application in the target environment to specific users, if you do not want access available to the general public. To restrict access, your user ID must be an organization administrator in Anypoint Platform.
