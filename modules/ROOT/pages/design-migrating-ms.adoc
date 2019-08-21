@@ -19,7 +19,7 @@ For example, when you are designing an API specification in API Designer, you ca
 
 == How to Migrate an API-Specification Project to Version 2 of the Mocking Service
 
-If the mocking service was switched on for an API-specification project before January 10, 2019 and has been running continuously since then, follow these steps to migrate to version 2 of the mocking service:
+If the mocking service was switched on for an API-specification project before January 10, 2019 and has been running continuously since then, follow these steps to migrate the project to version 2 of the mocking service:
 
 . In the notification that appears in the top-right corner after you open the project, click *Upgrade*.
 +
