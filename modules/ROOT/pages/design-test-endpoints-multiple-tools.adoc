@@ -1,1 +1,36 @@
 = Test Endpoints with cURL, HTTP, or an Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+== Testing with cURL
+
+image::apid-test-with-curl.png[]
+
+== Testing with HTTP
+
+image::apid-testing-with-http.png[]
+
+== Testing with JavaScript
+
+image::apid-testing-with-javascript-fetch.png[]
+
+image::apid-testing-with-javascript-node.png[]
+
+image::apid-testing-with-javascript-xhr.png[]
+
+== Testing with Python
+
+image::apid-testing-with-python-requests.png[]
+
+image::apid-testing-with-python-2-7.png[]
+
+image::apid-testing-with-python-3-1.png[]
+
+== Testing with C
+
+
+
+== Testing with Java
