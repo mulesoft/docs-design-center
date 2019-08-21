@@ -25,7 +25,7 @@ Version 2 uses base URIs that begin with `https://anypoint.mulesoft.com/mocking/
 
 == New Features in Version 2 That You Can Use in API Designer
 
-Version 2 of the mocking service, which was released on January 10, 2019, introduced the following list of features that you can use in API Designer. For a full list of features, see the https://anypoint.mulesoft.com/exchange/org.mule.examples/mocking-service-2-api/version/v1/pages/Getting%20Started/[Getting Started page for the Mocking Service 2 API].
+Version 2 of the mocking service, which was released on January 10, 2019, introduced the following list of features that you can use in API Designer. For a full list of features, see the https://anypoint.mulesoft.com/exchange/org.mule.examples/mocking-service-2-api/version/v1/pages/Getting%20Started/[Getting Started page for the Mocking Service 2 API]. (The link requires that you authenticate to Anypoint Platform.)
 
 === Support for OAS 2.0
 
