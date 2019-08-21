@@ -97,7 +97,7 @@ A `GET` request would look like this:
 
 ```
 $ curl -X GET \
-  \https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
+  https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
   -H 'MS2-Authorization: Bearer 071e65a7-35c7-465a-8e33-ea68659099bf'
 ```
 
