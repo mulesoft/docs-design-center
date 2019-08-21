@@ -5,8 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can use the following behavioral headers to change the behavior of the mocking service. Use behavioral headers where you would normally specify other types of header in the API Console
-
+You can use the following headers to change the behavior of the mocking service.
 
 MS2-Delay:: Indicates how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
 +
