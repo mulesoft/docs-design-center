@@ -2,7 +2,7 @@
 
 The mocking service lets you test endpoints that are defined in an API specification. The advantage to using the mocking service is that you do not need to implement the API before testing. To test an endpoint, the mocking service simulates calls to its methods.
 
-For example, when you are designing an API specification you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
+For example, when you are designing an API specification in API Designer, you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
 
 [IMPORTANT]
 ====
@@ -102,7 +102,7 @@ A `GET` request would look like this:
 . Example `GET` request that uses an authentication token
 ```
 $ curl -X GET \
-  https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
+  \https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
   -H 'MS2-Authorization: Bearer 071e65a7-35c7-465a-8e33-ea68659099bf'
 ```
 
