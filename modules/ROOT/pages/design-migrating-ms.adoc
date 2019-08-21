@@ -60,7 +60,7 @@ Add headers to your simulated calls to methods, changing the behavior of the moc
 
 === Performance Improvements
 
-The mocking service uses fewer resources, but responds to requests in less time on average.
+The mocking service uses fewer resources, and responds to requests in less time on average.
 
 
 === Authenticated Access to API Specifications That are Shared on Exchange
