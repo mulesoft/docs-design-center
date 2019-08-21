@@ -31,6 +31,7 @@ Version 2 of the mocking service, which was released on January 10, 2019, introd
 
 You can now test endpoints that are in API specifications that are written in OAS 2.0.
 
+
 === Behavioral headers
 
 Add headers to your simulated calls to methods, changing the behavior of the mocking service in response to those calls The following new headers are available. See xref::apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls] for full details.
@@ -40,4 +41,74 @@ Add headers to your simulated calls to methods, changing the behavior of the moc
 * MS2-Error-Rate: Indicates the probability of getting an error status code as a response.
 * MS2-Randomize: When this header is set to true, the mocking service auto-generates a payload response if no example is defined for the response.
 * MS2-Status-Code: Specifies the status code or codes that the mocking service can choose from for the return message.
-* MS2-Strict-Model-Validations: When you set this header to false, you can use the mocking service even when the API specification contains errors.
+* MS2-Strict-Model-Validations: When you set this header to false, you can use the mocking service even when the API specification contains errors
+
+=== Performance improvements
+
+The mocking service uses fewer resources, but responds to requests in less time on average.
+
+
+=== Authenticated Access to API Specifications That are Shared on Exchange
+
+Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Exchange, whether they are simulating calls in Exchange or using third-party tools. The mocking service now uses a base URI in Exchange that differs from the one that you can test with in API Designer.
+
+If a person is in Exchange and trying to simulate a call to a method, that person is prompted in API Designer to supply OAuth 2.0 credentials before sending a request.
+
+If a person is using a third-party tool to simulate a call, that person first needs to send a `POST` request that sends the username and password for that person’s Anypoint Platform account.
+
+.Example authentication request to the mocking service from a third-party tool
+```
+$ curl -X POST \
+  https://anypoint.mulesoft.com/accounts/login \
+  -H 'Content-Type: application/json' \
+  -d '{"username": "someUserName","password": "best_passw0rd"}'
+```
+The mocking service responds with an access token, like this:
+
+.Example authentication sent by the mocking service in response to the request
+```
+{"access_token": "071e65a7-35c7-465a-8e33-ea68659099bf","token_type": "bearer","redirectUrl": "/home/"}
+```
+
+In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Exchange.
+
+.Example asset shared on Exchange
+```
+groupId: cb0e4f00-5026-4999-b5a5-dc2307b886c5
+assetId: api-example
+version: 1.0.0
+```
+
+This asset contains this API specification:
+
+.Example API specification
+```
+#%RAML 1.0
+title: API Example
+version: v1
+
+/ping:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              status: OK
+```
+
+A `GET` request would look like this:
+
+. Example `GET` request that uses an authentication token
+```
+$ curl -X GET \
+  https://anypoint.mulesoft.com/mocking/api/v1/sources/exchange/assets/cb0e4f00-5026-4999-b5a5-dc2307b886c5/api-example/1.0.0/m/ping \
+  -H 'MS2-Authorization: Bearer 071e65a7-35c7-465a-8e33-ea68659099bf'
+```
+
+Assuming that the request uses the correct ID, URI, and authentication token, the mocking service would send this response:
+
+.Response from the mocking service
+```
+{"status":"OK"}
+```
