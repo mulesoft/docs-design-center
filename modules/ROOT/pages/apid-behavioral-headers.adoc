@@ -1,4 +1,4 @@
-= Add Behavioral Headers to Simulated API Calls
+= Behavioral Headers for Simulated Calls to REST Methods
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

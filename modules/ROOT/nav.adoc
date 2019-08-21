@@ -20,7 +20,7 @@
   *** xref:design-test-endpoints-code-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Code Editor]
   *** xref:design-test-endpoints-rest-client.adoc[Test Endpoints with a REST Client]
   *** xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with cURL, HTTP, or an Application]
- ** xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]
+  *** xref:apid-behavioral-headers.adoc[Behavioral Headers for Simulated Calls to REST Methods]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
  ** xref:design-import-files.adoc[Import Files into an API Project]
  ** xref:upload-raml-task.adoc[Upload an Existing RAML File to Exchange from API Designer]
