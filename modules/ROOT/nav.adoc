@@ -11,6 +11,7 @@
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Code Editor]
  ** xref:design-branching.adoc[Fork an API Project]
+ ** xref:design-migrating-ms.adoc[Migrating to the Version 2 of the Mocking Service]
  ** xref:design-mocking-service.adoc[Simulate Calls to an API]
  ** xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]

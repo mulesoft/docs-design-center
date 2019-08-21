@@ -1,1 +1,43 @@
-= Migration
+= Migrate to the Version 2 of the Mocking Service
+
+The mocking service lets you test endpoints that are defined in an API specification. The advantage to using the mocking service is that you do not need to implement the API before testing. To test an endpoint, the mocking service simulates calls to its methods.
+
+For example, when you are designing an API specification you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
+
+[IMPORTANT]
+====
+After January 31, 2020, version 1 of the mocking service will no longer send responses to requests. If you are using a third-party tool to send requests, the mocking service will return the HTTP status code 302 and provide a link to this document.
+====
+
+== How to Migrate an API-Specification Project to Version 2 of the Mocking Service
+
+If an API-specification project is older than January 10, 2019 and the mocking service has been switched on since that date, follow these steps to migrate to version 2 of the mocking service:
+
+. In the notification that appears in the top-right corner after you open the project, click *Upgrade*. The text of the notification reads “A new mocking service is available. Upgrading takes just seconds.”
++
+*Result:* The mocking service is switched off and then on. The format of the base URI that the mocking service generates now differs from the format of the previous base URI.
++
+Version 1 of the mocking service used base URIs that began with `https://mocksvc.mulesoft.com`.
++
+Version 2 uses base URIs that begin with `https://anypoint.mulesoft.com/mocking/api/v1/links/`.
+
+. If any third-party tools are testing endpoints in the API specification for that project, replace the previous base URI with the new base URI in the links that those tools are using.
+
+== New Features in Version 2 That You Can Use in API Designer
+
+Version 2 of the mocking service, which was released on January 10, 2019, introduced the following list of features that you can use in API Designer. For a full list of features, see the xref::https://anypoint.mulesoft.com/exchange/org.mule.examples/mocking-service-2-api/version/v1/pages/Getting%20Started/[Getting Started page for the Mocking Service 2 API].
+
+=== Support for OAS 2.0
+
+You can now test endpoints that are in API specifications that are written in OAS 2.0.
+
+=== Behavioral headers
+
+Add headers to your simulated calls to methods, changing the behavior of the mocking service in response to those calls The following new headers are available. See xref::apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls] for full details.
+
+* MS2-Delay: Indicates how many milliseconds the request should take to answer.
+* MS2-Error-Level: Indicates which range of error status codes the mocking service is restricted to use.
+* MS2-Error-Rate: Indicates the probability of getting an error status code as a response.
+* MS2-Randomize: When this header is set to true, the mocking service auto-generates a payload response if no example is defined for the response.
+* MS2-Status-Code: Specifies the status code or codes that the mocking service can choose from for the return message.
+* MS2-Strict-Model-Validations: When you set this header to false, you can use the mocking service even when the API specification contains errors.
