@@ -33,7 +33,7 @@ For example, the URI for a GET method for an endpoint named `/customers` in a pa
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
-Version 2 of the mocking service changes the link to this and uses a different ID:
+Version 2 of the mocking service changes the URI to this and uses a different ID:
 +
 `+https://anypoint.mulesoft.com/mocking/api/v1/links/62a7d6af-ebc7-43fa-a815-e415e329f2ff/api/customers+`
 
