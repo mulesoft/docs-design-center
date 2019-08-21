@@ -11,7 +11,7 @@ After January 31, 2020, version 1 of the mocking service will no longer send res
 
 == How to Migrate an API-Specification Project to Version 2 of the Mocking Service
 
-If an API-specification project is older than January 10, 2019 and the mocking service has been switched on since that date, follow these steps to migrate to version 2 of the mocking service:
+If an API-specification project is older than January 10, 2019 and the mocking service was switched on before that date, follow these steps to migrate to version 2 of the mocking service:
 
 . In the notification that appears in the top-right corner after you open the project, click *Upgrade*. The text of the notification reads “A new mocking service is available. Upgrading takes just seconds.”
 +
