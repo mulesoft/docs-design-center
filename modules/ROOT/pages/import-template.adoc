@@ -36,7 +36,7 @@ For example, if a flow has a card for the Slack connector and posts a message to
 +
 For guidance while you are customizing, refer to the *Notes* section in each card.
 . When you are ready, click *Run* to run the application temporarily and test it. While an application is running, you can trigger its flows and verify that data moves through the flows correctly. After you click *Run*, the application continues to run for 60 hours unless you make changes to it. Whenever you make a change, the application stops running.
-. When you are satisfied with the application, click the *Deploy* button to run the application in a sandbox environment or in a production environment.
+. When you are satisfied with the application, select *Deploy Application* under the drop-down menu to run it in a sandbox environment or in a production environment.
 
 == See also
 
