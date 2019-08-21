@@ -52,9 +52,9 @@ The mocking service uses fewer resources, but responds to requests in less time 
 
 Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Exchange, whether they are simulating calls in Exchange or using third-party tools. The mocking service now uses a base URI in Exchange that differs from the one that you can test with in API Designer.
 
-If a person is in Exchange and trying to simulate a call to a method, that person is prompted by Exchange to supply OAuth 2.0 credentials before sending a request.
+If you are in Exchange and trying to simulate a call to a method, you are prompted by Exchange to supply OAuth 2.0 credentials before sending a request.
 
-If a person is using a third-party tool to simulate a call, that person first needs to send a `POST` request that sends the username and password for that person’s Anypoint Platform account.
+If you are using a third-party tool to simulate a call to an Exchange asset, you must use an authorization header in each request. To get the authentication token to include in the header, you must send a `POST` request to +https://anypoint.mulesoft.com/accounts/login+ that sends the username and password for your Anypoint Platform account, as in this example.
 
 ```
 $ curl -X POST \
@@ -62,7 +62,7 @@ $ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{"username": "someUserName","password": "best_passw0rd"}'
 ```
-The mocking service responds with an access token, like this:
+The mocking service responds with an authentication token, like this:
 
 ```
 {"access_token": "071e65a7-35c7-465a-8e33-ea68659099bf","token_type": "bearer","redirectUrl": "/home/"}
