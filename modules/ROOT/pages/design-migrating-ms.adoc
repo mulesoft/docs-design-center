@@ -6,8 +6,15 @@ For example, when you are designing an API specification in API Designer, you ca
 
 [IMPORTANT]
 ====
-On November 31, 2019, version 1 of the mocking service will be deprecated. Starting on that date, third-party tools will need to include a special header in requests that they send to the mocking service to test endpoints in API Designer.
-After January 31, 2020, version 1 of the mocking service will no longer send responses to requests. If you are using a third-party tool to send requests, the mocking service will return the HTTP status code 301 and provide a link to this document.
+On November 31, 2019, version 1 of the mocking service will be deprecated. Starting on that date, third-party tools will need to include this header in requests that they send to the mocking service to test endpoints in API Designer:
+
+`x-deprecation-acknowledgement`
+
+The header must have this value:
+
+`I understand that version 1 of the mocking service is deprecated and that I need to upgrade before February 1, 2020.`
+
+Starting February 1, 2020, version 1 of the mocking service will no longer send responses to requests. If you are using a third-party tool to send requests, the mocking service will return the HTTP status code 301 and provide a link to this document.
 ====
 
 == How to Migrate an API-Specification Project to Version 2 of the Mocking Service
