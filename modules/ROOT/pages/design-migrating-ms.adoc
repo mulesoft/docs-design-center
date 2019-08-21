@@ -52,7 +52,7 @@ The mocking service uses fewer resources, but responds to requests in less time 
 
 Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Exchange, whether they are simulating calls in Exchange or using third-party tools. The mocking service now uses a base URI in Exchange that differs from the one that you can test with in API Designer.
 
-If a person is in Exchange and trying to simulate a call to a method, that person is prompted in API Designer to supply OAuth 2.0 credentials before sending a request.
+If a person is in Exchange and trying to simulate a call to a method, that person is prompted by Exchange to supply OAuth 2.0 credentials before sending a request.
 
 If a person is using a third-party tool to simulate a call, that person first needs to send a `POST` request that sends the username and password for that person’s Anypoint Platform account.
 
