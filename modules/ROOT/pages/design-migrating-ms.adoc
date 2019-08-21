@@ -1,11 +1,5 @@
 = Migrate to Version 2 of the Mocking Service
 
-The mocking service lets you test endpoints that are defined in an API specification. The advantage to using the mocking service is that you do not need to implement the API before testing. To test an endpoint, the mocking service simulates calls to its methods.
-
-For example, when you are designing an API specification in API Designer, you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
-
-[IMPORTANT]
-====
 On November 31, 2019, version 1 of the mocking service will be deprecated. Starting on that date, third-party tools will need to include this header in requests that they send to the mocking service to test endpoints in API Designer:
 
 `x-deprecation-acknowledgement`
@@ -15,7 +9,13 @@ The header must have this value:
 `I understand that version 1 of the mocking service is deprecated and that I need to upgrade before February 1, 2020.`
 
 Starting February 1, 2020, version 1 of the mocking service will no longer send responses to requests. If you are using a third-party tool to send requests, the mocking service will return the HTTP status code 301 and provide a link to this document.
-====
+
+== What is the Mocking Service
+
+The mocking service lets you test endpoints that are defined in an API specification. The advantage to using the mocking service is that you do not need to implement the API before testing. To test an endpoint, the mocking service simulates calls to its methods.
+
+For example, when you are designing an API specification in API Designer, you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
+
 
 == How to Migrate an API-Specification Project to Version 2 of the Mocking Service
 
