@@ -47,7 +47,7 @@ Version 2 of the mocking service, which was released on January 10, 2019, introd
 You can now test endpoints that are in API specifications that are written in OAS 2.0.
 
 
-=== Behavioral headers
+=== Behavioral Headers
 
 Add headers to your simulated calls to methods, changing the behavior of the mocking service in response to those calls The following new headers are available. See xref::apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls] for full details.
 
@@ -58,7 +58,7 @@ Add headers to your simulated calls to methods, changing the behavior of the moc
 * MS2-Status-Code: Specifies the status code or codes that the mocking service can choose from for the return message.
 * MS2-Strict-Model-Validations: When you set this header to false, you can use the mocking service even when the API specification contains errors
 
-=== Performance improvements
+=== Performance Improvements
 
 The mocking service uses fewer resources, but responds to requests in less time on average.
 
