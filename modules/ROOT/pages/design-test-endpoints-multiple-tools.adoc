@@ -5,6 +5,8 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+All URIs are shareable and do not require authentication.
+
 == Testing with cURL
 
 image::apid-test-with-curl.png[]
@@ -15,9 +17,15 @@ image::apid-testing-with-http.png[]
 
 == Testing with JavaScript
 
+For use with the Fetch API. This link opens the documentation for the https://fetch.spec.whatwg.org[Fetch API].
+
 image::apid-testing-with-javascript-fetch.png[]
 
+For use with Node. This link opens the https://nodejs.org[Node] website.
+
 image::apid-testing-with-javascript-node.png[]
+
+For use with XHR. This link opens the documentation for https://www.npmjs.com/package/xhr[XHR].
 
 image::apid-testing-with-javascript-xhr.png[]
 
@@ -31,6 +39,11 @@ image::apid-testing-with-python-3-1.png[]
 
 == Testing with C
 
-
+image::apid-testing-with-c.png[]
 
 == Testing with Java
+
+
+image::apid-testing-with-java-platform.png[]
+
+image::apid-testing-with-java-spring.png[]
