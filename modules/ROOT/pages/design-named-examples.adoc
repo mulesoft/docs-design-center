@@ -244,5 +244,5 @@ givenName: "Kyung-won"
 familyName: "Park"
 ----
 
-API Designer simply ignores the header and uses the examples. However, if you planned to validate your specification with other RAML processors, these two fragments would generate errors or warnings.
+API Designer simply ignores the header and uses the examples. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accord with the RAML 1.0 specification.
 ====
