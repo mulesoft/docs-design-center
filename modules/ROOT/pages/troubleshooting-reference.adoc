@@ -8,7 +8,7 @@ Error messages can appear in two places in Flow Designer:
 * The bottom-right corner of your screen displays error messages in red boxes.
 +
 When you see an error message in this location and you are unable to resolve the error, open a support case for Flow Designer and paste the content of the message into the support case.
-* The top-right corner of your screen displays them next to the *Test* button and the drop-down menu.
+* The top-right corner of your screen displays them between the *Run* and *Deploy* buttons.
 +
 The table below lists all of the error messages that can appear in this location, as well as the actions that you can take to resolve the errors.
 +
