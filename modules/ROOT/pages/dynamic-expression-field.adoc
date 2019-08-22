@@ -19,7 +19,9 @@ In regular fields, Design Center gives you the option of specifying a dynamic va
 
 image::logger-with-list.png[]
 
-The list also includes every variable that has been added to the flow from preceding cards. All that you have to do is to drag and drop into a text field any payload items, attributes, and variables that you want to include. The field concatenates them together with any strings that you include.
+The list also includes every variable that has been added to the flow from preceding cards.
+All that you have to do is to drag and drop into a text field any payload items, attributes, and variables that you want to include. You can add multiple lines of text and expressions in the message field.
+The field concatenates them together with any strings that you include.
 
 == Before you begin
 
