@@ -1,4 +1,9 @@
 = Test Endpoints by Simulating Calls to Methods in the Code Editor
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 While you are creating an API specification, you can test the endpoints that you define by using the code editor to simulate calls to them. You can test whether required query parameters are defined as required or optional, the bodies of responses are correct, and more.
 
@@ -50,7 +55,9 @@ include::partial$MS2-Randomize.adoc[]
 
 == Randomize the Probability of Receiving Particular Status Codes
 
-In the *Headers* section, add the header `MS2-Error-Rate` to specify include::partial$MS2-Randomize.adoc[]
+In the *Headers* section, add the header `MS2-Error-Rate` to specify the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
+
+include::partial$MS2-Error-Rate.adoc[]
 
 
 
