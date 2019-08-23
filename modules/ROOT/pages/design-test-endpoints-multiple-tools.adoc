@@ -1,49 +1,37 @@
-= Test Endpoints with cURL, HTTP, or an Application
+= Test Endpoints with `curl`, `http`, or an Application
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-All URIs are shareable and do not require authentication.
+You can copy and paste sample commands into `curl` and sample code into applications written in JavaScript, Python, C, or Java to test the endpoints in an API specification that you are designing.
+
+Before copying a sample, turn on the mocking service, so that the sample includes the URI that the mocking service generates.
+
+The URIs that are provided in the samples do not require authentication. However, requests that include URIs that the mocking service provides for API specifications that are shared in Exchange require authentication.
+
+`curl` Command:: You can copy and paste the command directly into a CLI on a system in which `curl` is installed.
+
+HTTP Request:: You can construct an HTTP request by using the information provided in the *HTTP* section.
+
+JavaScript samples:: There is a sample for use with the Fetch API, a sample for use with Node.js, and a sample for use with XHR.
+
+Python samples:: There is a sample for use with Requests, an HTTP library; a sample for Python 2.7; and a sample for Python 3.1.
+
+C Sample:: There is a sample that you can use in C applications.
+
+Java samples:: There is a sample for use with a JDK and a sample for use with Spring.
+
+== Copying Samples
+
+. In an API-specification project, click the *Documentation* tab at the bottom of the right-hand pane in the code editor.
+. Click the navigation icon to open the table of contents for the specification.
+. Under *Endpoints*, locate the method that you want to call.
+. Expand the *Code examples* section.
+. Click the header for the type of sample that you want to copy.
+. Click *COPY* in the top-right corner of the gray text field that presents the sample.
 
 == Testing with cURL
 
 image::apid-test-with-curl.png[]
-
-== Testing with HTTP
-
-image::apid-testing-with-http.png[]
-
-== Testing with JavaScript
-
-For use with the Fetch API. This link opens the documentation for the https://fetch.spec.whatwg.org[Fetch API].
-
-image::apid-testing-with-javascript-fetch.png[]
-
-For use with Node. This link opens the https://nodejs.org[Node] website.
-
-image::apid-testing-with-javascript-node.png[]
-
-For use with XHR. This link opens the documentation for https://www.npmjs.com/package/xhr[XHR].
-
-image::apid-testing-with-javascript-xhr.png[]
-
-== Testing with Python
-
-image::apid-testing-with-python-requests.png[]
-
-image::apid-testing-with-python-2-7.png[]
-
-image::apid-testing-with-python-3-1.png[]
-
-== Testing with C
-
-image::apid-testing-with-c.png[]
-
-== Testing with Java
-
-
-image::apid-testing-with-java-platform.png[]
-
-image::apid-testing-with-java-spring.png[]
