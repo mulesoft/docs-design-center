@@ -1,7 +1,5 @@
-the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
-+
 This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
-+
+
 [cols="1,2,2", options="header"]
 .How the mocking service determines which status code to respond with when you use MS2-Error-Rate
 |===
