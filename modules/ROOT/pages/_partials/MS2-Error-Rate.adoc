@@ -1,0 +1,27 @@
+the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
++
+This header works together with MS2-Status-Code, MS2-Error-Level, or both at the same time.
++
+[cols="1,2,2", options="header"]
+.How the mocking service determines which status code to respond with when you use MS2-Error-Rate
+|===
+|Other header used with MS2-Error-Rate
+|Mocking service (MS) responds with an error code
+|Mocking service does not respond with an error code
+
+|MS2-Status-Code
+|MS uses the error code specified in MS2-Status-Code.
+|MS uses the non-error status code specified in MS2-Status-Code.
+
+|MS2-Error-Level
+|MS uses the first error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
+|MS uses the first non-error status code that is defined for the method.
+
+|MS2-Error-Level and MS2-Status-Code
+|MS uses the first error status code that is defined for the method and that falls in the range specified for MS2-Error-Level.
+|MS uses the first non-error status code that is specified in MS2-Status-Code.
+
+|None
+|MS uses the first error status code that is defined for the method.
+|MS uses the first non-error status code that is defined for the method.
+|===

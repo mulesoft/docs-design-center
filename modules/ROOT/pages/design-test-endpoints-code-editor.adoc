@@ -50,7 +50,8 @@ include::partial$MS2-Randomize.adoc[]
 
 == Randomize the Probability of Receiving Particular Status Codes
 
-MS2-Error-Rate
+In the *Headers* section, add the header `MS2-Error-Rate` to specify include::partial$MS2-Randomize.adoc[]
+
 
 
 == Restrict the Range of Error Status Codes That Can Be Returned
