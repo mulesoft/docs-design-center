@@ -63,24 +63,24 @@ The *Code examples* section provides samples that you can use in applications fo
 .The *Code examples* section for a method
 image::apid-doc-get-overview-code-examples.png[]
 
-The *Query parameters* section lists the parameters that you can add to the end of the request URI. If a parameter is required to be in the request URI, the abel `Required` appears in its description.
+The *Query parameters* section lists the parameters that you can add to the end of the request URI. All of the text, except for the descriptions `offset is the beginning line number` and `maximum number of items to return`, is auto-generated. If a parameter is defined as required, the auto-generated label `Required` appears next to its data type.
 
 .The *Query parameters* section for a method
 image::apid-doc-get-overview-query-parms.png[]
 
-The *Response* section displays the different responses that the specification defines for the method. In this image, the response for the 200 response code is visible. Clicking the 400 and 500 response codes to the left of the 200 response code would show the responses for those two codes.
-
-For each response code, the body of the response is shown. The details include the media type, the name of the type being used for the response, an example of a response message, and descriptions of the elements that are allowed in the response. Elements that are required to be in the body are labelled `Required`.
+The *Response* section displays the different responses that the specification defines for the method. For each response code, the body of the response is shown in a separate section. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
 
 If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
-.The top of the *Response* section, showing the three status codes that are defined for a method and the message to be included in responses for the `200` status code
+.The top of the *Response* section, showing a section for each of the three status codes that are defined for a method. Also shown is the message that the specification defines as part of the response for the `200` status code.
 image::apid-doc-get-overview-response-top.png[]
 
-.The *Body* subsection of the *Response* section, showing the media type, the type defined for the response, the description of the type, and the example defined for the type
+.The *Body* subsection of the *Response* section, showing the media type, the type defined for the response, the description of the type, and the example defined for the type.
 image::apid-doc-get-overview-response-body.png[]
 
-.Documentation for some of the types that are in the body, showing two optional types, a required type, and examples defined for the required type 
+
+
+.Documentation for some of the types that are in the body, showing a type with three types nested under it, a required type, and examples defined for the required type.
 image::apid-doc-get-overview-response-body-types.png[]
 
 
