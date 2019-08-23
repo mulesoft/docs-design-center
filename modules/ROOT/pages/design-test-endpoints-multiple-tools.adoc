@@ -40,7 +40,7 @@ To copy a sample command or code for sending a request to an endpoint, follow th
 . Add required query parameters, optional ones, and any optional headers that you want to add to requests.
 
 == Example Using `curl`
-
+// 8/23/19: In a meeting that I had with him yesterday, Kieran said to include a simple example in curl. People who copy the code samples are likely to know already how to use them.
 Suppose that your API specification includes an endpoint that allows requests information about a customer. You want to test the endpoint with a `curl` command. You copy the command, as described in the steps above. The command, which send a GET request, looks like this, where `/customers` is the name of the endpoint:
 
 ```
