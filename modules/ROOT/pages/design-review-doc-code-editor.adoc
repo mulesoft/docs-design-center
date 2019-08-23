@@ -6,6 +6,7 @@ endif::[]
 :imagesdir: ../assets/images
 
 // 8/23/19: I very much need to see what an OAS spec looks like in APIC. The OAS specs that Kieran pointed me to on Google Drive are all 3.0.0, and APID does not support that version. In Slack on #api-designer-end, I asked for OAS specs that APID supports: https://mulesoft.slack.com/archives/G1UVDDN8P/p1566585045000100?thread_ts=1565714204.001400&cid=G1UVDDN8P
+// I realized again today that I need OAS specs again because I was trying to describe how (at least, in RAML) types that are defined in fragments that are included in a spec with the `uses` facet are displayed in the TOC for the full spec, as well as in the TOCs for the fragments. But I realized I was describing only the behavior for RAML, not for OAS.
 
 As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor to ensure that it is rendered correctly and says what you want it to say.
 
@@ -91,7 +92,7 @@ image::apid-doc-get-overview-response-body-types.png[]
 
 Each type that is defined in a specification or in an external library that is imported by the `uses` facet (RAML) has its own page. At the top of the page is the name of the type and its description, if the specification defines a description.
 
-Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings.
+Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings. You can copy examples to use them in applications that will call the API.
 
 After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
 

@@ -1,10 +1,11 @@
 = Test Endpoints with a REST Client
 
+API Designer includes the *Try It* feature for testing endpoints in specifications that you are creating. However, you can use a separate REST client to test endpoints if you prefer to use your own test process.
 
 == General Procedure
 . In the code editor or the visual editor in API Designer, follow these steps:
 .. Turn on the mocking service.
-.. Open the documentation for the method that you want to simulate a call to.
+.. Open the documentation of the method that you want to simulate a call to.
 .. Copy the URL that is at the top of the page.
 . In the REST client, follow these steps:
 .. Paste the URL into the client.
@@ -13,8 +14,6 @@
 .. *Optional:* Add optional headers (why? I mean headers other than the behavioral headers.)
 .. *Optional:* For methods that send a request body, modify the body to trigger an error status code.
 .. Send the request.
-
-*Result:*
 
 
 == Test API Specifications That Contain Errors
