@@ -36,32 +36,33 @@ https://anypoint.mulesoft.com/apiconsoleproxy/api/v1/proxy/https://anypoint.mule
 
 == Test API Specifications That Contain Errors
 
-In the *Headers* section, add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
+In the *Headers* section, you can add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
 
 include::partial$MS2-Strict-Model-Validations.adoc[]
 
 == Test Particular Status Codes
 
-In the *Headers* section, add the header `MS2-Status-Code` to specify a specific status code for the return message or multiple status codes, one of which will be randomly selected for the return message. This header behaves as a filter on the list of status codes that are defined for a method.
+In the *Headers* section, you can add the header `MS2-Status-Code` to specify a specific status code for the return message or multiple status codes, one of which will be randomly selected for the return message. This header behaves as a filter on the list of status codes that are defined for a method.
 
 include::partial$MS2-Status-Code.adoc[]
 
 == Generate Payload Responses for Status Codes That Don't Have Examples Defined
 
-In the *Headers* section, add the header `MS2-Randomize` to generate a payload response if no example is defined for the response.
+In the *Headers* section, you can add the header `MS2-Randomize` to generate a payload response if no example is defined for the response.
 
 include::partial$MS2-Randomize.adoc[]
 
 
 == Randomize the Probability of Receiving Particular Status Codes
 
-In the *Headers* section, add the header `MS2-Error-Rate` to specify the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
+In the *Headers* section, you can add the header `MS2-Error-Rate` to specify the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
 
 include::partial$MS2-Error-Rate.adoc[]
 
 
-
 == Restrict the Range of Error Status Codes That Can Be Returned
+
+In the *Headers* section, you can add the header `MS2-Error-Level` to indicate the range of error status codes the mocking service is restricted to using.
 
 MS2-Error-Level
 
