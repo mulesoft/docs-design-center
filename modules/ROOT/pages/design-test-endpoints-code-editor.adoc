@@ -64,7 +64,7 @@ include::partial$MS2-Error-Rate.adoc[]
 
 In the *Headers* section, you can add the header `MS2-Error-Level` to indicate the range of error status codes the mocking service is restricted to using.
 
-MS2-Error-Level
+include::partial$MS2-Error-Level.adoc[]
 
 
 == Introduce Delays into Response Times
