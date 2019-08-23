@@ -8,6 +8,8 @@ endif::[]
 
 As you write an API specification, you can document its endpoints and types, so that, after you publish the specification, other developers can learn about them. As you add your documentation, you can review it in the right panel of the code editor to ensure that it is rendered correctly and says what you want it to say.
 
+In `description` facets, you can write content either in plain text or in GitHub Markdown.
+
 == Tour of the Documentation Pane
 
 Let's have a look at the documentation for a complex RAML API specification. To view the documentation, you open the *Documentation* pane.
