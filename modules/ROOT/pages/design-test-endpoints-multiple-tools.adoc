@@ -5,19 +5,21 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can copy and paste sample commands into `curl` and sample code into applications written in JavaScript, Python, C, or Java to test the endpoints in an API specification that you are designing.
+You can copy and paste sample commands into `curl` and sample code into applications written in JavaScript, Python, C, or Java to send requests to the endpoints in an API specification that you are designing.
 
 Before copying a sample, turn on the mocking service, so that the sample includes the URI that the mocking service generates.
 
 The URIs that are provided in the samples do not require authentication. However, requests that include URIs that the mocking service provides for API specifications that are shared in Exchange require authentication.
 
+== Types of Samples
+
 `curl` Command:: You can copy and paste the command directly into a CLI on a system in which `curl` is installed.
 
 HTTP Request:: You can construct an HTTP request by using the information provided in the *HTTP* section.
 
-JavaScript samples:: There is a sample for use with the Fetch API, a sample for use with Node.js, and a sample for use with XHR.
+JavaScript samples:: There is a sample that you can use with the Fetch API, a sample for use with Node.js, and a sample for use with XHR.
 
-Python samples:: There is a sample for use with Requests, an HTTP library; a sample for Python 2.7; and a sample for Python 3.1.
+Python samples:: There is a sample that you can use with Requests, an HTTP library; a sample for Python 2.7; and a sample for Python 3.1.
 
 C Sample:: There is a sample that you can use in C applications.
 
@@ -25,13 +27,32 @@ Java samples:: There is a sample for use with a JDK and a sample for use with Sp
 
 == Copying Samples
 
+To copy a sample command or code for sending a request to an endpoint, follow these steps:
+
 . In an API-specification project, click the *Documentation* tab at the bottom of the right-hand pane in the code editor.
+. Switch on the mocking service, if it is not already on.
 . Click the navigation icon to open the table of contents for the specification.
 . Under *Endpoints*, locate the method that you want to call.
 . Expand the *Code examples* section.
 . Click the header for the type of sample that you want to copy.
 . Click *COPY* in the top-right corner of the gray text field that presents the sample.
+. Paste the sample into wherever you need it.
+. Add required query parameters, optional ones, and any optional headers that you want to add to requests.
 
-== Testing with cURL
+== Example Using `curl`
 
-image::apid-test-with-curl.png[]
+Suppose that your API specification includes an endpoint that allows requests information about a customer. You want to test the endpoint with a `curl` command. You copy the command, as described in the steps above. The command, which send a GET request, looks like this, where `/customers` is the name of the endpoint:
+
+```
+curl "https://anypoint.mulesoft.com/mocking/api/v1/links/e01fb903-95ee-4c04-8641-38cb15361839/api/customers"
+```
+This type of request, according to your specification, must include the query parameters `firstName` and `lastName`. So, you modify the command by adding those parameters to the end of the URI:
+
+```
+curl "https://anypoint.mulesoft.com/mocking/api/v1/links/e01fb903-95ee-4c04-8641-38cb15361839/api/customers?firstName=Mario&lastName=Rossi"
+```
+
+After you send the request, you receive back an unformatted response body:
+
+```
+{"_meta":{"messages":[]},"customers":[{"identifier":"deb89058-77fb-4e97-8c83-6506c38cacf8","firstName":"Mario","lastName":"Rossi","paymentMethods":[{"paymentMethodType":{"medium":"CARD","issuer":"BANK","name":"VISA"}}],"deliveryAddresses":[{"identifier":"deb89058-77fb-4e97-8c83-6506c38cacf8","type":"BILLING","address":"Main street 122","city":"San Francisco","state":"California","postalCode":"90210","recipient":"Mario Rossi","country":"US","secondaryAddress":"","mailStopCode":"","attention":""}]}]}
