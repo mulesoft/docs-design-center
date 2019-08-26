@@ -35,9 +35,9 @@ For more information about this section, see xref:design-test-endpoints-multiple
 
 == The *Query parameters* section
 
-The *Query parameters* section for `GET` methods lists the parameters that you can include in a request. 
+The *Query parameters* section for `GET` methods lists the parameters that you can include in a request.
 
-.A typical query parameter
+.A typical listing for a query parameter
 image::apic-limit.png[]
 
 . The name that is defined for the query parameter.
@@ -52,8 +52,12 @@ The *Response* section displays the different responses that the specification d
 
 If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
-.The top of the *Response* section, showing a section for each of the three status codes that are defined for a method. Also shown is the message that the specification defines as part of the response for the `200` status code.
+.The top of the *Response* section
 image::apid-doc-get-overview-response-top.png[]
+
+1. The auto-generated title for this section.
+2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
+3. The description that is defined in the `description` facet for responses that use the selected status code. In this image, the description is for responses that use status code 200.
 
 .The *Body* subsection of the *Response* section, showing the media type, the type defined for the response, the description of the type, and the example defined for the type.
 image::apid-doc-get-overview-response-body.png[]
