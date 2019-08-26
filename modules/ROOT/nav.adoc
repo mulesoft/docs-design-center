@@ -14,7 +14,7 @@
   *** xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API Project as a Dependency]
   *** xref:design-review-doc-code-editor.adoc[Review the Documentation of an API in the Code Editor]
   *** xref:design-branching.adoc[Fork an API Project]
- ** xref:test-endpoints.adoc[Test Endpoints by Simulating Calls to Methods]
+ ** xref:design-test-endpoints.adoc[Test Endpoints by Simulating Calls to Methods]
   *** xref:design-branching.adoc[Migrating to the Version 2.x of the Mocking Service]
   *** xref:design-test-endpoints-visual-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Visual Editor]
   *** xref:design-test-endpoints-code-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Code Editor]
