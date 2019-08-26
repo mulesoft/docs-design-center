@@ -16,6 +16,7 @@ While you are creating an API specification, you can test the endpoints that you
 . Select any options that you want to add to the simulation.
 +
 * Add optional query parameters to test whether these are defined correctly.
+* Add any headers that you want to include in simulated calls. You can also test with headers that introduce delays into response times to simulate latency in a network, restrict the range of error status codes that can be returned, randomize the probability of receiving particular status codes, and more. You can even add a header that allows you to test endpoints in a specification that contains errors. See xref:apid-behavioral-headers.adoc[Behavioral Headers for Simulated Calls to REST Methods].
 * Add optional headers (why? I mean headers other than the behavioral headers.)
 * For methods that send a request body, modify the body to trigger an error status code.
 . Click *Send*.

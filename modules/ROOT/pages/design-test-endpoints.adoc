@@ -1,3 +1,9 @@
 = Test Endpoints by Simulating Calls to Methods
 
 You can test endpoints that are defined in the API specifications that you are in the process of creating in API Designer. You can test whether required query parameters are defined as required or optional, the bodies of responses are correct, and more.
+
+ xref:design-test-endpoints-visual-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Visual Editor}
+* xref:design-test-endpoints-code-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Code Editor]
+* xref:design-test-endpoints-rest-client.adoc[Test Endpoints with a REST Client]
+* xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with curl, http, or an Application]
+* xref:apid-behavioral-headers.doc[Behavioral Headers for Simulated Calls to REST Methods]
