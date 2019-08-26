@@ -1,6 +1,8 @@
-=
+= Documentation of `PUT` HTTP Methods
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+image::apic-put-overview.png[]
