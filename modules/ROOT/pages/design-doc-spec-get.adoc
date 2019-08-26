@@ -35,10 +35,16 @@ For more information about this section, see xref:design-test-endpoints-multiple
 
 == The *Query parameters* section
 
-The *Query parameters* section for `GET` methods lists the parameters that you can include in a request. All of the text, except for the descriptions `offset is the beginning line number` and `maximum number of items to return`, is auto-generated. If a parameter is defined as required, the auto-generated label `Required` appears next to its data type.
+The *Query parameters* section for `GET` methods lists the parameters that you can include in a request. 
 
-.The *Query parameters* section for a method
-image::apid-doc-get-overview-query-parms.png[]
+.A typical query parameter
+image::apic-limit.png[]
+
+. The name that is defined for the query parameter.
+. The data type of the parameter. If the query parameter is required to be included in requests, the annotation `Required` appears next to the data type.
+. The description that is given in the `description` facet for the query parameter.
+. Auto-generated text that displays (for number types) the default value, the minimum value, and the maximum value.
+
 
 == The *Responses* section
 
