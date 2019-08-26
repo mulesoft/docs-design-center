@@ -34,15 +34,17 @@ The table of contents that appears can contain several sections when you select 
 
 == Types of Documentation
 
-=== Summary Page for Specifications
 
-the first time you click the *Documentation* tab, the summary of the API specification appears, as in this image. This summary page lists all of the API endpoints and their methods. Click the hyperlinks to go to the overview page for each endpoint. Click a colored box for a method to go to the page that documents the method.
-// Explain what the summary pages for methods, types, and schemes (and other supported entities) contain
-// Ensure that the purpose of the content area is explained well.
 
-. The entity overview: At the top of each page appears information about the entity (entire specification, endpoint, method, or type) that the page displays documentation for. In this image, the title and version of the API specification are displayed. In the dark gray box appears the base URI. The mocking service is on and the base URI for testing endpoints with the mocking service is displayed
+=== Summary Page for API Specifications
 
+The first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
+
+
+.The summary page for a specification
 image::apic-spec-summary-page.png[]
+
+==== Descriptions of 1 through 5 in the image
 
 . The title that is defined by the `title` facet in the specification.
 . The version that is defined by the `version` facet.
@@ -58,16 +60,21 @@ The list also displays in colored blocks the types of HTTP method that the speci
 
 === Overviews for Endpoints
 
-In the table of contents for an API specification, click the link to overview page for an endpoint to see the endpoint's description and a list of its methods. For each method, the *Documentation* pane shows the following information:
-
-* The display name, if the specification defines one.
-* The description, if the specification provides one
-
-Click the colored box for a method or its display name (if the method has one) to view the method's documentation.
-At the bottom of the endpoint's overview page are links to the previous and next endpoints in the table of contents.
+This documentation appears if you click the name of the endpoint either in the summary page for the API specification or in the table of contents.
 
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
+
+==== Descriptions of 1 through 5 in this image
+
+. The name of the endpoint.
+. If an endpoint implements a collection, this auto-generated text appears: "_Implements <collection>_".
+. The value of the `description` facet that is defined for the endpoint. You can write the description either in plain text or in GitHub-flavored Markdown.
+. The list of HTTP methods that are defined for accessing the endpoint. The colored blocks are auto-generated. Click the block for a method to view the documentation for that method.
++
+Next to a block is the value of the `displayName` facet that is defined for the method. If no display name is defined, this space is empty.
++
+Below the colored block and display name appears the description that is defined in the `description` facet for the method. You can write the description either in plain text or in GitHub-flavored Markdown.
 
 === Documentation of Methods
 
