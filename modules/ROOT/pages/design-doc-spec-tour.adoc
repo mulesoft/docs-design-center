@@ -1,0 +1,11 @@
+= Tour of the Documentation Pane
+
+Let's have a look at the documentation for a complex RAML API specification. To view the documentation, you open the *Documentation* pane.
+
+.The *Documentation* pane in API Designer's code editor
+image::apic-summary-page.png[]
+
+
+. The *Documentation* tab: click this to view the documentation for your specification.
+. The documentation of the currently selected item in the specification: This image shows the summary page for the specification that is in the code editor. However, there are several different types of documentation that can appear in this location, depending on the item that you select in the table of contents.
+. The navigation icon: click this to display a table of contents that lets you navigate to the different pages of the documentation.

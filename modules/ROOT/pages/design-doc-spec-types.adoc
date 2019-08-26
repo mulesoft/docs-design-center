@@ -1,0 +1,10 @@
+= Documentation of Types
+
+Each type that is defined in a specification or in an external library that is imported by the `uses` facet (RAML) has its own page. At the top of the page is the name of the type and its description, if the specification defines a description.
+
+Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings. You can copy examples to use them in applications that will call the API.
+
+After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
+
+.The documentation of a type that is defined in a specification
+image::apid-doc-type-full-panel.png[]

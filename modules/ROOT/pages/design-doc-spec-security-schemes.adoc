@@ -1,0 +1,3 @@
+= Documentation of Security Schemes
+
+image::apid-apic-fragment-security-scheme.png[]
