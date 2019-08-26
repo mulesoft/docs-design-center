@@ -7,50 +7,11 @@ API Designer includes the *Try It* feature for testing endpoints in specificatio
 .. Turn on the mocking service.
 .. Open the documentation of the method that you want to simulate a call to.
 .. Copy the URL that is at the top of the page.
-. In the REST client, follow these steps:
+. In a separate REST client, follow these steps:
 .. Paste the URL into the client.
-.. Specify values for required parameters, if there are any.
-.. *Optional:* Add optional query parameters to test whether these are defined correctly.
-.. *Optional:* Add optional headers (why? I mean headers other than the behavioral headers.)
-.. *Optional:* For methods that send a request body, modify the body to trigger an error status code.
+.. Specify values for required query parameters, if there are any.
+.. *Optional:* Add one or more of the optional query parameters to test whether these are defined correctly.
+.. Add any headers that you want to include in simulated calls. You can also test with headers that introduce delays into response times to simulate latency in a network, restrict the range of error status codes that can be returned, randomize the probability of receiving particular status codes, and more. You can even add a header that allows you to test endpoints in a specification that contains errors. See xref:apid-behavioral-headers.adoc[Behavioral Headers for Simulated Calls to REST Methods].
+
+.. *Optional:* If you are testing a method that requires a request body, modify the request body so that the response to the request contain an error status code. You can click directly in the body and make changes to it before sending a request.
 .. Send the request.
-
-
-== Test API Specifications That Contain Errors
-
-Before sending a request, you can add the header `MS2-Strict-Model-Validations` if your specification contains errors, but you want to test it anyway.
-
-include::partial$MS2-Strict-Model-Validations.adoc[]
-
-== Test Particular Status Codes
-
-Before sending a request, you can add the header `MS2-Status-Code` to specify a specific status code for the return message or multiple status codes, one of which will be randomly selected for the return message. This header behaves as a filter on the list of status codes that are defined for a method.
-
-include::partial$MS2-Status-Code.adoc[]
-
-== Generate Payload Responses for Status Codes That Don't Have Examples Defined
-
-Before sending a request, you can add the header `MS2-Randomize` to generate a payload response if no example is defined for the response.
-
-include::partial$MS2-Randomize.adoc[]
-
-
-== Randomize the Probability of Receiving Particular Status Codes
-
-Before sending a request, you can add the header `MS2-Error-Rate` to specify the probability of getting an error status code as a response. The value for this header must be a decimal between 0 and 1.
-
-include::partial$MS2-Error-Rate.adoc[]
-
-
-== Restrict the Range of Error Status Codes That Can Be Returned
-
-Before sending a request, you can add the header `MS2-Error-Level` to indicate the range of error status codes the mocking service is restricted to using.
-
-include::partial$MS2-Error-Level.adoc[]
-
-
-== Introduce Delays into Response Times
-
-Before sending a request, you can add the header `MS2-Delay` to indicate how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
-
-include::partial$MS2-Delay.adoc[]
