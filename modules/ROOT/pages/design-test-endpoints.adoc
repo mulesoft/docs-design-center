@@ -1,1 +1,3 @@
 = Test Endpoints by Simulating Calls to Methods
+
+You can test endpoints that are defined in the API specifications that you are in the process of creating in API Designer. You can test whether required query parameters are defined as required or optional, the bodies of responses are correct, and more.
