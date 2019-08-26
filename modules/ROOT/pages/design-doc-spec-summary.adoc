@@ -1,4 +1,9 @@
 = Summary Page for API Specifications
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 The first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
 

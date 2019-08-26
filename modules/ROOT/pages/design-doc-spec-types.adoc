@@ -1,4 +1,9 @@
 = Documentation of Types
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 Each type that is defined in a specification or in an external library that is imported by the `uses` facet (RAML) has its own page. At the top of the page is the name of the type and its description, if the specification defines a description.
 

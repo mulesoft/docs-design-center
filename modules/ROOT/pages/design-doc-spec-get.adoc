@@ -1,4 +1,9 @@
 = Documentation of `GET` HTTP Methods
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 At the top of the documentation is the display name for the method, if the specification defines a display name for it. Next is the URI for accessing the endpoints. The URI is an extension of the base URI. The description of the method follows.
 

@@ -1,4 +1,9 @@
 = Overviews for Endpoints
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 This documentation appears if you click the name of the endpoint either in the summary page for the API specification or in the table of contents.
 

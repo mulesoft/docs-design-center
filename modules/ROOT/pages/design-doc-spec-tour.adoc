@@ -1,4 +1,9 @@
 = Tour of the Documentation Pane
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 Let's have a look at the documentation for a complex RAML API specification. To view the documentation, you open the *Documentation* pane.
 

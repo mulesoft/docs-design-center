@@ -1,4 +1,9 @@
 = The Table of Contents
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 The table of contents that appears can contain several sections when you select the main file in a RAML API-specification project or the file in an OAS project:
 
