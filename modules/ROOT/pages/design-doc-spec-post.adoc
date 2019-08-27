@@ -22,4 +22,4 @@ include::partial$doc-for-some-body-types.adoc[]
 .The top of the *Response* section
 image::apid-doc-post-overview-response-top.png[]
 
-include::partial$top-of-the-response-section[]
+include::partial$top-of-the-response-section.adoc[]
