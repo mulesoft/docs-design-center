@@ -1,5 +1,0 @@
-You can specify one of the following three case-sensitive values:
-
-* `REQUEST_ONLY`: The mocking service uses only 4XX codes.
-* `SERVER_ONLY`: The mocking service uses only 5XX codes.
-* `ALL`: The mocking service can use both 4XX and 5XX codes. This is the default value.
