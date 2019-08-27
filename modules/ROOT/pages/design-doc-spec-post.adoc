@@ -6,3 +6,7 @@ endif::[]
 :imagesdir: ../assets/images
 
 image::apic-post-overview.png[]
+
+
+
+include::partial$doc-for-some-body-types.adoc[]
