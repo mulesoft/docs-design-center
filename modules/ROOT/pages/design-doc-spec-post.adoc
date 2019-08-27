@@ -16,6 +16,14 @@ include::partial$doc-of-methods-last-2.adoc[]
 
 == The *Code examples* Section
 
+include::partial$doc-of-methods-code-examples-overview.adoc[]
+
+.The *Code example* section for a `POST` HTTP method
+image::apid-doc-post-overview-code-examples.png[]
+
+include::partial$doc-of-methods-code-examples-link.adoc[]
+
+
 == The *Body* Section
 
 include::partial$doc-for-some-body-types.adoc[]

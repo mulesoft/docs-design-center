@@ -22,12 +22,12 @@ include::partial$doc-of-methods-last-2.adoc[]
 
 == The *Code examples* Section
 
-The *Code examples* section provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to send a request from JavaScript, Python, C, and Java applications. Each sample uses the URI that appears at the top of the documentation of the method.
+include::partial$doc-of-methods-code-examples-overview.adoc[]
 
-.The *Code examples* section for a method
+.The *Code examples* section for a `GET` HTTP method
 image::apid-doc-get-overview-code-examples.png[]
 
-For more information about this section, see xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with `curl`, `http`, or an Application].
+include::partial$doc-of-methods-code-examples-link.adoc[]
 
 == The *Query parameters* Section
 
