@@ -1,0 +1,7 @@
+The numbered parts are:
+
+1. The auto-generated title of the section.
+2. The media type of the response body for the selected status code.
+3. The name of the type that is used as the response body.
+4. The description that is given in the `description` facet for the type.
+5. The example that is defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. The values in generated examples are empty strings.
