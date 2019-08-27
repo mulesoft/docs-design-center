@@ -6,3 +6,19 @@ endif::[]
 :imagesdir: ../assets/images
 
 image::apic-delete-overview.png[]
+
+The numbered parts are:
+
+include::partial$doc-of-methods-1-through-3.adoc[]
+include::partial$doc-of-methods-4-and-5.adoc[]
+. The *URI parameters* section, which lists the parameters that are required to be included in a `DELETE` request.
+include::partial$doc-of-methods-last-2.adoc[]
+
+== The *Code examples* Section
+
+include::partial$doc-of-methods-code-examples-overview.adoc[]
+
+.The *Code examples* section for a `DELETE` HTTP method
+image::aapid-doc-delete-overview-code-examples.png[]
+
+include::partial$doc-of-methods-code-examples-link.adoc[]
