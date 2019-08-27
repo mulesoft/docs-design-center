@@ -48,12 +48,16 @@ image::apic-limit.png[]
 
 == The *Responses* section
 
-The *Response* section displays the different responses that the specification defines for the method. For each response code, the body of the response is shown in a separate section. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
+The *Response* section displays the response for each of the status codes that the API can return for calls to the HTTP method. For each status code, the body of the response is displayed. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
 
 If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
+=== The top of the *Response* section
+
 .The top of the *Response* section
 image::apid-doc-get-overview-response-top.png[]
+
+==== Descriptions of 1 through 3 in this image
 
 1. The auto-generated title for this section.
 2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
