@@ -58,7 +58,7 @@ The *Response* section displays the response for each of the status codes that t
 .The top of the *Response* section
 image::apid-doc-get-overview-response-top.png[]
 
-include::partial$top-of-the-response-section[]
+include::partial$top-of-the-response-section.adoc[]
 
 
 === The *Body* Section
