@@ -24,7 +24,7 @@ The numbered parts are:
 . The *Response* section, which contains a section for each status code that the endpoint can return for the request.
 . The previous endpoint in the table of contents and in the list of endpoints that is in the summary documentation of the specification, the next endpoint, or both.
 
-== The *Code examples* section
+== The *Code examples* Section
 
 The *Code examples* section provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to send a request from JavaScript, Python, C, and Java applications. Each sample uses the URI that appears at the top of the documentation of the method.
 
@@ -33,7 +33,7 @@ image::apid-doc-get-overview-code-examples.png[]
 
 For more information about this section, see xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with `curl`, `http`, or an Application].
 
-== The *Query parameters* section
+== The *Query parameters* Section
 
 The *Query parameters* section for `GET` methods lists the parameters that you can include in a request.
 
@@ -48,23 +48,20 @@ The numbered parts are:
 . Auto-generated text that displays (for number types) the default value, the minimum value, and the maximum value.
 
 
-== The *Responses* section
+== The *Response* Section
 
 The *Response* section displays the response for each of the status codes that the API can return for calls to the HTTP method. For each status code, the body of the response is displayed. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
 
 
-=== The top of the *Response* section
+=== The Top of the *Response* Section
 
 .The top of the *Response* section
 image::apid-doc-get-overview-response-top.png[]
 
-The numbered parts are:
+include::partial$top-of-the-response-section[]
 
-1. The auto-generated title for this section.
-2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
-3. The description that is defined in the `description` facet for responses that use the selected status code. In this image, the description is for responses that use status code 200.
 
-=== The *Body* section
+=== The *Body* Section
 
 .The *Body* subsection of the *Response* section, showing the media type, the type defined for the response, the description of the type, and the example defined for the type.
 image::apid-doc-get-overview-response-body.png[]
@@ -79,17 +76,3 @@ The numbered parts are:
 
 
 include::partial$doc-for-some-body-types.adoc[]
-
-.Documentation for some of the types that are in the body.
-image::apid-doc-get-overview-response-body-types.png[]
-
-The numbered parts are:
-
-. The name of the type.
-. The data type of the type.
-. The description that is defined in the `description` facet for the type.
-. An auto-generated indicator that appears when the specification defines the type as required.
-. Examples that are defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. For the type `item.paymentMethodType` in the image, two examples would be generated. The values in generated examples are empty strings.
-. A line with auto-generated text -- `Any of:` --and that shows which types are allowed in a union type.
-. An auto-generated indicator that appears when a type is an `enum`.
-. A line with auto-generated text -- `Enum values` -- and that shows the permitted values for an enum.

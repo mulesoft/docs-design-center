@@ -7,6 +7,19 @@ endif::[]
 
 image::apic-post-overview.png[]
 
+== The *Code examples* Section
 
+== The *Body* Section
 
 include::partial$doc-for-some-body-types.adoc[]
+
+
+== The *Response* Section
+
+
+=== The Top of the *Response* Section
+
+.The top of the *Response* section
+image::apid-doc-post-overview-response-top.png[]
+
+include::partial$top-of-the-response-section[]
