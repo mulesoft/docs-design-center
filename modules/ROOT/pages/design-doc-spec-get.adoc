@@ -22,7 +22,7 @@ The numbered parts are:
 . The *Code examples* section, which provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to access the endpoint from JavaScript, Python, C, and Java applications.
 . The *Query parameters* section, which lists both the required and optional parameters to include in requests.
 . The *Response* section, which contains a section for each status code that the endpoint can return for the request.
-. The previous endpoint in the table of contents and in the list of endpoints that is in the summary documentation of the specification, the next endpoint, or both.
+. A link to the previous endpoint in the table of contents and in the list of endpoints that is in the summary documentation of the specification, a link to the next endpoint, or links to both.
 
 == The *Code examples* Section
 

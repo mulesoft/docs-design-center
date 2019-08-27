@@ -7,6 +7,12 @@ endif::[]
 
 image::apic-post-overview.png[]
 
+The numbered parts are:
+
+include::partial$doc-of-methods-1-through-5.adoc[]
+. The *Body* section, which displays an example of a request body and lists the types that can be included in the body.
+include::partial$doc-of-methods-last-2.adoc[]
+
 == The *Code examples* Section
 
 == The *Body* Section
