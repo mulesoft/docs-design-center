@@ -50,7 +50,6 @@ image::apic-limit.png[]
 
 The *Response* section displays the response for each of the status codes that the API can return for calls to the HTTP method. For each status code, the body of the response is displayed. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
 
-If the specification does not define an example response, and if the specification defines a media type globally, then the *Documentation* pane generates an example response. The values in the example are all empty strings.
 
 === The top of the *Response* section
 
@@ -63,9 +62,18 @@ image::apid-doc-get-overview-response-top.png[]
 2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
 3. The description that is defined in the `description` facet for responses that use the selected status code. In this image, the description is for responses that use status code 200.
 
+=== The *Body* section
+
 .The *Body* subsection of the *Response* section, showing the media type, the type defined for the response, the description of the type, and the example defined for the type.
 image::apid-doc-get-overview-response-body.png[]
 
+==== Descriptions of 1 through 5 in this image
+
+1. The auto-generated title of the section.
+2. The media type of the response body for the selected status code.
+3. The name of the type that is used as the response body.
+4. The description that is given in the `description` facet for the type.
+5. The example that is defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. The values are empty strings.
 
 
 .Documentation for some of the types that are in the body, showing a type with three types nested under it, a required type, and examples defined for the required type.
