@@ -51,42 +51,59 @@ For example, suppose that this URI is being used in a tool:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
-You would need to replace `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`, where `new-ID` is the ID that Version 2 of the mocking service generates.
+You need to replace `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`, where `new-ID` is the ID that Version 2 of the mocking service generates.
 +
 You can get the new base URI from Version 2 of the mocking service after step 1 above.
 
-== New Features in Version 2 That You Can Use in API Designer
+== New Features in Version 2
 
-Version 2 of the mocking service, which was released on January 10, 2019, introduced the following features that you can use in API Designer.
+Version 2 of the mocking service, which was released on January 10, 2019, introduced support for OAS 2.0, behavioral headers, performance improvements, and authenticated access to API specifications that are shared on Anypoint Exchange.
 
 === Support for OAS 2.0
 
-You can now test endpoints that are in API specifications that are written in OAS 2.0.
+Version 2 of the mocking service enables you to test endpoints that are in API specifications that are written in OAS 2.0.
 
 
 === Behavioral Headers
 
-Add headers to your simulated calls to methods, changing the behavior of the mocking service in response to those calls The following new headers are available. See xref::apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls] for full details.
+Using Version 2, you can add headers to your simulated calls to methods, changing the behavior of the mocking service in response to those calls The following new headers are available. See xref::apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls] for full details.
 
-* MS2-Delay: Indicates how many milliseconds the request should take to answer.
-* MS2-Error-Level: Indicates which range of error status codes the mocking service is restricted to use.
-* MS2-Error-Rate: Indicates the probability of getting an error status code as a response.
-* MS2-Randomize: When this header is set to true, the mocking service auto-generates a payload response if no example is defined for the response.
-* MS2-Status-Code: Specifies the status code or codes that the mocking service can choose from for the return message.
-* MS2-Strict-Model-Validations: When you set this header to false, you can use the mocking service even when the API specification contains errors
+* MS2-Delay
++
+Indicates the number of milliseconds the request should take to answer.
+
+* MS2-Error-Level
++
+Indicates the range of error status codes the mocking service is restricted to use.
+
+* MS2-Error-Rate
++
+Indicates the probability of getting an error status code as a response.
+
+* MS2-Randomize
++
+When this header is set to true, the mocking service autogenerates a payload response if no example is defined for the response.
+
+* MS2-Status-Code
++
+Specifies the status code or codes that the mocking service can choose from for the return message.
+
+* MS2-Strict-Model-Validations
++
+When you set this header to false, you can use the mocking service even when the API specification contains errors.
 
 === Performance Improvements
 
-The mocking service uses fewer resources, and responds to requests in less time on average.
+Version 2 of the mocking service uses fewer resources, and responds to requests in less time on average than did Version 1.
 
 
 === Authenticated Access to API Specifications That Are Shared on Anypoint Exchange
 
-Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Anypoint Exchange, whether they are simulating calls in Anypoint Exchange or using third-party tools. The mocking service now uses a base URI in Anypoint Exchange that differs from the one that you can test with in API Designer.
+Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Anypoint Exchange, whether they are simulating calls in Anypoint Exchange or using third-party tools. Version 2 of the mocking service uses a base URI in Anypoint Exchange that differs from the one that you can test with in API Designer.
 
 If you are in Anypoint Exchange and trying to simulate a call to a method, you are prompted by Anypoint Exchange to supply OAuth 2.0 credentials before sending a request.
 
-If you are using a third-party tool to simulate a call to an Anypoint Exchange asset, you must use an authorization header in each request. To get the authentication token to include in the header, you must send a `POST` request to +https://anypoint.mulesoft.com/accounts/login+ that sends the username and password for your Anypoint Platform account, as in this example.
+If you are using a third-party tool to simulate a call to an Anypoint Exchange asset, you must use an authorization header in each request. To get the authentication token to include in the header, you must send a `POST` request to +https://anypoint.mulesoft.com/accounts/login+ that sends the username and password for your Anypoint Platform account, as in this example:
 
 ```
 $ curl -X POST \
@@ -100,7 +117,7 @@ The mocking service responds with an authentication token, like this:
 {"access_token": "071e65a7-35c7-465a-8e33-ea68659099bf","token_type": "bearer","redirectUrl": "/home/"}
 ```
 
-In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Anypoint Exchange.
+In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Anypoint Exchange:
 
 ```
 groupId: cb0e4f00-5026-4999-b5a5-dc2307b886c5
@@ -125,7 +142,7 @@ version: v1
               status: OK
 ```
 
-A `GET` request would look like this:
+A `GET` request might look like this:
 
 ```
 $ curl -X GET \
@@ -133,7 +150,7 @@ $ curl -X GET \
   -H 'MS2-Authorization: Bearer 071e65a7-35c7-465a-8e33-ea68659099bf'
 ```
 
-Assuming that the request uses the correct ID, URI, and authentication token, the mocking service would send this response:
+Assuming that the request uses the correct ID, URI, and authentication token, the mocking service sends this response:
 
 ```
 {"status":"OK"}
