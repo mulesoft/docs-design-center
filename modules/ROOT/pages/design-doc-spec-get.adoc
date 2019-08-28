@@ -1,4 +1,4 @@
-= Documentation of `GET` HTTP Methods
+= Display the Documentation of `GET` HTTP Methods
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,7 +8,7 @@ endif::[]
 Intro specific to `GET` methods
 
 
-.Documentation of a `GET` HTTP method
+.Display of the documentation of a `GET` HTTP method
 image::apid-doc-get-overview.png[]
 
 The numbered parts are:

@@ -1,4 +1,4 @@
-= Documentation of `DELETE` HTTP Methods
+= Display the Documentation of `DELETE` HTTP Methods
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,7 +8,7 @@ endif::[]
 Intro specific to `DELETE` methods
 
 
-.Documentation of a `DELETE` HTTP method
+.Display of the documentation of a `DELETE` HTTP method
 image::apic-delete-overview.png[]
 
 The numbered parts are:

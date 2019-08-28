@@ -1,4 +1,4 @@
-.Documentation for some of the types that are in the body.
+.Display of the documentation for some of the types that are in the body.
 image::apid-doc-get-overview-response-body-types.png[]
 
 The numbered parts are:

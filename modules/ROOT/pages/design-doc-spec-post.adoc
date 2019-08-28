@@ -1,4 +1,4 @@
-= Documentation of `POST` HTTP Methods
+= Display the Documentation of `POST` HTTP Methods
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,7 +8,7 @@ endif::[]
 Intro specific to `POST` methods
 
 
-.Documentation of a `POST` HTTP method
+.Display of the documentation of a `POST` HTTP method
 image::apic-post-overview.png[]
 
 The numbered parts are:
