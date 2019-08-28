@@ -30,7 +30,7 @@ include::partial$doc-of-methods-code-examples-link.adoc[]
 
 == The *Query parameters* Section
 
-The *Query parameters* section for `GET` methods lists the parameters that you can include in a request.
+This section lists the parameters that act as a filter to narrow the range of data returned in response to the request.
 
 .A typical listing for a query parameter
 image::apic-limit.png[]

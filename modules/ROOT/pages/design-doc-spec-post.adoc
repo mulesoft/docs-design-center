@@ -30,6 +30,8 @@ include::partial$doc-of-methods-code-examples-link.adoc[]
 
 == The *Body* Section
 
+include::partial$doc-of-methods-body-section-top.adoc[]
+
 .The top of the *Body* section
 image::apid-doc-post-overview-request-body.png[]
 
@@ -52,5 +54,3 @@ include::partial$top-of-the-response-section.adoc[]
 === The *Body* Subsection
 
 include::partial$doc-of-methods-body-subsection-btm-post-put.adoc[]
-
-This layout of this section is identical to the layout of the *Body* section described above. The only difference between that section and the *Body* subsection is that the subsection displays the response body and its types, not the request body and its types.

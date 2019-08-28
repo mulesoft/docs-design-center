@@ -28,11 +28,15 @@ include::partial$doc-of-methods-code-examples-link.adoc[]
 
 == The *URI parameters* Section
 
+include::partial$doc-of-methods-uri-parameters-intro.adoc[]
+
 image::apid-doc-put-uri-parameters.png[]
 
 include::partial$doc-of-methods-uri-parameters.adoc[]
 
 == The *Body* Section
+
+include::partial$doc-of-methods-body-section-top.adoc[]
 
 .The top of the *Body* section
 image::apid-doc-put-body-top.png[]

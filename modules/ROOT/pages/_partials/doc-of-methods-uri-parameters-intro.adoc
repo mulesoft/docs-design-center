@@ -1,0 +1,1 @@
+This section lists the parameters that must be included in the URI in requests. The parameters identify the entity (e.g. customer, product, etc.) that the request refers to.

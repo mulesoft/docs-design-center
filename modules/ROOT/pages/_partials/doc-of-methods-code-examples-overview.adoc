@@ -1,1 +1,1 @@
-The *Code examples* section provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to send a request from JavaScript, Python, C, and Java applications. Each sample uses the URI that appears at the top of the documentation of the method.
+This section provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to send a request from JavaScript, Python, C, and Java applications. Each sample uses the URI that appears at the top of the documentation of the method.
