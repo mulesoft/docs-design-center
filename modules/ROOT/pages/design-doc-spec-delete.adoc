@@ -45,7 +45,7 @@ image::apid-doc-delete-overview-response-top.png[]
 
 include::partial$top-of-the-response-section.adoc[]
 
-=== The *Body* Subsection of the *Response* section
+=== The *Body* Subsection
 
 image::apid-doc-delete-overview-response-body.png[]
 

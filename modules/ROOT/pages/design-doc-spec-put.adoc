@@ -52,6 +52,6 @@ image::apid-doc-put-overview-response-top.png[]
 
 include::partial$top-of-the-response-section.adoc[]
 
-=== The *Body* Subsection of the *Response* section
+=== The *Body* Subsection
 
-include::partial$doc-for-some-body-types.adoc[]
+include::partial$doc-of-methods-body-subsection-btm-post-put.adoc[]
