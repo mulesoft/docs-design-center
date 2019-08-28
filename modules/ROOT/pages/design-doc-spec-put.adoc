@@ -26,8 +26,17 @@ image::apid-doc-put-overview-code-examples.png[]
 
 include::partial$doc-of-methods-code-examples-link.adoc[]
 
-== The *URI parameters* section
+== The *URI parameters* Section
 
 image::apid-doc-put-uri-parameters.png[]
 
 include::partial$doc-of-methods-uri-parameters.adoc[]
+
+== The *Body* Section
+
+.The top of the *Body* section
+image::apid-doc-put-body-top[]
+
+include::partial$doc-of-methods-body-subsection-top.adoc[]
+
+include::partial$doc-for-some-body-types.adoc[]
