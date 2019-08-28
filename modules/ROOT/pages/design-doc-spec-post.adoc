@@ -7,7 +7,6 @@ endif::[]
 
 Intro specific to `POST` methods
 
-include::partial$doc-for-methods-generic-intro.adoc[]
 
 .Documentation of a `POST` HTTP method
 image::apic-post-overview.png[]

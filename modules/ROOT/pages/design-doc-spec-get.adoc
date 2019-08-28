@@ -7,7 +7,6 @@ endif::[]
 
 Intro specific to `GET` methods
 
-include::partial$doc-for-methods-generic-intro.adoc[]
 
 .Documentation of a `GET` HTTP method
 image::apid-doc-get-overview.png[]

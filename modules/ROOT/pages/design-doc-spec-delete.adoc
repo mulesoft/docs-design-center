@@ -7,7 +7,6 @@ endif::[]
 
 Intro specific to `DELETE` methods
 
-include::partial$doc-for-methods-generic-intro.adoc[]
 
 .Documentation of a `DELETE` HTTP method
 image::apic-delete-overview.png[]
