@@ -1,4 +1,4 @@
-= Documentation of Security Schemes
+= Display the Documentation of Security Schemes
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
