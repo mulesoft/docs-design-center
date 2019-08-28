@@ -1,0 +1,3 @@
+At the top of the documentation is the display name for the method, if the specification defines a display name for it. Next is the URI for accessing the endpoints. The URI is an extension of the base URI. The description of the method follows.
+
+In the top-right corner of the documentation is the *Try It* button, which you can click if you want to test the method by simulating a call to it.

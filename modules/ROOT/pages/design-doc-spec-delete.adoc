@@ -5,6 +5,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+include::partial$doc-for-methods-generic-intro.adoc[]
+
+.Documentation of a `DELETE` HTTP method
 image::apic-delete-overview.png[]
 
 The numbered parts are:
@@ -19,6 +22,19 @@ include::partial$doc-of-methods-last-2.adoc[]
 include::partial$doc-of-methods-code-examples-overview.adoc[]
 
 .The *Code examples* section for a `DELETE` HTTP method
-image::aapid-doc-delete-overview-code-examples.png[]
+image::apid-doc-delete-overview-code-examples.png[]
 
 include::partial$doc-of-methods-code-examples-link.adoc[]
+
+== The *URI parameters* section
+
+== The *Response* Section
+
+include::partial$top-of-the-response-section-intro.adoc[]
+
+=== The Top of the *Response* Section
+
+.The top of the *Response* section
+image::apid-doc-delete-overview-response-top.png[]
+
+include::partial$top-of-the-response-section.adoc[]
