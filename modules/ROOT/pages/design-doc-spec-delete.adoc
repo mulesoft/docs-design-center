@@ -31,7 +31,7 @@ include::partial$doc-of-methods-code-examples-link.adoc[]
 
 image::apid-doc-delete-uri-parameters.png[]
 
-include::partial$docs-of-methods-uri-parameters.adoc[]
+include::partial$doc-of-methods-uri-parameters.adoc[]
 
 
 == The *Response* Section
