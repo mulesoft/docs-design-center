@@ -1,4 +1,6 @@
-= Migrate API-Designer Projects to Version 2 of the Mocking Service
+= Migrate API-Specification Projects to Version 2 of the Mocking Service
+
+Version 2 of the mocking service is replacing Version 1. This topic explains what the mocking service is, why you must migrate API-specification projects, which projects must be migrated, how to migrate, and the features that are new in Version 2.
 
 == What the Mocking Service is
 
