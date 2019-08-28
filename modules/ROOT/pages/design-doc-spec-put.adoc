@@ -17,3 +17,17 @@ include::partial$doc-of-methods-4-and-5.adoc[]
 . The *URI parameters* section, which lists the parameters that are required to be included in a `PUT` request.
 . The *Body* section, which displays an example of a request body and lists the types that can be included in the body.
 include::partial$doc-of-methods-last-2.adoc[]
+
+== The *Code examples* Section
+
+include::partial$doc-of-methods-code-examples-overview.adoc[]
+
+image::apid-doc-put-overview-code-examples.png[]
+
+include::partial$doc-of-methods-code-examples-link.adoc[]
+
+== The *URI parameters* section
+
+image::apid-doc-put-uri-parameters.png[]
+
+include::partial$docs-of-methods-uri-parameters.adoc[]
