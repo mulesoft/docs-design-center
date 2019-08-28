@@ -1,29 +1,35 @@
 = Migrate API-Designer Projects to Version 2 of the Mocking Service
 
-On November 29, 2019, version 1 of the mocking service will be deprecated. Starting on that date, third-party tools will need to include this header in requests that they send to the mocking service to test endpoints in API specifications that are being developed in API Designer:
-
-`x-deprecation-acknowledgement`
-
-The header must have this value:
-
-`I understand that version 1 of the mocking service is deprecated and that I need to upgrade before February 1, 2020.`
-
-Starting February 1, 2020, version 1 of the mocking service will no longer send responses to requests. If you have not migrated your projects to use version 2 of the mocking service by this date, the mocking service will return the HTTP status code 301 and provide a link to this document.
-
-[NOTE]
-====
-*What is the Mocking Service*
+== What the Mocking Service is
 
 The mocking service lets you test endpoints that are defined in an API specification. The advantage to using the mocking service is that you do not need to implement the API before testing. To test an endpoint, the mocking service simulates calls to its methods.
 
-For example, when you are designing an API specification in API Designer, you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
-====
+For example, when you are designing an API specification in API Designer, you can simulate a call to an endpoint’s GET method to see whether the response body for the 200 status code is as you want it. As a further example, if you are evaluating whether you want to implement an API specification that is in Anypoint Exchange, you can simulate a call to an endpoint’s GET method to find out what the response body looks like.
 
-== How to Migrate an API-Specification Project to Version 2 of the Mocking Service
+== Why You Must Migrate Your API-Specification Projects
 
-If the mocking service was switched on for an API-specification project before January 10, 2019 and has been running continuously since then, follow these steps to migrate the project to version 2 of the mocking service:
+When you switch the mocking service on for a project, it comments out the base URI that is defined in the specification and replaces it with its own base URI. The mocking service behaves as a server by accepting requests at the location that the URI specifies. The format of the base URIs that Version 2 of the mocking service generates differs from the format of the base URIs that Version 1 generates.
 
-. In the notification that appears in the top-right corner after you open the project, click *Upgrade*.
+* *On November 29, 2019*, Version 1 of the mocking service will be deprecated. Starting on that date, third-party tools will need to include this header in requests that they send to the mocking service to test endpoints in API specifications that are being developed in API Designer:
++
+`x-deprecation-acknowledgement`
++
+The header must have this value:
++
+`I understand that version 1 of the mocking service is deprecated and that I need to upgrade before February 1, 2020.`
+
+* *Starting February 1, 2020*, Version 1 of the mocking service will no longer send responses to requests. If you have not migrated your projects to use Version 2 of the mocking service by this date, the mocking service will return the HTTP status code 301 and provide a link to this document.
+
+== Which Projects Must Be Migrated
+
+You must migrate any API-specification project that meets both of these conditions:
+
+* The mocking service was switched on for the project before January 10, 2019.
+* The mocking service has been running continuously since then.
+
+== How to Migrate a Project to Version 2 of the Mocking Service
+
+. In the notification that appears in the top-right corner after you open a project, click *Upgrade*.
 +
 *Result:* The mocking service is switched off and then on. The form of the base URI that the mocking service generates now differs from the form of the previous base URI.
 +
@@ -31,7 +37,7 @@ Version 1 of the mocking service used base URIs of the form `+https://mocksvc.mu
 +
 Version 2 uses base URIs of the form `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`.
 +
-For example, the URI for a GET method for an endpoint named `/customers` in a particular specification might have looked like this with version 1 of the mocking service:
+For example, the URI for a GET method for an endpoint named `/customers` in a particular specification might have looked like this with Version 1 of the mocking service:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
@@ -45,9 +51,9 @@ For example, suppose that this URI is being used in a tool:
 +
 `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575/api/customers+`
 +
-You would need to replace `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`, where `new-ID` is the ID that version 2 of the mocking service generates.
+You would need to replace `+https://mocksvc.mulesoft.com/mocks/7d19e624-a0d6-4d77-9fb8-8c78a8aeb575+` with `+https://anypoint.mulesoft.com/mocking/api/v1/links/{new-ID}+`, where `new-ID` is the ID that Version 2 of the mocking service generates.
 +
-You can get the new base URI from version 2 of the mocking service after step 1 above.
+You can get the new base URI from Version 2 of the mocking service after step 1 above.
 
 == New Features in Version 2 That You Can Use in API Designer
 
@@ -74,13 +80,13 @@ Add headers to your simulated calls to methods, changing the behavior of the moc
 The mocking service uses fewer resources, and responds to requests in less time on average.
 
 
-=== Authenticated Access to API Specifications That Are Shared on Exchange
+=== Authenticated Access to API Specifications That Are Shared on Anypoint Exchange
 
-Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Exchange, whether they are simulating calls in Exchange or using third-party tools. The mocking service now uses a base URI in Exchange that differs from the one that you can test with in API Designer.
+Only Anypoint Platform users can simulate calls to your API specification after it is published to a private instance of Anypoint Exchange, whether they are simulating calls in Anypoint Exchange or using third-party tools. The mocking service now uses a base URI in Anypoint Exchange that differs from the one that you can test with in API Designer.
 
-If you are in Exchange and trying to simulate a call to a method, you are prompted by Exchange to supply OAuth 2.0 credentials before sending a request.
+If you are in Anypoint Exchange and trying to simulate a call to a method, you are prompted by Anypoint Exchange to supply OAuth 2.0 credentials before sending a request.
 
-If you are using a third-party tool to simulate a call to an Exchange asset, you must use an authorization header in each request. To get the authentication token to include in the header, you must send a `POST` request to +https://anypoint.mulesoft.com/accounts/login+ that sends the username and password for your Anypoint Platform account, as in this example.
+If you are using a third-party tool to simulate a call to an Anypoint Exchange asset, you must use an authorization header in each request. To get the authentication token to include in the header, you must send a `POST` request to +https://anypoint.mulesoft.com/accounts/login+ that sends the username and password for your Anypoint Platform account, as in this example.
 
 ```
 $ curl -X POST \
@@ -94,7 +100,7 @@ The mocking service responds with an authentication token, like this:
 {"access_token": "071e65a7-35c7-465a-8e33-ea68659099bf","token_type": "bearer","redirectUrl": "/home/"}
 ```
 
-In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Exchange.
+In subsequent requests that are sent from the third-party tool, the sender must include the authentication token. For example, suppose there is the following asset in Anypoint Exchange.
 
 ```
 groupId: cb0e4f00-5026-4999-b5a5-dc2307b886c5
