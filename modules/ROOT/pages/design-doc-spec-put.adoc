@@ -35,8 +35,23 @@ include::partial$doc-of-methods-uri-parameters.adoc[]
 == The *Body* Section
 
 .The top of the *Body* section
-image::apid-doc-put-body-top[]
+image::apid-doc-put-body-top.png[]
 
 include::partial$doc-of-methods-body-subsection-top.adoc[]
+
+include::partial$doc-for-some-body-types.adoc[]
+
+== The *Response* Section
+
+include::partial$top-of-the-response-section-intro.adoc[]
+
+=== The Top of the *Response* Section
+
+.The top of the *Response* section
+image::apid-doc-put-overview-response-top.png[]
+
+include::partial$top-of-the-response-section.adoc[]
+
+=== The *Body* Subsection of the *Response* section
 
 include::partial$doc-for-some-body-types.adoc[]
