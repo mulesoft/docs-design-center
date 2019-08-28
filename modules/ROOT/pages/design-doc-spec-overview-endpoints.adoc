@@ -1,11 +1,11 @@
-= Overviews for Endpoints
+= Display the Overview Documentation for Endpoints
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-This documentation appears if you click the name of the endpoint either in the summary page for the API specification or in the table of contents.
+This display appears if you click the name of the endpoint either in the summary page for the API specification or in the table of contents.
 
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
