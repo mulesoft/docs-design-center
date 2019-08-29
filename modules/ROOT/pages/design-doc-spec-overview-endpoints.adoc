@@ -5,12 +5,12 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-This display appears if you click the name of the endpoint either in the summary page for the API specification or in the table of contents.
+This display appears if you click the name of the endpoint either in the summary page for an API specification or in the table of contents.
 
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
 
-== Descriptions of 1 through 6 in this image
+The numbered parts are:
 
 . The name of the endpoint.
 . If an endpoint implements a collection, this auto-generated text appears: "_Implements <collection>_".

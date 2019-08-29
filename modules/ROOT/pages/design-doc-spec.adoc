@@ -14,3 +14,4 @@ Problems:
 1. "You can add documentation to it": needs to be more detailed. You can add descriptions to types, methods, and other ... , so that other developers can understand what they are for."
 2. Need to explain that the Documentation pane adds much dynamic text to help organize and present the specification.
 3. Need to mention the Documentation pane overall gives you a way to check the structure of a spec or fragment. The documentation that you write as the developer appears within that structured presentation.
+4. Need to mention that the whole point of using the Documentation pane is to see how the structure and content of the specification will appear to users of Exchange, who will be able to view the spec with the same sort of UI.

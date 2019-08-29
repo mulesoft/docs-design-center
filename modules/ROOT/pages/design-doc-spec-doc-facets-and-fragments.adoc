@@ -1,1 +1,18 @@
-= Display the Content of Documentation Facets and Fragments
+= Display the Content of Documentation Nodes and and DocumentationItem Fragments
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can add documentation items either with `documentation` nodes or with `DocumentationItem` fragments (in RAML). The content can be either in plain text or in GiHub-flavored Markdown.
+
+To view the content of a `documentation` node in an API specification, click the navigation item in the *Documentation* pane, expand the *Documentation* entry, and select the title of the documentation item that you want to view. The title and content of that item is rendered in the *Documentation* pane.
+
+.The rendering of a documentation item
+image::apid-doc-documentationnode.png[]
+
+When you are creating a `DocumentationItem` fragment, the content of the fragment is rendered in the *Documentation* pane automatically. You do not need to open the table of contents and select it.
+
+.The rendering of a `DocumentationItem` fragment
+image::apid-doc-documentationitem.png[]
