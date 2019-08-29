@@ -5,22 +5,24 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-The first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
+If you are working in an API-specification project, the first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
 
 
 .The summary page for a specification
 image::apic-spec-summary-page.png[]
 
-== Descriptions of 1 through 5 in the image
+The numbered parts are:
 
-. The title that is defined by the `title` facet in the specification.
-. The version that is defined by the `version` facet.
+. The title that is defined by the `title` node in the specification.
+. The version that is defined by the `version` node.
 . One of three entries:
 +
-* If the mocking service is off, this field displays the base URI that is defined by the `baseUri` facet in the specification.
+* If the mocking service is off, this field displays the base URI that is defined by the `baseUri` node in the specification.
 * If the mocking service is on, this field displays the base URI that the mocking service generated and that you can use in tests of the endpoints in the specification.
 * If the mocking service is off and no base URI is defined, this field displays the message `Base URI not defined in the API file.'
 . This heading is auto-generated.
 . A generated list of the endpoints that are defined in the specification. You can click the name of an endpoint to open the documentation for that endpoint.
 +
 The list also displays in colored blocks the types of HTTP method that the specification defines for accessing each endpoint. You can click a method type to open the method's documentation.
+
+If you are working in an API-fragment project, there is no *Summary* page.
