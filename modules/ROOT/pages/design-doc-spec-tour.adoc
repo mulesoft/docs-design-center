@@ -20,4 +20,10 @@ The numbered parts are:
  ** For types, their names, data types, descriptions (if the specification or fragment defines them), accepted values (if the types are enums), and more.
  ** For security schemes, the type of scheme and the required authorization information.
  ** For `documentation` facets and fragments, the titles and content.
-. The navigation icon: click this to display a table of contents that lets you navigate to the different pages of the documentation.
+. The navigation icon: click this to show a table of contents that lets you navigate to the display for the item that you select.
+ ** Click *Summary* to see the display for a specification.
+ ** Click an endpoint's *Overview* link to see the display for that endpoint.
+ ** Click a method to see the display for that method.
+ ** Click a type to see the display for that type.
+ ** Click a security scheme to see the display for that scheme.
+ ** Click a documentation item to see the display of that documentation.
