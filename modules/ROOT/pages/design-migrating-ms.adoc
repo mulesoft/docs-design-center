@@ -24,10 +24,10 @@ The header must have this value:
 
 == Which Projects Must Be Migrated
 
-You must migrate any API-specification project that meets both of these conditions:
+You must migrate any API-specification project that meets _both_ of these conditions:
 
 * The mocking service was switched on for the project before January 10, 2019.
-* The mocking service has been running continuously since then.
+* The mocking service has been running continuously since it was switched on.
 
 == How to Migrate a Project to Version 2 of the Mocking Service
 
