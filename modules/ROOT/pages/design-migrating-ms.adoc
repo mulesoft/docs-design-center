@@ -90,6 +90,10 @@ When this header is set to true, the mocking service autogenerates a payload res
 +
 Specifies the status code or codes that the mocking service can choose from for the return message.
 
+* MS2-Status-Code-Selection
++
+Specifies either of two strategies for selecting a status code for a response to a request.
+
 * MS2-Strict-Model-Validations
 +
 When you set this header to false, you can use the mocking service even when the API specification contains errors.
