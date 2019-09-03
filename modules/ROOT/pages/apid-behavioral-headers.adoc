@@ -102,7 +102,7 @@ MS2-Status-Code:: Specifies the status code or codes that the mocking service ca
 If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
 ====
 
-MS2-Status-Code-Selection:: By default, when the mocking service responds to a request, it chooses the minimum status code that is defined for the corresponding method. For example, if you make a POST request to an endpoint that defines responses for status codes 201, 400, 409, and 500 in this order, by default the mocking service sends the response message that is defined for the 201 status code. With the MS2-Status-Code-Selection header, you can change this default behavior or the mocking service.
+MS2-Status-Code-Selection:: By default, when the mocking service responds to a request, it chooses the minimum status code that is defined for the corresponding method. For example, if you make a POST request to an endpoint that defines responses for status codes 201, 400, 409, and 500, by default the mocking service sends the response message that is defined for the 201 status code. With the MS2-Status-Code-Selection header, you can change this default behavior or the mocking service.
 +
 The possible values are:
 +
