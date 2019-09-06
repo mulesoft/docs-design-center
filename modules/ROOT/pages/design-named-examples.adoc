@@ -195,9 +195,9 @@ fullName:
 
 If you do not want to use more than one example and you do not want to name your single example, use the `example` facet instead of the `examples` facet.
 
-Here, the `example` facet includes `fragment1.raml`. Neither the facet nor the fragment names the example.
+In the following example, the `example` facet includes `fragment1.yaml`. Neither the facet nor the fragment names the example.
 
-If you wanted the `example` facet to point to `fragment2.raml`, you would need to change the filename in the facet. You could not include both fragments at the same time.
+If you want the `example` facet to point to `fragment2.raml`, you must change the filename in the facet. You cannot include both fragments at the same time.
 
 .api.raml
 ----
@@ -208,8 +208,27 @@ types:
     properties:
       givenName: string
       familyName: string
-   example: !include fragment1.raml
+   example: !include fragment1.yaml
 ----
+
+.fragment1.yaml
+----
+givenName: ”Chiaki”
+familyName: "Mukai"
+----
+
+.fragment2.yaml
+----
+givenName: "Kyung-won"
+familyName: "Park"
+----
+
+
+[NOTE]
+====
+The reason for using `.yaml` files for the examples and not `.raml` files is that, according to the RAML 1.0 specification, a NamedExample fragment that defines only one example is not valid. Therefore, you should not use NamedExample fragments when you are using single, unnamed examples.
+
+For example, the following NamedExample fragments are invalid:
 
 .fragment1.raml
 ----
@@ -224,3 +243,6 @@ familyName: "Mukai"
 givenName: "Kyung-won"
 familyName: "Park"
 ----
+
+API Designer ignores the header and uses the examples. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accord with the RAML 1.0 specification.
+====
