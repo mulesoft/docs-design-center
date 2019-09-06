@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can use the following behavioral headers to change the behavior of the mocking service. Use behavioral headers where you would normally specify other types of header in the API Console
+You can use the following behavioral headers to change the behavior of the mocking service. Use behavioral headers where you would normally specify other types of header when simulating requests to API specifications.
 
 
 MS2-Delay:: Indicates how many milliseconds the request should take to answer. You might want to use this header to simulate load on your server or latency in a network.
@@ -108,9 +108,9 @@ You can combine the use of MS2-Status-Code-Selection with the use of MS2-Error-L
 +
 The possible values of MS2-Status-Code-Selection are:
 +
-`FIRST`:: The mocking service sorts the list of status codes in ascending numeric order and returns the first. For example, if the specification defines the status codes for a POST method in the order 500, 409, 400, 200, the mocking service returns the response for the 200 status code.
+`FIRST`:: The mocking service sorts the list of status codes in ascending numeric order and returns the lowest status code. For example, if the specification defines the status codes for a POST method in the order 500, 409, 400, 200, the mocking service returns the response for the 200 status code.
 +
-`RANDOM`:: The mocking service randomly selects one of the status codes to return. For example, if the specification defines the status codes for a POST method 500, 409, 400, 200, the mocking service returns the response for the any one of them.
+`RANDOM`:: The mocking service randomly selects one of the status codes to return. For example, if the specification defines the status codes for a POST method 500, 409, 400, 200, the mocking service returns the response for any one of them.
 
 
 MS2-Strict-Model-Validations:: This header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
