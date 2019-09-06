@@ -1137,10 +1137,6 @@ types:
     type: string
     minimum: 1
 
-#%RAML 1.0
-title: Test
-invalidfacet:
-version:
 ----
 |
 [Fixed example]
@@ -1152,10 +1148,66 @@ types:
     type: string
     minLength: 1
 
+----
+|====
+
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect examples]
+----
+#%RAML 1.0
+title: Test
+invalidfacet:
+version:
+----
+|
+[Fixed example]
+----
 #%RAML 1.0
 title: Test
 version:
 
+----
+|====
+
+[cols="1a,1a"]
+|====
+| Incorrect | Correct
+
+|
+[Incorrect examples]
+----
+#%RAML 1.0
+title: Test
+types:
+  Prop:
+    type: string
+    required: false
+
+  Obj:
+    type: object
+    properties:
+      prop: 
+        type: Prop
+----
+|
+[Fixed example]
+----
+#%RAML 1.0
+title: Test
+types:
+  Prop:
+    type: string
+    
+  Obj:
+    type: object
+    properties:
+      prop: 
+        type: Prop
+        required: false
 ----
 |====
 
