@@ -33,9 +33,9 @@ Templates do not include the authentication credentials that are specified for t
 
 == Procedure
 
-. Select *Publish Template* from the drop-down menu which is in the top-right corner of the Flow Designer screen.
+. Click the *Publish* button, which is in the top-right corner of the Flow Designer screen.
 . Specify a name for the template.
-. Click the *Publish* button.
+. Click *Publish*.
 
 == Result
 
