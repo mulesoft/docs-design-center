@@ -5,13 +5,10 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-// 8/23/19: I very much need to see what an OAS spec looks like in APIC. The OAS specs that Kieran pointed me to on Google Drive are all 3.0.0, and APID does not support that version. In Slack on #api-designer-eng, I asked for OAS specs that APID supports: https://mulesoft.slack.com/archives/G1UVDDN8P/p1566585045000100?thread_ts=1565714204.001400&cid=G1UVDDN8P
-// I realized again today that I need OAS specs again because I was trying to describe how (at least, in RAML) types that are defined in fragments that are included in a spec with the `uses` facet are displayed in the TOC for the full spec, as well as in the TOCs for the fragments. But I realized I was describing only the behavior for RAML, not for OAS.
+As you create an API specification or API fragment in the code editor in API Designer, you can add documentation to it. You can write the documentation either in plain text or in GitHub-flavored Markdown.
 
-As you create an API specification or API fragment, you can add documentation to it, so that, after you publish the specification, other developers can learn about them. As you add your documentation in either plain text or in GitHub-flavored Markdown, you can review it in the right panel of the code editor to see how it is rendered, ensure that it is rendered correctly, and ensure that it says what you want it to say.
-////
-Problems:
-1. "You can add documentation to it": needs to be more detailed. You can add descriptions to types, methods, and other ... , so that other developers can understand what they are for."
-2. Need to explain that the Documentation pane adds much dynamic text to help organize and present the specification.
-3. Need to mention the Documentation pane overall gives you a way to check the structure of a spec or fragment. The documentation that you write as the developer appears within that structured presentation.
-4. Need to mention that the whole point of using the Documentation pane is to see how the structure and content of the specification will appear to users of Exchange, who will be able to view the spec with the same sort of UI.
+As you document a specification or fragment, you can review the documentation in the right-hand pane, which is the *Documentation* pane. You open this pane by clicking the *Documentation* tab at the bottom of the right-hand panel of the code editor. The *Documentation* pane presents a view of your specification or fragment in a structured, hierarchical display, starting with a summary of the endpoints in an entire specification and letting you drill down into aspects of methods, types, security schemes, and more.
+
+Therefore, the *Documentation* pane can help you to ensure that the specifications and fragments that you create include what you intend. You can even simulate calls to an API specification by using the *Try It* feature that you can open from this pane.
+
+Because Anypoint Exchange presents the same functionality as exists in the *Documentation* pane, developers who want to evaluate a specification or fragment that you have published can review its structure and documentation exactly as you reviewed it in API Designer. Those developers can even simulate calls to API specifications published in Exchange.
