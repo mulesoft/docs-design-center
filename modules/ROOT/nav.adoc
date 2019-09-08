@@ -15,7 +15,7 @@
   *** xref:design-branching.adoc[Fork an API Project]
  ** xref:design-doc-spec.adoc[Add Documentation to an API Specification]
   *** xref:design-doc-spec-tour.adoc[Tour of the Documentation Pane]
-  *** xref:design-doc-spec-toc.adoc[Table of Contents]
+  *** xref:design-doc-spec-toc.adoc[The Table of Contents for an API Specification]
   *** xref:design-doc-spec-summary.adoc[Summary Page for API Specifications]
   *** xref:design-doc-spec-overview-endpoints.adoc[Display the Overview Documentation for Endpoints]
   *** xref:design-doc-spec-delete.adoc[Display the Documentation of DELETE HTTP Methods]

@@ -12,3 +12,8 @@ As you document a specification or fragment, you can review the documentation in
 Therefore, the *Documentation* pane can help you to ensure that the specifications and fragments that you create include what you intend. You can even simulate calls to an API specification by using the *Try It* feature that you can open from this pane.
 
 Because Anypoint Exchange presents the same functionality as exists in the *Documentation* pane, developers who want to evaluate a specification or fragment that you have published can review its structure and documentation exactly as you reviewed it in API Designer. Those developers can even simulate calls to API specifications published in Exchange.
+
+== See Also
+
+* xref:design-doc-spec-tour.adoc[Tour of the Documentation Pane]
+* xref:design-test-endpoints.adoc[Test Endpoints by Simulating Calls to Methods]
