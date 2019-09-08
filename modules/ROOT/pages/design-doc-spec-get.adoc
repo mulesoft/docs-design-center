@@ -14,7 +14,7 @@ image::apid-doc-get-overview.png[]
 *The Numbered Parts of the Diagram*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
-. Auto-generated text that appears if the definition of the method uses one or more collections.
+. Generated text that appears if the definition of the method uses one or more collections.
 include::partial$doc-of-methods-4-and-5.adoc[]
 . The *Query parameters* section, which lists both the required and optional parameters to include in requests.
 include::partial$doc-of-methods-last-2.adoc[]
@@ -40,7 +40,7 @@ image::apic-limit.png[]
 . The name that is defined for the query parameter.
 . The data type of the parameter. If the query parameter is required to be included in requests, the annotation `Required` appears next to the data type.
 . The description that is given in the `description` facet for the query parameter.
-. Auto-generated text that displays (for number types) the default value, the minimum value, and the maximum value.
+. Generated text that displays (for number types) the default value, the minimum value, and the maximum value.
 
 
 == The *Response* Section

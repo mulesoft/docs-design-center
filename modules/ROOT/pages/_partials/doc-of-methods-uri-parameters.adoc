@@ -1,4 +1,4 @@
 *The Numbered Parts of the Diagram*
 
-. An auto-generated header.
+. A generated header.
 . A list of the URI parameters, each of which is labeled `Required`. The data type of each parameter is also displayed.

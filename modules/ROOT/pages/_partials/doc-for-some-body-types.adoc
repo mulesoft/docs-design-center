@@ -6,8 +6,8 @@ image::apid-doc-get-overview-response-body-types.png[]
 . The name of the type.
 . The data type of the type.
 . The description that is defined in the `description` facet for the type.
-. An auto-generated indicator that appears when the specification defines the type as required.
+. A generated indicator that appears when the specification defines the type as required.
 . Examples that are defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. For the type `item.paymentMethodType` in the image, two examples would be generated. The values in generated examples are empty strings.
-. A line with auto-generated text -- `Any of:` --and that shows which types are allowed in a union type.
-. An auto-generated indicator that appears when a type is an `enum`.
-. A line with auto-generated text -- `Enum values` -- and that shows the permitted values for an enum.
+. A line with generated text -- `Any of:` --and that shows which types are allowed in a union type.
+. A generated indicator that appears when a type is an `enum`.
+. A line with generated text -- `Enum values` -- and that shows the permitted values for an enum.

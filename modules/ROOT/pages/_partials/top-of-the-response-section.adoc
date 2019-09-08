@@ -1,5 +1,5 @@
 *The Numbered Parts of the Diagram*
 
-1. The auto-generated title for this section.
+1. The generated title for this section.
 2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
 3. The description that is defined in the `description` facet for responses that use the specified status code. In this image, the description is for responses that the selected status code.

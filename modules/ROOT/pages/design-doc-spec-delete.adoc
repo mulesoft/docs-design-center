@@ -60,6 +60,6 @@ image::apid-doc-delete-overview-response-body-types.png[]
 
 . The name of the type.
 . The data type of the type.
-. An auto-generated label that appears when the specification defines a type as required.
+. A generated label that appears when the specification defines a type as required.
 . The description that is defined in the description facet for the type.
-. An auto-generated indicator that appears when a type is an enum, as well as a line with auto-generated text — Enum values — and that shows the permitted values for an enum.
+. A generated indicator that appears when a type is an enum, as well as a line with generated text — Enum values — and that shows the permitted values for an enum.
