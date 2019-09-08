@@ -1,4 +1,4 @@
-= Summary Page for API Specifications
+= View the Summary Page for API Specifications
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

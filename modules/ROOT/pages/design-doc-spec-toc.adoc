@@ -1,11 +1,24 @@
-= The Table of Contents for an API Specification
+= View the Table of Contents for an API Specification
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
 
-The table of contents that appears for an API specification when you click the navigation icon (image:apid-nav-icon.png[title="Navigation icon"])in the *Documentation* pane can contain several sections when you select the main file in a RAML API-specification project or the file in an OAS project:
+The table of contents for an API specification provides clickable entries for navigating through the specification's documentation.
+
+== View the Table of Contents
+
+. In the left-hand pane of the code editor, select the main file in a RAML API-specification project or the file in an OAS project, if it is not already selected.
+. Click the *Documentation* tab to open the *Documentation* pane.
++
+*Result:* After a brief period of time in which the code editor parses the specification (immediately for a simple specification, a few seconds for a complex one), the summary page for the specification appears.
+. Click the navigation icon  (image:apid-nav-icon.png[title="Navigation icon"]) just above the top-left corner of the pane.
+*Result:* The table of contents slides out from the left side of the pane.
+
+== Sections in the Table of Contents
+
+The table of contents can display these sections:
 
 * *Summary*
 +
