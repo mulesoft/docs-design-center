@@ -25,6 +25,7 @@ This image shows the summary page for the specification that is in the code edit
  ** For types, their names, data types, descriptions (if the specification or fragment defines them), accepted values (if the types are enums), and more.
  ** For security schemes, the type of scheme and the required authorization information.
  ** For `documentation` facets and fragments, the titles and content.
+
 . The navigation icon
 +
 Click this to show a table of contents that lets you navigate to the documentation for the item that you select.
