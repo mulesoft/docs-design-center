@@ -5,8 +5,28 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Intro specific to `DELETE` methods
 
+As you define and document a DELETE method for an endpoint, you can review the definition and documentation in the *Documentation* pane.
+
+To open the documentation of a method, follow these steps:
+
+. In the left-hand pane of the code editor, select the main file for your API specification, if it is not already selected.
+. Follow either of these sets of steps:
+* Option one:
++
+.. Scroll down the summary page for the specification to find the endpoint that the method is defined for. If you do not see the summary page, click the *Documentation* tab at the bottom of the right-hand panel.
++
+.. Click the method.
+
+* Option two:
++
+.. Click the navigation icon (image:apid-nav-icon.png[title="Navigation icon"]), which is just above the top-left corner of the *Documentation* pane.
++
+.. In the *Endpoints* section of the table of contents, expand the endpoint that the method is defined for.
++
+.. Click the entry for the method.
+
+*Result:* The *Documentation* pane displays the documentation of the method, which looks like this:
 
 .Display of the documentation of a `DELETE` HTTP method
 image::apic-delete-overview.png[]
