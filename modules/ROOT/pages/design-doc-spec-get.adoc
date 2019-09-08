@@ -5,7 +5,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Intro specific to `GET` methods
+As you define and document a GET method for an endpoint, you can review the definition and documentation in the *Documentation* pane.
+
+include::partial$doc-of-methods-opening.adoc[]
 
 
 .Display of the documentation of a `GET` HTTP method

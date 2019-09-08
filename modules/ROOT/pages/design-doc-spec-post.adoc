@@ -5,8 +5,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Intro specific to `POST` methods
+As you define and document a POST method for an endpoint, you can review the definition and documentation in the *Documentation* pane.
 
+include::partial$doc-of-methods-opening.adoc[]
 
 .Display of the documentation of a `POST` HTTP method
 image::apic-post-overview.png[]
