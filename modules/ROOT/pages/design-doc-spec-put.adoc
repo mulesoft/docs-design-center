@@ -10,7 +10,7 @@ Intro specific to `PUT` methods
 .Display of the documentation of a `PUT` HTTP method
 image::apic-put-overview.png[]
 
-The numbered parts are:
+*The Numbered Parts of the Diagram*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
 include::partial$doc-of-methods-4-and-5.adoc[]

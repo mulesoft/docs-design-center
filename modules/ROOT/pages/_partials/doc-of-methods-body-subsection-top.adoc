@@ -1,4 +1,4 @@
-The numbered parts are:
+*The Numbered Parts of the Diagram*
 
 1. The auto-generated title of the section.
 2. The media type of the response body for the selected status code.

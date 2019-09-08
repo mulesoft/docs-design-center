@@ -11,7 +11,7 @@ Intro specific to `POST` methods
 .Display of the documentation of a `POST` HTTP method
 image::apic-post-overview.png[]
 
-The numbered parts are:
+*The Numbered Parts of the Diagram*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
 include::partial$doc-of-methods-4-and-5.adoc[]
