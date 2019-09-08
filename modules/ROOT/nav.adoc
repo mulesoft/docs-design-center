@@ -18,6 +18,7 @@
   *** xref:design-doc-spec-toc.adoc[View the Table of Contents for an API Specification]
   *** xref:design-doc-spec-summary.adoc[View the Summary Page for API Specifications]
   *** xref:design-doc-spec-overview-endpoints.adoc[Display the Overview Documentation for Endpoints]
+  *** xref:design-doc-spec-method.adoc[Display the Documentation of an HTTP Method]
   *** xref:design-doc-spec-delete.adoc[Display the Documentation of DELETE HTTP Methods]
   *** xref:design-doc-spec-get.adoc[Display the Documentation of GET HTTP Methods]
   *** xref:design-doc-spec-post.adoc[Display the Documentation of POST HTTP Methods]

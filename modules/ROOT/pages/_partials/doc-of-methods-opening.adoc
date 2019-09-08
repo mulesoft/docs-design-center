@@ -16,4 +16,4 @@ To open the documentation of a method, follow these steps:
 +
 .. Click the entry for the method.
 
-*Result:* The *Documentation* pane displays the documentation of the method, which looks like this:
+*Result:* The *Documentation* pane displays the documentation of the method, the top of which looks like this:
