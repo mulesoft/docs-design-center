@@ -1,7 +1,7 @@
 .Display of the documentation for some of the types that are in the body.
 image::apid-doc-get-overview-response-body-types.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The name of the type.
 . The data type of the type.

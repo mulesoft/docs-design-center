@@ -10,7 +10,7 @@ This display appears if you click the name of the endpoint either in the summary
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The name of the endpoint.
 . If an endpoint implements a collection, this generated text appears: "_Implements <collection>_". You do not need to add this text to your specifications.

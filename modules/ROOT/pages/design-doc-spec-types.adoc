@@ -5,11 +5,27 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Each type that is defined in a specification or in an external library that is imported by the `uses` facet (RAML) has its own page. At the top of the page is the name of the type and its description, if the specification defines a description.
+Each type that is defined in a specification or in an external library that is imported by the `uses` facet (RAML) has its own documentation.
 
-Next appears an example of the type. If the specification does not define an example, and if the specification defines a media type globally, then the *Documentation* pane generates an example. The values in the example are all empty strings. You can copy examples to use them in applications that will call the API.
+To open the documentation of a type, follow these steps:
 
-After the example, the elements of the type are listed and described. Any elements that are required to be in the type are labelled `Required`.
+. In the left-hand pane of the code editor, select the main file for your API specification, if it is not already selected.
+. Follow either of these sets of steps:
+. Click the navigation icon (image:apid-nav-icon.png[title="Navigation icon"]), which is just above the top-left corner of the *Documentation* pane.
+. In the *Types* section of the table of contents, click the entry for the type.
 
-.The documentation of a type that is defined in a specification
-image::apid-doc-type-full-panel.png[]
+*Result:* The *Documentation* pane displays the documentation of the type.
+
+The documentation of a simple type might look like this:
+
+
+.The documentation of a simple type
+image::apid-doc-simple-type.png[]
+
+*The Numbered Parts of the Image*
+
+. The name of the type
+. The value of the `description` facet for the type
+. The name of a property of the type
+. The data type of the property
+. A label that is generated if the specification defines the type as required

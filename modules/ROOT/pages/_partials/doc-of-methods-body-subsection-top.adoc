@@ -1,4 +1,4 @@
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 1. The generated title of the section.
 2. The media type of the response body for the selected status code.

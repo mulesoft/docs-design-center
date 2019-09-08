@@ -14,7 +14,7 @@ include::partial$doc-of-methods-opening.adoc[]
 .Display of the documentation of a `DELETE` HTTP method
 image::apic-delete-overview.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
 include::partial$doc-of-methods-4-and-5.adoc[]
@@ -59,7 +59,7 @@ include::partial$doc-of-methods-body-subsection-top.adoc[]
 
 image::apid-doc-delete-overview-response-body-types.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The name of the type.
 . The data type of the type.

@@ -12,7 +12,7 @@ include::partial$doc-of-methods-opening.adoc[]
 .Display of the documentation of a `POST` HTTP method
 image::apic-post-overview.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
 include::partial$doc-of-methods-4-and-5.adoc[]

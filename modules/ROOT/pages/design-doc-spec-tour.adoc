@@ -10,7 +10,7 @@ The *Documentation* pane presents the content of an API specification or fragmen
 .The *Documentation* pane in API Designer's code editor
 image::apic-summary-page.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The *Documentation* tab
 +

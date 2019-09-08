@@ -13,7 +13,7 @@ include::partial$doc-of-methods-opening.adoc[]
 .Display of the documentation of a `GET` HTTP method
 image::apid-doc-get-overview.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 include::partial$doc-of-methods-1-through-3.adoc[]
 . Generated text that appears if the definition of the method uses one or more collections.
@@ -37,7 +37,7 @@ This section lists the parameters that act as a filter to narrow the range of da
 .A typical listing for a query parameter
 image::apic-limit.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The name that is defined for the query parameter.
 . The data type of the parameter. If the query parameter is required to be included in requests, the annotation `Required` appears next to the data type.

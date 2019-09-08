@@ -1,4 +1,4 @@
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 1. The generated title for this section.
 2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.

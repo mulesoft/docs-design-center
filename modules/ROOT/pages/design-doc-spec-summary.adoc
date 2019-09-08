@@ -11,7 +11,7 @@ If you are working in an API-specification project, the first time you click the
 .An example of a summary page for a specification
 image::apic-spec-summary-page.png[]
 
-*The Numbered Parts of the Diagram*
+*The Numbered Parts of the Image*
 
 . The title that is defined by the `title` node in the specification.
 . The version that is defined by the `version` node.
