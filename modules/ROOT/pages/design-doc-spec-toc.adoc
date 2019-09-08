@@ -7,8 +7,18 @@ endif::[]
 
 The table of contents that appears for an API specification when you click the navigation icon (image:apid-nav-icon.png[title="Navigation icon"])in the *Documentation* pane can contain several sections when you select the main file in a RAML API-specification project or the file in an OAS project:
 
-* *Summary*: Click this to go to the summary page of the specification.
-* *Endpoints*: Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the documentation of the endpoint's methods.
-* *Types*: Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
-* *Security*: Expand this section to see a list of the security schemes that are defined in the specification. Click a scheme to open its documentation.
-* *Documentation*: Expand this section to see a list of the titles of any `documentation` nodes or in a DocumentationItem fragment.
+* *Summary*
++
+Click this to go to the summary page of the specification.
+* *Endpoints*
++
+Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the documentation of the endpoint's methods.
+* *Types*
++
+Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
+* *Security*
++
+This section appears if a specification defines one or more security schemes. Expand this section to see a list of those schemes. Click a scheme to open its documentation.
+* *Documentation*
++
+This section appears if a specification includes one or more `documentation` nodes. Expand this section to see a list of the titles of the `documentation` nodes. Click a title read the documentation in the corresponding node.
