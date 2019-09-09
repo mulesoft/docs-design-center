@@ -17,7 +17,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 . In the project, click the three dots to the right of the heading *Files* and select *Import*.
 . In the *Import* dialog, select *File or Zip* and select the file from your computer, or select *URL* and specify the URL, if the file is online. Then, click *Import*.
 . Delete the file that API Designer created by default. This file has the same name as your project.
-. Click the *Publish to Exchange* icon (image:publish-exchange.png[Publish to Exchange icon]).
+. Click the *Publish* button, and then click *Publish to Exchange*.
 
 == See Also
 

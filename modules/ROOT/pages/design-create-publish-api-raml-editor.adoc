@@ -58,7 +58,7 @@ The files downloaded through this option are not guaranteed to be valid. This op
 
 
 == What to do next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish to Exchange* button that is in the top-right corner of the code editor to open the *Publish API Specification to Exchange* dialog.
+After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish* button that is in the top-right corner of the code editor, and then click *Publish to Exchange* to open the *Publish API Specification to Exchange* dialog.
 
 
 == See also
