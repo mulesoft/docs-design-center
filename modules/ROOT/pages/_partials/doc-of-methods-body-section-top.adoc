@@ -1,1 +1,1 @@
-This section describes the body that is defined for requests and displays an example.
+This section describes the body that is defined for requests that require bodies and displays an example.

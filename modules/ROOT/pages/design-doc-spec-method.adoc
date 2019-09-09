@@ -81,27 +81,49 @@ image::apic-limit.png[]
 
 == The *Body* Section
 
-include::partial$doc-of-methods-body-section-top.adoc[]
+This section describes the body that is defined for requests that require bodies and displays an example.
 
 .The top of the *Body* section
 image::apid-doc-post-overview-request-body.png[]
 
-include::partial$doc-of-methods-body-subsection-top.adoc[]
+*The Numbered Parts of the Image*
 
-include::partial$doc-for-some-body-types.adoc[]
+1. The generated title of the section.
+2. The media type of the response body for the selected status code.
+3. The name of the type that is used as the response body.
+4. The description that is given in the `description` facet for the type.
+5. The example that is defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. The values in generated examples are empty strings.
+
+.Display of the documentation for some of the types that are in the body.
+image::apid-doc-get-overview-response-body-types.png[]
+
+*The Numbered Parts of the Image*
+
+. The name of the type.
+. The data type of the type.
+. The description that is defined in the `description` facet for the type.
+. A generated indicator that appears when the specification defines the type as required. You do not need to add the indicator to the definition of the type in a specification.
+. Examples that are defined for the type. If the specification does not define an example and if the media type for examples is defined globally in the specification, then an example is generated. For the type `item.paymentMethodType` in the image, two examples would be generated. The values in generated examples are empty strings.
+. A line with generated text -- `Any of:` --and that shows which types are allowed in a union type. You do not need to add this text to a specification.
+. A generated indicator that appears when a type is an `enum`. You do not need to add this text to a specification.
+. A line with generated text -- `Enum values` -- and that shows the permitted values for an enum. You do not need to add this text to a specification.
 
 
 == The *Response* Section
 
-include::partial$top-of-the-response-section-intro.adoc[]
+This section displays the response for each of the status codes that the API can return for calls to the HTTP method. For each status code, the body of the response is displayed. The details in each section include the media type of the response body, the name of the type being used for the response, an example of a response message, and descriptions of the types that are allowed in the response. Types that are required to be in the body are labelled `Required`.
 
 === The Top of the *Response* Section
 
-.The top of the *Response* section
+.The top of the *Response* section for a `POST` method
 image::apid-doc-post-overview-response-top.png[]
 
-include::partial$top-of-the-response-section.adoc[]
+*The Numbered Parts of the Image*
+
+1. The generated title for this section.
+2. The different status codes that the specification defines as possible responses to requests. Click a status code to view more information about it.
+3. The description that is defined in the `description` facet for responses that use the specified status code. In this image, the description is for responses that the selected status code.
 
 === The *Body* Subsection
 
-include::partial$doc-of-methods-body-subsection-btm-post-put.adoc[]
+This layout of this section is identical to the layout of the *Body* section described above. The only difference between that section and the *Body* subsection is that the subsection displays the response body and its types, not the request body and its types.
