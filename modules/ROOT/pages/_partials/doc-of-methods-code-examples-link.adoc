@@ -1,1 +1,0 @@
-For more information about this section, see xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with `curl`, `http`, or an Application].

@@ -1,2 +1,0 @@
-. The description that is specified in the method's `description` facet. You can write the description either in plain text or in GitHub-flavored Markdown.
-. The *Code examples* section, which provides a sample command for `curl` for sending a request to the endpoint, as well as code that you can use to access the endpoint from JavaScript, Python, C, and Java applications.

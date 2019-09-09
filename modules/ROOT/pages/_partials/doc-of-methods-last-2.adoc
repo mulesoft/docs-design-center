@@ -1,2 +1,0 @@
-. The *Response* section, which contains a section for each status code that the endpoint can return for the request.
-. A link to the previous endpoint in the table of contents and in the list of endpoints that is in the summary documentation of the specification, a link to the next endpoint, or links to both.
