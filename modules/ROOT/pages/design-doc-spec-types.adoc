@@ -16,8 +16,26 @@ To open the documentation of a type, follow these steps:
 
 *Result:* The *Documentation* pane displays the documentation of the type.
 
-The documentation of a simple type might look like this:
+== Documentation of Simple Types
 
+Suppose that you defined this simple type in a specification:
+
+.Example of a simple type
+----
+ProductCharacteristic:
+  type: object
+  description: |
+    characteristic of a product
+  properties:
+    code:
+      type: string
+    name:
+      type: string
+    description:
+      type: string
+----
+
+The documentation of this simple type looks like this:
 
 .The documentation of a simple type
 image::apid-doc-simple-type.png[]
@@ -29,3 +47,66 @@ image::apid-doc-simple-type.png[]
 . The name of a property of the type
 . The data type of the property
 . A label that is generated if the specification defines the type as required
+
+Here is another simple type, this one with examples, together with its definition in the specification.
+
+[%header,cols="1a,1a"]
+|===
+|Type Definition
+|Documentation
+
+|----
+SalesUnit:
+  description: \|
+    sales unit
+  type: object
+  properties:
+    code:
+      type: string
+    name:
+      type: string
+  examples:
+    each:
+      code: EA
+      name: Each
+    case:
+      code: CS
+      name: case
+----
+|image::apid-doc-types-salesunit.png[]
+
+|===
+
+== Documentation of More Complex Types
+
+
+
+[%header,cols="1a,1a"]
+|===
+|Type Definition
+|Documentation
+
+|----
+Location:
+  type: object
+  description: \|
+    location
+  properties:
+    locationId:
+      type: string \| nil
+      description: \|
+        Identifier of location (storeId or warehouseId or partnerId)
+    locationType:
+      type: string
+      description: \|
+        Type of location
+      enum: [STORE, WAREHOUSE, PARTNER]
+    deliveryMethod:
+      type: string
+      description: \|
+        Type of delivery
+      enum: [SHIPMENT, PICKUP]
+----
+|image::apid-doc-types-location.png[]
+
+|===
