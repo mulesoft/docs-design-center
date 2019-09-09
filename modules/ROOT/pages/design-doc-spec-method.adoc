@@ -58,12 +58,15 @@ image::apid-doc-method-security.png[]
 
 == The *URI parameters* Section
 
-include::partial$doc-of-methods-uri-parameters-intro.adoc[]
+This section lists the parameters that must be included in the URI in requests. The parameters identify the entity (e.g. customer, product, etc.) that the request refers to.
 
 .The *URI parameters* section for a `DELETE` method
 image::apid-doc-delete-uri-parameters.png[]
 
-include::partial$doc-of-methods-uri-parameters.adoc[]
+*The Numbered Parts of the Image*
+
+. A generated header.
+. A list of the URI parameters, each of which is labeled `Required`. The data type of each parameter is also displayed.
 
 == The *Query parameters* Section
 
