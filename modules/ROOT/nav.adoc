@@ -8,6 +8,7 @@
  ** xref:design-scenarios-s6m3-for-published-apis.adoc[Using Published RAML API Specifications in Studio 6.x and Mule Runtime 3.x]
  ** xref:design-scenarios-s7m4-for-published-apis.adoc[Using Published RAML API Specifications in Studio 7.x and Mule Runtime 4.x]
 * xref:design-create-publish-api-specs.adoc[API Designer]
+ ** xref:design-migrating-ms.adoc[Migrate API-Specification Projects to Version 2 of the Mocking Service]
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Code Editor]
   *** xref:design-import-files.adoc[Import Files into an API Project]
