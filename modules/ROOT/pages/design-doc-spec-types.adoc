@@ -16,11 +16,10 @@ To open the documentation of a type, follow these steps:
 
 *Result:* The *Documentation* pane displays the documentation of the type.
 
-== Documentation of Simple Types
+== Documentation of a Simple Type
 
 Suppose that you defined this simple type in a specification:
 
-.Example of a simple type
 ----
 ProductCharacteristic:
   type: object
@@ -48,6 +47,8 @@ image::apid-doc-simple-type.png[]
 . The data type of the property
 . A label that is generated if the specification defines the type as required
 
+== Other Examples
+
 Here is another simple type, this one with examples, together with its definition in the specification.
 
 [%header,cols="1a,1a"]
@@ -73,13 +74,32 @@ SalesUnit:
       code: CS
       name: case
 ----
-|image::apid-doc-types-salesunit.png[]
+| image::apid-doc-types-salesunit.png[]
 
 |===
 
-== Documentation of More Complex Types
+Here is an example that shows how patterns, maximums, and minimums are displayed.
 
+[%header,cols="1a,1a"]
+|===
+|Type Definition
+|Documentation
 
+|----
+Identifier:
+  type: string
+  description: \|
+    the unique product identifier
+  pattern: ^[0-9A-Za-z-]+
+  minLength: 3
+  maxLength: 36
+----
+
+| image::apid-doc-types-identifier.png[]
+
+|===
+
+Finally, here is an example that shows how properties that can take null values are displayed and how enums are displayed.
 
 [%header,cols="1a,1a"]
 |===
@@ -95,7 +115,8 @@ Location:
     locationId:
       type: string \| nil
       description: \|
-        Identifier of location (storeId or warehouseId or partnerId)
+        Identifier of location (storeId \
+          or warehouseId or partnerId)
     locationType:
       type: string
       description: \|
