@@ -27,7 +27,6 @@
   *** xref:design-doc-spec-security-schemes.adoc[Display the Documentation of Security Schemes]
   *** xref:design-doc-spec-doc-facets-and-fragments.adoc[Display the Content of Documentation Facets and Fragments]
  ** xref:design-test-endpoints.adoc[Test Endpoints by Simulating Calls to Methods]
-  *** xref:design-test-endpoints-visual-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Visual Editor]
   *** xref:design-test-endpoints-code-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Code Editor]
   *** xref:design-test-endpoints-rest-client.adoc[Test Endpoints with a REST Client]
   *** xref:design-test-endpoints-multiple-tools.adoc[Test Endpoints with cURL, HTTP, or an Application]

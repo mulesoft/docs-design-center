@@ -111,6 +111,18 @@ Use the header `MS2-Status-Code` to specify the status code or codes that the mo
 If you use this header together with MS2-Error-Rate, you must specify both a non-error status code and an error status code. Separate the two status codes with a comma. For example, you might want the mocking service to return a 201 message, if there is no error, or a 401 status code, if there is an error; in this case, you would specify `201,401` for the value.
 ====
 
+== Influence How the Mocking Service Selects a Status Code
+
+By default, when the mocking service responds to a request, it chooses the minimum status code that is defined for the corresponding method. For example, if you make a POST request to an endpoint that defines responses for status codes 201, 400, 409, and 500, by default the mocking service sends the response message that is defined for the 201 status code. With the MS2-Status-Code-Selection header, you can change this default behavior or the mocking service.
++
+You can combine the use of MS2-Status-Code-Selection with the use of MS2-Error-Level. The mocking service sorts in ascending numeric order the status codes that are in the range of error status codes specified by MS2-Error-Level, and then returns an error status code from that range, according to the strategy specified by MS2-Status-Code-Selection.
++
+The possible values of MS2-Status-Code-Selection are:
++
+`FIRST`:: The mocking service sorts the list of status codes in ascending numeric order and returns the lowest status code. For example, if the specification defines the status codes for a POST method in the order 500, 409, 400, 200, the mocking service returns the response for the 200 status code.
++
+`RANDOM`:: The mocking service randomly selects one of the status codes to return. For example, if the specification defines the status codes for a POST method 500, 409, 400, 200, the mocking service returns the response for any one of them.
+
 == Test API Specifications That Contain Errors
 
 The `MS2-Strict-Model-Validations` header can be helpful when you are simulating calls to an API with a specification that was written before API Designer switched to its stricter parser on January 10, 2019.
