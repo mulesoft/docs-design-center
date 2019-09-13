@@ -127,6 +127,8 @@ types:
     examples: !include fragment.yaml
 ----
 
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
 * In the fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
 +
 .fragment.yaml
