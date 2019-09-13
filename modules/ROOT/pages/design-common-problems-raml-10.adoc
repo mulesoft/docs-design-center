@@ -138,54 +138,8 @@ myExample:
 
 For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Named Examples].
 
-////
-=== Naming examples twice
-
-??? Now that I've changed the example to be correct, the section title and intro do not match it.???
-
-If an example is named twice, the editor displays this message:
-
-----
-should have required property '<name-of-property>'
-----
-
-For example, suppose that a specification defines the property `firstName` and links to a NamedExample fragment by giving the example the name `someName`:
-----
-#%RAML 1.0
-title: Example API Spec
-/tiers:
- post:
-   body:
-     application/json:
-       properties:
-         firstName: string
-       examples: !include ex.yaml
-----
-
-Further suppose that the fragment also names the example, giving it the name `someFragmentName`:
-
-.ex.yaml
-----
-firstName: Martin
-----
-
-In this case, the editor would display this message because the parser interprets `someFragmentName` as the name of the property:
-
-----
-should have required property 'firstName'
-----
-
-To resolve this type of problem, remove either the name in the `examples` facet in the specification or the name in the NamedExample fragment.
-
-If you choose to remove the name from the NamedExample fragment, you must remove the word "NamedExample" from the declaration in the fragment. For example, you would change the NamedExample fragment used in the situation above to look like this:
-
-----
-firstName: Martin
-----
-
-
 <<Back to the top>>
-////
+
 
 [.parser\*invalid-fragment-ref#parser\*invalid-fragment-ref]
 == Appending references with hash symbols to filenames in `!include` statements
