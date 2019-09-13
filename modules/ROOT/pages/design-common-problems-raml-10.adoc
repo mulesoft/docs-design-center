@@ -1,4 +1,7 @@
 = Common Problems Found in RAML 1.0 API Specifications
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 [[bookmark-a,Back to the top]]
 
@@ -121,13 +124,13 @@ types:
     properties:
        a: string
        b: integer
-    examples: !include fragment.raml
+    examples: !include fragment.yaml
 ----
 
-* In the NamedExample fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
+* In the fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
 +
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
 myExample:
     a: "b"
     b: 1
@@ -309,12 +312,13 @@ title: Example API Spec
        properties:
          firstName: string
        examples:
-         someName: !include ex.raml
+         someName: !include ex.yaml
 ----
 
-Further suppose that the NamedExample fragment also names the example, giving it the name `someFragmentName`:
+Further suppose that the fragment also names the example, giving it the name `someFragmentName`:
+
+.ex.yaml
 ----
-#%RAML 1.0 NamedExample
 someFragmentName:
   firstName: Martin Gutierrez
 ----
@@ -1190,7 +1194,7 @@ types:
   Obj:
     type: object
     properties:
-      prop: 
+      prop:
         type: Prop
 ----
 |
@@ -1201,11 +1205,11 @@ title: Test
 types:
   Prop:
     type: string
-    
+
   Obj:
     type: object
     properties:
-      prop: 
+      prop:
         type: Prop
         required: false
 ----

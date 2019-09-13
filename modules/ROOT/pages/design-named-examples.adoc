@@ -1,12 +1,40 @@
 = Guide to Named Examples in RAML 1.0
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
-If you want to use one or more named examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these three rules:
+If you want to use examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these rules:
 
-* To use a single, named example, you must use the `examples` facet when you include the corresponding NamedExample fragment.
+* Use the `example` facet when you include the `.yaml` file for a single example.
+* Use the `examples` facet to include the `.raml` files for one or more NamedExample fragments.
+* Use the `examples` facet when you include `.yaml` files that each contain a single example.
 
-* To use more than one named example, you must use the `examples` facet when you include the corresponding NamedExample fragments.
+1. single example:
+----
+example: !include my/example.yaml
+----
 
-* All example fragments must have the header "#%RAML 1.0 NamedExample"
+2. multiple examples:
+----
+examples:
+  myExample1: !include my/example1.yaml
+  myExample2: !include my/example2.yaml
+----
+
+3. named example(s):
+----
+examples: !include my/named-example(s).raml
+----
+
+- only 3. is a named example fragment, i.e. with a #%RAML 1.0 NamedExample header, 1. and 2. includes are all yaml files (no #%RAML... header)
+- 3. can contain 1 or many examples (and we recommend many, at least 2), e.g.
+----
+#%RAML 1.0 NamedExample
+myExample1:
+  (...)
+myExample2:
+  (...)
+----
 
 Use the `example` facet only if you want to provide a single, unnamed example.
 
