@@ -43,6 +43,9 @@ Use the `example` facet only if you want to provide a single, unnamed example.
 
 In the following sample files, the `examples` facet names the example `fullName`.
 
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
+
 .api.raml
 ----
 #%RAML 1.0
@@ -52,13 +55,11 @@ types:
     properties:
       givenName: string
       familyName: string
-    examples:
-      fullName: !include fragment.raml
+    example: !include fragment.yaml
 ----
 
-.fragment.raml
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
@@ -68,6 +69,8 @@ familyName: "Mukai"
 
 In the following sample files, the `examples` facet does not name the example. The NamedExample fragment names the example `fullName`.
 
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
 .api.raml
 ----
 #%RAML 1.0
@@ -77,15 +80,13 @@ types:
     properties:
       givenName: string
       familyName: string
-    examples: !include fragment.raml
+    examples: !include fragment.yaml
 ----
 
-.fragment.raml
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
-fullName:
-  givenName: ”Chiaki”
-  familyName: "Mukai"
+givenName: ”Chiaki”
+familyName: "Mukai"
 ----
 
 == Naming two examples for a type by using an `examples` facet
@@ -102,20 +103,18 @@ types:
       givenName: string
       familyName: string
     examples:
-      fullName: !include fragment1.raml
-      otherFullName: !include fragment2.raml
+      fullName: !include fragment1.yaml
+      otherFullName: !include fragment2.yaml
 ----
 
-.fragment1.raml
+.fragment1.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
-.fragment2.raml
+.fragment2.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: "Kyung-won"
 familyName: "Park"
 ----
@@ -154,6 +153,9 @@ When you name an example in a trait, you can name the example either in the `exa
 
 In this case, the example is named in the NamedExample fragment.
 
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
+
 .api.raml
 ----
 #%RAML 1.0
@@ -169,19 +171,17 @@ traits:
               properties:
                 givenName: string
                 familyName: string
-            examples: !include fragment.raml
+            examples: !include fragment.yaml
 
 /end:
   post:
     is: myTrait
 ----
 
-.fragment.raml
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
-fullName:
-  givenName: ”Chiaki”
-  familyName: "Mukai"
+givenName: ”Chiaki”
+familyName: "Mukai"
 ----
 
 == Naming an example in the definition of a resource type
@@ -189,6 +189,9 @@ fullName:
 When you name an example in a resource type, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
 
 In this case, the example is named in the NamedExample fragment.
+
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
 
 .api.raml
 ----
@@ -208,15 +211,13 @@ resourceTypes:
 /end:
   type:
     myResourceType:
-      myParam: !include fragment.raml
+      myParam: !include fragment.yaml
 ----
 
-.fragment.raml
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
-fullName:
-  givenName: ”Chiaki”
-  familyName: "Mukai"
+givenName: ”Chiaki”
+familyName: "Mukai"
 ----
 
 == Using a single, unnamed example
@@ -226,6 +227,8 @@ If you do not want to use more than one example and you do not want to name your
 In the following example, the `example` facet includes `fragment1.yaml`. Neither the facet nor the fragment names the example.
 
 If you want the `example` facet to point to `fragment2.raml`, you must change the filename in the facet. You cannot include both fragments at the same time.
+
+???The point in this section is now explained in the intro to this topic.???
 
 .api.raml
 ----
