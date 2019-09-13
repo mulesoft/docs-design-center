@@ -295,6 +295,8 @@ Name:
 
 === Naming examples twice
 
+??? Now that I've changed the example to be correct, the section title and intro do not match it.???
+
 If an example is named twice, the editor displays this message:
 
 ----
@@ -311,16 +313,14 @@ title: Example API Spec
      application/json:
        properties:
          firstName: string
-       examples:
-         someName: !include ex.yaml
+       example: !include ex.yaml
 ----
 
 Further suppose that the fragment also names the example, giving it the name `someFragmentName`:
 
 .ex.yaml
 ----
-someFragmentName:
-  firstName: Martin Gutierrez
+firstName: Martin Gutierrez
 ----
 
 In this case, the editor would display this message because the parser interprets `someFragmentName` as the name of the property:
