@@ -124,19 +124,24 @@ types:
     properties:
        a: string
        b: integer
-    examples: !include fragment.yaml
+    examples: !include fragment.raml
 ----
 
-* In the fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
+* In the fragment, ensure that each example consists of a name and values for both properties, as in the fragment below:
 +
-.fragment.yaml
+.fragment.raml
 ----
-myExample:
-    a: "b"
+#%RAML 1.0 NamedExample
+myExample1:
+    a: "b1"
     b: 1
+
+myExample2:
+    a: "b2"
+    b: 2
 ----
 
-For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Named Examples].
+For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0].
 
 <<Back to the top>>
 
