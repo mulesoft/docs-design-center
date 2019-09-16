@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-The *Documentation* pane presents the content of an API specification or fragment in structured display that includes the documentation that you write in `description` and `documentation` facets, and that also includes text that the pane generates.
+The *Documentation* pane presents the content of an API specification (including its fragments) or supported stand-alone fragment in structured display that includes the documentation that you write in `description` and `documentation` facets, and that also includes text that the pane generates.
 
 .The *Documentation* pane in API Designer's code editor
 image::apic-summary-page.png[]
@@ -28,7 +28,7 @@ This image shows the summary page for the specification that is in the code edit
 
 . The navigation icon
 +
-Click this to show a table of contents that lets you navigate to the documentation for the item that you select.
+Click this to show a table of contents that lets you navigate to the documentation for the item that you select. The table of contents can list endpoints, methods, security schemes, documentation items, and types.
 
 
 == See Also
