@@ -18,7 +18,7 @@ To open the documentation of a type, follow these steps:
 
 == Documentation of a Simple Type
 
-Suppose that you defined this simple type in a specification:
+Suppose that you defined this simple type in a specification written in RAML:
 
 ----
 ProductCharacteristic:
@@ -49,7 +49,7 @@ image::apid-doc-simple-type.png[]
 
 == Other Examples
 
-Here is another simple type, this one with examples, together with its definition in the specification.
+Here is another simple type in RAML, this one with examples, together with its definition in the specification.
 
 [%header,cols="1a,1a"]
 |===
@@ -78,7 +78,7 @@ SalesUnit:
 
 |===
 
-Here is an example that shows how patterns, maximums, and minimums are displayed.
+Here is a RAML example that shows how patterns, maximums, and minimums are displayed.
 
 [%header,cols="1a,1a"]
 |===
@@ -99,7 +99,7 @@ Identifier:
 
 |===
 
-Finally, here is an example that shows how properties that can take null values are displayed and how enums are displayed.
+Finally, here is a RAML example that shows how properties that can take null values are displayed and how enums are displayed.
 
 [%header,cols="1a,1a"]
 |===
