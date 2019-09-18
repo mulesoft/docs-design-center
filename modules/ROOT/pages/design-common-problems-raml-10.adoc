@@ -109,7 +109,7 @@ types:
 <<Back to the top>>
 
 [.parser\*named-example-used-inlined-example#parser\*named-example-used-inlined-example]
-== Common misconceptions about RAML NamedExample fragments and examples in general
+== Common misconceptions about examples and RAML NamedExample fragments
 // APIMF-907
 
 To avoid common problems with referencing a named example with an `!include` tag, follow these two guidelines:
