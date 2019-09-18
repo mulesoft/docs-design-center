@@ -127,7 +127,7 @@ types:
     examples: !include fragment.raml
 ----
 
-* In the fragment, ensure that each example consists of a name and values for both properties, as in the fragment below:
+* In the fragment, ensure that each example consists of a name and values for each property, as in the fragment below:
 +
 .fragment.raml
 ----
