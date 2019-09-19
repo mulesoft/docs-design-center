@@ -70,14 +70,14 @@ givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
-API Designer ignores the header and uses the example. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accord with the RAML 1.0 specification.
+In this case, API Designer ignores the header and uses the example. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accord with the RAML 1.0 specification.
 
 
 == Naming Two Examples That Are in `.yaml` Files
 
 In your specification, include the file with the `examples` facet and name each example. In your `.yaml` files, ensure that each example is at the root.
 
-The files `api.raml`, `fragment1.yaml`, and `fragment2.yaml` illustrate the correct way to use a two examples that are in `.yaml` files:
+The files `api.raml`, `fragment1.yaml`, and `fragment2.yaml` illustrate the correct way to use two examples that are in `.yaml` files:
 
 .api.raml
 ----
