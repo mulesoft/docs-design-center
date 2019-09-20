@@ -5,7 +5,7 @@ endif::[]
 
 When defining examples in external files for a type, trait, or resource type in your RAML 1.0 API specification, you should follow these rules:
 
-* For a single example, you should use the `example` facet and include either a `.yaml` file or a `.raml` file.
+* For a single example, you should either use the `example` facet and include a `.yaml` file or use the `examples` facet and include a `.raml` NamedExample fragment file.
 * For multiple examples, you should always use the `examples` facet and either:
 ** Define multiple examples, each pointing to individual `.yaml` files, with a single example per file
 ** Include a `.raml` file containing two or more examples defined in a single NamedExample fragment
@@ -35,7 +35,7 @@ givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
-== Using a Single Example That Is in a `.raml` File
+== Using a Single Example That Is in a `.raml` NamedExample Fragment File
 
 In your specification, include the file with an `example` facet. In your NamedExample fragment, ensure that the example is not at the root of the file. The fragment must contain a key that is the name of the example.
 
@@ -50,7 +50,7 @@ types:
     properties:
       givenName: string
       familyName: string
-    example: !include fragment.raml
+    examples: !include fragment.raml
 ----
 
 .fragment.raml
