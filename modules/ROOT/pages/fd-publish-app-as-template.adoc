@@ -20,7 +20,7 @@ Templates do not include the authentication credentials that are specified for t
 ====
 
 
-== Before you begin
+== Before You Begin
 
 * Ensure that your Mule application is free of errors.
 
@@ -43,7 +43,7 @@ You can view the new page in Exchange that has been created for your template.
 
 If Flow Designer was unable to publish the template, check that your user ID has permission to publish to Exchange.
 
-== What to do next
+== What To Do Next
 
 On the template's page in Exchange, provide a description, screenshots, or videos to explain the purpose of the template and how to use it.
 

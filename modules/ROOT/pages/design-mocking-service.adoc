@@ -5,7 +5,7 @@ endif::[]
 
 Use the mocking service to provide a public link to the API you are designing. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 
-== Before you begin
+== Before You Begin
 
 You must be working in a project to create an API specification in API Designer.
 
@@ -59,10 +59,10 @@ _Result:_ The right panel displays the request URL. It also requires you to spec
 +
 _Result:_ The panel displays the result below the *Send* button.
 
-== What to do next
+== What To Do Next
 
 If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI or base path that it used to call your API and to uncomment the base URI or base path that you provided in the specification.
 
-== See also
+== See Also
 
 * xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]

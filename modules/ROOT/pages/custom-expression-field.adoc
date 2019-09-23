@@ -26,6 +26,6 @@ When you drag the *Custom Expression* element, the card highlights the borders o
 +
 * Select the *Add Functions* pane to choose from DataWeave functions. Click to add them at the point in the expression where the cursor is located. Clicking a function also displays a description of it.
 
-== See also
+== See Also
 
 * xref:4.1@mule-runtime::dataweave.adoc[DataWeave Language]
