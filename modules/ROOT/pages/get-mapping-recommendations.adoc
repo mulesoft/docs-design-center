@@ -81,7 +81,7 @@ IMPORTANT: The recommendation system works by collecting and analyzing anonymize
 
 The recommendation for mapping the input data type to the output data type appears in orange.
 
-== What To Do Next
+== What to Do Next
 
 If you find the recommendation fits your needs, click the *Apply* button at the top of the Mappings pane.
 

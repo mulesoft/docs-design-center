@@ -56,7 +56,7 @@ You can import files into your project, either separately or bundled together in
 
 
 
-== What To Do Next
+== What to Do Next
 
 You can publish the API fragment to Anypoint Exchange. Click the *Publish* button that is in the top-right corner of the code editor, and then click *Publish to Exchange* to open the *Publish API specification to Exchange* dialog.
 

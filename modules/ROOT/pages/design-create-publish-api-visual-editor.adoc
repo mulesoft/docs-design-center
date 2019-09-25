@@ -32,7 +32,7 @@ The visual API editor opens.
 +
 As you make progress, you can run the mocking service to simulate calls to your API specification. For more information, view the topic "Simulate Calls to an API", which is listed in the *See Also* section at the end of this topic.
 
-== What To Do Next
+== What to Do Next
 
 
 // After you are satisfied with your API specification, you can publish it to Exchange in RAML or OAS. If you want to publish it both in RAML and in OAS, publish it twice, the second time changing the name. For example, the first time you publish the specification, you might choose to publish in RAML and specify the name as `myAPI (RAML 1.0)`; the second time, you would choose to publish in OAS and could specify the name `myAPI (OAS 2.0 JSON)`.

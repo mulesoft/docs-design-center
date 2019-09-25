@@ -126,7 +126,7 @@ This example uses a flow in which an HTTP Listener receives a POST request that 
 
 After you post the message, return to your flow in Design Center, open the log, and look for your message.
 
-=== What To Do Next
+=== What to Do Next
 
 Try adding a Set Variable card after the HTTP Listener card. When data is output from a card, it's a good practice to save the data in a variable, so that you can use the data later in your flow. Create a variable that stores the value of `payload.firstName`, and then change the message in the Logger to use the variable instead of the payload item. In the Logger card, the variable will appear in the list on the right. You can delete the payload item from the message and then drag in the variable.
 

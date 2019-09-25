@@ -59,7 +59,7 @@ _Result:_ The right panel displays the request URL. It also requires you to spec
 +
 _Result:_ The panel displays the result below the *Send* button.
 
-== What To Do Next
+== What to Do Next
 
 If you have not yet published your API specification to Anypoint Exchange, turn off the mocking service before you do so. Turning off the service causes it to remove the base URI or base path that it used to call your API and to uncomment the base URI or base path that you provided in the specification.
 

@@ -29,6 +29,6 @@ The update might require you to update the connectors that are used in the appli
 . Hover over a dependency and click the options icon: image:manage-dependency-versions-design-center-018a5.png[]
 . Select *Change Version* and select the version.
 
-== What To Do Next
+== What to Do Next
 
 Test the application with the new version until the application runs as expected.

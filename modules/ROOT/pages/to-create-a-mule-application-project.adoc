@@ -32,7 +32,7 @@ Flow Designer opens the new project. Red circles indicate that you need to provi
 
 Another way of finding these fields is to click the *Problems* tab in the bottom-right corner of the Flow Designer screen to open the *Problems* pane. When you click an entry in the pane, Flow Designer displays the field that corresponds to it.
 
-=== What To Do Next
+=== What to Do Next
 
 After you provide the required information, you can change the application as you like, developing it as you would any other Mule application.
 
@@ -100,6 +100,6 @@ If you see such an error, ask the owner of the asset xref:exchange::to-publish-a
 
 ====
 
-=== What To Do Next
+=== What to Do Next
 
 You can change the application as you like, developing it as you would any other Mule application.
