@@ -102,7 +102,7 @@ XML:: XML is a format that structures data in between tags. When you use this fo
 
 
 
-== See also
+== See Also
 
 * xref:about-data-types.adoc[Define and Use Data Types in a Flow]
 * xref:fd-supported-simple-data-types.adoc[Simple Data Types that are Supported in Flow Designer]

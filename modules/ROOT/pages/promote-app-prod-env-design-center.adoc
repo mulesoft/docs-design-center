@@ -22,7 +22,7 @@ image::deploy-dialog.png[]
 +
 image::deploying-your-project-9cee7.png[]
 
-== What to do next
+== What to Do Next
 
 You can go to Runtime Manager to manage the application. To get there from Flow Designer, click the three-dots icon to the left of the *Deploy* button and select *View in Runtime Manager*.
 
@@ -30,7 +30,7 @@ You can go to Runtime Manager to manage the application. To get there from Flow 
 // You can restrict access to the application in the target environment to specific users, if you do not want access available to the general public. To restrict access, your user ID must be an organization administrator in Anypoint Platform.
 
 
-== See also
+== See Also
 
 * xref:access-management::environments.adoc[CloudHub Environments]
 

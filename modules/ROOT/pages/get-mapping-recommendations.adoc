@@ -60,7 +60,7 @@ In this data type, both `e` and `f` are ignored:
 
 * The card does not create mappings between different data types. For example, if an element in an input data type is an integer, the card maps it only to another integer, never to a string or other data type.
 
-== Before you begin
+== Before You Begin
 
 Ensure that the Automapping feature is enabled for your organization in Anypoint Platform.
 
@@ -81,13 +81,13 @@ IMPORTANT: The recommendation system works by collecting and analyzing anonymize
 
 The recommendation for mapping the input data type to the output data type appears in orange.
 
-== What to do next
+== What to Do Next
 
 If you find the recommendation fits your needs, click the *Apply* button at the top of the Mappings pane.
 
 If the recommendation does not fit your needs, click *Discard*. The recommendation is removed from the pane. If you want to see a recommendation again, close and reopen the Transform card and click *Preview*.
 
-== See also
+== See Also
 
 * xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
 * xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]

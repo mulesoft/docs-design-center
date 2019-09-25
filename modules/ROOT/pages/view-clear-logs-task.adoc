@@ -62,7 +62,7 @@ The log pane expands and displays the log file.
 
 image::log-file.png[]
 
-== What to do next
+== What to Do Next
 
 * To copy a line of the log, click the *Copy* option to its left.
 
