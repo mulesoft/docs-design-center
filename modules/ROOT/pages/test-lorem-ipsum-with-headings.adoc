@@ -7,6 +7,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce leo orci, molesti
 
 Ut at odio sed turpis aliquet tristique vel et sem. Etiam non dignissim tortor. Duis ut augue mollis turpis convallis commodo. Nulla laoreet finibus ligula, ut molestie ante ultrices non. Duis quam nulla, tincidunt ac lacinia in, egestas sit amet ipsum. Aenean at imperdiet nisl. Donec a nisi id ante dignissim aliquam eget ut leo. Aenean pellentesque ultrices malesuada. Etiam vestibulum euismod orci, in pellentesque nisl egestas et.
 
+image::apid-get-documentation.png[]
 
 == Heading Two
 
