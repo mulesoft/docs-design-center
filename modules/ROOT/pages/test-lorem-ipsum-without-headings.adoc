@@ -10,6 +10,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce leo orci, molesti
 
 Donec sed mauris neque. Ut at odio sed turpis aliquet tristique vel et sem. Etiam non dignissim tortor. Duis ut augue mollis turpis convallis commodo. Nulla laoreet finibus ligula, ut molestie ante ultrices non. Duis quam nulla, tincidunt ac lacinia in, egestas sit amet ipsum. Aenean at imperdiet nisl.
 
+image::ae-table-of-versions.png[]
+
 Donec a nisi id ante dignissim aliquam eget ut leo. Aenean pellentesque ultrices malesuada. Etiam vestibulum euismod orci, in pellentesque nisl egestas et.
 
 Integer et sem facilisis, efficitur nunc at, posuere velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at posuere lacus. Sed at leo eu est sagittis ultrices at vitae erat. Ut sapien nisl, dapibus at metus sed, scelerisque fermentum lectus. Aliquam feugiat tortor ipsum, eu accumsan lorem sollicitudin sed. Nam tincidunt ipsum nisi. Fusce ut nisl blandit, condimentum dui at, sagittis eros.
