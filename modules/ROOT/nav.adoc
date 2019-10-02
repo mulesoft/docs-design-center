@@ -1,6 +1,7 @@
 .xref:index.adoc[Design Center]
 * xref:index.adoc[About Design Center]
-* xref:test-lorem-ipsum-with-headings.adoc[Lorem Ipsum with Headings]
+* xref:test-lorem-ipsum-with-headings.adoc[Lorem Ipsum (With Headings)]
+* xref:test-lorem-ipsum-without-headings.adoc[Lorem Ipsum (Without Headings)]
 * xref:design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0]
  ** xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
  ** xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
