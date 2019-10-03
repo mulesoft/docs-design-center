@@ -1009,6 +1009,8 @@ types:
 [.resolution\*invalid-type-inheritance#resolution\*invalid-type-inheritance]
 == Invalid Type Inheritance
 
+The errors in this section both involve errors in type inheritance.
+
 === Merging two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
@@ -1065,7 +1067,7 @@ For more information, see the section "Union Types" in the xref:https://github.c
 
 === Defining a Weaker Constraint in a Subtype
 
-A subtype defining a weaker constraint than one defined by its parent is invalid.
+A subtype that defines a weaker constraint than one defined by its parent is invalid.
 
 In this example, the subtype MyType2 has the optional property `name`, defined as a string, even though the parent type MyType1 already defines its `name` property as required.
 
