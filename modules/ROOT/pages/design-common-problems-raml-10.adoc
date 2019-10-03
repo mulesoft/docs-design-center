@@ -1009,7 +1009,7 @@ types:
 [.resolution\*invalid-type-inheritance#resolution\*invalid-type-inheritance]
 == Invalid Type Inheritance
 
-The errors in this section both involve errors in type inheritance.
+The errors in this section both involve incorrect handling of type inheritance.
 
 === Merging two types incorrectly
 
