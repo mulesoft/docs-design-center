@@ -558,6 +558,41 @@ types:
 
 <<Back to the top>>
 
+=== Types defined as `nil` in payloads are not valid
+
+You cannot use a type in a payload if its data type is `nil`.
+
+==== Example 1
+
+In this example, the value of `type` must be `string`, not `nil`:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType:
+    type: nil
+    example: “test”
+```
+
+==== Example 2
+
+In this example, the JSON schema must define `MyType` as a `string` type. However, the schema is empty:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType:
+    type: !include schema.json # schema.json is an empty file
+    example: “test”
+```
+
+The error message in cases like this is `should be null at ...`.
+
+<<Back to the top>>
 
 
 [.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
@@ -972,7 +1007,11 @@ types:
 <<Back to the top>>
 
 [.resolution\*invalid-type-inheritance#resolution\*invalid-type-inheritance]
-== Merging two types incorrectly
+== Invalid Type Inheritance
+
+Two common occurrences that cause type-inheritance errors are incorrectly merging two types and defining a weaker constraint in a subtype.
+
+=== Merging Two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
 * Merge a defined type with an undefined type
@@ -1026,6 +1065,30 @@ For more information, see the section "Union Types" in the xref:https://github.c
 
 <<Back to the top>>
 
+=== Defining a Weaker Constraint in a Subtype
+
+A subtype that defines a weaker constraint than one defined by its parent type is invalid.
+
+In this example, the subtype MyType2 has the optional property `name`, defined as a string, even though the parent type MyType1 already defines its `name` property as required:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType1:
+    properties:
+      name: string
+  MyType2:
+    type: MyType1
+    properties:
+      name?: string #invalid
+```
+
+The error message in cases like this is `Resolution error: sub type has a weaker constraint for minItems than base type for minItems.`
+
+<<Back to the top>>
+
 [.parser\*unresolved-parameter#parser\*unresolved-parameter]
 == Declaring an undefined type in a header
 
@@ -1066,5 +1129,44 @@ types:
 
 ----
 |====
+
+<<Back to the top>>
+
+== Using a Forward Slash in a URI Parameter
+
+A URI parameter that contains a forward slash (/) is invalid.
+
+In this example, the `example` for the URI parameter `transaction-Date` would cause the parser to display an error message:
+
+```
+#%RAML 1.0
+title: test
+
+/endpoint:
+  uriParameters:
+    transaction-Date:
+      example: 01/02/2018
+```
+
+The error message in cases like this is `Value '01/02/2018' of uri parameter must not contain '/' character.`
+
+<<Back to the top>>
+
+== Incorrect Formats for `datetime` Types
+
+Formats for `datetime` types that do not use "rfc3339" or "rfc2616" are invalid.
+
+The following example causes the parser to display an error message:
+
+```
+#%RAML 1.0
+title: test
+types:
+  MyType:
+    type: datetime
+    format: "rfc3338"
+```
+
+The error message in cases like this is `Invalid format value for datetime, must be ‘rfc3339’ or ‘rfc2616’.`
 
 <<Back to the top>>
