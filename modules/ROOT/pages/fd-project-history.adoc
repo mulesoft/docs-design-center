@@ -7,17 +7,22 @@ endif::[]
 :imagesdir: ../assets/images
 
 Flow Designer automatically saves (every few seconds) the state of the actions you perform while working on a project - for example, working on a card in the flow.
-These saved states are shown in a list view by time/date and activity. The name of the saved state depends on the activity you were doing at the time the save occured.
-You can browse through these states and restore your work to a past version. This is useful if you need to revert to a previous known working version or to detect what is or is not working between two different versions.
+These saved states are shown in a list view by time/date and activity. The name depends on the activity you were doing at the time the save occurred.
+
+This is useful if:
+
+* you need to restore your work to a past version.
+* you want to detect what is or is not working between two different versions.
 
 == Procedure
 
 When you need to restore:
 
 . Click  *History* on the upper left to open the Project History display on the right of the pane.
-. Browse and select an item from the right list pane to view it. When you select an item, you can click on the object that is associated with that saved state to view it.
-This allows you to inspect the saved state to ensure it is the correct one to restore.
-. Click *Restore* to revert your work to the selected state and save it back to the state you selected. +
-This state is labeled Restored at the top of the list.
+. Browse and select an item from the right list pane to view it. When you select an item, you can click on any objects that are associated with that saved state to view it.
+. Inspect the saved state to ensure it is the correct one to restore.
+. Click *Restore* to revert and save your work to the selected state. +
+
+This state is labeled with the word Restored at the top of the list.
 
 // [Screenshot to come when the UI is more stable next week.]
