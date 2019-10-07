@@ -131,7 +131,7 @@ When you set this header to `false`, you can use the mocking service even when t
 
 When you set this header to `true`, the mocking service validates the specification before responding. If there is an error in the specification, the mocking service fails with that error. Otherwise, the mocking service works as usual.
 
-== See also
+== See Also
 
 * xref:design-test-endpoints-visual-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Visual Editor]
 * xref:design-test-endpoints-code-editor.adoc[Test Endpoints by Simulating Calls to Methods in the Code Editor]

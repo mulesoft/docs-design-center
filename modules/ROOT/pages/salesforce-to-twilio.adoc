@@ -47,7 +47,7 @@ image::salesforce-to-twilio-flowchart.png[]
 
 Fortunately, you know just the tool to help you carry out this plan: Flow Designer!
 
-== Before you begin
+== Before You Begin
 
 * Sign up for a 30-day trial of https://anypoint.mulesoft.com/login/signup[MuleSoft Anypoint Platform], if you do not already have access to it.
 * Sign up for https://developer.salesforce.com/signup[a free developer account from Salesforce]. You'll need your credentials for this account, as well as your security token.

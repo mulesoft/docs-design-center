@@ -24,10 +24,10 @@ As the other person works on the project, the changes are applied to your projec
 +
 *Result:* Studio opens the project.
 
-== What to do next
+== What to Do Next
 
 The person who works in Studio can work on the project. All changes are made automatically to the project in Design Center. When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
 
-== See also
+== See Also
 
 * xref:fd-troubleshooting.adoc[Troubleshooting in Flow Designer]

@@ -33,7 +33,7 @@ Error conditions are matched from top to bottom, and only the first match is con
 . Add an error type and add the components to try.
 
 
-== See also
+== See Also
 
 * xref:mule-runtime::about-components.adoc[Core Components]
 * xref:4.1@mule-runtime::try-scope-concept.adoc[About the Try Scope]

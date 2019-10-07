@@ -1,19 +1,21 @@
-= Guide to Named Examples in RAML 1.0
+= Guide to Defining Examples in RAML 1.0
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
-If you want to use one or more named examples for a type, trait, or resource type in your RAML 1.0 API specification, you must follow these three rules:
+When defining examples in external files for a type, trait, or resource type in your RAML 1.0 API specification, follow these rules:
 
-* To use a single, named example, you must use the `examples` facet when you include the corresponding NamedExample fragment.
-
-* To use more than one named example, you must use the `examples` facet when you include the corresponding NamedExample fragments.
-
-* All example fragments must have the header "#%RAML 1.0 NamedExample"
-
-Use the `example` facet only if you want to provide a single, unnamed example.
+* For a single example, either use the `example` facet and include a .yaml file or use the `examples` facet and include a .raml NamedExample fragment file.
+* For multiple examples, always use the `examples` facet and either:
+** Define multiple examples, each pointing to individual .yaml files, with a single example per file
+** Include a .raml file containing two or more examples defined in a single NamedExample fragment
 
 
-== Naming a single example for a type by using an `examples` facet
+== Using a Single Example That Is in a .yaml File
 
-In the following sample files, the `examples` facet names the example `fullName`.
+In your specification, include the file with an `example` facet. In your .yaml file, ensure that the example is at the root level.
+
+The files api.raml and fragment.yaml illustrate the correct way to use a single example that is in a .yaml file:
 
 .api.raml
 ----
@@ -24,21 +26,20 @@ types:
     properties:
       givenName: string
       familyName: string
-    examples:
-      fullName: !include fragment.raml
+    example: !include fragment.yaml
 ----
 
-.fragment.raml
+.fragment.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
+== Using a Single Example That Is in a .raml NamedExample Fragment File
 
-== Naming a single example for a type by using a NamedExample fragment
+In your specification, include the file with an `example` facet. In your NamedExample fragment, ensure that the example is not at the root level of the file. The fragment must contain a key that is the name of the example.
 
-In the following sample files, the `examples` facet does not name the example. The NamedExample fragment names the example `fullName`.
+The files api.raml and fragment.raml illustrate the correct way to use a single example that is in a .raml file:
 
 .api.raml
 ----
@@ -60,9 +61,23 @@ fullName:
   familyName: "Mukai"
 ----
 
-== Naming two examples for a type by using an `examples` facet
+Do not use a fragment that looks like this:
 
-In the following sample files, the `examples` facet names the examples `fullName` and `otherFullName`.
+.fragment.raml
+----
+#%RAML 1.0 NamedExample
+givenName: ”Chiaki”
+familyName: "Mukai"
+----
+
+In this case, API Designer ignores the header and uses the example. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accordance with the RAML 1.0 specification.
+
+
+== Naming Two Examples That Are in .yaml Files
+
+In your specification, include the file with the `examples` facet and name each example. In your .yaml files, ensure that each example is at the root level.
+
+The files api.raml, fragment1.yaml, and fragment2.yaml illustrate the correct way to use two examples that are in .yaml files:
 
 .api.raml
 ----
@@ -74,27 +89,27 @@ types:
       givenName: string
       familyName: string
     examples:
-      fullName: !include fragment1.raml
-      otherFullName: !include fragment2.raml
+      fullName: !include fragment1.yaml
+      otherFullName: !include fragment2.yaml
 ----
 
-.fragment1.raml
+.fragment1.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: ”Chiaki”
 familyName: "Mukai"
 ----
 
-.fragment2.raml
+.fragment2.yaml
 ----
-#%RAML 1.0 NamedExample
 givenName: "Kyung-won"
 familyName: "Park"
 ----
 
-== Naming two examples for a type in a NamedExample fragment
+== Naming Two Examples That Are in a NamedExample Fragment
 
-In the following sample files, the `examples` facet does not name the examples.  The NamedExample fragment names the examples `fullName` and `otherFullName`.
+In your specification, include the file with an `examples` facet. In your NamedExample fragment, ensure that neither example is at the root level of the file. The fragment must contain two keys that are each the name of an example.
+
+The files api.raml, and fragment.raml illustrate the correct way to use a two examples that are in a .raml file:
 
 .api.raml
 ----
@@ -119,130 +134,3 @@ otherFullName:
   givenName: "Kyung-won"
   familyName: "Park"
 ----
-
-== Naming an example in the definition of a trait
-
-When you name an example in a trait, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
-
-In this case, the example is named in the NamedExample fragment.
-
-.api.raml
-----
-#%RAML 1.0
-title: test
-traits:
-  myTrait:
-    responses:
-      200:
-        description: desc
-        body:
-          application/json:
-            type:
-              properties:
-                givenName: string
-                familyName: string
-            examples: !include fragment.raml
-
-/end:
-  post:
-    is: myTrait
-----
-
-.fragment.raml
-----
-#%RAML 1.0 NamedExample
-fullName:
-  givenName: ”Chiaki”
-  familyName: "Mukai"
-----
-
-== Naming an example in the definition of a resource type
-
-When you name an example in a resource type, you can name the example either in the `examples` facet or in a NamedExample fragment. If you choose to name the example in the facet, do not declare the fragment to be a NamedExample fragment.
-
-In this case, the example is named in the NamedExample fragment.
-
-.api.raml
-----
-#%RAML 1.0
-title: test
-resourceTypes:
-  myResourceType:
-    get:
-      body:
-        application/json:
-          type:
-            properties:
-              givenName: string
-              familyName: string
-          examples: <<myParam>>
-
-/end:
-  type:
-    myResourceType:
-      myParam: !include fragment.raml
-----
-
-.fragment.raml
-----
-#%RAML 1.0 NamedExample
-fullName:
-  givenName: ”Chiaki”
-  familyName: "Mukai"
-----
-
-== Using a single, unnamed example
-
-If you do not want to use more than one example and you do not want to name your single example, use the `example` facet instead of the `examples` facet.
-
-In the following example, the `example` facet includes `fragment1.yaml`. Neither the facet nor the fragment names the example.
-
-If you want the `example` facet to point to `fragment2.raml`, you must change the filename in the facet. You cannot include both fragments at the same time.
-
-.api.raml
-----
-#%RAML 1.0
-title: test
-types:
-  A:
-    properties:
-      givenName: string
-      familyName: string
-   example: !include fragment1.yaml
-----
-
-.fragment1.yaml
-----
-givenName: ”Chiaki”
-familyName: "Mukai"
-----
-
-.fragment2.yaml
-----
-givenName: "Kyung-won"
-familyName: "Park"
-----
-
-
-[NOTE]
-====
-The reason for using `.yaml` files for the examples and not `.raml` files is that, according to the RAML 1.0 specification, a NamedExample fragment that defines only one example is not valid. Therefore, you should not use NamedExample fragments when you are using single, unnamed examples.
-
-For example, the following NamedExample fragments are invalid:
-
-.fragment1.raml
-----
-#%RAML 1.0 NamedExample
-givenName: ”Chiaki”
-familyName: "Mukai"
-----
-
-.fragment2.raml
-----
-#%RAML 1.0 NamedExample
-givenName: "Kyung-won"
-familyName: "Park"
-----
-
-API Designer ignores the header and uses the examples. However, if you validate a specification with any other RAML processors, NamedExample fragments that define only one example should generate errors, in accord with the RAML 1.0 specification.
-====

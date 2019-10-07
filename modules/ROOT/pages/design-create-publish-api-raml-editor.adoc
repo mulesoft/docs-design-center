@@ -5,7 +5,7 @@ endif::[]
 
 You can use API Designer's code editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
 
-== Before you begin
+== Before You Begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
@@ -57,11 +57,11 @@ Download files in a different format:: Click the dots to the right of the file n
 The files downloaded through this option are not guaranteed to be valid. This option is intended to provide the basis for the development of a new specification or the continuation of the development of the original specification in a new format.
 
 
-== What to do next
+== What to Do Next
 After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish* button that is in the top-right corner of the code editor, and then click *Publish to Exchange* to open the *Publish API Specification to Exchange* dialog.
 
 
-== See also
+== See Also
 // 181129: Deleting the file that this xref links to. * xref:design-export-files.adoc[Export Files from an API Project]
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API-Specification Project as a Dependency]

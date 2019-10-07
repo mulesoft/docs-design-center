@@ -87,6 +87,6 @@ To store the entire set of data at the current point in a flow, set the value of
 
 To store a Boolean value, set the value of the variable to `true` or `false`.
 
-== See also
+== See Also
 
 * xref::fd-store-data-top.adoc[Store and Reuse Data within a Flow]

@@ -1,4 +1,7 @@
 = Common Problems Found in RAML 1.0 API Specifications
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 [[bookmark-a,Back to the top]]
 
@@ -106,7 +109,7 @@ types:
 <<Back to the top>>
 
 [.parser\*named-example-used-inlined-example#parser\*named-example-used-inlined-example]
-== Problems with named examples
+== Common misconceptions about examples and RAML NamedExample fragments
 // APIMF-907
 
 To avoid common problems with referencing a named example with an `!include` tag, follow these two guidelines:
@@ -124,269 +127,24 @@ types:
     examples: !include fragment.raml
 ----
 
-* In the NamedExample fragment, ensure that each example consists of a name and a value, as in the fragment below that contains one example:
+* In the fragment, ensure that each example consists of a name and values for each property, as in the fragment below:
 +
+.fragment.raml
 ----
 #%RAML 1.0 NamedExample
-myExample:
-    a: "b"
+myExample1:
+    a: "b1"
     b: 1
+
+myExample2:
+    a: "b2"
+    b: 2
 ----
 
-For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Named Examples].
+For a more detailed discussion of how to use named examples, see xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0].
 
-////
-6/21/19: Removed these two errors at the request of Lucas Block. See https://docs.google.com/document/d/1p9Cyycb_Bz2Vv3HNSsmcFAtHohoNLGZbo67rZX6Tou4/edit#heading=h.i7g4n12fr6cm.
-
-=== Not using the "examples" facet when referencing to a named example
-
-If you see this violation message in the code editor, then your API specification is incorrectly referencing a named example by using an `example` facet:
-
-----
-Named example fragments must be included in 'examples' facet
-----
-
-You must use an `examples` (`example` with an `s`) facet. For example, the following reference to `fragment.raml` generates the warning message:
-
-----
-#%RAML 1.0
-title: test
-types:
-  A:
-     properties:
-        a: string
-        b: integer
-     example: !include fragment.raml
-----
-
-The resolution is merely to add an `s` to the end of the name of the `example` facet:
-
-----
-#%RAML 1.0
-title: test
-types:
-  A:
-     properties:
-        a: string
-        b: integer
-     examples: !include fragment.raml
-----
-
-
-
-=== Not naming named examples
-
-
-When a named example does not have a name, the editor displays this warning message:
-
-----
-Invalid fragment body in [[root.location]] , external fragment will be created
-----
-
-[NOTE]
-====
-This is the same warning message that appears when there is more than one example in a NamedExample fragment. See the next section for examples of that problem.
-====
-
-The second line in a NamedExample fragment must be a key that is the name given to the example, as shown here:
-
-----
-#%RAML 1.0 NamedExample
-MyExampleName:
-----
-
-The properties of the example then follow after. For example, suppose an API specification defines the following object:
-
-----
-user_name:
-    type: object
-    properties:
-        user: string
-----
-
-The NamedExample fragment would need to look like this:
-
-----
-#%RAML 1.0 NamedExample
-MyExampleName:
-    user: Lionel
-----
-
-Suppose that instead the fragment looked like this:
-
-----
-#%RAML 1.0 NamedExample
-user: Lionel
-----
-
-In this case, `user` is incorrectly parsed as the name and `Lionel` is incorrectly parsed as the example.
-
-In this next example, there are two properties in a single example. However, the warning message appears because there is no name for the example.
-
-----
-#%RAML 1.0 NamedExample
-  a: "b"
-  b: 1
-----
-
-If you add the name of the type, then the warning message no longer appears:
-
-----
-#%RAML 1.0 NamedExample
-Name:
-  a: "b"
-  b: 1
-----
-
-To look at another example, suppose that an API specification defined a more complex object:
-
-----
-user_name:
-    type: object
-    properties:
-        user:
-            name: string
-            lastName: string
-----
-
-The named example would need to look like this, again with the name of the example immediately following the fragment's declaration:
-
-----
-#%RAML 1.0 NamedExample
-MyExampleName:
-    user:
-        name: Lionel
-        lastName: Ma
-----
-
-Suppose that instead the named example looked like this:
-
-----
-#%RAML 1.0 NamedExample
-user:
-    name: Lionel
-    lastName: Ma
-----
-
-The editor would not return the warning message in this case. Instead, it would assume that `user` was the name of the example and that the object had two properties, not one complex property.
-
-Here is another case in which the editor would not return the warning message. If a data type includes a `value` facet and your NamedExample for the type does not include the type's name, the editor assumes that `value` is the name of the type, as in this example:
-
-----
-#%RAML 1.0 NamedExample
-value:
-   a: "b"
-   b: 1
-----
-
-The editor does not issue a warning message and interprets `value` as the name of the example. However, it is better for you to include the name of the example, so that nobody reading through your API specification and related files gets confused about the type that the example is for.
-
-----
-#%RAML 1.0 NamedExample
-Name:
-  value:
-      a: "b"
-      b: 1
-----
-////
-
-=== Naming examples twice
-
-If an example is named twice, the editor displays this message:
-
-----
-should have required property '<name-of-property>'
-----
-
-For example, suppose that a specification defines the property `firstName` and links to a NamedExample fragment by giving the example the name `someName`:
-----
-#%RAML 1.0
-title: Example API Spec
-/tiers:
- post:
-   body:
-     application/json:
-       properties:
-         firstName: string
-       examples:
-         someName: !include ex.raml
-----
-
-Further suppose that the NamedExample fragment also names the example, giving it the name `someFragmentName`:
-----
-#%RAML 1.0 NamedExample
-someFragmentName:
-  firstName: Martin Gutierrez
-----
-
-In this case, the editor would display this message because the parser interprets `someFragmentName` as the name of the property:
-
-----
-should have required property 'firstName'
-----
-
-To resolve this type of problem, remove either the name in the `examples` facet in the specification or the name in the NamedExample fragment.
-
-If you choose to remove the name from the NamedExample fragment, you must remove the word "NamedExample" from the declaration in the fragment. For example, you would change the NamedExample fragment used in the situation above to look like this:
-
-----
-#%RAML 1.0
-firstName: Martin Gutierrez
-----
-
-
-
-////
-=== Including more than one named example in a single NamedExample fragment
-
-A NamedExample fragment can contain only one example. The following fragment would generate a warning:
-
-----
-#%RAML 1.0 NamedExample
-Name1:
-   a: "b"
-   b: 1
-
-Name2:
-    a: "h"
-    b: 5
-----
-
-This is the warning message that you will see:
-
-----
-Invalid fragment body in [[root.location]] , external fragment will be created
-----
-
-[NOTE]
-===
-This is the same warning message that appears when the example in a NamedExample fragment is missing a name. See the previous section for examples of that problem.
-===
-
-To resolve the problem, you would need to use only one of the examples:
-----
-#%RAML 1.0 NamedExample
-Name1:
-   a: "b"
-   b: 1
-----
-
-A single type declaration in an API specification can use only one `!include` tag in an `examples` facet. Therefore, you cannot split the NamedExample fragment into two NamedExample fragments and use both named examples.
-
-
-
-
-// == Common Error 4
-// APIMF-966
-// *_Not using a correct value for the `protocols` node_*
-//
-// The value of the `protocols` node must be an array. The array must be:
-//
-// * `[http]` or `[HTTP]`
-// * `[https]` or `[HTTPS]`
-// * `[http, https]` or `[HTTP, HTTPS]`
-////
 <<Back to the top>>
+
 
 [.parser\*invalid-fragment-ref#parser\*invalid-fragment-ref]
 == Appending references with hash symbols to filenames in `!include` statements
@@ -800,6 +558,41 @@ types:
 
 <<Back to the top>>
 
+=== Types defined as `nil` in payloads are not valid
+
+You cannot use a type in a payload if its data type is `nil`.
+
+==== Example 1
+
+In this example, the value of `type` must be `string`, not `nil`:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType:
+    type: nil
+    example: “test”
+```
+
+==== Example 2
+
+In this example, the JSON schema must define `MyType` as a `string` type. However, the schema is empty:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType:
+    type: !include schema.json # schema.json is an empty file
+    example: “test”
+```
+
+The error message in cases like this is `should be null at ...`.
+
+<<Back to the top>>
 
 
 [.parser\*WebAPI-name-minLength#parser\*WebAPI-name-minLength]
@@ -1190,7 +983,7 @@ types:
   Obj:
     type: object
     properties:
-      prop: 
+      prop:
         type: Prop
 ----
 |
@@ -1201,11 +994,11 @@ title: Test
 types:
   Prop:
     type: string
-    
+
   Obj:
     type: object
     properties:
-      prop: 
+      prop:
         type: Prop
         required: false
 ----
@@ -1214,7 +1007,11 @@ types:
 <<Back to the top>>
 
 [.resolution\*invalid-type-inheritance#resolution\*invalid-type-inheritance]
-== Merging two types incorrectly
+== Invalid Type Inheritance
+
+Two common occurrences that cause type-inheritance errors are incorrectly merging two types and defining a weaker constraint in a subtype.
+
+=== Merging Two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
 * Merge a defined type with an undefined type
@@ -1268,6 +1065,30 @@ For more information, see the section "Union Types" in the xref:https://github.c
 
 <<Back to the top>>
 
+=== Defining a Weaker Constraint in a Subtype
+
+A subtype that defines a weaker constraint than one defined by its parent type is invalid.
+
+In this example, the subtype MyType2 has the optional property `name`, defined as a string, even though the parent type MyType1 already defines its `name` property as required:
+
+```
+#%RAML 1.0
+title: test
+
+types:
+  MyType1:
+    properties:
+      name: string
+  MyType2:
+    type: MyType1
+    properties:
+      name?: string #invalid
+```
+
+The error message in cases like this is `Resolution error: sub type has a weaker constraint for minItems than base type for minItems.`
+
+<<Back to the top>>
+
 [.parser\*unresolved-parameter#parser\*unresolved-parameter]
 == Declaring an undefined type in a header
 
@@ -1308,5 +1129,44 @@ types:
 
 ----
 |====
+
+<<Back to the top>>
+
+== Using a Forward Slash in a URI Parameter
+
+A URI parameter that contains a forward slash (/) is invalid.
+
+In this example, the `example` for the URI parameter `transaction-Date` would cause the parser to display an error message:
+
+```
+#%RAML 1.0
+title: test
+
+/endpoint:
+  uriParameters:
+    transaction-Date:
+      example: 01/02/2018
+```
+
+The error message in cases like this is `Value '01/02/2018' of uri parameter must not contain '/' character.`
+
+<<Back to the top>>
+
+== Incorrect Formats for `datetime` Types
+
+Formats for `datetime` types that do not use "rfc3339" or "rfc2616" are invalid.
+
+The following example causes the parser to display an error message:
+
+```
+#%RAML 1.0
+title: test
+types:
+  MyType:
+    type: datetime
+    format: "rfc3338"
+```
+
+The error message in cases like this is `Invalid format value for datetime, must be ‘rfc3339’ or ‘rfc2616’.`
 
 <<Back to the top>>

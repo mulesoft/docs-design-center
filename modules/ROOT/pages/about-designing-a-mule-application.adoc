@@ -20,7 +20,7 @@ To start creating Mule applications:
 
 
 
-== See also
+== See Also
 
 * xref::fd-elements-of-flows.adoc[The Elements of Flows in Mule Applications]
 * xref::fd-tour.adoc[Tour of Flow Designer]

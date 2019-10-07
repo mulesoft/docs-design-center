@@ -14,7 +14,7 @@ Number:: A `number` stores a float number, which can range from 1.40129846432481
 
 String:: Stores text, numbers (not `number` data types), or a combination of both. Examples: "94u0sfjlk*(f!`lkkjd", "18005555555", "Fred"
 
-== See also
+== See Also
 
 * xref:about-data-types.adoc[Define and Use Data Types in a Flow]
 * xref:fd-custom-data-types.adoc[Custom Data Types in Flow Designer]

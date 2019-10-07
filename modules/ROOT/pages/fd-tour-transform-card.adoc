@@ -97,7 +97,7 @@ image::fd-tour-of-the-transform-card-sample.png[]
 
 
 
-== See also
+== See Also
 
 * xref:fd-transform.adoc[Mapping the Output of a Card to the Required Input of the Next Card]
 * xref:fd-mapping-examples.adoc[Examples of Mapping with the Transform Card]
