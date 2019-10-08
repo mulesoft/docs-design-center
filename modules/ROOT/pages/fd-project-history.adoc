@@ -1,4 +1,4 @@
-= Project History
+= Discover What’s Changed in a Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,23 +6,35 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Flow Designer automatically saves (every few seconds) the state of the actions you perform while working on a project - for example, working on a card in the flow.
-These saved states are shown in a list view by time/date and activity. The name depends on the activity you were doing at the time the save occurred.
+You can see a history of changes you make to a project in Flow Designer.
+These changes are automatically saved every few minutes while you are working on your project.
+The saved states are listed by time/date and activity, and their name depends on the activity you were doing at the time the save occurred.
+For example, configuring a trigger in a flow.
 
-This is useful if:
+Being able to view a saved state of a project is useful if you want to:
 
-* you need to restore your work to a past version.
-* you want to detect what is or is not working between two different versions.
+* Detect what is or is not working between two different versions. For example, you started with a working, tested flow but during the configuration, you see errors and you want to revert back to the working state.
+* Compare two versions of a flow. For example, you might want to publish different versions of the same flow.
+
 
 == Procedure
 
-When you need to restore:
+When you need to restore to a previous version:
 
-. Click  *History* on the upper left to open the Project History display on the right of the pane.
-. Browse and select an item from the right list pane to view it. When you select an item, you can click on any objects that are associated with that saved state to view it.
-. Inspect the saved state to ensure it is the correct one to restore.
-. Click *Restore* to revert and save your work to the selected state. +
+. Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
+. Browse and select a saved state from the list pane to view it. When you select a state, you can click on any objects (such as a card) that are associated with that saved state to view it.
+. Inspect the saved state by either clicking on each object in the flow to inspect it in order to ensure it is the correct one to restore.
+. Click *Restore* to revert to the selected state. +
 
-This state is labeled with the word Restored at the top of the list.
+The state is indicated as restored and moved to the top of the list.
 
+When you need to compare two versions:
+. Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
+. Open the version of the project you want to compare in a separate canvas.
+. Browse and select a saved state from the list pane to view it. When you select a state, you can click on any objects (such as a card) that are associated with that saved state to view it.
+. Visually compare the saved state with the one you have open by either clicking on each object in the flow to inspect it in order to ensure it is the correct one to restore.
+. If the state you want to restore is other than the one you opened, select it from the list. If not, you don't need to do anything.
+. Click *Restore* to revert to the selected state.
+
+The state is indicated as restored and moved to the top of the list.
 // [Screenshot to come when the UI is more stable next week.]
