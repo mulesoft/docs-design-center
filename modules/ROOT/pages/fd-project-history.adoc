@@ -29,6 +29,7 @@ When you need to restore to a previous version:
 The state is indicated as restored and moved to the top of the list.
 
 When you need to compare two versions:
+
 . Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
 . Open the version of the project you want to compare in a separate canvas.
 . Browse and select a saved state from the list pane to view it. When you select a state, you can click on any objects (such as a card) that are associated with that saved state to view it.
