@@ -1,4 +1,4 @@
-= Tour of the Documentation Pane
+= Viewing the Documentation of a Specification or Stand-Alone Fragment
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,9 +7,9 @@ endif::[]
 
 The right pane of the code editor presents two views that you can display one at a time: *Documentation* and *Errors & Warnings*. You can switch between the two views by clicking the buttons at the bottom of the pane.
 
-The *Documentation* pane presents the documentation of an API specification (including its fragments) or supported stand-alone fragment in a structured display. The documentation presented comes from the content of `description` and `documentation` facets that are in the specification or stand-alone fragment that currently appears in the code editor.
+The *Documentation* pane presents the documentation of an API specification (including the documentation of its fragments) or supported stand-alone fragment in a structured display. Click the navigation icon just above the top-left corner of the pane to show a list of the endpoints, methods, security schemes, documentation items, and types that are in a specification. Click an item in the list to see the item's documentation.
 
-There are several different types of documentation that can appear in this location, depending on the item that you select in the table of contents.
+There are several different types of documentation that you can display:
 
 * A summary of a specification
 +
@@ -34,10 +34,6 @@ Includes the type of scheme and the required authorization information.
 * The content of `documentation` fragments
 +
 Includes the title and content of each fragment.
-
-. The navigation icon
-+
-Click this to show a table of contents that lets you navigate to the documentation for the item that you select. The table of contents can list endpoints, methods, security schemes, documentation items, and types.
 
 
 == See Also
