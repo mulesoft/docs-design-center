@@ -25,6 +25,8 @@ The third item is one of three entries:
 
 * If the mocking service is off and no base URI is defined, this field displays the message `Base URI not defined in the API file.'
 
+== The List of Endpoints and Their Methods
+
 <screenshot>
 
 The first item is a generated heading. You do not need to add it to your specifications.
