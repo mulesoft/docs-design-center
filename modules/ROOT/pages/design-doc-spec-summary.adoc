@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-If you are working in an API-specification project, the first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon (image:apid-nav-icon.png[title="Navigation icon"]) and then click the entry *Summary*.
+If you are working in an API-specification project, the first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
 
 <screenshot>
 
