@@ -7,13 +7,16 @@ endif::[]
 
 The table of contents for an API specification provides clickable entries for navigating through the specification's documentation.
 
-== View the Table of Contents
+== Procedure
 
 . In the left-hand pane of the code editor, select the main file in a RAML API-specification project or the file in an OAS project, if it is not already selected.
 . Click the *Documentation* tab to open the *Documentation* pane.
 +
 *Result:* After a brief period of time in which the code editor parses the specification (immediately for a simple specification, a few seconds for a complex one), the summary page for the specification appears.
-. Click the navigation icon  (image:apid-nav-icon.png[title="Navigation icon"]), which is just above the top-left corner of the pane.
+. Click the navigation icon, which is just above the top-left corner of the pane.
++
+.The navigation icon on the left side of this toolbar, as indicated by the arrow.
+image::apic-navigation-icon.png[Location of the navigation icon]
 +
 *Result:* The table of contents slides out from the left side of the pane.
 
