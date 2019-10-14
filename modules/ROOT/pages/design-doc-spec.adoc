@@ -5,15 +5,38 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-As you create an API specification or API fragment in the code editor in API Designer, you can add documentation to it. You can write the documentation either in plain text or in GitHub-flavored Markdown.
+As you create an API specification in the code editor in API Designer, you can add documentation to it to help other developers evaluate and implement it. As you work in an API-fragment project to create a RAML API fragment, you can add documentation to the fragment to help other developers use it. The documentation that you write can be either in plain text or in GitHub-flavored Markdown.
 
-As you document a specification or fragment, you can review the documentation in the right-hand pane, which is the *Documentation* pane. You open this pane by clicking the *Documentation* tab at the bottom of the right-hand panel of the code editor. The *Documentation* pane presents a view of your specification or fragment in a structured, hierarchical display, starting with a summary of the endpoints in an entire specification and letting you drill down into aspects of methods, types, security schemes, and more.
+While you are creating your specification or fragment, you can review your documentation in the right-hand pane of the code editor by clicking the *Documentation* tab at the bottom of the pane. The *Documentation* view can display your documentation several different ways. You can have it display:
 
-Therefore, the *Documentation* pane can help you to ensure that the specifications and fragments that you create include what you intend. You can even simulate calls to an API specification by using the *Try It* feature that you can open from this pane.
+* A summary of your specification
++
+Includes the list of all of the endpoints in a specification and the methods for accessing them. This list is generated from the specification.
 
-Because Anypoint Exchange presents the nearly the same functionality as exists in the *Documentation* pane, developers who want to evaluate a specification that you have published can review its structure and documentation similarly to how you reviewed it in API Designer. 
+* Documentation of an endpoint
++
+Includes the URI for accessing the endpoint (using the base URI that is defined in the specification), a description of the endpoint (if the specification defines one), and a list of the HTTP methods that can access the endpoint.
+
+* Documentation of an HTTP method
++
+Includes the URI for sending requests (using the base URI that is defined in the specification), a description of the method (if the specification defines one), and other information, such as the different responses that the specification defines for a method.
++
+You can even simulate a test of the method by clicking the *Try It* button that appears when you are viewing the method's documentation.
+
+* Documentation of types
++
+Includes their names, data types, descriptions (if the specification or fragment defines them), accepted values (if the types are enums), and more.
+
+* Documentation of a security scheme
++
+Includes the type of scheme and the required authorization information.
+
+* The content of `documentation` fragments
++
+Includes the title and content of each fragment.
+
+Because Anypoint Exchange presents the nearly the same functionality as exists in the *Documentation* pane, developers who want to evaluate a specification that you have published can review its structure and documentation similarly to how you reviewed it in API Designer.
 
 == See Also
 
-* xref:design-doc-spec-tour.adoc[Tour of the Documentation Pane]
 * xref:design-test-endpoints.adoc[Test Endpoints by Simulating Calls to Methods]

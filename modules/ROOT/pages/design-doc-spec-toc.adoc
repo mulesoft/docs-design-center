@@ -14,6 +14,7 @@ The table of contents for an API specification provides clickable entries for na
 +
 *Result:* After a brief period of time in which the code editor parses the specification (immediately for a simple specification, a few seconds for a complex one), the summary page for the specification appears.
 . Click the navigation icon  (image:apid-nav-icon.png[title="Navigation icon"]), which is just above the top-left corner of the pane.
++
 *Result:* The table of contents slides out from the left side of the pane.
 
 == Sections in the Table of Contents
