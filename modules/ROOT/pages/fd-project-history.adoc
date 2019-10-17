@@ -1,0 +1,32 @@
+= Discover What’s Changed in a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
+
+You can see a history of changes you make to a project in Flow Designer.
+The saved states are listed by the ID of the user who made the change, time, date, and activity. The activity name is based on the action you performed at save time.
+
+Being able to view a saved state of a project is useful if you want to:
+
+* Undo an inadvertent change you made to a project by reverting back to a working state.
+* Review changes made by other users to the project.
+* Retrieve older values of some project configurations.
+
+
+== Procedure
+
+To restore a previous state of your project:
+
+. Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas. 
+. Click a saved state from the list.
+. Inspect the saved state in the sidebar by clicking on an object in the flow. Use this method to inspect all of the objects in the flow.
+. Continue either selecting different saved states from the list or the objects within them until you locate the saved state you want to restore.
+. Click *Restore* at the top of the canvas.
+. If you want to restore the selected saved state, click *Restore* in the dialog. 
+
+The restored state is renamed and moved to the top of the list.
+
+
