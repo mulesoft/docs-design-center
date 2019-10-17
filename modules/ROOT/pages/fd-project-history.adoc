@@ -18,13 +18,15 @@ Being able to view a saved state of a project is useful if you want to:
 
 == Procedure
 
-To restore to a previous version:
+To restore to previous state of your project:
 
 . Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas. 
 . Click a saved state from the list.
-. Inspect the saved state in the sidebar by clicking on an object in the flow to ensure it is the correct one to restore.
-. Click *Restore* to restore to the state you selected. +
+. Inspect the saved state in the sidebar by clicking on an object in the flow. Use this method to inspect all of the objects in the flow.
+. Continue either selecting different saved states from the list or the objects within them until you locate the correct saved state you want to restore.
+. Click *Restore* at the top of the canvas.
+. If this is the state you want to restore, click *Restore* in the dialog. 
 
-The state is restored and moved to the top of the list.
+The restored state you selected is renamed and moved to the top of the list.
 
 
