@@ -11,22 +11,16 @@ The saved states are listed by the ID of the user who made the change, time, dat
 
 Being able to view a saved state of a project is useful if you want to:
 
-* Undo an inadvertent change you made to a project by reverting back to a working state.
-* Review changes made by other users to the project.
-* Retrieve older values of some project configurations.
-
+* Undo an inadvertent change you made to a project and revert to the working state.
+* Review changes made by other users on the project.
+* Retrieve previous values of connector configurations.
 
 == Procedure
 
-To restore a previous state of your project:
+To restore to a previous version:
 
-. Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas. 
-. Click a saved state from the list.
-. Inspect the saved state in the sidebar by clicking on an object in the flow. Use this method to inspect all of the objects in the flow.
-. Continue either selecting different saved states from the list or the objects within them until you locate the saved state you want to restore.
-. Click *Restore* at the top of the canvas.
-. If you want to restore the selected saved state, click *Restore* in the dialog. 
-
-The restored state is renamed and moved to the top of the list.
-
-
+. Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
+. Click a saved state from the list. The saved state is a read-only view of each card in the project flow on the canvas.
+. Click on a card to view the configuration details of that object in the flow. Continue with this method to review any changes for a card or object in the flow.
+. Once you decide upon and select a saved state and want to revert, click *Restore* at the top of the canvas. From the dialog that displays you have a choice to restore or cancel. Cancel returns you to the selected state.
+. Click *Restore* to restore to the state you selected and return to the Project Canvas. The restored state is moved to the top of the history list.
