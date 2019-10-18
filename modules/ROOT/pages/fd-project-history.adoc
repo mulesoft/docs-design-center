@@ -7,20 +7,22 @@ endif::[]
 :imagesdir: ../assets/images
 
 You can see a history of changes you make to a project in Flow Designer.
-The saved states are listed by the ID of the user who made the change, time, date, and activity. The activity name is based on the action you performed at save time.
+The saved states are listed by the ID of the user who made the change, time, date, and activity. 
+
+The name of the saved state is based on the activity you performed at save time.
 
 Being able to restore a saved state of a project is useful if you want to:
 
-* Undo an inadvertent change you made to a project and revert to the working state.
+* Undo an inadvertent change you made to a project and revert to a working state.
 * Review changes made by other users on the project.
 * Retrieve previous values of connector configurations.
 
 == Procedure
 
-To restore to a previous version of the project:
+To restore your saved state to a previous version of the project:
 
 . Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
 . Click a saved state from the list. The saved state is a read-only view of each card in the project on the canvas.
 . Click on any card to see the details of its configuration. This can be helpful to review the values. 
-. After you select a state to revert your project to, click *Restore* at the top of the canvas. You see the conformation dialog.
-. Click *Restore* to restore to the state you selected and return to the canvas. The restored state is moved to the top of the history list.
+. After you select a state to revert your project to, click *Restore* at the top of the canvas. The conformation dialog appears.
+. to restore to the state you selected and return to the canvas click *Restore*. The restored state is moved to the top of the history list.
