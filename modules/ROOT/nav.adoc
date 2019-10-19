@@ -44,6 +44,7 @@
  ** xref:manage-dependency-versions-design-center.adoc[Update Dependencies in a Mule-Application Project]
  ** xref:fd-share-to-studio.adoc[Collaborate with Someone who Works in Studio]
  ** xref:jump-runtime-manager-task.adoc[View Runtime Information about Applications You are Creating]
+ ** xref:fd-project-history.adoc[Discover What’s Changed in a Project]
  ** xref:fd-troubleshooting.adoc[Troubleshoot in Flow Designer]
   *** xref:logger-task-design-center.adoc[Log Flow Information at Runtime with Logger]
   *** xref:troubleshooting-reference.adoc[Error Messages for Flow Designer]
