@@ -19,7 +19,7 @@ Being able to restore a saved state of a project is useful if you want to:
 
 == Procedure
 
-To restore your saved state to a previous version of the project:
+To revert to a previous state of your project:
 
 . Click *History* on the upper left of the canvas to open the Project History list on the right of the canvas.
 . Click a saved state from the list. The saved state is a read-only view of each card in the project on the canvas.
