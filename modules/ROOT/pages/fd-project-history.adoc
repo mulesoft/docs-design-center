@@ -9,7 +9,7 @@ endif::[]
 You can see a history of changes you make to a project in Flow Designer.
 The saved states are listed by the ID of the user who made the change, time, date, and activity. 
 
-The name of the saved state is based on the activity you performed at save time.
+The name of the saved state is based on the activity you performed when you saved the project.
 
 Being able to restore a saved state of a project is useful if you want to:
 
