@@ -7,7 +7,7 @@ endif::[]
 :imagesdir: ../assets/images
 
 You can see a history of changes you make to a project in Flow Designer.
-The saved states are listed by the ID of the user who made the change, time, date, and activity. 
+The saved states are listed by the ID of the user who made the change, by time, by date, and by activity. 
 
 The name of the saved state is based on the activity you performed when you saved the project.
 
