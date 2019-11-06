@@ -52,7 +52,7 @@ Once a reusable connection is created, it is available for all Flow Designer pro
 
 == Change a reusable connection
 
-When your credentials change, you can edit or delete the shared connection so that all apps dependent upon it continue to work.
+When your credentials change, you can edit or delete the shared connection you created so that all apps dependent upon it continue to work.
 
 . Select the connector and click the three-dots icon under Reusable Configurations. If you have the connector open, select a connector under Connection.
 
