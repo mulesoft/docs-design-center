@@ -125,7 +125,7 @@ A trigger is an event that starts a flow in a Mule application. In your project,
 *Result:* The card is opened. In its top-left corner, it is identified as a Salesforce connector. The name of the operation -- Subscribe Topic -- is also displayed. At the top of the card is the message “You need to set up the Salesforce configuration. Click here to set it up.”
 . Specify how you want Flow Designer to authenticate to Salesforce.
 .. Click the linked text that is in the message.
-.. In the *Connection Type* field, select *Basic Username Password*. If reusable connections are available, you can select one.
+.. In the *Connection Type* field, select *Basic Username Password*. If reusable connections are available, select one.
 .. Specify your username, password, and security token.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
 . Add your Push Topic to the connector by typing `ClosedOpps` in the *Topic* field. Then, close the card either by clicking the X in the top-right corner or by clicking an empty space on the canvas.
