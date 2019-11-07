@@ -10,7 +10,8 @@ You can reuse a connection in a Flow Designer project instead of adding your aut
 
 You can reuse connections:
 
-* If you are a system admin, you can enable non-admins to connect to your system using your authentication. This is important if the integration requires administrative system permissions.
+* If you are a system administrator, you can enable non-administrators to connect to your system using your authentication. 
+This is important if the integration requires administrative system permissions.
 
 * If you are responsible for maintaining the connection, you can ensure that the integration is unaffected when the user who created the Flow Designer project changes their personal password or leaves the organization.
 
