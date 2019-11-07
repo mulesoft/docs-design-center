@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. Once a reusable connection is created, it is available for all Flow Designer projects in your business group.
+You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. After a reusable connection is created, it is available for all Flow Designer projects in your business group.
 
 You can reuse connections:
 
