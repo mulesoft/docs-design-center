@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. After a reusable connection is created, it is available for all Flow Designer projects in your business group.
+You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. After a reusable connection is created, it is available for all Flow Designer projects in your business group. Changing your resuable configuration is can be done anytime. 
 
 You can reuse connections:
 
@@ -17,19 +17,17 @@ This is important if the integration requires administrative system permissions.
 
 == Create a Reusable Connection
 
-Add a reusable connection when configuring a connector in Flow Designer.
-
 . Choose an operation.
 
 . Click *Add connection*.
 
 . Enter a unique and descriptive name that your users can easily recognize.
 
-. To make this connection available for users in your business group, leave the *share this connection with my business group* checkbox checked. To maintain security, only you as the creator of a shared connection can view your authentication credentials.
+. To make this connection available for users in your business group, leave the *share this connection with my business group* checkbox selected. To maintain security, only you as the creator of a shared connection can view your authentication credentials.
 
 . If you don’t need to share this connection with other users, uncheck the box.
 
-. Select a connection type and fill in the necessary information.
+. Select a connection type and complete the necessary information.
 
 . Validate that this connection works by clicking *Test*.
 
@@ -37,28 +35,28 @@ Add a reusable connection when configuring a connector in Flow Designer.
 
 == Use a Reusable Connection Created in Another Project
 
-Once a reusable connection is created, it is available for all Flow Designer projects.
+After a reusable connection is created, it is available for all Flow Designer projects.
 
 . Choose a connector and operation.
 
-. View a list of reusable connections. To help you choose the right connection the date the reusable connector was created is visible under the connection.
+. View the list of your reusable connections. To help you choose the right connection the date the reusable connector was created is visible under the connection.
 
 . Select the appropriate radio button for the connection you intend to use.
 
 . Click *Test* to make sure that the credentials are valid.
 
-. Click *Save* after the test succeeds.
+. Click *Save* when the test succeeds.
 
 == Change a reusable connection
 
-When your credentials change, you can edit or delete the shared connection you created so that all projects dependent upon it continue to work.
+When your credentials change, you can edit or delete the shared connection you created so that all projects dependent upon it continue to work:
 
 . Open the reusable configuration section of your connector. You see a list of connections. Select one and click the three-dots icon.
 
-. If you want to remove the connection, select *Delete*. You must have another connection available to use in order to delete your reusable connection.
+. If you want to remove the connection, select *Delete*. You must have another connection available before you can delete your reusable connection.
 
 . If you want to edit the connection, select *Edit* and make your changes.
 
 . Click *Save* in the connection section, and click *Save* again in the reusable configuration section.
 
-This immediately updates all Flow Designer projects being designed, but not Mule runtime apps already deployed to CloudHub.
+Completing this task immediately updates all Flow Designer projects being designed; it does not update Mule runtime apps already deployed to CloudHub.
