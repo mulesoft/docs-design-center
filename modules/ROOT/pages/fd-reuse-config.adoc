@@ -6,8 +6,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. After a reusable connection is created, it is available for all Flow Designer projects in your business group.
-Changing your resuable configuration can be done anytime.
+You can reuse a connection in a Flow Designer project instead of manually adding your authentication information.
+After a reusable connection is created, it is available for all Flow Designer projects in your business group.
+You can change your resuable configuration at anytime.
 
 You can reuse connections:
 
@@ -40,7 +41,7 @@ After a reusable connection is created, it is available for all Flow Designer pr
 
 . Choose a connector and operation.
 
-. View the list of your reusable connections. To help you choose the right connection, the date the reusable connector was created is visible under the connection.
+. View the list of your reusable connections. To help you choose the right connection, the creation date of the reusable connector is listed.
 
 . Select the appropriate radio button for the connection you intend to use.
 
