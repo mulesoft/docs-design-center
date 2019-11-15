@@ -8,7 +8,7 @@ endif::[]
 
 You can reuse a connection in a Flow Designer project instead of manually adding your authentication information.
 After a reusable connection is created, it is available for all Flow Designer projects in your business group.
-You can change your resuable configuration at anytime.
+You can change your reusable configuration at anytime.
 
 You can reuse connections:
 
