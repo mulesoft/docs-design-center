@@ -6,11 +6,13 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can reuse a connection in a Flow Designer project instead of adding your authentication information manually. After a reusable connection is created, it is available for all Flow Designer projects in your business group. Changing your resuable configuration is can be done anytime. 
+You can reuse a connection in a Flow Designer project instead of manually adding your authentication information.
+After a reusable connection is created, it is available for all Flow Designer projects in your business group.
+You can change your reusable configuration at anytime.
 
-You can reuse connections:
+You can reuse connections in the following situations:
 
-* If you are a system administrator, you can enable non-administrators to connect to your system using your authentication. 
+* If you are a system administrator, you can enable non-administrators to connect to your system using your authentication.
 This is important if the integration requires administrative system permissions.
 
 * If you are responsible for maintaining the connection, you can ensure that the integration is unaffected when the user who created the Flow Designer project changes their personal password or leaves the organization.
@@ -23,7 +25,8 @@ This is important if the integration requires administrative system permissions.
 
 . Enter a unique and descriptive name that your users can easily recognize.
 
-. To make this connection available for users in your business group, leave the *share this connection with my business group* checkbox selected. To maintain security, only you as the creator of a shared connection can view your authentication credentials.
+. To make this connection available for users in your business group, leave the *share this connection with my business group* checkbox selected.
+To maintain security, only you as the creator of a shared connection can view your credentials.
 
 . If you don’t need to share this connection with other users, unselect the box.
 
@@ -39,7 +42,8 @@ After a reusable connection is created, it is available for all Flow Designer pr
 
 . Choose a connector and operation.
 
-. View the list of your reusable connections. To help you choose the right connection the date the reusable connector was created is visible under the connection.
+. View the list of your reusable connections.
+To help you choose the right connection, the creation date of the reusable connector is listed.
 
 . Select the appropriate radio button for the connection you intend to use.
 
