@@ -26,7 +26,7 @@ This is important if the integration requires administrative system permissions.
 . Enter a unique and descriptive name that your users can easily recognize.
 
 . To make this connection available for users in your business group, leave the *share this connection with my business group* checkbox selected.
-To maintain security, only you as the creator of a shared connection can view your authentication credentials.
+To maintain security, only you as the creator of a shared connection can view your credentials.
 
 . If you don’t need to share this connection with other users, unselect the box.
 
