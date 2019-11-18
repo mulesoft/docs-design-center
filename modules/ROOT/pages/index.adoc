@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords:
 
-Design Center is a development environment that consists of two tools:
+Anypoint Design Center is a development environment that consists of two tools:
 
 * xref:design-create-publish-api-specs.adoc[API Designer]
 +
