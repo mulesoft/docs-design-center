@@ -6,9 +6,13 @@ endif::[]
 
 Design Center is a development environment that consists of two tools:
 
-xref:design-create-publish-api-specs.adoc[API Designer]:: In API Designer, you can create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS). You can also create API fragments in RAML. After you create a specification or fragment, you can publish it to Anypoint Exchange, so that it can be used by anyone in your MuleSoft organization.
+* xref:design-create-publish-api-specs.adoc[API Designer]
++
+In API Designer, you can create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS). You can also create API fragments in RAML. After you create a specification or fragment, you can publish it to Anypoint Exchange, so that it can be used by anyone in your MuleSoft organization.
 
-xref:about-designing-a-mule-application.adoc[Flow Designer]:: In Flow Designer, you create Mule applications to integrate systems into workflows.
+* xref:about-designing-a-mule-application.adoc[Flow Designer]
++
+In Flow Designer, you create Mule applications to integrate systems into workflows.
 
 == Prerequisites for Using Design Center
 * An Anypoint Platform account and permissions, including permissions to create and manage APIs or applications
