@@ -15,10 +15,15 @@ In API Designer, you can create API specifications in RESTful API Modeling Langu
 In Flow Designer, you create Mule applications to integrate systems into workflows.
 
 == Prerequisites for Using Design Center
-* An Anypoint Platform account and permissions, including permissions to create and manage APIs or applications
-* Available vCores for Design
-+
-To determine available vCores, go to Access Management > Runtime Manager in Anypoint Platform.
+
+You must meet the following requirements for accessing Design Center, using its features, running and deploying apps, and publishing designs to Exchange:
+
+* Be assigned the Design Center Developer permission or be the Organization Owner.
+* Be assigned the CloudHub Admin role for the Design environment.
+* Be assigned the Exchange Contributor role.
+* Belong to an Anypoint organization that has at least one CloudHub Design Environment with 0.2 vCores of available capacity.
+
+To deploy to the production environment from Design Center, your user account also needs to be assigned to a CloudHub Developer role specifically for the production environment.
 
 == Where to Start Using Design Center
 To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears. See the documentation for API Designer and for Flow Designer for the steps to create projects for those tools.
