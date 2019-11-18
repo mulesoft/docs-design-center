@@ -55,4 +55,3 @@
   *** xref:promote-app-prod-env-design-center.adoc[Deploy a Mule Application from Flow Designer]
   *** xref:fd-deploy-app-from-rm.adoc[Deploy a Mule Application from Runtime Manager]
  ** xref:fd-publish-app-as-template.adoc[Publish a Mule Application as a Template on Exchange]
-* xref:user-access-to-design-center.adoc[About Accessing Design Center]

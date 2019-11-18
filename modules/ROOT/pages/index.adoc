@@ -3,37 +3,33 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
+:page-aliases: user-access-to-design-center.adoc
 
-Design Center is a development environment for Mule applications and API definitions in the cloud. To access Design Center, you need the following things:
+Anypoint Design Center is a development environment that consists of two tools:
 
-* An Anypoint Platform account and permissions, including permissions to create and manage APIs or applications
-* Available vCores for Design
+* xref:design-create-publish-api-specs.adoc[API Designer]
 +
-To determine available vCores, go to Access Management > Runtime Manager in Anypoint Platform.
+In API Designer, you can create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification (OAS) 2.0. You can also create API fragments in RAML. After you create a specification or fragment, you can publish it to Anypoint Exchange, so that it can be used by anyone in your MuleSoft organization.
 
-To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears.
+* xref:about-designing-a-mule-application.adoc[Flow Designer]
++
+In Flow Designer, you create Mule applications to integrate systems into workflows.
 
-image::index-5e173.png[project list,height=116,width=690]
+== Prerequisites for Using Design Center
 
-== Connect Apps and APIs
+You must meet the following requirements for accessing Design Center, using its features, running and deploying apps, and publishing designs to Exchange:
 
-The Mule apps you develop in Design Center can run in the cloud or in Studio and can interface with services and databases to perform tasks, such as data conversion. When you run your project as a Mule application on a cloud server in a design environment, you can change, test, and debug the application. When the application is ready for production, you can deploy it to a production server.
+* Be assigned the Design Center Developer permission or be the Organization Owner.
+* Be assigned the CloudHub Admin role for the Design environment.
+* Be assigned the Exchange Contributor role.
+* Belong to an Anypoint organization that has at least one CloudHub Design Environment with 0.2 vCores of available capacity.
 
-You can build applications to execute the tasks on-demand or on a schedule. You can create an application that listens for HTTP requests on a web address, validates authorized requests, queries a database, transforms output data from the database into JSON objects, and sends data back to the requester.
+To deploy to the production environment from Design Center, your user account also needs to be assigned to a CloudHub Developer role specifically for the production environment.
 
-You can reuse all or part of an application or API.
-
-== Design an API
-
-Design Center features a RAML editor for authoring and sharing RAML specifications in code view or visual design mode. The editor supports the Open API Specification (OAS) 2.0. The importation of an OAS specification converts it to RAML. Within the editor you can share specifications by uploading or downloading items to or from Exchange. You can export RAML specifications from Design Center. You can import these specifications into Anypoint Studio or into another project in Design Center.
-
-You can simulate calls to the API. You can test that the HTTP methods in the specification return the example responses you expect.
-
-Design Center supports the reuse of API fragments and organizes dependencies. After publishing an API to Exchange, it appears along with other MuleSoft-approved APIs in the list of components that you can add the API to a Mule app flow.
-
+== Where to Start Using Design Center
+To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears. See the documentation for API Designer and for Flow Designer for the steps to create projects for those tools.
 
 == See Also
 
-* xref:user-access-to-design-center.adoc[About Accessing Design Center]
-
-* xref:about-designing-a-mule-application.adoc[Designing a Mule App Overview]
+* xref:access-management::roles.adoc[Roles]
+* xref:access-management::environments.adoc[CloudHub Environments]
