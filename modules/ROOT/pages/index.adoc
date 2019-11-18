@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
+:page-aliases: user-access-to-design-center.adoc
 
 Anypoint Design Center is a development environment that consists of two tools:
 
@@ -27,3 +28,8 @@ To deploy to the production environment from Design Center, your user account al
 
 == Where to Start Using Design Center
 To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears. See the documentation for API Designer and for Flow Designer for the steps to create projects for those tools.
+
+== See Also
+
+* xref:access-management::roles.adoc[Roles]
+* xref:access-management::environments.adoc[CloudHub Environments]
