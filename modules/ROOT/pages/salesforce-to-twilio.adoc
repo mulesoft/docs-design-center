@@ -56,7 +56,7 @@ Fortunately, you know just the tool to help you carry out this plan: Flow Design
 == Capture opportunities that are won
 You need to ensure that your application is triggered as soon as the status of an Opportunity in Salesforce is changed to ‘Closed Won’. To do this, use an SOQL query in Salesforce which fields to send and our criteria for triggering the application. After you build the query, you can set up a Push Topic that can serve as the trigger for your MuleSoft application.
 
-. Navigate to the xref::https://workbench.developerforce.com/query.php[SOQL query builder]. (You have to log in with your Salesforce credentials.)
+. Navigate to the https://workbench.developerforce.com/query.php[SOQL query builder]. (You have to log in with your Salesforce credentials.)
 . Select *Opportunity* as the Object.
 . Select *Amount*, *CloseDate*, *Id*, and *Name* from the *Fields* menu.
 . In the *Filter results by* fields, add `StageName = ‘Closed Won’`.
