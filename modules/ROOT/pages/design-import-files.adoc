@@ -16,8 +16,8 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 
 == Procedure
 
-* In the code editor only: To import a file or the content of a .zip file that is stored on your computer:
-. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+* *In the code editor only:* To import a file or the content of a .zip file that is stored on your computer:
+. Click *Settings* in the top-right corner of the editor and select *Import*.
 . In the *Import* dialog, select *File or Zip*.
 
 +
@@ -41,8 +41,8 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 * To import an API specification or API fragment from Exchange, together with its dependencies:
 . Open the *Import Asset from Exchange* dialog by using either of these methods:
 +
-** In the code editor only: If your project contains only the default file that API Designer created together with the project, click the linked text that appears in the *Files* pane.
-** In the code editor only: If your project contains at least one file that you have created, click the three-dot icon at the top of the left pane and select *Import from Exchange*.
+** *In the code editor only:* If your project contains only the default file that API Designer created together with the project, click the linked text that appears in the *Files* pane.
+** *In the code editor only:* Click *Settings* in the top-right corner of the editor and select *Import from Exchange*.
 ** In the visual editor only: If your project does not yet contain any resources or data types, click the linked text that appears in the *New API* pane.
 
 . In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
