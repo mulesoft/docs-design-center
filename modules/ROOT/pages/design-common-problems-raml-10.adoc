@@ -1014,6 +1014,7 @@ Two common occurrences that cause type-inheritance errors are incorrectly mergin
 === Merging Two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
+
 * Merge a defined type with an undefined type
 * Merge two undefined types
 
