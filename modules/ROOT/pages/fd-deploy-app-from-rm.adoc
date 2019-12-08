@@ -6,10 +6,10 @@ It might be the case that you are not allowed to deploy an application directly 
 
 . In Flow Designer, follow these steps:
 .. Ensure that your project is free of errors.
-.. Click the download icon, which is to the right of the Undo and Redo arrows in the top-left corner of the screen.
-.. Select *Download Package*.
+.. Click the Export icon, which is to the right of the Test button.
+.. You can choose to import the project sources or export the entire mule application by choosing one of the radio buttons and then clicking *Export*.
 +
-*Result:* A `.jar` file that contains a copy of your project is downloaded to the default location on your computer.
+*Result:* A `.jar` file that contains a copy of your project source or Mule app is downloaded to the default location on your computer.
 . Place the `.jar` file in a location that the other person can access.
 . Have the person receiving the `.jar` file follow these steps in Runtime Manager:
 .. Switch to the environment in which the Mule application is to be deployed.
