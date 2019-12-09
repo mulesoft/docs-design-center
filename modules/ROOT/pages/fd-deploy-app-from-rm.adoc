@@ -1,13 +1,16 @@
 = Deploy a Mule Application from Runtime Manager
 
-It might be the case that you are not allowed to deploy an application directly from Flow Designer. Your organization might require someone with the proper authority to deploy applications from Runtime Manager. You can share with that person a copy of your project as a `.jar` file to deploy your application with.
+It might be the case that you are not allowed to deploy an application directly from Flow Designer.
+Your organization might require someone with the proper authority to deploy applications from Runtime Manager.
+You can share with that person a copy of your project as a `.jar` file to deploy your application with.
 
 == Procedure
 
 . In Flow Designer, follow these steps:
 .. Ensure that your project is free of errors.
-.. Select Export icon from the right drop down list next to the the Test button.
-.. You can choose to import the project sources or export the entire mule application by choosing one of the radio buttons and then clicking *Export*.
+.. Select Export from the three dots list next to the the Test button.
+.. Select *Export project sources* to export just your project source files or
+*Export mule application* to export your entire Mule app, then click *Export*.
 +
 *Result:* A `.jar` file that contains a copy of your project source or Mule app is downloaded to the default location on your computer.
 . Place the `.jar` file in a location that the other person can access.
