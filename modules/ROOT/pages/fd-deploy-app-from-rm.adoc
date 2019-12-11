@@ -8,7 +8,7 @@ You'll need to select *Export mule application*, as it produces a .jar file that
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
 . Select *Export mule application* for the entire app, and click *Export*.
 +
- A `.jar` file that contains a copy of your Mule app with your credentials and artifacts is downloaded to the default location on your computer.
+A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
 
 . Place the `.jar` file in a location that the other person can access.
 . Have the person receiving the `.jar` file follow these steps in Runtime Manager:

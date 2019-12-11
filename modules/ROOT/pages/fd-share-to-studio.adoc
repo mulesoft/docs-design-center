@@ -6,20 +6,22 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Perhaps when you are creating a Mule application, you need help from someone in your Anypoint-Platform organization,
+Perhaps when you are creating a Mule application you need help from someone in your Anypoint-Platform organization,
 such as a developer, who works in Studio. You can download your project as a `.jar` file and then place that file in a location from which the other person can
 import it into Studio.
 
 As the other person works on the project, the changes are applied to your project online in Flow Designer.
 When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
-. Decide if you need to export the source files only or the entire Mule app, and communicate it to that person.
+The only thing you'll need to decide and communicate is whether you are exporting the source files only or the entire Mule app that includes all the connector credentials
+and artifacts required by the Mule runtime.
+
 . In Flow Designer, ensure that your project is free of errors.
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
 . Select *Export project sources* for just your project source files, or
 *Export mule application* for your entire Mule app, and click *Export*.
 +
-A `.jar` file that contains a copy of your entire project including your credentials is downloaded to the default location on your computer.
+A `.jar` file that contains just your project sources or a copy of your entire project including your credentials is downloaded to the default location on your computer.
 
 // Place the .jar file in a location that the other person can access.
 
