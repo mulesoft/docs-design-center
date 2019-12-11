@@ -13,7 +13,7 @@ import it into Studio.
 As the other person works on the project, the changes are applied to your project online in Flow Designer.
 When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
-The only thing you'll need to decide and communicate is whether you are exporting the source files only or the entire Mule app which includes all the connector credentials
+The only thing you'll need to decide and communicate is whether you are exporting the source files only, or the entire Mule app which includes all the connector credentials
 and artifacts required by the Mule runtime.
 
 . In Flow Designer, ensure that your project is free of errors.
@@ -22,7 +22,7 @@ and artifacts required by the Mule runtime.
 *Export mule application* for your entire Mule app, and click *Export*.
 +
 A `.jar` file that contains just your project source files, or a copy of your entire project (including all the connector credentials and artifacts)
-is downloaded to the default location on your computer.
+downloads to the default location on your computer.
 
 // Place the .jar file in a location that the other person can access.
 
