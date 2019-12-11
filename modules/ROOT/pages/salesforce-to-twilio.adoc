@@ -140,8 +140,7 @@ Because you want to notify the customer with an SMS, you can use the Twilio conn
 *Result:* The Twilio card is opened. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
 . Specify how you want Flow Designer to authenticate to Twilio.
 .. Click the linked text that is in the message.
-.. In the *Username* field, specify your account SID.
-.. In the *Password* field, specify your authentication token.
+.. In the *Username* field, specify your account SID. In the *Password* field, specify your authentication token. Do not specify your username or password in these fields. If you do, the Twilio card returns the message `HTTP POST on resource 'https://api.twilio.com:443/<Date>/Accounts/<account-SID>/Messages.json' failed: Timeout exceeded.` when you trigger the flow in your app.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
 . In the *Account SID* field, specify your account SID again. Then, close the card.
 
@@ -225,13 +224,20 @@ Name this data type `Product Information` and use this example JSON:
 
 == Save the opportunity data into a variable
 
-Because you’ll be using data from the opportunity later in the flow, and cards that follow the trigger will be creating their own outputs, you need to store the opportunity data into a variable.
+Because you’ll be using data from the opportunity later in the flow, and cards that follow the trigger will be creating their own outputs, you need to store all of the opportunity data into a variable.
 
 . Mouse over the arrow between the Salesforce card and the Transform card to change the arrow to a plus sign. Then, click the plus sign to add a new component.
 . Search for and select the ‘Set Variable’ component
 . Name the variable `OppDetails`.
-. Click *payload* in the list of items on the right side of the card and drag it into the *Value* field.
-. Close the card. Your flow should look like this:
+. Click *Custom Expression* in the list of items on the right side of the card and drag it into the *Value* field.
+. Click the arrow on the right side of the expression box and click *EXPAND*.
+. In the  Custom Expression dialog, type `payload` in the *Expression* field.
++
+The expression `payload` indicates the entire input that arrives at the Set Variable card during one activation of the Mule app. As you can see in the right-hand pane of the card, the payload consists in this case of four data elements. It's possible to specify use one or more of those in the *Expression* box, rather than the expression `payload`. You could click and drag those elements into the box. However, for this tutorial, we're using the full payload.
++
+.The four data elements that make up the payload that arrives at the Set Variable card.
+image::fd-tutorial-set-var-right-pane.graffle.png[]
+. Click *OK* and then close the card. Your flow should look like this:
 +
 image::flow-with-set-variable-card.png[]
 
