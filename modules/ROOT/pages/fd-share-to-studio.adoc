@@ -21,7 +21,8 @@ and artifacts required by the Mule runtime.
 . Select *Export project sources* for just your project source files, or
 *Export mule application* for your entire Mule app, and click *Export*.
 +
-A `.jar` file that contains just your project sources or a copy of your entire project including your credentials is downloaded to the default location on your computer.
+A `.jar` file that contains just your project sources, or a copy of your entire project (including all the connector credentials and artifacts)
+is downloaded to the default location on your computer.
 
 // Place the .jar file in a location that the other person can access.
 
@@ -31,8 +32,7 @@ A `.jar` file that contains just your project sources or a copy of your entire p
 +
 Studio opens the project.
 
-The person who works in Studio can work on the project.
-All changes are made automatically to the project in Design Center.
+The person who works in Studio can work on the project, and all changes are made automatically to the project in Design Center.
 When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
 
 == See Also
