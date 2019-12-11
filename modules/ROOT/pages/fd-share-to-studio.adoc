@@ -6,31 +6,30 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-When you are creating a Mule application, there might come a time when you would like help from someone in your Anypoint-Platform organization,
+Perhaps when you are creating a Mule application, you need help from someone in your Anypoint-Platform organization,
 such as a developer, who works in Studio. You can download your project as a `.jar` file and then place that file in a location from which the other person can
 import it into Studio.
 
 As the other person works on the project, the changes are applied to your project online in Flow Designer.
 When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
-You'll need to decide whether to export the source files or the entire Mule app.
 
-
-. In Flow Designer, follow these steps:
-.. Ensure that your project is free of errors.
-.. Export your project by clicking the dots next to the Test button and select *Export*.
-.. Select *Export project sources* to export just your project source files, or
-*Export mule application* to export your entire Mule app, then click *Export*.
+. Decide if you need to export the source files only or the entire Mule app, and communicate it to that person.
+. In Flow Designer, ensure that your project is free of errors.
+. Export your project by clicking the dots next to the Test button and select *Export* from the list.
+. Select *Export project sources* for just your project source files, or
+*Export mule application* for your entire Mule app, and click *Export*.
 +
-A `.jar` file that contains a copy of your entire project including your credentials and is downloaded to the default location on your computer. 
+A `.jar` file that contains a copy of your entire project including your credentials and is downloaded to the default location on your computer.
+
 . Have the person who works in Studio follow these steps:
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
 Studio opens the project.
 
-== What to Do Next
-
-The person who works in Studio can work on the project. All changes are made automatically to the project in Design Center. When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
+The person who works in Studio can work on the project.
+All changes are made automatically to the project in Design Center.
+When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
 
 == See Also
 
