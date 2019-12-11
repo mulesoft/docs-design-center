@@ -140,7 +140,7 @@ Because you want to notify the customer with an SMS, you can use the Twilio conn
 *Result:* The Twilio card is opened. At the top of the card is the message “You need to set up the Twilio Connector configuration. Click here to set it up.”
 . Specify how you want Flow Designer to authenticate to Twilio.
 .. Click the linked text that is in the message.
-.. In the *Username* field, specify your account SID. In the *Password* field, specify your authentication token. Do not specify your username or password in these fields. If you do, the Twilio card returns the message `HTTP POST on resource 'https://api.twilio.com:443/<Date>/Accounts/<account-SID>/Messages.json' failed: Timeout exceeded.` when you trigger the flow in your app.
+.. In the *Username* field, specify your account SID for Twilio. In the *Password* field, specify your authentication token for Twilio. Do not specify your username or password in these fields. If you do, the Twilio card returns the message `HTTP POST on resource 'https://api.twilio.com:443/<Date>/Accounts/<account-SID>/Messages.json' failed: Timeout exceeded.` when you trigger the flow in your app.
 .. Click the *Test* button to check whether Flow Designer can connect with the credentials that you specified. If the test fails, double-check your credentials and token. Save the configuration after the test succeeds.
 . In the *Account SID* field, specify your account SID again. Then, close the card.
 
