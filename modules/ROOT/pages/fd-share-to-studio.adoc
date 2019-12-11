@@ -19,7 +19,7 @@ When the other person is finished, you can open your project in Flow Designer an
 . Select *Export project sources* for just your project source files, or
 *Export mule application* for your entire Mule app, and click *Export*.
 +
-A `.jar` file that contains a copy of your entire project including your credentials and is downloaded to the default location on your computer.
+A `.jar` file that contains a copy of your entire project including your credentials is downloaded to the default location on your computer.
 
 . Have the person who works in Studio follow these steps:
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
