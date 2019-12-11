@@ -236,7 +236,7 @@ Because you’ll be using data from the opportunity later in the flow, and cards
 The expression `payload` indicates the entire input that arrives at the Set Variable card during one activation of the Mule app. As you can see in the right-hand pane of the card, the payload consists in this case of four data elements. It's possible to specify use one or more of those in the *Expression* box, rather than the expression `payload`. You could click and drag those elements into the box. However, for this tutorial, we're using the full payload.
 +
 .The four data elements that make up the payload that arrives at the Set Variable card.
-image::fd-tutorial-set-var-right-pane.graffle.png[]
+image::fd-tutorial-set-var-right-pane.png[]
 . Click *OK* and then close the card. Your flow should look like this:
 +
 image::flow-with-set-variable-card.png[]
