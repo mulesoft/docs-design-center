@@ -20,12 +20,12 @@ and artifacts required by the Mule runtime.
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
 . Select *Export project sources* for just your project source files, or
 *Export mule application* for your entire Mule app, and click *Export*.
+
 +
 A `.jar` file that contains just your project source files, or a copy of your entire project (including all the connector credentials and artifacts)
 downloads to the default location on your computer.
 
 // Place the .jar file in a location that the other person can access.
-
 . Have the person who works in Studio follow these steps:
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
