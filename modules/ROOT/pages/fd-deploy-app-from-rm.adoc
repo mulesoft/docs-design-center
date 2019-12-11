@@ -9,18 +9,22 @@ files by using *Export project sources* or the entire Mule app with *Export mule
 . Select *Export project sources* for source files only, or *Export mule application* for the entire app, and click *Export*.
 +
  A `.jar` file that contains a copy of your project source or Mule app with your credentials is downloaded to the default location on your computer.
-+
+
 . Place the `.jar` file in a location that the other person can access.
 . Have the person receiving the `.jar` file follow these steps in Runtime Manager:
 .. Switch to the environment in which the Mule application is to be deployed.
 .. Click *Deploy Application*.
 +
  The Deploy Application page is opened.
+
 .. Select *Choose File* > *Upload File* and upload the `.jar` file.
+
 .. Follow the instructions in xref:runtime-manager::deploying-to-cloudhub.adoc[Deploying to CloudHub].
 
 == See Also
 
-* xref:access-management::environments.adoc[CloudHub Environments]
+* xref:access-management::environments.adoc[Environments]
+
 * xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]
+
 * https://help.mulesoft.com[MuleSoft Help Center]

@@ -21,6 +21,8 @@ When the other person is finished, you can open your project in Flow Designer an
 +
 A `.jar` file that contains a copy of your entire project including your credentials is downloaded to the default location on your computer.
 
+// Place the .jar file in a location that the other person can access.
+
 . Have the person who works in Studio follow these steps:
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
