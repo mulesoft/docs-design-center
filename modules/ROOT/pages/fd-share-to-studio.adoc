@@ -34,3 +34,4 @@ When the work in Studio is completed, ensure that the project is deleted from St
 == See Also
 
 * xref:fd-troubleshooting.adoc[Troubleshooting in Flow Designer]
+* https://help.mulesoft.com[MuleSoft Help Center]
