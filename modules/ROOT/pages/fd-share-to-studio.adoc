@@ -18,13 +18,13 @@ As the other person works on the project, they can take advantage of the advance
 When they are finished, they can deploy the project from Studio.
 
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
-
++
 You see a pop-up with export choices.
-
++
 . Select *Export project sources* to share just your project source files, and click *Export*.
 +
 A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
-
++
 . Alert the recipient who works in Studio that the .jar is available so that they can:
 .. Access the .jar file and place it in a location where they can easily upload it from Studio.
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.

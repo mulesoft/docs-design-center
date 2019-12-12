@@ -3,31 +3,31 @@
 After designing a Mule application in Anypoint Flow Designer and ensuring that your project is free of errors,
 someone other than yourself may need to deploy it.
 You must first use Flow Designer to export the project as a `.jar` file.
-This is in order to share it with someone with deployment credentials so that they can deploy the app using Anypoint Runtime Manager.
+This is in order to share it with someone with deployment credentials who can deploy the app using Anypoint Runtime Manager.
 You'll need to use *Export mule application*, as it produces a `.jar` file that includes all the connector credentials and artifacts required by the Mule runtime.
 
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
-
++
 You see a pop-up with export choices.
-
++
 . Select *Export mule application* for the entire app, and click *Export*.
 +
 A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
-
++
 . Alert the recipient that the .jar is available so that they can:
-.. Access the .jar file and place it in a location where they can easily upload it from Runtime Manager.
+.. Access the `.jar` file and place it in a location where they can easily upload it from Runtime Manager.
 .. Change to the deployment environment and click *Deploy Application*.
 +
  The Deploy Application page is opened.
 
 .. Select *Choose File* > *Upload File* and upload the `.jar` file.
 
-.. Follow the instructions in xref:runtime-manager::deploying-to-cloudhub.adoc[Deploying to CloudHub].
+.. Follow the instructions in https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub.adoc[Deploying to CloudHub].
 
 == See Also
 
-* xref:access-management::environments.adoc[Environments]
+* https://docs.mulesoft.com/access-management/environments.adoc[Environments]
 
-* xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]
+* https://docs.mulesoft.com/runtime-manager/managing-deployed-applications.adoc[Manage Deployed Applications]
 
 * https://help.mulesoft.com[MuleSoft Help Center]
