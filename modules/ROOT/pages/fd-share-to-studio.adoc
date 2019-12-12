@@ -31,8 +31,7 @@ A `.jar` file that contains your project source files, including all the connect
 +
 Studio opens the project.
 
-The person who works in Studio can work on the project. When the work in Studio is completed, ensure that the project is deleted from Studio.
-If you need help again later, repeat the procedure to share your project.
+The person who works in Studio can work on the project. 
 
 == See Also
 
