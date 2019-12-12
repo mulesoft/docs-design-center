@@ -20,9 +20,10 @@ When the other person is finished, you can open your project in Flow Designer an
 . Select *Export project sources* to share just your project source files, and click *Export*.
 
 +
-A `.jar` file that contains your project source files (including all the connector credentials) downloads to the default location on your computer.
-
+A `.jar` file that contains your project source files, including all the connector credentials, downloads to the default location on your computer.
++
 // Place the .jar file in a location that the other person can access.
+
 . Have the person who works in Studio follow these steps:
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
