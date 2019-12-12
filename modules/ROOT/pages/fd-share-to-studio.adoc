@@ -6,32 +6,31 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Perhaps when you are creating a Mule application you need help from someone in your Anypoint-Platform organization,
-such as a developer, who works in Studio. You can download your project as a `.jar` file and then place that file in a location from which the other person can
-import it into Studio.
+When designing your Mule application, you might want help from someone else in your Anypoint-Platform organization,
+such as a developer, who works in Anypoint Studio.
+You must first use Flow Designer to export the project as a `.jar` file,
+in order to share it with someone with developer credentials so that they can import it into Anypoint Studio. Ensure that the project is free of errors.
 
-You'll need to use *Export project sources* to share just your project source files (including all the connector credentials)
-without all of the other artifacts that are required by the Mule runtime.
+To do so, you use *Export project sources* to share just the source files (including all the connector credentials),
+without all of the other Mule artifacts.
 
 As the other person works on the project, they can take advantage of the advanced features of Studio.
-When they are finished, they can choose to deploy the project from Studio.
+When they are finished, they can deploy the project from Studio.
 
-. In Flow Designer, ensure that your project is free of errors.
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
+
+You see a pop-up with export choices.
+
 . Select *Export project sources* to share just your project source files, and click *Export*.
-
 +
-A `.jar` file that contains your project source files, including all the connector credentials, downloads to the default location on your computer.
-+
-// Place the .jar file in a location that the other person can access.
+A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
 
-. Have the person who works in Studio follow these steps:
+. Alert the recipient who works in Studio that the .jar is available so that they can:
+.. Access the .jar file and place it in a location where they can easily upload it from Studio.
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
-Studio opens the project.
-
-The person who works in Studio can work on the project. 
+Studio opens the project and it is ready to be worked on.
 
 == See Also
 
