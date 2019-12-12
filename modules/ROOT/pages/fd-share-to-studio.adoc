@@ -10,10 +10,11 @@ Perhaps when you are creating a Mule application you need help from someone in y
 such as a developer, who works in Studio. You can download your project as a `.jar` file and then place that file in a location from which the other person can
 import it into Studio.
 
-You'll need to use *Export project sources* to share just your project source files (including all the connector credentials) without all of the other artifacts that are required by the Mule runtime.
+You'll need to use *Export project sources* to share just your project source files (including all the connector credentials)
+without all of the other artifacts that are required by the Mule runtime.
 
-As the other person works on the project, the changes are applied to your project online in Flow Designer.
-When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
+As the other person works on the project, they can take advantage of the advanced features of Studio.
+When they are finished, they can choose to deploy the project from Studio.
 
 . In Flow Designer, ensure that your project is free of errors.
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
@@ -30,8 +31,8 @@ A `.jar` file that contains your project source files, including all the connect
 +
 Studio opens the project.
 
-The person who works in Studio can work on the project, and all changes are made automatically to the project in Design Center.
-When the work in Studio is completed, ensure that the project is deleted from Studio. If you need help again later, repeat the procedure to share your project.
+The person who works in Studio can work on the project. When the work in Studio is completed, ensure that the project is deleted from Studio.
+If you need help again later, repeat the procedure to share your project.
 
 == See Also
 
