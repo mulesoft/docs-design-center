@@ -1,6 +1,6 @@
 = Deploy a Mule Application from Runtime Manager
 
-Perhaps your organization requires someone with the proper authority to deploy applications from Mule.
+Perhaps your organization requires someone with the proper authority to deploy Mule applications once the design phase has been completed.
 Flow Designer allows you to export the project as a `.jar` file and share it with those who are responsible for Mule app deployment.
 You'll need to use *Export mule application*, as it produces a .jar file that includes all the connector credentials and artifacts required by the Mule runtime.
 
