@@ -8,8 +8,7 @@ endif::[]
 
 When designing your Mule application, you might want help from someone else in your Anypoint-Platform organization,
 such as a developer, who works in Anypoint Studio.
-You must first use Flow Designer to export the project as a `.jar` file,
-in order to share it with someone with developer credentials so that they can import it into Anypoint Studio. Ensure that the project is free of errors.
+You must first use Flow Designer to export the project as a `.jar` file, to share it with someone with developer credentials so that they can import it into Anypoint Studio. Ensure that the project is free of errors.
 
 To do so, you use *Export project sources* to share just the source files (including all the connector credentials),
 without all of the other Mule artifacts.
@@ -26,7 +25,7 @@ You see a pop-up with export choices.
 A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
 +
 . Alert the recipient who works in Studio that the .jar is available so that they can:
-.. Access the .jar file and place it in a location where they can easily upload it from Studio.
+.. Access the `.jar` file and place it in a location where they can easily upload it from Studio.
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
