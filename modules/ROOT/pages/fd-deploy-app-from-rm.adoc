@@ -2,8 +2,8 @@
 
 After designing a Mule application in Anypoint Flow Designer and ensuring that your project is free of errors,
 someone other than yourself may need to deploy it.
-You must first use Flow Designer to export the project as a `.jar` file,
-in order to share it with someone with deployment credentials so that they can deploy the app using Anypoint Runtime Manager.
+You must first use Flow Designer to export the project as a `.jar` file.
+This is in order to share it with someone with deployment credentials so that they can deploy the app using Anypoint Runtime Manager.
 You'll need to use *Export mule application*, as it produces a `.jar` file that includes all the connector credentials and artifacts required by the Mule runtime.
 
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
