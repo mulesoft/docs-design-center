@@ -24,7 +24,7 @@ You see a pop-up with export choices.
 +
 A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
 +
-. Alert the recipient who works in Studio that the .jar is available so that they can:
+. Alert the recipient who works in Studio that the `.jar` is available so that they can:
 .. Access the `.jar` file and place it in a location where they can easily upload it from Studio.
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
