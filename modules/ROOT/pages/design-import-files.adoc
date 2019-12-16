@@ -16,14 +16,14 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 
 == Procedure
 
-* *In the code editor only:* To import a file or the content of a .zip file that is stored on your computer:
+* Import a file or the content of a .zip file that is stored on your computer, if you are using the code editor:
 . Click *Settings* in the top-right corner of the code editor and select *Import*.
 . In the *Import* dialog, select *File or Zip*.
 
 +
 *Result:* The file or files are listed in the left pane of the editor. If you imported a `.zip` file that contains files that are in a folder structure, the folder structure is represented in the pane.
 
-* *In the code editor only:* To import a file that is available through a URL:
+* Import a file that is available through a URL, if you are using the code editor:
 
 . In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
 . In the *Import* dialog, select *URL*.
@@ -41,9 +41,9 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 * To import an API specification or API fragment from Exchange, together with its dependencies:
 . Open the *Import Asset from Exchange* dialog by using either of these methods:
 +
-** *In the code editor only:* If your project contains only the default file that API Designer created together with the project, click the linked text that appears in the *Files* pane.
-** *In the code editor only:* Click *Settings* in the top-right corner of the code editor and select *Import from Exchange*.
-** In the visual editor only: If your project does not yet contain any resources or data types, click the linked text that appears in the *New API* pane.
+** If you are using the code editor and your project contains only the default file that API Designer created together with the project, you can click the linked text that appears in the *Files* pane.
+** If you are using the code editor, you can click *Settings* in the top-right corner of the code editor and select *Import from Exchange*.
+** If you are using the visual editor and your project does not yet contain any resources or data types, you can click the linked text that appears in the *New API* pane.
 
 . In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
 . Select one of the assets, which are listed in a table that has these columns:
