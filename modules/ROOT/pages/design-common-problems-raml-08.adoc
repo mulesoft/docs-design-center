@@ -8,6 +8,8 @@ As of January 10, 2019, the code editor (one of the two editors in Design Center
 [IMPORTANT]
 ====
 After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
+
+*Update posted on January 11, 2020:* As of January 10, 2020, you cannot publish or deploy API specifications that contain invalid RAML or invalid regular expressions.
 ====
 
 [.parser\*invalid-type-definition#parser\*invalid-type-definition]

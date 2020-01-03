@@ -13,7 +13,14 @@ In addition to checking more precisely for RAML problems, the code editor also v
 
 You have a long grace period -- at least until January 10, 2020 -- to correct any invalid RAML and invalid regular expressions that your published API specifications might include. After the grace period expires, you will be unable to republish and redeploy API specifications in which such problems still exist.
 
-[IMPORTANT]
+[NOTE]
 ====
 You do not need to check any API specifications that were created with the visual editor, the tool in API Designer with which you can create specifications by filling in forms.
+====
+
+[IMPORTANT]
+====
+*Update posted on January 11, 2020*
+
+As of January 10, 2020, you cannot publish or deploy API specifications that contain invalid RAML or invalid regular expressions.
 ====
