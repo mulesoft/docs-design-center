@@ -9,7 +9,7 @@ endif::[]
 ====
 *Update posted on January 11, 2020*
 
-As of January 10, 2020, you cannot publish or deploy API specifications that contain invalid RAML or invalid regular expressions.
+As of January 10, 2020, you cannot publish API specifications that contain invalid RAML or invalid regular expressions.
 ====
 
 As of January 10, 2019, the code editor in Design Center's API Designer uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the code editor a published API specification that is written in RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.

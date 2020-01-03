@@ -6,7 +6,7 @@
 ====
 *Update posted on January 11, 2020*
 
-As of January 10, 2020, you cannot publish or deploy API specifications that contain invalid RAML or invalid regular expressions.
+As of January 10, 2020, you cannot publish API specifications that contain invalid RAML or invalid regular expressions.
 ====
 
 As of January 10, 2019, the code editor in Design Center's API Designer uses stricter validation by default for RAML API-specification projects that were create before this date. Therefore, it is possible that API specifications in projects created before this date include invalid RAML that earlier versions of the code editor did not flag.
