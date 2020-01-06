@@ -31,9 +31,9 @@ As you add descriptions in your specifications and fragments, you can view them 
 
 You can use the mocking service to:
 
-* Preview an API’s functionality before writing a single line of code
+* Preview an API’s functionality before writing a single line of code.
 * Send requests to the specification and receive defined responses.
-* Use behavioral headers to simulate different scenarios, such as timeouts, errors, and more.
+* Use behavioral headers to simulate different scenarios, such as timeouts and errors.
 
 == Sharing
 
@@ -41,7 +41,7 @@ You can publish an API specification to Anypoint Exchange for use in API Manager
 
 == How API Designer Relates to Other MuleSoft Products
 
-API Designer is an integral part of MuleSoft's API-led approach to integrating applications. The following diagram depicts how the API specifications that you write in API Designer can be used in other MuleSoft products.
+API Designer is an integral part of the MuleSoft API-led approach to integrating applications. The following diagram depicts how the API specifications that you write in API Designer can be used in other MuleSoft products.
 
 image::apid-system-overview.png[]
 
