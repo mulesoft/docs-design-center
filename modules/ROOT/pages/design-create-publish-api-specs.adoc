@@ -29,7 +29,7 @@ As you add descriptions in your specifications and fragments, you can view them 
 
 == Testing
 
-You can use the mocking service to
+You can use the mocking service to:
 
 * Preview an API’s functionality before writing a single line of code
 * Send requests to the specification and receive defined responses.
