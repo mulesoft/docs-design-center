@@ -1,0 +1,14 @@
+= Test Decision Trees
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+Some text here.
+
+== An Initial Sub-Heading
+
+Some text to introduce the decision tree.
+
+image:decision-tree-ender-kit-0-1.png[]
