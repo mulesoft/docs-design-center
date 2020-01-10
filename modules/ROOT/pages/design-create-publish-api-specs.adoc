@@ -9,9 +9,9 @@ API Designer provides a web-based interface for designing, documenting, testing,
 
 == Designing
 
-You can use two different tools in API Designer -- the code editor and the visual editor -- to create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS).
+You can use two different tools in API Designer -- the text editor and the visual editor -- to create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification 2.0 (OAS).
 
-With the code editor, you can:
+With the text editor, you can:
 
 * Design according to best practices with a context-aware shelf that auto-populates with the appropriate methods, resources, parameters, and security components.
 * Include RAML API fragments, such as security schemas and data types, from Exchange or write your own.
@@ -20,12 +20,12 @@ With the code editor, you can:
 With the visual editor, you can:
 
 * Create a specification for use cases in which you do not need to include RAML fragments.
-* Scaffold a specification that you can complete and customize in the code editor.
+* Scaffold a specification that you can complete and customize in the text editor.
 
 
 == Documenting
 
-As you add descriptions in your specifications and fragments, you can view them in auto-generated, interactive documentation in the right-hand pane of the code editor.
+As you add descriptions in your specifications and fragments, you can view them in auto-generated, interactive documentation in the right-hand pane of the text editor.
 
 == Testing
 
