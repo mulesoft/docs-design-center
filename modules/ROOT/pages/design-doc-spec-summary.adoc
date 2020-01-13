@@ -34,8 +34,8 @@ The *API endpoints* section of the *Summary* page provides links to the overview
 
 image:apid-summary-list-of-endpoints.png[]
 
-The first item is a generated heading. You do not need to add it to your specifications.
+The first indicator points to the generated heading. You do not need to add it to your specifications.
 
-The second item is a generated list of the endpoints that are defined in the specification. You do not need to add this list to your specifications. You can click the name of an endpoint to open the documentation for that endpoint.
+The second indicator points to the entry for one endpoint in a generated list of the endpoints that are defined in the specification. You do not need to add this list to your specifications. You can click the name of an endpoint to open the documentation for that endpoint.
 
-The third item is a colored block that represents a method for accessing an endpoint. You can click a colored block to open the documentation for the corresponding method. The blocks are colored automatically according to the types of method that they represent.
+The third indicator points to a colored block that represents a method for accessing an endpoint. You can click a colored block to open the documentation for the corresponding method. The blocks are colored automatically according to the types of method that they represent.
