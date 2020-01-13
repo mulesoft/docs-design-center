@@ -7,9 +7,7 @@ endif::[]
 
 If you are working in an API-specification project, the first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
 
-<screenshot>
-
-If you are working in an API-fragment project, there is no *Summary* page.
+image:apid-click-summary.png[]
 
 == Basic Information about a Specification
 

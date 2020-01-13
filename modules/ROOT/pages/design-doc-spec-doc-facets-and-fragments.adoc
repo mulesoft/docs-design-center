@@ -1,4 +1,4 @@
-= Display the Content of Documentation Nodes and and DocumentationItem Fragments
+= Display the Content of Documentation Facets and and DocumentationItem Fragments
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
