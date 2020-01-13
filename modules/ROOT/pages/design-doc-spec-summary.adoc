@@ -15,17 +15,18 @@ image:apid-click-summary.png[]
 
 == Basic Information about a Specification
 
+The top of the Summary page displays three items. As shown in the following screenshot, the first item is the title that is defined by the `title` node in the specification. The second item is the version that is defined by the `version` node.
+
 image:apid-doc-pane-top.png[]
 
-The first item is the title that is defined by the `title` node in the specification. The second item is the version that is defined by the `version` node.
-
-The third item is one of three entries:
+The third item is one of two entries:
 
 * If the mocking service is off, this field displays the base URI that is defined by the `baseUri` node in the specification.
 
 * If the mocking service is on, this field displays the base URI that the mocking service generated and that you can use in tests of the endpoints in the specification. (In the specification, the mocking service comments out the original base URI and substitutes the generated one. When you turn the mocking service off, the generated base URI is removed and the original one is uncommented.)
 
-* If the mocking service is off and no base URI is defined, this field displays the message `Base URI not defined in the API file.'
+If the mocking service is off and no base URI is defined, this field does not appear. In this screenshot, the fourth indicator shows that the mocking service is on.
+
 
 == The List of Endpoints and Their Methods
 
