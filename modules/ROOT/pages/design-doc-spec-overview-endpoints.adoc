@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-This display appears if you click the name of the endpoint either in the summary page for an API specification or in the table of contents.
+This display appears if you click the name of the endpoint either in the *Summary* page for an API specification or in the table of contents.
 
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
