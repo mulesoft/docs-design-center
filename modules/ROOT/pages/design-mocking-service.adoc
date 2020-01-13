@@ -22,7 +22,7 @@ baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/d0422e05-e779-4016-9
 # baseUri: http://jsonplaceholder.typicode.com
 ----
 
-You can run the mocking service from the code editor, the visual editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
+You can run the mocking service from the text editor, the visual editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
 
 [NOTE]
 ====
@@ -31,7 +31,7 @@ API Designer's public, mocked URI is also visible in Exchange. There, people who
 
 == Procedure
 
-* If you are using the code editor in API Designer:
+* If you are using the text editor in API Designer:
 +
 . Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
 . In the API summary panel, expand completely the resource with the endpoint that you want to test.

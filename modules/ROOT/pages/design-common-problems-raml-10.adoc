@@ -5,7 +5,7 @@ endif::[]
 
 [[bookmark-a,Back to the top]]
 
-As of January 10, 2019, the code editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were create before this date. If you open in the code editor a published API specification that is written in RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
+As of January 10, 2019, the text editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were created before this date. If you open in the text editor a published API specification that is written in RAML 1.0, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
 [IMPORTANT]
 ====
@@ -1014,6 +1014,7 @@ Two common occurrences that cause type-inheritance errors are incorrectly mergin
 === Merging Two types incorrectly
 
 This type of error occurs when you try to perform one of these actions:
+
 * Merge a defined type with an undefined type
 * Merge two undefined types
 
