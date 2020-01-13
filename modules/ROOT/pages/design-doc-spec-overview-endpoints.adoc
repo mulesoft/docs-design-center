@@ -23,10 +23,6 @@ The third indicator points to the value of the `description` facet that is defin
 
 The fourth indicator points to the generated heading for the list of methods. You do not need to add this text to your specifications.
 
-The fifth indicator points to the information for one of the methods that are defined for accessing the resource at the endpoint. The colored blocks are generated. Click the block for a method to view the documentation for that method.
-
-Next to a block is the value of the `displayName` facet that is defined for the method. If no display name is defined, this space is empty.
-
-Below the colored block and display name appears the description that is defined in the `description` facet for the method. You can write the description either in plain text or in GitHub-flavored Markdown.
+The fifth indicator points to the information for one of the methods that are defined for accessing the resource at the endpoint. The colored blocks are generated. Click the block for a method to view the documentation for that method. Next to a block is the value of the `displayName` facet that is defined for the method. If no display name is defined, this space is empty. Below the colored block and display name appears the description that is defined in the `description` facet for the method. You can write the description either in plain text or in GitHub-flavored Markdown.
 
 The sixth indicator points to the links to the previous and next endpoints in the table of contents and in the list of endpoints that is in the summary documentation of the specification.
