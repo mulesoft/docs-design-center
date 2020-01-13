@@ -7,14 +7,15 @@ endif::[]
 
 If you are working in an API-specification project, the first time you click the *Documentation* tab, the summary of the API specification appears. This documentation also appears when you open the table of contents by clicking the navigation icon and then click the entry *Summary*.
 
-.The annotations show the locations of the navigation icon, the table of contents, and the *Documentation* tab.
+The first indicator in this screenshot points to the navigation icon. Clicking this opens the table of contents, which the second indicator points to. Before you can see the navigation icon, you must click the *Documentation* tab, which the third indicator points to.
+
+
 image:apid-click-summary.png[]
 
-The first annotation points to the navigation icon. Clicking this opens the table of contents, which the second annotation points to. Before you can see the navigation icon, you must click the *Documentation* tab, which the third annotation points to.
 
 == Basic Information about a Specification
 
-<screenshot>
+image:apid-doc-pane-top.png[]
 
 The first item is the title that is defined by the `title` node in the specification. The second item is the version that is defined by the `version` node.
 
