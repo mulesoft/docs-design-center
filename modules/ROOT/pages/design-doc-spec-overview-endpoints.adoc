@@ -10,15 +10,23 @@ This display appears if you click the name of the endpoint either in the *Summar
 .An overview page for an endpoint
 image::apid-endpoint-overview.png[]
 
-*The Numbered Parts of the Image*
 
-. The name of the endpoint.
-. If an endpoint implements a collection, this generated text appears: "_Implements <collection>_". You do not need to add this text to your specifications.
-. The value of the `description` facet that is defined for the endpoint. You can write the description either in plain text or in GitHub-flavored Markdown
-. The generated heading for the list of methods. You do not need to add this text to your specifications.
-. The list of HTTP methods that are defined for accessing the endpoint. The colored blocks are generated. Click the block for a method to view the documentation for that method.
-+
+The first indicator points to the URI for the endpoint.
+
+* If the mocking service is off, this field displays the base URI that is defined by the `baseUri` node in the specification. To this base URI is appended the path to and name of the endpoint.
+
+* If the mocking service is on, this field displays the base URI that the mocking service generated and that you can use in tests of the endpoints in the specification. To this base URI is appended the path to and name of the endpoint.
+
+If an endpoint implements a collection, this generated text pointed to by the second indicator appears: "_Implements <collection>_". You do not need to add this text to your specifications.
+
+The third indicator points to the value of the `description` facet that is defined for the endpoint. You can write the description either in plain text or in GitHub-flavored Markdown.
+
+The fourth indicator points to the generated heading for the list of methods. You do not need to add this text to your specifications.
+
+The fifth indicator points to the information for one of the methods that are defined for accessing the resource at the endpoint. The colored blocks are generated. Click the block for a method to view the documentation for that method.
+
 Next to a block is the value of the `displayName` facet that is defined for the method. If no display name is defined, this space is empty.
-+
+
 Below the colored block and display name appears the description that is defined in the `description` facet for the method. You can write the description either in plain text or in GitHub-flavored Markdown.
-. The previous endpoint in the table of contents and in the list of endpoints that is in the summary documentation of the specification, the next endpoint, or both.
+
+The sixth indicator points to the links to the previous and next endpoints in the table of contents and in the list of endpoints that is in the summary documentation of the specification.
