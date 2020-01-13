@@ -15,7 +15,7 @@ image:apid-click-summary.png[]
 
 == Basic Information about a Specification
 
-The top of the Summary page displays three items. As shown in the following screenshot, the first item is the title that is defined by the `title` node in the specification. The second item is the version that is defined by the `version` node.
+The top of the *Summary* page displays three items. As shown in the following screenshot, the first item is the title that is defined by the `title` node in the specification. The second item is the version that is defined by the `version` node.
 
 image:apid-doc-pane-top.png[]
 
@@ -30,10 +30,12 @@ If the mocking service is off and no base URI is defined, this field does not ap
 
 == The List of Endpoints and Their Methods
 
-<screenshot>
+The *API endpoints* section of the *Summary* page provides links to the overview page of each endpoint that is defined in the current specification. For each endpoint, this section displays the types of method that you can use to access the resource at the endpoint.
+
+image:apid-summary-list-of-endpoints.png[]
 
 The first item is a generated heading. You do not need to add it to your specifications.
 
 The second item is a generated list of the endpoints that are defined in the specification. You do not need to add this list to your specifications. You can click the name of an endpoint to open the documentation for that endpoint.
 
-The third item is a colored block that represents a method for accessing an endpoint. You can click a colored block to open the documentation for the corresponding method.
+The third item is a colored block that represents a method for accessing an endpoint. You can click a colored block to open the documentation for the corresponding method. The blocks are colored automatically according to the types of method that they represent.
