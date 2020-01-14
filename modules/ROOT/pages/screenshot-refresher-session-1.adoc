@@ -11,6 +11,8 @@
 . Fourth step, in which I show you where a different icon is located.
 . Fifth step.
 
+image:apid-file-icon.png[]
+
 
 
 
