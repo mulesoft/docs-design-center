@@ -1,1 +1,1 @@
-= Test File 1 for the Screenshot Refresher
+= Test File 2 for the Screenshot Refresher
