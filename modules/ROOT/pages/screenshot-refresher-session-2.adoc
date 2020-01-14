@@ -1,1 +1,5 @@
 = Test File 2 for the Screenshot Refresher
+
+
+.The *Summary* page displays several lines of generated text.
+image:apid-apic-summary-page.png[Generated text in the summary page]
