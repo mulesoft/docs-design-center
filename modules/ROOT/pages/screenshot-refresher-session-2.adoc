@@ -3,3 +3,6 @@
 
 .The *Summary* page displays several lines of generated text.
 image:apid-apic-summary-page.png[Generated text in the summary page]
+
+.This is where you...
+image:fd-steps-to-add-connector.png[Adding a connector]
