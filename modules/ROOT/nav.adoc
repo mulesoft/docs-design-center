@@ -1,5 +1,7 @@
 .xref:index.adoc[Design Center]
 * xref:index.adoc[About Design Center]
+* xref:screenshot-refresher-session-1.adoc[Test File 1 for the Screenshot Refresher]
+* xref:screenshot-refresher-session-2.adoc[Test File 2 for the Screenshot Refresher]
 * xref:design-modify-raml-specs-conform.adoc[Modify Published RAML API Specifications to Conform Completely to RAML 0.8 or 1.0]
  ** xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
  ** xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]

@@ -1,0 +1,16 @@
+= Test File 1 for the Screenshot Refresher
+
+
+
+
+== Heading One
+
+
+
+
+
+== Heading Two
+
+
+
+== Heading Three
