@@ -5,6 +5,11 @@
 
 == Heading One
 
+. First step.
+. Second step.
+. Third step, in which you must click the navigation icon ( ) to open a menu.
+. Fourth step, in which I show you where a different icon is located.
+. Fifth step.
 
 
 
