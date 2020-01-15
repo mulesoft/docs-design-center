@@ -1,0 +1,41 @@
+= View the Table of Contents for an API Specification
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+The table of contents for an API specification provides clickable entries for navigating through the specification's documentation.
+
+== Procedure
+
+. In the left-hand pane of the code editor, select the main file in a RAML API-specification project or the file in an OAS project, if it is not already selected.
+. Click the *Documentation* tab to open the *Documentation* pane.
++
+*Result:* After a brief period of time in which the code editor parses the specification (immediately for a simple specification, a few seconds for a complex one), the summary page for the specification appears.
+. Click the navigation icon, which is just above the top-left corner of the pane.
++
+.The navigation icon on the left side of this toolbar, as indicated by the arrow.
+image::apic-navigation-icon.png[Location of the navigation icon]
++
+*Result:* The table of contents slides out from the left side of the pane.
+
+== Sections in the Table of Contents
+
+The table of contents can display these sections:
+
+* *Summary*
++
+Click this to go to the summary page of the specification.
+* *Endpoints*
++
+Expand this section to see a list of all of the endpoints that are defined in the specification. Expand an endpoint to see links to the endpoint's overview page and the documentation of the endpoint's methods.
+* *Documentation*
++
+This section appears if a specification includes one or more `documentation` nodes. Expand this section to see a list of the titles of the `documentation` nodes. Click a title read the documentation in the corresponding node.
+* *Types*
++
+Expand this section to a list of all of the types that are defined in the specification. Click a type to open its documentation.
+* *Security*
++
+This section appears if a specification defines one or more security schemes. Expand this section to see a list of those schemes. Click a scheme to open its documentation.

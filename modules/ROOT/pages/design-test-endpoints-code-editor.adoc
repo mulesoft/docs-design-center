@@ -1,0 +1,34 @@
+= Test Endpoints by Simulating Calls to Methods in the Code Editor
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+While you are creating an API specification, you can test the endpoints that you define by using the code editor to simulate calls to them. You can test whether required query parameters are defined as required or optional, the bodies of responses are correct, and more.
+
+== General Procedure
+
+. Turn on the mocking service.
+. Open the documentation for the method that you want to the method that you want to simulate calls to.
+. Click *Try It*.
+. Fill in values for required query parameters, if there are any.
+. Select any options that you want to add to the simulation.
++
+* Add one or more of the optional query parameters to test whether these are defined correctly.
+* Add any headers that you want to include in simulated calls. You can also test with headers that introduce delays into response times to simulate latency in a network, restrict the range of error status codes that can be returned, randomize the probability of receiving particular status codes, and more. You can even add a header that allows you to test endpoints in a specification that contains errors. See xref:apid-behavioral-headers.adoc[Behavioral Headers for Simulated Calls to REST Methods].
+* If you are testing a method that requires a request body, modify the request body so that the response to the request contain an error status code. You can click directly in the body and make changes to it before sending a request.
+. Click *Send*.
+
+*Result*:
+
+_Describe where the response appears._
+_Describe how to view the response._
+_Describe that the request URL in the response section includes the proxy info for the mocking service. It is not the same URL as the request._
+
+Example:
+Original request for a GET:
+https://anypoint.mulesoft.com/mocking/api/v1/links/bc88372b-f66e-47f6-a1fc-aba75de27fee/api/customers?firstName=Tim&lastName=Mit
+
+Reported request for the GET:
+https://anypoint.mulesoft.com/apiconsoleproxy/api/v1/proxy/https://anypoint.mulesoft.com/mocking/api/v1/links/bc88372b-f66e-47f6-a1fc-aba75de27fee/api/customers?firstName=Tim&lastName=Mit
