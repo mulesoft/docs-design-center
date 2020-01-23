@@ -20,7 +20,7 @@ The header must have this value:
 +
 `I understand that version 1 of the mocking service is deprecated and that I need to upgrade before February 1, 2020.`
 
-* *Starting February 1, 2020*, Version 1 of the mocking service will no longer send responses to requests. If you have not migrated your projects to use Version 2 of the mocking service by this date, the mocking service will return the HTTP status code 301 and provide a link to this document.
+* *Starting February 1, 2020*, Version 1 of the mocking service will no longer send responses to requests. If you have not migrated your projects to use Version 2 of the mocking service by this date, the mocking service will return the HTTP status code 410 and provide a link to this document.
 
 == Which Projects Must Be Migrated
 
