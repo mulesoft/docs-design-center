@@ -24,7 +24,8 @@ If at any time you want to edit the specification directly or customize it (impo
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Visual editor* to use the visual API editor.
+. In the *New API Specification* dialog, name your project. You can change the name later, if you want to.
+. Select the option *Visual editor* to use the visual API editor.
 +
 _Result:_
 +
