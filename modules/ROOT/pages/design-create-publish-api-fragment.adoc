@@ -30,19 +30,11 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 == Procedure
 
 . On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
-. In the *New API Fragment* dialog, type a name for the project and select the type of API fragment that you want to create. Then, click *Create*.
+. In the *New Fragment* dialog, type a name for the project and select the type of API fragment that you want to create. Then, click *Create Fragment*.
 +
 _Result:_ The text editor opens. The editor is divided into three panels:
 +
-* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project.
-+
-[TIP]
-====
-
-You can create more than one API specification in a single project. If you want to include additional API specifications in your project, click the plus sign in the Files panel to create a new file or click the dots that are next to the plus sign to import a file.
-
-
-====
+* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project. This file is set as the root file of the project.
 * The central panel displays the editor in which you create your API fragment.
 * The right panel lists the types and resources that are in the API fragment that is displayed in the central panel.
 
@@ -51,9 +43,6 @@ You can create more than one API specification in a single project. If you want 
 As you draft, the text editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor.
 +
 You can import files into your project, either separately or bundled together in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
-+
-//For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
-
 
 
 == What to Do Next
