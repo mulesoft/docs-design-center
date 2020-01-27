@@ -1,4 +1,4 @@
-= Create an API Specification with the Code Editor
+= Create an API Specification with the Text Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -71,7 +71,7 @@ After you are satisfied with your specification, you can publish it to Anypoint 
 Text to add at line 17 when the GitHub integration is no longer "dark":
  .. Choose whether to save your project in Design Center or in a repository in GitHub.
  +
- * If you save your project in Design Center, you or other people in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Code Editor].
+ * If you save your project in Design Center, you or other people in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Text Editor].
  +
  * If you save your project in a repository in GitHub, you and other people in your organization who also have access to the repository can use GitHub's features to manage the project. The name given to the repository is the name that you specify for your project. See xref:apid-github-integration.adoc[Manage a Project in GitHub] for details.
 ////
