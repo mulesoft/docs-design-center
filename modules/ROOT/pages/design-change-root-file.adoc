@@ -1,1 +1,10 @@
-= Changing the Root File of a Project in the Text Editor
+= Switch to a Different Root File in a Project in the Text Editor
+
+If you are working in an API-specification project or an API-fragment project in the text editor of API Designer, one file must always set as the root file of your project. You can set a different file as the root file at any time, however.
+
+See xref:design-root-files.adoc[Root Files in Projects in the Text Editor] for an explanation of the purpose of root files and of the implications of switching the root file in a project.
+
+== Procedure
+
+. In the *Files* pane, click the three dots to the right of the file that you want to set as the root file.
+. Select *Set as root file*.
