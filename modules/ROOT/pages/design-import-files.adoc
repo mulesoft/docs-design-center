@@ -1,4 +1,4 @@
-= Import Files into an API Project
+= Import Files into an API-Specification Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -9,7 +9,7 @@ The API specifications that you import can be written in RAML 0.8, RAML 1.0, or 
 
 [NOTE]
 ====
-You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
+You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must specify one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
 ====
 
 The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
@@ -25,7 +25,7 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 
 * Import a file that is available through a URL, if you are using the text editor:
 
-. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. Click *Settings* in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *URL*.
 +
 [NOTE]
@@ -69,3 +69,8 @@ If you want to import the copy, you might need to correct errors in it after you
 
 +
 *Result:* The file or files are listed in the left pane of the editor.
+
+== See Also
+
+* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
+* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
