@@ -19,6 +19,7 @@
  ** xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]
  ** xref:design-publish.adoc[Publish an API Specification]
  ** xref:design-import-files.adoc[Import Files into an API-Specification Project]
+ ** xref:design-import-files-api-fragment-projects.adoc[Import Files into an API-Fragment Project]
  ** xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API Project as a Dependency]
  ** xref:upload-raml-task.adoc[Upload an Existing RAML File to Exchange from API Designer]
  ** xref:design-rename-project.adoc[Rename an Open Project]
