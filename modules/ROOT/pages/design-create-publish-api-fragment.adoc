@@ -62,7 +62,6 @@ When you publish the API Fragment to Exchange, it automatically creates its API 
 
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:exchange::about-portals.adoc[Exchange Public Portals]
-* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
-* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+* xref:design-change-root-file.adoc[Root Files in Projects in the Text Editor]
 * xref:design-rename-project.adoc[Rename an Open Project]
 * xref:design-delete-project.adoc[Delete an Open Project]

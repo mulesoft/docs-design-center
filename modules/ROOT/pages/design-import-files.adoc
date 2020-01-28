@@ -70,5 +70,4 @@ If you want to import the copy, you might need to correct errors in it after you
 
 == See Also
 
-* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
-* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+* xref:design-change-root-file.adoc[Root Files in Projects in the Text Editor]

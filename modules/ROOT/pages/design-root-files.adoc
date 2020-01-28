@@ -13,6 +13,8 @@ To take another example, suppose that you want to publish an API-fragment projec
 
 == Root Files in API-Specification Projects
 
+Every API-specification project includes a default root file. You can switch the root file when there is more than one specification in a project.
+
 === The Default Root File
 
 When you create an API-specification project, the file that is created by default is set to be the root file:
@@ -46,6 +48,7 @@ image:apid-root-file-api-spec-project-multi-specs-2.png[The Set as root file opt
 
 == Root Files in API-Fragment Projects
 
+Every API-fragment project includes a default root file. You can switch the root file when there is more than one fragment in a project.
 
 == The Default Root File in API-Fragment Projects
 

@@ -55,5 +55,4 @@ With this method of importing a file, you can import only one file at a time. If
 
 == See Also
 
-* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
-* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+* xref:design-change-root-file.adoc[Root Files in Projects in the Text Editor]
