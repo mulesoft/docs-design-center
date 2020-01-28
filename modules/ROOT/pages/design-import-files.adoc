@@ -16,9 +16,10 @@ There are three locations that you can import from: your computer, a location at
 * Import a file or the content of a `.zip` file that is stored on your computer, if you are using the text editor:
 . Click *Settings* in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *File or Zip*.
+. Browse to your file or ZIP file and select it.
 
 +
-*Result:* The file or files are listed in the left pane of the editor. If you imported a ``.zip`` file that contains files that are in a folder structure, the folder structure is represented in the pane.
+*Result:* The file or files are listed in the left pane of the editor. If you imported a ZIP file that contains files that are in a folder structure, the folder structure is represented in the pane.
 
 * Import a file that is available through a URL, if you are using the text editor:
 

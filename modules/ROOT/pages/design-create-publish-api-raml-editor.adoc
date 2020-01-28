@@ -10,6 +10,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 
 == Procedure
 
+. Open Design Center from the homepage of Anypoint Platform.
 . Create an API-specification project that you can work in.
  .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
  .. In the *New Specification* section of the dialog that is opened, name your project. You can change the name later, if you want to.
