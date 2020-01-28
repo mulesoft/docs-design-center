@@ -12,18 +12,25 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 
 . Create an API-specification project that you can work in.
  .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
- .. In the *New Specification* section of the dialog that is opened, name your project and select the option *Text editor* to use the text editor.
+ .. In the *New Specification* section of the dialog that is opened, name your project. You can change the name later, if you want to.
+ .. Select the option *Text editor*.
  .. Choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
 
 +
 *Result:* The text editor opens. The editor is divided into three panels:
 
-* The left panel lists the files in your project. The stub specification file is listed. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
+* The left panel lists the files in your project.
++
+The stub specification file is listed and set as the root file of the project. You can change the name and extension of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
++
+The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 +
 [TIP]
 ====
 
 You can create more than one API specification or related file in a single project. Click the plus sign in the Files panel to create a new file or click the dots that are next to the plus sign to import a file.
+
+If you do create more than one specification file, you must specify one of them as the root file of your project.
 
 ====
 * The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a specification file in RAML or OAS, depending on which you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
@@ -58,7 +65,8 @@ The files downloaded through this option are not guaranteed to be valid. This op
 
 
 == What to Do Next
-After you are satisfied with your specification, you can publish it to Anypoint Exchange. Click the *Publish* button that is in the top-right corner of the text editor, and then click *Publish to Exchange* to open the *Publish API Specification to Exchange* dialog.
+
+If you are satisfied with your API specification, you can publish it to Exchange. See xref:design-publish.adoc[Publish an API Specification].
 
 
 == See Also
@@ -66,6 +74,11 @@ After you are satisfied with your specification, you can publish it to Anypoint 
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:design-add-api-dependency.adoc[Add a RAML API Fragment to an API-Specification Project as a Dependency]
 * xref:design-mocking-service.adoc[Simulate Calls to an API]
+* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
+* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+* xref:design-publish.adoc[Publish an API Specification]
+* xref:design-rename-project.adoc[Rename an Open Project]
+* xref:design-delete-project.adoc[Delete an Open Project]
 
 ////
 Text to add at line 17 when the GitHub integration is no longer "dark":

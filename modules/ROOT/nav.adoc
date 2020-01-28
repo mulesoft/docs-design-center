@@ -12,6 +12,7 @@
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
  ** xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+ *** xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
  ** xref:design-branching.adoc[Fork an API Project]
  ** xref:design-migrating-ms.adoc[Migrate API-Specification Projects to Version 2 of the Mocking Service]
  ** xref:design-mocking-service.adoc[Simulate Calls to an API]

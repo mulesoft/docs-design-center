@@ -30,11 +30,16 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 == Procedure
 
 . On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
-. In the *New Fragment* dialog, type a name for the project and select the type of API fragment that you want to create. Then, click *Create Fragment*.
+. In the *New Fragment* dialog, type a name for the project. You can change the name later, if you want to.
+. Select the type of API fragment that you want to create. Then, click *Create Fragment*.
 +
 _Result:_ The text editor opens. The editor is divided into three panels:
 +
-* The left panel lists the files in your project. By default, the editor creates a `.raml` file that has the same name as the project. This file is set as the root file of the project.
+* The left panel lists the files in your project.
++
+By default, the editor creates a `.raml` file that has the same name as the project. This file is set as the root file of the project.
++
+The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 * The central panel displays the editor in which you create your API fragment.
 * The right panel lists the types and resources that are in the API fragment that is displayed in the central panel.
 
@@ -57,3 +62,7 @@ When you publish the API Fragment to Exchange, it automatically creates its API 
 
 * xref:design-import-files.adoc[Import Files into an API Project]
 * xref:exchange::about-portals.adoc[Exchange Public Portals]
+* xref:design-root-files.adoc[Root Files in Projects in the Text Editor]
+* xref:design-change-root-file.adoc[Changing the Root File of a Project in the Text Editor]
+* xref:design-rename-project.adoc[Rename an Open Project]
+* xref:design-delete-project.adoc[Delete an Open Project]
