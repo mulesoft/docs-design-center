@@ -3,16 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can import API specifications and RAML fragments into a project. There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
+You can import API specifications and RAML fragments into an API-specification project.
 
-The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0.
-
-[NOTE]
-====
-You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must specify one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
-====
+The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0. You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
 
 The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
+
+There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
 
 == Procedure
 
@@ -52,7 +49,7 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 +
 *Version*:: The version of a specification or fragment. Select the *Include snapshots* check box in the bottom-left corner of the dialog to include snapshots in this column.
 +
-*Type*:: The type of asset. The value can be either *API Specification* or *RAML Fragment*.
+*Type*:: The type of asset. The value can be either *REST API* or *API Fragment*.
 +
 *Language* (for API specifications being imported into the text editor):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
 +
