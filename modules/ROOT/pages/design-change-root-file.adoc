@@ -49,7 +49,7 @@ Every API-fragment project includes a default root file. You can switch the root
 
 == The Default Root File in API-Fragment Projects
 
-When you create an API-fragment project, the file that is created by default is set to be the root file. For example,
+When you create an API-fragment project, the file that is created by default is set to be the root file. 
 
 image:apid-default-root-file-api-frag-project.png[The default root file in an API-fragment project named "Retail Common".]
 
