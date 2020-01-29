@@ -1,1 +1,13 @@
-= Rename an Open Project
+= Rename a Project
+
+You can rename an API-specification project or an API-fragment project.
+
+[NOTE]
+====
+If you have already published a project, renaming it does not create a new asset in Exchange when you publish the project again.
+====
+
+== Procedure
+
+. Open the project, if it is not already open.
+. Click the gear icon in API Designer's top-right corner and then select *Rename*.
