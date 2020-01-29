@@ -30,13 +30,17 @@ image:apid-publish-dialog-api-specs.png[]
 
 == The *API version* field
 
-Anypoint Exchange requires that each API specification published to it have a version number.
+The appearance of the *API version* field depends upon several factors:
 
-This field is disabled if the version number of the API specification is provided in the specification. In specifications written in OAS, the `version` field is required. However, in specifications written in RAML, the `version` node is optional.
+* Anypoint Exchange requires that each API specification published to it have a version number.
+* API Manager requires that API specifications provide a version number.
+* In specifications written in OAS, the `version` field is required.
+* In specifications written in RAML, the `version` node is optional.
 
-If the specification is written in RAML and the `version` node is not included in the specification, the *API version* field is enabled. You must specify a version number for the specification in this field before you can publish the specification.
+The following flowchart shows how API Designer decides whether to disable or enable the *API version* field and whether to populate it with a number.
 
-image:apid-flowchart-api-version.png[]
+.The appearance of the *API version* field depends on the outcome of the checks that API Designer makes when you want to publish an API specification.
+image:apid-flowchart-api-version.png[Flowchart for the checks that API Designer makes]
 
 <1> API Designer checks whether the version number for the API specification is provided within the specification. If the version number is provided, then the *API version* field is populated with the number and disabled, so that you cannot change the number. If the specification does not provide the version number, then API Designer moves to the next check.
 <2> API Designer checks whether the check box *Add to API Manager* is selected. If the check box is selected, then API Designer prevents you from proceeding because API Manager requires that the specification provide the version number. If the check box is not selected, then API Designer moves to the last check.
