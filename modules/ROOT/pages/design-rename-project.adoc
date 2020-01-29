@@ -1,4 +1,7 @@
 = Rename a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
 You can rename an API-specification project or an API-fragment project.
 
