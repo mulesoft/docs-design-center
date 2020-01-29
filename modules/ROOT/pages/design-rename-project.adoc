@@ -9,5 +9,7 @@ If you have already published a project, renaming it does not create a new asset
 
 == Procedure
 
-. Open the project, if it is not already open.
-. Click the gear icon in API Designer's top-right corner and then select *Rename*.
+To rename a project, use one of these methods:
+
+* If the project is not open, select the project in Design Center's *Projects* page, and then click the Edit icon in the top-right corner of the page.
+* If the project is open. click the gear icon in API Designer's top-right corner and then select *Rename*.
