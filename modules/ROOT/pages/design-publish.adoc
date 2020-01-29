@@ -10,6 +10,10 @@ When you want to share your API specification with other developers, you can pub
 .The page that Exchange creates for a published project includes a left pane for viewing the specification's documentation, a middle pane for viewing a description of the specification, and a right pane for viewing metadata about the specification.
 image:apid-example-page-in-exchange.png[An example page for a specification published in Exchange]
 
+<1> The left pane, which you can navigate to view the documentation. The navigation is generated from the documentation in the specification.
+<2> The middle pane, which describes the specification. You write the description in Exchange after publishing the specification.
+<3> The right pane, which displays metadata about the specification.
+
 == Procedure
 
 . Open the API-specification project that you want to publish, if it is not already open.
@@ -18,8 +22,16 @@ image:apid-example-page-in-exchange.png[An example page for a specification publ
 image:apid-publish-dialog-api-specs.png[]
 
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
-<2> *API version*: The version of the API specification.
+<2> *API version*: The version number of the API specification. For a description of this field, see the next section.
 <3> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs.
 <4> *Asset name*: The name that Anypoint Exchange uses to identify the published project.
 <5> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project.
 <6> *Add to API Manager*: Select this option if you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
+
+== The *API version* field
+
+This field is disabled if the version number of the API specification is provided in the specification. In specifications written in OAS, the `version` field is required. However, in specifications written in RAML, the `version` node is optional.
+
+If the specification is written in RAML and the `version` node is not included in the specification, the *API version* field is enabled. You must specify a version number for the specification in this field before you can publish the specification.
+
+image:apid-flowchart-api-version.png[]
