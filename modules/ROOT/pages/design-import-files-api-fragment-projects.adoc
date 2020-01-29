@@ -7,7 +7,7 @@ There are three locations that you can import from: your computer, a location at
 == Procedure
 
 * Import a file or the content of a `.zip` file that is stored on your computer, if you are using the text editor:
-. Click *Settings* in the top-right corner of the text editor and select *Import*.
+. Click the gear icon in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *File or Zip*.
 
 +
@@ -15,7 +15,7 @@ There are three locations that you can import from: your computer, a location at
 
 * Import a file that is available through a URL, if you are using the text editor:
 
-. Click *Settings* in the top-right corner of the text editor and select *Import*.
+. Click the gear icon in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *URL*.
 +
 *Result:* The file is listed in the left pane of the editor.
@@ -32,7 +32,7 @@ With this method of importing a file, you can import only one file at a time. If
 . Open the *Import Asset from Exchange* dialog by using either of these methods:
 +
 ** If your project contains only the default file that API Designer created together with the project, you can click the linked text that appears in the *Files* pane.
-** If your project already contains files other than the default project file, click *Settings* in the top-right corner of the text editor and select *Import from Exchange*.
+** If your project already contains files other than the default project file, click the gear icon in the top-right corner of the text editor and select *Import from Exchange*.
 +
 . In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
 . Select one of the assets, which are listed in a table that has these columns:

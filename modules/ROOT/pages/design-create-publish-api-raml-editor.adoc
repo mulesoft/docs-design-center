@@ -56,7 +56,7 @@ Simulate calls to your API:: Even while you are drafting an API specification, y
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
-Export your API project or specification:: At any time, you can export your project as a `.zip` file. Click *Settings* in the top-right corner of the text editor and select *Download Project*.
+Export your API project or specification:: At any time, you can export your project as a `.zip` file. Click the gear icon in the top-right corner of the text editor and select *Download Project*.
 
 Download files:: Click the dots to the right of the file name and select *Download*.
 

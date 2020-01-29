@@ -23,7 +23,7 @@ Within Anypoint Platform, your user ID must be assigned the Design Center Develo
 * A default, blank specification that has the same name as the project. You can delete this file in a later step. Currently, it is set as the root file of the project, and it is not possible to delete a file that is set as the root file.
 * A file named `exchange.json` that includes metadata that is required for Anypoint Exchange. This file is read-only.
  . Import your API specification.
- .. Click *Settings* in the top-right corner of the text editor and select *Import*.
+ .. Click the gear icon in the top-right corner of the text editor and select *Import*.
  .. In the *Import* dialog, select *File or Zip*.
  .. Browse to your file or ZIP file and select it.
  +
