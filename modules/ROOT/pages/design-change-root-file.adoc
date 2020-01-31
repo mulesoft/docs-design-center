@@ -11,9 +11,14 @@ For example, suppose that a RAML API-specification project contains two specific
 
 To take another example, suppose that you want to publish an API-fragment project that contains several fragments, one of which is independent and the remaining files of which are a library fragment and its dependencies. If no root file is specified in the project, Exchange cannot parse the files correctly. In this case, you could either set the independent fragment as the root file, indicating to Exchange that the file can be parsed alone. Or you could set the library file as the root file, indicating to Exchange that parsing should begin with that file and proceed to the dependent fragments.
 
-== Root Files in API-Specification Projects
+[NOTE]
+====
+The first time that you open in the text editor a project that was created before the February 8, 2020 release of API Designer, you are prompted to set a root file.
+====
 
-Every API-specification project includes a default root file. You can switch the root file when there is more than one specification in a project.
+== Root Files in API-Specification Projects in the Text Editor
+
+Every API-specification project is created with a default root file. You can switch the root file when there is more than one specification in a project.
 
 === The Default Root File
 
@@ -45,11 +50,11 @@ image:apid-root-file-api-spec-project-multi-specs-2.png[The Set as root file opt
 
 == Root Files in API-Fragment Projects
 
-Every API-fragment project includes a default root file. You can switch the root file when there is more than one fragment in a project.
+Every API-fragment project is created with a default root file. You can switch the root file when there is more than one fragment in a project.
 
 == The Default Root File in API-Fragment Projects
 
-When you create an API-fragment project, the file that is created by default is set to be the root file. 
+When you create an API-fragment project, the file that is created by default is set to be the root file.
 
 image:apid-default-root-file-api-frag-project.png[The default root file in an API-fragment project named "Retail Common".]
 
