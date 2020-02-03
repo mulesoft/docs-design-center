@@ -18,17 +18,19 @@ image:apid-example-page-in-exchange.png[An example page for a specification publ
 
 . Open the API-specification project that you want to publish, if it is not already open.
 . In the top-right corner of API Designer, click *Publish* and then click *Publish to Exchange*.
-
++
+*Result*: This dialog is opened.
++
 image:apid-publish-dialog-api-specs.png[]
-
++
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
-<2> *API version*: The version number of the API specification. For a description of this field, see the next section.
+<2> *API version*: The version number of the API specification. For a description of this field, see the "Filling in the *API version* Field" section.
 <3> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs.
 <4> *Asset name*: The name that Anypoint Exchange uses to identify the published project.
 <5> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project.
-<6> *Add to API Manager*: Select this option if you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
+<6> *Add to API Manager*: Specifies that you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
 
-== The *API version* field
+== Filling in the *API version* Field
 
 The appearance of the *API version* field depends upon several factors:
 
@@ -37,11 +39,11 @@ The appearance of the *API version* field depends upon several factors:
 * In specifications written in OAS, the `version` field is required.
 * In specifications written in RAML, the `version` node is optional.
 
-The following flowchart shows how API Designer decides whether to disable or enable the *API version* field and whether to populate it with a number.
+The following flowchart shows how API Designer decides whether to disable or enable the *API version* field and whether to populate it with a number:
 
 .The appearance of the *API version* field depends on the outcome of the checks that API Designer makes when you want to publish an API specification.
 image:apid-flowchart-api-version.png[Flowchart for the checks that API Designer makes]
 
 <1> API Designer checks whether the version number for the API specification is provided within the specification. If the version number is provided, then the *API version* field is populated with the number and disabled, so that you cannot change the number. If the specification does not provide the version number, then API Designer moves to the next check.
-<2> API Designer checks whether the check box *Add to API Manager* is selected. If the check box is selected, then API Designer prevents you from proceeding because API Manager requires that the specification provide the version number. If the check box is not selected, then API Designer moves to the last check.
+<2> API Designer checks whether the checkbox *Add to API Manager* is selected. If the checkbox is selected, then API Designer prevents you from proceeding because API Manager requires that the specification provide the version number. If the checkbox is not selected, then API Designer moves to the last check.
 <3> API Designer checks whether the specification is being published to Anypoint Exchange for the first time. If the specification is being published for the first time, then API Designer enables the *API version* field and suggests a version number because a number is not provided in the specification. If the specification is not being published for the first time, then API Designer enables the *API version* field and populates the field with the number used when the specification was last published. You can change the number.

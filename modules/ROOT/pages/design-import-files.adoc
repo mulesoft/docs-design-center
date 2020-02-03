@@ -48,7 +48,7 @@ There are three locations that you can import from: your computer, a location at
 +
 *Name*:: The name of an API specification or RAML fragment.
 +
-*Version*:: The version of a specification or fragment. Select the *Include snapshots* check box in the bottom-left corner of the dialog to include snapshots in this column.
+*Version*:: The version of a specification or fragment. Select the *Include snapshots* checkbox in the bottom-left corner of the dialog to include snapshots in this column.
 +
 *Type*:: The type of asset. The value can be either *REST API* or *API Fragment*.
 +
