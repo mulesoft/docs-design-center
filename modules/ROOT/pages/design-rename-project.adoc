@@ -3,12 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can rename an API-specification project or an API-fragment project.
-
-[NOTE]
-====
-If you have already published a project, renaming it does not create a new asset in Exchange when you publish the project again.
-====
+You can rename an API-specification project or an API-fragment project. If you have already published a project, renaming it does not create a new asset in Exchange when you publish the project again.
 
 == Procedure
 
