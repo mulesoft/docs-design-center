@@ -32,13 +32,13 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 . On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
 . In the *New Fragment* dialog, type a name for the project. You can change the name (but not the extension) later, if you want to.
-. Select the type of API fragment that you want to create. Then, click *Create Fragment*.
+. Select the type of API fragment that you want to create and click *Create Fragment*.
 +
 _Result:_ The text editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project.
 +
-By default, the editor creates a `.raml` file that has the same name as the project. This file is set as the root file of the project.
+By default, the editor creates a RAML file that has the same name as the project. This file is set as the root file of the project.
 +
 The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 * The central panel displays the editor in which you create your API fragment.
@@ -53,14 +53,17 @@ You can import files into your project, either separately or bundled together in
 
 == What to Do Next
 
-You can publish the API fragment to Anypoint Exchange. Click the *Publish* button that is in the top-right corner of the text editor, and then click *Publish to Exchange*. Specify a version number for the project, which Exchange treats as an _asset_. This number is displayed in Exchange in the *Version* section of the right-hand pane in the page for the project.
+You can publish the API fragment to Anypoint Exchange.
 
-.The asset version of your API-fragment project appears in *Versions* section in the right pane of the asset page.
+. Click the *Publish* button that is in the top-right corner of the text editor, and then click *Publish to Exchange*.
+. Specify a version number for the project, which Exchange treats as an _asset_. This number is displayed in Exchange in the *Version* section of the right pane in the page for the project.
+
+.In Anypoint Exchange, the asset version of your API-fragment project appears here.
 image:apid-location-of-asset-version-in-exchange.png[The location of the Versions section]
 
-After you publish the API-fragment project, other developers can include its fragments as dependencies in API-specification projects.
+After you publish the API-fragment project, other developers can include its fragments as dependencies in their own API-specification projects.
 
-When you publish the API-fragment project, Exchange automatically creates an API Portal for it.
+When you publish the API-fragment project, Exchange automatically creates an API portal for it.
 
 == See Also
 
