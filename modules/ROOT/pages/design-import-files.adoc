@@ -48,15 +48,23 @@ There are three locations that you can import from: your computer, a location at
 +
 *Name*:: The name of an API specification or RAML fragment.
 +
-*Version*:: The version of a specification or fragment. Select the *Include snapshots* checkbox in the bottom-left corner of the dialog to include snapshots in this column.
+*Version*:: The version of a specification or fragment.
 +
-*Type*:: The type of asset. The value can be either *REST API* or *API Fragment*.
+Select the *Include snapshots* checkbox in the bottom-left corner of the dialog to include snapshots in this column.
 +
-*Language* (for API specifications being imported into the text editor):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
+*Type*:: The type of asset.
++
+The value can be either *REST API* or *API Fragment*.
++
+*Language* (for API specifications being imported into the text editor):: The language is either RAML or OAS.
++
+The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
 +
 If you want to import the copy, you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
 +
-*Language* (for API specifications being imported into the visual editor):: The language is always RAML. API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
+*Language* (for API specifications being imported into the visual editor):: The language is always RAML.
++
+API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
 +
 *Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
 +
