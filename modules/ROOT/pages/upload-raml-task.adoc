@@ -15,13 +15,17 @@ Within Anypoint Platform, your user ID must be assigned the Design Center Develo
 . Create an API-specification project that you can work in.
  .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
  .. In the *New Specification* section of the dialog that is opened, name your project. You can change the name later, if you want to.
- .. Select the option *Text editor*.
+ .. Select *Text editor*.
  .. In the *Language* field, select the language in which your API specification is written.
  .. Click *Create Specification*.
  +
  *Result*: Design Center creates an API-specification project. In that project are two files:
-* A default, blank specification that has the same name as the project. You can delete this file in a later step. Currently, it is set as the root file of the project, and it is not possible to delete a file that is set as the root file.
-* A file named `exchange.json` that includes metadata that is required for Anypoint Exchange. This file is read-only.
+* A default, blank specification that has the same name as the project.
++
+You can delete this file in a later step. Currently, it is set as the root file of the project, and it is not possible to delete a file that is set as the root file.
+* A file named `exchange.json` that includes metadata that is required for Anypoint Exchange.
++
+This file is read-only.
  . Import your API specification.
  .. Click the gear icon in the top-right corner of the text editor and select *Import*.
  .. In the *Import* dialog, select *File or Zip*.
