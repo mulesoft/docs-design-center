@@ -14,7 +14,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 . Create an API-specification project that you can work in.
  .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
  .. In the *New Specification* section of the dialog that is opened, name your project. You can change the name (but not the extension) later, if you want to.
- .. Select the option *Text editor*.
+ .. Select *Text editor*.
  .. Choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
 
 +
@@ -56,7 +56,7 @@ Simulate calls to your API:: Even while you are drafting an API specification, y
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
-Export your API project or specification:: At any time, you can export your project as a `.zip` file. Click the gear icon in the top-right corner of the text editor and select *Download Project*.
+Export your API project or specification:: At any time, you can export your project as a ZIP file. Click the gear icon in the top-right corner of the text editor and select *Download Project*.
 
 Download files:: Click the dots to the right of the file name and select *Download*.
 
@@ -84,7 +84,7 @@ If you are satisfied with your API specification, you can publish it to Exchange
 Text to add at line 17 when the GitHub integration is no longer "dark":
  .. Choose whether to save your project in Design Center or in a repository in GitHub.
  +
- * If you save your project in Design Center, you or other people in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Text Editor].
+ * If you save your project in Design Center, you or others in your organization can fork your project in Design Center, as described in xref:design-branching.adoc[Fork a Project in the Text Editor].
  +
  * If you save your project in a repository in GitHub, you and other people in your organization who also have access to the repository can use GitHub's features to manage the project. The name given to the repository is the name that you specify for your project. See xref:apid-github-integration.adoc[Manage a Project in GitHub] for details.
 ////
