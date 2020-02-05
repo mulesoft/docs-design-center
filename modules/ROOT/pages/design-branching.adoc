@@ -1,4 +1,4 @@
-= Fork a Project in the Code Editor
+= Fork a Project in the Text Editor
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

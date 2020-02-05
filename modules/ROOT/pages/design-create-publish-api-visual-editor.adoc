@@ -24,7 +24,8 @@ If at any time you want to edit the specification directly or customize it (impo
 
 == Procedure
 . On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-. In the *New API Specification* dialog, name your project and select the option *Try API designer's visual editing capabilities* to use the visual API editor.
+. In the *New API Specification* dialog, name your project. You can change the name later, if you want to.
+. Select the option *Visual editor* to use the visual API editor.
 +
 _Result:_
 +
@@ -36,9 +37,12 @@ As you make progress, you can run the mocking service to simulate calls to your 
 
 
 // After you are satisfied with your API specification, you can publish it to Exchange in RAML or OAS. If you want to publish it both in RAML and in OAS, publish it twice, the second time changing the name. For example, the first time you publish the specification, you might choose to publish in RAML and specify the name as `myAPI (RAML 1.0)`; the second time, you would choose to publish in OAS and could specify the name `myAPI (OAS 2.0 JSON)`.
-If you are satisfied with your API specification, you can publish it to Exchange in RAML. To publish, click the *Publish* button that is in the top-right corner of the visual API editor, and then click *Publish to Exchange* to open the *Publish API specification to Exchange* dialog.
+If you are satisfied with your API specification, you can publish it to Exchange in RAML 1.0. See xref:design-publish.adoc[Publish an API Specification].
 
 Alternatively, you can customize the specification in the API editor by clicking *Edit RAML*  or *Edit OAS*.
 
 == See Also
 * xref:design-mocking-service.adoc[Simulate Calls to an API]
+* xref:design-publish.adoc[Publish an API Specification]
+* xref:design-rename-project.adoc[Rename an Open Project]
+* xref:design-delete-project.adoc[Delete an Open Project]
