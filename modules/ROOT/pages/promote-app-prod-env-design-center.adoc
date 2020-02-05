@@ -11,7 +11,9 @@ All Mule applications that you create with Flow Designer are created in the Desi
 
 As you deploy your application, you can change connector configurations and reconnection strategies. You need to do this if there are differences between the Design and target environments that would necessitate such changes.
 
-== Procedure
+After you deploy your application, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
+
+== To Deploy a Mule App from Flow Designer
 . Click *Deploy* in the top-right corner of Flow Designer.
 +
 image::deploy-dialog.png[]
