@@ -1,1 +1,7 @@
 = Switch Connection in a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images

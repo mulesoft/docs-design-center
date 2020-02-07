@@ -1,6 +1,23 @@
 = Connections from Connectors to Systems
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
-When you add to a Mule app a card that represents a connector, Flow Designer requires that you specify how your Mule app can connect to the system that the connector is for. For example, if you add a card that represents a database connector, immediately after you select the type of operation that you want your app to perform in the database, Flow Designer opens the *Database Configuration* dialog. In that dialog, you can either select an existing connection to a database or create a connection. In both cases, a _connection_, in the sense that Flow Designer uses the term, is the set of information that a Mule app needs to connect to the database when the app is running. The connection is not an open channel of communication between the app and the database. It is the information that the app needs to use to open a channel of communication with the database. The rest of the content of this page and its subpages uses the term _connection_ in this sense.
+:imagesdir: ../assets/images
+
+When you add to a Mule app a card that represents a connector, Flow Designer requires that you specify how your Mule app can connect to the system that the connector is for.
+
+For example, if you add a card that represents a database connector, immediately after you select the type of operation that you want your app to perform in the database, Flow Designer opens the *Database Configuration* dialog. In that dialog, you can either select an existing connection to a database or create a connection.
+
+A _connection_, in the sense that Flow Designer uses the term, is the set of information that a Mule app needs to connect to a system when the app is running. The connection is not an open channel of communication between the app and the system. It is the information that the app needs to use to open a channel of communication with the system. The rest of the content of this page and its subpages uses the term _connection_ in this sense.
+
+.The connection that you create in Flow Designer is the set of information that a Mule app must use to connect to a system
+image::fd-connection.png["Connection" in the sense in which Flow Designer uses the term, and "connection" in the sense of an open channel of communication]
+
+<1> A connection in the sense that Flow Designer uses the term: the set of information that a Mule app needs to open a channel of communication with a system.
+<2> A connection in a more common sense: an open channel of communication between two entities.
+
 
 There are two types of connection:
 Connections that can be used only within a single project::
