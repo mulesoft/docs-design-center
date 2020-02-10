@@ -10,7 +10,7 @@ endif::[]
 
 A _connection_ is a saved set of information that a running Mule app must use to connect to a specific system by means of a connector. You might create a connection as part of adding a connector to a flow.
 
-.This flowchart shows steps for adding a connector to a Mule-app project. Creating a connection can be one of those steps.
+.This flowchart shows steps for adding a connector to a Mule-app project. Creating a connection can be included in those steps.
 image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mule-app project]
 
 <1> When you add a connector to a flow, you create a _configuration_, which is a set of information that includes a connection. If a configuration exists that you can use, then you can simply select it. However, if no configuration exists yet for the connector, or if no existing configuration fits your use case, then you must create a configuration.
@@ -33,6 +33,9 @@ image::fd-connection-add.png[The locations of the list and the option]
 . Click *Add connection* in the configuration dialog for a connector that you have added to a flow.
 . Give the connection a descriptive name.
 . If you want the connection to be available to yourself and others in your business group for use in other projects, select the *Share this connection with my business group* checkbox.
++
+.The *Share this connection with my business group* checkbox is located after the *Connector Name* field.
+image::fd-connection-checkbox.png[The location of the *Share this connection with my business group* checkbox]
 . Select the type of connection that you are creating. For help with the fields, see the documentation for the connector that you are adding to your Mule-app project.
 . Click *Save*.
 
