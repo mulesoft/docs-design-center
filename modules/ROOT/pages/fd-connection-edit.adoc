@@ -8,7 +8,7 @@ endif::[]
 
 You can edit a connection that is being used by or is available to be used by a specific type of connector, changing any of the information that you have specified in it.
 
-To edit a connection, however, you must log into Anypoint Platform with the user ID that was used to create the connection. You cannot edit a connection that was created under a user ID that you are not logged in with.
+To edit a connection, you must log into Anypoint Platform with the user ID that was used to create the connection. You cannot edit a connection that was created under a user ID that you are not logged in with.
 
 If the connection is shared because you selected the *Share this connection with my business group* checkbox when you created it, the changes affect all of the connectors of that type in all of the projects in your business group.
 
@@ -19,11 +19,11 @@ If the connection is shared because you selected the *Share this connection with
 . At the top of the card, click *Edit*.
 . Locate the connection in the list of available connections.
 . Click the three dots to the right of the connection's name and click *Edit*.
-. Make you changes.
+. Make your changes.
 . Click *Save*.
 . Click *Cancel* or *Save* to close the configuration dialog for the connector.
 +
-It doesn't matter which button you click. The changes to the connection were saved when you clicked *Save* in the *Connection configuration* dialog.
+It doesn't matter which button you click. The changes to the connection are saved when you click *Save* in the *Connection configuration* dialog.
 
 == See Also
 
