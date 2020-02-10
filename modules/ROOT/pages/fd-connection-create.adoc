@@ -1,4 +1,4 @@
-= Create a Connection
+= Add a Connection to the Configuration of a Connector
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -29,8 +29,11 @@ image::fd-connection-add.png[The locations of the list and the option]
 
 You can also create a connection if you are editing a configuration or creating an additional configuration for a connector.
 
+image::fd-edit-switch-configs.png[]
+<1> When there is at least one configuration for a connector, the top of the connector card looks like this. You can edit the configuration or switch to a different configuration. If you edit the configuration, the configuration dialog is opened and you can switch connections or create a connection.
+<2> If you select the option to switch to a different configuration, the top of the card changes to look like this. You can either select a different configuration, if one exists, or add a new configuration. If you add a new configuration, you can use an existing connection or create a new one.
 
-== Procedure
+== To Add a Connection to a Configuration of a Connector
 
 . Click *Add connection* in the configuration dialog for a connector that you have added to a flow.
 . Give the connection a descriptive name.

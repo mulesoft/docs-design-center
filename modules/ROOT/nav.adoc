@@ -26,7 +26,7 @@
  ** xref:import-template.adoc[Create a Mule Application Quickly from a Template]
  ** xref:to-create-a-mule-application-project.adoc[Start Creating a Mule Application from an Existing One]
  ** xref:fd-connections.adoc[Connections from Connectors to Systems]
-  *** xref:fd-connection-create.adoc[Create a Connection]
+  *** xref:fd-connection-create.adoc[Add a Connection to the Configuration of a Connector]
   *** xref:fd-connection-switch-in-project.adoc[Switch Connections in a Project]
   *** xref:fd-connection-switch-in-deployed-app.adoc[Switch Connections in a Deployed Mule App]
   *** xref:fd-connection-edit.adoc[Edit a Connection]
