@@ -8,7 +8,7 @@ endif::[]
 
 
 
-A connection is a saved set of information that a Mule app must use to connect to a specific system by means of a connector. You might create a connection as part of adding a connector to a flow.
+A _connection_ is a saved set of information that a running Mule app must use to connect to a specific system by means of a connector. You might create a connection as part of adding a connector to a flow.
 
 .This flowchart shows steps for adding a connector to a Mule-app project. Creating a connection can be one of those steps.
 image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mule-app project]
@@ -18,7 +18,9 @@ image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mu
 <3> When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding a Database connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
 <4> In the procedure explained in the next section, you click the *Add connection* button to create a connection. Afterward, you return to the configuration dialog for the connector.
 
-.The *Database Configuration* dialog presents a list of connections to databases and an option for creating a connection to a database.
+A part of the configuration dialog that presents options about connections looks like this:
+
+.Part of the *Database Configuration* dialog presents a list of connections to databases and an option for creating a connection to a database.
 image::fd-connection-add.png[The locations of the list and the option]
 
 <1> Each existing connection shows roughly when the connection was created and the user ID of the person who created it.
@@ -42,7 +44,3 @@ Flow Designer returns you to the configuration dialog for the connector. Click *
 
 * xref:fd-connections.adoc[Connections from Connectors to Systems]
 * xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
-
-
-
-== See Also
