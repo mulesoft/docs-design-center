@@ -40,6 +40,11 @@ image::fd-connection-add.png[The locations of the list and the option]
 
 Flow Designer returns you to the configuration dialog for the connector. Click *Save* to return to the canvas.
 
+[NOTE]
+====
+If you accidentally click *Cancel* in the configuration dialog, the connection that you created is not deleted. You can reopen the configuration dialog and select the new connection.
+====
+
 == See Also
 
 * xref:fd-connections.adoc[Connections from Connectors to Systems]
