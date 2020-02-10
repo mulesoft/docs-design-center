@@ -27,7 +27,7 @@ There are two types of connection:
 You create the latter type by selecting the *Share this connection with my business group* checkbox when you create or edit a connection.
 
 .The *Share this connection with my business group* checkbox is located in the *Configure Connection* dialog.
-image::apid-connection-checkbox.png[The location of the *Share this connection with my business group* checkbox]
+image::fd-connection-checkbox.png[The location of the *Share this connection with my business group* checkbox]
 
 By selecting this checkbox, you make a connection available to yourself and others in your business group for use in other projects. Only you, as the creator of the connection, and administrators in your business group, can edit or delete the connection.
 
