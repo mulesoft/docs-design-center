@@ -16,7 +16,8 @@ image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mu
 <1> When you add a connector to a flow, you create a _configuration_, which is a set of information that includes a connection. If a configuration exists that you can use, then you can simply select it. However, if no configuration exists yet for the connector, or if no existing configuration fits your use case, then you must create a configuration.
 <2> Part of creating a configuration is specifying which connection the connector must use to connect to a system when your Mule app is running.
 <3> When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding a Database connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
-<4> In the procedure explained in the next section, you click the *Add connection* button to create a connection. Afterward, you return to the configuration dialog for the connector.
+<4> In the procedure explained in the next section, you click the *Add connection* button to create a connection.
+<5> You return to the configuration dialog for the connector, so that you can specify values for fields in the *Advanced* section, if you need to do so.
 
 A part of the configuration dialog that presents options about connections looks like this:
 
@@ -26,6 +27,7 @@ image::fd-connection-add.png[The locations of the list and the option]
 <1> Each existing connection shows roughly when the connection was created and the user ID of the person who created it.
 <2> The *Add connection* option lets you create a connection.
 
+You can also create a connection if you are editing a configuration or creating an additional configuration for a connector.
 
 
 == Procedure
