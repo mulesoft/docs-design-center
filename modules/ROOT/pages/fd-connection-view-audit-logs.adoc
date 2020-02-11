@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Although only the owner of a shared connection can edit or delete it, it might arise that someone has acquired the credentials of an owner and edited or deleted that owner's shared connection or shared connections. It is also possible for someone to acquire another user's credentials and create a shared connection without that other user being aware of the illicit use of the credentials.
+Although only the owner of a shared connection can edit or delete it, someone might illicitly acquire the credentials and edit or delete one or more shared connections. Someone also might maliciously use another user's credentials to create a shared connection and siphon data to an unapproved system.
 
 To help you identify such scenarios, Flow Designer creates an audit-log message for every creation, change to, and deletion of a shared connection within your business group. Each message includes the following information:
 
