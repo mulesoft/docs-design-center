@@ -52,6 +52,6 @@ From Exchange, the specification can be imported into Anypoint Studio and Flow D
 
 == See Also
 
-* xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the Code Editor in API Designer]
-* xref:design-create-publish-api-visual-editor.adoc[Create and Publish an API Specification with the Visual Code Editor in API Designer]
-* xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment in the Code Editor in API Designer]
+* xref:design-create-publish-api-raml-editor.adoc[Create and Publish an API Specification with the Text Editor in API Designer]
+* xref:design-create-publish-api-visual-editor.adoc[Create and Publish an API Specification with the Visual Text Editor in API Designer]
+* xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment in the Text Editor in API Designer]

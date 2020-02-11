@@ -1,0 +1,13 @@
+= Rename a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can rename an API-specification project or an API-fragment project. If you have already published a project, renaming it does not create a new asset in Exchange when you publish the project again.
+
+== Procedure
+
+To rename a project, use one of these methods:
+
+* If the project is not open, select the project in Design Center's *Projects* page, and then click the Edit icon in the top-right corner of the page.
+* If the project is open. click the gear icon in API Designer's top-right corner and then select *Rename*.

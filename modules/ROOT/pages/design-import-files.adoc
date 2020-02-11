@@ -1,31 +1,29 @@
-= Import Files into an API Project
+= Import Files into an API-Specification Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can import API specifications and RAML fragments into a project. There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
+You can import API specifications and RAML fragments into an API-specification project.
 
-The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0.
-
-[NOTE]
-====
-You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. When you publish your project to Exchange, you select one of the specifications as the main specification.
-====
+The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0. You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
 
 The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
+
+There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
 
 == Procedure
 
 * Import a file or the content of a `.zip` file that is stored on your computer, if you are using the text editor:
-. Click *Settings* in the top-right corner of the text editor and select *Import*.
+. Click the gear icon in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *File or Zip*.
+. Browse to your file or ZIP file and select it.
 
 +
-*Result:* The file or files are listed in the left pane of the editor. If you imported a ``.zip`` file that contains files that are in a folder structure, the folder structure is represented in the pane.
+*Result:* The file or files are listed in the left pane of the editor. If you imported a ZIP file that contains files that are in a folder structure, the folder structure is represented in the pane.
 
 * Import a file that is available through a URL, if you are using the text editor:
 
-. In the left pane of the editor, click the dots to the right of *Files* and select *Import*.
+. Click the gear icon in the top-right corner of the text editor and select *Import*.
 . In the *Import* dialog, select *URL*.
 +
 [NOTE]
@@ -42,7 +40,7 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 . Open the *Import Asset from Exchange* dialog by using either of these methods:
 +
 ** If you are using the text editor and your project contains only the default file that API Designer created together with the project, you can click the linked text that appears in the *Files* pane.
-** If you are using the text editor, you can click *Settings* in the top-right corner of the text editor and select *Import from Exchange*.
+** If you are using the text editor, you can click the gear icon in the top-right corner of the text editor and select *Import from Exchange*.
 ** If you are using the visual editor and your project does not yet contain any resources or data types, you can click the linked text that appears in the *New API* pane.
 
 . In the drop-down menu in the top-left corner of the dialog, select the business group that owns the asset.
@@ -50,15 +48,23 @@ The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can im
 +
 *Name*:: The name of an API specification or RAML fragment.
 +
-*Version*:: The version of a specification or fragment. Select the *Include snapshots* check box in the bottom-left corner of the dialog to include snapshots in this column.
+*Version*:: The version of a specification or fragment.
 +
-*Type*:: The type of asset. The value can be either *API Specification* or *RAML Fragment*.
+Select the *Include snapshots* checkbox in the bottom-left corner of the dialog to include snapshots in this column.
 +
-*Language* (for API specifications being imported into the text editor):: The language is either RAML or OAS. The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
+*Type*:: The type of asset.
++
+The value can be either *REST API* or *API Fragment*.
++
+*Language* (for API specifications being imported into the text editor):: The language is either RAML or OAS.
++
+The value displayed by default is the language in which the specification was written. The non-default value is the language in which Exchange created a copy when the specification was published.
 +
 If you want to import the copy, you might need to correct errors in it after you import it. The process that Exchange uses to create copies, which converts RAML to OAS or vice versa, is not guaranteed to produce error-free specifications.
 +
-*Language* (for API specifications being imported into the visual editor):: The language is always RAML. API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
+*Language* (for API specifications being imported into the visual editor):: The language is always RAML.
++
+API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
 +
 *Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
 +
@@ -69,3 +75,7 @@ If you want to import the copy, you might need to correct errors in it after you
 
 +
 *Result:* The file or files are listed in the left pane of the editor.
+
+== See Also
+
+* xref:design-change-root-file.adoc[Root Files in Projects in the Text Editor]
