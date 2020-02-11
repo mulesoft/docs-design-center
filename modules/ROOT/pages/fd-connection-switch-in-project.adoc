@@ -33,7 +33,20 @@ image::fd-connections-configs-connectors-switch-2.png[Switching connections in a
 
 * If you want to switch connections and the configuration requires different additional information, create a configuration that uses the connection you want to switch to.
 +
-. Do this.
-. Do that.
+. Open the card that represents the connector that you need to switch to a different connection.
+. At the top of the card, click *Switch configurations*.
+. Click *Add*.
+. Create the new configuration, selecting or creating the connection that you want to use, and click *Save*.
+
++
+*Result:* The *Connector configuration* area of the card shows that the new configuration is selected. Also, the configuration is listed in the *Reusable Configurations* section of the *Project* pane on the left side of the canvas. Click *Back*.
 
 * If you want to switch connections and the configuration does not require different additional information, edit the configuration to use the connection that you want to switch to.
++
+. In the *Reusable Configurations* section of the *Project* pane on the left side of the canvas, click the configuration that you want to edit.
+. Select or create the connection that you want to use.
+. Click *Save*.
+
+== See Also
+
+* xref:fd-connection-create.adoc[Add a Connection to the Configuration of a Connector]
