@@ -23,9 +23,9 @@ A connection is used in a configuration for a connector. A _configuration_ is a 
 .A connection (in this case, a database connection) is used by a configuration, which is itself used by a Database connector.
 image::fd-connections-configs-connectors.png[Diagram depicting the relationships between connections, configurations, and connectors]
 
-<1> You can create a pool of connections for each type of connector.
-<2> You can create a pool of configurations for each type of connector. Each configuration uses a single connection.
-<3> Each instance of a type of connector uses a single configuration. For example, you might have two instances of the Salesforce connector in a Mule app. Each instance might use the same configuration or they might each use a different configuration. Typically, two configurations for a connector type each use a different connection.
+<1> You can create a pool of connections for each type of connector. In this diagram, there is a pool of three connections, though the ellipsis indicates that it is possible for the pool to contain more connections.
+<2> You can create a pool of configurations for each type of connector. Each configuration uses a single connection. In this diagram, configuration Config 1 uses connection Conn B, and configuration Config 2 uses connection Conn A. The ellipsis indicates that it is possible to have a larger pool of configurations.
+<3> Each instance of a type of connector uses a single configuration. In this diagram, the Database connector uses only Config 1, even though Config 2 is also available. To give another example, you might have two instances of the Salesforce connector in a Mule app. Each instance might use the same configuration or they might each use a different configuration. Typically, two configurations for a connector type each use a different connection.
 
 There are two types of connection:
 
