@@ -5,3 +5,20 @@ endif::[]
 :keywords:
 
 :imagesdir: ../assets/images
+
+Although only the owner of a shared connection can edit or delete it, it might arise that someone has acquired the credentials of an owner and edited or deleted that owner's shared connection or shared connections. It is also possible for someone to acquire another user's credentials and create a shared connection without that other user being aware of the illicit use of the credentials.
+
+To help you identify such scenarios, Flow Designer creates an audit-log message for every creation, change to, and deletion of a shared connection within your business group. Each message includes the following information:
+
+* The time and date of the action
+* The product in which the action was taken (i.e., Flow Designer)
+* The type of change, which is always "Connection"
+* The type of action: Create, Edit, or Delete,
+* The type of connector that the connection was for, such as the Database connector.
+* The user ID that was used to take the action
+
+== Procedure
+
+. In Anypoint Platform, open Access Management.
+. Select *Audit Logs* in the left pane.
+. On the *Audit Logs* page, select *Flow Designer* in the *Products* filter and *Connector* in the *Types* filter.
