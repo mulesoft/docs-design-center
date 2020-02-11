@@ -4,6 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords:
 
+:page-aliases: fd-reuse-config.adoc
 :imagesdir: ../assets/images
 
 When you add to a flow a card that represents a connector, Flow Designer requires that you specify how your Mule app can connect at runtime to the system that the connector is for.

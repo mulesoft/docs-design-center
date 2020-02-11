@@ -41,7 +41,6 @@
   *** xref:fd-custom-data-types.adoc[Custom Data Types in Flow Designer]
  ** xref:fd-integrating-systems.adoc[Integrate a System into a Mule Application]
  ** xref:dynamic-expression-field.adoc[Fill in Cards with Values that Change at Runtime]
- ** xref:fd-reuse-config.adoc[Create a Connection for Reuse by Yourself or Others]
  ** xref:custom-expression-field.adoc[Create a DataWeave Expression in a Field]
  ** xref:fd-add-core-component.adoc[Add Logic, Data Transformations, Error Catching, and More to Flows]
   *** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flowref]
