@@ -33,5 +33,6 @@ You can go to Runtime Manager to manage the application. To get there from Flow 
 == See Also
 
 * xref:fd-connection-create.adoc[Add a Connection to the Configuration of a Connector]
+* xref:runtime-manager::secure-application-properties.adoc[Safely Hiding Application Properties]
 * xref:access-management::environments.adoc[CloudHub Environments]
 * xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]
