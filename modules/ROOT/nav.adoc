@@ -33,7 +33,6 @@
  ** xref:fd-connections.adoc[Connections from Connectors to Systems]
   *** xref:fd-connection-create.adoc[Add a Connection to the Configuration of a Connector]
   *** xref:fd-connection-switch-in-project.adoc[Switch the Connection That a Connector is Using in a Project]
-  *** xref:fd-connection-switch-in-deployed-app.adoc[Switch Connections in a Deployed Mule App]
   *** xref:fd-connection-edit.adoc[Edit a Connection]
   *** xref:fd-connection-delete.adoc[Delete a Connection]
   *** xref:fd-connection-view-audit-logs.adoc[View Audit Logs for Connections that are Shared]

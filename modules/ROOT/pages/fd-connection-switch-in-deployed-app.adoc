@@ -1,7 +1,0 @@
-= Switch Connections in a Deployed Mule App
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords:
-
-:imagesdir: ../assets/images
