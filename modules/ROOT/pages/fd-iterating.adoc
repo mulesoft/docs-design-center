@@ -15,18 +15,18 @@ image::fd-iterators-example.png[Two simple examples: one of the use of For-Each,
 
 Both types of component can process any collection, including lists and arrays. A collection can be any supported content type, such as application/json, application/java, or application/xml. For an XML or JSON collection, specify a DataWeave expression in the *Collection* field to split the collection into its constituent elements. The For-Each or Parallel For-Each scope can split a Java collection into its elements without depending on a DataWeave expression to explain how to split it.
 
-The For-Each component is for processing each element in a collection and then proceeding in the flow with the original payload that was passed to the For-Each component.
+The For-Each component is for processing each element in a collection and then proceeding in the flow with the original payload that was passed to the For-Each component:
 
-image::fd-foreach.png[]
+image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
 
 <1> A card passes the payload of a flow to the For-Each component.
 <2> The For-Each component sends each element serially to the components, connectors, and modules that are in its scope.
 <3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
 <4> The next card in the flow receives the same payload as the For-Each component received, and the flow continues.
 
-The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow.
+The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow:
 
-image::fd-parallel-foreach.png[]
+image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
 
 <1> A card passes the payload of a flow to the Parallel For-Each component.
 <2> The Parallel For-Each component sends elements simultaneously to the components, connectors, and modules that are in its scope. You can specify the maximum number of elements to process at a time.
