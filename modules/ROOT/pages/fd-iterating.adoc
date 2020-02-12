@@ -26,6 +26,12 @@ image::fd-foreach.png[]
 
 The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow.
 
+image::fd-parallel-foreach.png[]
+
+<1> A card passes the payload of a flow to the Parallel For-Each component.
+<2> The Parallel For-Each component sends elements simultaneously to the components, connectors, and modules that are in its scope. You can specify the maximum number of elements to process at a time.
+<3> After all of the elements are processed, the Parallel For-Each component passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
+<4> The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
 
 == Serial Versus Simultaneous Processing
 
