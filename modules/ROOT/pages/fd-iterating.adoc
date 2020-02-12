@@ -39,6 +39,13 @@ image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parall
 
 The order of the results correspond to the order of the elements in the original payload. For example, suppose that the payload that is passed to a Parallel For-Each component is `["Apple","Banana","Cherry"]`. Within the component's scope is a Set Payload component that processes each element as a separate payload. The Set Payload component processes each payload with this DataWeave expression: `payload ++ '-result'`. The Parallel For-Each component passes these results to the next card in the flow: `["Apple-result","Banana-result","Cherry-result"]`.
 
+[IMPORTANT]
+====
+Within the scope of the Parallel For-Each component, the order in which each element is processed is not guaranteed to be the order in which each element appears in a collection. Therefore, if any of the connectors require elements in a particular order (for example, if you want to update database tables in a particular order with the Database connector), you should use the For-Each component instead.
+
+Moreover, you should be aware whether any APIs or services that you want to connect to within the scope of a Parallel For-Each component have any limits in the number of concurrent connections that they accept. If they do, you must specify a maximum number of concurrent processes for the Parallel For-Each component.
+====
+
 
 == Transactional Processing
 
