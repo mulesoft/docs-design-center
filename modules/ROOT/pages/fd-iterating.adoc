@@ -1,4 +1,85 @@
 = Iterating Over Values
 
 
-For-Each Scope
+== Similarities between the For-Each and Parallel For-Each Scopes
+
+Each is similar to a for-each/for loop code block in most programming languages and can process any collection, including lists and arrays.
+A collection can be any supported content type, such as application/json, application/java, or application/xml.
+If the payload is a simple Java collection, the For-Each or Parallel For-Each scope can split it without any configuration.
+    Meaning that you don't have to specify a DataWeave expression to explain how to split the payload.
+
+For non-Java collections, such as XML or JSON, use a DataWeave expression to split data. Use the Collection field for this purpose.
+
+
+Both split a payload or other collection into elements and processes the elements with the components, connectors, and modules that you place within the scope.
+  For-Each scope
+    Processes each element one at a time.
+    The payload inside the For Each scope is each of the split elements.
+    The For Each scope splits a payload into elements and processes them one by one through the components that you place in the scope.
+      The scope might contain modules and connectors, in addition to components.
+  Parallel For-Each scope
+    Processes elements simultaneously.
+    The Parallel For Each scope enables you to process a collection of messages by splitting the collection into parts that are simultaneously processed in separate routes within the scope of any limitation configured for concurrent-processing.
+    After all messages are processed, the results are aggregated following the same order they were in before the split, and then the flow continues.
+
+
+    Differences between For Each and Parallel For Each Scopes
+      Output
+        For-Each
+          For Each does not modify the payload.
+          For Each does not modify the current payload. The output payload is the same as the input.
+            One of the two main differences between For-Each and Parallel For-Each
+          The For Each scope stores each item of the collection in payload during each iteration.
+        Parallel For-Each
+          Parallel For Each outputs a collection of the output messages from each iteration.
+      Transactional Processing
+        For-Each
+          Nothing special occurs with For-Each scopes during transactional processing.
+        Parallel For-Each
+          When running within a transaction, the Parallel Foreach scope does not execute in parallel. This means it executes as the Foreach scope: the second element of the collection is processed after the first one has finished. This does not affect the way this scope handles errors.
+      Batching
+        For-Each
+          You can split a collection into batches to enable quicker processing. Each batch is treated as a separate Mule message. For example, if a collection has 200 elements and you set Batch Size to 50, the For Each scope iteratively processes 4 batches of 50 elements, each as a separate Mule message.
+        Parallel For-Each
+          Batching is not allowed.
+      Variable Propagation
+        For-Each
+          Every execution of the For Each scope starts with the variables and values from the previous execution of the block. New variables or modifications to existing variables that take place when processing one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
+        Parallel For-Each
+          Every execution of the Parallel For Each scope starts with the same variables and values as before the execution of the block.
+            I asked Cristian questions about this sentence.
+          New variables or modifications of already existing variables while processing one element are not visible while processing another element. All of those variable changes are not available outside the Parallel For Each scope, the set of variables (and their values) after the execution of the Parallel For Each Scope remains the same as before the execution.
+          None of the modifications done inside the Parallel For-Each scope are registered, including the creation of new variables.
+            I asked Cristian questions about this sentence.
+      Error Handling
+        For-Each
+          If one of the elements in a collection throws an exception, the For Each scope stops processing that collection. Flow Designer shows a red circle on the For-Each card. Look in the log to find out the reason for the failure.
+        Parallel For-Each
+          When one of the parallel executions timeouts, an exception is raised, stopping the flow.
+          Flow designer will show a red icon in the top left part of the card as it does with all the errors in the cards. The user can take a look at the logs to check why it failed.
+
+== Configuring For-Each
+
+Collection
+
+Batch Size
+
+Root Message Variable Name
+
+Counter Variable Name
+
+
+== Configuring Parallel For-Each
+
+Collection
+
+Timeout
+
+Max Concurrency
+
+
+Advanced
+
+Target
+
+Target Value
