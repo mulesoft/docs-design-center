@@ -1,24 +1,37 @@
 = Iterating Over Values
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+You can process elements in a collection by using the For-Each component or the Parallel For-Each component. Each component sets a scope within which you can add other types of component, as well as connectors and modules, for processing each element.
+
+.The For-Each component and the Parallel For-Each component both set scopes for processing the elements within a collection.
+image::fd-iterators-example.png[Two simple examples: one of the use of For-Each, the other of the use of Parallel For-Each]
+
+<1> The For-Each component in this example inserts each element, one at a time, into a database. Each element is presumably a string that can be used in a SQL INSERT statement.
+<2> The Parallel For-Each component in this example sends each element to a Set Payload component that modifies the element with an expression and adds it to the flow's payload.
+
+Both types of component can process any collection, including lists and arrays. A collection can be any supported content type, such as application/json, application/java, or application/xml. For an XML or JSON collection, specify a DataWeave expression in the *Collection* field to split the collection into its constituent elements. The For-Each or Parallel For-Each scope can split a Java collection into its elements without depending on a DataWeave expression to explain how to split it.
+
+The For-Each component is for processing each element in a collection and then proceeding in the flow with the original payload that was passed to the For-Each component.
+
+image::fd-foreach.png[]
+
+<1> A card passes the payload of a flow to the For-Each component.
+<2> The For-Each component sends each element serially to the components, connectors, and modules that are in its scope.
+<3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
+<4> The next card in the flow receives the same payload as the For-Each component received, and the flow continues.
+
+The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow.
 
 
-== Similarities between the For-Each and Parallel For-Each Scopes
+== Serial Versus Simultaneous Processing
 
-Each is similar to a for-each/for loop code block in most programming languages and can process any collection, including lists and arrays.
-A collection can be any supported content type, such as application/json, application/java, or application/xml.
-If the payload is a simple Java collection, the For-Each or Parallel For-Each scope can split it without any configuration.
-    Meaning that you don't have to specify a DataWeave expression to explain how to split the payload.
+The For-Each component processes each element one at a time, similar to a for-each/for loop code block in most programming languages.
 
-For non-Java collections, such as XML or JSON, use a DataWeave expression to split data. Use the Collection field for this purpose.
-
-
-Both split a payload or other collection into elements and processes the elements with the components, connectors, and modules that you place within the scope.
-  For-Each scope
-    Processes each element one at a time.
-    The payload inside the For Each scope is each of the split elements.
-    The For Each scope splits a payload into elements and processes them one by one through the components that you place in the scope.
-      The scope might contain modules and connectors, in addition to components.
-  Parallel For-Each scope
-    Processes elements simultaneously.
+The Parallel For-Each component processes elements simultaneously.
     The Parallel For Each scope enables you to process a collection of messages by splitting the collection into parts that are simultaneously processed in separate routes within the scope of any limitation configured for concurrent-processing.
     After all messages are processed, the results are aggregated following the same order they were in before the split, and then the flow continues.
 
