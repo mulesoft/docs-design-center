@@ -15,6 +15,8 @@ image::fd-iterators-example.png[Two simple examples: one of the use of For-Each,
 
 Both types of component can process any collection, including lists and arrays. A collection can be any supported content type, such as application/json, application/java, or application/xml. For an XML or JSON collection, specify a DataWeave expression in the *Collection* field to split the collection into its constituent elements. The For-Each or Parallel For-Each scope can split a Java collection into its elements without depending on a DataWeave expression to explain how to split it.
 
+== How the For-Each Component Processes Data and Continues a Flow
+
 The For-Each component is for processing each element in a collection and then proceeding in the flow with the original payload that was passed to the For-Each component:
 
 image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
@@ -24,6 +26,8 @@ image::fd-foreach.png[Diagram depicting the actions taken by the For-Each compon
 <3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
 <4> The next card in the flow receives the same payload as the For-Each component received, and the flow continues.
 
+== How the Parallel For-Each Component Processes Data and Continues a Flow
+
 The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow:
 
 image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
@@ -32,6 +36,8 @@ image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parall
 <2> The Parallel For-Each component sends elements simultaneously to the components, connectors, and modules that are in its scope. You can specify the maximum number of elements to process at a time.
 <3> After all of the elements are processed, the Parallel For-Each component passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
 <4> The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
+
+The order of the results correspond to the order of the elements in the original payload. For example, suppose that the payload that is passed to a Parallel For-Each component is `["Apple","Banana","Cherry"]`. Within the component's scope is a Set Payload component that processes each element with this DataWeave expression: `payload ++ '-result'`.
 
 == Serial Versus Simultaneous Processing
 
