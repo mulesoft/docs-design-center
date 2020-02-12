@@ -76,28 +76,35 @@ Both the For-Each component and Parallel For-Each component stop processing a co
 
 When the processing of a collection stops because of an exception or timeout, Flow Designer displays a red circle on the card that represents the component in the flow. You can open the *Logs* pane to read the error message.
 
-== Configuring For-Each
+== Configuring a For-Each Component
+
+When you configure this component, you must specify values in these fields:
 
 Collection:: An expression that returns a Java collection, object array, map, or DOM nodes.
 
-Batch Size:: Partitions the collection into sub-collections of the specified size. For example, if a collection has 200 elements and you set the batch size to 50, it processes 4 batches of 50 elements each.
+Batch Size:: Partitions the collection into sub-collections of the specified number of elements. For example, if a collection has 200 elements and you set the batch size to 50 elements, the component processes 4 batches of 50 elements each.
 
-Root Message Variable Name:: Name of the property that stores the parent message. The parent is the complete, non-split message.
+Root Message Variable Name:: Name of the property that stores the parent message. The parent is the complete, non-split message. // What is the root message variable name for? What does it store "the parent message" for? Is "parent message" the full collection?
 
 Counter Variable Name:: Name of the property that stores the number of messages over which it iterates. // What is "it"?
 
 
-== Configuring Parallel For-Each
+== Configuring a Parallel For-Each Component
 
-Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. By default, it uses the incoming payload.
+When you configure this component, you must specify values in these fields:
 
-Timeout:: Specifies the timeout for each parallel route.
+Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. By default, the component uses the payload passed to it by the previous card in the flow.
 
-Max Concurrency:: Specifies the maximum level of parallelism to use. By default, all routes run in parallel.
+Timeout:: Specifies the maximum time in milliseconds that a parallel process can wait for an open connection to a system reached via a connector.
+
+Max Concurrency:: Specifies the maximum number of parallel processes that can be run. How many parallel processes are in fact started depends on how Mule Runtime allocates resources where it is running.
+
+* If you set the value to 40, but Mule Runtime has allocated only enough resources to run up to 4 processes in parallel, only up to 4 processes can run in parallel.
+* If you set the value to 2, but Mule runtime has allocated enough resources to run up to 4 processes in parallel, only up to 2 processes can run in parallel
 
 
-Advanced
+When you configure this component, you can, but are not required to, specify values in these fields:
 
-Target:: Specifies a variable to use for storing the processed payload. By default, the output is saved in the flow’s payload.
+Target:: Specifies a variable to use for storing the results of processing all of the elements in a collection. By default, the output is saved in the flow’s payload.
 
 Target Value:: Specifies an expression to evaluate against the operation’s output value. The outcome of this expression is stored in the target variable. By default, this is the same as the operation’s output value.
