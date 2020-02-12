@@ -60,26 +60,26 @@ Both split a payload or other collection into elements and processes the element
 
 == Configuring For-Each
 
-Collection
+Collection:: An expression that returns a Java collection, object array, map, or DOM nodes.
 
-Batch Size
+Batch Size:: Partitions the collection into sub-collections of the specified size. For example, if a collection has 200 elements and you set the batch size to 50, it processes 4 batches of 50 elements each.
 
-Root Message Variable Name
+Root Message Variable Name:: Name of the property that stores the parent message. The parent is the complete, non-split message.
 
-Counter Variable Name
+Counter Variable Name:: Name of the property that stores the number of messages over which it iterates. // What is "it"?
 
 
 == Configuring Parallel For-Each
 
-Collection
+Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. By default, it uses the incoming payload.
 
-Timeout
+Timeout:: Specifies the timeout for each parallel route.
 
-Max Concurrency
+Max Concurrency:: Specifies the maximum level of parallelism to use. By default, all routes run in parallel.
 
 
 Advanced
 
-Target
+Target:: Specifies a variable to use for storing the processed payload. By default, the output is saved in the flow’s payload.
 
-Target Value
+Target Value:: Specifies an expression to evaluate against the operation’s output value. The outcome of this expression is stored in the target variable. By default, this is the same as the operation’s output value.
