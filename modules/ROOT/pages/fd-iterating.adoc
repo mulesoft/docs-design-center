@@ -1,1 +1,4 @@
 = Iterating Over Values
+
+
+For-Each Scope

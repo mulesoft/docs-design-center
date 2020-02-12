@@ -9,21 +9,7 @@ endif::[]
 
 All Mule applications that you create with Flow Designer are created in the Design environment. When a Mule application that you've created is ready to go live, you can deploy it to another environment, if your organization allows you to do so. The target environment must have enough vCores to accommodate the application; otherwise, deployment will fail.
 
-As you deploy your application, you can change connector configurations and connections. You need to do this if there are differences between the testing and target environments that would necessitate such changes. For example, if you tested your app in the *Sandbox* environment and now want to deploy it to a production environment, you most likely need to replace the connections that each connector used for connecting to test systems with connections for connecting to production systems.
-
-[NOTE]
-====
-Any changes that you make to configurations when you deploy an application are not applied to the configurations in your project. The changes are applied only to the application that you are deploying.
-
-For example, suppose that your application uses ConfigA for a connector. In the project, the ConfigA uses the connection ConnA. When you deploy the application, you change ConfigA to use connection ConnB. However, ConfigA continues to use ConnA in your project.
-
-Essentially, configurations are copied into an application when you are deploying that application. Changes that you make to configurations are applied only to the copies that are in the application, not to the originals that are in your project.
-
-However, if you create a connection for a configuration when you deploy an application, Flow Designer takes these two actions:
-
-* In the configuration that is copied into the application, the new connection is used.
-* In the original configuration that is in the project, the new connection is not used, but it is added to the list of connections that are available for the configuration to use.
-====
+As you deploy your application, you can change connector configurations and reconnection strategies. You need to do this if there are differences between the Design and target environments that would necessitate such changes.
 
 After you deploy your application, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
 
