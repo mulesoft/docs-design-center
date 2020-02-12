@@ -1,4 +1,4 @@
-= Iterating Over Values
+= Processing Elements in Collections
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,14 +17,14 @@ Both types of component can process any collection, including lists and arrays. 
 
 == How the For-Each Component Processes Data and Continues a Flow
 
-The For-Each component is for processing each element in a collection and then proceeding in the flow with the original payload that was passed to the For-Each component:
+The For-Each component is for processing each element in a collection serially and then proceeding in the flow with the original payload that was passed to the For-Each component:
 
 image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
 
 <1> A card passes the payload of a flow to the For-Each component.
-<2> The For-Each component sends each element serially to the components, connectors, and modules that are in its scope.
+<2> The For-Each component sends each element serially to the components, connectors, and modules that are in its scope. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the For-Each component received.
 <3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
-<4> The next card in the flow receives the same payload as the For-Each component received, and the flow continues.
+<4> The next card in the flow receives the same payload that the For-Each component received, and the flow continues.
 
 == How the Parallel For-Each Component Processes Data and Continues a Flow
 
@@ -33,41 +33,26 @@ The Parallel For-Each component is for processing each element in a collection a
 image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
 
 <1> A card passes the payload of a flow to the Parallel For-Each component.
-<2> The Parallel For-Each component sends elements simultaneously to the components, connectors, and modules that are in its scope. You can specify the maximum number of elements to process at a time.
-<3> After all of the elements are processed, the Parallel For-Each component passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
+<2> The Parallel For-Each component sends elements simultaneously to the components, connectors, and modules that are in its scope. You can specify the maximum number of elements to process at a time. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the Parallel For-Each component received.
+<3> After all of the elements are processed, the Parallel For-Each component aggregates and passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
 <4> The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
 
-The order of the results correspond to the order of the elements in the original payload. For example, suppose that the payload that is passed to a Parallel For-Each component is `["Apple","Banana","Cherry"]`. Within the component's scope is a Set Payload component that processes each element with this DataWeave expression: `payload ++ '-result'`.
-
-== Serial Versus Simultaneous Processing
-
-The For-Each component processes each element one at a time, similar to a for-each/for loop code block in most programming languages.
-
-The Parallel For-Each component processes elements simultaneously.
-    The Parallel For Each scope enables you to process a collection of messages by splitting the collection into parts that are simultaneously processed in separate routes within the scope of any limitation configured for concurrent-processing.
-    After all messages are processed, the results are aggregated following the same order they were in before the split, and then the flow continues.
+The order of the results correspond to the order of the elements in the original payload. For example, suppose that the payload that is passed to a Parallel For-Each component is `["Apple","Banana","Cherry"]`. Within the component's scope is a Set Payload component that processes each element as a separate payload. The Set Payload component processes each payload with this DataWeave expression: `payload ++ '-result'`. The Parallel For-Each component passes these results to the next card in the flow: `["Apple-result","Banana-result","Cherry-result"]`.
 
 
-    Differences between For Each and Parallel For Each Scopes
-      Output
-        For-Each
-          For Each does not modify the payload.
-          For Each does not modify the current payload. The output payload is the same as the input.
-            One of the two main differences between For-Each and Parallel For-Each
-          The For Each scope stores each item of the collection in payload during each iteration.
-        Parallel For-Each
-          Parallel For Each outputs a collection of the output messages from each iteration.
-      Transactional Processing
-        For-Each
-          Nothing special occurs with For-Each scopes during transactional processing.
-        Parallel For-Each
-          When running within a transaction, the Parallel Foreach scope does not execute in parallel. This means it executes as the Foreach scope: the second element of the collection is processed after the first one has finished. This does not affect the way this scope handles errors.
-      Batching
-        For-Each
-          You can split a collection into batches to enable quicker processing. Each batch is treated as a separate Mule message. For example, if a collection has 200 elements and you set Batch Size to 50, the For Each scope iteratively processes 4 batches of 50 elements, each as a separate Mule message.
-        Parallel For-Each
-          Batching is not allowed.
-      Variable Propagation
+== Transactional Processing
+
+The For-Each component does nothing differently when running within a transaction. // What does it mean "to run within a transation"? I know what a transaction is, but how does a component run "within" one?
+
+However, the Parallel For-Each component does not process the elements of a collection simultaneously. Instead, it processes them serially, just as the For-Each component does. The output from this component is still the aggregated results from the processing of the elements in a collection.
+
+== Batching
+
+With the For-Each component, you can split a collection into batches to enable quicker processing. Each batch is treated as a separate Mule message. For example, if a collection has 200 elements and you set Batch Size to 50, the For-Each component iteratively processes 4 batches of 50 elements, each as a separate Mule message.
+
+Batching is not supported with the Parallel For-Each component.
+
+== Variable Propagation
         For-Each
           Every execution of the For Each scope starts with the variables and values from the previous execution of the block. New variables or modifications to existing variables that take place when processing one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
         Parallel For-Each
@@ -76,7 +61,8 @@ The Parallel For-Each component processes elements simultaneously.
           New variables or modifications of already existing variables while processing one element are not visible while processing another element. All of those variable changes are not available outside the Parallel For Each scope, the set of variables (and their values) after the execution of the Parallel For Each Scope remains the same as before the execution.
           None of the modifications done inside the Parallel For-Each scope are registered, including the creation of new variables.
             I asked Cristian questions about this sentence.
-      Error Handling
+
+== Error Handling
         For-Each
           If one of the elements in a collection throws an exception, the For Each scope stops processing that collection. Flow Designer shows a red circle on the For-Each card. Look in the log to find out the reason for the failure.
         Parallel For-Each

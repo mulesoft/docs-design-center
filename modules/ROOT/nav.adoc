@@ -43,7 +43,7 @@
  ** xref:dynamic-expression-field.adoc[Fill in Cards with Values that Change at Runtime]
  ** xref:custom-expression-field.adoc[Create a DataWeave Expression in a Field]
  ** xref:fd-add-core-component.adoc[Add Logic, Data Transformations, Error Catching, and More to Flows]
-  *** xref:fd-iterating.adoc[Iterating Over Values]
+  *** xref:fd-iterating.adoc[Processing Elements in Collections]
   *** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flowref]
   *** xref:error-handling-task-design-center.adoc[Handle Errors with Try]
  ** xref:fd-transform.adoc[Mapping Output Data to Input Data]
