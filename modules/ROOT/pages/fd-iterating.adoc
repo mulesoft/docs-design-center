@@ -51,7 +51,7 @@ Moreover, you should be aware whether any APIs or services that you want to conn
 
 == Transactional Processing
 
-The For-Each component does nothing differently when processing a transaction. 
+The For-Each component does nothing differently when processing a transaction.
 
 However, the Parallel For-Each component does not process the elements of a collection simultaneously when processing a transaction. Instead, it processes them serially, just as the For-Each component does. The output from this component is still the aggregated results from the processing of the elements in a collection.
 
@@ -65,7 +65,7 @@ Batching is not supported with the Parallel For-Each component.
 
 Every iteration within the For Each component can make use of with the variables that were used in the previous iteration. New variables or modifications to existing variables that take place during the processing of one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
 
-For example, suppose that you use a Set Variable component just before the scope of a For-Each component. Within the Set Variable component, you set the variable `NumOfElements` to 0. You then use a Set Variable component in the For-Each scope, using the same variable, that specifies a DataWeave script that starts at the value 0 and increments by 1 every time it is called. Every time that the For-Each component sends another element of a collection to be processed, the value is incremented and saved in `NumOfElements`. When all of the elements have been processed, the value of `NumOfElements` is the number of elements that were in the collection. The value can be used outside of the For-Each scope by subsequent cards in the flow.
+For example, suppose that you use a Set Variable component just before the scope of a For-Each component. Within the Set Variable component, you set the variable `NumOfElements` to 0. You then use a Set Variable component in the For-Each scope, using the same variable, that specifies a DataWeave script that increments the value by 1 every time it is called. Every time that the For-Each component sends another element of a collection to be processed, the value is incremented and saved in `NumOfElements`. When all of the elements have been processed, the value of `NumOfElements` is the number of elements that were in the collection. The value can be used outside of the For-Each scope by subsequent cards in the flow.
 
 The Parallel For Each component does not iterate over the elements in a collection. Therefore, the value of a variable that enters the Parallel For-Each scope is the same at the start of the processing of each variable. New variables or modifications of already existing variables during the processing of one element are not visible during the processing of another element. Moreover, no changes to variables with the scope of a Parellel For-Each component are available to the subsequent cards in the flow.
 
