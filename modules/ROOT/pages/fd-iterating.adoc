@@ -1,4 +1,4 @@
-= Processing Elements in Collections
+= Process Elements in a Collection
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
