@@ -63,7 +63,7 @@ Batching is not supported with the Parallel For-Each component.
 
 == Variables
 
-Every iteration within the For Each component can make use of with the variables that were used in the previous iteration. New variables or modifications to existing variables that take place during the processing of one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
+Every iteration within the For Each component can make use of the variables that were used in the previous iteration. New variables or modifications to existing variables that take place during the processing of one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
 
 For example, suppose that you use a Set Variable component just before the scope of a For-Each component. Within the Set Variable component, you set the variable `NumOfElements` to 0. You then use a Set Variable component in the For-Each scope, using the same variable, that specifies a DataWeave script that increments the value by 1 every time it is called. Every time that the For-Each component sends another element of a collection to be processed, the value is incremented and saved in `NumOfElements`. When all of the elements have been processed, the value of `NumOfElements` is the number of elements that were in the collection. The value can be used outside of the For-Each scope by subsequent cards in the flow.
 
