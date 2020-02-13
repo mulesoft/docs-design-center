@@ -13,9 +13,9 @@ image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mu
 
 <1> When you add a connector to a flow, you create a _configuration_, which is a set of information that includes a connection. If a configuration exists that you can use, then you can simply select it. However, if no configuration exists yet for the connector, or if no existing configuration fits your use case, then you must create a configuration.
 <2> Part of creating a configuration is specifying which connection the connector must use to connect to a system when your Mule app is running.
-<3> When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding a Database connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
-<4> In the procedure explained in the next section, you click the *Add connection* button to create a connection.
-<5> You return to the configuration dialog for the connector, so that you can specify values for fields in the *Advanced* section, if you need to do so.
+<3> When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding an instance of the Database Connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
+<4> You click the *Add connection* button to create a connection.
+<5> You return to the configuration dialog for the connector to specify values for fields in the *Advanced* section, if you need to do so.
 
 A part of the configuration dialog that presents options about connections looks like this:
 
@@ -23,7 +23,7 @@ A part of the configuration dialog that presents options about connections looks
 image::fd-connection-add.png[The locations of the list and the option]
 
 <1> Each existing connection shows roughly when the connection was created and the user ID of the person who created it.
-<2> The *Add connection* option lets you create a connection.
+<2> The *Add connection* option enables you to create a connection.
 
 You can also create a connection if you are editing a configuration or if you are creating an additional configuration for a connector.
 
@@ -33,20 +33,21 @@ image::fd-edit-switch-configs.png[Where to go to add a connection]
 <1> When there is at least one configuration for a connector, the top of the connector card looks like this. You can edit the configuration or switch to a different configuration. If you edit the configuration, the configuration dialog is opened and you can create a connection.
 <2> If you select the option to switch to a different configuration, the top of the card changes to look like this. You can click *Add* to open the configuration dialog for the connector and create a connection.
 
-== To Add a Connection to a Configuration of a Connector
+== Adding a Connection to a Configuration of a Connector
 
 . Click *Add connection* in the configuration dialog for a connector that you have added to a flow.
-. Give the connection a descriptive name.
+. Give the connection a unique and descriptive name.
 . If you want the connection to be available to yourself and others in your business group for use in other projects, select the *Share this connection with my business group* checkbox.
 +
 .The *Share this connection with my business group* checkbox is located after the *Connector Name* field.
 image::fd-connection-checkbox.png[The location of the *Share this connection with my business group* checkbox]
-. Select the type of connection that you are creating. For help with the fields, see the documentation for the connector that you are adding to your Mule-app project.
+. Select the type of connection that you are creating.
++
+For help with the fields, see the documentation for the connector that you are adding to your Mule-app project.
 . Click *Save*.
-
-== Result
-
-Flow Designer returns you to the configuration dialog for the connector. The connection that you added is selected as the connection for the configuration to use. Click *Save* to return to the canvas.
++
+Flow Designer returns you to the configuration dialog for the connector. The connection that you added is selected as the connection for the configuration to use.
+. Click *Save* to return to the canvas.
 
 [NOTE]
 ====
