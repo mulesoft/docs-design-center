@@ -19,6 +19,7 @@ Both types of component can process any collection, including lists and arrays. 
 
 The For-Each component is for processing each element in a collection serially and then proceeding in the flow with the original payload that was passed to the For-Each component:
 
+.This diagram represents a flow in which a For-Each component is used. The rounded rectangles are cards.
 image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
 
 <1> A card passes the payload of a flow to the For-Each component. The payload consists of a collection of elements.
@@ -30,6 +31,7 @@ image::fd-foreach.png[Diagram depicting the actions taken by the For-Each compon
 
 The Parallel For-Each component is for processing each element in a collection and then passing the results to the next card in the flow:
 
+.This diagram represents a flow in which a Parallel For-Each component is used. The rounded rectangles are cards.
 image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
 
 <1> A card passes the payload of a flow to the Parallel For-Each component. The payload consists of a collection of elements.
