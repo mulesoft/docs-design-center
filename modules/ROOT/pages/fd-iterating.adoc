@@ -61,7 +61,7 @@ With the For-Each component, you can split a collection into batches to enable q
 
 Batching is not supported with the Parallel For-Each component.
 
-== Variable Propagation
+== Variables
 
 Every iteration within the For Each component can make use of with the variables that were used in the previous iteration. New variables or modifications to existing variables that take place during the processing of one element are visible during the processing of another element. These changes to variables continue to be available outside the For Each scope.
 
