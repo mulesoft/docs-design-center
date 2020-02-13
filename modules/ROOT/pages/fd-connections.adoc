@@ -38,7 +38,7 @@ You create the latter type by selecting the *Share this connection with my busin
 .The *Share this connection with my business group* checkbox is located in the *Configure Connection* dialog.
 image::fd-connection-checkbox.png[The location of the *Share this connection with my business group* checkbox]
 
-By selecting this checkbox, you make a connection available to yourself and others in your business group for use in other projects. Only you, as the creator of the connection, and administrators in your business group, can edit or delete the connection.
+By selecting this checkbox, you make a connection available to yourself and others in your business group for use in other projects. Only you, as the creator of the connection, and administrators in your business group can edit or delete the connection.
 
 One good reason to create a shared connection arises if you are a system administrator and you want to allow multiple people in your business group to create apps that connect to a particular system. Those people can connect using a single set of credentials that you control and that have the same level of permissions.
 
