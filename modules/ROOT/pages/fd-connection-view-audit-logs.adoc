@@ -13,8 +13,8 @@ To help you identify such scenarios, Flow Designer creates an audit-log message 
 * The time and date of the action
 * The product in which the action was taken (i.e., Flow Designer)
 * The type of object audited, which is always "Connection"
-* The type of action: Create, Edit, or Delete,
-* The type of connector that the connection was for, such as the Database connector.
+* The type of action: Create, Edit, or Delete
+* The name of the connection
 * The user ID that was used to take the action
 
 == Procedure
