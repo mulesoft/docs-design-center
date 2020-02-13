@@ -51,9 +51,9 @@ Moreover, you should be aware whether any APIs or services that you want to conn
 
 == Transactional Processing
 
-The For-Each component does nothing differently when running within a transaction. // What does it mean "to run within a transation"? I know what a transaction is, but how does a component run "within" one?
+The For-Each component does nothing differently when processing a transaction. 
 
-However, the Parallel For-Each component does not process the elements of a collection simultaneously. Instead, it processes them serially, just as the For-Each component does. The output from this component is still the aggregated results from the processing of the elements in a collection.
+However, the Parallel For-Each component does not process the elements of a collection simultaneously when processing a transaction. Instead, it processes them serially, just as the For-Each component does. The output from this component is still the aggregated results from the processing of the elements in a collection.
 
 == Batching
 
