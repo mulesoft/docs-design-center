@@ -76,7 +76,7 @@ Suppose that, as in the previous example, you use a Set Variable component just 
 
 Both the For-Each component and Parallel For-Each component stop processing a collection if an element causes any component, connector, or module in a scope to throw an exception. In addition, the Parallel For-Each component stops processing a collection if one of the parallel processes times out while waiting for an open connection to a system. You can set the maximum length of time that a parallel process can wait.
 
-When the processing of a collection stops because of an exception or timeout, Flow Designer displays a red circle on the card that represents the component in the flow. You can open the *Logs* pane to read the error message.
+When the processing of a collection stops because of an exception, Flow Designer displays a red circle on the card that threw the exception. When the processing of a collection stops because of a timeout, Flow Designer displays a red circle on the Parallel For-Each component's card. You can open the *Logs* pane to read the error message.
 
 == Configuring a For-Each Component
 
