@@ -88,7 +88,7 @@ Batch Size:: Partitions the collection into sub-collections of the specified num
 
 Root Message Variable Name:: Name of the property that stores the parent message. The parent is the complete, non-split message. // What is the root message variable name for? What does it store "the parent message" for? Is "parent message" the full collection?
 
-Counter Variable Name:: Name of the property that stores the number of messages over which it iterates. // What is "it"?
+Counter Variable Name:: Name of the property that stores the index of the element that is being processed. For example, if a collection is `['a','b','c']`, the index of `a` is 0, of `b` 1, and of `c` 2. When the For-Each component is processing the second element, the value of the variable is 1.
 
 
 == Configuring a Parallel For-Each Component
