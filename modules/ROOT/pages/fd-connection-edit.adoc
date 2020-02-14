@@ -6,15 +6,15 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can edit a connection that is being used by or is available to be used by a specific type of connector, changing any of the information that you have specified in it.
+You can edit a connection that is being used by or is available to be used by a specific type of connector.
 
 To edit a connection, you must log into Anypoint Platform with the user ID that was used to create the connection. You cannot edit a connection that was created under a user ID that you are not logged in with.
 
-If the connection is shared because you selected the *Share this connection with my business group* checkbox when you created it, the changes affect all of the connectors of that type in all of the projects in your business group.
+If the connection is shared, the changes affect all of the connectors of that type in all of the projects in your business group.
 
 *To edit a connection:*
 
-. Open a Mule-app project that includes a connector of the right type.
+. Open a Mule-app project that includes a connector of the type that can use the connection.
 . Click the card that represents the connector type.
 . At the top of the card, click *Edit*.
 . Locate the connection in the list of available connections.
@@ -23,7 +23,7 @@ If the connection is shared because you selected the *Share this connection with
 . Click *Save*.
 . Click *Cancel* or *Save* to close the configuration dialog for the connector.
 +
-It doesn't matter which button you click. The changes to the connection are saved when you click *Save* in the *Connection configuration* dialog.
+It doesn't matter which button you click. The changes to the connection are saved when you click *Save* in the previous dialog.
 
 == See Also
 
