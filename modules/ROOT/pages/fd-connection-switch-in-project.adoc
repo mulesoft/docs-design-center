@@ -6,30 +6,30 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-Every connector that you include in a flow in a Mule-app project is configured to use a connection to connect at runtime to the system that the connector is for. A _connection_ is a saved set of information that a running Mule app must use to connect to a specific system by means of a connector. For example, you configure a Salesforce connector to use a specific connection to Salesforce, a Database connector to use a specific connection to a database.
+Every connector that you include in a flow in a Mule-app project uses a connection to connect at runtime to a system. A _connection_ is a saved set of information that a running Mule app must use to connect to a specific system by means of a connector. For example, you configure a Salesforce connector to use a specific connection to Salesforce, an instance of Database Connector to use a specific connection to a database.
 
 You can change a configuration to use a different connection or you can create and use a configuration that uses a different connection.
 
-For example, suppose that you add a Database connector to a flow. When you create configuration Config 1 for it, you create Connection MySQL to specify the information that the your Mule app needs to connect to a MySQL database at runtime. Now, you want to test your Mule app against an Oracle database.
+For example, suppose that you add an instance of Database Connector to a flow. When you create configuration Config 1 for it, you create Connection MySQL to specify the information that the your Mule app needs to connect to a MySQL database at runtime. Now, you want to test your Mule app against an Oracle database.
 
-Because the configuration for the Oracle database requires not only a separate connection, but also different additional information, you create the configuration Config 2 and the connection Oracle. Then, you switch to using Config 2.
+Because the configuration for the Oracle database requires not only a separate connection but also different additional information, you create the configuration Config 2 and the connection Oracle. Then, you switch to using Config 2.
 
-.For every configuration that you create for a connector, in the *Advanced* section you can specify information in addition to the connection for the configuration to use.
-image::fd-config-advanced.png[The Advanced section of the Database connector]
-<1> The text to click to open the *Advanced* section.
-<2> The additional information that you can specify for the Database connector.
+.For every configuration that you create for a connector, you can use the *Advanced* section to specify information in addition to the connection for the configuration to use.
+image::fd-config-advanced.png[The Advanced section of Database Connector]
+<1> The text to click to open the *Advanced* section
+<2> The additional information that you can specify for the instance of Database Connector
 
 This diagram depicts the switch from Config 1 to Config 2:
 
 .This diagram shows that you can switch from one configuration to another to switch connections.
 image::fd-connections-configs-connectors-switch-1.png[Switching configurations to switch connections]
 
-In this next diagram, the Database connector is using the configuration Config 1, which uses connection MySQL1. If you want to switch to a different MySQL database and connecting to the database does not require any differences in the information that the configuration provides, you can simply change the configuration to use the connection MySQL2.
+In this next diagram, the instance of Database Connector is using the configuration Config 1, which uses connection MySQL1. If you want to switch to a different MySQL database and connecting to the database does not require any differences in the information that the configuration provides, you can simply change the configuration to use the connection MySQL2.
 
 .This diagram shows that you can switch connections in a configuration.
 image::fd-connections-configs-connectors-switch-2.png[Switching connections in a configuration]
 
-== Procedure
+*To Switch the Connection That a Connector is Using in a Project:*
 
 * If you want to switch connections and the configuration requires different additional information, create a configuration that uses the connection you want to switch to.
 +
