@@ -82,7 +82,7 @@ When the processing of a collection stops because of an exception, Flow Designer
 
 When you configure this component, you must specify values in these fields:
 
-Collection:: An expression that returns a Java collection, object array, map, or DOM nodes.
+Collection:: An expression that returns a Java collection, object array, map, or DOM nodes. The default is `payload`.
 
 Batch Size:: Partitions the collection into sub-collections of the specified number of elements. For example, if a collection has 200 elements and you set the batch size to 50 elements, the component processes 4 batches of 50 elements each.
 
@@ -95,7 +95,7 @@ Counter Variable Name:: Name of the property that stores the number of messages 
 
 When you configure this component, you must specify values in these fields:
 
-Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. By default, the component uses the payload passed to it by the previous card in the flow.
+Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. The default is `payload`.
 
 Timeout:: Specifies the maximum time in milliseconds that a parallel process can wait for an open connection to a system reached via a connector.
 
