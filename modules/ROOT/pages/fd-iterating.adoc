@@ -23,7 +23,7 @@ The For-Each component is for processing each element in a collection serially a
 image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
 
 <1> A card passes the payload of a flow to the For-Each component. The payload consists of a collection of elements.
-<2> The For-Each component divides the collection into separate elements. It then sends each element serially to the first component, connector, or module that is in its scope. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the For-Each component received.
+<2> The For-Each component divides the collection into separate elements. It then sends each element serially to the first component, connector, or module that is in its scope. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the For-Each component received but the element that the component is processing.
 <3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
 <4> The next card in the flow receives the same payload that the For-Each component received, and the flow continues.
 
@@ -35,7 +35,7 @@ The Parallel For-Each component is for processing each element in a collection a
 image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
 
 <1> A card passes the payload of a flow to the Parallel For-Each component. The payload consists of a collection of elements.
-<2> The Parallel For-Each component divides the collection into separate elements. It then sends elements simultaneously to the first component, connector, or module that is in its scope. You can specify the maximum number of elements to process at a time. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the Parallel For-Each component received but the element of the collection that it is processing.
+<2> The Parallel For-Each component divides the collection into separate elements. It then sends elements simultaneously to the first component, connector, or module that is in its scope. You can specify the maximum number of elements to process at a time. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the Parallel For-Each component received but the element that the component is processing.
 <3> After all of the elements are processed, the Parallel For-Each component aggregates and passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
 <4> The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
 
