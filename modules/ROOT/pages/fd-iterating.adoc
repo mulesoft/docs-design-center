@@ -86,7 +86,7 @@ Collection:: An expression that returns a Java collection, object array, map, or
 
 Batch Size:: Partitions the collection into sub-collections of the specified number of elements. For example, if a collection has 200 elements and you set the batch size to 50 elements, the component processes 4 batches of 50 elements each.
 
-Root Message Variable Name:: Name of the property that stores the parent message. The parent is the complete, non-split message. // What is the root message variable name for? What does it store "the parent message" for? Is "parent message" the full collection?
+Root Message Variable Name:: Name of the property that stores the entire message -- payload, variables, and attributes -- that was passed to a For-Each component from the previous card in a flow. 
 
 Counter Variable Name:: Name of the property that stores the index of the element that is being processed. For example, if a collection is `['a','b','c']`, the index of `a` is 0, of `b` 1, and of `c` 2. When the For-Each component is processing the second element, the value of the variable is 1.
 
