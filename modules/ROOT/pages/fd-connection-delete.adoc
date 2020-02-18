@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can delete a connection that is being used by or is available to be used by a specific type of connector. For example, if the connection is available for the Database connector.
+You can delete a connection that is being used by or is available to be used by a specific type of connector. For example, you can delete a connection that is available for instances of the Database Connector.
 
 To delete a connection, you must log into Anypoint Platform with the user ID that was used to create the connection. You cannot delete a connection that was created under a user ID that you are not logged in with.
 
