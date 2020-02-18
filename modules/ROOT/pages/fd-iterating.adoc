@@ -91,7 +91,9 @@ When you configure this component, you must specify values in these fields:
 
 Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. The default is `payload`.
 
-Timeout:: Specifies the maximum time in milliseconds that the entire scope of a Parallel For-Each component can take to complete processing all of the elements in a collection.
+Timeout:: Specifies the maximum time in milliseconds that the entire scope of a Parallel For-Each component can take to complete processing an element in a collection.
++
+For example, within a scope you might place an HTTP Request component that sends a GET request to a service and an instance of Database Connector for inserting values into a database. Each element in your collection specifies what to request in the GET request. The value of *Timeout* specifies how long to wait in milliseconds for both the service to return the information requested and for the instance of Database Connector to insert the information into the database.
 
 Max Concurrency:: Specifies the maximum number of parallel processes that can be run. How many parallel processes are in fact started depends on how Mule Runtime allocates resources where it is running:
 
