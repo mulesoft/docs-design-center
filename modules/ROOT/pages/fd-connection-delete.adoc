@@ -18,7 +18,7 @@ If the connection is shared with your business group, deleting is affects all of
 
 *To delete a connection:*
 
-. Open a Mule-app project that includes a connector of the right type.
+. Open a Mule-app project that includes a connector of the type from which you want to delete a connection.
 . Click the card that represents the connector type.
 . At the top of the card, click *Edit*.
 . Locate the connection in the list of available connections.
