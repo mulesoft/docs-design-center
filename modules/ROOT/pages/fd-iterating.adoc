@@ -13,7 +13,7 @@ image::fd-iterators-example.png[Two simple examples: one of the use of For-Each,
 <1> The For-Each component in this example inserts each element, one at a time, into a database. Each element is presumably a string that can be used in a SQL INSERT statement.
 <2> The Parallel For-Each component in this example sends each element to a Set Payload component that modifies the element with an expression and adds it to the flow's payload.
 
-Both types of component can process any collection. A collection can be any supported content type, such as application/json, application/java, or application/xml.
+Both types of component can process any collection.
 
 == How the For-Each Component Processes Data and Continues a Flow
 
@@ -80,9 +80,9 @@ Collection:: An expression that returns a Java collection, object array, map, or
 
 Batch Size:: Partitions the collection into subcollections of the specified number of elements. For example, if a collection has 200 elements and you set the batch size to 50 elements, the component processes 4 batches of 50 elements each.
 
-Root Message Variable Name:: Name of the property that stores the entire message (payload, variables, and attributes) that was passed to a For-Each component from the previous card in a flow.
+Root Message Variable Name:: Name of the variable that stores the entire message (payload, variables, and attributes) that was passed to a For-Each component from the previous card in a flow.
 
-Counter Variable Name:: Name of the property that stores the index of the element that is being processed. For example, if a collection is `['a','b','c']`, the index of `a` is 0, of `b` is 1, and of `c` is 2. When the For-Each component is processing the second element, the value of the variable is 1.
+Counter Variable Name:: Name of the variable that stores the index of the element that is being processed. For example, if a collection is `['a','b','c']`, the index of `a` is 0, of `b` is 1, and of `c` is 2. When the For-Each component is processing the second element, the value of the variable is 1.
 
 
 == Configuring a Parallel For-Each Component
@@ -91,7 +91,7 @@ When you configure this component, you must specify values in these fields:
 
 Collection:: Specifies the expression that defines the collection of parts to be processed in parallel. The default is `payload`.
 
-Timeout:: Specifies the maximum time in milliseconds that a parallel process can wait for an open connection to a system reached via a connector.
+Timeout:: Specifies the maximum time in milliseconds that the entire scope of a Parallel For-Each component can take to complete processing all of the elements in a collection.
 
 Max Concurrency:: Specifies the maximum number of parallel processes that can be run. How many parallel processes are in fact started depends on how Mule Runtime allocates resources where it is running:
 
