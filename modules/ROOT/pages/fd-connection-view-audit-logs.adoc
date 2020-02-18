@@ -1,4 +1,4 @@
-= View Audit Logs for Connections That are Shared
+= View Audit Logs for Connections That Are Shared
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,12 +12,12 @@ To help you identify such scenarios, Flow Designer creates an audit-log message 
 
 * The time and date of the action
 * The product in which the action was taken (i.e., Flow Designer)
-* The type of object audited, which is always "Connection"
+* The type of object audited, which is always *Connection*
 * The type of action: Create, Edit, or Delete
 * The name of the connection
 * The user ID that was used to take the action
 
-You can also download the payload for an entry in the audit log. A payload for the creation, modification, or deletion of a connection includes the ID of the connection, the ID of the user that created the connection, the type of connector that the connection was created for, and more.
+You can also download the payload for an entry in the audit log. A payload for the creation, modification, or deletion of a connection includes information such as the ID of the connection, the ID of the user that created the connection, and the type of connector that the connection was created for.
 
 == Procedure
 
