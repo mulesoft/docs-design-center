@@ -8,7 +8,7 @@ endif::[]
 
 You can delete a connection that is being used by or is available to be used by a specific type of connector. For example, you can delete a connection that is available for instances of the Database Connector.
 
-To delete a connection, you must log into Anypoint Platform with the user ID that was used to create the connection. You cannot delete a connection that was created under a user ID that you are not logged in with.
+To delete a connection, you must log into Anypoint Platform with the user ID that was used to create the connection. 
 
 If the connection is shared because you selected the *Share this connection with my business group* checkbox when you created it, deleting the connection affect all of the connectors of that type in all of the Mule-app projects and running Mule apps in your business group.
 
