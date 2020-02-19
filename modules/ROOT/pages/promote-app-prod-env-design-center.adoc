@@ -9,29 +9,32 @@ endif::[]
 
 All Mule applications that you create with Flow Designer are created in the Design environment. When a Mule application that you've created is ready to go live, you can deploy it to another environment, if your organization allows you to do so. The target environment must have enough vCores to accommodate the application; otherwise, deployment will fail.
 
-As you deploy your application, you can change connector configurations and reconnection strategies. You need to do this if there are differences between the Design and target environments that would necessitate such changes.
+As you deploy your application, you can change connector configurations and reconnection strategies. You must do this if there are differences between the Design environment and target environments that would necessitate such changes.
 
-== Procedure
-. Click *Deploy* in the top-right corner of Flow Designer.
+After you deploy your application, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
+
+== To Deploy a Mule App from Flow Designer
+. Click the arrow in the top-right corner of Flow Designer and then select *Deploy application*.
 +
-image::deploy-dialog.png[]
+.The *Deploy application* option appears in this menu.
+image::fd-deploy-option.png[The location of the Deploy application option]
+<1> Click the arrow.
+<2> Select the option.
 
 . Select the CloudHub environment to deploy the application to.
 . Accept the default name for the deployed application or enter a new one.
-. Edit the connection configurations to be compatible with the target environment.
+. If you want to change the way that any of the connectors in your application connect to systems, click *Advanced* to see a list of the configurations that the connectors in your application are using.
 +
-image::deploying-your-project-9cee7.png[]
+Select a configuration on the left to edit it.
 
 == What to Do Next
 
 You can go to Runtime Manager to manage the application. To get there from Flow Designer, click the three-dots icon to the left of the *Deploy* button and select *View in Runtime Manager*.
 
-// April 5, 2019: I'm rewriting this topic today and can't find in our docs any info about securing apps. So, I'll comment this out for now:
-// You can restrict access to the application in the target environment to specific users, if you do not want access available to the general public. To restrict access, your user ID must be an organization administrator in Anypoint Platform.
-
 
 == See Also
 
+* xref:fd-connection-create.adoc[Add a Connection to the Configuration of a Connector]
+* xref:runtime-manager::secure-application-properties.adoc[Safely Hiding Application Properties]
 * xref:access-management::environments.adoc[CloudHub Environments]
-
 * xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]

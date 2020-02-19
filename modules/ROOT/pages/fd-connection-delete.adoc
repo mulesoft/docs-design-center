@@ -1,0 +1,36 @@
+= Delete a Connection
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
+
+You can delete a connection that is being used by or is available to be used by a specific type of connector. For example, you can delete a connection that is available for instances of the Database Connector.
+
+To delete a connection, you must log into Anypoint Platform with the user ID that was used to create the connection.
+
+If the connection is shared with your business group, deleting is affects all of the connectors of that type in all of the Mule-app projects and running Mule apps in your business group.
+
+* If a Mule-app project is using the connection, an error indicator appears on the card that represents the connector. The error indicator appears when a configuration that uses the connection is reopened, the project is reopened, a user tries to add a new configuration for the same connector type, or a user clicks *Test* in the project.
+
+* If a deployed Mule app is using the connection, the app continues to do so. If you modify the Mule app, you must switch to a different connection before you redeploy it.
+
+*To delete a connection:*
+
+. Open a Mule-app project that includes a connector of the type from which you want to delete a connection.
+. Click the card that represents the connector type.
+. At the top of the card, click *Edit*.
+. Locate the connection in the list of available connections.
++
+Ensure that you locate the correct connection. There is no confirmation dialog to ask you whether you really want to delete the selected connection.
+. Click the three dots to the right of the connection's name and click *Delete*.
+. Click *Save*.
+. Click *Cancel* or *Save* to close the configuration dialog for the connector.
++
+It doesn't matter which button you click. The connection is permanently deleted when you click *Save* in the *Connection configuration* dialog.
+
+== See Also
+
+* xref:fd-connections.adoc[Connections from Connectors to Systems]
+* xref:connectors::index.adoc[Connectors and Modules (for Mule 4)]
