@@ -37,7 +37,7 @@ image::fd-deploy-option.png[The location of the Deploy application option]
 
 . Select the CloudHub environment to deploy the application to.
 . Accept the default name for the deployed application or enter a new one.
-. If you want to change the way that any of the connectors in your application connect to systems, click *Advanced* to see a list of the configurations that the connectors in your application are using. Select a configuration on the left to edit it.
+. If you want to change the way that any of the connectors in your application connect to systems, click *Customize connections for this deployment* to see a list of the configurations that the connectors in your application are using. Select a configuration on the left to edit it.
 
 == What to Do Next
 
