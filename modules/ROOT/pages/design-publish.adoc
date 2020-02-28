@@ -14,6 +14,17 @@ image:apid-example-page-in-exchange.png[An example page for a specification publ
 <2> The middle pane, which describes the specification. You write the description in Exchange after publishing the specification.
 <3> The right pane, which displays metadata about the specification.
 
+== Before You Begin
+
+It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. A unreferenced file is a file that meets both of these conditions:
+
+* It is not referenced from a project's root file.
+
+* It is not referenced from any file that the root file references.
+
+For example, suppose that a project included file example.raml. The root file of the project does not reference the file with any `!include` tag. Also, no library fragments that the root file references in turn reference example.raml. Therefore, example.raml is unreferenced and should probably not be among the files in your project.
+
+
 == Procedure
 
 . Open the API-specification project that you want to publish, if it is not already open.
@@ -30,7 +41,8 @@ image:apid-publish-dialog-api-specs.png[]
 <5> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 <6> *Add to API Manager*: Specifies that you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
 . After filling in required fields, click *Publish to Exchange*.
-. If your project includes files that are not referenced by the root file
++
+If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you whether you do in fact want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
 == Filling in the *API version* Field
 
