@@ -16,13 +16,9 @@ image:apid-example-page-in-exchange.png[An example page for a specification publ
 
 == Before You Begin
 
-It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. A unreferenced file is a file that meets both of these conditions:
+It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An unreferenced file is a file that is not referenced either directly or indirectly from the project's root file.
 
-* It is not referenced from a project's root file.
-
-* It is not referenced from any file that the root file references.
-
-For example, suppose that a project included file example.raml. The root file of the project does not reference the file with any `!include` tag. Also, no library fragments that the root file references in turn reference example.raml. Therefore, example.raml is unreferenced and should probably not be among the files in your project.
+For example, suppose that the file example.raml is among the files in a project. If the root file of the project does not reference the file with any `!include` tag, then the root file doesn't reference the file directly. Also, if no file, in a chain of references from the root file, itself references example.raml, then example.raml is not referenced indirectly from the root file. Therefore, example.raml is unreferenced and should probably not be among the files in your project.
 
 
 == Procedure
