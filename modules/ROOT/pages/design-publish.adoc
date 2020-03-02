@@ -32,13 +32,13 @@ image:apid-publish-dialog-api-specs.png[]
 +
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
 <2> *API version*: The version number of the API specification. For a description of this field, see the "Filling in the *API version* Field" section.
-<3> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. You should keep the value as is, except in unusual cases.
+<3> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. You should keep the value as it is, except in unusual cases.
 <4> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 <5> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 <6> *Add to API Manager*: Specifies that you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
-. After filling in required fields, click *Publish to Exchange*.
+. After completing the required fields, click *Publish to Exchange*.
 +
-If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you whether you do in fact want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
+If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you do want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
 == Filling in the *API version* Field
 
