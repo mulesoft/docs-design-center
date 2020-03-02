@@ -15,9 +15,7 @@ As you deploy your application, you can change connector configurations and conn
 ====
 Any changes that you make to configurations when you deploy an application are not applied to the configurations in your project. The changes are applied only to the application that you are deploying.
 
-For example, suppose that your application uses ConfigA for a connector. In the project, the ConfigA uses the connection ConnA. When you deploy the application, you change ConfigA to use connection ConnB. However, ConfigA continues to use ConnA in your project.
-
-Essentially, configurations are copied into an application when you are deploying that application. Changes that you make to configurations are applied only to the copies that are in the application, not to the originals that are in your project.
+For example, suppose that your application uses the configuration ConfigA for a connector. In the project, ConfigA uses the connection ConnA. When you deploy the application, you change ConfigA to use a different connection: ConnB. However, ConfigA continues to use ConnA in your project.
 
 ====
 
