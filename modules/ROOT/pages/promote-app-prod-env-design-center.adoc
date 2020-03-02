@@ -19,10 +19,6 @@ For example, suppose that your application uses ConfigA for a connector. In the 
 
 Essentially, configurations are copied into an application when you are deploying that application. Changes that you make to configurations are applied only to the copies that are in the application, not to the originals that are in your project.
 
-However, if you create a connection for a configuration when you deploy an application, Flow Designer takes these two actions:
-
-* In the configuration that is copied into the application, the new connection is used.
-* In the original configuration that is in the project, the new connection is not used, but it is added to the list of connections that are available for the configuration to use.
 ====
 
 After you deploy your application, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
@@ -37,7 +33,7 @@ image::fd-deploy-option.png[The location of the Deploy application option]
 
 . Select the CloudHub environment to deploy the application to.
 . Accept the default name for the deployed application or enter a new one.
-. If you want to change the way that any of the connectors in your application connect to systems, click *Customize connections for this deployment* to see a list of the connectors in the app. Click on a connector to see a list of the connections that are available for the connector to use. 
+. If you want to change the way that any of the connectors in your application connect to systems, click *Customize connections for this deployment* to see a list of the connectors in the app. Click on a connector to see a list of the connections that are available for the connector to use.
 
 == What to Do Next
 
