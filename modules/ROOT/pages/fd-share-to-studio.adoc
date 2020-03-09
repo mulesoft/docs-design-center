@@ -29,7 +29,32 @@ A `.jar` file containing a copy of your Mule app downloads to the default locati
 .. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 .. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
-Studio opens the project and it is ready to be worked on.
+Studio opens the project.
+
+== What To Do Next
+
+JAR files exported from Flow Designer contain a file named mule-config.xml and a file named mule-artifact.properties.
+
+The file mule-config.xml contains placeholders for information that connectors in the exported app need to use to make connections to systems.
+
+For example, for a Salesforce connector that uses a password, security token, and username, the entry in mule-config.xml that contains the connection information looks like this:
+
+----
+<salesforce:cached-basic-connection password="<password>"
+                                    securityToken="<token>"
+                                    username="<username>"/>
+----
+
+The placeholders that FD will replace the values with are these:
+----
+salesforce.connection.password 
+salesforce.connection.securityToken 
+salesforce.connection.username
+----
+
+Not only with the placeholders be in mule-config.xml, but they will be listed in mule-artifact.properties, which is also in each exported JAR file.
+
+You can look in mule-artifact properties to see what connectivity info was removed for each connector. After you obtain that info, you can edit mule-config.xml to replace the placeholders with the info. Then, you compress the folders as a JAR file again.
 
 == See Also
 
