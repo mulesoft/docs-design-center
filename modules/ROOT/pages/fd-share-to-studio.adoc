@@ -1,4 +1,4 @@
-= Collaborate with Someone who Works in Studio
+= Collaborate with Someone who Works in Studio or Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,29 +7,60 @@ endif::[]
 :imagesdir: ../assets/images
 
 When designing your Mule application, you might want help from someone else in your Anypoint-Platform organization,
-such as a developer, who works in Anypoint Studio.
-You must first use Flow Designer to export the project as a JAR file, to share it with someone with developer credentials so that they can import it into Anypoint Studio. Ensure that the project is free of errors.
+such as a developer, who works in Anypoint Studio, or from someone who is in another organization in Anypoint Platform and has access to Flow Designer. You can export the project as a JAR file from Flow Designer and then share the JAR file with that other person, who can import the JAR file as a project into Studio or Flow Designer.
 
-To do so, you use *Export project sources* to share just the source files (including all the connector credentials),
-without all of the other Mule artifacts.
+No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
+JAR file. Therefore, the other person must provide that information for every configuration that is used by a connector in the app after importing the JAR file into Studio or Flow Designer as a project.
 
-As the other person works on the project, they can take advantage of the advanced features of Studio.
-When they are finished, they can deploy the project from Studio.
+As the other person works on the project, the changes are applied to your project online in Flow Designer. When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
-. Export your project by clicking the dots next to the Test button and select *Export* from the list.
+== Steps to Follow in Flow Designer to Export a Project
+
+In Flow Designer, follow these steps to export the project as a JAR file:
+. Ensure that the project is free of errors.
+. Export your project by clicking the three dots in the top-right corner of the canvas and selecting *Export*.
 +
-You see a pop-up with export choices.
+.You can access the *Export* option from the top-right corner of the canvas.
+image:fd-location-of-export-option.png[The location of the Export option]
 +
+<1> The three dots are to the right of the button that is labeled with a down arrow.
+<2> The *Export* option is at the bottom of the menu.
+
 . Select *Export project sources* to share just your project source files, and click *Export*.
 +
-A JAR file containing a copy of your Mule app downloads to the default location on your computer.
-+
-. Alert the recipient who works in Studio that the JAR is available so that they can:
-.. Access the JAR file and place it in a location where they can easily upload it from Studio.
-.. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
-.. Import the JAR file into Studio by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
+A JAR file containing a copy of your Mule-app project is downloaded to the default location on your computer.
+
+== Steps to Follow in Anypoint Studio to Import a Project
+
+If the person with whom you are working uses Anypoint Studio, make the JAR file available to that person, provide them with all of the connectivity information that they need for running the app, and then ask them to follow these steps:
+
+. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
+. Import the JAR file into Studio by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
 Studio opens the project.
+
+. Open the file `src/main/resources/mule-artifact.properties` in the project and provide values for the keys that are related to connection information.
++
+The names of all keys for connection information contain three parts, the middle part being `connection`. You must provide values for all of these keys in the file. After saving the file, you can test and run the app.
++
+For example, suppose that an instance of Salesforce Connector in an app uses a configuration that includes a *Basic Username Password* connection. For this type of connection, you must provide a username, password, and a security token. The username, password, and security token that are in the configuration that the connector uses when the app is in Flow Designer are not included in the configuration in the exported JAR file.
++
+After you import the JAR file into Studio as a project, you see the file `src/main/resources/mule-artifact.properties` in the file tree for the project. Double-click that file to open it in an editor in Studio. In it are keys for the connection information for every configuration that is being used by a connector in the app. For the *Basic Username Password* connection in the configuration that the instance of Salesforce Connector is using, these are the three keys:
++
+----
+salesforce.connection.password =
+salesforce.connection.securityToken =
+salesforce.connection.username=
+----
+
+. Save the mule-artifact.properties file.
+
+== Steps to Follow in Flow Designer to Import a Project
+
+If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need for running the app, and then ask them to follow these steps:
+. Create a new Mule-app project in Flow Designer by opening Design Center, clicking *Create New*, and then clicking *Import Application* under *Create a Mule Application*.
+. From the *Import Application* dialog, select the JAR file and then click *Import*.
+
 
 == What To Do Next
 
