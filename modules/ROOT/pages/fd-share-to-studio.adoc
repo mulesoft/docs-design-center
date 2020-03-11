@@ -17,6 +17,7 @@ As the other person works on the project, the changes are applied to your projec
 == Steps to Follow in Flow Designer to Export a Project
 
 In Flow Designer, follow these steps to export the project as a JAR file:
+
 . Ensure that the project is free of errors.
 . Export your project by clicking the three dots in the top-right corner of the canvas and selecting *Export*.
 +
@@ -25,6 +26,7 @@ image:fd-location-of-export-option.png[The location of the Export option]
 +
 <1> The three dots are to the right of the button that is labeled with a down arrow.
 <2> The *Export* option is at the bottom of the menu.
+
 
 . Select *Export project sources* to share just your project source files, and click *Export*.
 +
@@ -58,24 +60,32 @@ salesforce.connection.username=
 == Steps to Follow in Flow Designer to Import a Project
 
 If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need for running the app, and then ask them to follow these steps:
+
 . Create a new Mule-app project in Flow Designer by opening Design Center, clicking *Create New*, and then clicking *Import Application* under *Create a Mule Application*.
 . From the *Import Application* dialog, select the JAR file and then click *Import*.
+. Provide the connection information in the configurations that the connectors in the project use.
++
+When Flow Designer opens the project, each card that represents a connector displays a red circle in its top-right corner. You must add the connection information that Flow Designer did not include in the JAR file.
+
+.. In the *Project* pane on the left side of the canvas, expand the section *Reusable Configurations*.
++
+All of the configurations that are used by connectors are marked by a red circle.
++
+image::fd-location-of-red-circles-on-configs.png[]
++
+<1> The icon to click to open the *Project* pane.
+<2> A red circle to indicate that the flow contains errors. Because the configurations in the project lack connection information, there is a red circle next to each flow that includes connectors.
+<3> The *Reusable Configurations* section, which lists the configurations that connectors and core components in a project are using.
+<4> A red circle next to a listed configuration.
+
+.. Click a configuration.
+.. In the dialog that is opened, click the three dots in the connection that is being used in the configuration and select *Edit*.
++
+The connection being used by the configuration is the connection that is selected when the Flow Designer opens the dialog.
+.. Specify the required connection information.
+.. Follow steps b through d for each configuration that is marked by a red circle.
 
 
-== What To Do Next
-
-No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
-JAR file. Therefore, you must provide that information for every connector in the app after you import the JAR file into Studio as a project. You do that in the `src/main/resources/mule-artifact.properties` file in the project.
-
-For example, suppose that an instance of Salesforce Connector in an app uses a configuration that includes a *Basic Username Password* connection. For this type of connection, you must provide a username, password, and a security token. The username, password, and security token that are in the configuration that the connector uses when the app is in Flow Designer are not included in the configuration in the exported JAR file. After you import the JAR file into Studio as a project, you see the file `src/main/resources/mule-artifact.properties` in the file tree for the project. Double-click that file to open it in an editor in Studio. In it are keys for the connection information for every configuration that is being used by a connector in the app. For the *Basic Username Password* connection in the configuration that the instance of Salesforce Connector is using, these are the three keys:
-
-----
-salesforce.connection.password =
-salesforce.connection.securityToken =
-salesforce.connection.username=
-----
-
-The names of all keys for connection information contain three parts, the middle part being `connection`. You must provide values for all of these keys in the file. After saving the file, you can test and run the app.
 
 == See Also
 
