@@ -55,7 +55,7 @@ salesforce.connection.securityToken =
 salesforce.connection.username=
 ----
 
-. Save the mule-artifact.properties file.
+. Save `src/main/resources/mule-artifact.properties`.
 
 == Steps to Follow in Flow Designer to Import a Project
 

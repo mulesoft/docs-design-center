@@ -1,25 +1,39 @@
 = Deploy a Mule Application from Runtime Manager
 
-After designing a Mule application in Anypoint Flow Designer and ensuring that your project is free of errors,
-someone other than yourself may need to deploy it.
-You must first use Flow Designer to export the project as a `.jar` file.
-This is to share it with someone with deployment credentials who can deploy the app using Anypoint Runtime Manager.
+After you design and test a Mule application in Anypoint Flow Designer,
+you might need someone else to deploy it. That other person can deploy the application from Runtime Manager.
 
-You'll need to use *Export mule application*, as it produces a `.jar` file that includes all the connector credentials and artifacts required by the Mule runtime.
+
+You'll need to use *Export mule application*, as it produces a JAR file that includes all the connector credentials and artifacts required by the Mule runtime.
 
 . Export your project by clicking the dots next to the Test button and select *Export* from the list.
 
 . Select *Export mule application* for the entire app, and click *Export*.
 +
-A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
-. HERE: Add connection information to the ...
+A JAR file containing a copy of your Mule app downloads to the default location on your computer.
+. Extract the content of the JAR file.
+. Open the file `src/main/resources/mule-artifact.properties` in the folder that was extracted from the JAR file, and provide values for the keys that are related to connection information.
++
+The names of all keys for connection information contain three parts, the middle part being `connection`. You must provide values for all of these keys in the file. After saving the file, you can test and run the app.
++
+For example, suppose that an instance of Salesforce Connector in an app uses a configuration that includes a *Basic Username Password* connection. For this type of connection, you must provide a username, password, and a security token. The username, password, and security token that are in the configuration that the connector uses when the app is in Flow Designer are not included in the configuration in the exported JAR file.
++
+In the file `src/main/resources/mule-artifact.properties` are keys for the connection information for every configuration that is being used by a connector in the app. For the *Basic Username Password* connection in the configuration that the instance of Salesforce Connector is using in this example, these are the three keys:
++
+----
+salesforce.connection.password =
+salesforce.connection.securityToken =
+salesforce.connection.username=
+----
+
+. Save `src/main/resources/mule-artifact.properties`.
 . Alert the recipient that the .jar is available so that they can:
-.. Access the `.jar` file and place it in a location where they can easily upload it from Runtime Manager.
+.. Access the JAR file and place it in a location where they can easily upload it from Runtime Manager.
 .. Change to the deployment environment and click *Deploy Application*.
 +
  The Deploy Application page is opened.
 
-.. Select *Choose File* > *Upload File* and upload the `.jar` file.
+.. Select *Choose File* > *Upload File* and upload the JAR file.
 
 .. Follow the instructions in https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub.adoc[Deploying to CloudHub].
 
