@@ -1,16 +1,33 @@
-= Deploy a Mule Application from Runtime Manager
+= Deploy a Mule Application from Runtime Manager to CloudHub
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
 
-After you design and test a Mule application in Anypoint Flow Designer,
-you might need someone else to deploy it. That other person can deploy the application from Runtime Manager.
+:imagesdir: ../assets/images
 
+If your organization requires someone with the proper authority to deploy applications from Runtime Manager, you can share with that person a copy of your project as a JAR file to deploy your application with.
 
-You'll need to use *Export mule application*, as it produces a JAR file that includes all the connector credentials and artifacts required by the Mule runtime.
+No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
+JAR file. Therefore, you must edit and repackage the JAR file to provide that information for every configuration that is used by a connector in the app.
 
-. Export your project by clicking the dots next to the Test button and select *Export* from the list.
+== Steps to Follow in Flow Designer
 
-. Select *Export mule application* for the entire app, and click *Export*.
+. Ensure that the project is free of errors.
+. Export your project by clicking the three dots in the top-right corner of the canvas and selecting *Export*.
 +
-A JAR file containing a copy of your Mule app downloads to the default location on your computer.
+.You can access the *Export* option from the top-right corner of the canvas.
+image:fd-location-of-export-option.png[The location of the Export option]
++
+<1> The three dots are to the right of the button that is labeled with a down arrow.
+<2> The *Export* option is at the bottom of the menu.
+
+. Select *Export mule application* and click *Export*.
++
+A JAR file containing a copy of your Mule app is downloaded to the default location on your computer.
+
+== Steps to Follow Before Importing the JAR File into Runtime Manager
+
 . Extract the content of the JAR file.
 . Open the file `src/main/resources/mule-artifact.properties` in the folder that was extracted from the JAR file, and provide values for the keys that are related to connection information.
 +
@@ -27,15 +44,13 @@ salesforce.connection.username=
 ----
 
 . Save `src/main/resources/mule-artifact.properties`.
-. Alert the recipient that the .jar is available so that they can:
-.. Access the JAR file and place it in a location where they can easily upload it from Runtime Manager.
-.. Change to the deployment environment and click *Deploy Application*.
-+
- The Deploy Application page is opened.
 
-.. Select *Choose File* > *Upload File* and upload the JAR file.
+== Steps to Follow in Runtime Manager
 
-.. Follow the instructions in https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub.adoc[Deploying to CloudHub].
+. Switch to the CloudHub environment in which you want to deploy the app.
+. Click *Deploy Application*.
+. On the *Deploy Application* page, select *Choose File* > *Upload File* and upload the JAR file.
+. Follow the instructions in https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub.adoc[Deploying to CloudHub].
 
 == See Also
 
