@@ -3,9 +3,14 @@
 
 == Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
 
+If your Anypoint Platform business organization is not yet configured to use GitHub to store API-Designer projects as repositories,
+
+You configure GitHub as part of creating the first project that you want to store in GitHub.
+
 === Before You Begin
 
-In Design Center, click *Create New*.
+* If you are creating an API-specification project, follow steps 1 through ? here.
+* If you are creating an API-fragment project, follow steps 1 though ? here.
 
 === Procedure
 . Click *Install from GitHub*.
@@ -21,3 +26,19 @@ The *Save location* field in the *New Specification* or *New Fragment* dialog di
 === What To Do Next
 
 Return to the procedure that you were following: Create an API-Specification Project in the Text Editor or Create an API-Fragment Project
+
+== Working with Branches
+
+The branch that you are currently working in is displayed at the top of the central pane of the text editor. Click the name of the branch to open a menu to
+
+* Switch to a different branch.
++
+Before switching, you can view the difference between that branch and the current one.
+* Create a new branch.
++
+After you create a branch, the text editor switches to that branch.
+* Open a pull request.
++
+This option behaves exactly as the *Create Pull Request* option in GitHub Desktop. It opens a page in GitHub where you can specify the name of your pull request and add a comment before clicking *Create*.
+* View the current branch on GitHub.
+* Delete a branch.
