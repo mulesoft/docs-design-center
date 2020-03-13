@@ -1,6 +1,13 @@
 = Using Repositories in GitHub to Store Your Projects
 
 
+
+You can store your projects in GitHub, but use them in APID.
+
+Can use GitHub only with the text editor, not the visual editor, too.
+
+One repo per project.
+
 == Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
 
 If your Anypoint Platform business organization is not yet configured to use GitHub to store API-Designer projects as repositories,
@@ -16,6 +23,8 @@ You configure GitHub as part of creating the first project that you want to stor
 . Click *Install from GitHub*.
 . Click *Install from GitHub* again.
 . On the *Install MuleSoft* screen, choose whether to allow API Designer to access all current and future repos in your GitHub org, or only selected repos.
++
+If you are not an admin in the GitHub org and yourGitHub user ID does not already have permission to install the MuleSoft app, then the only option that appears here is Request Permission.
 . Click *Install*.
 . Click *Close* in the message that the application was installed.
 
@@ -25,7 +34,11 @@ The *Save location* field in the *New Specification* or *New Fragment* dialog di
 
 === What To Do Next
 
-Return to the procedure that you were following: Create an API-Specification Project in the Text Editor or Create an API-Fragment Project
+Return to the procedure that you were following: Create an API-Specification Project in the Text Editor or Create an API-Fragment Project.
+
+== Import a Project from GitHub
+
+
 
 == Working with Branches
 
