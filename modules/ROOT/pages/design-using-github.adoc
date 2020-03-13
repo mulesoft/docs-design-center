@@ -1,1 +1,23 @@
 = Using Repositories in GitHub to Store Your Projects
+
+
+== Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
+
+=== Before You Begin
+
+In Design Center, click *Create New*.
+
+=== Procedure
+. Click *Install from GitHub*.
+. Click *Install from GitHub* again.
+. On the *Install MuleSoft* screen, choose whether to allow API Designer to access all current and future repos in your GitHub org, or only selected repos.
+. Click *Install*.
+. Click *Close* in the message that the application was installed.
+
+=== Result
+
+The *Save location* field in the *New Specification* or *New Fragment* dialog displays your GitHub ID. When other users in your Anypoint Platform business org create a project for API Designer, they can select their own GitHub user ID is they want to save the project as a repo in your GitHub org.
+
+=== What To Do Next
+
+Return to the procedure that you were following: Create an API-Specification Project in the Text Editor or Create an API-Fragment Project
