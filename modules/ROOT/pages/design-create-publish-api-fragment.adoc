@@ -30,12 +30,18 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 == Procedure
 
-. On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
-. In the *New Fragment* dialog, type a name for the project. You can change the name (but not the extension) later, if you want to.
-. Select the type of API fragment that you want to create and click *Create Fragment*.
+. Open Design Center from the homepage of Anypoint Platform.
+. Create an API-fragment project that you can work in.
+.. On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
+.. In the *New Fragment* dialog, type a name for the project. You can change the name (but not the extension) later, if you want to.
+.. Select the type of API fragment that you want to create.
+.. Choose where to save the project to.
 +
-_Result:_ The text editor opens. The editor is divided into three panels:
+If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-using-github.adoc[Using Repositories in GitHub to Store Your Projects].
+
 +
+*Result:* The text editor opens. The editor is divided into three panels:
+
 * The left panel lists the files in your project.
 +
 By default, the editor creates a RAML file that has the same name as the project. This file is set as the root file of the project.
