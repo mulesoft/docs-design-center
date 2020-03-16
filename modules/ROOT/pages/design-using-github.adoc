@@ -1,4 +1,9 @@
 = Using Repositories in GitHub to Store Projects
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
 
 By default, projects that you create in API Designer are saved in Design Center. However, you can save projects as repositories in GitHub. There are two types of project that you can save in this way:
 
@@ -8,6 +13,8 @@ By default, projects that you create in API Designer are saved in Design Center.
 In each case, there is one GitHub repository per project.
 
 Projects saved in GitHub are listed in Design Center together with projects that are saved in Design Center. They are indicated by the GitHub icon.
+
+Every time that you open a project that is saved in GitHub, API Designer retrieves the current content of the main branch. Every time that you switch to a different branch, API Designer retrieves the current content of that branch.
 
 == Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
 
@@ -66,7 +73,7 @@ If you have one or more API Designer projects that are saved in Design Center an
 
 The branch that you are currently working in is displayed at the top of the central pane of the text editor. Click the name of the branch to open a menu to carry out any of the following tasks:
 
-* Switch to a different branch.
+* Switch to a different branch by clicking the name of that branch.
 +
 Before switching, you can view the difference between that branch and the current one.
 * Create a new branch.
@@ -80,13 +87,18 @@ This option behaves exactly as the *Create Pull Request* option in GitHub Deskto
 
 == Managing Conflicting Changes
 
-If another user makes commits changes to the branch in which you are working, the text editor displays a dialog to inform you and to give you two options:
+If another user commits changes to the branch in which you are working, the text editor displays a dialog to inform you and to give you two options:
 
-* Create a new branch and continue your work in the new branch.
 * Discard your work and incorporate the commits into your open project.
 
-== Removing from Design Center a Project that is Saved in GitHub
+== Removing from Design Center an API Designer Project that is Saved in GitHub
 
+When you remove an API Designer project that is saved in GitHub, the project's repository is not deleted from GitHub. If you want to delete the repository, you must do so from GitHub.
+
+. In the list of projects in Design Center, select the project that you want to remove.
++
+Projects that are saved in GitHub are indicated by the GitHub icon.
+. On the right side of the list of projects, click *Remove from Design Center*.
 
 
 == See Also
