@@ -1,7 +1,5 @@
 = Using Repositories in GitHub to Store Your Projects
 
-
-
 You can store your projects in GitHub, but use them in APID.
 
 Can use GitHub only with the text editor, not the visual editor, too.
@@ -24,7 +22,7 @@ You configure GitHub as part of creating the first project that you want to stor
 . Click *Install from GitHub* again.
 . On the *Install MuleSoft* screen, choose whether to allow API Designer to access all current and future repos in your GitHub org, or only selected repos.
 +
-If you are not an admin in the GitHub org and yourGitHub user ID does not already have permission to install the MuleSoft app, then the only option that appears here is Request Permission.
+If you are not an admin in the GitHub org and your GitHub user ID does not already have permission to install the MuleSoft app, then the only option that appears here is *Request Permission*. Click this option to request permission from the administrator for your GitHub organization to install the app.
 . Click *Install*.
 . Click *Close* in the message that the application was installed.
 
@@ -38,6 +36,13 @@ Return to the procedure that you were following: Create an API-Specification Pro
 
 == Import a Project from GitHub
 
+. Open Design Center from the homepage of Anypoint Platform.
+. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
+. Click *Import* near the top of the dialog.
++
+The dialog lists the projects that you can import from the GitHub organization that your user ID belongs to.
+. Select the project that you want to import.
+.
 
 
 == Working with Branches
