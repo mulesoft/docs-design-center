@@ -1,30 +1,28 @@
-= Fork a Project in the Text Editor
+= Storing Projects in Design Center
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can separate new iterations of a project from previous iterations by branching.
+:imagesdir: ../assets/images
 
-== About this task
 
-A new branch is a fork of your project and cannot be merged back into the master branch. Anybody who has access to your project can also create branches.
+By default, the projects that you work on in API Designer's text editor are saved in Design Center. Projects saved in this location are not accessible outside of API Designer. Only other users in your Anypoint Platform business organization can edit such projects.
+
+When you store a project in Design Center, the project is saved to the branch `master` by default. You can create forks of the project if you do not want to change the content that is in the `master` branch. Forks do not become independent projects. To access a fork, you must open the project that you created the fork within.
+
+You can use all of the text editor's features with a fork, including publishing the fork to Anypoint Exchange. However, you cannot merge forks back into the original project that is in the `master` branch.
 
 Even when there are forks of a project, when you open that project the editor opens it to the master branch. If you want to return to a fork that you were working in, you must select that fork.
 
-You can publish any fork of an API specification to Anypoint Exchange.
+To see which location you are currently working in, look just above the central pane of the text editor. Click the down arrow to switch to a fork or to the `master` branch, or to create a fork.
 
-== Procedure
+.The name of the project and the location in which you are currently saving your work appear above the central pane.
+image:apid-dc-branching.png[The name and location of the project, and menu for switching locations]
 
-* To fork a project:
-+
-. Open the project.
-. Click “master” at the top of the text editor.
-. Type a name in the search field and type *Enter*.
-+
-*Result:* The text editor automatically switches to the new fork.
+<1> The name of the project that you are working in.
+<2> Either the name `master` (if you are working in the `master` branch) or by the name of the fork that you are working in.
+<3> The controls for creating a new fork.
 
-* To work in a fork of a project:
-+
-. Open the project.
-. Click “master” at the top of the text editor.
-. Select the name of the fork that you want to work in.
+== See Also
+
+* xref:design-using-github.adoc[Storing Projects in GitHub]

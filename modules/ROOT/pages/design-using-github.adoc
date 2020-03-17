@@ -1,4 +1,4 @@
-= Using Repositories in GitHub to Store Projects
+= Storing Projects in GitHub
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -10,11 +10,15 @@ By default, projects that you create in API Designer are saved in Design Center.
 * An API-specification project that you want to work on in API Designer's text editor, not in the visual editor
 * An API-fragment project
 
+When you create one of these types of project, you can select your GitHub user ID that is associated with a GitHub organization in which the MuleSoft application is installed.
+
 In each case, there is one GitHub repository per project.
 
 Projects saved in GitHub are listed in Design Center together with projects that are saved in Design Center. They are indicated by the GitHub icon.
 
 Every time that you open a project that is saved in GitHub, API Designer retrieves the current content of the main branch. Every time that you switch to a different branch, API Designer retrieves the current content of that branch.
+
+image:apid-flow-for-GitHub.png[]
 
 == Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
 
@@ -24,6 +28,7 @@ You configure GitHub as part of creating the first project that you want to stor
 
 === Before You Begin
 
+* Ensure that you have
 * If you are creating an API-specification project, follow steps 1 through 2d here: xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor].
 * If you are creating an API-fragment project, follow steps 1 though 2c here: xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment].
 
@@ -74,6 +79,8 @@ If you have one or more API Designer projects that are saved in Design Center an
 The branch that you are currently working in is displayed at the top of the central pane of the text editor. Click the name of the branch to open a menu to carry out any of the following tasks:
 
 * Switch to a different branch by clicking the name of that branch.
++
+Every time you open a project that is stored in GitHub as a repository, the content of the default branch appears in the text editor. So, if you want to work in a non-default branch, you must switch to that branch.
 +
 Before switching, you can view the difference between that branch and the current one.
 * Create a new branch.

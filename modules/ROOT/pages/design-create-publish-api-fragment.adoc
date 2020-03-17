@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor.
+You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor. To create an API fragment, you must first create an API-fragment project. You can save API-fragment projects in Design Center, or you can save them in GitHub as repositories.
 
 
 == About This Task
