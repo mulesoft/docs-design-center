@@ -7,8 +7,8 @@ endif::[]
 
 By default, projects that you create in API Designer are saved in Design Center. However, you can save projects as repositories in GitHub. There are two types of project that you can save in this way:
 
-* An API-specification project that you want to work on in API Designer's text editor, not in the visual editor
-* An API-fragment project
+* API-specification projects that you want to work on in API Designer's text editor, not in the visual editor
+* API-fragment projects
 
 When you create one of these types of project, you can select your GitHub user ID that is associated with a GitHub organization in which the MuleSoft application is installed.
 
