@@ -18,7 +18,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
  .. Choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
  .. Choose where to save the project to.
  +
- If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-using-github.adoc[Using Repositories in GitHub to Store Your Projects].
+ If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-storage-github.adoc[Using Repositories in GitHub to Store Your Projects].
 
 +
 *Result:* The text editor opens. The editor is divided into three panels:

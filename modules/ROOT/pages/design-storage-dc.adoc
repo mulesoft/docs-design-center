@@ -1,0 +1,40 @@
+= Storing Projects in Design Center
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:page-aliases: design-branching.adoc
+
+:imagesdir: ../assets/images
+
+By default, the projects that you work on in API Designer are saved in Design Center. Projects saved in this location are not accessible outside of API Designer. Only other users in your Anypoint Platform business organization can edit such projects.
+
+
+When you store in Design Center a project that you work on in API Designer's text editor (either an API-specification project or an API-fragment project), the project is saved to the branch `master` by default. You can create branches of the project if you do not want to change the content that is in the `master` branch. You can use all of the text editor's features when you are working in a branch. You can even publish the content of the branch as an asset in Anypoint Exchange.
+
+[IMPORTANT]
+====
+You cannot merge changes made in one branch into another branch. For example, if you create the branch `prod-api-1` from your default branch, you cannot merge your changes in `prod-api-1` into the default branch. If you create the branch `prod-api-2` from `prod-api-1`, you cannot merge your changes in `prod-api-2` into `prod-api-1`. Branches are always independent of each other.
+====
+
+When you create a branch, the text editor copies into the new branch the current content of the branch that you are in. For example, if you are in the `master` branch and you create the branch `branch-1`, the current content of `master` is copied into `branch-1`. If you subsequently create the branch `branch-2`, the current content of `branch-1` is copied into `branch-2`.
+
+Even if there are branches in a project, when you open that project the editor opens it to the `master` branch. If you want to return to a branch that you were working in, you must switch to that branch.
+
+To see which branch you are currently working in, look above the central pane of the text editor. Click the down arrow to switch to a branch or to the `master` branch. In the menu that appears, you can also create a branch.
+
+.The controls for working with branches appear above the central pane.
+image:apid-dc-branching.png[The controls for working with branches.]
+
+<1> The names of the project and branch that you are working in.
+<2> The name of the branch that you are working in.
+<3> The list of branches, other than the branch that you are working in.
+<4> The icon to click to delete a branch.
+<3> The controls for creating a new branch.
+
+When you create a branch, the text editor switches to that branch.
+
+You cannot delete a branch that you are currently working in.
+
+== See Also
+
+* xref:design-storage-github.adoc[Storing Projects in GitHub]
