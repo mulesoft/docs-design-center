@@ -5,54 +5,29 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-By default, projects that you create in API Designer are saved in Design Center. However, you can save a project as a repository in GitHub. There are two types of project that you can save in this way:
-
-* API-specification projects that you want to work on in API Designer's text editor, not in the visual editor
-* API-fragment projects
+By default, projects that you create in API Designer are saved in Design Center. However, you can save a project as a repository in GitHub.
 
 The following diagram depicts the steps to follow to configure an Anypoint Platform business organization to use a GitHub organization as a repository for API Designer projects. It also depicts which users are allowed to access the GitHub organization:
 
 .This diagram shows the steps for enabling and using the support for saving projects in GitHub.
 image:apid-flow-for-GitHub.png[The steps for enabling and using the support for GitHub]
 
-As depicted on the far left of the diagram, one person with _Design Center Developer_ permission in your Anypoint Platform business organization J35A installs the MuleSoft application in GitHub organization X. This person installs the application as part of creating the first API Designer project in J35A to use GitHub. After that one-time installation, all developers in J35A that have the _Design Center Developer_ permission and access to GitHub organization X can also create API Designer projects as repositories in that GitHub organization.
+As depicted on the far left of the diagram, one person with _Design Center Developer_ permission in your Anypoint Platform business organization J35A installs the MuleSoft application in GitHub organization X. This person installs the application as part of creating the first API Designer project in J35A to use GitHub.
+
+. Click *Create* to start creating a project in the text editor.
++
+You can create either an API-specification project that you want to work on in the text editor, or you can create an API-fragment project. The visual editor stores projects in Design Center.
+. Install the MuleSoft application in a GitHub organization.
++
+Click the *Install from GitHub* option to start the process for installing the MuleSoft application in a GitHub organization. As part of the process, you log into GitHub and select the organization to install the application in.
++
+After you finish the installation, you return to the dialog for creating a project.
+. In the *Save location* field, select your GitHub ID for the organization that you installed the MuleSoft application in.
+. Finish filling in the fields of the dialog and click the *Create* button.
+
+After the one-time installation, all developers in J35A that have the _Design Center Developer_ permission and access to GitHub organization X can also create API Designer projects as repositories in that GitHub organization. They follow the same steps, but without following the steps of the installation procedure.
 
 Developers who do not have access to GitHub organization X, of course, cannot create projects as repositories in that organization, and they cannot edit projects that are saved there. However, developers who do have access to GitHub organization X but are not in J35A can edit the repositories and create repositories to import into API Designer as projects, even though they cannot create projects through Design Center.
-
-
-
-
-
-
-
-== Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
-
-If your Anypoint Platform business organization is not yet configured to use GitHub to store API-Designer projects as repositories,
-
-You configure GitHub as part of creating the first project that you want to store in GitHub.
-
-=== Before You Begin
-
-* Ensure that you have
-* If you are creating an API-specification project, follow steps 1 through 2d here: xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor].
-* If you are creating an API-fragment project, follow steps 1 though 2c here: xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment].
-
-=== Procedure
-. Click *Install from GitHub*.
-. Click *Install from GitHub* again.
-+
-Anypoint Platform takes you to GitHub to complete the installation process.
-. Follow the instructions in the series of pages that appear in GitHub.
-+
-The instructions let you choose the GitHub organization that you want to install the MuleSoft application in.
-
-=== Result
-
-The *Save location* field in the *New Specification* or *New Fragment* dialog displays your GitHub ID. When other users in your Anypoint Platform business org create a project for API Designer, they can select their own GitHub user ID if they want to save the project as a repo in the same GitHub organization.
-
-=== What To Do Next
-
-Return to the procedure that you were following: xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor] or xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment].
 
 == Open a Project that is Saved as a Repository in GitHub
 
@@ -107,9 +82,7 @@ This option behaves exactly as the *Create Pull Request* option in GitHub Deskto
 
 == Managing Conflicting Changes
 
-If another user commits changes to the branch in which you are working, the text editor displays a dialog to inform you and to give you two options:
-
-* Discard your work and incorporate the commits into your open project.
+If another user commits changes to the branch in which you are working, the text editor displays a dialog to inform you that is will discard your most recent changes (within the last 15 seconds or so) and incorporate the commits from the other user. Therefore, only one person at a time should work in a branch.
 
 == Removing from Design Center an API Designer Project that is Saved in GitHub
 
