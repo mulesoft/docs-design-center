@@ -11,4 +11,12 @@ For-Each iterates through a collection of elements, processing one element at a 
 
 Parallel For-Each iterates though a collection of elements _n_ times (where _n_ <= the number of elements in the collection) with a single process. For example, if there are 10 elements and the maximum number of processes is set to 2, a Parallel For-Each component processes two elements at a time, five times.
 
-Scatter Gather runs two or more parallel processes, called _routes_. Each route differs from the other routes. Scatter Gather sets conditions that determine which route processes a particular part of a payload. When all routes are finished, the results from each route are gathered together into a new payload. 
+Scatter Gather runs two or more parallel processes, called _routes_. Each route differs from the other routes. Scatter Gather sets conditions that determine which route processes a particular part of a payload. When all routes are finished, the results from each route are gathered together into a new payload.
+
+Timeout:: The maximum length of time to wait, in milliseconds, for the results from each of the parallel processes to be gathered together into a new payload and sent to the next card. A value of 0 or lower means that there is no timeout. The default value is 9,223,372,036,854,776,000 milliseconds.
+
+Max concurrency:: The maximum number of routes to process in parallel. By default all routes run in parallel.
++
+If you set this value to 1, Scatter Gather takes the first element in the payload, evaluates it against the condition set up for each route, and sends the element through the route for which it meets the condition. When a route is done processing an element, Scatter Gather evaluates the next element against the routing conditions, continuing until the elements in the payload have all been processed.
++
+Defaults to 2147483647
