@@ -7,12 +7,12 @@ endif::[]
 
 By default, projects that you create in API Designer are saved in Design Center. However, you can save a project as a repository in GitHub.
 
-The following diagram depicts the steps to follow to configure an Anypoint Platform business organization to use a GitHub organization as a repository for API Designer projects. It also depicts which users are allowed to access the GitHub organization:
+The following diagram depicts the steps to follow to configure an Anypoint Platform business organization (APBO) to use a GitHub organization as a repository for API Designer projects. It also depicts which users are allowed to access the GitHub organization:
 
 .This diagram shows the steps for enabling and using the support for saving projects in GitHub.
 image:apid-flow-for-GitHub.png[The steps for enabling and using the support for GitHub]
 
-As depicted on the far left of the diagram, one person with _Design Center Developer_ permission in your Anypoint Platform business organization J35A installs the MuleSoft application in GitHub organization X. This person installs the application as part of creating the first API Designer project in J35A to use GitHub.
+As depicted on the far left of the diagram, one person with _Design Center Developer_ permission in your APBO installs the MuleSoft application in GitHub organization X. This person installs the application as part of creating the first API Designer project in the APBO to use GitHub.
 
 . Click *Create* to start creating a project in the text editor.
 +
@@ -25,9 +25,9 @@ After you finish the installation, you return to the dialog for creating a proje
 . In the *Save location* field, select your GitHub ID for the organization that you installed the MuleSoft application in.
 . Finish filling in the fields of the dialog and click the *Create* button.
 
-After the one-time installation, all developers in J35A that have the _Design Center Developer_ permission and access to GitHub organization X can also create API Designer projects as repositories in that GitHub organization. They follow the same steps, but without following the steps of the installation procedure.
+After the one-time installation, all developers in the APBO that have the _Design Center Developer_ permission and access to GitHub organization X can also create API Designer projects as repositories in that GitHub organization. They follow the same steps, but without following the steps of the installation procedure.
 
-Developers who do not have access to GitHub organization X, of course, cannot create projects as repositories in that organization, and they cannot edit projects that are saved there. However, developers who do have access to GitHub organization X but are not in J35A can edit the repositories and create repositories to import into API Designer as projects, even though they cannot create projects through Design Center.
+Developers who do not have access to GitHub organization X, of course, cannot create projects as repositories in that organization, and they cannot edit projects that are saved there. However, developers who do have access to GitHub organization X but are not in the APBO can edit the repositories and create repositories to import into API Designer as projects, even though they cannot create projects through Design Center.
 
 == Open a Project that is Saved as a Repository in GitHub
 
