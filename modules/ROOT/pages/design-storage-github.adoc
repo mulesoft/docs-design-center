@@ -5,20 +5,25 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-By default, projects that you create in API Designer are saved in Design Center. However, you can save projects as repositories in GitHub. There are two types of project that you can save in this way:
+By default, projects that you create in API Designer are saved in Design Center. However, you can save a project as a repository in GitHub. There are two types of project that you can save in this way:
 
 * API-specification projects that you want to work on in API Designer's text editor, not in the visual editor
 * API-fragment projects
 
-When you create one of these types of project, you can select your GitHub user ID that is associated with a GitHub organization in which the MuleSoft application is installed.
+The following diagram depicts the steps to follow to configure an Anypoint Platform business organization to use a GitHub organization as a repository for API Designer projects. It also depicts which users are allowed to access the GitHub organization:
 
-In each case, there is one GitHub repository per project.
+.This diagram shows the steps for enabling and using the support for saving projects in GitHub.
+image:apid-flow-for-GitHub.png[The steps for enabling and using the support for GitHub]
 
-Projects saved in GitHub are listed in Design Center together with projects that are saved in Design Center. They are indicated by the GitHub icon.
+As depicted on the far left of the diagram, one person with _Design Center Developer_ permission in your Anypoint Platform business organization J35A installs the MuleSoft application in GitHub organization X. This person installs the application as part of creating the first API Designer project in J35A to use GitHub. After that one-time installation, all developers in J35A that have the _Design Center Developer_ permission and access to GitHub organization X can also create API Designer projects as repositories in that GitHub organization.
 
-Every time that you open a project that is saved in GitHub, API Designer retrieves the current content of the main branch. Every time that you switch to a different branch, API Designer retrieves the current content of that branch.
+Developers who do not have access to GitHub organization X, of course, cannot create projects as repositories in that organization, and they cannot edit projects that are saved there. However, developers who do have access to GitHub organization X but are not in J35A can edit the repositories and create repositories to import into API Designer as projects, even though they cannot create projects through Design Center.
 
-image:apid-flow-for-GitHub.png[]
+
+
+
+
+
 
 == Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization
 
@@ -38,6 +43,8 @@ You configure GitHub as part of creating the first project that you want to stor
 +
 Anypoint Platform takes you to GitHub to complete the installation process.
 . Follow the instructions in the series of pages that appear in GitHub.
++
+The instructions let you choose the GitHub organization that you want to install the MuleSoft application in.
 
 === Result
 
@@ -46,6 +53,10 @@ The *Save location* field in the *New Specification* or *New Fragment* dialog di
 === What To Do Next
 
 Return to the procedure that you were following: xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor] or xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment].
+
+== Open a Project that is Saved as a Repository in GitHub
+
+Projects saved in GitHub are listed in Design Center together with projects that are saved in Design Center. They are indicated by the GitHub icon at the end of a project's name.
 
 == Import a Project from GitHub
 
@@ -75,6 +86,8 @@ If you have one or more API Designer projects that are saved in Design Center an
 . Delete the original project.
 
 == Working with Branches
+
+Every time that you open a project that is saved in GitHub, API Designer retrieves the current content of the main branch. Every time that you switch to a different branch, API Designer retrieves the current content of that branch.
 
 The branch that you are currently working in is displayed at the top of the central pane of the text editor. Click the name of the branch to open a menu to carry out any of the following tasks:
 
