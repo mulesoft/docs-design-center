@@ -44,6 +44,7 @@
  ** xref:custom-expression-field.adoc[Create a DataWeave Expression in a Field]
  ** xref:fd-add-core-component.adoc[Add Logic, Data Transformations, Error Catching, and More to Flows]
   *** xref:fd-iterating.adoc[Process Elements in a Collection]
+  *** xref:fd-scatter-gather.adoc[Scatter Payload Elements into Different Parallel Processes, then Gather the Results]
   *** xref:reference-flow-task-design-center.adoc[Reference One Flow from Another with Flowref]
   *** xref:error-handling-task-design-center.adoc[Handle Errors with Try]
  ** xref:fd-transform.adoc[Mapping Output Data to Input Data]

@@ -1,0 +1,14 @@
+= Scatter Payload Elements into Different Parallel Processes, then Gather the Results
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
+
+== Differences between Parallel For-Each, For-Each, and Scatter-Gather
+
+For-Each iterates through a collection of elements, processing one element at a time through a single route.
+
+Parallel For-Each iterates though a collection of elements _n_ times (where _n_ <= the number of elements in the collection) with a single process. For example, if there are 10 elements and the maximum number of processes is set to 2, a Parallel For-Each component processes two elements at a time, five times.
+
+Scatter Gather runs two or more parallel processes, called _routes_. Each route differs from the other routes. Scatter Gather sets conditions that determine which route processes a particular part of a payload. When all routes are finished, the results from each route are gathered together into a new payload. 
