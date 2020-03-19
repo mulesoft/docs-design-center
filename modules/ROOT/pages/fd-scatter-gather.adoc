@@ -15,8 +15,6 @@ Scatter Gather runs two or more parallel processes, called _routes_. Each route 
 
 Timeout:: The maximum length of time to wait, in milliseconds, for the results from each of the parallel processes to be gathered together into a new payload and sent to the next card. A value of 0 or lower means that there is no timeout. The default value is 9,223,372,036,854,776,000 milliseconds.
 
-Max concurrency:: The maximum number of routes to process in parallel. By default all routes run in parallel.
+Max concurrency:: The maximum number of routes to process in parallel. By default, all of the routes that you create in for an instance of the Scatter-Gather component run in parallel. If you do not set a value, the value used is the number of routes.
 +
 If you set this value to 1, Scatter Gather takes the first element in the payload, evaluates it against the condition set up for each route, and sends the element through the route for which it meets the condition. When a route is done processing an element, Scatter Gather evaluates the next element against the routing conditions, continuing until the elements in the payload have all been processed.
-+
-Defaults to 2147483647
