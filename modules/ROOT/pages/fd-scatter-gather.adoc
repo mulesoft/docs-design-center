@@ -203,6 +203,8 @@ vars
   var2
 ----
 
+In both of the two previous diagrams, the final card could be a Transform card, which might require you to know how to write scripts in DataWeave, or another Set Variable card that, as in the example about aggregating contacts, combines somehow the results from the routes in the Scatter-Gather component and then passes the variable to another card, such as a Transform card.
+
 == Differences between Parallel For-Each, For-Each, and Scatter-Gather
 
 For-Each iterates through a collection of elements, processing one element at a time through a single route.
