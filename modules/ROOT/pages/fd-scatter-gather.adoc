@@ -62,7 +62,7 @@ Next, you add the Scatter-Gather component and place an instance of Salesforce C
 
 image::fd-sg-3-sf-query.png[]
 
-The payload that leaves the Scatter-Gather component schematically looks like this:
+The message that leaves the Scatter-Gather component schematically has these parts:
 
 ----
 payload
@@ -97,7 +97,7 @@ image::fd-sg-4-set-variable.png[]
 <2> The pill created by dragging *Custom Expression* into the *Value* field.
 <3> The expression that concatenates the query results.
 
-The message that the Transform card receives from the Set Variable card looks like this:
+The message that the Transform card receives from the Set Variable card contains these parts:
 
 ----
 payload
@@ -171,7 +171,7 @@ This configuration is useful if your variables need to be used in more than one 
 
 image::fd-sg-alt-1.png[]
 
-In this case, the first card in each route receives the same message, which schematically might look like this if you create two variables before the Scatter-Gather component:
+In this case, the first card in each route receives the same message, which might have these parts if you create two variables before the Scatter-Gather component:
 
 ----
 payload
@@ -185,7 +185,7 @@ The following configuration is useful if your variables need to be used only in 
 
 image::fd-sg-alt-2.png[]
 
-Suppose that you create `var1` at the start of the first route, and you create `var2` at the start of the second route. Then, the second card in the first route receives a message that looks like this:
+Suppose that you create `var1` at the start of the first route, and you create `var2` at the start of the second route. Then, the second card in the first route receives a message that has these parts:
 
 ----
 payload
@@ -194,7 +194,7 @@ vars
   var1
 ----
 
-And the second card in the second route receives a message that looks like this:
+And the second card in the second route receives a message that has these parts:
 
 ----
 payload
@@ -216,3 +216,7 @@ Timeout:: The maximum length of time to wait, in milliseconds, for the results f
 Max concurrency:: The maximum number of routes to process in parallel. By default, all of the routes that you create in for an instance of the Scatter-Gather component run in parallel. If you do not set a value, the value used is the number of routes.
 +
 If you set this value to 1, Scatter Gather takes the first element in the payload, evaluates it against the condition set up for each route, and sends the element through the route for which it meets the condition. When a route is done processing an element, Scatter Gather evaluates the next element against the routing conditions, continuing until the elements in the payload have all been processed.
+
+== See Also
+
+* xref:fd-store-data-top.adoc[Store and Reuse Data within a Flow]
