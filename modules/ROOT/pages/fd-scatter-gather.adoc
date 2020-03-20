@@ -5,6 +5,55 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+== Example: Aggregating Contacts from Two Salesforce Organizations
+
+
+image::fd-sg-1-entire-flow.png[]
+<1> An HTTP Listener card for triggering the flow.
+<2> An Scatter-Gather card with two routes configured, each route consisting of an instance of Salesforce Connector. The instances query different Salesforce organizations.
+<3> A Set Variable card for storing the payload from the Scatter-Gather card in a variable.
+<4> A Transform card for mapping the fields in the variable to the fields in a CSV file.
+
+The HTTP Listener card is uses the default CloudHub HTTP configuration. The only change made to it is that a value is specified in the *Path* field.
+
+image::fd-sg-2-http-listener.png[]
+
+The instances of Salesforce Connector use different configurations because they require different connections. The same query is in the *Salesforce Query* field in each instance.
+
+image::fd-sg-3-sf-query.png[]
+
+The Set Variable card includes 1) a name for the variable and 2) an expression in the *Value* field. The expression is this:
+
+----
+payload["0"]["payload"] ++ (payload["1"]["payload"])
+----
+
+You can create this expression by dragging the *Custom Expression* pill from the right side of the card into the *Value* field, clicking the arrow in the pill, and clicking *Expand*. Then, drag the first *Payload* pill into the text box, add the two plus signs, then drag the second *Payload* pill into the text field.
+
+image::fd-sg-4-set-variable.png[]
+
+In the Transform card, the fields that were saved into the `SG_payload` variable are mapped to the fields of a custom data type.
+
+image::fd-sg-5-transform.png[]
+
+The custom data type is of the CSV format and looks like this:
+
+----
+#%RAML 1.0 DataType
+type: array
+items:
+  properties:
+    Name:
+      type: string
+    ID:
+      type: string
+    Email:
+      type: string
+----
+
+image::fd-sg-6-custom-type.png[]
+
+
 == Differences between Parallel For-Each, For-Each, and Scatter-Gather
 
 For-Each iterates through a collection of elements, processing one element at a time through a single route.
