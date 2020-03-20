@@ -5,38 +5,37 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+Suppose that you include two routes in a Scatter-Gather component. In each route, an instance of Salesforce Connector fetches a list of the contacts in a Salesforce organization. You want to
+
+----
+payload
+  0
+    payload
+      Name
+      ID
+      Email
+  1
+    payload
+      Name
+      ID
+      Email
+attributes
+variables
+----
+
+
 == Example: Aggregating Contacts from Two Salesforce Organizations
 
+One way to use the Scatter-Gather component is to trigger it with an HTTP request. In this example, an HTTP request triggers queries that retrieve the lists of contacts for two Salesforce organizations. The Scatter-Gather component combines the payload from each instance of Salesforce Connector into a single payload. This payload is stored in a variable that concatenates the results of the two queries. Finally, the fields in the concatenated results are mapped to a data type that creates a CSV file.
 
+.This is the flow that creates the CSV file aggregating the contacts from the two Salesforce organizations.
 image::fd-sg-1-entire-flow.png[]
 <1> An HTTP Listener card for triggering the flow.
 <2> An Scatter-Gather card with two routes configured, each route consisting of an instance of Salesforce Connector. The instances query different Salesforce organizations.
-<3> A Set Variable card for storing the payload from the Scatter-Gather card in a variable.
+<3> A Set Variable card for storing the concatenated query results from the Scatter-Gather card in a variable.
 <4> A Transform card for mapping the fields in the variable to the fields in a CSV file.
 
-The HTTP Listener card is uses the default CloudHub HTTP configuration. The only change made to it is that a value is specified in the *Path* field.
-
-image::fd-sg-2-http-listener.png[]
-
-The instances of Salesforce Connector use different configurations because they require different connections. The same query is in the *Salesforce Query* field in each instance.
-
-image::fd-sg-3-sf-query.png[]
-
-The Set Variable card includes 1) a name for the variable and 2) an expression in the *Value* field. The expression is this:
-
-----
-payload["0"]["payload"] ++ (payload["1"]["payload"])
-----
-
-You can create this expression by dragging the *Custom Expression* pill from the right side of the card into the *Value* field, clicking the arrow in the pill, and clicking *Expand*. Then, drag the first *Payload* pill into the text box, add the two plus signs, then drag the second *Payload* pill into the text field.
-
-image::fd-sg-4-set-variable.png[]
-
-In the Transform card, the fields that were saved into the `SG_payload` variable are mapped to the fields of a custom data type.
-
-image::fd-sg-5-transform.png[]
-
-The custom data type is created like this:
+First, you create the custom data type like this:
 
 image::fd-sg-6-custom-type.png[]
 <1> The *Format* field is set to *CSV*.
@@ -54,6 +53,79 @@ items:
     Email:
       type: string
 ----
+
+Next, you add the HTTP Listener card, which listens at the path that you specify in the *Path* field:
+
+image::fd-sg-2-http-listener.png[]
+
+Next, you add the Scatter-Gather component and place an instance of Salesforce Connector in each of two routes. The instances of Salesforce Connector use different configurations because they require different connections. You specify the same query in the *Salesforce Query* field in each instance:
+
+image::fd-sg-3-sf-query.png[]
+
+The payload that leaves the Scatter-Gather component schematically looks like this:
+
+----
+payload
+  0
+    payload
+      Name
+      ID
+      Email
+  1
+    payload
+      Name
+      ID
+      Email
+attributes
+vars
+----
+
+The payload from the Scatter-Gather component consists of two sub-payloads, one payload for each route in the component. The sub-payload under `0` is the payload from the first route in the component, and the sub-payload under `1` is the payload from the second route.
+
+It is possible at this point in the flow to combine the two sub-payloads into a CSV file with a DataWeave script. However, if you would rather not write a DataWeave script, you can concatenate the two sub-payloads into a single payload that you store in a variable, and then map the fields in the single payload to the fields in a CSV file.
+
+The Set Variable card includes 1) a name for the variable and 2) an expression in the *Value* field. The expression (at 3) is this:
+
+----
+payload["0"]["payload"] ++ (payload["1"]["payload"])
+----
+
+You can create this expression by dragging the *Custom Expression* pill from the right side of the card into the *Value* field, clicking the arrow in the pill, and clicking *Expand*. Then, drag the first *Payload* pill into the text box, add the two plus signs, then drag the second *Payload* pill into the text field.
+
+image::fd-sg-4-set-variable.png[]
+<1> The name specified for the variable.
+<2> The pill created by dragging *Custom Expression* into the *Value* field.
+<3> The expression that concatenates the query results.
+
+The message that the Transform card receives from the Set Variable card looks like this:
+
+----
+payload
+  0
+    payload
+      Name
+      ID
+      Email
+  1
+    payload
+      Name
+      ID
+      Email
+attributes
+vars
+  SG_payload
+    Name
+    ID
+    Email
+----
+
+The fields that are in the variable `SG_payload` can be mapped to the fields of a custom data type that uses the CSV format:
+
+image::fd-sg-5-transform.png[]
+<1> The location of the variable in the *Input* pane.
+<2> The mappings from the fields in the variable to the fields in the custom data type.
+
+You drag the `Name` field from the input pane to the `Name` field in the output pane. You do the same for the `ID` and `Email` fields.
 
 The result looks like this, with the actual content differing according to the Salesforce organizations that are queried. The first twelve contacts are from organization A, while the remaining contacts are from organization B:
 
@@ -93,6 +165,43 @@ Irving Bates,0028t000001J3IUe6,irving.bates@hoipolloi.com
 Merle Cater,0028t000001J3PPl0,merle.cater@hoipolloi.com
 ----
 
+Any card can trigger a flow that uses the Scatter-Gather component. The message that the component receives -- payload, attributes, and variables -- is sent to each route. If you want a route to act on only part of a message, you can store what you need for the route in a variable before the message reaches the Scatter-Gather component or at the beginning of the route.
+
+This configuration is useful if your variables need to be used in more than one route:
+
+image::fd-sg-alt-1.png[]
+
+In this case, the first card in each route receives the same message, which schematically might look like this if you create two variables before the Scatter-Gather component:
+
+----
+payload
+attributes
+vars
+  var1
+  var2
+----
+
+The following configuration is useful if your variables need to be used only in single routes:
+
+image::fd-sg-alt-2.png[]
+
+Suppose that you create `var1` at the start of the first route, and you create `var2` at the start of the second route. Then, the second card in the first route receives a message that looks like this:
+
+----
+payload
+attributes
+vars
+  var1
+----
+
+And the second card in the second route receives a message that looks like this:
+
+----
+payload
+attributes
+vars
+  var2
+----
 
 == Differences between Parallel For-Each, For-Each, and Scatter-Gather
 
@@ -100,7 +209,7 @@ For-Each iterates through a collection of elements, processing one element at a 
 
 Parallel For-Each iterates though a collection of elements _n_ times (where _n_ <= the number of elements in the collection) with a single process. For example, if there are 10 elements and the maximum number of processes is set to 2, a Parallel For-Each component processes two elements at a time, five times.
 
-Scatter Gather runs two or more parallel processes, called _routes_. Each route differs from the other routes. Scatter Gather sets conditions that determine which route processes a particular part of a payload. When all routes are finished, the results from each route are gathered together into a new payload.
+Scatter Gather runs two or more parallel processes, called _routes_. When all routes are finished, the results from each route are gathered together into a new payload.
 
 Timeout:: The maximum length of time to wait, in milliseconds, for the results from each of the parallel processes to be gathered together into a new payload and sent to the next card. A value of 0 or lower means that there is no timeout. The default value is 9,223,372,036,854,776,000 milliseconds.
 
