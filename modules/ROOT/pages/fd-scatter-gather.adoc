@@ -58,6 +58,8 @@ Next, you add the HTTP Listener card, which listens at the path that you specify
 
 image::fd-sg-2-http-listener.png[]
 
+Though this example uses an HTTP Listener card, you can send data to a Scatter-Gather component with any card. 
+
 Next, you add the Scatter-Gather component and place an instance of Salesforce Connector in each of two routes. The instances of Salesforce Connector use different configurations because they require different connections. You specify the same query in the *Salesforce Query* field in each instance:
 
 image::fd-sg-3-sf-query.png[]
