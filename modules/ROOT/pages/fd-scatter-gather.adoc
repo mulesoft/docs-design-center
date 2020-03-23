@@ -1,4 +1,4 @@
-= Scatter Message Elements into Different Parallel Processes, then Gather the Results
+= Run Different Processes in Parallel, then Gather the Results
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
