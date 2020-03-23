@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-By default, the projects that you work on in API Designer are saved in Design Center. Projects saved in this location are not accessible outside of API Designer. Only other users in your Anypoint Platform business organization can edit such projects.
+By default, the projects that you work on in API Designer are saved in Design Center. Only other users in your Anypoint Platform business organization can edit such projects.
 
 
 When you store in Design Center a project that you work on in API Designer's text editor (either an API-specification project or an API-fragment project), the project is saved to the branch `master` by default. You can create branches of the project if you do not want to change the content that is in the `master` branch. You can use all of the text editor's features when you are working in a branch. You can even publish the content of the branch as an asset in Anypoint Exchange.
