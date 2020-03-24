@@ -5,10 +5,9 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor. To create an API fragment, you must first create an API-fragment project. You can save API-fragment projects in Design Center, or you can save them in GitHub as repositories.
+You can create API fragments directly in RAML, with the help of code suggestions that appear within the text editor. To do so, you must first create an API-fragment project and save it either in Design Center or in GitHub as a repository.
 
-
-== About This Task
+If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-storage-github.adoc[Using Repositories in GitHub to Store Your Projects].
 
 An API fragment is a RAML document that has a version and an identifier, but is not in itself a complete RAML specification. An API fragment is one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types.
 
@@ -31,14 +30,13 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 == Procedure
 
 . Open Design Center from the homepage of Anypoint Platform.
-. Create an API-fragment project that you can work in.
+. Create an API-fragment project:
 .. On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
-.. In the *New Fragment* dialog, type a name for the project. You can change the name (but not the extension) later, if you want to.
-.. Select the type of API fragment that you want to create.
-.. Choose where to save the project to.
+.. In the *New Fragment* dialog, type a name for the project.
 +
-If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-storage-github.adoc[Using Repositories in GitHub to Store Your Projects].
-
+You can change the name (but not the extension) later, if you want to.
+.. Select the type of API fragment that you want to create.
+.. Choose where to save the project.
 +
 *Result:* The text editor opens. The editor is divided into three panels:
 
