@@ -3,7 +3,10 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML). To create an API specification, you must first create an API-specification project in which you can organize the files in the specification. You can save API-specification projects in Design Center, or you can save them in GitHub as repositories.
+You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML). To do so, you must first create an API-specification project in which you can organize the files in the specification. You can save API-specification projects in Design Center, or you can save them in GitHub as repositories.
+
+If you choose to save a project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-storage-github.adoc[Using Repositories in GitHub to Store Your Projects].
+
 
 == Before You Begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
@@ -13,15 +16,14 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 . Open Design Center from the homepage of Anypoint Platform.
 . Create an API-specification project that you can work in.
 .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
-.. In the *New Specification* section of the dialog that is opened, name your project. You can change the name (but not the extension) later, if you want to.
+.. In the *New Specification* section of the dialog that is opened, name your project.
++
+You can change the name (but not the extension) later, if you want to.
 .. Select *Text editor*.
 .. Choose whether the stub specification file created in the project should be in RAML or OAS.
 +
 The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
- .. Choose where to save the project to.
-+
-If you choose to save the project as a repository in GitHub and the MuleSoft app is not yet installed in your GitHub organization, follow the instructions in the section "Install the MuleSoft Application in to Use a GitHub Organization with Your Anypoint Platform Organization" in xref:design-storage-github.adoc[Using Repositories in GitHub to Store Your Projects].
-
+ .. Choose where to save the project.
 +
 *Result:* The text editor opens. The editor is divided into three panels:
 
