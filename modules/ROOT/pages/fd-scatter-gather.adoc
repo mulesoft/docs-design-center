@@ -234,7 +234,7 @@ In both of the two previous diagrams, the final card could be a Transform card, 
 
 For-Each iterates through a collection of elements, processing one element at a time through a single route.
 
-Parallel For-Each iterates though a collection of elements _n_ times (where _n_ <= the number of elements in the collection) with a single process. For example, if there are 10 elements and the maximum number of processes is set to 2, a Parallel For-Each card processes two elements at a time, five times.
+Parallel For-Each iterates though a collection of elements _n_ times (where _n_ is less than or equal to the number of elements in the collection) with a single process. For example, if there are 10 elements and the maximum number of processes is set to 2, a Parallel For-Each card processes two elements at a time, five times.
 
 Scatter Gather runs two or more parallel processes, called _routes_. When all routes are finished, the results from each route are gathered together into a new payload.
 
