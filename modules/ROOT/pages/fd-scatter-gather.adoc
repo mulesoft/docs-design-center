@@ -188,7 +188,7 @@ Merle Cater,0028t000001J3PPl0,merle.cater@redooler.com
 
 If you want a route to act on only part of a message, you can store what you need for the route in a variable before the message reaches the Scatter-Gather card or at the beginning of the route.
 
-This configuration is useful if your variables need to be used in more than one route:
+The following configuration is useful if your variables need to be used in more than one route:
 
 .You can save data in one or more variables that one or more routes can use.
 image::fd-sg-alt-1.png[Saving data for use by more than one route]
