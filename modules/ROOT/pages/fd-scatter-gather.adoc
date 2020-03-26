@@ -9,8 +9,8 @@ With a Scatter-Gather card, you can send a message through more than one set of 
 
 .This schematic diagram shows a Scatter-Gather card that includes the minimum of two routes.
 image::fd-sg.png[A Scatter-Gather card in a flow]
-<1> Any card can pass messages to a Scatter-Gather card, and this card can be the trigger of the current flow or any other card in the flow.
-<2> The Scatter-Gather card in included in a larger rectangle that is called the _scope_ of the card. Within this scope are two or more sets of card, each set called a _route_. The Scatter-Gather card processes all routes at the same time, and the routes are all independent of each other. Within a route, you can include any card, though it would not make sense to include an HTTP Listener because you don't want to hold up processing while waiting for an HTTP request. Each route can have one or more cards.
+<1> Any card can pass messages to a Scatter-Gather card. The card that passes messages can be the trigger of the current flow or any other card in the flow.
+<2> The Scatter-Gather card is included in a larger rectangle that is called the _scope_ of the card. Within this scope are two or more sets of cards, each set called a _route_. The Scatter-Gather card processes all routes at the same time, and the routes are all independent of each other. Each route can have one or more cards.
 <3> When all routes are finished processing data, the results from the routes are gathered included in the payload of the original message. The revised message is passed to the next card in the flow.
 
 Recall that, in general, messages have this structure:
@@ -168,20 +168,20 @@ Elly Fenley,0028t000001J7JUp9,efenley@tripple.com
 Richie Fore,0028t000001J3HKJ0,rfore@tripple.com
 Ricarda Cieslak,0028t000001J3WLl9,rcieslak@tripple.com
 Rosaria Jorgensen,0028t000001J3BNM0,rosaria.jorgensen@huttrick.com
-Treasa Barbeau,0028t000001J3BNk3,treasa.barbeau@huttirck.com
+Treasa Barbeau,0028t000001J3BNk3,treasa.barbeau@huttrick.com
 Dwayne Sgro,0028t000001J3EPO2,dsgro@sgroflo.com
 Maude Wilber,0028t000001J4UUy4,mwilber@zhipe.com
 Lashell Rouleau,0028t000001J3NIK6,lrouleau@zhipe.com
-Agnus Diehm,0028t000001J3TCX8,agnus.diehm@aigiant.com
-Pamella Fite,0028t000001J1LOQ3,pamella.fite@aigiant.com
-Kennith June,0028t000001J3POI0,kennith.june@aigiant.com
+Agnus Diehm,0028t000001J3TCX8,agnus.diehm@aipail.com
+Pamella Fite,0028t000001J1LOQ3,pamella.fite@aipail.com
+Kennith June,0028t000001J3POI0,kennith.june@aipail.com
 Keiko Woods,0028t000001J3SIL1,k.woods@fiephdom.org
 Natashia Horvat,0028t000001J3KSV0,n.horvat@fiephdom.org
 Margarita Ptak,0028t000001J3VVe5,ptakm@greelo.com
 Delena Hodgdon,0028t000001J3OSQ2,hodgdond@greelo.com
-Britt Lafferty,0028t000001J6HUT7,britt.lafferty@hoipolloi.com
-Irving Bates,0028t000001J3IUe6,irving.bates@hoipolloi.com
-Merle Cater,0028t000001J3PPl0,merle.cater@hoipolloi.com
+Britt Lafferty,0028t000001J6HUT7,britt.lafferty@redooler.com
+Irving Bates,0028t000001J3IUe6,irving.bates@redooler.com
+Merle Cater,0028t000001J3PPl0,merle.cater@redooler.com
 ----
 
 == Saving Message Data into Variables
@@ -240,7 +240,7 @@ Scatter Gather runs two or more parallel processes, called _routes_. When all ro
 
 == Fields in the Scatter-Gather Card
 
-Timeout:: The maximum length of time to wait, in milliseconds, for the results from each of the parallel processes to be gathered together into a new payload and sent to the next card. A value of 0 or lower means that there is no timeout. The default value is 9,223,372,036,854,776,000 milliseconds.
+Timeout:: The maximum length of time to wait, in milliseconds, for the results from each of the parallel processes to be gathered together into a new payload and sent to the next card. A value of 0 or lower means that there is no timeout. The default value is 9,223,372,036,854,776,000 millisecond, which is the maximum value for a 64-bit float.
 
 Max concurrency:: The maximum number of routes to process in parallel. By default, all of the routes that you create in for an instance of the Scatter-Gather card run in parallel.
 +
