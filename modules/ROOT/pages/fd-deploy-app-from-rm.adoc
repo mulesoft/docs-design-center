@@ -1,4 +1,4 @@
-= Deploy a Mule Application from Runtime Manager to CloudHub
+= Deploy a Mule Application from Runtime Manager to CloudHub by Using a JAR File
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -29,21 +29,9 @@ A JAR file containing a copy of your Mule app is downloaded to the default locat
 == Steps to Follow Before Importing the JAR File into Runtime Manager
 
 . Extract the content of the JAR file.
-. Open the file `src/main/resources/mule-artifact.properties` in the folder that was extracted from the JAR file, and provide values for the keys that are related to connection information.
-+
-The names of all keys for connection information contain three parts, the middle part being `connection`. You must provide values for all of these keys in the file. After saving the file, you can test and run the app.
-+
-For example, suppose that an instance of Salesforce Connector in an app uses a configuration that includes a *Basic Username Password* connection. For this type of connection, you must provide a username, password, and a security token. The username, password, and security token that are in the configuration that the connector uses when the app is in Flow Designer are not included in the configuration in the exported JAR file.
-+
-In the file `src/main/resources/mule-artifact.properties` are keys for the connection information for every configuration that is being used by a connector in the app. For the *Basic Username Password* connection in the configuration that the instance of Salesforce Connector is using in this example, these are the three keys:
-+
-----
-salesforce.connection.password =
-salesforce.connection.securityToken =
-salesforce.connection.username=
-----
+. Open the file `mule-artifact.properties` in the folder that was extracted from the JAR file, and provide values for the keys that are related to connection information.
 
-. Save `src/main/resources/mule-artifact.properties`.
+. Save `mule-artifact.properties`.
 
 == Steps to Follow in Runtime Manager
 

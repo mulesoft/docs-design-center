@@ -42,18 +42,6 @@ If the person with whom you are working uses Anypoint Studio, make the JAR file 
 Studio opens the project.
 
 . Open the file `src/main/resources/mule-artifact.properties` in the project and provide values for the keys that are related to connection information.
-+
-The names of all keys for connection information contain three parts, the middle part being `connection`. You must provide values for all of these keys in the file. After saving the file, you can test and run the app.
-+
-For example, suppose that an instance of Salesforce Connector in an app uses a configuration that includes a *Basic Username Password* connection. For this type of connection, you must provide a username, password, and a security token. The username, password, and security token that are in the configuration that the connector uses when the app is in Flow Designer are not included in the configuration in the exported JAR file.
-+
-After you import the JAR file into Studio as a project, you see the file `src/main/resources/mule-artifact.properties` in the file tree for the project. Double-click that file to open it in an editor in Studio. In it are keys for the connection information for every configuration that is being used by a connector in the app. For the *Basic Username Password* connection in the configuration that the instance of Salesforce Connector is using, these are the three keys:
-+
-----
-salesforce.connection.password =
-salesforce.connection.securityToken =
-salesforce.connection.username=
-----
 
 . Save `src/main/resources/mule-artifact.properties`.
 
@@ -66,7 +54,7 @@ If the person with whom you are working is in a different organization in Anypoi
 . Provide the connection information in the configurations that the connectors in the project use.
 +
 When Flow Designer opens the project, each card that represents a connector displays a red circle in its top-right corner. You must add the connection information that Flow Designer did not include in the JAR file.
-
+[loweralpha]
 .. In the *Project* pane on the left side of the canvas, expand the section *Reusable Configurations*.
 +
 All of the configurations that are used by connectors are marked by a red circle.
