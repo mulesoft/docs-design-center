@@ -54,7 +54,7 @@ If the person with whom you are working is in a different organization in Anypoi
 . Provide the connection information in the configurations that the connectors in the project use.
 +
 When Flow Designer opens the project, each card that represents a connector displays a red circle in its top-right corner. You must add the connection information that Flow Designer did not include in the JAR file.
-[loweralpha]
+
 .. In the *Project* pane on the left side of the canvas, expand the section *Reusable Configurations*.
 +
 All of the configurations that are used by connectors are marked by a red circle.
@@ -71,7 +71,7 @@ image::fd-location-of-red-circles-on-configs.png[]
 +
 The connection being used by the configuration is the connection that is selected when the Flow Designer opens the dialog.
 .. Specify the required connection information.
-.. Follow steps b through d for each configuration that is marked by a red circle.
+.. Follow steps 3.2 through 3.4 for each configuration that is marked by a red circle.
 
 
 
