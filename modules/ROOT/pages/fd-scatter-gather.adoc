@@ -36,7 +36,7 @@ vars
 
 == Example: Aggregating Contacts from Two Salesforce Organizations
 
-One way to use the Scatter-Gather card is to trigger it with an HTTP request. In this example, an HTTP request triggers queries that retrieve the lists of contacts for two Salesforce organizations. The Scatter-Gather card combines the payload from each instance of Salesforce Connector into a single payload. This payload is stored in a variable that concatenates the results of the two queries. Finally, the fields in the concatenated results are mapped to a data type that creates a CSV file.
+In this example, an HTTP request triggers the flow. The Scatter-Gather card initiates two routes that retrieve the lists of contacts for two Salesforce organizations. The Scatter-Gather card combines the payload from each instance of Salesforce Connector into a single payload. This payload is stored in a variable that concatenates the results of the two queries. Finally, the fields in the concatenated results are mapped to a data type that creates a CSV file.
 
 .This is the flow that creates the CSV file aggregating the contacts from the two Salesforce organizations.
 image::fd-sg-1-entire-flow.png[Flow for this example]
