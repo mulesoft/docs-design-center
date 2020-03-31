@@ -6,7 +6,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-If your organization requires someone with the proper authority to deploy applications from Runtime Manager, you can share with that person a copy of your project as a JAR file to deploy your application with.
+If your organization requires someone with the proper authority to deploy Mule applications from Runtime Manager, you can share with that person a copy of your project as a JAR file.
 
 No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
 JAR file. Therefore, you must edit and repackage the JAR file to provide that information for every configuration that is used by a connector in the app.

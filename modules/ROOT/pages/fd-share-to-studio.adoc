@@ -1,4 +1,4 @@
-= Collaborate with Someone who Works in Studio or Flow Designer
+= Collaborate with Someone Who Works in Studio or Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -10,7 +10,7 @@ When designing your Mule application, you might want help from someone else in y
 such as a developer, who works in Anypoint Studio, or from someone who is in another organization in Anypoint Platform and has access to Flow Designer. You can export the project as a JAR file from Flow Designer and then share the JAR file with that other person, who can import the JAR file as a project into Studio or Flow Designer.
 
 No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
-JAR file. Therefore, the other person must provide that information for every configuration that is used by a connector in the app after importing the JAR file into Studio or Flow Designer as a project.
+JAR file. Therefore, the recipient must provide that information for every configuration that is used by a connector in the app after importing the JAR file into Studio or Flow Designer as a project.
 
 As the other person works on the project, the changes are applied to your project online in Flow Designer. When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
@@ -34,7 +34,7 @@ A JAR file containing a copy of your Mule-app project is downloaded to the defau
 
 == Steps to Follow in Anypoint Studio to Import a Project
 
-If the person with whom you are working uses Anypoint Studio, make the JAR file available to that person, provide them with all of the connectivity information that they need for running the app, and then ask them to follow these steps:
+If the person with whom you are working uses Anypoint Studio, make the JAR file available to that person, provide them with all of the connectivity information that they need to run the app, and then ask them to follow these steps:
 
 . Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
 . Import the JAR file into Studio by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
@@ -47,7 +47,7 @@ Studio opens the project.
 
 == Steps to Follow in Flow Designer to Import a Project
 
-If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need for running the app, and then ask them to follow these steps:
+If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need to run the app, and then ask them to follow these steps:
 
 . Create a new Mule-app project in Flow Designer by opening Design Center, clicking *Create New*, and then clicking *Import Application* under *Create a Mule Application*.
 . From the *Import Application* dialog, select the JAR file and then click *Import*.
@@ -57,7 +57,7 @@ When Flow Designer opens the project, each card that represents a connector disp
 
 .. In the *Project* pane on the left side of the canvas, expand the section *Reusable Configurations*.
 +
-All of the configurations that are used by connectors are marked by a red circle.
+All of the configurations that are used by connectors are marked by a red circle:
 +
 image::fd-location-of-red-circles-on-configs.png[]
 +
@@ -69,9 +69,9 @@ image::fd-location-of-red-circles-on-configs.png[]
 .. Click a configuration.
 .. In the dialog that is opened, click the three dots in the connection that is being used in the configuration and select *Edit*.
 +
-The connection being used by the configuration is the connection that is selected when the Flow Designer opens the dialog.
+The connection being used by the configuration is the connection that is selected when Flow Designer opens the dialog.
 .. Specify the required connection information.
-.. Follow steps 3.2 through 3.4 for each configuration that is marked by a red circle.
+.. Repeat the three previous steps for each configuration that is marked by a red circle.
 
 
 
