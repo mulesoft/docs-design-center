@@ -1,4 +1,4 @@
-= Collaborate with Someone who Works in Studio
+= Collaborate with Someone Who Works in Studio or Flow Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,29 +7,73 @@ endif::[]
 :imagesdir: ../assets/images
 
 When designing your Mule application, you might want help from someone else in your Anypoint-Platform organization,
-such as a developer, who works in Anypoint Studio.
-You must first use Flow Designer to export the project as a `.jar` file, to share it with someone with developer credentials so that they can import it into Anypoint Studio. Ensure that the project is free of errors.
+such as a developer, who works in Anypoint Studio, or from someone who is in another organization in Anypoint Platform and has access to Flow Designer. You can export the project as a JAR file from Flow Designer and then share the JAR file with that other person, who can import the JAR file as a project into Studio or Flow Designer.
 
-To do so, you use *Export project sources* to share just the source files (including all the connector credentials),
-without all of the other Mule artifacts.
+No sensitive connection information, such as usernames, passwords, and security tokens, is included in the exported
+JAR file. Therefore, the recipient must provide that information for every configuration that is used by a connector in the app after importing the JAR file into Studio or Flow Designer as a project.
 
-As the other person works on the project, they can take advantage of the advanced features of Studio.
-When they are finished, they can deploy the project from Studio.
+As the other person works on the project, the changes are applied to your project online in Flow Designer. When the other person is finished, you can open your project in Flow Designer and pick up where that person left off.
 
-. Export your project by clicking the dots next to the Test button and select *Export* from the list.
+== Steps to Follow in Flow Designer to Export a Project
+
+In Flow Designer, follow these steps to export the project as a JAR file:
+
+. Ensure that the project is free of errors.
+. Export your project by clicking the three dots in the top-right corner of the canvas and selecting *Export*.
 +
-You see a pop-up with export choices.
+.You can access the *Export* option from the top-right corner of the canvas.
+image:fd-location-of-export-option.png[The location of the Export option]
 +
+<1> The three dots are to the right of the button that is labeled with a down arrow.
+<2> The *Export* option is at the bottom of the menu.
+
+
 . Select *Export project sources* to share just your project source files, and click *Export*.
 +
-A `.jar` file containing a copy of your Mule app downloads to the default location on your computer.
+A JAR file containing a copy of your Mule-app project is downloaded to the default location on your computer.
+
+== Steps to Follow in Anypoint Studio to Import a Project
+
+If the person with whom you are working uses Anypoint Studio, make the JAR file available to that person, provide them with all of the connectivity information that they need to run the app, and then ask them to follow these steps:
+
+. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
+. Import the JAR file into Studio by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
 +
-. Alert the recipient who works in Studio that the `.jar` is available so that they can:
-.. Access the `.jar` file and place it in a location where they can easily upload it from Studio.
-.. Enable Studio to access your organization in Anypoint Platform by selecting *Preferences* > *Anypoint Studio* > *Authentication*.
-.. Import the `.jar` file by selecting *File* > *Import* and then selecting *Anypoint Studio* > *Packaged Mule Application (.jar)*.
+Studio opens the project.
+
+. Open the file `src/main/resources/mule-artifact.properties` in the project and provide values for the keys that are related to connection information.
+
+. Save `src/main/resources/mule-artifact.properties`.
+
+== Steps to Follow in Flow Designer to Import a Project
+
+If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need to run the app, and then ask them to follow these steps:
+
+. Create a new Mule-app project in Flow Designer by opening Design Center, clicking *Create New*, and then clicking *Import Application* under *Create a Mule Application*.
+. From the *Import Application* dialog, select the JAR file and then click *Import*.
+. Provide the connection information in the configurations that the connectors in the project use.
 +
-Studio opens the project and it is ready to be worked on.
+When Flow Designer opens the project, each card that represents a connector displays a red circle in its top-right corner. You must add the connection information that Flow Designer did not include in the JAR file.
+
+.. In the *Project* pane on the left side of the canvas, expand the section *Reusable Configurations*.
++
+All of the configurations that are used by connectors are marked by a red circle:
++
+image::fd-location-of-red-circles-on-configs.png[]
++
+<1> The icon to click to open the *Project* pane.
+<2> A red circle to indicate that the flow contains errors. Because the configurations in the project lack connection information, there is a red circle next to each flow that includes connectors.
+<3> The *Reusable Configurations* section, which lists the configurations that connectors and core components in a project are using.
+<4> A red circle next to a listed configuration.
+
+.. Click a configuration.
+.. In the dialog that is opened, click the three dots in the connection that is being used in the configuration and select *Edit*.
++
+The connection being used by the configuration is the connection that is selected when Flow Designer opens the dialog.
+.. Specify the required connection information.
+.. Repeat the three previous steps for each configuration that is marked by a red circle.
+
+
 
 == See Also
 
