@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-You can use API Designer's visual API editor to scaffold RAML 1.0 or OAS 2.0 (JSON) API specifications by populating language-neutral forms.
+You can use API Designer's visual API editor to scaffold RAML 1.0, or OAS 2.0 or 3.0._x_ (JSON), API specifications by populating language-neutral forms.
 
 == Before You Begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
@@ -35,8 +35,6 @@ As you make progress, you can run the mocking service to simulate calls to your 
 
 == What to Do Next
 
-
-// After you are satisfied with your API specification, you can publish it to Exchange in RAML or OAS. If you want to publish it both in RAML and in OAS, publish it twice, the second time changing the name. For example, the first time you publish the specification, you might choose to publish in RAML and specify the name as `myAPI (RAML 1.0)`; the second time, you would choose to publish in OAS and could specify the name `myAPI (OAS 2.0 JSON)`.
 If you are satisfied with your API specification, you can publish it to Exchange in RAML 1.0. See xref:design-publish.adoc[Publish an API Specification].
 
 Alternatively, you can customize the specification in the API editor by clicking *Edit RAML*  or *Edit OAS*.
