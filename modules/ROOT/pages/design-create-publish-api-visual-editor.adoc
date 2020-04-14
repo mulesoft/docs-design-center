@@ -16,7 +16,7 @@ The visual API editor is divided into three panels:
 
 * The left panel displays the the name of the API specification being developed. It also provides controls that allow you to create resources, data types, and security schemes. These components all are included within the body of the specification and are not created as separate files.
 * The middle panel presents the forms in which you specify the properties of the components of the specification. When the editor first opens, it displays a form for specifying the main properties of the specification and for documenting it. Click on the name of an item in the left panel to open its form in the middle panel.
-* The right panel displays the RAML Viewer and the OAS Viewer, both of which are read-only. Click the tabs at the bottom of the panel to switch between them. These viewers display the current draft of the specification in either RAML or OAS. As you enter values in the forms that appear in the middle panel, the draft is updated with the values.
+* The right panel displays the RAML Viewer and the OAS Viewer, both of which are read-only. Click the tabs at the bottom of the panel to switch between them. These viewers display the current draft of the specification in either RAML 1.0 or OAS 3.0._x_. As you enter values in the forms that appear in the middle panel, the draft is updated with the values.
 +
 This panel also lets you run the mocking service to test endpoints that you have set up.
 
