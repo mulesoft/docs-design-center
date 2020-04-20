@@ -1,0 +1,16 @@
+= Viewing the Errors and Warnings for a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords:
+
+:imagesdir: ../assets/images
+
+
+image::apid-view-errors-warnings.png[]
+
+<1> Click the *Root Errors* tab to view all of the errors and warning for the root file and the files that the root file references. When there are any errors, warnings, or unreferenced files in the project, a circle appears on the tab.
+<2> Click the *Local Errors* tab to view all of the errors and warnings for the file that you are currently editing. When there are any errors or warnings in the file, or if the file is not referenced by the root file, a circle appears on the tab.
+<3> Click this arrow to open and close the view.
+<4> The view contains two columns. The *Location* column explains where the error is located or where the mistake that is causing the warning is located. Click an item in the column to go to the specified file and location. The *Description* column provides the text of the error message or warning. If an error is accompanied by a stack trace, the output of the stack trace is expandable below the error message. Both columns are sortable.
+<5> These icons show the number of error messages, warning messages, and unreferenced files in the currently opened section of the view.
