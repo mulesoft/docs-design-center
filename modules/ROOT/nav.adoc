@@ -8,6 +8,7 @@
  ** xref:design-scenarios-s6m3-for-published-apis.adoc[Using Published RAML API Specifications in Studio 6.x and Mule Runtime 3.x]
  ** xref:design-scenarios-s7m4-for-published-apis.adoc[Using Published RAML API Specifications in Studio 7.x and Mule Runtime 4.x]
 * xref:design-create-publish-api-specs.adoc[API Designer]
+ ** xref:design-ph1-oas-3-support.adoc[Beta: Phase 1 of Support for OAS 3.0._x_]
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
