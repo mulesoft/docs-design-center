@@ -3,7 +3,14 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-When you run an app in Flow Designer, it appears in the list of running applications in Runtime Manager. You can jump to Runtime Manager from Flow Designer to view runtime information about the app, such as the version of Mule Runtime that it uses, the number of vCores that it uses, and more.
+When you run an app from within Flow Designer and you are using Anypoint Virtual Private Cloud (VPC), the app appears in the list of running applications in Runtime Manager.
+
+[NOTE]
+====
+If you are not using VPC, then the app is not listed in Runtime Manager.
+====
+
+You can jump to Runtime Manager from Flow Designer to view runtime information about the app, such as the version of Mule Runtime that it uses, the number of vCores that it uses, and more.
 
 . If the status message in the toolbar above the canvas is `Ready to Run`, click *Run*.
 . Click the three-dots icon to the left of the *Deploy* button.
