@@ -7,7 +7,7 @@ endif::[]
 
 :keywords: mozart, deploy, environments
 
-All Mule applications that you create with Flow Designer are created in the Design environment. When a Mule application that you've created is ready to go live, you can deploy it to another environment, if your organization allows you to do so. The target environment must have enough vCores to accommodate the application; otherwise, deployment will fail.
+All Mule applications that you create with Flow Designer are created in the Design environment. When a Mule application that you've created is ready to go live, you can deploy it to another environment, if your organization allows you to do so.
 
 As you deploy your application, you can change connector configurations and connections. You need to do this if there are differences between the testing and target environments that would necessitate such changes. For example, if you tested your app in the *Sandbox* environment and now want to deploy it to a production environment, you most likely need to replace the connections that each connector used for connecting to test systems with connections for connecting to production systems.
 
@@ -19,7 +19,7 @@ For example, suppose that your application uses the configuration ConfigA for a 
 
 ====
 
-After you deploy your application, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
+After you deploy your application to an environment, the values for all of its properties are secured in Runtime Manager in the *Properties* section of the *Settings* page for the application. To see the list of an application's properties in Runtime Manager, click *Applications*, select the application, click *Settings*, and click *Properties*.
 
 == To Deploy a Mule App from Flow Designer
 . Click the arrow in the top-right corner of Flow Designer and then select *Deploy application*.
