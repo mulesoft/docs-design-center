@@ -38,12 +38,12 @@ A JAR file containing a copy of your Mule app is downloaded to the default locat
 . Switch to the CloudHub environment in which you want to deploy the app.
 . Click *Deploy Application*.
 . On the *Deploy Application* page, select *Choose File* > *Upload File* and upload the JAR file.
-. Follow the instructions in https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub.adoc[Deploying to CloudHub].
+. Follow the instructions in xref:runtime-manager::deploying-to-cloudhub.adoc[Deploying to CloudHub].
 
 == See Also
 
-* https://docs.mulesoft.com/access-management/environments.adoc[Environments]
+* xref:access-management::environments.adoc[Environments]
 
-* https://docs.mulesoft.com/runtime-manager/managing-deployed-applications.adoc[Manage Deployed Applications]
+* xref:runtime-manager::managing-deployed-applications.adoc[Manage Deployed Applications]
 
 * https://help.mulesoft.com[MuleSoft Help Center]
