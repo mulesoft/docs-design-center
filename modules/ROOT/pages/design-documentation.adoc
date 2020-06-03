@@ -40,87 +40,91 @@ servers: <1>
 paths:
   /default:<2>
     description: A default path to the API
-    get:
-      summary: "A get method"
+    get:<3>
+      summary: "The get method for /default"
       responses:
         200:
           description: Successful response
-  /duplicated:<3>
+  /duplicated:<4>
     description: Has some of the default servers
     servers:
       - url: https://api.company.org/data/2.5/
         description: Production server
       - url: http://beta.api.company.org/data/2.5/
         description: Beta server
-    get:<4>
-      summary: "A get method"
+    get:<5>
+      summary: "The get method for /duplicated"
       responses:
         200:
           description: Successful response
-  /files:<5>
+  /files:<6>
     description: File upload and download operations
     servers:
       - url: https://files.example.com
         description: Override base path for all operations with the /files path
-    get:<6>
-      summary: "A get method"
+    get:<7>
+      summary: "The get method for /files"
       responses:
         200:
           description: Successful response
-  /ping:<7>
+  /ping:<8>
     servers:
       - url: https://endpoint.example.com
         description: Override base path servers
-    get:<8>
+    get:<9>
       servers:
         - url: https://echo.example.com
           description: Override base path for the GET /ping operation
         - url: https://echo2.example.com
           description: Also overrides base path for the GET /ping operation
-      summary: "A get method"
+      summary: "The get method for /ping"
       responses:
         200:
           description: Successful response
-    post:<9>
-      summary: "A post method"
+    post:<10>
+      summary: "The post method for /ping"
       responses:
         201:
           description: Successful create
 ----
 
-1. a
+1. The Summary page of the documentation for this API lists the four servers that are defined in this `servers` field.
 +
 image::apid-apic-oas-3-summary.png[]
 
-2. a
+2. The `/default` endpoint does not override the base `servers` definition at the top of the API. Therefore, you can select from those four servers to see the URI for this method at each.
 +
 image::apid-apic-oas-3-default.png[]
 
-3. a
+3. The `GET` method for the `/default` endpoint also inherits the four servers in the base `servers` definition.
 +
 image::apid-apic-oas-3-default-get.png[]
 
-4. a
+4. The `/duplicated` endpoint overrides the base `servers` definition, its local `servers` definition including only the last two servers of the original four.
++
+image::apid-apic-oas-3-duplicated.png[]
+
+5. The `GET` method for the `/duplicated` endpoint inherits the two servers in the local `servers` definition.
 +
 image::apid-apic-oas-3-duplicated-get.png[]
 
-5. a
+6. The `/files` endpoint overrides the base `servers` definition, its local `servers` definition including only one server.
 +
 image::apid-apic-oas-3-files.png[]
 
-6. a
+7. The `GET` method for the `/files` endpoint inherits the one server in the local `servers` definition. Therefore, there is no list of servers to choose from.
 +
 image::apid-apic-oas-3-files-get.png[]
 
-7. a
+8. The `/ping` endpoint overrides the base `servers` definition, its local `servers` definition including only one server.
 +
 image::apid-apic-oas-3-ping.png[]
 
-8. a
+9. The `GET` method for the `/ping` endpoint overrides both the base `servers` definition and the `/ping` endpoint's local `servers` definition. The `GET` method's local `servers` definition includes two servers.
 +
 image::apid-apic-oas-3-ping-get.png[]
 
-9. a
+10. The `POST` method for the `/ping` endpoint inherits the one server in the `/ping` endpoint's local `servers` definition. Therefore, there is not list of servers to choose from.
 +
 image::apid-apic-oas-3-ping-post.png[]
 
