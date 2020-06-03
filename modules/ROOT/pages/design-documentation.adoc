@@ -1,0 +1,6 @@
+= Differences for OAS 3.0 in Rendered Documentation
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:imagesdir: ../assets/images
