@@ -150,7 +150,7 @@ servers:
         default: '443'
 
 components:
-  requestBodies:<1>
+  requestBodies:
     callbackMessage1:
       description: Callback message `1`
       required: true
@@ -172,7 +172,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Clb3'
-  schemas:<2>
+  schemas:
     Clb1:
       title: Event 1
       type: object
@@ -225,7 +225,7 @@ paths:
       responses:
         '200':
           description: OK
-          links:
+          links:<1>
             unsubscribeOp:
               operationId: unsubscribeOperation
               parameters:
@@ -240,28 +240,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/paymentRequest'
-          links:
+          links:<2>
             paymentUrl:
               parameters:
                 paymentUrl: $response.body#/info.paymentUri
                 paymentToken: $response.body#/info.token
-      callbacks:<3>
+      callbacks:
         inProgress:
-          '{$request.body#/inProgressUrl}':
+          '{$request.body#/inProgressUrl}':<3>
             post:
               requestBody:
                 $ref: '#/components/requestBodies/callbackMessage1'
               responses:
                 '200':
                   description: OK
-          '{$request.body#/failedUrl}':
+          '{$request.body#/failedUrl}':<4>
             post:
               requestBody:
                 $ref: '#/components/requestBodies/callbackMessage2'
               responses:
                 '200':
                   description: OK
-          '{$request.body#/successUrl}':
+          '{$request.body#/successUrl}':<5>
             post:
               requestBody:
                 $ref: '#/components/requestBodies/callbackMessage3'
@@ -282,6 +282,14 @@ paths:
             description: OK
 ----
 
-<1> a
-<2> a
-<3> a
+1. The links for the `200` response for the `POST` method of the `/subscribe` endpoint appear at the bottom of the method's documentation:
++
+image::apid-apic-oas-3-links-1.png[]
+
+2. The links for the `402` response for the `POST` method of the `/subscribe` endpoint appear at the bottom of the method's documentation:
++
+image::apid-apic-oas-3-links-2.png[]
+
+The documentation for callouts 3-5 appear in the *Callbacks* section of the documentation for the `POST` method of the `/subscribe` endpoint:
+
+image::apid-apic-oas-3-callbacks.png[]
