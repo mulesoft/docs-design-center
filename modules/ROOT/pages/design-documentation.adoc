@@ -5,7 +5,13 @@ endif::[]
 
 :imagesdir: ../assets/images
 
+The right pane of the text editor in API Designer displays the documentation that is written into API specifications. For API specifications that are written in RAML or OAS 2.0, the ways that the documentation is rendered are identical. However, the documentation for API specifications that are written in OAS 3.0 can include multiple server definitions, as well as callbacks and links.
+
 == Support for Definitions of Multiple Servers
+
+OAS 3.0 lets you define servers by using the `servers` field. You can define servers globally at the top of a specification, locally for endpoints, and locally for methods. Local definitions override the definitions set at the next higher level in the specification's hierarchy. Definitions set locally for methods override definitions set at endpoints and globally. Definitions set locally for endpoints override definitions set globally.
+
+The following example API specification demonstrates different ways, indicated by callouts, that you can set server definitions. The callouts are listed below the API and the documentation for the portion of the API at each callout is illustrated with a screenshot.
 
 ----
 openapi: '3.0.2'
