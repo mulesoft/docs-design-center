@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-The right pane of the text editor in API Designer displays the documentation that is written into API specifications. For API specifications that are written in RAML or OAS 2.0, the ways that the documentation is rendered are identical. However, the documentation for API specifications that are written in OAS 3.0 can include multiple server definitions, as well as callbacks and links.
+The right pane of the text editor in API Designer displays the documentation that is written into API specifications. For API specifications that are written in RAML or OAS 2.0, the ways that the documentation is rendered are identical. However, the documentation for API specifications that are written in OAS 3.0 can include multiple server definitions, as well as links and callbacks.
 
 == Support for Definitions of Multiple Servers
 
@@ -134,7 +134,11 @@ image::apid-apic-oas-3-ping-get.png[]
 +
 image::apid-apic-oas-3-ping-post.png[]
 
-== Support for Callbacks and Links
+== Support for Links and Callbacks
+
+OAS 3.0 lets you define links and callbacks. For an explanation of these features, see the specification for openAPI 3.0 at \https://swagger.io/.
+
+The following example API specification demonstrates how to set links and callbacks. The callouts indicate parts of the API specification that are rendered as documentation in the screenshots that follow.
 
 ----
 openapi: 3.0.0
