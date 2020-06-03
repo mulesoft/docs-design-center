@@ -4,3 +4,252 @@ include::_attributes.adoc[]
 endif::[]
 
 :imagesdir: ../assets/images
+
+== Support for Definitions of Multiple Servers
+
+----
+openapi: '3.0.2'
+info:
+  title: Multi-server Cemo API
+  version: '1.0'
+servers: <1>
+  - url: https://{customerId}.saas-app.com:{port}/v2
+    variables:
+      customerId:
+        default: demo
+        description: Customer ID assigned by the service provider
+      port:
+        enum:
+          - '443'
+          - '8443'
+        default: '443'
+  - url: https://{region}.api.company.com
+    variables:
+      region:
+        default: westus
+        enum:
+          - westus
+          - eastus2
+          - westcentralus
+          - westeurope
+          - southeastasia
+  - url: https://api.company.org/data/2.5/
+    description: Production server
+  - url: http://beta.api.company.org/data/2.5/
+    description: Beta server
+paths:
+  /default:<2>
+    description: A default path to the API
+    get:
+      summary: "A get method"
+      responses:
+        200:
+          description: Successful response
+  /duplicated:<3>
+    description: Has some of the default servers
+    servers:
+      - url: https://api.company.org/data/2.5/
+        description: Production server
+      - url: http://beta.api.company.org/data/2.5/
+        description: Beta server
+    get:
+      summary: "A get method"
+      responses:
+        200:
+          description: Successful response
+  /files:<4>
+    description: File upload and download operations
+    servers:
+      - url: https://files.example.com
+        description: Override base path for all operations with the /files path
+    get:
+      summary: "A get method"
+      responses:
+        200:
+          description: Successful response
+  /ping:<5>
+    servers:
+      - url: https://endpoint.example.com
+        description: Override base path servers
+    get:<6>
+      servers:
+        - url: https://echo.example.com
+          description: Override base path for the GET /ping operation
+        - url: https://echo2.example.com
+          description: Also overrides base path for the GET /ping operation
+      summary: "A get method"
+      responses:
+        200:
+          description: Successful response
+    post:<7>
+      summary: "A post method"
+      responses:
+        201:
+          description: Successful create
+----
+
+<1> a
+<2> a
+<3> a
+<4> a
+<5> a
+<6> a
+<7> a
+
+== Support for Callbacks and Links
+
+----
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: Callback Demo API
+
+servers:
+  - url: https://{customerId}.saas-app.com:{port}/v2
+    variables:
+      customerId:
+        default: demo
+        description: Customer ID assigned by the service provider
+      port:
+        enum:
+          - '443'
+          - '8443'
+        default: '443'
+
+components:
+  requestBodies:<1>
+    callbackMessage1:
+      description: Callback message `1`
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Clb1'
+    callbackMessage2:
+      description: Callback message `2`
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Clb2'
+    callbackMessage3:
+      description: Callback message `3`
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Clb3'
+  schemas:<2>
+    Clb1:
+      title: Event 1
+      type: object
+      properties:
+        text:
+          type: string
+          description: Message text
+    Clb2:
+      title: Event 2
+      type: object
+      properties:
+        productId:
+          type: string
+          description: Order product id
+    Clb3:
+      title: Event 3
+      type: object
+      properties:
+        eventId:
+          type: string
+          description: Event internal ID
+        triggerAuthor:
+          type: string
+          description: A person triggered the event
+    paymentRequest:
+      title: Payment
+      type: object
+      properties:
+        token:
+          type: string
+          description: Payment token generated for this request
+        amount:
+          type: number
+          description: The payment amount.
+paths:
+  /subscribe:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                inProgressUrl:
+                  type: string
+                failedUrl:
+                  type: string
+                successUrl:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          links:
+            unsubscribeOp:
+              operationId: unsubscribeOperation
+              parameters:
+                Id: $response.body#/subscriberId
+            otherOp:
+              parameters:
+                one: $response.body#/one
+                two: $response.body#/two
+        402:
+          description: Not OK. Payment is required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentRequest'
+          links:
+            paymentUrl:
+              parameters:
+                paymentUrl: $response.body#/info.paymentUri
+                paymentToken: $response.body#/info.token
+      callbacks:<3>
+        inProgress:
+          '{$request.body#/inProgressUrl}':
+            post:
+              requestBody:
+                $ref: '#/components/requestBodies/callbackMessage1'
+              responses:
+                '200':
+                  description: OK
+          '{$request.body#/failedUrl}':
+            post:
+              requestBody:
+                $ref: '#/components/requestBodies/callbackMessage2'
+              responses:
+                '200':
+                  description: OK
+          '{$request.body#/successUrl}':
+            post:
+              requestBody:
+                $ref: '#/components/requestBodies/callbackMessage3'
+              responses:
+                '200':
+                  description: OK
+  /unsubscribe:
+      post:
+        operationId: unsubscribeOperation
+        parameters:
+          - in: query
+            name: Id
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: OK
+----
+
+<1> a
+<2> a
+<3> a
