@@ -109,7 +109,20 @@ image::apid-apic-oas-3-duplicated-get.png[]
 image::apid-apic-oas-3-files.png[]
 
 6. a
++
+image::apid-apic-oas-3-files-get.png[]
+
 7. a
++
+image::apid-apic-oas-3-ping.png[]
+
+8. a
++
+image::apid-apic-oas-3-ping-get.png[]
+
+9. a
++
+image::apid-apic-oas-3-ping-post.png[]
 
 == Support for Callbacks and Links
 
