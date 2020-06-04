@@ -11,7 +11,7 @@ The right pane of the text editor in API Designer displays the documentation tha
 
 OAS 3.0 lets you define servers by using the `servers` field. You can define servers globally at the top of a specification, locally for endpoints, and locally for methods. Local definitions override the definitions set at the next higher level in the specification's hierarchy. Definitions set locally for methods override definitions set at endpoints and globally. Definitions set locally for endpoints override definitions set globally.
 
-The following example API specification demonstrates different ways, indicated by callouts, that you can set server definitions. The callouts are listed below the API and the documentation for the portion of the API at each callout is illustrated with a screenshot.
+The following example API specification demonstrates different ways, indicated by ten callouts (1 - 10), that you can set server definitions. After the example API specification, the documentation for the portion of the API at each callout is illustrated with a screenshot.
 
 ----
 openapi: '3.0.2'
@@ -94,43 +94,43 @@ paths:
           description: Successful create
 ----
 
-1. The Summary page of the documentation for this API lists the four servers that are defined in this `servers` field.
+1. The Summary page of the documentation for this API lists the four servers that are defined in this `servers` field:
 +
 image::apid-apic-oas-3-summary.png[]
 
-2. The `/default` endpoint does not override the base `servers` definition at the top of the API. Therefore, you can select from those four servers to see the URI for this method at each.
+2. The `/default` endpoint does not override the base `servers` definition at the top of the API. On the Overview page for the endpoint, you can select from those four servers to see the URI for this endpoint at each:
 +
 image::apid-apic-oas-3-default.png[]
 
-3. The `GET` method for the `/default` endpoint also inherits the four servers in the base `servers` definition.
+3. The `GET` method for the `/default` endpoint also inherits the four servers in the base `servers` definition. On the page for this method, you can select from those four servers to see the URI for this method at each:
 +
 image::apid-apic-oas-3-default-get.png[]
 
-4. The `/duplicated` endpoint overrides the base `servers` definition, its local `servers` definition including only the last two servers of the original four.
+4. The `/duplicated` endpoint overrides the base `servers` definition, its local `servers` definition including only the last two servers of the original four. On the Overview page for the endpoint, you can select from those two servers to see the URI for this endpoint at each:
 +
 image::apid-apic-oas-3-duplicated.png[]
 
-5. The `GET` method for the `/duplicated` endpoint inherits the two servers in the local `servers` definition.
+5. The `GET` method for the `/duplicated` endpoint inherits the two servers in the local `servers` definition. On the page for this method, you can select from those two servers to see the URI for this method at each:
 +
 image::apid-apic-oas-3-duplicated-get.png[]
 
-6. The `/files` endpoint overrides the base `servers` definition, its local `servers` definition including only one server.
+6. The `/files` endpoint overrides the base `servers` definition, its local `servers` definition including only one server. On the Overview page for this endpoint, there are no servers to choose from, as there were for the previous two endpoints:
 +
 image::apid-apic-oas-3-files.png[]
 
-7. The `GET` method for the `/files` endpoint inherits the one server in the local `servers` definition. Therefore, there is no list of servers to choose from.
+7. The `GET` method for the `/files` endpoint inherits the one server in the local `servers` definition. On the page for thie method, there is no list of servers to choose from.
 +
 image::apid-apic-oas-3-files-get.png[]
 
-8. The `/ping` endpoint overrides the base `servers` definition, its local `servers` definition including only one server.
+8. The `/ping` endpoint overrides the base `servers` definition, its local `servers` definition including only one server. On the Overview page for this endpoint, there are no servers to choose from:
 +
 image::apid-apic-oas-3-ping.png[]
 
-9. The `GET` method for the `/ping` endpoint overrides both the base `servers` definition and the `/ping` endpoint's local `servers` definition. The `GET` method's local `servers` definition includes two servers.
+9. The `GET` method for the `/ping` endpoint overrides both the base `servers` definition and the `/ping` endpoint's local `servers` definition. The `GET` method's local `servers` definition includes two servers. On the page for this method, you can select from those two servers to see the URI for this method at each:
 +
 image::apid-apic-oas-3-ping-get.png[]
 
-10. The `POST` method for the `/ping` endpoint inherits the one server in the `/ping` endpoint's local `servers` definition. Therefore, there is not list of servers to choose from.
+10. The `POST` method for the `/ping` endpoint inherits the one server in the `/ping` endpoint's local `servers` definition. On the Overview page for this endpoint, there is no list of servers to choose from.
 +
 image::apid-apic-oas-3-ping-post.png[]
 
