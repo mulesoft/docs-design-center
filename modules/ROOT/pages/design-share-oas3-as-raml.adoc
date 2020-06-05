@@ -1,4 +1,4 @@
-= Sharing an OAS 3.0 API Specification as RAML
+= Sharing an OAS 3.0 API Specification as a RAML 1.0 Specification
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
