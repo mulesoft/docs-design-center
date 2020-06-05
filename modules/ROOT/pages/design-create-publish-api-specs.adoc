@@ -9,7 +9,7 @@ API Designer provides a web-based interface for designing, documenting, testing,
 
 == Designing
 
-You can use two different tools in API Designer -- the text editor and the visual editor -- to create API specifications in RESTful API Modeling Language (RAML) version 0.8 or 1.0, or according to OpenAPI specification (OAS) version 2.0 or 3.0._x_.
+You can use two different tools in API Designer -- the text editor and the visual editor -- to create API specifications in RESTful API Modeling Language (RAML) version 0.8 or 1.0, or according to OpenAPI specification (OAS) version 2.0 or 3.0.
 
 With the text editor, you can:
 

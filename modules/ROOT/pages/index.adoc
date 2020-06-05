@@ -9,7 +9,7 @@ Anypoint Design Center is a development environment that consists of two tools:
 
 * xref:design-create-publish-api-specs.adoc[API Designer]
 +
-In API Designer, you can create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification (OAS) 2.0 or 3.0._x_. You can also create API fragments in RAML. After you create a specification or fragment, you can publish it to Anypoint Exchange, so that it can be used by anyone in your MuleSoft organization.
+In API Designer, you can create API specifications in RESTful API Modeling Language (RAML) 0.8 or 1.0, or according to OpenAPI specification (OAS) 2.0 or 3.0. You can also create API fragments in RAML. After you create a specification or fragment, you can publish it to Anypoint Exchange, so that it can be used by anyone in your MuleSoft organization.
 
 * xref:about-designing-a-mule-application.adoc[Flow Designer]
 +
