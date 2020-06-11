@@ -1062,7 +1062,7 @@ types:
 |====
 
 
-For more information, see the section "Union Types" in the xref:https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
+For more information, see the section "Union Types" in the https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
 
 <<Back to the top>>
 
