@@ -5,7 +5,7 @@ endif::[]
 
 You can import API specifications and RAML fragments into an API-specification project.
 
-The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0 or 3.0. You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
+The API specifications that you import can be written in RAML 0.8, RAML 1.0, or OpenAPI Specification (OAS) 2.0. You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
 
 The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
 
