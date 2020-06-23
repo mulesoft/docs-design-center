@@ -48,7 +48,7 @@ The left panel also lists the file `exchange.json`, which is a file that contain
 +
 As you draft, the text editor suggests RAML nodes, methods, and other elements that you can add at the location of your cursor.
 +
-You can import files into your project, either separately or bundled together in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
+You can import files into your project, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
 
 
 == What to Do Next
