@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 (either in JSON or YAML).
+You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 or 3.0 (either in JSON or YAML).
 
 == Before You Begin
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
@@ -43,7 +43,7 @@ While you are working in the editor, you can use a large number of commands to n
 +
 You can also perform these tasks:
 +
-Import files and API fragments into your project:: You can import files, either separately or bundled together in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
+Import files and API fragments into your project:: You can import files, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
 +
 For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
 +
