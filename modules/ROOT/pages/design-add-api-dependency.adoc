@@ -18,7 +18,7 @@ If you export your project to work on it in another editor, edit the referenced 
 
 . On the left side of the editor, click the *Exchange dependencies* icon, which looks like this:
 +
-image::manage-dependency-versions-design-center-d96c7.png[title="Manage dependencies",46,52,align="left"]
+image::manage-dependency-versions-design-center.png[title="Manage dependencies",46,52,align="left"]
 . Click the plus sign that is at the top of the left pane.
 . Select the API fragments that you want to import. You can select from API fragments that are visible to the organizations that you belong to.
 
