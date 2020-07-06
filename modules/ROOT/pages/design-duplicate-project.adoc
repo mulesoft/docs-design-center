@@ -1,0 +1,23 @@
+= Duplicate a Project
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The dependencies in the original project are retained in the duplicate project.
+
+Duplicating a project that is in the text editor opens a new browser tab that displays the new project in the text editor.
+Duplicating a project that is in the visual editor opens a new browser tab that displays the new project in the text editor, not in the visual editor.
+
+The project is listed in Design Center's project list.
+
+If the original was in a sub-branch, then the duplicate is on the master branch.
+
+You cannot duplicate a project when the mocking service is turned on.
+You cannot duplicate a project that is in read-only mode.
+
+To duplicate a project:
+
+. Open the project.
+. Click the gear in the top-right corner of the editor.
+. Select *Duplicate*.
+. Name the duplicate project and click *Duplicate*.
