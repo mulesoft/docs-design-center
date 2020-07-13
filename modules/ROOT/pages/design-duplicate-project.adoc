@@ -24,6 +24,6 @@ Any dependencies that are listed in the original project are retained in the dup
 
 API Designer opens a new browser tab that displays the new project. If the original project is in the text editor, the duplicate project is opened in the text editor. If the original project is in the visual editor, the duplicate project is opened in the visual editor.
 
-If the original was in a sub-branch, the duplicate is on the master branch.
+If the original was in a sub-branch, the duplicate is on the same sub-branch.
 
 The duplicate project is listed in Design Center's project list.
