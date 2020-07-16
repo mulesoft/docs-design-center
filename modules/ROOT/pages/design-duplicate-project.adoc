@@ -16,7 +16,7 @@ Any dependencies that are listed in the original project are retained in the dup
 == Procedure
 
 . Open the project.
-. Click the gear in the top-right corner of the editor.
+. Click the gear icon in the top-right corner of the editor.
 . Select *Duplicate*.
 . Name the duplicate project and click *Duplicate*.
 
