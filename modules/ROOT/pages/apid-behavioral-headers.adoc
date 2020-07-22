@@ -17,6 +17,23 @@ You can specify a value for this header as an integer or as a range of integers.
 It is possible for the delay to be longer than a single integer value or the high end of a range, depending on the latency of your network.
 ====
 
+The MS2-Delay takes a maximum value of 10000 milliseconds (ms), and follows this behavior:
+
+* If the value is set to less than 10000 ms, the mocking service adds a delay of ~5000 ms.
+* If the value is set to greater than 10000 ms, the mocking service adds a delay of ~10000 ms.
+
+Examples:
+* If the value is set to a range of 5000 - 9000 ms, the mocking service adds a delay of ~5000 - ~9000 ms.
+* If the value is set to a range of 9000 - 20000 ms, the mocking service adds a delay of ~9000 - ~10000 ms.
+* If the value is set to a range of 20000 - 30000 ms, the mocking service returns this error message:
+
+----
+{
+  "code": "INVALID_HEADER_VALUE",
+  "message": "Invalid value for header MS2-Delay. Requested range is higher than the max value allowed: 10000 ms"
+}
+----
+
 MS2-Error-Level:: Indicates which range of error status codes the mocking service is restricted to using. You can specify one of the following three case-sensitive values:
 +
 * `REQUEST_ONLY`: The mocking service uses only 4XX codes.
