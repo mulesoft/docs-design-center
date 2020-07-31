@@ -22,7 +22,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 
 * The left panel lists the files in your project.
 +
-The stub specification file is listed and set as the root file of the project. You can change the name (but not the extension) of this file by right-clicking the three dots to the right of the name and selecting *Rename*.
+The stub specification file is listed and set as the root file of the project. You can change the name (but not the extension) of this file by clicking the three dots to the right of the name and selecting *Rename*.
 +
 The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 +
