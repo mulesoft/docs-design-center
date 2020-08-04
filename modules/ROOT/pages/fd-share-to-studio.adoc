@@ -45,7 +45,7 @@ Studio opens the project.
 
 . Save `src/main/resources/mule-artifact.properties`.
 
-== Steps to Follow in Flow Designer to Import a Project
+== Steps to Follow in Flow Designer to Import a Project Exported from Flow Designer
 
 If the person with whom you are working is in a different organization in Anypoint Platform and uses Flow Designer, make the JAR file available to that person, provide them with all of the connectivity information that they need to run the app, and then ask them to follow these steps:
 
@@ -73,7 +73,10 @@ The connection being used by the configuration is the connection that is selecte
 .. Specify the required connection information.
 .. Repeat the three previous steps for each configuration that is marked by a red circle.
 
-
+[NOTE]
+====
+Do not import into Flow Designer a JAR file that was exported from Anypoint Studio. Flow Designer does not support all of the features of Mule applications that are supported in Anypoint Studio.
+====
 
 == See Also
 
