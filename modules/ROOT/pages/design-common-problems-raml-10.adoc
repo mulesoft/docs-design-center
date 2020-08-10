@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-:page-aliases: design-modify-raml-specs-conform.adoc
+:page-aliases: design-modify-raml-specs-conform.adoc, design-scenarios-s6m3-for-published-apis.adoc, design-scenarios-s7m4-for-published-apis.adoc
 
 [[bookmark-a,Back to the top]]
 
