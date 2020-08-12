@@ -2,7 +2,7 @@
 
 [[bookmark-a,Back to the top]]
 
-When you write an API specification in RAML 0.8, you might inadvertently make a mistake that is common to a large number of other authors. Many of those common errors are explained below, along with tips for how to resolve them.
+The following sections describe common errors authors make when writing API specifications in RAML 0.8, and tips for resolving them.
 
 
 
