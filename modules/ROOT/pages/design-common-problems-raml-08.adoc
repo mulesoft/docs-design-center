@@ -2,9 +2,13 @@
 
 [[bookmark-a,Back to the top]]
 
-The following sections describe common errors authors make when writing API specifications in RAML 0.8, and tips for resolving them.
+As of January 10, 2019, the text editor (one of the two editors in Design Center's API Designer) uses stricter validation by default for RAML API-specification projects that were created before this date. If you open in the text editor a published API specification that is written in RAML 0.8, and you see violation (red) or warning (orange) messages, this list might help you to resolve the problems in your RAML.
 
 
+[IMPORTANT]
+====
+After a grace period that lasts at least until January 10, 2020, you will not be able to publish API specifications that generate any violation messages.
+====
 
 [.parser\*invalid-type-definition#parser\*invalid-type-definition]
 == Using a reserved name for a schema
