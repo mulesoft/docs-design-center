@@ -1,0 +1,1 @@
+= Edit in Multiple Tabs in the Text Editor
