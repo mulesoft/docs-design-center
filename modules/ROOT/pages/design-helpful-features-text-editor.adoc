@@ -1,0 +1,29 @@
+= Helpful Features in the Text Editor
+
+
+
+* You can rename declarable objects everywhere they are used in a project with one action.
++
+You can right-click the name of an object where it is declared, select *Rename Symbol*, and provide a new name. The object is also renamed wherever it is used (not just mentioned) in all of the files of the current project that are associated with the root file of the project.
++
+For example, in the following example API specification `product_name` is declared as a type on line 5 at callout 1, mentioned at callout 2, and used on line 17 at callout 3. If you right-click `product_name` at callout 1 and use the *Rename Symbol* option to change its name, `product_name` is changed only at callout 3.
++
+----
+#%RAML 1.0
+title: Test Renaming
+
+types:
+  product_name:  <1>
+    type: object
+    properties:
+      name: string
+
+/test:
+  get:
+    responses:
+      200:
+        description: product_name  <2>
+        body:
+          application/json:
+            type: product_name  <3>
+----
