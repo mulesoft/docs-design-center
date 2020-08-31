@@ -8,11 +8,11 @@ The text editor makes it easy to rename declarable objects and to find the names
 == Renaming Declarable Objects
 
 You can rename declarable objects everywhere they are used in a project with one action.
-+
+
 You can right-click the name of an object where it is declared, select *Rename Symbol*, and provide a new name. The object is also renamed wherever it is used (not just mentioned) in all of the files of the current project that are associated with the root file of the project.
-+
+
 For example, in the following example API specification `product_name` is declared as a type on line 5 at callout 1, mentioned at callout 2, and used on line 17 at callout 3. If you right-click `product_name` at callout 1 and use the *Rename Symbol* option to change its name, `product_name` is changed only at callout 3.
-+
+
 ----
 #%RAML 1.0
 title: Test Renaming
@@ -35,11 +35,11 @@ types:
 
 == Highlighting the Names of Declarable Objects
 You can highlight the names of declarable objects where they are used in a file.
-+
+
 To see all of the locations in a file where an object is used, click the cursor in the name of the object where that object is declared.
-+
+
 For example, the type `person` is declared on line 5 at the first callout in the following example API specification. That type is subsequently used on line 16 at the second callout. If you click `person` on line 5, the text editor highlights `person` on line 16.
-+
+
 ----
 #%RAML 1.0
 title: Test Highlighting
@@ -58,11 +58,11 @@ types:
           application/json:
             type: person  <2>
 ----
-+
+
 This highlighting works for all declarable objects, such as types, security schemes, resource types, and traits.
-+
+
 Highlighting appears only where the object is used, not every location where its name appears. For example, in the following example API specification, `person` is declared as a type on line 5 at callout 1, mentioned on line 14 at callout 2, and used on line 17 at callout 3. When you click in `person` at callout 1, `person` is highlighted only at callout 3.
-+
+
 ----
 #%RAML 1.0
 title: Test Highlighting
