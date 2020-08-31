@@ -1,5 +1,9 @@
 = Helpful Features in the Text Editor
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
+The text editor makes it easy to rename declarable objects and to find the names of declarable objects by highlighting them.
 
 == Renaming Declarable Objects
 
