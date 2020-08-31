@@ -10,4 +10,16 @@ You can have multiple files open at a time in API Designer's text editor. There 
 * Place your cursor in the name of a file for an `include` tag. Then, press the Command key (MacOS) or the Control key (Windows) and click the filename.
 * In the errors view at the bottom of the text screen, click the link to the location of a file listed in the view.
 
+== Navigating to Different Tabs
+
 The tab bar appears at the top of the editor only when at least two files are open.
+
+To switch to the tab to the left of the currently open one by pressing Option + Shift + Tab (MacOS) or <what?> (Windows.
+
+To switch to the tab to the right, press Shift + Tab (MacOS) or <what?> (Windows).
+
+== Closing Tabs
+
+To close a single tab, click the X icon that appears on it.
+
+To close all tabs but the currently open one, click the ellipsis on the right side of the tab bar and select *Close All Other Tabs*.
