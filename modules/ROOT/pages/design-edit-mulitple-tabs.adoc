@@ -26,11 +26,11 @@ Clicking a filename in the file tree without first pressing either of these keys
 The tab bar appears at the top of the editor only when at least two files are open.
 
 To switch to the tab to the left of the currently open one, follow either of these steps:
-* Press Option + Shift + Tab (MacOS) or <what?> (Windows).
+* Press Option + Shift + Tab (MacOS) or Alt + Shift + Tab (Windows).
 * Open the menu on the tab bar by clicking the ellipsis and select *Previous Tab*.
 
 To switch to the tab to the right of the currently open one, follow either of these steps:
-* Press Shift + Tab (MacOS) or <what?> (Windows).
+* Press Option + Tab (MacOS) or Alt + Tab (Windows).
 * Open the menu on the tab bar by clicking the ellipsis and select *Next Tab*.
 
 == Closing Tabs
