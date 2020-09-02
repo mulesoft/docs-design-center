@@ -11,13 +11,15 @@ There are four ways that you can open a file in a new tab:
 
 * Open the context menu for a file in the file tree by clicking the three dots to its right, and then select *Open in new tab*.
 * Press the Command key (MacOS) or the Control key (Windows) and click the name of the file in the file tree.
++[NOTE]
+====
+Clicking a filename in the file tree without first pressing either of these keys replaces the file that is open in the current tab.
+====
+
 * Place your cursor in the name of a file in a file reference such as an `include` tag in RAML or a `$ref` keyword in OAS. Then, press the Command key (MacOS) or the Control key (Windows) and click the filename.
 * Click a filename in the *Location* column in the errors view at the bottom of the screen.
 
-[NOTE]
-====
-Clicking a filename in the file tree or in the errors view at the bottom of the screen replaces the file that is open in the current tab.
-====
+
 
 == Navigating to Different Tabs
 
