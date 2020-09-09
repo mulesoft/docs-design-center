@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can have multiple files open at a time in API Designer's text editor.
+You can have multiple files open simultaneously in API Designer's text editor. Each file can be open in its own tab.
 
 == Opening Files in New Tabs
 
