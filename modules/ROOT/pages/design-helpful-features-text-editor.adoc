@@ -9,7 +9,7 @@ The text editor makes it easy to rename declarable objects and to find the names
 
 Using only one action, you can rename declarable objects everywhere they are used in a project.
 
-You can right-click the name of an object where it is declared, select *Rename Symbol*, and provide a new name. The object is also renamed wherever it is used (not just mentioned) in all of the files of the current project that are associated with the root file of the project.
+You can right-click the name of an object where it is declared, select *Rename Symbol*, and provide a new name. The object is thereby renamed wherever it is used in all of the files of the current project that are associated with the root file of the project, but the object is not renamed where only mentioned.
 
 For example, in the following example API specification `product_name` is declared as a type on line 5 at callout 1, mentioned at callout 2, and used on line 17 at callout 3. If you right-click `product_name` at callout 1 and use the *Rename Symbol* option to change its name, `product_name` is changed only at callout 3.
 
