@@ -7,7 +7,7 @@ The text editor makes it easy to rename declarable objects and to find the names
 
 == Renaming Declarable Objects
 
-You can rename declarable objects everywhere they are used in a project with one action.
+Using only one action, you can rename declarable objects everywhere they are used in a project.
 
 You can right-click the name of an object where it is declared, select *Rename Symbol*, and provide a new name. The object is also renamed wherever it is used (not just mentioned) in all of the files of the current project that are associated with the root file of the project.
 

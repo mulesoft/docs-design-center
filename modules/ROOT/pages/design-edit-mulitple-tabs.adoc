@@ -16,7 +16,10 @@ There are four ways that you can open a file in a new tab:
 Clicking a filename in the file tree without first pressing either of these keys replaces the file that is open in the current tab.
 ====
 
-* Place your cursor in the name of a file in a file reference such as an `include` tag in RAML or a `$ref` keyword in OAS. Then, press the Command key (MacOS) or the Control key (Windows) and click the filename.
+* Place your cursor in the name of a file in a file reference such as an `include` tag in RAML or a `$ref` keyword in OAS.
++
+Then, press the Command key (MacOS) or the Control key (Windows) and click the filename.
+
 * Click a filename in the *Location* column in the errors view at the bottom of the screen.
 
 
@@ -25,11 +28,11 @@ Clicking a filename in the file tree without first pressing either of these keys
 
 The tab bar appears at the top of the editor only when at least two files are open.
 
-To switch to the tab to the left of the currently open one, follow either of these steps:
+To switch to the tab to the left of the one currently open, follow either of these steps:
 * Press Option + Shift + Tab (MacOS) or Alt + Shift + Tab (Windows).
 * Open the menu on the tab bar by clicking the ellipsis and select *Previous Tab*.
 
-To switch to the tab to the right of the currently open one, follow either of these steps:
+To switch to the tab to the right of the one currently open, follow either of these steps:
 * Press Option + Tab (MacOS) or Alt + Tab (Windows).
 * Open the menu on the tab bar by clicking the ellipsis and select *Next Tab*.
 
