@@ -1,9 +1,4 @@
 = Create and Publish a RAML API Fragment in the Text Editor in API Designer
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor.
 
@@ -30,10 +25,14 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 == Procedure
 
-. On the *Projects* page in Design Center, click *Create* and select *Create Fragment*.
-. In the *New Fragment* dialog, type a name for the project. You can change the name (but not the extension) later, if you want to.
-. Select the type of API fragment that you want to create and click *Create Fragment*.
+. On the *Projects* page in Design Center, click *Create new*.
+. Select *New Fragment*.
+. In the *New Fragment* dialog, type a name for the Fragment project. 
 +
+You can change the name (but not the extension) later, if you want to.
+
+. Select the type of API fragment that you want to create and click *Create Fragment*.
+
 _Result:_ The text editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project.
