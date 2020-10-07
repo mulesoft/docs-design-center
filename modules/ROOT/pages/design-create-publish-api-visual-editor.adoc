@@ -28,7 +28,7 @@ This panel also lets you run the mocking service to test endpoints that you have
 == Procedure
 
 . On the *Projects* page in Design Center, click *Create new*.
-. Click *New API Spec*.
+. Select *New API Spec*.
 . In the *New API Spec* dialog, name your project. 
 +
 You can change the name later, if you want to.
