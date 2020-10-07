@@ -3,16 +3,21 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Use the mocking service to provide a public link to the API you are designing. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
+Use the mocking service to provide a public link to the API you are designing. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification. The mocking service is valuable for testing or for simply exploring how your API behaves.
 
 == Before You Begin
 
 You must be working in a project to create an API specification in API Designer.
 
 == About this task
+
 Simulating calls to the API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to the API in API Designer before publishing the API specification or in Exchange after publishing the API specification there.
 
-When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI (RAML) or base path (OAS), the mocking service comments it out. When you deactivate the mocking service, it removes the base URI or base path that it used and uncomments your base URI or base path. For example, if the base URI in a RAML API specification is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://anypoint.mulesoft.com/mocking/api/v1/links/+`, etc. is the URI used by the mocking service:
+When enabled, the mocking service provides a link you can use to test the API. You can share this link with other Anypoint Platform users or with external users who need to see how the API behaves.
+
+When you activate the mocking service, it exposes a mock service that you can use for testing in lieu of an actual implementation. If you have already specified a base URI (RAML) or base path (OAS), the mocking service comments it out. When you deactivate the mocking service, it removes the base URI or base path that it used and uncomments your base URI or base path. 
+
+For example, if the base URI in a RAML API specification is `+http://jsonplaceholder.typicode.com+`, the mocking service replaces it temporarily like this, where `+https://anypoint.mulesoft.com/mocking/api/v1/links/+`, etc. is the URI used by the mocking service:
 
 ----
 #%RAML 1.0
@@ -22,37 +27,49 @@ baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/d0422e05-e779-4016-9
 # baseUri: http://jsonplaceholder.typicode.com
 ----
 
-You can run the mocking service from the text editor, the visual editor, and from Anypoint Exchange. If you want to run the mocking service from Anypoint Exchange after publishing your API specification, see "To Simulate Data in REST APIs" in the Anypoint Exchange documentation. A link to that topic is in the *See also* section at the end of this topic.
+You can run the mocking service from the text editor, the visual editor, and from Anypoint Exchange. See xref:exchange::ex2-to-simulate-api-data.adoc[Simulate Data in REST APIs] for information on running the mocking service from Anypoint Exchange after publishing your API specification.
 
 [NOTE]
 ====
-API Designer's public, mocked URI is also visible in Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI either in their code or in a tool for testing API implementations.
+API Designer's public, mocked URI is also visible from Exchange. There, people who discover your API can try it out by using the built-in Exchange mocking service, or by using the public URI either in their code or in a tool for testing API implementations.
 ====
 
 == Procedure
 
-* If you are using the text editor in API Designer:
+* Enable the mocking service.
 +
-. Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
-. In the API summary panel, expand completely the resource with the endpoint that you want to test.
+You can enable the mocking service from either the visual API editor or the text editor:
 +
-_Result:_ After you expand the resource, you will see one or more buttons. The labels on the buttons match the different request types for the resource.
+. Select the root file of your project.
+. Click the *Mocking Service Configure* icon on the right-hand toolbar.
+. Cick the *Make Public* slider to provide a public link to your API.
++
+When you make the mocking service public for your API, no authentication is required to access the API via the URL provided. Likewise, you can disable the public link by clicking the slider.
+
+. Optionally, specify an expiration date for the public link and click the slider to enable this option.
+
+. Click the *Copy* button to copy the shareable URL to the clipboard.
+
+* From the text editor in API Designer:
+
+. Click the documentation icon in the right-hand toolbar.
++
+You will see one or more buttons. The labels on the buttons match the different request types for the resource.
+
 . Click the button that matches the request type that you want to simulate.
 +
-_Result:_ The panel displays information about the request type, its parameters, and the codes and messages that it returns.
-. Click *Try It* in the top-right corner of the editor.
+The panel displays information about the request type, its parameters, and the codes and messages that it returns.
+
+. Click *Try It* in the right-hand toolbar.
 +
-_Result:_ The URI for the endpoint is displayed. If the endpoint requires parameters, specify values for them. Also, you can view the headers and add custom headers.
+The URI for the endpoint is displayed. If the endpoint requires parameters, specify values for them. Also, you can view the headers and add custom headers.
 . Click *Send*.
 +
-_Result:_ The panel displays the result below the *Send* button.
+The panel displays the result below the *Send* button.
 
-* If you are using the visual editor in API Designer:
+* From the visual editor in API Designer:
 +
-. Turn on the mocking service by clicking the *Mocking service* slider in the top-right corner of the editor.
-. In the left panel, select the resource with the endpoint that you want to test.
-. At the top of the center panel of the editor, select the request type that you want to test.
-. Click *Try It* in the lower-right corner of the editor.
+. Click *Try It* in the right-hand toolbar.
 +
 _Result:_ The right panel displays the request URL. It also requires you to specify the values for any parameters that the endpoint requires. Finally, it displays headers and allows you to add custom headers.
 . Click *Send*.
