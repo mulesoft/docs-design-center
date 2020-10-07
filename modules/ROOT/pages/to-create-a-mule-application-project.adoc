@@ -1,9 +1,4 @@
 = Start Creating a Mule Application from an Existing One (Flow Designer)
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-:imagesdir: ../assets/images
 
 There are two ways that you can start creating a Mule application from an existing one:
 
@@ -72,11 +67,10 @@ For example, if the project contains a Database connector, the database driver f
 
 === Procedure
 
-. On the *Projects* page of Design Center, click the *Create* button and then click *Import Application*.
+. On the *Projects* page of Design Center, click the *Create new* button and then click *Import from File*.
 . Specify a name to give to the imported project.
-. Browse your filesystem for the `.jar` file that contains the project.
-// . Browse your filesystem for the `.jar` file that contains the project. Both Design Center and Studio export Mule-application projects in `.jar` files.
-. Click *Import*.
+. Click *Choose file*, then browse your filesystem for the `.jar` file that contains the project.
+. Click *Import and Create project*.
 
 === Result
 
