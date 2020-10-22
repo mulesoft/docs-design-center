@@ -19,6 +19,7 @@
  ** xref:design-rename-project.adoc[Rename a Project]
  ** xref:design-delete-project.adoc[Delete a Project]
  ** xref:design-publish.adoc[Publish an API Specification]
+ ** xref:design-view-source-from-exchange.adoc[View the Source Project for Assets Published to Exchange]
  ** xref:design-share-oas3-as-raml.adoc[Sharing an OAS 3.0 API Specification as RAML]
  ** xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
  ** xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
