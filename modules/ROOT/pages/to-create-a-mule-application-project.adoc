@@ -67,6 +67,12 @@ For example, if the project contains a Database connector, the database driver f
 
 === Procedure
 
+[IMPORTANT]
+====
+To import a project from a `.jar` file, your account must have permissions to create Mule applications. If you do not have this permission, the option to import a jar file is not available in the *Import from File* dialog.
+====
+
+
 . On the *Projects* page of Design Center, click the *Create new* button and then click *Import from File*.
 . Specify a name to give to the imported project.
 . Click *Choose file*, then browse your filesystem for the `.jar` file that contains the project.
