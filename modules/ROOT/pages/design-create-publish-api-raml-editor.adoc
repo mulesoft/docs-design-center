@@ -17,9 +17,9 @@ You can change the name (but not the extension) later, if you want to.
 . Select the *I'm comfortable designing it on my own* option.
 . Choose either the RAML or OAS specification. 
 +
-API Designer creates the stubs of your API specification using the version you choose.
+API Designer creates the stubs of your API specification using the specification type and version you choose.
 +
-The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML and OAS files.
+By default API Designer creates a RAML 1.0 file. You can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML, OAS, and other types of files.
 
 *Result:* The text editor opens. The editor is divided into three panels:
 
