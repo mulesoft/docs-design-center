@@ -1,6 +1,6 @@
 = Create and Publish a RAML API Fragment in the Text Editor in API Designer
 
-You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor.
+You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor. 
 
 
 == About This Task

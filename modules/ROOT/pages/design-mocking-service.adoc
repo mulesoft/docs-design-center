@@ -1,7 +1,4 @@
 = Simulate Calls to an API
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Use the mocking service to provide a public link to the API you are designing. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 
