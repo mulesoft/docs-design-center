@@ -1,0 +1,24 @@
+= View the Source Project for Assets Published to Exchange
+
+After publishing an asset to Anypoint Exchange, you can view the source files in the API Designer. Exchange provides a direct link to the API Designer project containing the source files.
+
+== Procedure
+
+. Open the API specification or fragment in Anypoint Exchange.
+. Open the pop-up menu for the asset version whose source you want to view.
+. Select *View code in API Designer*
++
+API Designer opens the project in read-only view.
+
+. To edit the files in the project, click *Edit spec*.
++
+This option is only available if you have edit permissions on the project and the project exists in API Designer.
+
+[IMPORTANT]
+====
+If a project was published to Exchange via a ZIP file or other resource outside of API Designer, you can only view the contents of the project. To edit the files, create a new project based on the contents of the file.
+====
+
+== See Also
+
+* xref:design-publish.adoc[Publish an API Specification]
