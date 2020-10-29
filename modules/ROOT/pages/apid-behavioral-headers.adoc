@@ -32,11 +32,9 @@ Examples:
 
 == MS2-Example
 
-The MS2-Example header enables you to choose a specific response example if your endpoint defines more than one example for the same status code.
+The MS2-Example header enables you to choose a specific response example if your endpoint defines more than one example for a single status code.
 
-Using MS2-Example, you can specify multiple examples within a response:
-
-For example, you can have an API specification that contains multiple examples within a response as shown in the following example:
+Using MS2-Example, you can specify multiple examples within a response. This example shows three examples for the status code 200:
 
 ----
 /examples:
@@ -57,7 +55,7 @@ For example, you can have an API specification that contains multiple examples w
                 prop2: 33
 ----
 
-Here, the possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the payload `something` and `30`. Sending a value other than `one`, `two`, and `three` would return an error message.
+Here, the possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the payload `something` and `30`. Sending a value other than `one`, `two`, or `three` would return an error message.
 
 
 == MS2-Error-Level
