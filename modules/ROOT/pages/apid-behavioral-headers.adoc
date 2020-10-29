@@ -32,9 +32,9 @@ Examples:
 
 == MS2-Example
 
-The MS2-Example header enables you to choose a specific response example if your endpoint defines more than for the same status code.
+The MS2-Example header enables you to choose a specific response example if your endpoint defines more than one example for the same status code.
 
-Using MS2-Example, if your RAML specification contains the following:
+Using MS2-Example, you can specify multiple examples within a response:
 
 ----
 /examples:
@@ -54,7 +54,7 @@ Using MS2-Example, if your RAML specification contains the following:
               prop2: 33
 ----
 
-In this example, possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the properties `something` and `30`. Sending values other than `one`, `two`, and `three` return no results.
+Here, the possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the properties `something` and `30`. Sending a value other than `one`, `two`, and `three` would return no results.
 
 
 == MS2-Error-Level
