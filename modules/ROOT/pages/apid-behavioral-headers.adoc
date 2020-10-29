@@ -36,25 +36,28 @@ The MS2-Example header enables you to choose a specific response example if your
 
 Using MS2-Example, you can specify multiple examples within a response:
 
+For example, you can have an API specification that contains multiple examples within a response as shown in the following example:
+
 ----
 /examples:
   get:
     responses:
       200:
         body:
-          examples:
-            one:
-              prop1: something
-              prop2: 30
-            two:
-              prop1: another
-              prop2: 31
-            three:
-              prop1: anything
-              prop2: 33
+          application/json:
+            examples:
+              one:
+                prop1: something
+                prop2: 30
+              two:
+                prop1: another
+                prop2: 31
+              three:
+                prop1: anything
+                prop2: 33
 ----
 
-Here, the possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the properties `something` and `30`. Sending a value other than `one`, `two`, and `three` would return no results.
+Here, the possible values of the header would be `one`, `two`, and `three`. Sending the value `one` as part of the request would return the payload `something` and `30`. Sending a value other than `one`, `two`, and `three` would return an error message.
 
 
 == MS2-Error-Level
