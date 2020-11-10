@@ -1,6 +1,6 @@
 = Simulate API Calls with the API Mocking Service
 
-The API mocking service enables you simulate the behavior of an API specification. The mocking service provides a test link to an API. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves. 
+The API mocking service enables you simulate the behavior of an API specification. The mocking service provides a test link to an API. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 
 When you add an endpoint to your API specification, API Designer automatcially generates a link to the API that you can use in a browser. You can also enable a public link that can be shared with users outside of Anypoint Platform.
 
@@ -20,18 +20,18 @@ To access the internal URL, you must specify the authorization headers as part o
 ====
 
 . From API Designer, open the project containing the API you want to test.
-+ 
++
 You can use either the text editor or the visual editor.
 . Select the root file of your project.
 . Click the *Documentation* icon in the right-hand tool bar.
 . From the drop-down menu, select *Summary*.
 . Click on the name of a method.
 . If you have defined `baseURL` in your API specification:
-+ 
++
 * Click the *Select server* dropdown and select one of the following:
 +
 ** baseUri: uses the baseUri as defined in your API specification
-** Mocking Service: uses the API mocking service 
+** Mocking Service: uses the API mocking service
 
 . Click one of the methods of your API, then click *Try it*.
 . (Optional) Provide and query paramaters you want to test.
@@ -39,21 +39,25 @@ You can use either the text editor or the visual editor.
 You can enter query parameters as name/value pairs.
 . Click *Send.*
 +
-API Designer displays the HTTP return code as specified in your API. Alternately, you can test the API by copying the *Request URL* and paste it into a web browser or Postman. 
+API Designer displays the HTTP return code as specified in your API. Alternately, you can test the API by copying the *Request URL* and paste it into a web browser or Postman.
 +
 When using the mocking service internal URL, you must provide authorization headers as part of the URL. To avoid this, use the mocking service public url.
 
-[IMPORTANT]
-====
-To select mocking service as the default option in the *Select server* drop-down, click the *Select by Default* slider under *Mocking Service Configuration*.
-====
+
+[#set-mocking-service-as-default]
+== Setting the Mocking Service as the Default Server
+
+You can set the Mocking Service as the default server used in the *Documentation* panel. This is the default value that appears in the *Select server* drop-down.
+
+. Click *Mocking Service Configuration*.
+. Click the *Select by Default* slider.
 
 == Simulate a Call to an API using an Public URL
 
 Use a public URL to test calls to your API without having to provide an authorization header. This is useful when you want to share the API with someone outside of Anypoint Platform.
 
 . From API Designer, open the project containing the API you want to test.
-+ 
++
 You can use either the text editor or the visual editor.
 . Select the root file of your project.
 . Click the *Mocking Service Configuration* icon in the right-hand tool bar.
@@ -64,5 +68,9 @@ API Designer generates a public URL for your API. When you disable the public UR
 . (Optional) Set an expiration date for the public URL
 .. Click *Set expiration date for public link*.
 .. Using the date selector, select the day you want the public link to expire.
+
+== See Also
+
+* xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]
 
 
