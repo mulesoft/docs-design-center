@@ -25,7 +25,7 @@ You can use either the text editor or the visual editor.
 . Select the root file of your project.
 . Click the *Documentation* icon in the right-hand tool bar.
 . From the drop-down menu, select *Summary*.
-. Click on the name of a method.
+. Click on the name of an end point.
 . If you have defined `baseURL` in your API specification:
 +
 * Click the *Select server* dropdown and select one of the following:
