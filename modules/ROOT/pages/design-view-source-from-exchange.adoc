@@ -2,22 +2,22 @@
 
 After publishing an asset to Anypoint Exchange, you can view the source files in the API Designer. Exchange provides a direct link to the API Designer project containing the source files.
 
+When you publish a project to Exchange via a ZIP file or other resource outside of API Designer, you can only view the contents of the project. To edit the files, create a new project based on the contents of the file. If you delete a project from API Desiger after publishing it to Exchange, you can only view it in read-only mode.
+
+
 == Procedure
 
-. Open the API specification or fragment in Anypoint Exchange.
-. Open the pop-up menu for the asset version whose source you want to view.
-. Select *View code in API Designer*
+. Open you API specification or fragment in Anypoint Exchange.
+. Open the specification or fragment in API Manager:
 +
-API Designer opens the project in read-only view.
+* To view the most recent version of the specification or fragment, click the <>, then select *View Code*.
+* To view the a specific version of the specification or fragment, open the pop-up menu for the version, then select *View code in API Designer*.
++
+API Designer opens the project containing the specification or fragment in read-only view. If you edit a project after it is published to Exchange or if you view an older version of a specification or fragment, API designer enables you to select which version to open.
 
 . To edit the files in the project, click *Edit spec*.
 +
 This option is only available if you have edit permissions on the project and the project exists in API Designer.
-
-[IMPORTANT]
-====
-If a project was published to Exchange via a ZIP file or other resource outside of API Designer, you can only view the contents of the project. To edit the files, create a new project based on the contents of the file.
-====
 
 == See Also
 
