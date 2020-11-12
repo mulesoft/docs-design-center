@@ -6,14 +6,14 @@ Use API Designer to create a new API specification or an API fragment from an ex
 
 . On the *Projects* page of Design Center, click the *Create new* button and then click *Import from File*.
 . Specify a name to give to the imported project.
-. Click Choose file, then browse your filesystem for the you want to import.
+. Click *Choose file*, then browse your filesystem for the you want to import.
 +
 You can create a new project from one following file types:
 +
-* .json 
-* .raml
-* .yaml
-* a .zip file that contains an existing project.
+* JSON 
+* RAML
+* YAML
+* a ZIP file that contains an existing project.
 
 . Click *Import as...* then choose either *API Specification* or *API Fragment*.
 
@@ -25,7 +25,7 @@ While you are working in the editor, you can navigate through and manipulate the
 
 You can also perform these tasks:
 
-Import files and API fragments into your project:: You can import files, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
+Import files and API fragments into your project:: You can import files, either separately or bundled in ZIP files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
 +
 For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
 +
