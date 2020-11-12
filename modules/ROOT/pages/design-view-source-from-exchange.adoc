@@ -7,17 +7,23 @@ When you publish a project to Exchange via a ZIP file or other resource outside 
 
 == Procedure
 
-. Open you API specification or fragment in Anypoint Exchange.
-. Open the specification or fragment in API Manager:
+. Open your API specification or fragment in Anypoint Exchange.
+. Next to the version of the specifcation or fragment you want to view, click the *︙* drop-down menu.
 +
-* To view the most recent version of the specification or fragment, click the pop-up menu in the toolbar, then select *View Code*.
-* To view the a specific version of the specification or fragment, open the pop-up menu for the version, then select *View code in API Designer*.
+[NOTE]
+====
+You can only view older published versions of a specification or fragment published to Exchange. You cannot edit them.
+====
+
+. Select *View code in API Designer*.
 +
-API Designer opens the project containing the specification or fragment in read-only view. If you edit a project after it is published to Exchange or if you view an older version of a specification or fragment, API designer enables you to select which version to open.
+API Designer opens the project containing the specification or fragment in read-only view.
 
 . To edit the files in the project, click *Edit spec*.
 +
 This option is only available if you have edit permissions on the project and the project exists in API Designer.
++
+If the project was edited after being published to Exchange, API Designer gives you the option to continue editing the local version or to edit the version published to Exchange.
 
 == See Also
 
