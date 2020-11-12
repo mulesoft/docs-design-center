@@ -25,7 +25,7 @@ API Designer opens the project containing the specification or fragment in read-
 +
 This option is only available if you have edit permissions on the project and the project exists in API Designer.
 +
-If the project was edited after being published to Exchange, API Designer gives you the option to continue editing the local version or to edit the version published to Exchange.
+If the project was edited after being published to Exchange, API Designer gives you the option to continue edit the newer version or view the version published to Exchange.
 
 == See Also
 
