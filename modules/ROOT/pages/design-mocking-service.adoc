@@ -6,7 +6,7 @@ When you add an endpoint to your API specification, API Designer automatcially g
 
 The mocking service is a feature of Anypoint Platform and runs continuously. You can run the mocking service from the text editor, the visual editor, and from Anypoint Exchange. You can simulate calls to the API in API Designer before publishing the API specification to Exchange or in Exchange after publishing the API specification.
 
-If you specified a base URI (RAML) or base path (OAS), API Designer enables you to select to use either the base URI or the mocking service when simulating an API call. API Designer does not make any changes to your APIs.
+If you specified a base URI (RAML) or base path (OAS), API Designer enables you to use either the base URI or the mocking service when simulating an API call. API Designer does not make any changes to your APIs.
 
 == Before You Begin
 
@@ -30,7 +30,7 @@ You can use either the text editor or the visual editor.
 +
 * Click the *Select server* dropdown and select one of the following:
 +
-** baseUri: uses the baseUri as defined in your API specification
+** `baseUri`: uses the baseUri as defined in your API specification
 ** Mocking Service: uses the API mocking service
 
 . Click one of the methods of your API, then click *Try it*.
