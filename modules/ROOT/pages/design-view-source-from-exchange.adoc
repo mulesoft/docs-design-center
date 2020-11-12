@@ -14,6 +14,8 @@ When you publish a project to Exchange via a ZIP file or other resource outside 
 ====
 You can only view older published versions of a specification or fragment published to Exchange. You cannot edit them.
 ====
++
+Alternatively, you can the most recent version of a specifcation or fragment by clicking *︙* in the asset toolbar and selecting *View code*.
 
 . Select *View code in API Designer*.
 +
