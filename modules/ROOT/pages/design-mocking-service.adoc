@@ -1,4 +1,4 @@
-= Simulate API Calls with the API Mocking Service
+= Simulate API Calls with the Mocking Service
 
 The API mocking service enables you simulate the behavior of an API specification. The mocking service provides a test link to an API. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 

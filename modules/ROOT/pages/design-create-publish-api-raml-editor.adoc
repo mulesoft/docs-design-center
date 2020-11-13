@@ -1,23 +1,26 @@
 = Create an API Specification with the Text Editor
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 or 3.0 (either in JSON or YAML).
 
 == Before You Begin
+
 Within Anypoint Platform, your user ID must be assigned the _Design Center Developer_ permission.
 
 == Procedure
 
-. Open Design Center from the homepage of Anypoint Platform.
-. Create an API-specification project that you can work in.
- .. On the *Projects* page in Design Center, click *Create* and then click *Create API Specification*.
- .. In the *New Specification* section of the dialog that is opened, name your project. You can change the name (but not the extension) later, if you want to.
- .. Select *Text editor*.
- .. Choose whether the stub specification file created in the project should be in RAML or OAS. The default is to create a RAML 1.0 file; however, you can change the file to RAML 0.8 or OAS after the project is created. In fact, projects for creating API specifications can contain a mix of RAML and OAS files.
-
+. On the *Projects* page in Design Center, click *Create new*.
+. Select *New API Spec*.
+. In the *New API Spec* dialog, name your project.
 +
+You can change the name (but not the extension) later, if you want to.
+
+. Select the *I'm comfortable designing it on my own* option.
+. Choose either the RAML or OAS specification. 
++
+API Designer creates the stubs of your API specification using the specification type and version you choose.
++
+By default API Designer creates a RAML 1.0 file. You can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML, OAS, and other types of files.
+
 *Result:* The text editor opens. The editor is divided into three panels:
 
 * The left panel lists the files in your project.
@@ -34,6 +37,7 @@ You can create more than one API specification or related file in a single proje
 If you do create more than one specification file, you must specify one of them as the root file of your project.
 
 ====
+
 * The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a specification file in RAML or OAS, depending on which you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
 * The right panel lists the types and resources that are in the API specification that is in the central panel.
 

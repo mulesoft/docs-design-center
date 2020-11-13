@@ -98,9 +98,11 @@ Follow these steps to create the project.
 
 . Log into Anypoint Platform.
 . Open Design Center and create a new Mule application.
-.. Click *Create* next to the search field.
-.. In the *Create a Mule Application* section of the overlay, click *Create New Application*.
-.. Name your project `Order-to-cash automation`.
+.. From the *Projects* page, click *Create new*.
+.. Select *New Mule App*.
+.. In the *New Mule App* dialog, name your project `Order-to-cash automation`.
+.. Click *Create App*.
+
 . In the *Let’s Get Started* wizard, click the link `Go straight to canvas`, which is in the bottom-left corner.
 +
 *Result:* Flow Designer appears with an empty trigger card displayed in the middle of the canvas.
