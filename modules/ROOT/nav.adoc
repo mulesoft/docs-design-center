@@ -4,7 +4,7 @@
  ** xref:design-create-publish-api-visual-editor.adoc[Create an API Specification with the Visual Editor]
  ** xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor]
  ** xref:design-create-publish-api-fragment.adoc[Create and Publish an API Fragment]
- ** xref:design-create-publish-api-specs-from-zip.adoc[Create and Publish an API Specification or Fragment from an External File]
+ ** xref:design-create-publish-api-specs-from-file.adoc[Create and Publish an API Specification or Fragment from an External File]
  ** xref:design-change-root-file.adoc[Root Files in Projects in the Text Editor in API Designer]
  ** xref:design-edit-mulitple-tabs.adoc[Edit in Multiple Tabs in the Text Editor]
  ** xref:design-helpful-features-text-editor.adoc[Helpful Features in the Text Editor]
