@@ -41,30 +41,36 @@ If you do create more than one specification file, you must specify one of them 
 * The central panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of a specification file in RAML or OAS, depending on which you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
 * The right panel lists the types and resources that are in the API specification that is in the central panel.
 
-. Draft your API specification.
-+
-While you are working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. This list also displays keyboard shortcuts for most of the commands.
-+
+== The Editor
+While working in the editor, you can use a large number of commands to navigate through and manipulate the content of your specification. Press F1 at any time to see a list of them. The list also displays keyboard shortcuts for most of the commands.
+
 You can also perform these tasks:
+
+* *Import files and API fragments into your project* 
 +
-Import files and API fragments into your project:: You can import files, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
+You can import files, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, or OpenAPI Specification (OAS) 2.0 or 3.0 files (either JSON or YAML). The files can be on your computer or you can specify a URL for them if they are located online.
 +
 For more information about importing files and steps for how to import them, see "Import Files into an API Project", which is linked to from the *See also* section at the end of this topic.
 +
 For information about adding API fragments to your project, see "Add a RAML API Fragment to an API-Specification Project as a Dependency", which is linked to from the *See also* section at the end of this topic.
+
+* *Simulate calls to your API* 
 +
-Simulate calls to your API:: Even while you are drafting an API specification, you can simulate calls to endpoints for which you have specified
-+
-* An HTTP status code the API returns, if successful
-* An example of data the actual implementation would return
+Even while you are drafting an API specification, you can simulate calls to endpoints for which you have specified.
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
-Export your API project or specification:: At any time, you can export your project as a ZIP file. Click the gear icon in the top-right corner of the text editor and select *Download Project*.
+* *Export your API project or specification*
++ 
+At any time, you can export your project as a ZIP file. Click the gear icon in the top-right corner of the text editor and select *Download Project*.
 
-Download files:: Click the dots to the right of the file name and select *Download*.
+* *Download files* 
++
+Click the dots to the right of the file name and select *Download*.
 
-Download files in a different format:: Click the dots to the right of the file name of a specification and select *Download as*. You can download your specification in one of the other supported formats. If your specification is in RAML, you can download it in OAS YAML or in OAS JSON. If your specification is in OAS, you can download it in RAML 0.8 or in RAML 1.0.
+* *Download files in a different format* 
++
+Click the dots to the right of the file name of a specification and select *Download as*. You can download your specification in one of the other supported formats. If your specification is in RAML, you can download it in OAS YAML or in OAS JSON. If your specification is in OAS, you can download it in RAML 0.8 or in RAML 1.0.
 +
 The files downloaded through this option are not guaranteed to be valid. This option is intended to provide the basis for the development of a new specification or the continuation of the development of the original specification in a new format.
 
