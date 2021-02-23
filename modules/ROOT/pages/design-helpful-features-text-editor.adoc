@@ -3,9 +3,16 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The text editor makes it easy to rename declarable objects and to find the names of declarable objects by highlighting them.
+The text editor makes it easy to perform the following:
 
-== Renaming Declarable Objects
+* Rename declarable objects
+* Find the names of declarable objects by highlighting them
+* Find locations where a definition is referenced
+* Select code blocks by scope
+* Navigate to a symbol
+* Extract an element to a declaration
+
+== Rename Declarable Objects
 
 Using only one action, you can rename declarable objects everywhere they are used in a project.
 
@@ -33,7 +40,7 @@ types:
             type: product_name  <3>
 ----
 
-== Highlighting the Names of Declarable Objects
+== Highlight the Names of Declarable Objects
 You can highlight the names of declarable objects where they are used in a file.
 
 To see all of the locations in a file where an object is used, click the cursor in the name of the object where that object is declared.
@@ -82,3 +89,53 @@ types:
           application/json:
             type: person  <3>
 ----
+
+== Find Locations Where a Definition is Referenced
+
+You can navigate to locations where a given definition is referenced by right-clicking on the definition and selecting *Go to References*. 
+
+For example, the type `person` is declared on line 5 at the first callout in the following example API specification. That type is subsequently used on line 14 at the second callout, and on line 22 at the third callout. If you right-click `person` on line 5 and select *Go to References*, a list of the `person` locations (callouts two and three) appears. Double clicking on a listed location will navigate you to the relevant line.
+
+----
+#%RAML 1.0
+title: My API with Types "person"
+
+uses:
+  lib: library.raml 
+
+types:
+  person:  <1>
+    description: this is person's description
+    properties:
+      firstname: string
+  manager:
+    type: lib.manager 
+  Alertable: manager | person  <2>
+
+/person:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: person[]  <3>
+            example:  |
+              [{
+                "firstname": "person"
+              }]
+----
+
+The action also supports the following:
+
+* RAML resource types and traits
+* RAML type expressions
+* Library aliases
+* References linked in JSON path navigation
+* References to nodes that apply “macros”, such as annotationTypes, securitySchemes, resourceTypes and traits
+
+== Select Code Blocks by Scope
+“Selection Ranges” allow you to select and to expand the selection of code blocks inside the document. 
+
+Selections conform to code block scope, meaning that if you select an element and increase the selection range, the code block scope will be selected. Likewise with decreasing selection range - the code block scope will be deselected.
+
+To select a range, click on an element and press Control-Shift-[Left Arrow | Right Arrow]. The Right Arrow key increases the range. The Left Arrow key decreases the range.
