@@ -93,7 +93,7 @@ types:
 
 == Find Locations Where a Definition is Referenced
 
-You can navigate to locations where a given definition is referenced by right-clicking on the definition and selecting *Go to References*. 
+You can navigate to locations where a given definition is referenced by right-clicking on the definition and selecting *Go to References*.
 
 For example, the type `person` is declared on line 5 at the first callout in the following example API specification. That type is subsequently used on line 14 at the second callout, and on line 22 at the third callout. If you right-click `person` on line 5 and select *Go to References*, a list of the `person` locations (callouts two and three) appears. Double clicking on a listed location will navigate you to the relevant line.
 
@@ -132,9 +132,9 @@ The action also supports the following:
 
 == Select Code Ranges
 
-“Selection Ranges” allow you to select and to expand the selection of code blocks inside the document. 
+“Selection Ranges” allow you to select and to expand the selection of code blocks. 
 
-To select a range, click on an element and press Control-Shift-[Left Arrow | Right Arrow]. The Right Arrow key increases the range. The Left Arrow key decreases the range.
+To select a range, click on an element and press Control + Shift + [Left Arrow | Right Arrow]. The Right Arrow key increases the range. The Left Arrow key decreases the range.
 
 For example, clicking on `body` in the following code, and pressing Control + Shift + Right Arrow, creates a selection range that only includes `body:`:
 
@@ -144,4 +144,30 @@ Pressing Control + Shift + Right Arrow again results in the following selection 
 
 image:apid-helpful-text-editor-2.png[30%,30%]
 
-Pressing Control + Shift + Left Arrow collapses the selection range, leaving only `body:` selected.
+Pressing Control + Shift + Left Arrow collapses the selection range, leaving only `body:` selected again.
+
+== Navigate to a Symbol
+
+You can right-click anywhere in the document and select *Go to Symbol*, which will present the list of defined symbols: 
+
+image:apid-helpful-text-editor-3.png[75%,75%]
+
+Selecting a symbol will navigate you to its location in the document.
+
+== Extract an Element to a Declaration
+
+You can take advantage of refactoring helpers to ease the continuous improvement of the design. One such helper is the ability to extract an inline declarable element to a top-level declaration, with the result being reusabiity.
+
+When you select a range that matches an inline declarable element, an icon appears to the left of the element:
+
+image:apid-helpful-text-editor-4.png[37%,37%]
+
+Tap the icon and select *Extract to Declaration*, which results in the following two changes to the document:
+
+image:apid-helpful-text-editor-5.png[37%,37%]
+
+The first callout shows that `type: lib.manager` has been replaced with `type: newtype`. A `newtype` declaration now exists outside of the `manager` scope (as shown at the second callout), thereby making `newtype` reusable.
+
+The extracted declaration name is based on the original name. If the name is already being used by another declaration of the same kind, an auto increment number is added at the end of the name. You can rename the declaration.
+
+Along with `types` declarations, you can also extract `resourceTypes` declarations and `traits` declarations.
