@@ -93,9 +93,9 @@ types:
 
 == Find Locations Where a Definition is Referenced
 
-You can navigate to locations where a given definition is referenced by right-clicking on the definition and selecting *Go to References*.
+You can navigate to locations where a given definition is referenced by right-clicking the definition and selecting *Go to References*.
 
-For example, the type `person` is declared on line 5 at the first callout in the following example API specification. That type is subsequently used on line 14 at the second callout, and on line 22 at the third callout. If you right-click `person` on line 5 and select *Go to References*, a list of the `person` locations (callouts two and three) appears. Double clicking on a listed location will navigate you to the relevant line.
+For example, the type `person` is declared on line 5 at the first callout in the following example API specification. That type is subsequently used on line 14 at the second callout, and on line 22 at the third callout.
 
 ----
 #%RAML 1.0
@@ -122,21 +122,23 @@ types:
             type: person[]  <3>
 ----
 
-The action also supports the following:
+If you right-click `person` on line 5 and select *Go to References*, a list of the `person` locations (callouts two and three) appears. Double clicking a listed location navigates you to the relevant line.
+
+*Go to References* also supports the following:
 
 * RAML resource types and traits
 * RAML type expressions
 * Library aliases
 * References linked in JSON path navigation
-* References to nodes that apply “macros”, such as annotationTypes, securitySchemes, resourceTypes and traits
+* References to nodes that apply macros, such as `annotationTypes`, `securitySchemes`, `resourceTypes`, and `traits`
 
 == Select Code Ranges
 
-“Selection Ranges” allow you to select and to expand the selection of code blocks. 
+“Selection Ranges” enable you to select and to expand the selection of code blocks. 
 
-To select a range, click on an element and press Control + Shift + [Left Arrow | Right Arrow]. The Right Arrow key increases the range. The Left Arrow key decreases the range.
+To select a range, click an element and press Control + Shift + [Left Arrow | Right Arrow]. The Right Arrow key increases the range. The Left Arrow key decreases the range.
 
-For example, clicking on `body` in the following code, and pressing Control + Shift + Right Arrow, creates a selection range that only includes `body:`:
+For example, clicking `body:` in the following code, and pressing Control + Shift + Right Arrow creates a selection range that includes only `body:`:
 
 image:apid-helpful-text-editor-1.png[30%,30%]
 
@@ -148,11 +150,11 @@ Pressing Control + Shift + Left Arrow collapses the selection range, leaving onl
 
 == Navigate to a Symbol
 
-You can right-click anywhere in the document and select *Go to Symbol*, which will present the list of defined symbols: 
+You can right-click anywhere in the document and select *Go to Symbol*, which presents the list of defined symbols: 
 
 image:apid-helpful-text-editor-3.png[75%,75%]
 
-Selecting a symbol will navigate you to its location in the document.
+Selecting a symbol navigates you to its location in the document.
 
 == Extract an Element to a Declaration
 
@@ -162,12 +164,12 @@ When you select a range that matches an inline declarable element, an icon appea
 
 image:apid-helpful-text-editor-4.png[37%,37%]
 
-Tap the icon and select *Extract to Declaration*, which results in the following two changes to the document:
+Click the icon and select *Extract to Declaration*, which results in the following two changes to the document:
 
 image:apid-helpful-text-editor-5.png[37%,37%]
 
-The first callout shows that `type: lib.manager` has been replaced with `type: newtype`. A `newtype` declaration now exists outside of the `manager` scope (as shown at the second callout), thereby making `newtype` reusable.
+The first callout shows that `type: lib.manager` is replaced with `type: newtype`. A `newtype` declaration now exists outside of the `manager` scope (as shown at the second callout), thereby making `newtype` reusable.
 
-The extracted declaration name is based on the original name. If the name is already being used by another declaration of the same kind, an auto increment number is added at the end of the name. You can rename the declaration.
+The extracted declaration name is based on the original name. If the name is already being used by another declaration of the same kind, an automatically incremented number is added at the end of the name. You can rename the declaration.
 
 Along with `types` declarations, you can also extract `resourceTypes` declarations and `traits` declarations.
