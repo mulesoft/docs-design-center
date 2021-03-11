@@ -22,6 +22,12 @@ If you export your project to work on it in another editor, edit the referenced 
 . Click the plus sign that is at the top of the left pane.
 . Select the API fragments that you want to import. You can select from API fragments that are visible to the organizations that you belong to.
 
+[NOTE]
+====
+
+RAML API fragments with more than 1,000 files, or with a total file size greater than 300 MB, are not supported.
+
+====
 
 == Result
 The API fragments that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
