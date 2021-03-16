@@ -25,7 +25,7 @@ If you export your project to work on it in another editor, edit the referenced 
 [NOTE]
 ====
 
-RAML API fragments with more than 1,000 files, or with a total file size greater than 300 MB, are not supported.
+REST API fragments with more than 1,000 files, or with a total file size greater than 300 MB, are not supported.
 
 ====
 
