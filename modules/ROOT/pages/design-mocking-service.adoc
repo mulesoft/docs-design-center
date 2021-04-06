@@ -2,7 +2,7 @@
 
 The API mocking service enables you simulate the behavior of an API specification. The mocking service provides a test link to an API. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 
-When you add an endpoint to your API specification, API Designer automatcially generates a link to the API that you can use in a browser. You can also enable a public link that can be shared with users outside of Anypoint Platform.
+When you add an endpoint to your API specification, API Designer automatically generates a link to the API that you can use in a browser. You can also enable a public link that can be shared with users outside of Anypoint Platform.
 
 The mocking service is a feature of Anypoint Platform and runs continuously. You can run the mocking service from the text editor, the visual editor, and from Anypoint Exchange. You can simulate calls to the API in API Designer before publishing the API specification to Exchange or in Exchange after publishing the API specification.
 
