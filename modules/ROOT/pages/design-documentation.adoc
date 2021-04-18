@@ -9,7 +9,7 @@ The right pane of the text editor in API Designer displays the documentation tha
 
 == Documentation for Definitions of Multiple Servers
 
-OAS 3.0 enables you to define servers by using the `servers` field. You can define servers globally at the top of a specification, locally for endpoints, and locally for methods. Local definitions override the definitions set at the next higher level in the specification's hierarchy. Definitions set locally for methods override definitions set at endpoints and globally. Definitions set locally for endpoints override definitions set globally.
+OAS 3.0 enables you to define servers by using the `servers` field. You can define servers globally at the top of a specification, locally for endpoints, and locally for methods. Local definitions override the definitions set at the next higher level in the specification's hierarchy. Definitions set locally for methods override definitions set at endpoints and globally.
 
 The following example API specification demonstrates different ways, indicated by ten callouts (1-10), that you can set server definitions. After the example API specification, the documentation for the portion of the API at each callout is illustrated with a screenshot.
 
