@@ -27,6 +27,7 @@
  ** xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0]
  ** xref:design-json-schema-required-error.adoc[Common Errors in Specifying Required Fields in JSON Schemas]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
+ ** xref:design-about-github-sync.adoc[GitHub Sync]
 * xref:about-designing-a-mule-application.adoc[Flow Designer]
  ** xref:fd-tour.adoc[Tour of Flow Designer]
  ** xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]
