@@ -32,6 +32,8 @@
  *** xref:design-ghs-new-project-new-repo.adoc[Create a New Project Synced with a New GitHub Repository]
  *** xref:design-ghs-new-project-existing-repo.adoc[Create a New Project Synced From an Existing GitHub Repository]
  *** xref:design-ghs-new-repo-existing-project.adoc[Create a New GitHub Repository Synced from an Existing Project]
+ *** xref:design-ghs-manage-projects.adoc[Manage Projects Synced with GitHub]
+ *** xref:design-ghs-merge-branches.adoc[Merge GitHub Branches]
 * xref:about-designing-a-mule-application.adoc[Flow Designer]
  ** xref:fd-tour.adoc[Tour of Flow Designer]
  ** xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]

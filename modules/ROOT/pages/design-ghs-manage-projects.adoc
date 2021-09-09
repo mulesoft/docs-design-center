@@ -1,0 +1,91 @@
+= Manage Projects Synced with GitHub
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images
+:keywords: api, github, git
+
+Manage and interact with GitHub-synced projects in API Designer and Design Center. 
+
+* In API Designer, the xref:design-ghs-manage-projects.adoc#the-branch-selector-component[branch selector component] enables you to access your GitHub repository page, initiate a pull request, create and switch branches, and view diffs between branches. The component is located above the code panel in the API Designer text editor. 
+
+* In the Design Center *Projects* list, a project’s *Details* pane enables you to view both GitHub sync status and repository URL - useful for troubleshooting connectivity issues. The *Details* pane also enables you to disable GitHub sync (you can also disable GitHub sync via the *Publish* options menu).
+
+== The Branch Selector Component
+
+=== Access the Component and Select a Branch
+
+Access the branch selector component by clicking the project title (with current GitHub branch name) located at the top of the code panel:
+
+image:apid-ghs-select-branch-component.png[16%,16%]
+
+The following dialog appears:
+
+image:apid-ghs-branch-dialog.png[32%,32%]
+
+The current GitHub branch appears first (with its commit hash), followed by a list of previously created feature branches. Clicking a branch name switches to the branch. 
+
+NOTE: The *View in GitHub* button, *View Diff* button, and commit hash do not appear for non-GitHub-synced projects.
+
+=== View Differences Between Branches
+
+View differences between a branch and the current branch by clicking *View Diff*.
+
+=== Delete a Branch
+
+Delete a feature branch by clicking the *Delete branch* button ("X").
+
+=== Open a Pull Request
+
+Open a pull request by switching to a branch (other than the main branch) and then opening the branch component selector. The *Open Pull Request* button displays:
+
+image:apid-ghs-open-pull-request-dialog.png[35%,35%]
+
+Click *Open Pull Request*. You are redirected to the GitHub interface to complete the pull request.
+
+=== Create a New Branch
+
+Create a new feature branch from the current branch by specifying the new branch name in the *Create Branch* text field, then clicking the *Create* button ("+""). API Designer switches to the new branch and redirects you to the text editor. The new branch name displays above the code panel.
+
+== The Projects Page
+
+=== Determine if a Project is Synced with GitHub
+The Design Center *Projects* page lists your specifications, fragments, and applications. Projects that are synced with GitHub contain the GitHub icon in the *Name* column, as demonstrated in the following example:
+
+image:apid-ghs-sync-status-projects.png[40%,40%]
+
+== The Project Details Panel
+
+=== View the GitHub Repository URL
+
+View the GitHub repository URL in a selected project’s *Detail* pane (or via the *Publish* options menu). Click the *Copy* button to copy the URL contents into the clipboard.
+
+The *Details* pane includes the following selectable text field:
+
+image:apid-ghs-view-url.png[30%,30%]
+
+=== View GitHub Sync Status
+
+View GitHub sync status in a selected project’s *Details* pane.
+
+The *Details* pane includes the following indicator:
+
+image:apid-ghs-sync-status-indicator.png[20%,20%]
+
+The indicator displays *Not Available* if you have not authorized the GitHub Sync application in your GitHub account, or if you are not a member of a GitHub Sync-authorized GitHub organization. In these cases, you can view the project in API Designer as read-only.  
+
+See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+
+=== Disable GitHub Sync
+
+Disable GitHub sync status in a selected project’s *Details* panel. 
+
+Click the *Disable Sync* button:
+
+image:apid-ghs-disable-sync-button.png[12%,12%]
+
+The *Disable GitHub Sync* dialog appears. You are asked to confirm disabling sync between your project and GitHub. Enter the project name in the confirmation text field, then click *Disable Sync*. This action cannot be undone.
+
+== See Also
+
+* xref:design-ghs-merge-branches.adoc[Merge GitHub Branches]
