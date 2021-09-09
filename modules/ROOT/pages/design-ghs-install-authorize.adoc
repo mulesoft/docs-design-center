@@ -1,0 +1,98 @@
+= Install and Authorize the MuleSoft GitHub Application
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images
+:keywords: api, github, git
+
+Install the MuleSoft GitHub Sync application within the GitHub user interface. Perform this action either as a GitHub organization administrator or as a GitHub user. Then, authorize the application when performing a GitHub sync action for the first time within API Designer. Sync actions include creating new GitHub repositories for existing API specifications and creating new API specifications that are synced with existing GitHub repositories.
+
+== Install the GitHub Sync Application as a GitHub Organization Administrator
+
+Installing the GitHub application in an organization is the first step in making the organization’s repositories accessible to API Designer (if the Anypoint user has access). Perform this action as a GitHub organization administrator on the GitHub application page. 
+
+=== Before You Begin
+
+* You must have a GitHub account.
+* You must have membership in the GitHub organization where the application will be installed.
+* You must have administrator permission to access the GitHub organization (as configured through GitHub account settings).
+
+=== Procedure
+
+. Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Sync application page^].
+. Click *Install*.
++ 
+The following dialog appears:
++
+image::apid-ghs-install-dialog.png[40%,40%]
+
+. Select an organization in which to install the application.
+. Click *Install*.
+. Click *All repositories* to make all repositories available, or click *Only select repositories* and specify individual repositories.
++
+image::apid-ghs-install-select-repos.png[40%,40%]
+
+. Click *Install*.
+
+The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-sync-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
+
+== Install the GitHub Sync Application as a GitHub User
+
+Installing the GitHub Sync application in a GitHub user account enables you to sync your individual GitHub user repositories. Perform this action as a GitHub user on the GitHub application page.
+
+=== Before You Begin
+
+* You must have a GitHub account.
+* You must have membership in the GitHub organization where the application will be installed.
+
+=== Procedure
+
+. Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Sync application page^].
+. Click *Install*.
++ 
+The following dialog appears:
++
+image::apid-ghs-install-dialog.png[40%,40%]
+
+. Select a GitHub user account (typically the first items in the displayed list).
+. Click *Install*.
+. Click *All repositories* to make all repositories available, or click *Only select repositories* and specify individual repositories.
++
+image::apid-ghs-install-select-repos.png[40%,40%]
+
+. Click *Install*.
+
+The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-sync-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
+
+== Authorize the GitHub Sync Application in API Designer
+
+=== Before You Begin
+* Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
+* You must be signed in to GitHub.
+
+=== Procedure
+. On the Design Center *Projects* page, click *Create new*.
+. Select *New API Spec*.
+. In the *New API Spec* panel, click *Authorize the MuleSoft app now to get started*:
++
+image::apid-ghs-authorize-button.png[40%,40%]
+
+. Click *Authorize*:
++
+image::apid-ghs-authorize-dialog.png[40%,40%]
+
+. In the subsequent dialog, click *Authorize MuleSoft GitHub Integration*:
++
+image::apid-ghs-authorize-dialog-2.png[50%,50%]
+
+You are redirected to API Designer, which displays an *Authorized Successfully* message. You can now complete the process that originally triggered the application authorization.
+
+== Troubleshooting
+
+=== Deauthorize the GitHub Sync application
+
+Resolve common issues by deauthorizing and then reauthorizing the GitHub Sync application. You can deauthorize the application by clicking *Revoke* in the GitHub user interface (Settings->Applications->Authorized GitHub Apps).
+
+=== The *GitHub Organization* list is empty when specifying a repository to sync 
+
+The GitHub Sync application must be installed either in a GitHub organization or in a GitHub user account before performing any sync action.

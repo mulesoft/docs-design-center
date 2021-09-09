@@ -1,5 +1,33 @@
-= GitHub Sync
+= What API Designer GitHub Sync Is
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images
+:keywords: api, github, git
+
+API specification designers often use multiple authoring and version control tools. This can result in having to maintain several different specification versions. 
+
+API Designer GitHub Sync is a version control tool that seamlessly maintains API specifications existing in several locations. The feature enables a two-way sync between API Designer and your GitHub repository, automatically capturing changes to API projects and sending the changes to a synced GitHub repository of your choice. Similarly, the application automatically propagates to your API project any changes made in a synced GitHub repository.
+
+This bidirectional flow extends API Designer into a collaborative environment where the single source of truth is always GitHub. Unlimited collaborators can share and contribute to the same content.
+
+You can:
+
+* Create new GitHub repositories that sync with existing API projects.
+* Create new API projects that sync with new GitHub repositories.
+* Create new API projects that sync with existing remote GitHub repositories.
+
+Additionally, you can perform GitHub-specific actions from within the API Designer UI, e.g. open pull requests, view branch diffs, view sync status, and resolve merge conflicts.
+
+The following diagram illustrates two-way sync between an API project and a remote GitHub repository:
+
+image::apid-ghs-two-way-sync.png[70%,70%]
+
+== See Also
+
+* xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application]
+* xref:design-ghs-new-project-new-repo.adoc[Create a New Project Synced with a New GitHub Repository]
+* xref:design-ghs-new-project-existing-repo.adoc[Create a New Project Synced From an Existing GitHub Repository]
+* xref:design-ghs-new-repo-existing-project.adoc[Create a New GitHub Repository Synced from an Existing Project]
+
+
