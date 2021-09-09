@@ -1,0 +1,47 @@
+= Create a New Project Synced with a New GitHub Repository
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images
+:keywords: api, github, git
+
+When creating an API Designer project, you can also create a GitHub repository and sync the repository with the project.
+
+== Before You Begin
+
+* Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
+* You must be signed in to GitHub.
+* The GitHub Sync application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
+
+== Procedure
+
+. On the Design Center *Projects* page, click *Create new*.
+. Select *New API Spec*.
++
+The following *New API Spec* dialog appears:
++
+image::apid-ghs-new-spec-dialog.png[40%,40%]
+
+. Specify an API title.
+. Select *I’m comfortable with designing it on my own*.
+. Click the *Sync this project with an external GitHub repository checkbox*.
++
+The dialog expands to include the following:
++
+image::apid-ghs-new-spec-repo-settings.png[40%,40%]
+
+. Select an organization in the GitHub Organization list.
++
+NOTE: The *GitHub Organization* list remains empty if the GitHub Sync application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+
+. Click *Create API Spec*. 
++
+You are navigated to the new project’s text editor.
+
+In addition to syncing GitHub repositories when creating API specifications, you can sync a new GitHub repository when creating fragments and when importing APIs.
+
+== See Also
+
+* xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor]
+* xref:design-helpful-features-text-editor.adoc[Helpful Features in the Text Editor]
+* xref:design-publish.adoc[Publish an API Specification]

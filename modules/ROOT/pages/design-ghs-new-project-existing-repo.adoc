@@ -1,0 +1,39 @@
+= Create a New Project Synced From an Existing GitHub Repository
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../assets/images
+:keywords: api, github, git
+
+You can create a new API Designer project and sync it with an existing GitHub repository. 
+
+== Before You Begin
+
+* Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
+* You must be signed in to GitHub.
+* The GitHub Sync application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
+
+== Procedure
+
+. On the Design Center *Projects* page, click *Create new*.
+. Select *Sync from existing GitHub Repo*.
++
+The following *New Project* dialog appears:
++
+image::apid-ghs-existing-repo-dialog.png[40%,40%]
++
+NOTE: The *Organization* dropdown list displays GitHub organizations that have the GitHub Sync application installed. No organizations or repositories are listed if the application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+
+. Specify a name in the *Project Name* field.
+. Select an organization and repository from which to sync your new project.
+. Click *Import As*.
+. Choose the type of API project to sync: *API Specification* or *API Fragment*
++ 
+You are navigated to the new project’s text editor. 
+
+== See Also
+
+* xref:design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor]
+* xref:design-helpful-features-text-editor.adoc[Helpful Features in the Text Editor]
+* xref:design-publish.adoc[Publish an API Specification]
+
