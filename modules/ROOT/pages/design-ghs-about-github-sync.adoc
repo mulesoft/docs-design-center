@@ -13,13 +13,13 @@ This bidirectional flow extends API Designer into a collaborative environment wh
 
 You can:
 
-* Create new GitHub repositories that sync with existing API projects.
-* Create new API projects that sync with new GitHub repositories.
-* Create new API projects that sync with existing remote GitHub repositories.
+* Create new GitHub repositories that synchronize with existing API projects.
+* Create new API projects that synchronize with new GitHub repositories.
+* Create new API projects that synchronize with existing remote GitHub repositories.
 
-Additionally, you can perform GitHub-specific actions from within the API Designer UI, e.g. open pull requests, view branch diffs, view sync status, and resolve merge conflicts.
+Additionally, you can perform GitHub-specific actions from within the API Designer UI, e.g. open pull requests, view branch diffs, view synchronization status, and resolve merge conflicts.
 
-The following diagram illustrates two-way sync between an API project and a remote GitHub repository:
+The following diagram illustrates two-way synchronization between an API project and a remote GitHub repository:
 
 image::apid-ghs-two-way-sync.png[70%,70%]
 
