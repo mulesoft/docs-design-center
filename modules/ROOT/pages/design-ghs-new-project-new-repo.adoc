@@ -1,17 +1,17 @@
-= Create a New Project Synced with a New GitHub Repository
+= Create a New Project Synchronized with a New GitHub Repository
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images
 :keywords: api, github, git
 
-When creating an API Designer project, you can also create a GitHub repository and sync the repository with the project.
+When creating an API Designer project, you can also create a GitHub repository and synchronize the repository with the project.
 
 == Before You Begin
 
 * Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
 * You must be signed in to GitHub.
-* The GitHub Sync application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
+* The GitHub Synchronization application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
 
 == Procedure
 
@@ -32,13 +32,13 @@ image::apid-ghs-new-spec-repo-settings.png[40%,40%]
 
 . Select an organization in the GitHub Organization list.
 +
-NOTE: The *GitHub Organization* list remains empty if the GitHub Sync application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+NOTE: The *GitHub Organization* list remains empty if the GitHub Synchronization application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Synchronization Application].
 
 . Click *Create API Spec*. 
 +
 You are navigated to the new project’s text editor.
 
-In addition to syncing GitHub repositories when creating API specifications, you can sync a new GitHub repository when creating fragments and when importing APIs.
+In addition to synchronizing GitHub repositories when creating API specifications, you can synchronize a new GitHub repository when creating fragments and when importing APIs.
 
 == See Also
 

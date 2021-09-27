@@ -1,21 +1,21 @@
-= Create a New GitHub Repository Synced from an Existing Project
+= Create a New GitHub Repository Synchronized from an Existing Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images
 :keywords: api, github, git
 
-You can create a new GitHub repository and sync it with an existing API Designer project. 
+You can create a new GitHub repository and synchronize it with an existing API Designer project. 
 
 == Before You Begin
 
 * Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
 * You must be signed in to GitHub.
-* The GitHub Sync application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
+* The GitHub Synchronization application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
 
 == Procedure
 
-. In the Design Center *Projects* list, click the table row containing a project to sync with GitHub.
+. In the Design Center *Projects* list, click the table row containing a project to synchronize with GitHub.
 +
 The Details panel appears.
 
@@ -27,12 +27,12 @@ image::apid-ghs-sync-github-button.png[12%,12%]
 +
 image::apid-ghs-enable-sync-dialog.png[40%,40%]
 +
-NOTE: The *GitHub Organization* list remains empty if the GitHub Sync application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+NOTE: The *GitHub Organization* list remains empty if the GitHub Synchronization application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Synchronization Application].
 
 . Specify a name for the new repository.
 . Click *Sync*.
 +
-You are navigated to the Design Center *Projects* page. A *Sync Status* indicator appears in the *Details* pane along with buttons that enable you to manage a GitHub repository and disable syncing. 
+You are navigated to the Design Center *Projects* page. A *Sync Status* indicator appears in the *Details* pane along with buttons that enable you to manage a GitHub repository and disable synchronizing. 
 
 == See Also
 

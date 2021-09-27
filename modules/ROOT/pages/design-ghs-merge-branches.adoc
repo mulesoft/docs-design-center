@@ -11,7 +11,7 @@ Merge branches to combine a target branch with changes from a forked source bran
 
 * Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
 * You must be signed in to GitHub.
-* The GitHub Sync application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
+* The GitHub Synchronization application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
 
 == Procedure
 
@@ -19,7 +19,7 @@ Merge branches to combine a target branch with changes from a forked source bran
 +
 image:apid-ghs-merge-button.png[20%,20%]
 
-See xref:design-ghs-manage-projects.adoc[Manage Projects Synced with GitHub] for information on creating branches.
+See xref:design-ghs-manage-projects.adoc[Manage Projects Synchronized with GitHub] for information on creating branches.
 
 . Click Merge.
 +
