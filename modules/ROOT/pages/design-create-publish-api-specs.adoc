@@ -33,10 +33,10 @@ As you add descriptions in your specifications and fragments, you can view them 
 
 == Testing
 
-You can use the mocking service to:
+You can use the mocking service for RAML or OAS APIs to:
 
 * Preview API functionality before writing a single line of code.
-* Send requests to a RAML or OAS specification and receive defined responses.
+* Send requests to a specification and receive defined responses.
 * Use behavioral headers to simulate different scenarios, such as timeouts and errors.
 
 == Sharing
@@ -55,7 +55,7 @@ The diagram shows how:
 * RAML specifications can use assets that are hosted in Exchange. 
 * The specification writer can publish iterations and final versions to Anypoint Exchange.
 * From Exchange, the specification can be imported into Anypoint Studio and Flow Designer as a RESTful connector, or into API Manager. 
-* Anypoint Studio can even import a specification directly from API Designer.
+* Anypoint Studio can import a specification directly from API Designer.
 
 
 == See Also
