@@ -5,13 +5,15 @@ endif::[]
 :imagesdir: ../assets/images
 :page-aliases: general:getting-started:design-an-api.adoc, design-migrating-ms.adoc
 
-API Designer provides a web-based interface for designing API specifications and fragments in:
+You can use the API Designer web UI to design API specifications in:
 
 * RESTful API Modeling Language (RAML) version 0.8 or 1.0
 * OpenAPI specification (OAS) version 2.0 or 3.0
 * AsyncAPI 2.0
 
-== Designing
+You can also design API fragments in RESTful API Modeling Language (RAML) version 0.8 or 1.0.
+
+== Design Using the Text or Visual Editor
 
 You can use either the text editor or the visual editor to create API specifications.
 
@@ -27,11 +29,11 @@ With the visual editor, you can:
 * Scaffold a specification that you can complete and customize in the text editor.
 
 
-== Documenting
+== Add and View Documentation
 
 As you add descriptions in your specifications and fragments, you can view them in auto-generated, interactive documentation in the right pane of the text editor.
 
-== Testing
+== Test Using the Mocking Service
 
 You can use the mocking service for RAML or OAS APIs to:
 
@@ -39,23 +41,27 @@ You can use the mocking service for RAML or OAS APIs to:
 * Send requests to a specification and receive defined responses.
 * Use behavioral headers to simulate different scenarios, such as timeouts and errors.
 
-== Sharing
+== Share in Exchange and API Manager
 
 You can publish an API specification to Anypoint Exchange for use in API Manager, Anypoint Studio, or Flow Designer. You can also add an API specification directly to API Manager.
 
-== How API Designer Relates to Other MuleSoft Products
+== Use Specifications and Fragments Across MuleSoft Products
 
-API Designer is an integral part of the MuleSoft API-led approach to integrating applications. The following diagram shows how the API specifications that you write in API Designer can be used in other MuleSoft products.
+You can use the specifications and fragments that you design in API Designer with integrated MuleSoft products:
 
-image::apid-system-overview.png[Diagram of MuleSoft product relationships]
+// Hiding out of date diagram and will open a Jira story to update it later
+//image::apid-system-overview.png[Diagram of MuleSoft product relationships]
+//
 
-The diagram shows how:
+//The diagram shows how you can:
 
-* A specification writer uses API Designer to design API specifications and RAML fragments. 
-* RAML specifications can use assets that are hosted in Exchange. 
-* The specification writer can publish iterations and final versions to Anypoint Exchange.
-* From Exchange, the specification can be imported into Anypoint Studio and Flow Designer as a RESTful connector, or into API Manager. 
-* Anypoint Studio can import a specification directly from API Designer.
+//Removed Flow Designer from the text because it is EOL 
+
+* Use API Designer to design API specifications and RAML fragments. 
+* Use assets that are hosted in Exchange in your RAML specifications. 
+* Publish iterations and final versions of the API specifications to Anypoint Exchange.
+* Import specifications that were designed in API Designer into Anypoint Studio and API Manager.  
+* Import a specification into Anypoint Studio directly from API Designer.
 
 
 == See Also
