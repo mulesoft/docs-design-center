@@ -61,7 +61,7 @@ You can use the specifications and fragments that you design in API Designer wit
 * Use assets that are hosted in Exchange in your RAML specifications. 
 * Publish iterations and final versions of the API specifications to Anypoint Exchange.
 * Import specifications that were designed in API Designer into Anypoint Studio and API Manager.  
-* Import a specification into Anypoint Studio directly from API Designer.
+* Import specifications into Anypoint Studio directly from API Designer.
 
 
 == See Also
