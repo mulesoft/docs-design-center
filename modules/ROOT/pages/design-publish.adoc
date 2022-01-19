@@ -22,7 +22,7 @@ For example, suppose that the file example.raml is among the files in a project.
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
 +
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
-<2> *API version*: The version number of the API specification. For a description of this field, see the "Filling in the *API version* Field" section.
+<2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
 <3> *LifeCycle State*: The lifecycle state of the asset. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. You should keep the value as it is, except in unusual cases.
 <5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
@@ -33,20 +33,18 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you do want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
+NOTE: The *Add to API Manager* field will appear on the publish dialog if you are using the non-crowd version of Anypoint Platform. Select this to add the asset to API Manager while publishing to Exchange. 
+
+[[api-version]]
 == API Version
 
-The appearance of the *API version* field depends upon several factors:
+Anypoint Exchange requires that each API specification published to it have a version number. The content and state of the *API version* field on the publish dialog depends on the following:
 
-* Anypoint Exchange requires that each API specification published to it have a version number.
-* API Manager requires that API specifications provide a version number.
-* In specifications written in OAS, the `version` field is required.
-* In specifications written in RAML, the `version` node is optional.
+* If the specification includes the version, the version is filled in from the specification and you cannot update it on the publish dialog.
+* If the specification does not include the version, you must enter the version in the *API version* field. 
 
-The following flowchart shows how API Designer decides whether to disable or enable the *API version* field and whether to populate it with a number:
 
-.The appearance of the *API version* field depends on the outcome of the checks that API Designer makes when you want to publish an API specification.
-image:apid-flowchart-api-version.png[Flowchart for the checks that API Designer makes]
+== See Also
 
-<1> API Designer checks whether the version number for the API specification is provided within the specification. If the version number is provided, the *API version* field is populated with the number and disabled, so that you cannot change the number. If the specification does not provide the version number, API Designer moves to the next check.
-<2> API Designer checks whether the checkbox *Add to API Manager* is selected. If the checkbox is selected, API Designer prevents you from proceeding because API Manager requires that the specification provide the version number. If the checkbox is not selected, API Designer moves to the last check.
-<3> API Designer checks whether the specification is being published to Anypoint Exchange for the first time. If the specification is being published for the first time, API Designer enables the *API version* field and suggests a version number because a number is not provided in the specification. If the specification is not being published for the first time, API Designer enables the *API version* field and populates the field with the number used when the specification was last published. You can change the number.
+* xref:exchange::asset-details.adoc[Explore Asset Information]
+* xref:exchange::to-change-raml-version[Change the Version of an Asset]
