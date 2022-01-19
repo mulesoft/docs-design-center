@@ -18,7 +18,7 @@ For example, suppose that the file example.raml is among the files in a project.
 
 . In API Designer, open the API-specification project that you want to publish.
 . Click *Publish* and then click *Publish to Exchange*.
-
++
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
 +
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
@@ -28,6 +28,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 <5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 <6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 //<6> *Add to API Manager*: Specifies that you want to publish the API specification to an API portal. When you click *Publish to Exchange*, API Designer also publishes the specification to API Manager, where the specification is listed in the *API Administration* section.
++
 . After completing the required fields, click *Publish to Exchange*.
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you do want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
