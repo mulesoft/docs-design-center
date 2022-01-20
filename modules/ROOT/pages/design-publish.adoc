@@ -19,16 +19,16 @@ For example, if the file `example.raml` is among the files in a project but the 
 +
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
 +
-<1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project.
+<1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. You can republish assets that are in the *Development* lifecycle state using the same asset version number. The asset version for assets that are in the *Stable* lifecycle state must be incremented to the next valid version when republished.  
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-<3> *LifeCycle State*: The lifecycle state of the asset. 
+<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer in the *Development* state or *Stable* state. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. You should keep the value as it is, except in unusual cases.
 <5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 <6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
 +
 . After completing the required fields, click *Publish to Exchange*.
 +
-If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you do want to publish the project together with those unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
+If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you  want to publish the project with the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
 NOTE: The *Add to API Manager* field will appear on the publish dialog if you are using the non-crowd version of Anypoint Platform. Select this to add the asset to API Manager while publishing to Exchange. 
 
@@ -43,5 +43,6 @@ Anypoint Exchange requires that each API specification published to it have a ve
 
 == See Also
 
+* xref:exchange::workflow-sharing-assets.adoc[Workflow: Publish Assets]
 * xref:exchange::asset-details.adoc[Explore Asset Information]
 * xref:exchange::to-change-raml-version[Change the Version of an Asset]
