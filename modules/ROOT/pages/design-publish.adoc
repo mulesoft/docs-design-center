@@ -9,7 +9,7 @@ When you want to share your API specification with other developers, you can pub
 
 It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An unreferenced file is not referenced from the project's root file, either directly or indirectly.
 
-For example, if the file `example.raml` is among the files in a project but the root file of the project does not reference `example.raml` with an `!include` tag, the root file doesn't reference `example.raml` directly. If none of the files in the chain of references from the root file directly references `example.raml`, `example.raml` is not referenced indirectly from the root file. Therefore, `example.raml` is unreferenced and should probably not be among the files in the project.
+For example, if the file `example.raml` is among the files in a project but the root file of the project does not reference `example.raml` with an `!include` tag, the root file doesn't reference `example.raml` directly. If none of the files in the chain of references from the root file directly references `example.raml`, it is not referenced indirectly from the root file. Therefore, `example.raml` is unreferenced and should probably not be among the files in the project.
 
 If you do not remove them before you begin, unreferenced files are detected when you select the option to publish to exchange and you are given options on whether or not to publish them. 
 
@@ -32,12 +32,12 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you  want to publish the project with the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
-NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This option has been replaced in the crowd version with options to add asset instances to API Manager.
+NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This functionality is not available in the crowd version and instead you can link API instances in API Manager to assets in Exchange.
 
 [[asset-version]]
 == Asset Version
 
-Anypoint Exchange requires an asset version number for each API specification published. The asset version must be specified using semantic versioning rules. For details on semantic versioning, see link:semver.org^[].
+Anypoint Exchange requires an asset version number for each API specification published. The asset version must be specified using semantic versioning rules. For details, see xref:exchange::to-change-raml-version[Change the Version of an Asset].
 
 The content of the *Asset version* field on the publish dialog depends on the following:
 
@@ -60,4 +60,4 @@ The content and state of the *API version* field on the publish dialog depends o
 * xref:exchange::workflow-sharing-assets.adoc[Workflow: Publish Assets]
 * xref:exchange::asset-details.adoc[Explore Asset Information]
 * xref:exchange::to-change-raml-version[Change the Version of an Asset]
-* xref:api-manager::api-instance-landing-page[API Instance]
+* xref:api-manager::api-instance-landing-page[API Instances]
