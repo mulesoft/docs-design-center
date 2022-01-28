@@ -21,9 +21,9 @@ If you do not remove them before you begin, unreferenced files are detected when
 +
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
 +
-<1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. You can republish assets that are in the *Development* lifecycle state using the same asset version number. The asset version for assets that are in the *Stable* lifecycle state must be incremented to the next valid version when republished.  
+<1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. You can republish assets that are in the *In Development* lifecycle state using the same asset version number. The asset version for assets that are in the *Stable* lifecycle state must be incremented to the next valid version when republished. For a description of this field, see <<asset-version>>.
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer in the *In Development* or *Stable* state. 
+<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *In Development* or *Stable*. Assets cannot be deprecated from API Designer. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
 <5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
 <6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
@@ -34,19 +34,30 @@ If your project includes files that are not referenced by the root file either d
 
 NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This option has been replaced in the crowd version with options to add asset instances to API Manager.
 
+[[asset-version]]
+== Asset Version
+
+Anypoint Exchange requires an asset version number for each API specification published. The asset version must be specified using semantic versioning rules. For details on semantic versioning, see link:semver.org^[].
+
+The content of the *Asset version* field on the publish dialog depends on the following:
+
+* If you are publishing the specification for the first time, you can use any valid number based on the semantic versioning scheme. A typical starting version is `1.0.0`. 
+* If you are republishing the specification, API Designer populates the *Asset version* field with the next patch level number based on the number used when the specification was last published. You can change the number, but the republish will fail if you use a version number that has already been used to publish a stable version of this API.
+* If the specification is being republished and you select the `In Development` state, you can can use the same number as a previously-published in-development version of the API, but not the same number as a previously-published stable version.
+
 [[api-version]]
 == API Version
 
-Anypoint Exchange requires that each API specification published to it have a version number, which is called the API version. The content and state of the *API version* field on the publish dialog depends on the following:
+Anypoint Exchange requires an API version number for each API specification published. 
+
+The content and state of the *API version* field on the publish dialog depends on the following:
 
 * If the specification includes the version, the version is filled in from the specification and you cannot update it on the publish dialog.
 * If the specification does not include the version, you must enter the version in the *API version* field. 
-* If the specification is being republished and the state selected is `Stable`, API Designer populates the *API version* field with the number used when the specification was last published. You can change the number, but the republish will fail if you use a version number that has already been used to publish this API.
-* If the specification is being republished and the state selected is `In Development`, API Designer populates the *API version* field with the number used when the specification was last published. You can change the number and can use the same number as a previously-published version of the API as long as it is in the `In Development` state.
-
 
 == See Also
 
 * xref:exchange::workflow-sharing-assets.adoc[Workflow: Publish Assets]
 * xref:exchange::asset-details.adoc[Explore Asset Information]
 * xref:exchange::to-change-raml-version[Change the Version of an Asset]
+* xref:api-manager::api-instance-landing-page[API Instance]
