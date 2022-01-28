@@ -7,9 +7,11 @@ When you want to share your API specification with other developers, you can pub
 
 == Before You Begin
 
-It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An unreferenced file is a file that is not referenced either directly or indirectly from the project's root file.
+It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An unreferenced file is not referenced from the project's root file, either directly or indirectly.
 
-For example, if the file `example.raml` is among the files in a project but the root file of the project does not reference the file with an `!include` tag, the root file doesn't reference the file directly. If none of the files in the chain of references from the root file directly references `example.raml`, `example.raml` is not referenced indirectly from the root file. Therefore, `example.raml` is unreferenced and should probably not be among the files in your project.
+For example, if the file `example.raml` is among the files in a project but the root file of the project does not reference `example.raml` with an `!include` tag, the root file doesn't reference `example.raml` directly. If none of the files in the chain of references from the root file directly references `example.raml`, `example.raml` is not referenced indirectly from the root file. Therefore, `example.raml` is unreferenced and should probably not be among the files in the project.
+
+If you do not remove them before you begin, unreferenced files are detected when you select the option to publish to exchange and you are given options on whether or not to publish them. 
 
 [publish-api-specs]
 == Publish an API Specification
@@ -21,16 +23,16 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 +
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. You can republish assets that are in the *Development* lifecycle state using the same asset version number. The asset version for assets that are in the *Stable* lifecycle state must be incremented to the next valid version when republished.  
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer in the *Development* state or *Stable* state. 
-<4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. You should keep the value as it is, except in unusual cases.
-<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
-<6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should keep the value as is, except in unusual cases.
+<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer in the *In Development* or *Stable* state. 
+<4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
+<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
+<6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
 +
 . After completing the required fields, click *Publish to Exchange*.
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you  want to publish the project with the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
-NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This option is not available if you are using the crowd version.
+NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This option has been replaced in the crowd version with options to add asset instances to API Manager.
 
 [[api-version]]
 == API Version
