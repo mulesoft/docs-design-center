@@ -41,6 +41,8 @@ Anypoint Exchange requires that each API specification published to it have a ve
 
 * If the specification includes the version, the version is filled in from the specification and you cannot update it on the publish dialog.
 * If the specification does not include the version, you must enter the version in the *API version* field. 
+* If the specification is being republished and the state selected is `Stable`, API Designer populates the *API version* field with the number used when the specification was last published. You can change the number, but the republish will fail if you use a version number that has already been used to publish this API.
+* If the specification is being republished and the state selected is `In Development`, API Designer populates the *API version* field with the number used when the specification was last published. You can change the number and can use the same number as a previously-published version of the API as long as it is in the `In Development` state.
 
 
 == See Also
