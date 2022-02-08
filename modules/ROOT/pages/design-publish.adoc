@@ -50,7 +50,7 @@ The content of the *Asset version* field on the publish dialog depends on the fo
 
 Anypoint Exchange requires an API version number for each API specification published. 
 
-The content and state of the *API version* field on the publish dialog depends on the following:
+The content and state of the *API version* field in the publish dialog depends on the following:
 
 * If the specification already includes a version, you cannot update it in the publish dialog.
 * If the specification does not include a version, you must enter the version in the *API version* field. 
