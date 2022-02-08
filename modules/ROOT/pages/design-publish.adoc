@@ -25,7 +25,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
 <3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *In Development* or *Stable*. Assets cannot be deprecated from API Designer. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
-<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. The field is defaults to a name that you should typically use. 
+<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. The field defaults to a name that you should typically use. 
 <6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. The field defaults to an ID that you should typically use.
 +
 . After completing the required fields, click *Publish to Exchange*.
