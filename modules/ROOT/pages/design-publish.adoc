@@ -7,7 +7,7 @@ When you want to share your API specification with other developers, you can pub
 
 == Before You Begin
 
-It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An unreferenced file is not referenced from the project's root file, either directly or indirectly.
+It is a good practice to remove unreferenced files before publishing a project to Anypoint Exchange. An _unreferenced_ file is not referenced from the project's root file, either directly or indirectly.
 
 For example, if the file `example.raml` is among the files in a project but the root file of the project does not reference `example.raml` with an `!include` tag, the root file doesn't reference `example.raml` directly. If none of the files in the chain of references from the root file directly references `example.raml`, it is not referenced indirectly from the root file. Therefore, `example.raml` is unreferenced and should probably not be among the files in the project.
 
