@@ -25,14 +25,14 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
 <3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *In Development* or *Stable*. Assets cannot be deprecated from API Designer. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
-<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
-<6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. You should typically keep the value as is.
+<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. The field is defaults to a name that you should typically use. 
+<6> *Asset ID*: The ID that Anypoint Exchange uses to identify the published project. The field defaults to an ID that you should typically use.
 +
 . After completing the required fields, click *Publish to Exchange*.
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you want to publish the project including the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
-NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This functionality is not available in the crowd version and instead you can link API instances in API Manager to assets in Exchange.
+NOTE: If you are using the non-Crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This functionality is not available in the Crowd version and instead you can link API instances in API Manager to assets in Exchange.
 
 [[asset-version]]
 == Asset Version
