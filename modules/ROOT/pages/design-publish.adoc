@@ -30,7 +30,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 +
 . After completing the required fields, click *Publish to Exchange*.
 +
-If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you  want to publish the project with the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
+If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you want to publish the project including the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
 
 NOTE: If you are using the non-crowd version of Anypoint Platform and want to add the asset to API Manager while publishing to Exchange, select *Add to API Manager*. This functionality is not available in the crowd version and instead you can link API instances in API Manager to assets in Exchange.
 
