@@ -17,6 +17,7 @@ If you do not remove them before you begin, unreferenced files are detected when
 == Publish an API Specification
 
 . In API Designer, open the API-specification project that you want to publish.
+. If the specification has dependencies, click the refresh button beside `Exchange Dependencies` to ensure that Design Center has the latest status and content from all dependencies. 
 . Click *Publish* and then click *Publish to Exchange*.
 +
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
