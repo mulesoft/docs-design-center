@@ -24,7 +24,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 +
 <1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. For a description of this field, see <<asset-version>>.
 <2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *In Development* or *Stable*. Assets cannot be deprecated from API Designer. 
+<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *Development* or *Stable*. Assets cannot be deprecated from API Designer. 
 <4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
 <5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. 
 <6> *Asset ID*: A unique ID that Anypoint Exchange uses to identify the published project. You should use the default unless there is a published asset with the same ID.
@@ -44,7 +44,7 @@ The content of the *Asset version* field on the publish dialog depends on the fo
 
 * If you are publishing the specification for the first time, you can use any valid number based on the semantic versioning scheme. A typical starting version is `1.0.0`. 
 * If you are republishing the specification, API Designer automatically populates the *Asset version* field with the existing patch level number incremented by 1. You can change this number, but the republish fails if you use a version number that has already been used to publish a stable version of this API.
-* If you are republishing the specification and select `In Development`, you can use the same number as a previously published in-development version of the API, but not the same number as a previously published stable version.
+* If you are republishing the specification and select `Development`, you can use the same number as a previously published in-development version of the API, but not the same number as a previously published stable version.
 
 [[api-version]]
 == API Version
