@@ -13,11 +13,15 @@ Install the GitHub Synchronization application within the GitHub user interface.
 
 To get started, first install the GitHub Synchronization application within the GitHub user interface.
 
+=== Before You Begin
+
 To install the GitHub Synchronization application as a GitHub organization administrator, you must have:
 
 * A GitHub account
 * A membership in the GitHub organization where the application will be installed
-* The administrator permission to access the GitHub organization (as configured through GitHub account settings)
+* The administrator permission to access the GitHub organization (as configured through your GitHub account settings)
+
+To install the GitHub Synchronization application:
 
 . Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Synchronization application page^].
 . Click *Install*.
