@@ -15,8 +15,12 @@ Access the branch selector component by clicking the project title (with the cur
 
 The branch selector component enables you to access your GitHub repository page and to: 
 
-* Select a branch: The current GitHub branch appears first (with its commit hash), followed by a list of previously created feature branches. Click a branch name to switch to branch. 
-* View differences between branches: Click *View Diff* to view differences between a branch and the current branch.
+* Select a branch.
++
+The current GitHub branch appears first (with its commit hash), followed by a list of previously created feature branches. Click a branch name to switch to branch. 
+* View differences between branches. 
++
+To view differences between a branch and the current branch, click *View Diff* 
 +
 NOTE: The *View in GitHub* button, *View Diff* button, and commit hash do not appear for non-GitHub-synchronized projects.
 
