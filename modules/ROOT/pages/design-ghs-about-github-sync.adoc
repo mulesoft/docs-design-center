@@ -17,11 +17,7 @@ You can:
 * Create new API projects that synchronize with new GitHub repositories.
 * Create new API projects that synchronize with existing remote GitHub repositories.
 
-Additionally, you can perform GitHub-specific actions from within the API Designer UI, e.g. open pull requests, view branch diffs, view synchronization status, and resolve merge conflicts.
-
-The following diagram illustrates two-way synchronization between an API project and a remote GitHub repository:
-
-image::apid-ghs-two-way-sync.png[70%,70%]
+Additionally, you can perform GitHub-specific actions from within the API Designer UI, for example, open pull requests, view branch diffs, view synchronization status, and resolve merge conflicts.
 
 == See Also
 
