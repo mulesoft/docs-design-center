@@ -7,25 +7,19 @@ endif::[]
 
 You can create a new API Designer project and synchronize it with an existing GitHub repository. 
 
-== Before You Begin
+Before you create and synchronize a project, ensure you have:
 
-* Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
-* You must be signed in to GitHub.
-* The GitHub Synchronization application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
-
-== Procedure
+* The Design Center Developer permission within Anypoint Platform.
+* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
+* Signed into GitHub.
 
 . On the Design Center *Projects* page, click *Create new*.
 . Select *Sync from existing GitHub Repo*.
-+
-The following *New Project* dialog appears:
-+
-image::apid-ghs-existing-repo-dialog.png[40%,40%]
-+
-NOTE: The *Organization* dropdown list displays GitHub organizations that have the GitHub Synchronization application installed. No organizations or repositories are listed if the application is not installed. See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Synchronization Application].
-
-. Specify a name in the *Project Name* field.
+. In the *New Project* dialog, specify a name in the *Project Name* field.
 . Select an organization and repository from which to synchronize your new project.
++
+NOTE: The *GitHub Organization* dropdown list displays GitHub organizations that have the GitHub Synchronization application installed. No organizations or repositories are listed if the application is not installed.
+
 . Click *Import As*.
 . Choose the type of API project to sync: *API Specification* or *API Fragment*
 + 

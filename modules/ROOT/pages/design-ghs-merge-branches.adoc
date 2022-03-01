@@ -5,32 +5,25 @@ endif::[]
 :imagesdir: ../assets/images
 :keywords: api, github, git
 
-Merge branches to combine a target branch with changes from a forked source branch (feature branch). The target branch reflects these changes, and the source branch remains untouched. You can perform this action within the API Designer interface.
+When you merge branches, you combine a target branch with changes from a forked source branch, often called a _feature branch_. The target branch reflects these changes, and the source branch remains untouched. You can merge branches within the API Designer interface.
+ 
+Before you attempt to merge any branches, ensure you have:
 
-== Before You Begin
+* The Design Center Developer permission within Anypoint Platform.
+* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
+* Signed into GitHub.
 
-* Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.
-* You must be signed in to GitHub.
-* The GitHub Synchronization application must be xref:design-ghs-install-authorize.adoc[installed and authorized].
-
-== Procedure
-
-. In the Design Center *Projects* list, click on a project name to open the text editor. The *Merge* button appears next to the branch selector component button (if branches have already been created).
+. In the Design Center *Projects* list, click a project name to open the text editor. The *Merge* button appears next to the branch selector component button (if branches have already been created).
 +
-image:apid-ghs-merge-button.png[20%,20%]
-
 See xref:design-ghs-manage-projects.adoc[Manage Projects Synchronized with GitHub] for information on creating branches.
 
 . Click Merge.
-+
-The following *Merge branch* dialog appears:
-+
-image:apid-ghs-merge-branches-dialog.png[35%,35%]
-
-. Select the target branch in the dropdown list of branches.
+. In *Merge branch* dialog, select the target branch in the dropdown list of branches.
 . Expand *Advanced Settings*.
-. Enable *Squash commits* to “flatten” the commit history. Squashing commits is recommended, as this compacts the source branch’s commits into a single commit for merging, thereby keeping the target branch’s commit history clean and concise.
-. Enable *Delete branch* to automatically delete the source branch after merging.
+. Select *Squash commits*. 
++
+Squashing commits compacts the source branch’s commits into a single commit for merging and keeps the target branch’s commit history clean and concise.
+. To automatically delete the source branch after merging, select *Delete branch*.
 . Click *Merge*.
 +
-Upon completion, the merge target branch becomes the current branch.
+After merging, the merge target branch becomes the current branch.
