@@ -13,6 +13,8 @@ Before you attempt to merge any branches, ensure you have:
 * xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
 * Signed into GitHub.
 
+To merge branches:
+
 . In the Design Center *Projects* list, click a project name to open the text editor. The *Merge* button appears next to the branch selector component button (if branches have already been created).
 +
 See xref:design-ghs-manage-projects.adoc[Manage Projects Synchronized with GitHub] for information on creating branches.

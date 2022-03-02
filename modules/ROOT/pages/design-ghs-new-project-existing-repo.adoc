@@ -13,6 +13,8 @@ Before you create and synchronize a project, ensure you have:
 * xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
 * Signed into GitHub.
 
+To synchronize a project:
+
 . On the Design Center *Projects* page, click *Create new*.
 . Select *Sync from existing GitHub Repo*.
 . In the *New Project* dialog, specify a name in the *Project Name* field.

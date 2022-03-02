@@ -13,8 +13,6 @@ Install the GitHub Synchronization application within the GitHub user interface.
 
 To get started, first install the GitHub Synchronization application within the GitHub user interface.
 
-=== Before You Begin
-
 To install the GitHub Synchronization application as a GitHub organization administrator, you must have:
 
 * A GitHub account
@@ -34,8 +32,6 @@ The application must be authorized in API Designer to complete the integration w
 == Install the GitHub Synchronization Application as a GitHub User
 
 Installing the GitHub Synchronization application in a GitHub user account enables you to sync your individual GitHub user repositories. 
-
-=== Before You Begin
 
 To install the GitHub Synchronization application as a GitHub user, you must have:
 
