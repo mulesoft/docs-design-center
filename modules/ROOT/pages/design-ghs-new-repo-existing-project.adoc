@@ -1,4 +1,4 @@
-= Create a New GitHub Repository Synchronized from an Existing Project
+= Creating New GitHub Repositories Synchronized from an Existing Projects
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,13 +7,15 @@ endif::[]
 
 You can create a new GitHub repository and synchronize it with an existing API Designer project. 
 
+== Before You Begin
+
 Before you synchronize a new repository and a project, ensure you have:
 
 * The Design Center Developer permission within Anypoint Platform.
 * xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
 * Signed into GitHub.
 
-To synchronize a new repository and a project:
+== Synchronize A New Repository and A Project
 
 . In the Design Center *Projects* list, click the table row containing a project to synchronize with GitHub.
 . In the details panel, click the *Sync with GitHub* button.
