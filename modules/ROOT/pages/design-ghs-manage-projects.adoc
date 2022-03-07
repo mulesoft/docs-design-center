@@ -1,4 +1,4 @@
-= Manage Projects Synchronized with GitHub
+= Managing Projects Synchronized with GitHub
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
