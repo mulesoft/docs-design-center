@@ -26,6 +26,7 @@ Before you create and synchronize a project, ensure you have:
 +
 NOTE: The *GitHub Organization* list remains empty if the GitHub Synchronization application is not installed.
 
+. If necessary, specify a new name for the repository. 
 . Click *Create API Spec*. 
 +
 You are navigated to the new project’s text editor.

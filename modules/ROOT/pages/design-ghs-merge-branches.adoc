@@ -31,3 +31,7 @@ Squashing commits compacts the source branch’s commits into a single commit fo
 . Click *Merge*.
 +
 After merging, the merge target branch becomes the current branch.
+
+== Resolving Merge Conflicts
+
+Merge conflicts arise when either the source branch or the target branch contain changes (commits) that aren't in the other branch. When merge conflicts arise, you must chose which branch to bring forward. You can specify the source branch or the target branch.
