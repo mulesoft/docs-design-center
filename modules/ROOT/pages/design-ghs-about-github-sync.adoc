@@ -17,7 +17,7 @@ You can:
 * Create new API projects that synchronize with new GitHub repositories.
 * Create new API projects that synchronize with existing remote GitHub repositories.
 
-Additionally, you can perform GitHub-specific actions from within the API Designer UI, for example, open pull requests, view branch diffs, view synchronization status, and resolve merge conflicts.
+To perform GitHub-specific actions, such as opening pull requests, viewing branch diffs, or viewing synchronization status use the GitHub UI. 
 
 == See Also
 
