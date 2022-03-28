@@ -1,4 +1,4 @@
-= Add a RAML API Fragment to an API-Specification Project as a Dependency
+= Adding Dependencies to an API-Specification Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,8 +6,6 @@ endif::[]
 :imagesdir: ../assets/images
 
 In projects for API specifications or API fragments, you can add RAML API fragments as dependencies directly from Anypoint Exchange.
-
-== About this task
 
 The fragments are listed in your projects, but they are not present in your projects. Instead, the text editor references them from their online location in Anypoint Exchange. Therefore, although you can include them in your specifications and fragments, you cannot edit them.
 
