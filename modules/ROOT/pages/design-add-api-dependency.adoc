@@ -3,36 +3,33 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In projects for API specifications or API fragments, you can add RAML API fragments,
-rulesets, or semantic extensions as dependencies directly from Anypoint Exchange.
+In projects for API specifications or API fragments, you can add RAML API fragments or
+rulesets as dependencies directly from Anypoint Exchange.
 
-The fragments, rulesets, and/or semantic extensions are listed in your projects,
+The dependencies are listed in your projects,
 but they are not present in your projects. Instead, the text editor references them
 from their online location in Anypoint Exchange. Therefore, although you can include
 them in your specifications and fragments, you cannot edit them.
 
-If you export your project, the resulting `.zip` file contains the referenced API fragments.
+If you export your project, the resulting `.zip` file contains the referenced dependencies.
 Whenever someone downloads your project as RAML after it is published to Anypoint Exchange,
-the resulting `.zip` file again contains the referenced API fragments, rulesets, and/or semantic extensions.
+the resulting `.zip` file again contains the referenced dependencies.
 
-If you export your project to work on it in another editor, edit the referenced API fragments, rulesets, and/or semantic extensions
+If you export your project to work on it in another editor, edit the referenced dependencies
 then try to import the project back into the text editor, the import will fail.
 
 == Add Dependencies to an API-Specification Project
 
-To add API fragments, rulesets, or semantic extensions to an API specification project as a dependency:
+To add dependencies to an API specification project as a dependency:
 
 . On the left side of the editor, click the *Exchange dependencies* icon.
-. Click the plus sign next to *Fragments*, *Rulesets*, or *Semantic Extensions*.
-. Select the API fragments, rulesets, or semantic extensions that you want to import.
-  You can select from API fragments, rulesets, or semantic extensions that are visible to the organizations that you belong to.
-+
-[NOTE]
-====
-REST API fragments, rulesets, or semantic extensions with more than 1,000 files, or with a total file size greater than 300 MB, are not supported.
-====
+. Click the plus sign next to the dependency type that you want to import.
+  You can select from the dependencies that are visible to the organizations that you belong to.
 
-The API fragments that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
+NOTE: A maximum of 1,000 files are supported for dependencies, with a total file size no greater than 300 MB.
+ 
+
+Fragment dependencies that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
 
 The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
 
