@@ -13,7 +13,7 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 * Library
 
-* Type
+* Data Type
 
 * User Documentation
 
