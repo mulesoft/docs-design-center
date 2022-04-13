@@ -15,8 +15,8 @@ If you export your project, the resulting `.zip` file contains the referenced de
 Whenever someone downloads your project as RAML after it is published to Anypoint Exchange,
 the resulting `.zip` file again contains the referenced dependencies.
 
-If you export your project to work on it in another editor, edit the referenced dependencies
-then try to import the project back into the text editor, the import will fail.
+If you export your project to work on it in another editor, edit the referenced dependencies, 
+and then try to import the project back into the text editor, the import will fail.
 
 == Add Dependencies to an API-Specification Project
 
@@ -29,11 +29,11 @@ To add dependencies to an API specification project as a dependency:
 NOTE: A maximum of 1,000 files are supported for dependencies, with a total file size no greater than 300 MB.
  
 
-Fragment dependencies that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
+Dependencies that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
 
 The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
 
 [NOTE]
 ====
-If after you add a dependency on an API fragment, an updated version of the fragment is published, and if you want your project to reference the updated version, you must update the dependency. To do so, click the *Exchange dependency* icon, click the dependency, and select *Change version*. In the *Change version* dialog, select the current version.
+If after you add a dependency on an API fragment or ruleset, an updated version of the fragment or ruleset is published, and if you want your project to reference the updated version, you must update the dependency. To do so, click the *Exchange dependency* icon, click the dependency, and select *Change version*. In the *Change version* dialog, select the current version.
 ====
