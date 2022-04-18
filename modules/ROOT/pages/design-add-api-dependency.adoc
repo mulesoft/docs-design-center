@@ -22,7 +22,7 @@ and then try to import the project back into the text editor, the import will fa
 
 To add dependencies to an API specification project as a dependency:
 
-. On the left side of the editor, click the *Exchange dependencies* icon.
+. On the left side of the text editor, click the *Exchange dependencies* icon.
 . Click the plus sign next to the dependency type that you want to import.
   You can select from the dependencies that are visible to the organizations that you belong to.
 
