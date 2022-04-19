@@ -47,9 +47,10 @@ You can create more than one API specification or related file in a single proje
 If you do create more than one specification file, you must specify one of them as the root file of your project.
 
 ====
-
++
+For more information about adding Exchange dependencies, see "Adding Dependencies to an API-Specification Project", which is linked to from the *See also* section at the end of this topic.
 * The middle panel displays the editor in which you create the API definition. Appearing in the editor when you create a project or start a new API definition are the first two lines of an API definition file, depending on which type of specification you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
-* The right panel lists the types and resources that are in the API specification that is in the central panel.
+* The right panel lists the types and resources that are in the API specification that is in the middle panel.
 * The bottom panel expands to show any project errors. The *Project Errors* panel shows any functional errors for your API definitions and any conformance messages if you are using API Governance and the API definition you are editing has rulesets applied to it as dependencies. 
 
 == The Editor
