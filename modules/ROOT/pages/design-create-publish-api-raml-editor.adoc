@@ -49,7 +49,7 @@ If you do create more than one specification file, you must specify one of them 
 ====
 +
 For more information about adding Exchange dependencies, see "Adding Dependencies to an API-Specification Project", which is linked to from the *See also* section at the end of this topic.
-* The middle panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of an API specification file, depending on which type of specification you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
+* The middle panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of an API specification file, depending on which type of specification you select when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
 * The right panel lists the types and resources that are in the API specification that is in the middle panel.
 * The bottom panel expands to show any project errors. The *Project Errors* panel shows any functional errors for your API specifications and any conformance messages if you are using API Governance and the API specification you are editing has rulesets applied to it as dependencies. 
 
