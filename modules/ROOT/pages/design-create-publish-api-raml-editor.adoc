@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use API Designer's text editor to create API definition directly in RAML 0.8, RAML 1.0, or OAS 2.0 or 3.0, and AsyncAPI 2.0. OAS and AsyncAPI API definitions can be created as JSON or YAML.
+You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 or 3.0, and AsyncAPI 2.0. OAS and AsyncAPI API specifications can be created as JSON or YAML.
 
 == Before You Begin
 
@@ -17,15 +17,15 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 +
 You can change the name (but not the extension) later, if you want to.
 
-. If you are creating a REST API definition:
+. If you are creating a REST API specification:
 .. Select the *I'm comfortable designing it on my own* option.
 .. Choose either the RAML or OAS specification. 
 +
-API Designer creates the stubs of your API definition using the specification type and version you choose.
+API Designer creates the stubs of your API specification using the specification type and version you choose.
 +
 By default API Designer creates a RAML 1.0 file. You can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML, OAS, and other types of files.
 +
-. If you are creating an AsyncAPI definition:
+. If you are creating an AsyncAPI specification:
 +
 * Select either YAML or JSON as the project language.
 
@@ -49,12 +49,12 @@ If you do create more than one specification file, you must specify one of them 
 ====
 +
 For more information about adding Exchange dependencies, see "Adding Dependencies to an API-Specification Project", which is linked to from the *See also* section at the end of this topic.
-* The middle panel displays the editor in which you create the API definition. Appearing in the editor when you create a project or start a new API definition are the first two lines of an API definition file, depending on which type of specification you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
+* The middle panel displays the editor in which you create the API specification. Appearing in the editor when you create a project or start a new API specification are the first two lines of an API specification file, depending on which type of specification you selected when you created the project. You can change these lines (as well as the file extension) if you want to switch from RAML to OAS or vice-versa.
 * The right panel lists the types and resources that are in the API specification that is in the middle panel.
-* The bottom panel expands to show any project errors. The *Project Errors* panel shows any functional errors for your API definitions and any conformance messages if you are using API Governance and the API definition you are editing has rulesets applied to it as dependencies. 
+* The bottom panel expands to show any project errors. The *Project Errors* panel shows any functional errors for your API specifications and any conformance messages if you are using API Governance and the API specification you are editing has rulesets applied to it as dependencies. 
 
 == The Editor
-While working in the editor, you can use a large number of commands to navigate through and manipulate the content of your API definition. Press F1 at any time to see a list of them. The list also displays keyboard shortcuts for most of the commands.
+While working in the editor, you can use a large number of commands to navigate through and manipulate the content of your API specification. Press F1 at any time to see a list of them. The list also displays keyboard shortcuts for most of the commands.
 
 You can also perform these tasks:
 
@@ -68,7 +68,7 @@ For information about adding API fragments to your project, see "Add a RAML API 
 
 * *Simulate calls to your API* 
 +
-Even while you are drafting a REST API definition, you can simulate calls to endpoints for which you have specified.
+Even while you are drafting a REST API specification, you can simulate calls to endpoints for which you have specified.
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
