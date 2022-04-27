@@ -33,4 +33,4 @@ The results of the test of the method appear on the right side of the screen und
 .. Sign the Technology Partner Agreement (provided by your MuleSoft BD counterpart)
 .. Ask for an extension to the expiration date of your trial of Anypoint Platform.
 .. Ask for an invitation to the Connectivity Assets Manager tool, a self-service certification tool for connectivity assets, and create a new Anypoint Platform account based on the invitation.
-.. Schedule a short demonstration to help MuleSoft understand your APIs and how they work in the Anypoint Platform.
+.. Schedule a short demonstration to help MuleSoft understand your APIs and how they work in Anypoint Platform.
