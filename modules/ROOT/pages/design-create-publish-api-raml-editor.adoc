@@ -54,7 +54,7 @@ For more information about adding Exchange dependencies, see "Adding Dependencie
 * The bottom panel expands to show any project errors. The *Project Errors* panel shows any functional errors for your API specifications and any conformance messages if you are using API Governance and the API specification you are editing has rulesets applied to it as dependencies. 
 
 == The Editor
-While working in the editor, you can use a large number of commands to navigate through and manipulate the content of your API specification. Press F1 at any time to see a list of them. The list also displays keyboard shortcuts for most of the commands.
+While working in the editor, you can use a large number of commands to navigate through and manipulate the content of your API specification. Press *F1* to see a list of these commands, along with keyboard shortcuts for most of the commands.
 
 You can also perform these tasks:
 
