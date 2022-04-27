@@ -28,4 +28,9 @@ You can view the contents of dependencies by selecting them. When you are ready 
 
 The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
 
-If after you add a dependency on an API fragment or ruleset, an updated version of the fragment or ruleset is published, and if you want your project to reference the updated version, you must update the dependency. To do so, click the *Exchange dependency* icon, click the dependency, and select *Change version*. In the *Change version* dialog, select the current version.
+After you add a dependency on an API fragment or ruleset, an updated version of the fragment or ruleset is published. To reference the updated version in your project, you must update the dependency: 
+
+. Click the *Exchange dependency* icon.
+. Click the dependency.
+. Select *Change version*. 
+. In the *Change version* dialog, select the current version.
