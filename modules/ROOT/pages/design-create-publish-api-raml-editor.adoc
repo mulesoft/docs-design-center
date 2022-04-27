@@ -23,7 +23,7 @@ You can change the name (but not the extension) later, if you want to.
 +
 API Designer creates the stubs of your API specification using the specification type and version you choose.
 +
-By default API Designer creates a RAML 1.0 file. You can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML, OAS, and other types of files.
+By default, API Designer creates a RAML 1.0 file. You can change the file to RAML 0.8 or OAS after the project is created. Projects for creating API specifications can contain a mix of RAML, OAS, and other types of files.
 +
 . If you are creating an AsyncAPI specification:
 +
