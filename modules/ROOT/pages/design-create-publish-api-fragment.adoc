@@ -41,7 +41,7 @@ By default, the editor creates a RAML file that has the same name as the project
 +
 The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 * The middle panel displays the editor in which you create your API fragment.
-* The right panel lists the types and resources that are in the API fragment that is displayed in the middle panel.
+* The right panel lists the types and resources that are in the API fragment displayed in the middle panel.
 
 . Draft your API fragment.
 +
