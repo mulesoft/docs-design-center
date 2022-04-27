@@ -4,11 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 
 In projects for API specifications or API fragments, you can add RAML API fragments or
-rulesets as dependencies directly from Anypoint Exchange. You cannot edit the specifications or fragments listed in your projects because they are referenced from their online location in Exchange.
+rulesets as dependencies directly from Anypoint Exchange. You cannot edit the fragments listed in your projects because they are referenced from their online location in Exchange.
 
-If you export your project, the resulting `.zip` file contains the referenced dependencies.
+If you export your project, the resulting ZIP file contains the referenced dependencies.
 When someone downloads your project as RAML from Exchange,
-the resulting `.zip` file contains the referenced dependencies.
+the resulting ZIP file contains the referenced dependencies.
 
 If you export your project to work on it in another editor, edit the referenced dependencies, 
 and then try to import the project back into the text editor, the import fails.
