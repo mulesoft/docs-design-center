@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, or OAS 2.0 or 3.0, and AsyncAPI 2.0. OAS and AsyncAPI API specifications can be created as JSON or YAML.
+You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, OAS 2.0, OAS 3.0, and AsyncAPI 2.0. OAS and AsyncAPI API specifications can be created as JSON or YAML files.
 
 == Before You Begin
 
