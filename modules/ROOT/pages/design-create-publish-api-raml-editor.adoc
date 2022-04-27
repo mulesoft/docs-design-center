@@ -17,7 +17,7 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 +
 You can change the name (but not the extension) later, if you want to.
 
-. If you are creating a REST API specification:
+. To start creating a REST API specification:
 .. Select the *I'm comfortable designing it on my own* option.
 .. Choose either the RAML or OAS specification. 
 +
