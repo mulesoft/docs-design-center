@@ -68,7 +68,7 @@ For information about adding API fragments to your project, see "Add a RAML API 
 
 * *Simulate calls to your API* 
 +
-Even while you are drafting a REST API specification, you can simulate calls to endpoints for which you have specified.
+When you draft a REST API specification, you can simulate calls to the specified endpoints.
 +
 For more information, view the topic "Simulate Calls to an API", which is linked to from the *See also* section at the end of this topic.
 
