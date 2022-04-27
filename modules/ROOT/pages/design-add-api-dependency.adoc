@@ -24,7 +24,7 @@ To add dependencies to an API specification project:
 NOTE: API Designer supports a maximum of 1,000 files for dependencies, with a total file size no greater than 300 MB.
  
 
-Dependencies are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
+You can view the contents of dependencies by selecting them. When you are ready to continue work on your project, click the *Files* icon.
 
 The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
 
