@@ -32,7 +32,7 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 You can change the name or fragment type later, if necessary.
 
 . Select the type of API fragment that you want to create and click *Create Fragment*.
-
++
 _Result:_ The text editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project.
