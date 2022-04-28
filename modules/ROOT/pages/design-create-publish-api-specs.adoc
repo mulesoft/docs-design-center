@@ -21,6 +21,7 @@ With the text editor, you can:
 
 * Design according to best practices with a context-aware shelf that auto-populates with the appropriate methods, resources, parameters, and security components.
 * Include RAML API fragments, such as security schemas and data types, from Exchange or write your own.
+* Apply rulesets from Exchange to validate the governance conformance of your projects.
 * Import existing API specifications.
 
 With the visual editor, you can:
