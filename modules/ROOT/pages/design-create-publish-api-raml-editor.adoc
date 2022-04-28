@@ -101,7 +101,7 @@ If you are satisfied with your API specification, you can publish it to Exchange
 * xref:design-publish.adoc[Publish an API Specification]
 * xref:design-rename-project.adoc[Rename an Open Project]
 * xref:design-delete-project.adoc[Delete an Open Project]
-* xref:api-governance::api-gov.adoc[API Governance Documentation]
+* xref:api-governance::index.adoc[API Governance Documentation]
 
 ////
 Text to add at line 17 when the GitHub integration is no longer "dark":
