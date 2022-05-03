@@ -1,42 +1,36 @@
-= Add a RAML API Fragment to an API-Specification Project as a Dependency
+= Adding Dependencies to an API-Specification Project
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-:imagesdir: ../assets/images
+In projects for API specifications or API fragments, you can add RAML API fragments or
+rulesets as dependencies directly from Anypoint Exchange. You cannot edit the fragments listed in your projects because they are referenced from their online location in Exchange.
 
-In projects for API specifications or API fragments, you can add RAML API fragments as dependencies directly from Anypoint Exchange.
+If you export your project, the resulting ZIP file contains the referenced dependencies.
+When someone downloads your project as RAML from Exchange,
+the resulting ZIP file contains the referenced dependencies.
 
-== About this task
+If you export your project to work on it in another editor, edit the referenced dependencies, 
+and then try to import the project back into the text editor, the import fails.
 
-The fragments are listed in your projects, but they are not present in your projects. Instead, the text editor references them from their online location in Anypoint Exchange. Therefore, although you can include them in your specifications and fragments, you cannot edit them.
+== Add Dependencies to an API-Specification Project
 
-If you export your project, the resulting `.zip` file contains the referenced API fragments. Whenever someone downloads your project as RAML after it is published to Anypoint Exchange, the resulting `.zip` file again contains the referenced API fragments.
+To add dependencies to an API specification project:
 
-If you export your project to work on it in another editor, edit the referenced API fragments, then try to import the project back into the text editor, the import will fail.
+. On the left side of the text editor, click the *Exchange dependencies* icon.
+. Click the plus sign next to the dependency type that you want to import.
+  You can select from the dependencies that are visible to the organizations that you belong to.
 
+NOTE: API Designer supports a maximum of 1,000 files for dependencies, with a total file size no greater than 300 MB.
+ 
 
-== Procedure
+You can view the contents of dependencies by selecting them. When you are ready to continue work on your project, click the *Files* icon.
 
-. On the left side of the editor, click the *Exchange dependencies* icon.
-. Click the plus sign that is at the top of the left pane.
-. Select the API fragments that you want to import. You can select from API fragments that are visible to the organizations that you belong to.
+The files appear in the folder `exchange-modules`. The subfolders correspond to the parts of the URI for the referenced API fragment.
 
-[NOTE]
-====
+After you add a dependency on an API fragment or ruleset, an updated version of the fragment or ruleset is published. To reference the updated version in your project, you must update the dependency: 
 
-REST API fragments with more than 1,000 files, or with a total file size greater than 300 MB, are not supported.
-
-====
-
-== Result
-The API fragments that you selected are listed in the left pane. You can view their contents by selecting them. When you are ready to continue work on your project, click the *Files* icon.
-
-The files appear in the folder `exchange-modules`. Within this folder are subfolders that correspond to the parts of the URI for the referenced API fragment.
-
-[NOTE]
-====
-
-If after you add a dependency on an API fragment an updated version of the fragement is published, and if you want your project to reference the updated version, you must update the dependency. To do so, click the *Exchange dependency* icon, click the dependency, and select *Change version*. In the *Change version* dialog, select the current version.
-
-====
+. Click the *Exchange dependency* icon.
+. Click the dependency.
+. Select *Change version*. 
+. In the *Change version* dialog, select the current version.

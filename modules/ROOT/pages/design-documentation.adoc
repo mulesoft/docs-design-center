@@ -5,7 +5,7 @@ endif::[]
 
 :imagesdir: ../assets/images
 
-The right pane of the text editor in API Designer displays the documentation that is written into API specifications. For API specifications that are written in RAML or OAS 2.0, the the documentation is rendered are identically. However, the documentation for API specifications that are written in OAS 3.0 can include multiple server definitions, as well as links and callbacks.
+The right pane of the text editor in API Designer displays the documentation that is written into API specifications. Documentation is rendered identically for REST API specifications written in RAML or OAS 2.0. However, documentation for API specifications written in OAS 3.0 can include multiple server definitions as well as links and callbacks.
 
 == Documentation for Definitions of Multiple Servers
 

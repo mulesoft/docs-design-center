@@ -5,7 +5,7 @@ endif::[]
 
 You can separate new iterations of a project from previous iterations by branching.
 
-== About this task
+== About this Task
 
 A new branch is a fork of your project and cannot be merged back into the master branch. Anybody who has access to your project can also create branches.
 
