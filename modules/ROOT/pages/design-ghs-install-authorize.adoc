@@ -1,9 +1,4 @@
 = Installing and Authorizing GitHub Synchronization
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:imagesdir: ../assets/images
-:keywords: api, github, git
 
 Installing the GitHub Synchronization application in an organization is the first step in making the organization’s repositories accessible to API Designer.
 

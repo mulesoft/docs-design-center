@@ -1,9 +1,4 @@
 = GitHub Synchronization
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:imagesdir: ../assets/images
-:keywords: api, github, git
 
 API specification designers often use multiple authoring and version control tools. This can result in having to maintain several different specification versions. 
 

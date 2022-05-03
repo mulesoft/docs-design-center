@@ -1,9 +1,4 @@
 = Merging GitHub Branches
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:imagesdir: ../assets/images
-:keywords: api, github, git
 
 When you merge branches, you combine a target branch with changes from a forked source branch, often called a _feature branch_. The target branch reflects these changes, and the source branch remains untouched. You can merge branches within the API Designer interface.
  

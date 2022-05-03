@@ -1,9 +1,4 @@
 = Creating New GitHub Repositories Synchronized from an Existing Projects
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:imagesdir: ../assets/images
-:keywords: api, github, git
 
 You can create a new GitHub repository and synchronize it with an existing API Designer project. 
 

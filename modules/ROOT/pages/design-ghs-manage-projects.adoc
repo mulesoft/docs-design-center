@@ -1,9 +1,4 @@
 = Managing Projects Synchronized with GitHub
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:imagesdir: ../assets/images
-:keywords: api, github, git
 
 You can manage and interact with GitHub-synchronized projects in API Designer and Design Center. 
 
