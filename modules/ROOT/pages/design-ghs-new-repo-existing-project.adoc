@@ -6,9 +6,9 @@ You can create a new GitHub repository and synchronize it with an existing API D
 
 Before you synchronize a new repository and a project, ensure you have:
 
-* The Design Center Developer permission within Anypoint Platform.
-* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
-* Signed into GitHub.
+* The Design Center Developer permission within Anypoint Platform
+* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application
+* Signed into GitHub
 
 == Synchronize A New Repository and A Project
 

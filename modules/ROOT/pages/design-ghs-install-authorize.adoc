@@ -13,7 +13,7 @@ To get started, first install the GitHub Synchronization application within the 
 To install the GitHub Synchronization application as a GitHub organization administrator, you must have:
 
 * A GitHub account
-* A membership in the GitHub organization where the application will be installed
+* A membership in the GitHub organization in which you want to install the application
 * The administrator permission to access the GitHub organization (as configured through your GitHub account settings)
 
 === Install the GitHub Synchronization application
@@ -34,8 +34,9 @@ Installing the GitHub Synchronization application in a GitHub user account enabl
 
 To install the GitHub Synchronization application as a GitHub user, you must have:
 
-* A GitHub account.
-* A membership in the GitHub organization where the application will be installed.
+* A GitHub account
+* A membership in the GitHub organization in which you want to install the application
+
 
 === Install the GitHub Synchronization Application
 
@@ -62,12 +63,9 @@ You are redirected to API Designer, which displays an *Authorized Successfully* 
 
 == Troubleshooting GitHub Synchronization Application Installation
 
-If you encounter errors when attempting to authorize the GitHub Synchronization application, troubleshoot them as follows.
+If you encounter errors when attempting to authorize the GitHub Synchronization application, try deauthorizing and then reauthorizing the GitHub Synchronization application:
 
-=== Deauthorize the GitHub Synchronization application
+. Click *Revoke* in the GitHub user interface (*Settings* > *Applications* > *Authorized GitHub Apps*).
+. xref:authorize-the-github-synchronization-application-in-api-designer[Authorize the GitHub Synchronization Application].
 
-Resolve common issues by deauthorizing and then reauthorizing the GitHub Synchronization application. You can deauthorize the application by clicking *Revoke* in the GitHub user interface (Settings->Applications->Authorized GitHub Apps).
-
-=== The *GitHub Organization* list is empty when specifying a repository to sync 
-
-The GitHub Synchronization application must be installed either in a GitHub organization or in a GitHub user account before performing any sync action.
+If you see an empty list, ensure you've installed the application either in a GitHub organization or in a GitHub user account before performing any sync action.

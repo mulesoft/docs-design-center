@@ -2,7 +2,7 @@
 
 You can manage and interact with GitHub-synchronized projects in API Designer and Design Center. 
 
-* In the Design Center *Projects* list, a project’s *Details* pane enables you to view both GitHub sync status and repository URL - useful for troubleshooting connectivity issues. The *Details* pane also enables you to disable GitHub synchronization (you can also disable GitHub synchronization via the *Publish* options menu).
+In the Design Center *Projects* list, a project’s *Details* pane enables you to view both GitHub sync status and repository URL, which is useful for troubleshooting connectivity issues. The *Details* pane also enables you to disable GitHub synchronization (you can also disable GitHub synchronization via the *Publish* options menu).
 
 == Use The Branch Selector Component in API Designer
 
@@ -10,41 +10,41 @@ Access the branch selector component by clicking the project title (with the cur
 
 The branch selector component enables you to access your GitHub repository page and to: 
 
-* Select a branch.
+* Select a branch
 +
 The current GitHub branch appears first (with its commit hash), followed by a list of previously created feature branches. Click a branch name to switch to branch. 
-* View differences between branches. 
+* View differences between branches
 +
-To view differences between a branch and the current branch, click *View Diff* 
+To view differences between a branch and the current branch, click *View Diff*. 
 +
 NOTE: The *View in GitHub* button, *View Diff* button, and commit hash do not appear for non-GitHub-synchronized projects.
 
-* Delete branches.
+* Delete branches
 +
 To delete a branch, click the *Delete branch* button (*X*).
 * Open a pull request.
 +
 To open a pull request, switch to a branch (other than the main branch), open the branch component selector, and click *Open Pull Request*. 
-* Create a new branch.
+* Create a new branch
 +
 Create a new feature branch from the current branch. Specify the new branch name in the *Create Branch* text field and click the *Create* button (*+*). API Designer switches to the new branch and redirects you to the text editor. The new branch name displays above the code panel.
 
 == Use The Projects Page and Details Panel in Design Center
 
-In the Design Center, the *Projects* list and a project’s *Details* panel enable you to:
+In Design Center, the *Projects* list and a project’s *Details* panel enable you to:
 
-* Determine if project is synchronized with GitHub.
+* Determine if project is synchronized with GitHub
 +
 The Design Center *Projects* page lists your specifications, fragments, and applications. Projects that are synchronized with GitHub contain the GitHub icon in the *Name* column.
-* View the GitHub repository URL.
+* View the GitHub repository URL
 +
 View the GitHub repository URL in a selected project’s *Detail* panel. Click the *Copy* button to copy the URL contents into the clipboard.
-* View GitHub Synchronization status.
+* View GitHub Synchronization status
 +
 View GitHub synchronization status in a selected project’s *Details* panel. The indicator displays *Not Available* if you have not authorized the GitHub Synchronization application in your GitHub account, or if you are not a member of a GitHub synchronized-authorized GitHub organization. In these cases, you can view the project in API Designer as read-only.  
 +
 See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
-* Disable GitHub Synchronization.
+* Disable GitHub Synchronization
 +
 To disable GitHub synchronization status from a selected project’s *Details* panel, click the *Disable Sync* button.
 +

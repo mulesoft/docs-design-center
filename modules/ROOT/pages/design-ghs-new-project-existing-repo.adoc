@@ -6,9 +6,9 @@ You can create a new API Designer project and synchronize it with an existing Gi
 
 Before you create and synchronize a project, ensure you have:
 
-* The Design Center Developer permission within Anypoint Platform.
-* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
-* Signed into GitHub.
+* The Design Center Developer permission within Anypoint Platform
+* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application
+* Signed into GitHub
 
 == Synchronize A New Project
 
@@ -20,7 +20,7 @@ Before you create and synchronize a project, ensure you have:
 NOTE: The *GitHub Organization* dropdown list displays GitHub organizations that have the GitHub Synchronization application installed. No organizations or repositories are listed if the application is not installed.
 
 . Click *Import As*.
-. Choose the type of API project to sync: *API Specification* or *API Fragment*
+. Choose the type of API project to sync: *API Specification* or *API Fragment*.
 + 
 You are navigated to the new project’s text editor. 
 

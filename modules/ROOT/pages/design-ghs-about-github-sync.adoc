@@ -6,13 +6,13 @@ GitHub Synchronization is a version control tool that seamlessly maintains API s
 
 This bidirectional flow extends API Designer into a collaborative environment where the single source of truth is always GitHub. Unlimited collaborators can share and contribute to the same content.
 
-You can:
+Using GitHub synchronization with API Designer enables you to:
 
 * Create new GitHub repositories that synchronize with existing API projects.
 * Create new API projects that synchronize with new GitHub repositories.
 * Create new API projects that synchronize with existing remote GitHub repositories.
 
-To perform GitHub-specific actions, such as opening pull requests, viewing branch diffs, or viewing synchronization status use the GitHub UI. 
+To perform GitHub-specific actions, such as opening pull requests, viewing branch diffs, or viewing synchronization status, use the GitHub UI. 
 
 == See Also
 

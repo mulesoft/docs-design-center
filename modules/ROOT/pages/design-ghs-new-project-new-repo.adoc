@@ -6,9 +6,9 @@ When creating an API Designer project, you can also create a GitHub repository a
 
 Before you create and synchronize a project, ensure you have:
 
-* The Design Center Developer permission within Anypoint Platform.
-* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application.
-* Signed into GitHub.
+* The Design Center Developer permission within Anypoint Platform
+* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application
+* Signed into GitHub
 
 == Synchronize A New Project
 
@@ -16,7 +16,7 @@ Before you create and synchronize a project, ensure you have:
 . Select *New API Spec*.
 . In the *New API Spec* dialog, specify an API title.
 . Select *I’m comfortable with designing it on my own*.
-. Click the *Sync this project with an external GitHub repository checkbox*.
+. Click the *Sync this project with an external GitHub repository* checkbox.
 . In the expanded dialog, select an organization from the *GitHub Organization* list.
 +
 NOTE: The *GitHub Organization* list remains empty if the GitHub Synchronization application is not installed.
