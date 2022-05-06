@@ -17,7 +17,7 @@ To install the GitHub Synchronization application as a GitHub organization admin
 * The administrator permission to access the GitHub organization (as configured through your GitHub account settings)
 
 [IMPORTANT]
-In the email settings for the GitHub account you want to use with GitHub Synchronization, ensure you have not selected *Block command line pushes that expose my email*, as this will prevent you from pushing commits in your synchronized project.
+In the email settings for the GitHub account you want to use with GitHub Synchronization, if you select *Keep my email addresses private*, ensure you do not select *Block command line pushes that expose my email*. The block setting will prevent you from pushing commits in your synchronized project.
 
 === Install the GitHub Synchronization application
 
@@ -41,7 +41,7 @@ To install the GitHub Synchronization application as a GitHub user, you must hav
 * A membership in the GitHub organization in which you want to install the application
 
 [IMPORTANT]
-In the email settings for the GitHub account you want to use with GitHub Synchronization, ensure you have not selected *Block command line pushes that expose my email*, as this will prevent you from pushing commits in your synchronized project.
+In the email settings for the GitHub account you want to use with GitHub Synchronization, if you select *Keep my email addresses private*, ensure you do not select *Block command line pushes that expose my email*. The block setting will prevent you from pushing commits in your synchronized project.
 
 === Install the GitHub Synchronization Application
 
