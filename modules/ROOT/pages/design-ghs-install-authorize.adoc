@@ -16,6 +16,9 @@ To install the GitHub Synchronization application as a GitHub organization admin
 * A membership in the GitHub organization in which you want to install the application
 * The administrator permission to access the GitHub organization (as configured through your GitHub account settings)
 
+[IMPORTANT]
+In the email settings for the GitHub account you want to use with GitHub Synchronization, ensure you have not selected *Block command line pushes that expose my email*, as this will prevent you from pushing commits in your synchronized project.
+
 === Install the GitHub Synchronization application
 
 . Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Synchronization application page^].
@@ -37,6 +40,8 @@ To install the GitHub Synchronization application as a GitHub user, you must hav
 * A GitHub account
 * A membership in the GitHub organization in which you want to install the application
 
+[IMPORTANT]
+In the email settings for the GitHub account you want to use with GitHub Synchronization, ensure you have not selected *Block command line pushes that expose my email*, as this will prevent you from pushing commits in your synchronized project.
 
 === Install the GitHub Synchronization Application
 
