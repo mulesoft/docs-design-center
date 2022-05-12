@@ -2,7 +2,7 @@
 
 API specification designers often use multiple authoring and version control tools. This can result in having to maintain several different specification versions. 
 
-GitHub Synchronization is a version control tool that seamlessly maintains API specifications existing in several locations. The feature enables a two-way synchronization between API Designer and your GitHub repository, automatically capturing changes to API projects and sending the changes to a synchronized GitHub repository of your choice. Similarly, the application automatically propagates to your API project any changes made in a synchronized GitHub repository.
+GitHub Synchronization is a version control tool that maintains API specifications existing in several locations. Use GitHub Synchronization to enable two-way synchronization between API Designer and your GitHub repository, and automatically capture changes to API projects and send the changes to a synchronized GitHub repository of your choice. Similarly, the application automatically propagates to your API project any changes made in a synchronized GitHub repository.
 
 This bidirectional flow extends API Designer into a collaborative environment where the single source of truth is always GitHub. Unlimited collaborators can share and contribute to the same content.
 
