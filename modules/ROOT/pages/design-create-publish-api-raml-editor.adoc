@@ -12,8 +12,8 @@ Within Anypoint Platform, your user ID must be assigned the _Design Center Devel
 == Procedure
 
 . On the *Projects* page in Design Center, click *Create new*.
-. Select *New API Spec* to create a REST API or *New AsyncAPI* to create an AsyncAPI. 
-. In the *New API Spec* or *New AsyncAPI* dialog, name your project.
+. Select *New API Specification* to create a REST API or *New AsyncAPI* to create an AsyncAPI. 
+. In the *New API Specification* or *New AsyncAPI* dialog, name your project.
 +
 You can change the name (but not the extension) later, if you want to.
 
