@@ -35,10 +35,8 @@ You can change the name later, if you want to.
 
 . Select the option *Guide me through it* to use the visual API editor.
 . Click *Create API Spec.*
-
-_Result:_
 +
-The visual API editor opens.
+_Result:_ The visual API editor opens.
 +
 As you make progress, you can run the mocking service to simulate calls to your API specification. For more information, view the topic "Simulate Calls to an API", which is listed in the *See Also* section at the end of this topic.
 +
