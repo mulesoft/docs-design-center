@@ -19,15 +19,21 @@ To view differences between a branch and the current branch, click *View Diff*.
 +
 NOTE: The *View in GitHub* button, *View Diff* button, and commit hash do not appear for non-GitHub-synchronized projects.
 
-* Delete branches
+* View the default branch
++
+The default branch is indicated by the default icon.
+* Delete a branch
 +
 To delete a branch, click the *Delete branch* button (*X*).
-* Open a pull request.
+* Open a pull request
 +
 To open a pull request, switch to a branch (other than the main branch), open the branch component selector, and click *Open Pull Request*. 
+* Rename a branch
++
+To rename a branch, click the pencil icon, add a new name, and click *Rename*. 
 * Create a new branch
 +
-Create a new feature branch from the current branch. Specify the new branch name in the *Create Branch* text field and click the *Create* button (*+*). API Designer switches to the new branch and redirects you to the text editor. The new branch name displays above the code panel.
+Create a new feature branch from the current branch. Specify the new branch name in the *Create Branch* text field and click the  create branch button (*+*). API Designer switches to the new branch and redirects you to the text editor. The new branch name displays above the code panel.
 
 == Use The Projects Page and Details Panel in Design Center
 
@@ -44,6 +50,12 @@ View the GitHub repository URL in a selected project’s *Detail* panel. Click t
 View GitHub synchronization status in a selected project’s *Details* panel. The indicator displays *Not Available* if you have not authorized the GitHub Synchronization application in your GitHub account, or if you are not a member of a GitHub synchronized-authorized GitHub organization. In these cases, you can view the project in API Designer as read-only.  
 +
 See xref:design-ghs-install-authorize.adoc[Install and Authorize the MuleSoft GitHub Sync Application].
+* Change the default branch name for a new project
++
+To change the default branch for a new project, you must have admin permissions. Open a project from the Projects Page, click *Settings*, and rename the branch. This applies to new projects only, not existing projects. Note that if you're using GitHub synchronization, the default branch name is specified by GitHub. 
+* Change the default branch for an existing project 
++
+To change the default branch for an existing project, open a project from the Projects Page, click *Settings* > *Branch Settings* and select a new branch. Note that if you're using GitHub synchronization, the default branch name is specified by GitHub. 
 * Disable GitHub Synchronization
 +
 To disable GitHub synchronization status from a selected project’s *Details* panel, click the *Disable Sync* button.
