@@ -52,14 +52,14 @@ In the email settings for the GitHub account you want to use with GitHub Synchro
 . Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Synchronization application page^].
 . Click *Install*.
 . In the *Install MuleSoft GitHub Integration* dialog, select a GitHub user account (typically the first items in the displayed list).
-. Click *All repositories* to make all repositories available, or click *Only select repositories* and specify individual repositories.
+. Click *All repositories* to make all repositories available or click *Only select repositories* and specify individual repositories.
 . Click *Install*.
 
 The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-sync-application-in-api-designer[Authorize the GitHub Synchronization Application in API Designer].
 
 == Authorize the GitHub Synchronization Application in API Designer
 
-To authorize the GitHub Synchronization application ensure your user ID is assigned the Design Center Developer permission.
+To authorize the GitHub Synchronization application, ensure your user ID is assigned the Design Center Developer permission.
 
 . Sign in to GitHub.
 . On the Design Center *Projects* page, click *Create new*.
