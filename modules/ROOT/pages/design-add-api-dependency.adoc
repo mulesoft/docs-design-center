@@ -34,3 +34,7 @@ After you add a dependency on an API fragment or ruleset, an updated version of 
 . Click the dependency.
 . Select *Change version*. 
 . In the *Change version* dialog, select the current version.
+
+== See Also
+
+* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions]
