@@ -27,7 +27,7 @@
  ** xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0]
  ** xref:design-json-schema-required-error.adoc[Common Errors in Specifying Required Fields in JSON Schemas]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
- ** xref:design-ghs-merge-branches.adoc[Merge GitHub Branches]
+ ** xref:design-ghs-merge-branches.adoc[Merge Branches]
  ** xref:design-ghs-about-github-sync.adoc[GitHub Synchronization]
  *** xref:design-ghs-install-authorize.adoc[Install and Authorize GitHub Synchronization]
  *** xref:design-ghs-new-project-new-repo.adoc[Create a New Project Synchronized with a New GitHub Repository]
