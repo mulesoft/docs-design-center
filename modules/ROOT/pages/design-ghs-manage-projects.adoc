@@ -64,4 +64,4 @@ In the *Disable GitHub Sync* dialog, confirm that you want to disable sync betwe
 
 == See Also
 
-* xref:design-ghs-merge-branches.adoc[Merge GitHub Branches]
+* xref:design-ghs-merge-branches.adoc[Merge Branches]
