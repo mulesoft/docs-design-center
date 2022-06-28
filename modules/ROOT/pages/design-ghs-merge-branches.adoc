@@ -1,20 +1,11 @@
-= Merging GitHub Branches
+= Merging Branches
 
 When you merge branches, you combine a target branch with changes from a forked source branch, often called a _feature branch_. The target branch reflects these changes, and the source branch remains unmodified. You can merge branches within the API Designer interface.
  
-== Before You Begin
-
-Before you attempt to merge any branches, ensure you have:
-
-* The Design Center Developer permission within Anypoint Platform
-* xref:design-ghs-install-authorize.adoc[Installed and authorized] the GitHub Synchronization application
-* Signed into GitHub
-
 == Merge A Branch
 
 . In the Design Center *Projects* list, click a project name to open the text editor. The *Merge* button appears next to the branch selector component button (if branches have already been created).
 +
-See xref:design-ghs-manage-projects.adoc[Manage Projects Synchronized with GitHub] for information on creating branches.
 
 . Click Merge.
 . In the *Merge branch* dialog, select the target branch in the dropdown list of branches.
