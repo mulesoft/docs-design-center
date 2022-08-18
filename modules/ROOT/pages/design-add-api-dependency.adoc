@@ -35,6 +35,8 @@ After you add a dependency on an API fragment or ruleset, an updated version of 
 . Select *Change version*. 
 . In the *Change version* dialog, select the current version.
 
+NOTE: When a Governance API is non-conformant, you can fix it on Design Center. Follow the previous steps to add the listed rulesets as dependencies and view the conformance messages in the Project Errors section to fix and republish your API definition.
+
 == See Also
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions]
