@@ -2,7 +2,7 @@
 
 After publishing an asset to Anypoint Exchange, you can view the source files in the API Designer. Exchange provides a direct link to the API Designer project containing the source files.
 
-When you publish a project to Exchange via a ZIP file or other resource outside of API Designer, you can only view the contents of the project. To edit the files, create a new project based on the contents of the file. If you delete a project from API Desiger after publishing it to Exchange, you can only view it in read-only mode.
+When you publish a project to Exchange via a ZIP file or other resource outside of API Designer, you can only view the contents of the project. To edit the files, create a new project based on the contents of the file. If you delete a project from API Designer after publishing it to Exchange, you can only view it in read-only mode.
 
 
 == Procedure

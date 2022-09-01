@@ -118,7 +118,7 @@ image::apid-apic-oas-3-duplicated-get.png[]
 +
 image::apid-apic-oas-3-files.png[]
 
-7. The GET method for the `/files` endpoint inherits the one server in the local `servers` definition. On the page for thie method, there is no list of servers to choose from:
+7. The GET method for the `/files` endpoint inherits the one server in the local `servers` definition. On the page for this method, there is no list of servers to choose from:
 +
 image::apid-apic-oas-3-files-get.png[]
 

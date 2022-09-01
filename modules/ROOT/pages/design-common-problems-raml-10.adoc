@@ -811,7 +811,7 @@ title: ExampleRAML
 ----
 {
 ...
-"assesments.characteristic.focusofattention.data"= "",
+"assessments.characteristic.focusofattention.data"= "",
 }
 
 ----

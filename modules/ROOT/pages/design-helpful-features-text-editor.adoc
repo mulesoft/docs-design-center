@@ -158,7 +158,7 @@ Selecting a symbol navigates you to its location in the document.
 
 == Extract an Element to a Declaration
 
-You can take advantage of refactoring helpers to ease the continuous improvement of the design. One such helper is the ability to extract an inline declarable element to a top-level declaration, with the result being reusabiity.
+You can take advantage of refactoring helpers to ease the continuous improvement of the design. One such helper is the ability to extract an inline declarable element to a top-level declaration, with the result being reusability.
 
 When you select a range that matches an inline declarable element, an icon appears to the left of the element:
 
