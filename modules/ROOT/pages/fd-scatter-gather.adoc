@@ -9,9 +9,11 @@ With a Scatter-Gather card, you can send a message through more than one set of 
 
 .This schematic diagram shows a Scatter-Gather card that includes the minimum of two routes.
 image::fd-sg.png[A Scatter-Gather card in a flow]
-<1> Any card can pass messages to a Scatter-Gather card. The card that passes messages can be the trigger of the current flow or any other card in the flow.
-<2> The Scatter-Gather card is displayed in a larger rectangle that is called the _scope_ of the card. Within this scope are two or more sets of cards, each set called a _route_. The Scatter-Gather card processes all routes at the same time, and the routes are all independent of each other. Each route can have one or more cards.
-<3> When all routes are finished processing data, the results from the routes are included in the payload of the original message. The revised message is passed to the next card in the flow.
+
+[calloutlist]
+. Any card can pass messages to a Scatter-Gather card. The card that passes messages can be the trigger of the current flow or any other card in the flow.
+. The Scatter-Gather card is displayed in a larger rectangle that is called the _scope_ of the card. Within this scope are two or more sets of cards, each set called a _route_. The Scatter-Gather card processes all routes at the same time, and the routes are all independent of each other. Each route can have one or more cards.
+. When all routes are finished processing data, the results from the routes are included in the payload of the original message. The revised message is passed to the next card in the flow.
 
 Messages that move through a flow have this general structure:
 
@@ -40,18 +42,22 @@ In this example, an HTTP Listener triggers the flow when it receives a request. 
 
 .This is the flow that creates the CSV file aggregating the contacts from the two Salesforce organizations.
 image::fd-sg-1-entire-flow.png[Flow for this example]
-<1> An HTTP Listener card for triggering the flow.
-<2> A Scatter-Gather card with two routes, each route consisting of an instance of Salesforce Connector. The instances query different Salesforce organizations.
-<3> A Set Variable card for storing the concatenated query results from the Scatter-Gather card in a variable.
-<4> A Transform card for mapping the fields in the variable to the fields in a CSV file.
+
+[calloutlist]
+. An HTTP Listener card for triggering the flow.
+. A Scatter-Gather card with two routes, each route consisting of an instance of Salesforce Connector. The instances query different Salesforce organizations.
+. A Set Variable card for storing the concatenated query results from the Scatter-Gather card in a variable.
+. A Transform card for mapping the fields in the variable to the fields in a CSV file.
 
 First, you create the custom data type like this:
 
 .The *Edit Custom Type* dialog lets you create the custom data type.
 image::fd-sg-6-custom-type.png[The dialog for creating the custom data type]
-<1> The *Format* field is set to *CSV*.
-<2> The *Type* field is set to *From schema*.
-<3> The schema is this:
+
+[calloutlist]
+. The *Format* field is set to *CSV*.
+. The *Type* field is set to *From schema*.
+. The schema is this:
 ----
 #%RAML 1.0 DataType
 type: array
@@ -111,9 +117,11 @@ You can create this expression by dragging the *Custom Expression* pill from the
 
 .The *Set Variable* card looks like this.
 image::fd-sg-4-set-variable.png[]
-<1> The name specified for the variable
-<2> The pill created by dragging *Custom Expression* into the *Value* field
-<3> The expression that concatenates the query results
+
+[calloutlist]
+. The name specified for the variable
+. The pill created by dragging *Custom Expression* into the *Value* field
+. The expression that concatenates the query results
 
 The message that the Transform card receives from the Set Variable card contains these parts:
 
@@ -141,8 +149,10 @@ The fields that are in the variable `SG_payload` can be mapped to the fields of 
 
 .You can map the fields of the variable to the fields of the custom data type.
 image::fd-sg-5-transform.png[Mapping the fields of the variable to the output]
-<1> The location of the variable in the *Input* pane
-<2> The mappings from the fields in the variable to the fields in the custom data type
+
+[calloutlist]
+. The location of the variable in the *Input* pane
+. The mappings from the fields in the variable to the fields in the custom data type
 
 You drag the `Name` field from the input pane to the `Name` field in the output pane. You do the same for the `ID` and `Email` fields.
 

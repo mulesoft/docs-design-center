@@ -16,8 +16,10 @@ Because the configuration for the Oracle database requires not only a separate c
 
 .For every configuration that you create for a connector, you can use the *Advanced* section to specify information in addition to the connection for the configuration to use.
 image::fd-config-advanced.png[The Advanced section of Database Connector]
-<1> The text to click to open the *Advanced* section
-<2> The additional information that you can specify for the instance of Database Connector
+
+[calloutlist]
+. The text to click to open the *Advanced* section
+. The additional information that you can specify for the instance of Database Connector
 
 This diagram depicts the switch from Config 1 to Config 2:
 

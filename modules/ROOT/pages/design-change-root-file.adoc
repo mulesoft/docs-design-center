@@ -26,8 +26,9 @@ When you create an API-specification project, the file that is created by defaul
 
 image:apid-default-root-file-api-spec-project.png[The default root file in an API-specification project named "Orders API"]
 
-<1> The name of the RAML API-specification project is `Orders API`.
-<2> The default file, which is named `orders-api.raml` and is set as the root file because every API-specification project must have a root file.
+[calloutlist]
+. The name of the RAML API-specification project is `Orders API`.
+. The default file, which is named `orders-api.raml` and is set as the root file because every API-specification project must have a root file.
 
 === Setting the Root File in an API-Specification Project That Contains More Than One Specification
 
@@ -37,16 +38,17 @@ You can set any specification in an API-specification project as the root file o
 
 image:apid-root-file-api-spec-project-multi-specs.png[An API-specification project with two specifications. The current root file is the RAML version of the specification.]
 
-<1> The OAS version of the Inventory Process API specification.
-<2> The RAML version of the same specification. This version of the specification is currently set as the root file.
+[calloutlist]
+. The OAS version of the Inventory Process API specification.
+. The RAML version of the same specification. This version of the specification is currently set as the root file.
 
 When you click the three dots to the right of a specification that is not currently the root file, the menu that appears provides an option for setting that specification as the root file:
 
 image:apid-root-file-api-spec-project-multi-specs-2.png[The Set as root file option at the top of the menu opened by clicking the three dots.]
 
-<1> The three dots that open the action menu for a file when clicked.
-<2> The *Set as root file* option at the top of the action menu.
-
+[calloutlist]
+. The three dots that open the action menu for a file when clicked.
+. The *Set as root file* option at the top of the action menu.
 
 == Root Files in API-Fragment Projects
 
@@ -58,8 +60,9 @@ When you create an API-fragment project, the file that is created by default is 
 
 image:apid-default-root-file-api-frag-project.png[The default root file in an API-fragment project named "Retail Common."]
 
-<1> The name of the RAML API-fragment project is Retail Common.
-<2> The default file, which is named `retail-common.raml` and is set as the root file because every API-fragmentation project must have a root file.
+[calloutlist]
+. The name of the RAML API-fragment project is Retail Common.
+. The default file, which is named `retail-common.raml` and is set as the root file because every API-fragmentation project must have a root file.
 
 === Setting the Root File in an API-Fragment Project That Contains More Than One Fragment
 
@@ -69,12 +72,14 @@ You can set any fragment in an API-fragment project as the root file of that pro
 
 image:apid-root-file-api-frag-project-multi-frags.png[An API-fragment project with two fragments.]
 
-<1> The fragment that is set as the root file.
-<2> The other fragment.
+[calloutlist]
+. The fragment that is set as the root file.
+. The other fragment.
 
 When you click the three dots to the right of a fragment that is not currently the root file, the menu that appears provides an option for setting that fragment as the root file.
 
 image:apid-root-file-api-frag-project-multi-frags-2.png[The Set as root file option at the top of the menu opened by clicking the three dots.]
 
-<1> The three dots that open the action menu for a file when clicked.
-<2> The *Set as root file* option at the top of the action menu.
+[calloutlist]
+. The three dots that open the action menu for a file when clicked.
+. The *Set as root file* option at the top of the action menu.

@@ -23,11 +23,12 @@ In Flow Designer, follow these steps to export the project as a JAR file:
 +
 .You can access the *Export* option from the top-right corner of the canvas.
 image:fd-location-of-export-option.png[The location of the Export option]
-+
-<1> The three dots are to the right of the button that is labeled with a down arrow.
-<2> The *Export* option is at the bottom of the menu.
 
+[calloutlist]
+. The three dots are to the right of the button that is labeled with a down arrow.
+. The *Export* option is at the bottom of the menu.
 
+[start=3]
 . Select *Export project sources* to share just your project source files, and click *Export*.
 +
 A JAR file containing a copy of your Mule-app project is downloaded to the default location on your computer.
@@ -60,12 +61,14 @@ When Flow Designer opens the project, each card that represents a connector disp
 All of the configurations that are used by connectors are marked by a red circle:
 +
 image::fd-location-of-red-circles-on-configs.png[]
-+
-<1> The icon to click to open the *Project* pane.
-<2> A red circle to indicate that the flow contains errors. Because the configurations in the project lack connection information, there is a red circle next to each flow that includes connectors.
-<3> The *Reusable Configurations* section, which lists the configurations that connectors and core components in a project are using.
-<4> A red circle next to a listed configuration.
 
+[calloutlist]
+. The icon to click to open the *Project* pane.
+. A red circle to indicate that the flow contains errors. Because the configurations in the project lack connection information, there is a red circle next to each flow that includes connectors.
+. The *Reusable Configurations* section, which lists the configurations that connectors and core components in a project are using.
+. A red circle next to a listed configuration.
+
+[start=2]
 .. Click a configuration.
 .. In the dialog that is opened, click the three dots in the connection that is being used in the configuration and select *Edit*.
 +

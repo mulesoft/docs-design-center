@@ -26,9 +26,12 @@ After you deploy your application, the values for all of its properties are secu
 +
 .The *Deploy application* option appears in this menu.
 image::fd-deploy-option.png[The location of the Deploy application option]
-<1> Click the arrow.
-<2> Select the option.
 
+[calloutlist]
+. Click the arrow.
+. Select the option.
+
+[start=2]
 . Select the CloudHub environment to deploy the application to.
 . Accept the default name for the deployed application or enter a new one.
 . If you want to change the way that any of the connectors in your application connect to systems, click *Customize connections for this deployment* to see a list of the connectors in the app. Click on a connector to see a list of the connections that are available for the connector to use.
