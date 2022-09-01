@@ -1,0 +1,3 @@
+//Partial reused in the API Gov topic find-conformance-issues.adoc
+
+NOTE: If your API has been identified as governed through centralized API governance, a dot or warning icon appears on the *Exchange dependencies* icon (image) to indicate you need to take action on the dependencies for this project. Click the *Exchange dependencies* icon to view and follow the interactive instructions to add rulesets. 
