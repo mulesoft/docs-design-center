@@ -13,6 +13,7 @@ the resulting ZIP file contains the referenced dependencies.
 If you export your project to work on it in another editor, edit the referenced dependencies, 
 and then try to import the project back into the text editor, the import fails.
 
+[[add-dependencies-to-api-project]]
 == Add Dependencies to an API-Specification Project
 
 To add dependencies to an API specification project:
@@ -35,7 +36,16 @@ After you add a dependency on an API fragment or ruleset, an updated version of 
 . Select *Change version*. 
 . In the *Change version* dialog, select the current version.
 
-NOTE: When a Governance API is non-conformant, you can fix it on Design Center. Follow the previous steps to add the listed rulesets as dependencies and view the conformance messages in the Project Errors section to fix and republish your API definition.
+[[ruleset-dependencies]]
+== Ruleset Dependencies
+
+include::design-center::partial$design-add-ruleset-dependencies.adoc[]
+
+Even if your projects have not been identified by centralized API governance as requiring action, you can proactively check the conformance of your APIs to governance rulesets by adding published rulesets as dependencies to your API project in the API Designer text editor. 
+
+After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix the conformance issues as needed and then republish your API definition. 
+
+See <<add-dependencies-to-api-project>>.
 
 == See Also
 
