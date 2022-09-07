@@ -41,9 +41,9 @@ After you add a dependency on an API fragment or ruleset, an updated version of 
 
 include::design-center::partial$design-add-ruleset-dependencies.adoc[]
 
-Even if your projects have not been identified by centralized API governance as requiring action, you can proactively check the conformance of your APIs to governance rulesets by adding published rulesets as dependencies to your API project in the API Designer text editor. 
+Even if your projects have not been identified as requiring action, you can proactively check the conformance of your APIs by adding published rulesets as dependencies to your API project. 
 
-After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix the conformance issues as needed and then republish your API definition. 
+After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API definition. 
 
 See <<add-dependencies-to-api-project>>.
 
