@@ -1,0 +1,20 @@
+= Allowlisting Trusted Domains
+
+Due to security reasons, to make an HTTP request to an external domain using the Anypoint proxy, you need to register it as a trusted domain in Anypoint Platform.
+
+To add a new domain:
+
+1. Go to Access Management.
+2. Click *Trusted domains*. 
+3. Click *Add domain*. +
+The domain must not match with any existing trusted domain, and must not be any domain or subdomain of Mulesoft or Anypoint Platform.
+4. In the dialog box that appears, type the domain name and click *Add domain*. +
+_Result_: The domain has been added to your list of trusted domains. You are redirected to the trusted domains page, where you can edit or delete your domains.
+
+== Automatic Registration of Domains
+
+When publishing an API specification to Exchange, or sending a request trough the proxy, the base URI of the implementation will automatically be added to the list of trusted domains. You will receive an email notifying you of this event. The email will redirect you to the *Trusted domains* page in Access Management, where you can edit, delete, or add new domains as explained before.
+
+NOTE: Non-authenticated requests won't be automatically added to the list of trusted domains and will fail if the domain is not manually added to the list.
+
+
