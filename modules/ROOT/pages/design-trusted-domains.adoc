@@ -1,6 +1,6 @@
 = Allowlisting Trusted Domains
 
-Due to security reasons, to make an HTTP request to an external domain using the Anypoint proxy, you need to register it as a trusted domain in Anypoint Platform.
+Every HTTP request you make to an external resource goes through the API Console Proxy. For security reasons, you need to register the domain as a trusted domain in Anypoint Platform.
 
 To add a new domain:
 
@@ -13,8 +13,8 @@ _Result_: The domain has been added to your list of trusted domains. You are red
 
 == Automatic Registration of Domains
 
-When publishing an API specification to Exchange, or sending a request trough the proxy, the base URI of the implementation will automatically be added to the list of trusted domains. You will receive an email notifying you of this event. The email will redirect you to the *Trusted domains* page in Access Management, where you can edit, delete, or add new domains as explained before.
+When publishing an API specification to Exchange, or sending a request trough the proxy, the base URI of the implementation will automatically be added to the list of trusted domains. Administrators will receive an email notifying you of this event. The email will redirect you to the *Trusted domains* page in Access Management, where you can add or delete new domains as explained before.
 
-NOTE: Non-authenticated requests won't be automatically added to the list of trusted domains and will fail if the domain is not manually added to the list.
+NOTE: The allowlisting of trusted domains will be rolled in two phases. During the first phase, non-authenticated request will be automatically registered. During the second phase, non-authenticated requests won't be automatically added to the list of trusted domains and will fail if the domain is not manually added to the list.
 
 
