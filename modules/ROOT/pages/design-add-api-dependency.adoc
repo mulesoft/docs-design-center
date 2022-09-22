@@ -3,8 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In projects for API specifications or API fragments, you can add RAML API fragments or
-rulesets as dependencies directly from Anypoint Exchange. You cannot edit the fragments or rulesets listed in your projects because they are referenced from their online location in Exchange.
+In projects for API specifications or RAML API fragments, you can add dependencies of either API fragments (RAML) or
+rulesets. Because the dependencies are referenced in Anypoint Exchange, you cannot directly edit them in your projects.
 
 If you export your project or someone downloads your project as RAML from Exchange, the resulting ZIP file contains the referenced dependencies.
 
@@ -16,7 +16,7 @@ and then try to import the project back into the text editor, the import fails.
 
 To add dependencies to an API-specification project:
 
-. In the text editor navigation menu, click the *Exchange dependencies* icon (image:manage-dependency-versions-design-center-d96c7.png[width=0.75%,height=0.75%,title="Exchange Dependencies icon"]).
+. In the text editor navigation menu, click the *Exchange dependencies* icon (image:manage-dependency-versions-design-center-d96c7.png[title="Exchange Dependencies icon"]).
 . Click the add icon (+) for the dependency type that you want to add.
   You can select from the dependencies that are visible to the organizations that you belong to.
 
