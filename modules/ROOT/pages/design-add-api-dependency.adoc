@@ -33,15 +33,15 @@ To change the criteria, click *Edit criteria*.
 To select from the listed versions of dependencies, such as fragments or rulesets:
 
 . Click the check box for the dependency you want to add. 
-. If you want to use a dependency version other than latest, select the version you want in the *Version* drop-down. 
+. If you want to use a version of a dependency other than latest, select the version for that dependency in the *Version* drop-down. 
 . After you select some dependencies, you can click *Show selected only* to view only the selected ones. 
 . After you select the dependency versions you want to add, click *Add dependency*. 
 
 NOTE: API Designer supports a maximum of 1,000 files for dependencies, with a total file size no greater than 300 MB.
  
-To view the contents of a dependency, click the more menu icon for that dependency and then select *Show in Files* or *Open in Exchange*. 
+To view the contents of a dependency, click the more options menu icon (image:overflow-menu-icon.png[width=0.90%,height=0.90%,title="More options menu icon"]) for that dependency and then select *Show in Files* or *Open in Exchange*. 
 
-NOTE: If you select *Show in Files*, the *Files* section expands and the dependencies are shown under the `exchange_modules` section. The subsections correspond to the URI for the referenced dependency, which is its GAV (group, asset, version) in Exchange.
+NOTE: If you select *Show in Files*, the *Files* section expands and the dependencies are shown under the `exchange_modules` section. The subsections correspond to the URI for the referenced dependency, which is its asset identifier, or GAV (group ID/asset ID/version), in Exchange.
 
 When you are ready to continue work on your API project, click *Files* > API project file name.
 
@@ -60,3 +60,4 @@ After you add the rulesets as dependencies, you can view the conformance message
 == See Also
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions]
+* xref:exchange::to-create-an-asset.adoc[Create an Asset]
