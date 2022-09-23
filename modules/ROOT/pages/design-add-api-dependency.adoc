@@ -38,7 +38,7 @@ NOTE: API Designer supports a maximum of 1,000 files for dependencies, with a to
 
 To view the contents of a dependency, click the more options menu icon (image:overflow-menu-icon.png[width=0.90%,height=0.90%,title="Three vertical dots"]) for that dependency and then select *Show in Files* or *Open in Exchange*. 
 
-NOTE: If you select *Show in Files*, the *Files* section expands and the dependencies are shown under the `exchange_modules` section. The subsections correspond to the URI for the referenced dependency, which is its asset identifier, or GAV (group ID, asset ID, and version), in Exchange.
+NOTE: If you select *Show in Files*, the *Files* section expands and the dependencies are shown in the `exchange_modules` section. The subsections correspond to the URI for the referenced dependency, which is its asset identifier, or GAV (group ID, asset ID, and version), in Exchange.
 
 When you are ready to continue work on your API project, click *Files* > API project file name.
 
