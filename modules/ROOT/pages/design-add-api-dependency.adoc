@@ -8,7 +8,7 @@ rulesets. Because the dependencies are referenced in Anypoint Exchange, you cann
 
 If you export your project or someone downloads your project as RAML from Exchange, the resulting ZIP file contains the referenced dependencies.
 
-CAUTION: Editing the referenced dependencies in an editor other than the API Designer editor is not supported. If you export your project to work on it in another editor, edit the referenced dependencies, 
+CAUTION: You must not edit the referenced dependencies in an editor other than the API Designer editor. If you export your project to work on it in another editor, edit the referenced dependencies, 
 and then try to import the project back into the text editor, the import fails.
 
 [[add-dependencies-to-api-project]]
