@@ -3,38 +3,58 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In projects for API specifications or API fragments, you can add RAML API fragments or
-rulesets as dependencies directly from Anypoint Exchange. You cannot edit the fragments listed in your projects because they are referenced from their online location in Exchange.
+In projects for API specifications or RAML API fragments, you can add dependencies of either API fragments (RAML) or
+rulesets. Because the dependencies are referenced in Anypoint Exchange, you cannot directly edit them in your projects.
 
-If you export your project, the resulting ZIP file contains the referenced dependencies.
-When someone downloads your project as RAML from Exchange,
-the resulting ZIP file contains the referenced dependencies.
+If you export your project or someone downloads your project as RAML from Exchange, the resulting ZIP file contains the referenced dependencies.
 
-If you export your project to work on it in another editor, edit the referenced dependencies, 
+CAUTION: You must not edit the referenced dependencies in an editor other than the API Designer editor. If you export your project to work on it in another editor, edit the referenced dependencies, 
 and then try to import the project back into the text editor, the import fails.
 
+[[add-dependencies-to-api-project]]
 == Add Dependencies to an API-Specification Project
 
-To add dependencies to an API specification project:
+To add dependencies to an API-specification project:
 
-. On the left side of the text editor, click the *Exchange dependencies* icon.
-. Click the plus sign next to the dependency type that you want to import.
-  You can select from the dependencies that are visible to the organizations that you belong to.
+. In the text editor navigation menu, click the *Exchange dependencies* icon (image:manage-dependency-versions-design-center-d96c7.png[title="Exchange Dependencies icon"]).
+. Click the add icon (+) for the dependency type that you want to add.
+. To filter the list of dependencies you can:  
+
+* Select an organization
+* Search by keyword
+* Select *Include versions in Development*
+
+. Select the dependency versions you want to add:
+
+* To use a version of a dependency other than latest, select the version for that dependency in the *Version* drop-down. 
+* To view only the dependencies you've selected, click *Show selected only*. 
+
+. Click *Add dependency*. 
 
 NOTE: API Designer supports a maximum of 1,000 files for dependencies, with a total file size no greater than 300 MB.
- 
 
-You can view the contents of dependencies by selecting them. When you are ready to continue work on your project, click the *Files* icon.
+[view-dependency-contents]
+== View Dependency Contents
 
-The files appear in the folder `exchange-modules`. The subfolders correspond to the parts of the URI for the referenced API fragment.
+To view the contents of a dependency, click the more options menu icon (image:overflow-menu-icon.png[width=0.90%,height=0.90%,title="Three vertical dots"]) for that dependency and then select *Show in Files* or *Open in Exchange*. 
 
-After you add a dependency on an API fragment or ruleset, an updated version of the fragment or ruleset is published. To reference the updated version in your project, you must update the dependency: 
+NOTE: If you select *Show in Files*, the *Files* section expands and the dependencies are shown in the `exchange_modules` section. The subsections correspond to the URI for the referenced dependency, which is its asset identifier, or GAV (group ID, asset ID, and version), in Exchange.
 
-. Click the *Exchange dependency* icon.
-. Click the dependency.
-. Select *Change version*. 
-. In the *Change version* dialog, select the current version.
+When you are ready to continue work on your API project, click *Files* > API project file name.
+
+[[ruleset-dependencies]]
+== Ruleset Dependencies
+
+include::design-center::partial$design-add-ruleset-dependencies.adoc[]
+
+Even if your projects have not been identified as requiring action, you can proactively check the conformance of your APIs by adding published rulesets as dependencies to your API project. 
+
+[fix-gov-issues]
+== Fix Governance Conformance Issues
+
+After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API definition. 
 
 == See Also
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions]
+* xref:exchange::to-create-an-asset.adoc[Create an Asset]
