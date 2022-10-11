@@ -11,27 +11,30 @@ A _connection_ is a saved set of information that a running Mule app must use to
 .This flowchart shows steps for adding a connector to a Mule-app project. Creating a connection can be included in those steps.
 image::fd-flowchart-configuration.png[Flowchart about adding a connector to a Mule-app project]
 
-<1> When you add a connector to a flow, you create a _configuration_, which is a set of information that includes a connection. If a configuration exists that you can use, then you can simply select it. However, if no configuration exists yet for the connector, or if no existing configuration fits your use case, then you must create a configuration.
-<2> Part of creating a configuration is specifying which connection the connector must use to connect to a system when your Mule app is running.
-<3> When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding an instance of Database Connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
-<4> You click the *Add connection* button to create a connection.
-<5> You return to the configuration dialog for the connector to specify values for fields in the *Advanced* section, if you need to do so.
+[calloutlist]
+. When you add a connector to a flow, you create a _configuration_, which is a set of information that includes a connection. If a configuration exists that you can use, then you can simply select it. However, if no configuration exists yet for the connector, or if no existing configuration fits your use case, then you must create a configuration.
+. Part of creating a configuration is specifying which connection the connector must use to connect to a system when your Mule app is running.
+. When the dialog for creating a configuration is opened, it presents a list of connections, if any connections already exist for this type of connector. The dialog also enables you to create a connection. For example, if you are adding an instance of Database Connector, Flow Designer opens the *Database Configuration* dialog. This dialog presents a list of connections to databases, if any connections already exist for this type of connector. The dialog also enables you to create a connection to a database.
+. You click the *Add connection* button to create a connection.
+. You return to the configuration dialog for the connector to specify values for fields in the *Advanced* section, if you need to do so.
 
 A part of the configuration dialog that presents options about connections looks like this:
 
 .Part of the *Database Configuration* dialog presents a list of connections to databases and an option for creating a connection to a database.
 image::fd-connection-add.png[The locations of the list and the option]
 
-<1> Each existing connection shows roughly when the connection was created and the user ID of the person who created it.
-<2> The *Add connection* option enables you to create a connection.
+[calloutlist]
+. Each existing connection shows roughly when the connection was created and the user ID of the person who created it.
+. The *Add connection* option enables you to create a connection.
 
 You can also create a connection if you are editing a configuration or if you are creating an additional configuration for a connector.
 
 .The locations from which you can open the configuration dialog for a connector and add a connection.
 image::fd-edit-switch-configs.png[Where to go to add a connection]
 
-<1> When there is at least one configuration for a connector, the top of the connector card looks like this. You can edit the configuration or switch to a different configuration. If you edit the configuration, the configuration dialog is opened and you can create a connection.
-<2> If you select the option to switch to a different configuration, the top of the card changes to look like this. You can click *Add* to open the configuration dialog for the connector and create a connection.
+[calloutlist]
+. When there is at least one configuration for a connector, the top of the connector card looks like this. You can edit the configuration or switch to a different configuration. If you edit the configuration, the configuration dialog is opened and you can create a connection.
+. If you select the option to switch to a different configuration, the top of the card changes to look like this. You can click *Add* to open the configuration dialog for the connector and create a connection.
 
 == Adding a Connection to a Configuration of a Connector
 

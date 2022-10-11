@@ -10,8 +10,9 @@ You can process elements in a collection that is passed in a payload to an insta
 .The For-Each component and the Parallel For-Each component both set scopes for processing the elements within a collection.
 image::fd-iterators-example.png[Two simple examples: one of the use of For-Each, the other of the use of Parallel For-Each]
 
-<1> The For-Each component in this example inserts each element, one at a time, into a database. Each element is presumably a string that can be used in a SQL INSERT statement.
-<2> The Parallel For-Each component in this example sends each element to a Set Payload component that modifies the element with an expression and adds it to the flow's payload.
+[calloutlist]
+. The For-Each component in this example inserts each element, one at a time, into a database. Each element is presumably a string that can be used in a SQL INSERT statement.
+. The Parallel For-Each component in this example sends each element to a Set Payload component that modifies the element with an expression and adds it to the flow's payload.
 
 Both types of component can process any collection.
 
@@ -22,10 +23,11 @@ The For-Each component is for processing each element in a collection serially a
 .This diagram represents a flow in which a For-Each component is used. The rounded rectangles are cards.
 image::fd-foreach.png[Diagram depicting the actions taken by the For-Each component]
 
-<1> A card passes the payload of a flow to the For-Each component. The payload consists of a collection of elements.
-<2> The For-Each component divides the collection into separate elements. It then sends each element serially to the first component, connector, or module that is in its scope. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the For-Each component received but the element that the component is processing.
-<3> After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
-<4> The next card in the flow receives the same payload that the For-Each component received, and the flow continues.
+[calloutlist]
+. A card passes the payload of a flow to the For-Each component. The payload consists of a collection of elements.
+. The For-Each component divides the collection into separate elements. It then sends each element serially to the first component, connector, or module that is in its scope. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the For-Each component received but the element that the component is processing.
+. After the final element is processed, the For-Each component passes the payload that it received from the previous card to the next card in the flow.
+. The next card in the flow receives the same payload that the For-Each component received, and the flow continues.
 
 == How the Parallel For-Each Component Processes Data and Continues a Flow
 
@@ -34,10 +36,11 @@ The Parallel For-Each component is for processing each element in a collection a
 .This diagram represents a flow in which a Parallel For-Each component is used. The rounded rectangles are cards.
 image::fd-parallel-foreach.png[Diagram depicting the actions taken by the Parallel For-Each component]
 
-<1> A card passes the payload of a flow to the Parallel For-Each component. The payload consists of a collection of elements.
-<2> The Parallel For-Each component divides the collection into separate elements. It then sends elements simultaneously to the first component, connector, or module that is in its scope. You can specify the maximum number of elements to process at a time. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the Parallel For-Each component received but the element that the component is processing.
-<3> After all of the elements are processed, the Parallel For-Each component aggregates and passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
-<4> The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
+[calloutlist]
+. A card passes the payload of a flow to the Parallel For-Each component. The payload consists of a collection of elements.
+. The Parallel For-Each component divides the collection into separate elements. It then sends elements simultaneously to the first component, connector, or module that is in its scope. You can specify the maximum number of elements to process at a time. Each element is treated as a payload within the scope. So, if a connector within the scope is configured to act on `payload` or uses a script to process `payload`, the payload is not the payload that the Parallel For-Each component received but the element that the component is processing.
+. After all of the elements are processed, the Parallel For-Each component aggregates and passes the results of the processing that was done within its scope. The results form the payload that is passed to the next card in the flow.
+. The next card in the flow receives the results from the Parallel For-Each component, and the flow continues.
 
 The order of the results correspond to the order of the elements in the original payload. For example, suppose that the payload that is passed to a Parallel For-Each component is `["Apple","Banana","Cherry"]`. Within the component's scope is a Set Payload component that processes each element as a separate payload. The Set Payload component processes each payload with this DataWeave expression: `payload ++ '-result'`. The Parallel For-Each component passes these results to the next card in the flow: `["Apple-result","Banana-result","Cherry-result"]`.
 

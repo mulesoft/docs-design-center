@@ -16,17 +16,19 @@ A _connection_, in the sense that Flow Designer uses the term, is the saved set 
 .The connection that you create in Flow Designer is the set of information that a Mule app must use to connect to a system
 image::fd-connection.png["Connection" in the sense in which Flow Designer uses the term, and "connection" in the sense of an open channel of communication]
 
-<1> A connection in the sense that Flow Designer uses the term: the set of information that a Mule app needs to open a channel of communication with a system.
-<2> A connection in a more common sense: an open channel of communication between two entities.
+[calloutlist]
+. A connection in the sense that Flow Designer uses the term: the set of information that a Mule app needs to open a channel of communication with a system.
+. A connection in a more common sense: an open channel of communication between two entities.
 
 A connection is used in a configuration for a connector. A _configuration_ is a saved set of data that includes a connection and specifies various types of information, depending on the type of connector that the configuration is for. You can create and save one or more configurations for each type of connector that you use in a Mule-app project. The relationships between connections, configurations, and connectors is depicted in the following diagram:
 
 .A connection (in this case, a database connection) is used by a configuration, which is itself used by an instance of Database Connector.
 image::fd-connections-configs-connectors.png[Diagram depicting the relationships between connections, configurations, and connectors]
 
-<1> You can create a pool of connections for each type of connector. In this diagram, there is a pool of three connections, though the ellipsis ("...") indicates that it is possible for the pool to contain more connections.
-<2> You can create a pool of configurations for each type of connector. Each configuration uses a single connection. In this diagram, configuration Config 1 uses connection Conn B, and configuration Config 2 uses connection Conn A. The ellipsis indicates that it is possible to have a larger pool of configurations.
-<3> Each instance of a type of connector uses a single configuration. In this diagram, the instance of Database Connector uses only Config 1, even though Config 2 is also available. To give another example, you might have two instances of Salesforce Connector in a Mule app. Each instance might use the same configuration or they might each use a different configuration. Typically, two configurations for a connector type each use a different connection.
+[calloutlist]
+. You can create a pool of connections for each type of connector. In this diagram, there is a pool of three connections, though the ellipsis ("...") indicates that it is possible for the pool to contain more connections.
+. You can create a pool of configurations for each type of connector. Each configuration uses a single connection. In this diagram, configuration Config 1 uses connection Conn B, and configuration Config 2 uses connection Conn A. The ellipsis indicates that it is possible to have a larger pool of configurations.
+. Each instance of a type of connector uses a single configuration. In this diagram, the instance of Database Connector uses only Config 1, even though Config 2 is also available. To give another example, you might have two instances of Salesforce Connector in a Mule app. Each instance might use the same configuration or they might each use a different configuration. Typically, two configurations for a connector type each use a different connection.
 
 There are two types of connection:
 

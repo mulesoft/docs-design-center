@@ -90,7 +90,7 @@ If one or more connectors, components, or modules referenced by the project are 
 Unable to resolve dependency 2bacbe78-4300-965a-39fce81ee15d:mule-plugin-americanflights:jar:mule-plugin:1.0.0
 Where
 2bacbe78-4300-965a-39fce81ee15d is the Maven groupI for the artifact
-Mule-plugin-americanfligths is the Maven artifact ID
+Mule-plugin-americanflights is the Maven artifact ID
 jar is the type of the Maven artifact
 mule-plugin is the classifier of the Maven artifact
 1.0.0 is the version of the Maven artifact.

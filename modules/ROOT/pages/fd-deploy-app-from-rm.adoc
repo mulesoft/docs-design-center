@@ -18,10 +18,12 @@ JAR file. Therefore, you must edit and repackage the JAR file to provide that in
 +
 .You can access the *Export* option from the top-right corner of the canvas.
 image:fd-location-of-export-option.png[The location of the Export option]
-+
-<1> The three dots are to the right of the button that is labeled with a down arrow.
-<2> The *Export* option is at the bottom of the menu.
 
+[calloutlist]
+. The three dots are to the right of the button that is labeled with a down arrow.
+. The *Export* option is at the bottom of the menu.
+
+[start=3]
 . Select *Export mule application* and click *Export*.
 +
 A JAR file containing a copy of your Mule app is downloaded to the default location on your computer.

@@ -21,14 +21,16 @@ If you do not remove them before you begin, unreferenced files are detected when
 . Click *Publish* and then click *Publish to Exchange*.
 +
 image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publish from API Designer to Exchange]
-+
-<1> *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. For a description of this field, see <<asset-version>>.
-<2> *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-<3> *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *Development* or *Stable*. Assets cannot be deprecated from API Designer. 
-<4> *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
-<5> *Asset name*: The name that Anypoint Exchange uses to identify the published project. 
-<6> *Asset ID*: A unique ID that Anypoint Exchange uses to identify the published project. You should use the default unless there is a published asset with the same ID.
-+
+
+[calloutlist]
+. *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. For a description of this field, see <<asset-version>>.
+. *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
+. *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *Development* or *Stable*. Assets cannot be deprecated from API Designer. 
+. *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
+. *Asset name*: The name that Anypoint Exchange uses to identify the published project. 
+. *Asset ID*: A unique ID that Anypoint Exchange uses to identify the published project. You should use the default unless there is a published asset with the same ID.
+
+[start=4]
 . After completing the required fields, click *Publish to Exchange*.
 +
 If your project includes files that are not referenced by the root file either directly or indirectly, a dialog asks you to confirm that you want to publish the project including the unreferenced files. By default, API Designer excludes them from the published project in Anypoint Exchange.
