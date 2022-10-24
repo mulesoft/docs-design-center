@@ -52,6 +52,25 @@ Even if your projects have not been identified as requiring action, you can proa
 [fix-gov-issues]
 == Fix Governance Conformance Issues
 
+When your API fails conformance to rulesets your organization validates against, you get an Email notification:
+
+. Click *Fix me* on your email to be redirected to the Exchange API asset Conformance Status page.
+.. If the latest version of your API has an editable branch, a pop-up appears where you can see the missing rulesets. Click *Add all rulesets*. +
+_Result_: The rulesets are added to your project.
+.. If the latest version of your API doesn't have an editable branch, a pop-up appears where you can select an editable branch on your project, or create a new branch from your current version to add the missing rulesets. 
+When you have your branch, you can add your rulesets manually:
+
+. In the text editor navigation menu, click the *Exchange dependencies* icon (image:manage-dependency-versions-design-center-d96c7.png[title="Exchange Dependencies icon"]).
+. Under *Rulesets*, you can see if the latest version of that branch failed conformance to rulesets your organization validates against. To fix it, click *Add rulesets*.
+. To filter the list of rulesets you can:  
+
+* Select an organization
+* Search by keyword
+* Select *Include versions in Development*
+
+. Click *Add all rulesets*. +
+_Result_: The rulesets are added to your project.
+
 After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API definition. 
 
 == See Also
