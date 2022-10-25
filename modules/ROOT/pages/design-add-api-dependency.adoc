@@ -49,13 +49,13 @@ include::design-center::partial$design-add-ruleset-dependencies.adoc[]
 
 Even if your projects have not been identified as requiring action, you can proactively check the conformance of your APIs by adding published rulesets as dependencies to your API project. 
 
-When your API fails conformance to rulesets your organization validates against, you get an Email notification. 
+When your API fails conformance to rulesets your organization validates against, you get an email notification. 
 You can click *Code in Design Center* to open API Designer, or click *API Details in Exchange* to be redirected to the API asset Conformance Status page.
 
 .. If the asset version has an editable branch in API Designer, a pop-up appears where you can see the missing ruleset, filtered by tags, category and lifecycle state. To edit those filters, click *Edit criteria*. When you are done, click *Add all rulesets*. +
 _Result_: The rulesets are added to your project.
 
-.. If the asset  version doesn't have an editable branch in API designer, a pop-up appears where you can select an editable branch on your project, or create a new branch from your current version to add the missing rulesets. 
+.. If the asset version doesn't have an editable branch in API designer, you can either select an editable branch of your project or create a new branch from your current version. You can then add the missing rulesets to that editable branch. 
 When you have your branch, a pop-up appears where you can see the missing ruleset, filtered by tags, category and lifecycle state. To edit those filters, click *Edit criteria*. When you are done, click *Add all rulesets*. +
 _Result_: The rulesets are added to your project.
 
