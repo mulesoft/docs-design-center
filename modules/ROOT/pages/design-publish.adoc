@@ -32,7 +32,6 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 ** If the version defined in the API spec is a different string (e.g `7.4`), the value is pre-filled in the API version field, the asset version field is pre-filled with its default value: `1.0.0`.
 ** If the API has a version already published to Exchange (e.g `3.2.5`), when publishing a new version without changing the one defined in the API spec, the asset version field is pre-filled with its previous value incremented by one (e.g `3.2.6`), and the API version field stays the same.
 
-
 . *LifeCycle State*: The lifecycle state of the asset. Assets can be published from API Designer as *Development* or *Stable*. Assets cannot be deprecated from API Designer. 
 . *Business group ID*: The ID of the business unit in Anypoint Platform to which the project belongs. 
 . *Asset name*: The name that Anypoint Exchange uses to identify the published project. 
