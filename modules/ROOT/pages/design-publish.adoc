@@ -25,7 +25,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 [calloutlist]
 . *Asset version*: The version number to be displayed in the *Version* section of the page that Anypoint Exchange creates for the project. For a description of this field, see <<asset-version>>.
 . *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
-*  the *Asset version* and *API version* fields are now pre-populated using the following criterion:
+*  the *Asset version* and *API version* fields are now pre-populated using the following criteria
 ** If no version is defined in the API spec, the suggested asset version and API version fields are pre-filled with its default value: `1.0.0` and `v1`.
 ** If the version define in the API spec matches asset version field recommendations (e.g `1.0.3`), the value is pre-filled in the asset version field, and the API version field is pre-filled with a `v` and the major asset version (e.g `v1`).
 ** If the version defined in the API spec matches API version field recommendations (e.g `v2`), the value is pre-filled in the API version field, and the asset version field is pre-filled with its major value extracted (e.g `2.0.0`).
