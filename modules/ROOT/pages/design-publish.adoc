@@ -27,7 +27,7 @@ image:apid-publish-dialog-api-specs.png[The publish dialog shown when you publis
 . *API version*: The version number of the API specification. For a description of this field, see <<api-version>>.
 *  the *Asset version* and *API version* fields are now pre-populated using the following criteria
 ** If no version is defined in the API spec, the suggested asset version and API version fields are pre-filled with default values: `1.0.0` and `v1`.
-** If the version define in the API spec matches asset version field recommendations (e.g `1.0.3`), the value is pre-filled in the asset version field, and the API version field is pre-filled with a `v` and the major asset version (e.g `v1`).
+** If the version defined in the API spec matches asset version field recommendations (for example, `1.0.3`), the value is pre-filled in the asset version field, and the API version field is pre-filled with a `v` and the major asset version (for example, `v1`).
 ** If the version defined in the API spec matches API version field recommendations (e.g `v2`), the value is pre-filled in the API version field, and the asset version field is pre-filled with its major value extracted (e.g `2.0.0`).
 ** If the version defined in the API spec is a different string (e.g `7.4`), the value is pre-filled in the API version field, the asset version field is pre-filled with its default value: `1.0.0`.
 ** If the API has a version already published to Exchange (e.g `3.2.5`), when publishing a new version without changing the one defined in the API spec, the asset version field is pre-filled with its previous value incremented by one (e.g `3.2.6`), and the API version field stays the same.
