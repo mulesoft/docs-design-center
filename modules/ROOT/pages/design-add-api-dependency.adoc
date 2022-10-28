@@ -56,7 +56,7 @@ You can click *Code in Design Center* to open API Designer, or click *API Detail
 _Result_: The rulesets are added to your project.
 
 .. If the asset version doesn't have an editable branch in API designer, you can either select an editable branch of your project or create a new branch from your current version. You can then add the missing rulesets to that editable branch. 
-When you have your branch, a pop-up appears where you can see the missing ruleset, filtered by tags, category and lifecycle state. To edit those filters, click *Edit criteria*. When you are done, click *Add all rulesets*. +
+When you have your branch, a pop-up appears where you can see the missing ruleset filtered by tags, category, and lifecycle state. To edit those filters, click *Edit criteria*. When you are done, click *Add all rulesets*. +
 _Result_: The rulesets are added to your project.
 
 
