@@ -277,7 +277,7 @@ title: ExampleRAML
 As explained in the RAML 1.0 specification, you must apply libraries with the `uses` node:
 
 ____
-Any number of libraries can be applied by using the OPTIONAL `uses` node ONLY at the root of a ["master"] RAML or RAML fragment file. The value of the `use`s node is a map of key-value pairs. The keys are treated as library names, or namespaces, and the value MUST be the location of a RAML library file, usually an external RAML library fragment document.
+Any number of libraries can be applied by using the OPTIONAL `uses` node ONLY at the root of a ["main"] RAML or RAML fragment file. The value of the `use`s node is a map of key-value pairs. The keys are treated as library names, or namespaces, and the value MUST be the location of a RAML library file, usually an external RAML library fragment document.
 ____
 
 If you apply a library with a `type` node, the editor displays this message:
@@ -1059,8 +1059,6 @@ types:
 ----
 |====
 
-
-For more information, see the section "Union Types" in the https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md[RAML 1.0 specification].
 
 <<Back to the top>>
 

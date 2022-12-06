@@ -7,9 +7,9 @@ You can separate new iterations of a project from previous iterations by branchi
 
 == About this Task
 
-A new branch is a fork of your project and cannot be merged back into the master branch. Anybody who has access to your project can also create branches.
+A new branch is a fork of your project and cannot be merged back into the main branch. Anybody who has access to your project can also create branches.
 
-Even when there are forks of a project, when you open that project the editor opens it to the master branch. If you want to return to a fork that you were working in, you must select that fork.
+Even when there are forks of a project, when you open that project the editor opens it to the main branch. If you want to return to a fork that you were working in, you must select that fork.
 
 You can publish any fork of an API specification to Anypoint Exchange.
 
@@ -18,7 +18,7 @@ You can publish any fork of an API specification to Anypoint Exchange.
 * To fork a project:
 +
 . Open the project.
-. Click “master” at the top of the text editor.
+. Click the name of your branch at the top of the text editor.
 . Type a name in the search field and type *Enter*.
 +
 *Result:* The text editor automatically switches to the new fork.
@@ -26,5 +26,5 @@ You can publish any fork of an API specification to Anypoint Exchange.
 * To work in a fork of a project:
 +
 . Open the project.
-. Click “master” at the top of the text editor.
+. Click the name of your branch at the top of the text editor.
 . Select the name of the fork that you want to work in.
