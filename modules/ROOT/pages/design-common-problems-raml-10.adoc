@@ -1167,3 +1167,11 @@ types:
 The error message in cases like this is `Invalid format value for datetime, must be ‘rfc3339’ or ‘rfc2616’.`
 
 <<Back to the top>>
+
+== Absolute Paths in RAML Fragment Projects
+
+When adding dependencies using absolute paths (for example: `(!include /examples/200.json)`) in RAML Fragment projects, you get a validation error: `Resource /examples/200.json not found`. 
+
+You must always use relative paths for RAML Fragment Projects, for example: `(!include ../examples/200.json)`.
+
+<<Back to the top>>
