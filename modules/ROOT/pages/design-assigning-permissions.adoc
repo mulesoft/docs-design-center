@@ -1,0 +1,15 @@
+= Set User Access Permissions
+
+Design Center provides multiple ways to set up access management to provide collaboration across teams. 
+
+Depending on your organization's permission structure, you can assign  permissions using the xref:access-management::teams.adoc[Teams] feature, the xref:access-management::users.adoc#grant-user-permissions[Roles] feature (deprecated), or by assigning an xref:access-management::users.adoc#grant-user-permissions[individual user permission].
+
+== Design Center Permissions
+
+
+Design Center Viewer:: Enables users to view all Design Center projects within a business group. Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. Users with this permission can test a project with the Mocking Service. Assign this permission to those who consume your project in a specific business group.
+Design Center Creator:: Enables users to create projects in Design Center from the navigation panel, and view all projects created or shared with the user. Use this permission to invite users to create, edit and maintain your projects.
+Design Center Developer:: Enables users to view, create, and manage all projects within a business group. Use this permission to set up administrators for all the projects within a specific business group.
+
+
+
