@@ -2,7 +2,9 @@
 
 Design Center provides multiple ways to set up access management to provide collaboration across teams. 
 
-Depending on your organization's permission structure, you can assign  permissions using the xref:access-management::teams.adoc[Teams] feature, the xref:access-management::users.adoc#grant-user-permissions[Roles] feature (deprecated), or by assigning an xref:access-management::users.adoc#grant-user-permissions[individual user permission].
+Depending on your organization's permission structure, you can assign permissions using the xref:access-management::teams.adoc[Teams] feature, the xref:access-management::users.adoc#grant-user-permissions[Roles] feature (deprecated), or by assigning an xref:access-management::users.adoc#grant-user-permissions[individual user permission].
+
+NOTE: Mule Applications can't be shared.
 
 == Design Center Permissions
 
@@ -11,5 +13,37 @@ Design Center Viewer:: Enables users to view all Design Center projects within a
 Design Center Creator:: Enables users to create projects in Design Center from the navigation panel, and view all projects created or shared with the user. Use this permission to invite users to create, edit and maintain your projects.
 Design Center Developer:: Enables users to view, create, and manage all projects within a business group. Use this permission to set up administrators for all the projects within a specific business group.
 
+== Project Views
 
+From the Design Center home page, you can select between three types of views for your project list:
+
+*API Projects*: Lists all the projects you have access to.
+*Shared with me*: Lists only the projects shared with you by other users.
+*Mule flows*: Lists the Mule applications created by you. This view is only available if you have the “Design Center Developer” permission.
+
+== Sharing Projects from Design Center
+
+You can share your projects and add the corresponding permissions directly from Design Center. To do so:
+
+* Go to the Design Center home page and select a project from the list.
+* On the *API Projects* header, click *Share Project*, or, under project details click *Change access*.
+** In the Share project dialog, type the name of the user or the team in your organization you want to give access.
+** Select the permission level from the dropdown list. The available options are “Viewer”, “Editor” and “Admin”.
+** Click *Save* and then click *Close*.
+
+== Sharing Projects from API Designer
+
+You can share your projects and add the corresponding permissions directly from API Designer. To do so:
+
+* Go to the Design Center home page and open a project from your list.
+* On the header of the project, click *Share*.
+** In the Share project dialog, type the name of the user or the team in your organization you want to give access.
+** Select the permission level from the dropdown list. The available options are “Viewer”, “Editor” and “Admin”.
+** Click *Save* and then click *Close*.
+
+== Removing Access from a Project
+
+* Open the *Share project* dialog following the previous instructions.
+* Open the dropdown list for the user or team that you want to remove access to and click the *Remove Access* option.
+** Click *Close*.
 
