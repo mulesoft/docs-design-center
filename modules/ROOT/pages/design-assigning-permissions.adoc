@@ -43,7 +43,7 @@ To share your projects and add the corresponding permissions directly from Desig
 
 == Sharing Projects from API Designer
 
-You can share your projects and add the corresponding permissions directly from API Designer. To do so:
+To share your projects and add the corresponding permissions directly from API Designer:
 
 * Go to the Design Center home page and open a project from your list.
 * On the header of the project, click *Share*.
