@@ -15,7 +15,7 @@ Design Center Developer:: Enables users to view, create, and manage all projects
 === Project Level Permissions
 
 Project Viewer:: Enables users to view a Design Center project within a business group and test projects with the Mocking Service. Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. Assign this permission to those who consume your project in a specific business group.
-Project Editor:: Enables users to edit a Design Center project within a business group. Use this permission to invite users to create, edit and maintain your projects.
+Project Editor:: Enables users to edit a Design Center project within a business group. Use this permission to invite users to create, edit, and maintain your projects.
 Project Administrator:: Enables users to manage and share a Design Center project within a business group. Use this permission to set up administrators for all the projects within a specific business group.
 
 
