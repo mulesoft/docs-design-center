@@ -48,7 +48,7 @@ To share your projects and add the corresponding permissions directly from API D
 . From the Design Center home page, click the project name link.
 . Click the *Share* (picture-of-button) button.
 .. In the *Share project* dialog box, enter the name of the user or the team in your organization to give access.
-** Select the permission level from the dropdown list. The available options are “Viewer”, “Editor” and “Admin”.
+.. Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
 ** Click *Save* and then click *Close*.
 
 == Removing Access from a Project
