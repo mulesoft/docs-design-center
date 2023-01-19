@@ -33,7 +33,7 @@ From the Design Center home page, you can select between three types of views fo
 
 NOTE: You can't share Mule applications.
 
-You can share your projects and add the corresponding permissions directly from Design Center. To do so:
+To share your projects and add the corresponding permissions directly from Design Center:
 
 * Go to the Design Center home page and select a project from the list.
 * On the *API Projects* header, click *Share Project*, or, under project details click *Change access*.
