@@ -55,5 +55,5 @@ To share your projects and add the corresponding permissions directly from API D
 
 * Open the *Share project* dialog following the previous instructions.
 . For the user or team that you want to remove access to, select *Remove Access* from the dropdown list.
-** Click *Close*.
+. Click *Close*.
 
