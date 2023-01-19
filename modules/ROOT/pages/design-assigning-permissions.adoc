@@ -31,7 +31,7 @@ From the Design Center home page, you can select between three types of views fo
 
 == Sharing Projects from Design Center
 
-NOTE: Mule Applications can't be shared.
+NOTE: You can't share Mule applications.
 
 You can share your projects and add the corresponding permissions directly from Design Center. To do so:
 
