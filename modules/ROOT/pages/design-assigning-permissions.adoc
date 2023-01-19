@@ -19,7 +19,7 @@ Project Editor:: Enables users to edit a Design Center project within a business
 Project Administrator:: Enables users to manage and share a Design Center project within a business group. Use this permission to set up administrators for all the projects within a specific business group.
 
 
-NOTE: If you are granted organization and project permissions, the highest permission level will be the one that applies to that specific project.
+NOTE: If you grant organization and project permissions, the highest permission level is the one that applies to that specific project.
 
 == Project Views
 
