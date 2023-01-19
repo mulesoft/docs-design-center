@@ -35,7 +35,7 @@ NOTE: You can't share Mule applications.
 
 To share your projects and add the corresponding permissions directly from Design Center:
 
-* Go to the Design Center home page and select a project from the list.
+. On the Design Center home page, select the project.
 * On the *API Projects* header, click *Share Project*, or, under project details click *Change access*.
 ** In the Share project dialog, type the name of the user or the team in your organization you want to give access.
 ** Select the permission level from the dropdown list. The available options are “Viewer”, “Editor” and “Admin”.
