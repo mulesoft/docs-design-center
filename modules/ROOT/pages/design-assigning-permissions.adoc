@@ -36,24 +36,24 @@ NOTE: You can't share Mule applications.
 To share your projects and add the corresponding permissions directly from Design Center:
 
 . On the Design Center home page, select the project.
-* On the *API Projects* header, click *Share Project*, or, under project details click *Change access*.
+. Click *Toggle project details* icon and then click *Change access*.
 .. In the *Share project* dialog box, enter the name of the user or the team in your organization to give access.
-** Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
-** Click *Save* and then click *Close*.
+.. Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
+.. Click *Save* and then click *Close*.
 
 == Sharing Projects from API Designer
 
 To share your projects and add the corresponding permissions directly from API Designer:
 
 . From the Design Center home page, click the project name link.
-. Click the *Share* (picture-of-button) button.
+. Click the *Share* button.
 .. In the *Share project* dialog box, enter the name of the user or the team in your organization to give access.
 .. Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
-** Click *Save* and then click *Close*.
+.. Click *Save* and then click *Close*.
 
 == Removing Access from a Project
 
-* Open the *Share project* dialog following the previous instructions.
+. Open the *Share project* dialog.
 . For the user or team that you want to remove access to, select *Remove Access* from the dropdown list.
 . Click *Close*.
 
