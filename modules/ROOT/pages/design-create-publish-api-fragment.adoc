@@ -25,7 +25,7 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 == Procedure
 
-. On the *Projects* page in Design Center, click *Create new*.
+. On the *Projects* page in Design Center, click *Create*.
 . Select *New Fragment*.
 . In the *New Fragment* dialog, type a name for the Fragment project. 
 . Select the API specification format. 
@@ -46,7 +46,7 @@ You can create new files by clicking *+*, and then *New file*. Select the API fo
 +
 By default, the editor creates a file that has the same name as the project. This file is set as the root file of the project.
 +
-You can set YAML, RAML, or JSON files as your root file.
+You can set YAML, RAML, or JSON schema files as your root file.
 +
 The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 * The middle panel displays the editor in which you create your API fragment.
