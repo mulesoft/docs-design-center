@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-In projects for API specifications or RAML API fragments, you can add dependencies of either API fragments (RAML), OAS Components, JSON schemas, or rulesets. Because the dependencies are referenced in Anypoint Exchange, you cannot directly edit them in your projects.
+In projects for API specifications or API fragments, you can add dependencies of either API fragments (RAML), OAS Components, JSON schemas, or rulesets. Because the dependencies are referenced in Anypoint Exchange, you cannot directly edit them in your projects.
 
 If you export your project or someone downloads your project as RAML from Exchange, the resulting ZIP file contains the referenced dependencies.
 
