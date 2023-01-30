@@ -8,15 +8,15 @@ Depending on your organization's permission structure, you can assign permission
 
 === Business Group Permissions
 
-Design Center Viewer:: Enables users to view all Design Center projects within a business group and test projects with the Mocking Service. Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. Assign this permission to those who consume your project in a specific business group.
-Design Center Creator:: Enables users to create projects in Design Center from the navigation panel, and view all projects created or shared with the user. Use this permission to invite users to create, edit, and maintain your projects.
 Design Center Developer:: Enables users to view, create, and manage all projects within a business group. Use this permission to set up administrators for all the projects within a specific business group.
+Design Center Creator:: Enables users to create projects in Design Center from the navigation panel and view all projects created or shared with the user. Use this permission to invite users to create, edit, and maintain your projects.
+Design Center Viewer:: Enables users to view all Design Center projects within a business group and test projects with the Mocking Service. Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. Assign this permission to those who consume your project in a specific business group.
 
 === Project Level Permissions
 
-Project Viewer:: Enables users to view a Design Center project within a business group and test projects with the Mocking Service. Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. Assign this permission to those who consume your project in a specific business group.
-Project Editor:: Enables users to edit a Design Center project within a business group. Use this permission to invite users to create, edit, and maintain your projects.
 Project Administrator:: Enables users to manage and share a Design Center project within a business group. Use this permission to set up administrators for all the projects within a specific business group.
+Project Editor:: Enables users to edit a Design Center project within a business group. Use this permission to invite users to create, edit, and maintain your projects.
+Project Viewer:: Enables users to view a Design Center project within a business group and test projects with the Mocking Service. Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. Assign this permission to those who consume your project in a specific business group.
 
 
 NOTE: If you grant organization and project permissions, the highest permission level is the one that applies to that specific project.
@@ -36,24 +36,28 @@ NOTE: You can't share Mule applications.
 To share your projects and add the corresponding permissions directly from Design Center:
 
 . On the Design Center home page, select the project.
-. Click *Toggle project details* icon and then click *Change access*.
+. Click the *Share project* icon, or click *Toggle project details* icon and then click *Change access*.
 .. In the *Share project* dialog box, enter the name of the user or the team in your organization to give access.
 .. Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
 .. Click *Save* and then click *Close*.
+
+NOTE: This action sends the user an email informing a project has been shared with them.
 
 == Sharing Projects from API Designer
 
 To share your projects and add the corresponding permissions directly from API Designer:
 
-. From the Design Center home page, click the project name link.
+. From the Design Center home page, click the project name link to open a project.
 . Click the *Share* button.
 .. In the *Share project* dialog box, enter the name of the user or the team in your organization to give access.
 .. Select the permission level from the dropdown list. The available options are “Viewer”, “Editor”, and “Admin”.
 .. Click *Save* and then click *Close*.
 
+NOTE: This action sends the user an email informing a project has been shared with them.
+
 == Removing Access from a Project
 
-. Open the *Share project* dialog.
+. Open the *Share project* dialog from API Designer or Design Center.
 . For the user or team that you want to remove access to, select *Remove Access* from the dropdown list.
 . Click *Close*.
 
