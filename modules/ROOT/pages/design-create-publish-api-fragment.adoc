@@ -7,7 +7,7 @@ You can create API fragments directly in RAML, OAS 3.0, and JSON Schema with the
 
 An API fragment is a document that has a version and an identifier, but is not in itself a complete specification.
 
- An API fragment is one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types.
+ When creating a RAML API fragment you can choose one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types.
 
 * Trait
 
@@ -24,6 +24,14 @@ An API fragment is a document that has a version and an identifier, but is not i
 * Annotation Type
 
 * Security Scheme
+
+To support OAS 3 fragment externalization, PI Fragments support OAS 3 components and JSON Schema: 
+
+* Component (YAML)
+* Component (JSON)
+* JSON Schema
+
+OAS 3 components should contain only the reusable component objects for the different aspects of the OAS.
 
 
 == Procedure
