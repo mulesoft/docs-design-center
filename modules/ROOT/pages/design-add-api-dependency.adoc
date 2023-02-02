@@ -9,7 +9,7 @@ If you export your project or someone downloads your project as RAML from Exchan
 
 CAUTION: You must not edit the referenced dependencies in an editor other than the API Designer editor. If you export your project to work on it in another editor, edit the referenced dependencies, 
 and then try to import the project back into the text editor, the import fails. +
-OAS 3.0 fragments are not supported in Studio.
+Studio does not support OAS 3.0 fragments.
 
 
 [[add-dependencies-to-api-project]]
