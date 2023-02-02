@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can import API specifications and RAML fragments into an API-specification project.
+You can import RAML fragments, OAS components, and JSON schemas into an API-specification project.
 
 You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
 
-The fragments that you import can be written in RAML 0.8 or RAML 1.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
+The fragments that you import can be written in RAML 0.8, RAML 1.0, or OAS 3.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits.
 
 There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
 
@@ -66,7 +66,8 @@ If you want to import the copy, you might need to correct errors in it after you
 +
 API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
 +
-*Language* (for RAML fragments):: The language is always RAML because OAS does not use fragments.
+*Language* (for RAML fragments):: You can choose between RAML, OAS, or JSON Schema.
+
 +
 *Date modified*:: The date that the currently selected version of the currently selected asset was published.
 +

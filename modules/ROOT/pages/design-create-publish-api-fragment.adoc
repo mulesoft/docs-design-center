@@ -1,11 +1,13 @@
-= Create and Publish a RAML API Fragment in the Text Editor in API Designer
+= Create and Publish an API Fragment in the Text Editor in API Designer
 
-You can create API fragments directly in RAML with the help of code suggestions that appear within the text editor. 
+You can create API fragments directly in RAML, OAS 3.0, and JSON Schema with the help of code suggestions that appear within the text editor. 
 
 
 == About This Task
 
-An API fragment is a RAML document that has a version and an identifier, but is not in itself a complete RAML specification. An API fragment is one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types.
+An API fragment is a document that has a version and an identifier, but is not in itself a complete specification.
+
+ When creating a RAML API fragment you can choose one of the following types defined by RAML.org. See the RAML 0.8 or 1.0 specification (depending on which you want to use) for descriptions of the types:
 
 * Trait
 
@@ -23,12 +25,26 @@ An API fragment is a RAML document that has a version and an identifier, but is 
 
 * Security Scheme
 
+To support OAS 3.0 fragment externalization, API Fragments support OAS 3.0 components and JSON Schema: 
+
+* Component (YAML)
+* Component (JSON)
+* JSON Schema
+
+OAS 3.0 components should contain only the reusable `component` objects for the different aspects of the OAS.
+
+
 == Procedure
 
-. On the *Projects* page in Design Center, click *Create new*.
+. On the *Projects* page in Design Center, click *Create +*.
 . Select *New Fragment*.
 . In the *New Fragment* dialog, type a name for the Fragment project. 
+. Select the API specification format. 
 +
+You can choose between RAML 1.0, OAS 3.0 and JSON Schema format.
++
+If you choose RAML 1.0, you can select it's fragment type. +
+
 You can change the name or fragment type later, if necessary.
 
 . Select the type of API fragment that you want to create and click *Create Fragment*.
@@ -37,7 +53,11 @@ _Result:_ The text editor opens. The editor is divided into three panels:
 +
 * The left panel lists the files in your project.
 +
-By default, the editor creates a RAML file that has the same name as the project. This file is set as the root file of the project.
+You can create new files by clicking *+*, and then *New file*. Select the API format of the file between RAML 1.0, OAS 3.0, JSON schema, or other. Select the file type if needed, name your file, and click *Create*.
++
+By default, the editor creates a file that has the same name as the project. This file is set as the root file of the project.
++
+You can set YAML, RAML, or JSON schema files as your root file.
 +
 The left panel also lists the file `exchange.json`, which is a file that contains metadata required by Anypoint Exchange at the time that you publish your project to Exchange. This file is read-only.
 * The middle panel displays the editor in which you create your API fragment.
