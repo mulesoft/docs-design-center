@@ -27,7 +27,7 @@ To add dependencies to an API-specification project:
 
 * To use a version of a dependency other than latest, select the version for that dependency in the *Version* drop-down. 
 * To view only the dependencies you've selected, click *Show selected only*. 
-* You can see the format of the fragment (RAML, OAS, and JSON schema) next to each fragment's name. 
+* You can see the format of the fragment (RAML, OAS, or JSON schema) next to each fragment's name. 
 
 . Click *Add dependency*. 
 
