@@ -1,6 +1,6 @@
 = Import Files into an API-Fragment Project
 
-You can import RAML fragments, OAS components and JSON Schemas into an API-fragment project. The fragments that you import can be written in RAML 0.8, RAML 1.0, or OAS 3.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, and traits. You must set one of the fragments in your project as the root file of the project.
+You can import RAML fragments, OAS components and JSON Schemas into an API-fragment project. The fragments that you import can be written in RAML 0.8, RAML 1.0, and OAS 3.0. You can import annotation types, data types, examples of JSON response payloads, libraries, resource types, security schemes, traits, and OAS components. You must set one of the fragments in your project as the root file of the project.
 
 There are three locations that you can import from: your computer, a location at a URL, and Anypoint Exchange.
 
