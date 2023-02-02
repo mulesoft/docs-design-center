@@ -25,13 +25,13 @@ An API fragment is a document that has a version and an identifier, but is not i
 
 * Security Scheme
 
-To support OAS 3 fragment externalization, PI Fragments support OAS 3 components and JSON Schema: 
+To support OAS 3.0 fragment externalization, PI Fragments support OAS 3.0 components and JSON Schema: 
 
 * Component (YAML)
 * Component (JSON)
 * JSON Schema
 
-OAS 3 components should contain only the reusable component objects for the different aspects of the OAS.
+OAS 3.0 components should contain only the reusable component objects for the different aspects of the OAS.
 
 
 == Procedure
