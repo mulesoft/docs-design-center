@@ -66,7 +66,7 @@ If you want to import the copy, you might need to correct errors in it after you
 +
 API Designer imports the RAML version of a specification, displays the RAML version in the *RAML* pane, and displays the OAS version in the *OAS* pane.
 +
-*Language* (for RAML fragments):: You can choose between RAML 1.0, OAS or JSON Schema.
+*Language* (for RAML fragments):: You can choose between RAML, OAS, or JSON Schema.
 
 +
 *Date modified*:: The date that the currently selected version of the currently selected asset was published.

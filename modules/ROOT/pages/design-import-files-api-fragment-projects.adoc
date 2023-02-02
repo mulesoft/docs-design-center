@@ -47,7 +47,7 @@ Select the *Include snapshots* checkbox in the bottom-left corner of the dialog 
 +
 The value must be *API Fragment*.
 +
-*Language*:: You can choose between RAML 1.0, OAS or JSON Schema.
+*Language*:: You can choose between RAML, OAS, or JSON Schema.
 +
 *Date modified*:: The date that the currently selected version of the currently selected asset was published.
 +
