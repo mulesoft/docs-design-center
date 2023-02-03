@@ -2,7 +2,7 @@
 
 Design Center provides multiple ways to set up access management to provide collaboration across teams. 
 
-Depending on your organization's permission structure, you can assign permissions using the xref:access-management::teams.adoc[Teams] feature, the xref:access-management::users.adoc#grant-user-permissions[Roles] feature (deprecated), or by assigning an xref:access-management::users.adoc#grant-user-permissions[individual user permission].
+Depending on your organization's permission structure, you can assign permissions using the xref:access-management::teams.adoc[Teams] feature, the xref:access-management::users.adoc#roles[Roles] feature (deprecated), or by assigning an xref:access-management::users.adoc#grant-user-permissions[individual user permission].
 
 == Design Center Permissions
 

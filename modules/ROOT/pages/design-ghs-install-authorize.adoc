@@ -61,10 +61,10 @@ The application must be authorized in API Designer to complete the integration w
 
 To authorize the GitHub Synchronization application, ensure your user ID is assigned the Design Center Developer permission.
 
-. Sign in to GitHub.
-. On the Design Center *Projects* page, click *Create new*.
-. Select *New API Spec*.
-. In the *New API Spec* panel, click *Authorize the MuleSoft app now to get started*.
+. Sign in to the Anypoint Platform.
+. On the Design Center *Projects* page, click *Create +*.
+. Select *New API Specification*.
+. In the *New API Specification* panel, click *Authorize the MuleSoft app now to get started*.
 . Click *Authorize*.
 . In the subsequent dialog, click *Authorize MuleSoft GitHub Integration*.
 
