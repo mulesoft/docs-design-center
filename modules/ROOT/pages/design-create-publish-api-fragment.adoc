@@ -43,7 +43,6 @@ OAS 3.0 components should contain only the reusable `component` objects for the 
 You can choose between RAML 1.0, OAS 3.0 and JSON Schema format.
 +
 If you choose RAML 1.0, you can select it's fragment type. +
-
 You can change the name or fragment type later, if necessary.
 
 . Select the type of API fragment that you want to create and click *Create Fragment*.
