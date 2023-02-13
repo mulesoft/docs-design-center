@@ -1,5 +1,5 @@
 = Deploy a Mule Application from Runtime Manager to CloudHub by Using a JAR File
-:page-support-status: eolReached 
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

@@ -1,5 +1,5 @@
 = Get a Recommendation for Mapping Data Types for a Transformation
-:page-support-status: eolReached 
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
