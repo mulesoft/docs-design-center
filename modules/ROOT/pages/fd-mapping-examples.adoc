@@ -1,4 +1,5 @@
 = Examples of Mapping with the Transform Card (Flow Designer)
+:page-support-status: eolReached 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

@@ -1,4 +1,5 @@
 = Simple Data Types that are Supported in Flow Designer
+:page-support-status: eolReached 
 
 These data types are called simple because, though they store data in particular formats, they have no structures, such as custom data types do. The simple data types are boolean, date, dateTime, integer, number, and string.
 

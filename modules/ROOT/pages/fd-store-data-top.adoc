@@ -1,4 +1,5 @@
 = Store and Reuse Values that are Based on Data within a Flow (Flow Designer)
+:page-support-status: eolReached 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
