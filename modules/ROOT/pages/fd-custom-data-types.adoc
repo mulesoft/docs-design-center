@@ -1,4 +1,5 @@
 = Custom Data Types in Flow Designer
+:page-support-status: eolScheduled 
 
 You can create custom data types in any of the following formats: CSV, JSON, Java Object, and XML. Custom data types are structured as key:value pairs or XML. The values that they contain are of simple data types.
 

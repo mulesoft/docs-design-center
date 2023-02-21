@@ -1,4 +1,5 @@
 = Switch the Connection That a Connector is Using in a Project
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
