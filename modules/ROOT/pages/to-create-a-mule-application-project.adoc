@@ -1,5 +1,4 @@
 = Start Creating a Mule Application from an Existing One (Flow Designer)
-:page-support-status: eolScheduled 
 
 There are two ways that you can start creating a Mule application from an existing one:
 

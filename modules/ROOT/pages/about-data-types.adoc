@@ -1,5 +1,4 @@
 = Define and Use Data Types in a Flow (Flow Designer)
-:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
