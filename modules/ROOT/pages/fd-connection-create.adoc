@@ -1,4 +1,5 @@
 = Add a Connection to the Configuration of a Connector
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

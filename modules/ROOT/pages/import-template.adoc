@@ -1,4 +1,5 @@
 = Create a Mule Application Quickly from a Template
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

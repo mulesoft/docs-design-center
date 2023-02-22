@@ -1,4 +1,5 @@
 = Handle Errors with Try (Flow Designer)
+:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
