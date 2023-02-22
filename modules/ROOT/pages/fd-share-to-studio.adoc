@@ -1,5 +1,4 @@
 = Collaborate with Someone Who Works in Studio or Flow Designer
-:page-support-status: eolScheduled 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
