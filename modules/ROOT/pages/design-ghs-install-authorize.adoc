@@ -84,7 +84,7 @@ If you see an empty list, ensure you've installed the application either in a Gi
 Your organization administrator can disable the Github Integration:
 
 . On the Design Center *Projects* page, click *Settings*.
-. Under *Integrations*, unselect *E*nable Github Integration*.
+. Under *Integrations*, unselect *Enable Github Integration*.
 . A confirmation dialog box appears.
 . Click *Disable GitHub*.
 
