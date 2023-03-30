@@ -78,3 +78,17 @@ If you encounter errors when attempting to authorize the GitHub Synchronization 
 . xref:authorize-the-github-synchronization-application-in-api-designer[Authorize the GitHub Synchronization Application].
 
 If you see an empty list, ensure you've installed the application either in a GitHub organization or in a GitHub user account before performing any sync action.
+
+== Disabling the GitHub Integration
+
+Your organization administrator can disable the Github Integration:
+
+. On the Design Center *Projects* page, click *Settings*.
+. Under *Integrations*, unselect *Enable Github Integration*.
+. A confirmation dialog box appears.
+. Click *Disable GitHub*.
+
+The integration is now disabled.
+If your organization has sub-organizations, the organization administrator can enable or disable the integration for each sub-organization as needed.
+
+WARNING: This action disables source syncing for all users and projects in your organization. If the integration is re-enabled, all past synchronizations are lost even when the repositories still exist on GitHub.
