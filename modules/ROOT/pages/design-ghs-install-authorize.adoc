@@ -89,5 +89,6 @@ Your organization administrator can disable the Github Integration:
 . Click *Disable GitHub*.
 
 The integration is now disabled.
+If your organization has sub-organizations, the organization administrator can enable or disable the integration for each sub-organization as needed.
 
-WARNING: This action disables source syncing for all users and projects in your organization. 
+WARNING: This action disables source syncing for all users and projects in your organization. If the integration is re-enabled, all past synchronizations are lost eveb when the repositories still exist on GitHub.
