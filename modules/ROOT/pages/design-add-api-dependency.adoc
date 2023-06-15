@@ -65,9 +65,9 @@ _Result_: The rulesets are added to your project.
 [fix-gov-issues]
 == Fix Governance Conformance Issues
 
-After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API definition. 
+After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
 
 == See Also
 
-* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Definitions]
+* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
 * xref:exchange::to-create-an-asset.adoc[Create an Asset]
