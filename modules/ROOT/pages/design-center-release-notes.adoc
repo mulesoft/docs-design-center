@@ -1,1 +1,1 @@
-include::release-notes::partial$design-center/design-center-rn-landing-page.adoc[]
+include::release-notes::partial$design-center/design-center-release-notes.adoc[]
