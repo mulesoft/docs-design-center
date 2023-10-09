@@ -47,7 +47,7 @@ NOTE: If you are using a version of Anypoint Platform released prior to April 20
 [[asset-version]]
 == Asset Version
 
-Anypoint Exchange requires an asset version number for each API specification published. The asset version must be specified using semantic versioning rules. For details, see xref:exchange::to-change-raml-version[Change the Version of an Asset].
+Anypoint Exchange requires an asset version number for each API specification published. The asset version must be specified using semantic versioning rules. For details, see xref:exchange::to-change-raml-version.adoc[Change the Version of an Asset].
 
 The content of the *Asset version* field on the publish dialog depends on the following:
 
@@ -69,5 +69,5 @@ The content and state of the *API version* field in the publish dialog depends o
 
 * xref:exchange::workflow-sharing-assets.adoc[Publish Assets Workflow]
 * xref:exchange::asset-details.adoc[Explore Asset Information]
-* xref:exchange::to-change-raml-version[Change the Version of an Asset]
-* xref:api-manager::api-instance-landing-page[API Instances]
+* xref:exchange::to-change-raml-version.adoc[Change the Version of an Asset]
+* xref:api-manager::api-instance-landing-page.adoc[API Instances]
