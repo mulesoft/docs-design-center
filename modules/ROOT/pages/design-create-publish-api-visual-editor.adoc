@@ -1,4 +1,5 @@
 = Create an API Specification with the Visual API Editor
+:page-aliases: design-api-v-concept.adoc, design-data-type-v-task.adoc, design-raml-api-v-task.adoc, design-resource-v-task.adoc, exit-visual-edit-task.adoc
 
 You can use API Designer's visual API editor to scaffold API specifications in RAML 1.0 or in OAS 2.0 or 3.0 (JSON). You do so by populating language-neutral forms.
 
