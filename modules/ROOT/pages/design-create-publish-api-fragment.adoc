@@ -1,4 +1,5 @@
 = Create and Publish an API Fragment in the Text Editor in API Designer
+:page-aliases: create-reuse-part-task.adoc, design-api-frag-revisions-concept.adoc
 
 You can create API fragments directly in RAML, OAS 3.0, and JSON Schema with the help of code suggestions that appear within the text editor. 
 
