@@ -62,10 +62,31 @@ When you have your branch, a pop-up appears where you can see the missing rulese
 _Result_: The rulesets are added to your project.
 
 
-[fix-gov-issues]
+[[fix-gov-issues]]
 == Fix Governance Conformance Issues
 
-After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
+When adding the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
+ 
+If the validation process takes too long due to the complexity of the rulesets added, a warning message appears informing auto-validation is disabled for that project. CLick *Ok* to change to manual mode.
+If you don't want to disable auto-validation, click *Cancel*. 
+
+NOTE: If the auto-validation of rulesets still takes too long, the warning message will re-appear. 
+
+=== Validating Rulesets Manually
+
+You can validate the rulesets manually. To do so, click *Validate for Governance* in the *Governance* tab of the *Project Errors* section of the text editor.
+
+You can also enable auto-validation again. To do it, click *Governance auto-validation* in the *Governance* tab of the *Project Errors* section of the text editor. If you click *Governance auto-validation* again, it will disable it.
+
+=== Troubleshooting 
+
+The ruleset validation process can experience delays due to the following issues:
+
+* *Browser Resources*: API Designer needs browser resources to validate rulesets. Close unnecessary tabs or applications to free up resources, and ensure your device is running efficiently and has enough memory and CPU resources.
+
+* *Rulesets*: As additional rulesets are added as dependencies to a project, validation times inevitably increases due to the number of diagnostics being computed. Switch to manual validation to reduce validation times.
+
+* *API Complexity*: If your API is modularized, has complex recursive types or circular references, the validation process takes more time. Switch to manual validation to reduce validation times.
 
 == See Also
 
