@@ -68,7 +68,7 @@ You can validate your rulesets manually or automatically:
 * To turn manual validation on, click *Validate for Governance* in the *Governance* tab of the *Project Errors* section of the text editor. 
 * To enable auto-validation again, click *Governance auto-validation* in the *Governance* tab of the *Project Errors* section of the text editor. If you click *Governance auto-validation* again, it will disable it. 
 
-* If the validation process takes too long due to the complexity of the rulesets added, a warning message appears informing auto-validation is disabled for that project. CLick *Ok* to change to manual mode.
+* If the validation process takes too long due to the complexity of either the rulesets added or the API specification, a warning message appears informing auto-validation is disabled for that project. CLick *Ok* to change to manual mode.
 If you don't want to disable auto-validation, click *Cancel*. 
 
 NOTE: If the auto-validation of rulesets still takes too long, you get the warning message again.
