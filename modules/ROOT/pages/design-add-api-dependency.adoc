@@ -93,7 +93,7 @@ After you add the rulesets as dependencies, you can view the conformance message
 If the automatic validation process takes too long, you get a warning that auto-validation is disabled for the project. Click *Ok* to change to manual mode.
 If you don't want to disable auto-validation, click *Cancel*. 
 
-NOTE: If the auto-validation of rulesets still takes too long, the warning message will re-appear. 
+NOTE: If the auto-validation of rulesets still takes too long, you get the warning message again.
 
 === Validating Rulesets Manually
 
