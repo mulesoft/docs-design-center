@@ -83,17 +83,13 @@ You can improve ruleset validation times:
 
 * *API Complexity*: If your API is modularized, has complex recursive types or circular references, the validation process takes more time. Switch to manual validation to prevent from triggering multiple automatic validations that may exhaust your available resources.
 
-== See Also
-
-* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
-* xref:exchange::to-create-an-asset.adoc[Create an Asset]
-
 
 [[fix-gov-issues]]
 == Fix Governance Conformance Issues
 
 After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
  
+<<<<<<< Updated upstream
 If the automatic validation process takes too long, you get a warning that auto-validation is disabled for the project. Click *Ok* to change to manual mode.
 If you don't want to disable auto-validation, click *Cancel*. 
 
@@ -115,7 +111,12 @@ The ruleset validation process can experience delays due to the following issues
 
 * *API Complexity*: If your API is modularized, has complex recursive types or circular references, the validation process takes more time. Switch to manual validation to reduce validation times.
 
+=======
+* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
+* xref:exchange::to-create-an-asset.adoc[Create an Asset]
+>>>>>>> Stashed changes
 == See Also
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
 * xref:exchange::to-create-an-asset.adoc[Create an Asset]
+
