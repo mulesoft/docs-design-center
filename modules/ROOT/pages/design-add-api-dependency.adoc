@@ -94,7 +94,7 @@ You can improve ruleset validation times:
 
 After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
  
-If the validation process takes too long due to the complexity of the rulesets added, a warning message appears informing auto-validation is disabled for that project. CLick *Ok* to change to manual mode.
+If the automatic validation process takes too long, you get a warning that auto-validation is disabled for the project. Click *Ok* to change to manual mode.
 If you don't want to disable auto-validation, click *Cancel*. 
 
 NOTE: If the auto-validation of rulesets still takes too long, the warning message will re-appear. 
