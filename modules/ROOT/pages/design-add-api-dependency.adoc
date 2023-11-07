@@ -89,32 +89,6 @@ You can improve ruleset validation times:
 
 After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
  
-<<<<<<< Updated upstream
-If the automatic validation process takes too long, you get a warning that auto-validation is disabled for the project. Click *Ok* to change to manual mode.
-If you don't want to disable auto-validation, click *Cancel*. 
-
-NOTE: If the auto-validation of rulesets still takes too long, the warning message will re-appear. 
-
-=== Validating Rulesets Manually
-
-You can validate the rulesets manually. To do so, click *Validate for Governance* in the *Governance* tab of the *Project Errors* section of the text editor.
-
-You can also enable auto-validation again. To do it, click *Governance auto-validation* in the *Governance* tab of the *Project Errors* section of the text editor. If you click *Governance auto-validation* again, it will disable it.
-
-=== Troubleshooting 
-
-The ruleset validation process can experience delays due to the following issues:
-
-* *Browser Resources*: API Designer needs browser resources to validate rulesets. Close unnecessary tabs or applications to free up resources, and ensure your device is running efficiently and has enough memory and CPU resources.
-
-* *Rulesets*: As additional rulesets are added as dependencies to a project, validation times inevitably increases due to the number of diagnostics being computed. Switch to manual validation to reduce validation times.
-
-* *API Complexity*: If your API is modularized, has complex recursive types or circular references, the validation process takes more time. Switch to manual validation to reduce validation times.
-
-=======
-* xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
-* xref:exchange::to-create-an-asset.adoc[Create an Asset]
->>>>>>> Stashed changes
 == See Also
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
