@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: design-branch-filelock-concept.adoc, design-manage-revisions-task.adoc
 
 You can separate new iterations of a project from previous iterations by branching.
 
