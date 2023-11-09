@@ -77,23 +77,26 @@ To improve ruleset validation times:
 
 * Close unnecessary browser tabs or applications.  
 * Ensure your device is running efficiently and has enough memory and CPU resources.
-* Switch to manual validation. This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources. +
+* Switch to manual validation. This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources. 
+
 If the validation process takes too long, a warning message appears informing you that auto-validation is disabled for that project. 
 * To change to manual mode, click *Ok*.
 * To continue using auto-validation, click *Cancel*. Note that if the auto-validation of rulesets still takes too long, you get the warning message again.
-You can switch between auto-validation and manual validation in your API project. 
+
+You can switch between auto-validation and manual validation in your API project. This changes the validation setting for that specification only.
 
 To turn on manual validation of your rulesets:
 
 . In the *Project Errors* section of the text editor, select the *Governance* tab. 
-. Click the auto-validation icon (image:green-governance-auto-validation.png[width=0.90%,height=0.90%,title="Governance auto-validation"]) to disable auto-validation.
-. Click the validate icon (image:validate-for-governance.png[width=0.90%,height=0.90%,title="Validate for governance"]) to enable manual validation. 
+. Click the *Governance auto-validation* icon (image:green-governance-auto-validation.png[width=0.90%,height=0.90%,title="Governance auto-validation"]) to disable auto-validation.
+. Click the *Validate for governance* icon (image:validate-for-governance.png[width=256px,height=256px,title="Validate for governance"]) to enable manual validation. 
 +
 This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources.
 
 To enable auto-validation again:
+
 . In the *Project Errors* section of the text editor, select the *Governance* tab. 
-. Click the auto-validation icon (image:red-governance-auto-validation.png[width=0.90%,height=0.90%,title="Governance auto-validation"]) to enable auto-validation again.
+. Click the auto-validation icon (image:red-governance-auto-validation.png[width=256px,height=256px,title="Governance auto-validation"]) to enable auto-validation again.
 
 NOTE: If the auto-validation still takes too long, you get the warning message again.
 
