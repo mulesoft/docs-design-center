@@ -31,7 +31,7 @@ To install the GitHub Synchronization application as a GitHub organization admin
 . Click *All repositories* to make all repositories available, or click *Only select repositories* and specify individual repositories.
 . Click *Install*.
 
-The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-sync-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
+The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-synchronization-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
 
 == Install the GitHub Synchronization Application as a GitHub User
 

@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../assets/images
-:page-aliases: general:getting-started:design-an-api.adoc, design-migrating-ms.adoc
+:page-aliases: general:getting-started:design-an-api.adoc, designing-api-about.adoc, design-api-ui-reference.adoc, design-migrating-ms.adoc, group-resource-task.adoc, group-resource-v-task.adoc, publish-project-exchange-task.adoc
 
 You can use the API Designer web UI to design API specifications in:
 

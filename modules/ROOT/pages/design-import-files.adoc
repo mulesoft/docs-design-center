@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: design-import-oas-task.adoc, design-import-raml-task.adoc, designing-api-reference.adoc
 
 You can import RAML fragments, OAS components, and JSON schemas into an API-specification project.
 
