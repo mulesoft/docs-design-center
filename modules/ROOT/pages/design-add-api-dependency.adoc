@@ -61,33 +61,42 @@ _Result_: The rulesets are added to your project.
 When you have your branch, a pop-up appears where you can see the missing ruleset filtered by tags, category, and lifecycle state. To edit those filters, click *Edit criteria*. When you are done, click *Add all rulesets*. +
 _Result_: The rulesets are added to your project.
 
-== Improving Ruleset Validation
-
-Rulesets are validated automatically by default.
-
-To turn manual validation of your rulesets on:
-
-* Click *Governance auto-validation* in the *Governance* tab of the *Project Errors* section of the text editor to disable auto-validation. 
-* Then, click *Validate for Governance* in the *Governance* tab of the *Project Errors* section of the text editor. 
-* To enable auto-validation again, click *Governance auto-validation* in the *Governance* tab of the *Project Errors* section of the text editor. If you click *Governance auto-validation* again, it will disable it. 
-
-* If the validation process takes too long due to the complexity of either the rulesets added or the API specification, a warning message appears informing auto-validation is disabled for that project. Click *Ok* to change to manual mode.
-If you don't want to disable auto-validation, click *Cancel*. 
-
-NOTE: If the auto-validation of rulesets still takes too long, you get the warning message again.
-
-=== Troubleshooting 
-
-You can improve ruleset validation times:
-
-* *Browser Resources*: API Designer needs browser resources to validate rulesets. Close unnecessary tabs or applications to free up resources, and ensure your device is running efficiently and has enough memory and CPU resources.
-
-* *Rulesets*: As additional rulesets are added as dependencies to a project, validation times inevitably increases due to the number of diagnostics being computed. Switch to manual validation to prevent from triggering multiple automatic validations that may exhaust your available resources.
-
-* *API Complexity*: If your API is modularized, has complex recursive types or circular references, the validation process takes more time. Switch to manual validation to prevent from triggering multiple automatic validations that may exhaust your available resources.
-
 
 [[fix-gov-issues]]
+== Improving Ruleset Validation
+
+When you add rulesets as dependencies, the rulesets are automatically validated by default. The complexity of the API and rulesets might increase the number of diagnostics being computed and trigger multiple automatic validations. 
+
+The validation takes more time if:
+
+* Your API is modularized, has complex recursive types, or has circular references. 
+* You add multiple ruleset dependencies to an API project.
+* You are consuming a significant amount of browser resources.
+
+To improve ruleset validation times:
+
+* Close unnecessary browser tabs or applications.  
+* Ensure your device is running efficiently and has enough memory and CPU resources.
+* Switch to manual validation. This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources. +
+If the validation process takes too long, a warning message appears informing you that auto-validation is disabled for that project. 
+* To change to manual mode, click *Ok*.
+* To continue using auto-validation, click *Cancel*. Note that if the auto-validation of rulesets still takes too long, you get the warning message again.
+You can switch between auto-validation and manual validation in your API project. 
+
+To turn on manual validation of your rulesets:
+
+. In the *Project Errors* section of the text editor, select the *Governance* tab. 
+. Click the auto-validation icon (image:green-governance-auto-validation.png[width=0.90%,height=0.90%,title="Governance auto-validation"]) to disable auto-validation.
+. Click the validate icon (image:validate-for-gorvernance.png[width=0.90%,height=0.90%,title="Validate for governance"]) to enable manual validation. 
++
+This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources.
+
+To enable auto-validation again:
+. In the *Project Errors* section of the text editor, select the *Governance* tab. 
+. Click the auto-validation icon (image:green-governance-auto-validation.png[width=0.90%,height=0.90%,title="Governance auto-validation"]) to enable auto-validation again.
+
+NOTE: If the auto-validation still takes too long, you get the warning message again.
+
 == Fix Governance Conformance Issues
 
 After you add the rulesets as dependencies, you can view the conformance messages in the *Project Errors* section of the text editor. Use the provided information to fix any conformance issues and then republish your API specification. 
