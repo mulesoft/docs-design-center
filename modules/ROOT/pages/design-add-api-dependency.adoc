@@ -79,8 +79,10 @@ To improve ruleset validation times:
 * Ensure your device is running efficiently and has enough memory and CPU resources.
 * Switch to manual validation. This runs a single validation for each ruleset rather than triggering multiple automatic validations that might exhaust your available resources. 
 
-If the validation process takes too long, a warning message appears informing you that auto-validation is disabled for that project. 
+If the validation process takes too long, a warning message appears informing you that auto-validation is disabled for that project.
+
 * To change to manual mode, click *Ok*.
+
 * To continue using auto-validation, click *Cancel*. Note that if the auto-validation of rulesets still takes too long, you get the warning message again.
 
 You can switch between auto-validation and manual validation in your API project. This changes the validation setting for that specification only.
