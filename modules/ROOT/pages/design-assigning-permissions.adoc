@@ -55,6 +55,33 @@ To share your projects and add the corresponding permissions directly from API D
 
 NOTE: This action sends the user an email informing a project has been shared with them.
 
+== Changing Ownership of Projects from Design Center
+
+To change the ownership of your projects and add the corresponding permissions directly from Design Center:
+
+. On the Design Center home page, select the project.
+. Click the *Share project* icon, or click *Toggle project details* icon and then click *Change access*.
+.. In the *Share project* dialog box, enter the name of the user in your organization to give ownership of your project.
+.. Select the *Owner* permission level from the dropdown list. .
+.. Click *Save* and then click *Close*. +
+_Result_: The new owner appears in the project details, and the previous owner is now granted the Project administrator permissions, as there can only be one owner per project.
+
+
+NOTE: This action sends the user an email informing they now own the project.
+
+== Changing Ownership of Projects from API Designer
+
+To change the ownership of your projects and add the corresponding permissions directly from API Designer:
+
+. From the Design Center home page, click the project name link to open a project.
+. Click the *Share* button.
+.. In the *Share project* dialog box, enter the name of the user in your organization to give access.
+.. Select the *Owner* permission level from the dropdown list. .
+.. Click *Save* and then click *Close*. +
+_Result_: The new owner appears in the project details, and the previous owner is now granted the Project administrator permissions, as there can only be one owner per project.
+
+NOTE: This action sends the user an email informing they now own the project.
+
 == Removing Access from a Project
 
 . Open the *Share project* dialog from API Designer or Design Center.
