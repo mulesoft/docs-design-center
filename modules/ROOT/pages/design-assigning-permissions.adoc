@@ -68,7 +68,7 @@ _Result_: The new owner appears in the project details, and the previous owner i
 
 == Changing Ownership of Projects from API Designer
 
-If you are a project owner or an organization administrator you can change the ownership of your projects. To change the ownership of your projects directly from API Designer:
+If you are a project owner or an organization administrator, you can change the ownership of your projects. To change the ownership of your projects directly from API Designer:
 
 . From the Design Center home page, click the project name link to open a project.
 . Click the *Share* button.
