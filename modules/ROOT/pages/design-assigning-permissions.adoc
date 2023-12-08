@@ -73,7 +73,7 @@ If you are a project owner or an organization administrator, you can change the 
 . From the Design Center home page, click the project name link to open a project.
 . Click the *Share* button.
 .. In the *Share project* dialog box, enter the name of the user in your organization to give ownership of your project.
-.. Select *Transfer Ownership*  from the dropdown list.
+.. Select *Transfer Ownership* from the dropdown list.
 .. Click *Save* and then click *Close*. +
 _Result_: The new owner appears in the project details, and the previous owner is now granted the Project administrator permissions, as there can only be one owner per project.
 
