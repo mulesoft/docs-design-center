@@ -57,7 +57,7 @@ NOTE: This action sends the user an email informing a project has been shared wi
 
 == Changing Ownership of Projects from Design Center
 
-If you are a project owner or an organization administrator you can change the ownership of your projects. To change the ownership of your projects directly from Design Center:
+If you are a project owner or an organization administrator, you can change the ownership of your projects. To change the ownership of your projects directly from Design Center:
 
 . On the Design Center home page, select the project.
 . Click the *Share project* icon, or click *Toggle project details* icon and then click *Change access*.
