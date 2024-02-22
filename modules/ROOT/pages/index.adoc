@@ -3,17 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
-:page-aliases: user-access-to-design-center.adoc
+:page-aliases: user-access-to-design-center.adoc, about-designing-a-mule-application.adoc, fd-tour.adoc, salesforce-to-twilio.adoc, fd-elements-of-flows.adoc, import-template.adoc, to-create-a-mule-application-project.adoc, fd-connections.adoc, fd-connection-create.adoc, fd-connection-switch-in-project.adoc, fd-connection-edit.adoc, fd-connection-delete.adoc, fd-connection-view-audit-logs.adoc, about-data-types.adoc, fd-supported-simple-data-types.adoc, fd-custom-data-types.adoc, fd-integrating-systems.adoc, dynamic-expression-field.adoc, custom-expression-field.adoc, fd-add-core-component.adoc, fd-iterating.adoc, fd-scatter-gather.adoc, reference-flow-task-design-center.adoc, error-handling-task-design-center.adoc, fd-transform.adoc, fd-mapping-examples.adoc, fd-tour-transform-card.adoc, get-mapping-recommendations.adoc, fd-store-data-top.adoc, to-create-and-populate-a-variable.adoc, fd-store-reuse-output.adoc, manage-dependency-versions-design-center.adoc, fd-share-to-studio.adoc, jump-runtime-manager-task.adoc, fd-project-history.adoc, fd-troubleshooting.adoc, logger-task-design-center.adoc, troubleshooting-reference.adoc, viewing-problems-fd-canvas.adoc, view-clear-logs-task.adoc, fd-deploy.adoc, promote-app-prod-env-design-center.adoc, fd-deploy-app-from-rm.adoc, fd-publish-app-as-template.adoc
 
-Anypoint Design Center is a development environment that consists of the following tools:
-
-* xref:design-create-publish-api-specs.adoc[API Designer]
-+
-API Designer enables you to create API specifications in several modeling languages and create RAML API fragments. After you create a specification or fragment, publish it to Anypoint Exchange for anyone in your MuleSoft organization to use.
-
-* xref:about-designing-a-mule-application.adoc[Flow Designer]
-+
-In Flow Designer, you create Mule applications to integrate systems into workflows.
+Anypoint Design Center is a development environment. xref:design-create-publish-api-specs.adoc[API Designer] enables you to create API specifications in several modeling languages and create RAML API fragments. After you create a specification or fragment, publish it to Anypoint Exchange for anyone in your MuleSoft organization to use.
 
 == Prerequisites for Using Design Center
 

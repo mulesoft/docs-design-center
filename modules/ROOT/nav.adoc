@@ -1,5 +1,5 @@
 .xref:index.adoc[Design Center]
-* xref:index.adoc[About Design Center]
+* xref:index.adoc[Overview]
 * xref:design-center-release-notes.adoc[Release Notes]
 * xref:design-create-publish-api-specs.adoc[API Designer]
 ** xref:design-assigning-permissions.adoc[Set User Access Permissions]
