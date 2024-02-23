@@ -1,6 +1,6 @@
 .xref:index.adoc[Design Center]
 * xref:index.adoc[About Design Center]
-* xref:archive@design-center::design-center-release-notes-mule-apps.adoc[Release Notes]
+* xref:design-center-release-notes-mule-apps.adoc[Release Notes]
 * xref:about-designing-a-mule-application.adoc[Flow Designer]
  ** xref:fd-tour.adoc[Tour of Flow Designer]
  ** xref:salesforce-to-twilio.adoc[Create Your First Mule Application with Flow Designer]
