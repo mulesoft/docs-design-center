@@ -3,17 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords:
-:page-aliases: user-access-to-design-center.adoc
 
-Anypoint Design Center is a development environment that consists of the following tools:
-
-* xref:design-create-publish-api-specs.adoc[API Designer]
-+
-API Designer enables you to create API specifications in several modeling languages and create RAML API fragments. After you create a specification or fragment, publish it to Anypoint Exchange for anyone in your MuleSoft organization to use.
-
-* xref:about-designing-a-mule-application.adoc[Flow Designer]
-+
-In Flow Designer, you create Mule applications to integrate systems into workflows.
+Anypoint Design Center is a development environment that includes xref:about-designing-a-mule-application.adoc[Flow Designer], a tool that enables you to create Mule applications to integrate systems into workflows.
 
 == Prerequisites for Using Design Center
 
