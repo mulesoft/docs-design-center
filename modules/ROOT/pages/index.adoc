@@ -7,7 +7,7 @@ endif::[]
 
 Anypoint Design Center is a development environment that includes xref:design-create-publish-api-specs.adoc[API Designer], a tool that enables you to create API specifications in several modeling languages and create RAML API fragments. After you create a specification or fragment, publish it to Anypoint Exchange for anyone in your MuleSoft organization to use.
 
-NOTE: Flow Designer is https://www.mulesoft.com/legal/versioning-back-support-policy[end of life] and its documentation is located at https://archive.docs.mulesoft.com/design-center/index[Flow Designer archive site].
+NOTE: Flow Designer is https://www.mulesoft.com/legal/versioning-back-support-policy[end of life] and its documentation is now located at https://archive.docs.mulesoft.com/design-center/index[Flow Designer archive site].
 
 == Prerequisites for Using Design Center
 
