@@ -84,7 +84,7 @@ When you publish the API-fragment project, Exchange automatically creates an API
 
 == OAS Components Limitations
 
-The following list displays OAS 3.0 limitations you should consider when writing your API Fragments:
+The following list displays OAS 3.0 limitations you must consider when writing your API Fragments:
 
 * The only valid fields at the document root level are: `openapi`, `info`, `components`, and `paths`.
 
