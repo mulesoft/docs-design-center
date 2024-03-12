@@ -82,6 +82,16 @@ After you publish the API-fragment project, other developers can include its fra
 
 When you publish the API-fragment project, Exchange automatically creates an API portal for it.
 
+== OAS Components Limitations
+
+The following list displays OAS 3.0 limitations you should consider when writing your API Fragments:
+
+* The only valid fields at the document root level are: `openapi`, `info`, `components`, and `paths`.
+
+* The only valid fields in the `info` object are `title` and `version`.
+
+* The `paths` key must be an empty object.
+
 == See Also
 
 * xref:design-import-files.adoc[Import Files into an API Project]
