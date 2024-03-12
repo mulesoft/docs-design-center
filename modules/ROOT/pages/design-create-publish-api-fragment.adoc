@@ -88,7 +88,7 @@ The following list displays OAS 3.0 limitations you must consider when writing y
 
 * The only valid fields at the document root level are: `openapi`, `info`, `components`, and `paths`.
 
-* The only valid fields in the `info` object are `title` and `version`.
+* Valid fields in the `info` object are `title` and `version`.
 
 * The `paths` key must be an empty object.
 
