@@ -7,7 +7,7 @@ endif::[]
 
 [NOTE]
 --
-Flow Designer is scheduled for End of Life.
+Flow Designer has reached End of Life.
 
 You can xref:fd-share-to-studio.adoc[migrate your projects to Studio 7] to continue building, testing, and deploying integrations.
 --
