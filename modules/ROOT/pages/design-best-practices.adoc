@@ -4,11 +4,11 @@ When you perform tasks on Design Center, you may encounter issues. The following
 
 == General Best Practices
 
-* Divide your fragments into shorter reusable dependencies when possible.
+* Divide your fragments into shorter reusable dependencies when possible
 
-* Have one version of the same dependency.
+* Have one version of the same dependency
 
-* Have only one browser tab open at a time for API Designer.
+* Have only one browser tab open at a time for API Designer
 
 === API Designer Resources
 
@@ -17,7 +17,7 @@ When using API Designer, the resources to parse the specification depend on the 
 Suggested resources:
 
 * 8GB RAM
-* Ryzen series 5 / Intel i5 GPU or higher.
+* Ryzen series 5 / Intel i5 GPU or higher
 
 Due to parser limitations, your API Designer projects should have a total project size between 500 Kilobytes (KB) and 1.5 Megabytes (MB). 
 
