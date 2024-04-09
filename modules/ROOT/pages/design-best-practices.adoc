@@ -1,0 +1,117 @@
+= Best Practices when using API Designer
+
+When you perform tasks on Design Center, you may encounter issues. The following topics help you resolve them:
+
+== General Best Practices
+
+* Divide your fragments into shorter reusable dependencies when possible.
+
+* Have one version of the same dependency.
+
+* Have only one browser tab open at a time for API Designer.
+
+=== API Designer Resources
+
+When using API Designer, the resources to parse the specification depend on the user. Having a computer with enough available resources is crucial for API Designer to function properly.
+
+Suggested resources:
+
+* 8GB RAM
+* Ryzen series 5 / Intel i5 GPU or higher.
+
+Due to parser limitations, your API Designer projects should have a total project size between 500 Kilobytes (KB) and 1.5 Megabytes (MB). 
+
+When exceeding in size, validation times are higher than usual.
+
+=== Oas Specifications
+
+
+* Use the `$ref` property to define reusable components. You can reference them across the API Specification to improve parsing efficiency:
+
+----
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+
+paths:
+  /users:
+    get:
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+----
+
+* Use simpler types to represent your data if possible. Try to avoid unnecessary nesting and complicated types:
+
+----
+properties:
+  age:
+    type: integer  # Prefer simple types over complex types like objects
+
+----
+
+* Use the `enum` property for fields when fixed set of values to improve parsing efficiency: 
+
+----
+properties:
+  status:
+    type: string
+    enum: [active, inactive]
+
+----
+
+* Use simple nesting of objects to simplify the structure, improve readability and parsing efficiency: 
+
+----
+# Good
+properties:
+  name:
+    type: string
+  address:
+    type: string
+
+# Avoid
+properties:
+  user:
+    type: object
+    properties:
+      profile:
+        type: object
+        properties:
+          name:
+            type: string
+
+----
+
+* Use `response` headers to provide additional information without including it in the response body:
+
+----
+responses:
+  '200':
+    description: Successful response
+    headers:
+      X-Rate-Limit-Limit:
+        description: The number of requests allowed in the current period
+        schema:
+          type: integer
+
+----
+
+* Include only concise and short examples: 
+----
+Book:
+  type: string
+  example: "Explain the string with as few words as possible."
+----
+
+* When using union type properties, make sure you use `oneOf` to represent union type object fields, `allOf` to represent intersection type and composite objects and fields, and `anyOf` when defining a property with multiple possible data structures. 
+
