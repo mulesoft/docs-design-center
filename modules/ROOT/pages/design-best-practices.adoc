@@ -52,6 +52,7 @@ paths:
 
 * Use simpler types to represent your data if possible. Avoid unnecessary nesting and complicated types, for example:
 
++
 ----
 properties:
   age:
