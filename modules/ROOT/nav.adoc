@@ -27,6 +27,7 @@
  ** xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
  ** xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
  ** xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0]
+ ** xref:design-best-practices.adoc[Best Practices when using API Designer]
  ** xref:design-json-schema-required-error.adoc[Common Errors in Specifying Required Fields in JSON Schemas]
  ** xref:spec-api-public-exchange.adoc[API Specification for MuleSoft Connectivity Ecosystem]
  ** xref:design-ghs-merge-branches.adoc[Merge Branches]

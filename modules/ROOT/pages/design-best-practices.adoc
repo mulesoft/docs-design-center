@@ -1,0 +1,171 @@
+= Best Practices when using API Designer
+
+When you perform tasks on Design Center, you might encounter issues. Use the following topics to help you resolve them.
+
+== API Designer Best Practices
+
+* Divide your fragments into shorter reusable dependencies when possible.
+
+* Keep only one version of the same dependency
+
+* Keep only one browser tab open at a time for API Designer
+
+=== API Designer Resources
+
+When using API Designer, the required resources to parse the specification depend on the users own resources. For API Designer to function properly, ensure your computer has the following minimum resources available when using API Designer:
+
+* 8 GB RAM
+* Ryzen series 5 / Intel i5 CPU or higher
+
+Due to parser limitations, the total project size (all files in your project) for your API Designer projects should be bellow 500 KB.
+
+If the project size exceeds 1.5 MB, validation takes longer.
+
+=== OAS Specification Best Practices
+
+
+* Use the `$ref` property to define reusable components. To improve parsing efficiency, reference components across the API specification, for example:
+
++
+----
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+
+paths:
+  /users:
+    get:
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+----
+
+* Use simpler types to represent your data if possible. Avoid unnecessary nesting and complicated types, for example:
+
++
+----
+properties:
+  age:
+    type: integer  # Prefer simple types over complex types like objects
+
+----
+
+* Use the `enum` property for fields with fixed set of values to improve parsing efficiency: 
+
++
+----
+properties:
+  status:
+    type: string
+    enum: [active, inactive]
+
+----
+
+* Use simple nesting for objects to simplify the structure and improve readability and parsing efficiency: 
+
++
+----
+# Good
+properties:
+  name:
+    type: string
+  address:
+    type: string
+
+# Avoid
+properties:
+  user:
+    type: object
+    properties:
+      profile:
+        type: object
+        properties:
+          name:
+            type: string
+
+----
+
+* Use `response` headers to provide additional information without including it in the response body:
+
++
+----
+responses:
+  '200':
+    description: Successful response
+    headers:
+      X-Rate-Limit-Limit:
+        description: The number of requests allowed in the current period
+        schema:
+          type: integer
+
+----
+
+* Include only concise and short examples: 
++
+----
+Book:
+  type: string
+  example: "Explain the string with as few words as possible."
+----
+
+* When using union-type properties, use `oneOf` to represent union-type object fields, `allOf` to represent intersection type and composite objects and fields, and `anyOf` when defining a property with multiple possible data structures. 
+
+
+=== RAML Specification Best Practices
+
+* When extracting RAML Fragments, import them as local declaration first.
+
+* Reuse data types as declarations.
+
+* Use inheritances only when needed:
+
++
+----
+Car:
+  description: This is a car
+  properties:
+    brand: string
+    model: string
+  example:
+    brand: Toyota
+    model: Corolla
+Person:
+  properties:
+    owns: Car
+
+----
+
+* Use short unions:
+
++
+----
+Person:
+  type: Employee | Customer
+----
+
+* Use simple traits and try not to combine them with resource type properties:
+
++
+----
+/basic:
+  type: {resourceTypes.fhirResourceType: {
+      postExample : !include /examples/requests/post_resource.json,
+      getExample  : !include /examples/responses/get_resource.json,
+      bundleName : basic.BasicBundle
+    }
+  }
+  /_search:
+    get:
+      is: [ searchParams ]
+    post:
+      is: [ POSTSearchParams ]
+----
