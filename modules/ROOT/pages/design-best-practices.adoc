@@ -111,6 +111,7 @@ responses:
 ----
 
 * Include only concise and short examples: 
++
 ----
 Book:
   type: string
