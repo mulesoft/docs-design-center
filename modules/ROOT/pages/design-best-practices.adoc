@@ -73,6 +73,7 @@ properties:
 
 * Use simple nesting for objects to simplify the structure and improve readability and parsing efficiency: 
 
++
 ----
 # Good
 properties:
