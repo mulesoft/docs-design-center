@@ -21,7 +21,7 @@ Suggested resources:
 
 Due to parser limitations, the total project size for your API Designer projects must be between 500 KB and 1.5 MB. 
 
-When exceeding in size, validation times are higher than usual.
+If the project size exceeds 1.5 MB, validation takes longer.
 
 === Oas Specifications
 
