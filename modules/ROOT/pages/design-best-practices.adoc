@@ -97,6 +97,7 @@ properties:
 
 * Use `response` headers to provide additional information without including it in the response body:
 
++
 ----
 responses:
   '200':
