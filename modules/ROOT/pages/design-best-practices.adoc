@@ -71,7 +71,7 @@ properties:
 
 ----
 
-* Use simple nesting of objects to simplify the structure, improve readability and parsing efficiency: 
+* Use simple nesting for objects to simplify the structure and improve readability and parsing efficiency: 
 
 ----
 # Good
