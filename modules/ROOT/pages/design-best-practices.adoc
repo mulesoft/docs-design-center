@@ -118,5 +118,5 @@ Book:
   example: "Explain the string with as few words as possible."
 ----
 
-* When using union type properties, make sure you use `oneOf` to represent union type object fields, `allOf` to represent intersection type and composite objects and fields, and `anyOf` when defining a property with multiple possible data structures. 
+* When using union-type properties, use `oneOf` to represent union-type object fields, `allOf` to represent intersection type and composite objects and fields, and `anyOf` when defining a property with multiple possible data structures. 
 
