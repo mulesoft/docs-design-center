@@ -12,7 +12,7 @@ When you perform tasks on Design Center, you might encounter issues. Use the fol
 
 === API Designer Resources
 
-When using API Designer, the resources to parse the specification depend on the user. Having a computer with enough available resources is crucial for API Designer to function properly.
+When using API Designer, the required resources to parse the specification depend on the user. For API Designer to function properly, ensure your computer has the following minimum resources available:
 
 Suggested resources:
 
