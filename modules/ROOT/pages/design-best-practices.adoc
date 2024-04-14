@@ -16,7 +16,7 @@ When using API Designer, the required resources to parse the specification depen
 
 Suggested resources:
 
-* 8GB RAM
+* 8 GB RAM
 * Ryzen series 5 / Intel i5 GPU or higher
 
 Due to parser limitations, your API Designer projects should have a total project size between 500 Kilobytes (KB) and 1.5 Megabytes (MB). 
