@@ -26,7 +26,7 @@ When exceeding in size, validation times are higher than usual.
 === Oas Specifications
 
 
-* Use the `$ref` property to define reusable components. You can reference them across the API Specification to improve parsing efficiency:
+* Use the `$ref` property to define reusable components. To improve parsing efficiency, reference components across the API specification, for example:
 
 ----
 components:
