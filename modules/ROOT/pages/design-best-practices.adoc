@@ -4,7 +4,7 @@ When you perform tasks on Design Center, you might encounter issues. Use the fol
 
 == General Best Practices
 
-* Divide your fragments into shorter reusable dependencies when possible
+* Divide your fragments into shorter reusable dependencies when possible.
 
 * Have one version of the same dependency
 
