@@ -2,24 +2,22 @@
 
 When you perform tasks on Design Center, you might encounter issues. Use the following topics to help you resolve them.
 
-== General Best Practices
+== API Designer Best Practices
 
 * Divide your fragments into shorter reusable dependencies when possible.
 
-* Have one version of the same dependency
+* Keep only one version of the same dependency
 
-* Have only one browser tab open at a time for API Designer
+* Keep only one browser tab open at a time for API Designer
 
 === API Designer Resources
 
-When using API Designer, the required resources to parse the specification depend on the user. For API Designer to function properly, ensure your computer has the following minimum resources available:
-
-Suggested resources:
+When using API Designer, the required resources to parse the specification depend on the users own resources. For API Designer to function properly, ensure your computer has the following minimum resources available when using API Designer:
 
 * 8 GB RAM
-* Ryzen series 5 / Intel i5 GPU or higher
+* Ryzen series 5 / Intel i5 CPU or higher
 
-Due to parser limitations, the total project size for your API Designer projects must be between 500 KB and 1.5 MB. 
+Due to parser limitations, the total project size (all files in your project) for your API Designer projects should be bellow 500 KB.
 
 If the project size exceeds 1.5 MB, validation takes longer.
 
@@ -28,6 +26,7 @@ If the project size exceeds 1.5 MB, validation takes longer.
 
 * Use the `$ref` property to define reusable components. To improve parsing efficiency, reference components across the API specification, for example:
 
++
 ----
 components:
   schemas:
@@ -60,7 +59,7 @@ properties:
 
 ----
 
-* Use the `enum` property for fields when fixed set of values to improve parsing efficiency: 
+* Use the `enum` property for fields with fixed set of values to improve parsing efficiency: 
 
 +
 ----
@@ -120,3 +119,53 @@ Book:
 
 * When using union-type properties, use `oneOf` to represent union-type object fields, `allOf` to represent intersection type and composite objects and fields, and `anyOf` when defining a property with multiple possible data structures. 
 
+
+=== RAML Specification Best Practices
+
+* When extracting RAML Fragments, import them as local declaration first.
+
+* Reuse data types as declarations.
+
+* Use inheritances only when needed:
+
++
+----
+Car:
+  description: This is a car
+  properties:
+    brand: string
+    model: string
+  example:
+    brand: Toyota
+    model: Corolla
+Person:
+  properties:
+    owns: Car
+
+----
+
+* Use short unions:
+
++
+----
+Person:
+  type: Employee | Customer
+----
+
+* Use simple traits and try not to combine them with resource type properties:
+
++
+----
+/basic:
+  type: {resourceTypes.fhirResourceType: {
+      postExample : !include /examples/requests/post_resource.json,
+      getExample  : !include /examples/responses/get_resource.json,
+      bundleName : basic.BasicBundle
+    }
+  }
+  /_search:
+    get:
+      is: [ searchParams ]
+    post:
+      is: [ POSTSearchParams ]
+----
