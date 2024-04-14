@@ -1,6 +1,6 @@
 = Best Practices when using API Designer
 
-When you perform tasks on Design Center, you may encounter issues. The following topics help you resolve them:
+When you perform tasks on Design Center, you might encounter issues. Use the following topics to help you resolve them.
 
 == General Best Practices
 
