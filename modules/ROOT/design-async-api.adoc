@@ -1,0 +1,126 @@
+= AsyncAPI Specifications   
+
+AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/getting-started[AsyncAPI documentation]. 
+
+You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
+
+AsyncAPI makes it easy to work with event-driven architecture by separating the API into three layers:
+
+* Events: Message or data to be shared with other services
+* Channels: Destination of the message to be sent or received
+* Transport: Technology that transports the message, such as RabbitMQ, Kafka, or Anypoint MQ
+
+You can create or import an API specification in API Designer.
+
+To create an AsyncAPI specification in API Designer:
+
+. In Design Center, click *Create New*.
+. Select *New AsyncAPI*.
++
+image::platform/anypoint-create-asyncapi.png[The Create menu with the AsyncAPI option shown]
+
+== Import AsyncAPI Specifications
+
+To import AsyncAPI specifications from Anypoint Exchange or from your filesystem:
+
+. Click the gear icon at the top right of the text editor.
+. Select from the following options:
++
+** Select *Import from Exchange* to see the following lists:
+*** API specifications that are available from the business organization that your user ID belongs to in Anypoint Platform
+*** API specifications that are published by MuleSoft
+** Select *Import* to import an API specification from your local filesystem.
++
+image::platform/apid-import.png[The Settings menu with the Import options shown]
++
+. As appropriate, continue to work with your AsyncAPI specification in API Designer:
+
+* Develop and edit AsyncAPI specifications.
+* View documentation that is included in AsyncAPI specifications.
+* Publish AsyncAPI specifications to Anypoint Exchange.
+
+=== Example AsyncAPI 2.0 specification
+
+Following is an example that you can copy into API Designer to get started with event-driven APIs. 
+
+This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
+
+Sections in the example specification are: 
+
+* AsyncAPI  
++ 
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
++ 
+* Channels
+** The book_trade channel enables you to specify the buy/sell order, symbol, and number of shares you would like to purchase.
+** The trade_result channel returns the result of the transaction.
+
+To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
+----
+asyncapi: 2.0.0
+info:
+  title: Async Request/Trade API
+  version: 0.1.0
+
+channels:
+  book_trade:
+    publish:
+      message:
+        payload:
+          type: object
+          properties:
+            trade-id:
+              type: integer
+              minimum: 0
+              description: the order id of the message coming
+            trade-symbol:
+              type: string
+              minimum: 0
+              Description: ticker symbol of the stock.
+            trade-type:
+              type: string
+              format: string
+              description: BUY or SELL 
+            trade-amount:
+              type: number
+              format: float
+              description: the number of shares to be traded.
+  trade_result:
+    subscribe:
+      message:
+        payload:
+          type: object
+          properties:
+            trade-id:
+              type: integer
+              minimum: 0
+              description: the order id of the message coming
+            trade-symbol:
+              type: string
+              format: string
+              description: ticker symbol of the stock.
+            trade-time:
+              format: date-time
+              description: date and time of the order.
+            trade-amount:
+              type: number
+              format: float
+              description: the number of shares to be traded.
+            trade-type:
+              type: string
+              format: string
+              description: BUY or SELL 
+            trade-status:
+              type: string
+              format: string
+              description: PENDING, PROCESSED and FAILED
+----
+
+For documentation on using API Designer to work with your specification, see xref:design-center::design-create-publish-api-specs.adoc[API Designer].
+
+== See Also
+
+* xref:design-center::design-create-publish-api-specs.adoc[Design APIs in API Designer]
+* xref:exchange::to-configure-api-settings.adoc[Configure API Instances in Exchange]
+* https://www.asyncapi.com/docs/getting-started[AsyncAPI]
