@@ -55,11 +55,28 @@ Identifies the API model as AsyncAPI and specifies the title and version of the 
 ** The trade_result channel returns the result of the transaction.
 
 To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
+[tabs]
+====
+Tab A:: Contents of Tab A.
+ 
+Tab B::
++
+Contents of Tab B.
+ 
+Tab C::
++
+--
+Contents of Tab C.
+ 
+Contains more than one block.
+--
+====
+
 [tabs]
 ====
 AsyncApi 2.0::
 +
---
 asyncapi: 2.0.0
 info:
   title: Async Request/Trade API
@@ -117,10 +134,9 @@ channels:
               type: string
               format: string
               description: PENDING, PROCESSED and FAILED
---
 
 AsyncAPI 2.6:: 
-
++
 example here
 
 ====
