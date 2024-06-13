@@ -55,9 +55,11 @@ Identifies the API model as AsyncAPI and specifies the title and version of the 
 ** The trade_result channel returns the result of the transaction.
 
 To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
-
-[source,yaml]
-----
+[tabs]
+====
+AsyncApi 2.0::
++
+--
 asyncapi: 2.0.0
 info:
   title: Async Request/Trade API
@@ -115,7 +117,13 @@ channels:
               type: string
               format: string
               description: PENDING, PROCESSED and FAILED
-----
+--
+
+AsyncAPI 2.6:: 
+
+example here
+
+====
 
 For documentation on using API Designer to work with your specification, see xref:design-center::design-create-publish-api-specs.adoc[API Designer].
 
