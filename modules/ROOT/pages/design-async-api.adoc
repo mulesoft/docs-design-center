@@ -61,6 +61,7 @@ To try the example, create a new AsyncAPI specification in Design Center and cop
 ====
 AsyncApi 2.0::
 +
+--
 asyncapi: 2.0.0
 info:
   title: Async Request/Trade API
@@ -118,11 +119,12 @@ channels:
               type: string
               format: string
               description: PENDING, PROCESSED and FAILED
-
+ --
 AsyncAPI 2.6:: 
 +
+--
 example here
-
+--
 ====
 
 For documentation on using API Designer to work with your specification, see xref:design-center::design-create-publish-api-specs.adoc[API Designer].
