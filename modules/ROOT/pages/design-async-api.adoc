@@ -119,7 +119,7 @@ channels:
               type: string
               format: string
               description: PENDING, PROCESSED and FAILED
- --
+--
 AsyncAPI 2.6:: 
 +
 --
