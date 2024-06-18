@@ -58,19 +58,19 @@ Sections in the example specification are:
 Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
 * Servers
 Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module.
-** AMQ-prod configures an Anypoint MQ Broker.
-** Kafka-prod configures a locally hosted Kafka broker.
+** `AMQ-prod` configures an Anypoint MQ Broker.
+** `Kafka-prod` configures a locally hosted Kafka broker.
++
+* Operation 
+Defines the action that the application takes and whether the event is consumed or published.
 +
 * Channels
 Defines the binding.
-** order-placed, order-cancelled, and order-confirmed configures  Anypoint MQ channels for publishing and subscribing to orders.
-** order-backordered configures a Kafka channel for publishing and subscribing to backorders.
+** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders.
+** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders.
 +
 * Components
-** Messages defines the structure of the data being transmitted.
-** order is the message defined, with the following properties:
-*** Summary describes the content of a book resource.
-*** Payload includes various properties representing the data fields. These properties specify the individual fields such as id, name, isbn, and abstract.
+Defines the structure of messages for the different types of orders, which include OrderPlaced, OrderCancelled, OrderConfirmed, and BackOrder.
 
 
 To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
