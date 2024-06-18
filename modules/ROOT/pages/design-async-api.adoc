@@ -14,10 +14,18 @@ AsyncAPI makes it easy to work with event-driven architecture by separating the 
 
 You can create or import an API specification in API Designer.
 
+== Create an AsyncAPI specification in API Designer
+
 To create an AsyncAPI specification in API Designer:
 
 . In Design Center, click *Create New*.
 . Select *New AsyncAPI*.
+. In the *New AsyncAPI* dialog, name your project.
+. Select the AsyncAPI language under *Specification Language*.
+
+The text editor opens. 
+
+For more information on how to use API Designer, refer to xref:design-center::design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor].
 
 
 == Import AsyncAPI Specifications
@@ -38,7 +46,74 @@ To import AsyncAPI specifications from Anypoint Exchange or from your filesystem
 * View documentation that is included in AsyncAPI specifications.
 * Publish AsyncAPI specifications to Anypoint Exchange.
 
-=== Example AsyncAPI 2.0 specification
+== Example AsyncAPI 2.6 specification
+
+Following is an example that you can copy into API Designer to get started with event-driven APIs. 
+
+This example is a typical event-driven process that is documented for easy reuse. It demonstrates how to define a Book asyncAPI using one channel.
+
+Sections in the example specification are: 
+
+* AsyncAPI  
++ 
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
+* Servers
+Defines where your application connects to start sending and receiving messages.
++
+* Channels
+** TestQueue is used for both subscribing to and publishing messages related to book resources.
++
+* Components
+** Messages defines the structure of the data being transmitted.
+** order is the message defined, with the following properties:
+*** Summary describes the content of a book resource.
+*** Payload includes various properties representing the data fields. These properties specify the individual fields such as id, name, isbn, and abstract.
++ 
+
+[source,yaml]
+----
+asyncapi: '2.6.0'
+info:
+  title: AnypointMQBooks
+  version: '1.0.0'
+  description: This example demonstrates how to define a Books AsyncAPI
+defaultContentType: application/json
+
+servers:
+  testing:
+    protocol: anypointmq
+    protocolVersion: v1
+    url: https://mq-us-east-1.qax.anypoint.mulesoft.com/api
+    description: 
+      Anypoint MQ broker for production, in the EU Central (Frankfurt) runtime plane 
+      under management of the EU control plane.
+
+channels:
+  'TestQueue':
+    subscribe:
+      message:
+        $ref: '#/components/messages/book'      
+    publish:
+      message:
+        $ref: '#/components/messages/book'
+components:
+  messages:
+    order:
+      summary: The content of a book resource.
+      payload:
+        type: object
+        properties:
+          id:
+            type: string
+          name:
+            type: string
+          isbn:
+            type: string
+          abstract:
+            type: string
+----
+
+== Example AsyncAPI 2.0 specification
 
 Following is an example that you can copy into API Designer to get started with event-driven APIs. 
 
