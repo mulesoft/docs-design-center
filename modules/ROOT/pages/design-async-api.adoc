@@ -68,7 +68,10 @@ Defines where your application connects to start sending and receiving messages.
 ** order is the message defined, with the following properties:
 *** Summary describes the content of a book resource.
 *** Payload includes various properties representing the data fields. These properties specify the individual fields such as id, name, isbn, and abstract.
-+ 
+
+
+To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
 
 [source,yaml]
 ----
@@ -114,8 +117,6 @@ components:
 ----
 
 == Example AsyncAPI 2.0 specification
-
-Following is an example that you can copy into API Designer to get started with event-driven APIs. 
 
 This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
 
