@@ -70,6 +70,7 @@ Defines the binding.
 ** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders.
 +
 * Components
++
 Defines the structure of messages for the different types of orders, which include OrderPlaced, OrderCancelled, OrderConfirmed, and BackOrder.
 
 
