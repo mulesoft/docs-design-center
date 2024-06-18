@@ -71,7 +71,7 @@ Defines the binding.
 +
 * Components
 +
-Defines the structure of messages for the different types of orders, which include OrderPlaced, OrderCancelled, OrderConfirmed, and BackOrder.
+Defines the structure of messages for the different types of orders, which include `OrderPlaced`, `OrderCancelled`, `OrderConfirmed`, and `BackOrder`.
 
 
 To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
