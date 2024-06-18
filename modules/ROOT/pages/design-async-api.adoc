@@ -50,18 +50,21 @@ To import AsyncAPI specifications from Anypoint Exchange or from your filesystem
 
 Following is an example that you can copy into API Designer to get started with event-driven APIs. 
 
-This example is a typical event-driven process that is documented for easy reuse. It demonstrates how to define a Book asyncAPI using one channel.
-
+This example is a typical event-driven process that is documented for easy reuse. It defines an API specification that uses Anypoint MQ and Kafka protocols.
 Sections in the example specification are: 
 
 * AsyncAPI  
 + 
 Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
 * Servers
-Defines where your application connects to start sending and receiving messages.
+Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module.
+** AMQ-prod configures an Anypoint MQ Broker.
+** Kafka-prod configures a locally hosted Kafka broker.
 +
 * Channels
-** TestQueue is used for both subscribing to and publishing messages related to book resources.
+Defines the binding.
+** order-placed, order-cancelled, and order-confirmed configures  Anypoint MQ channels for publishing and subscribing to orders.
+** order-backordered configures a Kafka channel for publishing and subscribing to backorders.
 +
 * Components
 ** Messages defines the structure of the data being transmitted.
@@ -77,42 +80,137 @@ To try the example, create a new AsyncAPI specification in Design Center and cop
 ----
 asyncapi: '2.6.0'
 info:
-  title: AnypointMQBooks
+  title: Async-AMQ-kafka-test
   version: '1.0.0'
-  description: This example demonstrates how to define a Books AsyncAPI
-defaultContentType: application/json
-
+  description: Orders API
+tags:
+  - name: Orders API
+    description: API for orders
 servers:
-  testing:
+  AMQ-prod:
+    url: https:://your_MQ_server_URL_here
     protocol: anypointmq
     protocolVersion: v1
-    url: https://mq-us-east-1.qax.anypoint.mulesoft.com/api
-    description: 
-      Anypoint MQ broker for production, in the EU Central (Frankfurt) runtime plane 
-      under management of the EU control plane.
-
+    description: Anypoint MQ broker
+  Kafka-prod:
+    url: localhost:9092
+    protocol: kafka
+    description: kafka broker
 channels:
-  'TestQueue':
-    subscribe:
-      message:
-        $ref: '#/components/messages/book'      
+  order-placed:
+    description: new orders channel
+    servers:
+      - AMQ-prod
     publish:
+      operationId: listen-order-placed
+      description: listen for new order events
+      summary: Order Placed Event
       message:
-        $ref: '#/components/messages/book'
+        $ref: '#/components/messages/OrderPlaced'
+    subscribe:
+      operationId: publish-order-placed
+      description: publish new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+  order-cancelled:
+    description: orders cancelled channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-cancellations
+      description: listen for order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+    subscribe:
+      operationId: publish-order-cancellations
+      description: publish order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+  order-confirmed:
+    description: orders confirmed channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-confirmations
+      description: listen for order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+    subscribe:
+      operationId: publish-order-confirmations
+      description: publish order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+  order-backordered:
+    servers:
+      - Kafka-prod
+    description: orders backordered channel
+    publish:
+      operationId: listen-order-backordered
+      description: listen for backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
+    subscribe:
+      operationId: publish-order-backordered
+      description: publish backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
 components:
   messages:
-    order:
-      summary: The content of a book resource.
+    OrderPlaced:
       payload:
         type: object
         properties:
-          id:
+          orderId:
             type: string
-          name:
+          customerName:
             type: string
-          isbn:
+          email:
             type: string
-          abstract:
+          items:
+            type: array
+            items:
+              type: object
+              properties:
+                productId:
+                  type: string
+                productName:
+                  type: string
+                quantity:
+                  type: integer
+                price:
+                  type: number
+    OrderConfirmed:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+    OrderCancelled:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+          reason:
+            type: string
+    BackOrder:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
             type: string
 ----
 
