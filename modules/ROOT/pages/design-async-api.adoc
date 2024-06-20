@@ -1,10 +1,8 @@
 = AsyncAPI Specifications   
 
-You can design even-driven APIs using Async API in API Designer.
+You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
 
 AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/getting-started[AsyncAPI documentation]. 
-
-You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
 
 AsyncAPI makes it easy to work with event-driven architecture by separating the API into three layers:
 
@@ -65,7 +63,7 @@ Defines message brokers that determine the connectors to use (indirectly) when p
 Defines the action that the application takes and whether the event is consumed or published.
 +
 * Channels
-Defines the binding.
+Defines the bindings.
 ** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders.
 ** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders.
 +
