@@ -23,7 +23,7 @@ To create an AsyncAPI specification in API Designer:
 
 The text editor opens. 
 
-For more information on how to use API Designer, refer to xref:design-center::design-create-publish-api-raml-editor.adoc[Create an API Specification with the Text Editor].
+For more information about how to use API Designer, refer to xref:design-center::design-create-publish-api-raml-editor.adoc[].
 
 
 == Import AsyncAPI Specifications
