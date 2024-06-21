@@ -63,7 +63,7 @@ Defines message brokers that determine the connectors to use (indirectly) when p
 Defines the action that the application takes and whether the event is consumed or published.
 +
 * Channels
-Defines the bindings.
+Defines the bindings:
 ** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders.
 ** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders.
 +
