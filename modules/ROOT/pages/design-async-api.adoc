@@ -55,7 +55,7 @@ Sections in the example specification are:
 + 
 Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
 * Servers
-Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module.
+Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module:
 ** `AMQ-prod` configures an Anypoint MQ Broker.
 ** `Kafka-prod` configures a locally hosted Kafka broker.
 +
