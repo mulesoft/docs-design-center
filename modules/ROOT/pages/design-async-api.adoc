@@ -12,7 +12,7 @@ AsyncAPI makes it easy to work with event-driven architecture by separating the 
 
 You can create or import an API specification in API Designer.
 
-== Create an AsyncAPI specification in API Designer
+== Create an AsyncAPI Specification in API Designer
 
 To create an AsyncAPI specification in API Designer:
 
