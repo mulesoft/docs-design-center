@@ -48,7 +48,7 @@ To import AsyncAPI specifications from Anypoint Exchange or from your filesystem
 
 Following is an example that you can copy into API Designer to get started with event-driven APIs. 
 
-This example is a typical event-driven process that is documented for easy reuse. It defines an API specification that uses Anypoint MQ and Kafka protocols.
+The following API specification example defines a typical event-driven process that uses Anypoint MQ and Kafka protocols.
 Sections in the example specification are: 
 
 * AsyncAPI  
