@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :page-aliases: add-dependencies-task.adoc, design-api-basics-tasks.adoc, design-api-key-tasks.adoc, design-raml-api-task.adoc, design-update-remove-dep-task.adoc
 
-You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, OAS 2.0, OAS 3.0, AsyncAPI 2.6, and AsyncAPI 2.0. OAS and AsyncAPI API specifications can be created as JSON or YAML files.
+You can use API Designer's text editor to create API specifications directly in RAML 0.8, RAML 1.0, OAS 2.0, OAS 3.0, AsyncAPI 2.6, and AsyncAPI 2.0. You can create OAS and AsyncAPI API specifications as JSON or YAML files.
 
 == Before You Begin
 
