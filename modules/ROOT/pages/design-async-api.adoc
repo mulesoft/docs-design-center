@@ -1,10 +1,8 @@
 = AsyncAPI Specifications   
 
-You can design even-driven APIs using Async API in API Designer.
+You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
 
 AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/getting-started[AsyncAPI documentation]. 
-
-You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
 
 AsyncAPI makes it easy to work with event-driven architecture by separating the API into three layers:
 
@@ -14,10 +12,18 @@ AsyncAPI makes it easy to work with event-driven architecture by separating the 
 
 You can create or import an API specification in API Designer.
 
+== Create an AsyncAPI Specification in API Designer
+
 To create an AsyncAPI specification in API Designer:
 
 . In Design Center, click *Create New*.
 . Select *New AsyncAPI*.
+. In the *New AsyncAPI* dialog, name your project.
+. Select the AsyncAPI language under *Specification Language*.
+
+The text editor opens. 
+
+For more information about how to use API Designer, refer to xref:design-create-publish-api-raml-editor.adoc[].
 
 
 == Import AsyncAPI Specifications
@@ -38,9 +44,176 @@ To import AsyncAPI specifications from Anypoint Exchange or from your filesystem
 * View documentation that is included in AsyncAPI specifications.
 * Publish AsyncAPI specifications to Anypoint Exchange.
 
-=== Example AsyncAPI 2.0 specification
+== Example AsyncAPI 2.6 specification
 
 Following is an example that you can copy into API Designer to get started with event-driven APIs. 
+
+The following API specification example defines a typical event-driven process that uses Anypoint MQ and Kafka protocols.
+Sections in the example specification are: 
+
+* AsyncAPI  
++ 
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec  
+* Servers
+Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module:
+** `AMQ-prod` configures an Anypoint MQ Broker
+** `Kafka-prod` configures a locally hosted Kafka broker
++
+* Operation 
+Defines the action that the application takes and whether the event is consumed or published
++
+* Channels
+Defines the bindings:
+** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders
+** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders
++
+* Components
++
+Defines the structure of messages for the different types of orders, which include `OrderPlaced`, `OrderCancelled`, `OrderConfirmed`, and `BackOrder`
+
+
+To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
+
+[source,yaml]
+----
+asyncapi: '2.6.0'
+info:
+  title: Async-AMQ-kafka-test
+  version: '1.0.0'
+  description: Orders API
+tags:
+  - name: Orders API
+    description: API for orders
+servers:
+  AMQ-prod:
+    url: https:://your_MQ_server_URL_here
+    protocol: anypointmq
+    protocolVersion: v1
+    description: Anypoint MQ broker
+  Kafka-prod:
+    url: localhost:9092
+    protocol: kafka
+    description: kafka broker
+channels:
+  order-placed:
+    description: new orders channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-placed
+      description: listen for new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+    subscribe:
+      operationId: publish-order-placed
+      description: publish new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+  order-cancelled:
+    description: orders cancelled channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-cancellations
+      description: listen for order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+    subscribe:
+      operationId: publish-order-cancellations
+      description: publish order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+  order-confirmed:
+    description: orders confirmed channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-confirmations
+      description: listen for order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+    subscribe:
+      operationId: publish-order-confirmations
+      description: publish order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+  order-backordered:
+    servers:
+      - Kafka-prod
+    description: orders backordered channel
+    publish:
+      operationId: listen-order-backordered
+      description: listen for backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
+    subscribe:
+      operationId: publish-order-backordered
+      description: publish backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
+components:
+  messages:
+    OrderPlaced:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          customerName:
+            type: string
+          email:
+            type: string
+          items:
+            type: array
+            items:
+              type: object
+              properties:
+                productId:
+                  type: string
+                productName:
+                  type: string
+                quantity:
+                  type: integer
+                price:
+                  type: number
+    OrderConfirmed:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+    OrderCancelled:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+          reason:
+            type: string
+    BackOrder:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+----
+
+== Example AsyncAPI 2.0 specification
 
 This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
 
@@ -121,6 +294,6 @@ For documentation on using API Designer to work with your specification, see xre
 
 == See Also
 
-* xref:design-center::design-create-publish-api-specs.adoc[Design APIs in API Designer]
+* xref:design-create-publish-api-specs.adoc[Design APIs in API Designer]
 * xref:exchange::to-configure-api-settings.adoc[Configure API Instances in Exchange]
 * https://www.asyncapi.com/docs/getting-started[AsyncAPI]
