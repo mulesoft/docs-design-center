@@ -23,7 +23,7 @@ To create an AsyncAPI specification in API Designer:
 
 The text editor opens. 
 
-For more information about how to use API Designer, refer to xref:design-center::design-create-publish-api-raml-editor.adoc[].
+For more information about how to use API Designer, refer to xref:design-create-publish-api-raml-editor.adoc[].
 
 
 == Import AsyncAPI Specifications
@@ -53,23 +53,23 @@ Sections in the example specification are:
 
 * AsyncAPI  
 + 
-Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec  
 * Servers
 Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module:
-** `AMQ-prod` configures an Anypoint MQ Broker.
-** `Kafka-prod` configures a locally hosted Kafka broker.
+** `AMQ-prod` configures an Anypoint MQ Broker
+** `Kafka-prod` configures a locally hosted Kafka broker
 +
 * Operation 
-Defines the action that the application takes and whether the event is consumed or published.
+Defines the action that the application takes and whether the event is consumed or published
 +
 * Channels
 Defines the bindings:
-** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders.
-** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders.
+** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders
+** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders
 +
 * Components
 +
-Defines the structure of messages for the different types of orders, which include `OrderPlaced`, `OrderCancelled`, `OrderConfirmed`, and `BackOrder`.
+Defines the structure of messages for the different types of orders, which include `OrderPlaced`, `OrderCancelled`, `OrderConfirmed`, and `BackOrder`
 
 
 To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
@@ -294,6 +294,6 @@ For documentation on using API Designer to work with your specification, see xre
 
 == See Also
 
-* xref:design-center::design-create-publish-api-specs.adoc[Design APIs in API Designer]
+* xref:design-create-publish-api-specs.adoc[Design APIs in API Designer]
 * xref:exchange::to-configure-api-settings.adoc[Configure API Instances in Exchange]
 * https://www.asyncapi.com/docs/getting-started[AsyncAPI]
