@@ -108,7 +108,7 @@ image::apid-apic-oas-3-default-get.png["An API documentation page with code exam
 
 4. The `/duplicated` endpoint overrides the base `servers` definition, its local `servers` definition including only the last two servers of the original four. On the Overview page for the endpoint, you can select a server to see the URI for this endpoint at that server:
 +
-image::apid-apic-oas-3-duplicated.png["A dropdown menu to choose your server."]
+image::apid-apic-oas-3-duplicated.png["A dropdown menu for choosing your server."]
 
 5. The GET method for the `/duplicated` endpoint inherits the two servers in the local `servers` definition. On the page for this method, you can select a server to see the URI for this method at that server:
 +
