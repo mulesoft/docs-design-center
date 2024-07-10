@@ -96,43 +96,43 @@ paths:
 
 1. The Summary page of the documentation for this API lists the four servers that are defined in this `servers` field:
 +
-image::apid-apic-oas-3-summary.png[]
+image::apid-apic-oas-3-summary.png["A list of API servers and endpoints with their available methods."]
 
 2. The `/default` endpoint does not override the base `servers` definition at the top of the API. On the Overview page for the endpoint, you can select a server to see the URI for this endpoint at that server:
 +
-image::apid-apic-oas-3-default.png[]
+image::apid-apic-oas-3-default.png["A dialog box with a server selection dropdown and a GET button."]
 
 3. The GET method for the `/default` endpoint also inherits the four servers in the base `servers` definition. On the page for this method, you can select a server to see the URI for this method at that server:
 +
-image::apid-apic-oas-3-default-get.png[]
+image::apid-apic-oas-3-default-get.png["An API documentation page with code examples and responses."]
 
 4. The `/duplicated` endpoint overrides the base `servers` definition, its local `servers` definition including only the last two servers of the original four. On the Overview page for the endpoint, you can select a server to see the URI for this endpoint at that server:
 +
-image::apid-apic-oas-3-duplicated.png[]
+image::apid-apic-oas-3-duplicated.png["A dropdown menu to choose your server."]
 
 5. The GET method for the `/duplicated` endpoint inherits the two servers in the local `servers` definition. On the page for this method, you can select a server to see the URI for this method at that server:
 +
-image::apid-apic-oas-3-duplicated-get.png[]
+image::apid-apic-oas-3-duplicated-get.png["An API documentation page demonstrating the GET method for duplicate data."]
 
 6. The `/files` endpoint overrides the base `servers` definition, its local `servers` definition including only one server. On the Overview page for this endpoint, there are no servers to choose from, as there were for the previous two endpoints:
 +
-image::apid-apic-oas-3-files.png[]
+image::apid-apic-oas-3-files.png["An API documentation page with instructions for file upload and download actions."]
 
 7. The GET method for the `/files` endpoint inherits the one server in the local `servers` definition. On the page for this method, there is no list of servers to choose from:
 +
-image::apid-apic-oas-3-files-get.png[]
+image::apid-apic-oas-3-files-get.png["An API documentation page illustrating the GET method for file retrieval, complete with code examples and responses.]
 
 8. The `/ping` endpoint overrides the base `servers` definition, its local `servers` definition including only one server. On the Overview page for this endpoint, there are no servers to choose from:
 +
-image::apid-apic-oas-3-ping.png[]
+image::apid-apic-oas-3-ping.png["An arrow points to a URL."]
 
 9. The `GET` method for the `/ping` endpoint overrides both the base `servers` definition and the `/ping` endpoint's local `servers` definition. The `GET` method's local `servers` definition includes two servers. On the page for this method, you can select a server to see the URI for this method at that server:
 +
-image::apid-apic-oas-3-ping-get.png[]
+image::apid-apic-oas-3-ping-get.png["A form with a server selection dropdown, a GET request button, and illustrative code snippets.]
 
 10. The POST method for the `/ping` endpoint inherits the one server in the `/ping` endpoint's local `servers` definition. On the Overview page for this endpoint, there is no list of servers to choose from:
 +
-image::apid-apic-oas-3-ping-post.png[]
+image::apid-apic-oas-3-ping-post.png["a code snippet that demonstrates the post method for /ping."]
 
 == Documentation for Links and Callbacks
 
@@ -294,12 +294,12 @@ paths:
 
 1. The links for the 200 response for the `POST` method of the `/subscribe` endpoint appear at the bottom of the method's documentation:
 +
-image::apid-apic-oas-3-links-1.png[]
+image::apid-apic-oas-3-links-1.png["Two tables with variable and expression columns.]
 
 2. The links for the 402 response for the `POST` method of the `/subscribe` endpoint appear at the bottom of the method's documentation:
 +
-image::apid-apic-oas-3-links-2.png[]
+image::apid-apic-oas-3-links-2.png["A table that displays variables and their expressions."]
 
 The documentation for callouts 3-5 appear in the *Callbacks* section of the documentation for the `POST` method of the `/subscribe` endpoint:
 
-image::apid-apic-oas-3-callbacks.png[]
+image::apid-apic-oas-3-callbacks.png["A list of API calls, including parameters, body, and responses."]
