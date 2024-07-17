@@ -79,9 +79,17 @@ To try the example, create a new AsyncAPI specification in Design Center and cop
 ----
 asyncapi: '2.6.0'
 info:
-  title: Async-AMQ-kafka-test
+  title: Async-AMQ-Kafka-Orders
   version: '1.0.0'
   description: Orders API
+  license:
+    name: Anypoint MQ
+    url: https://license.com
+  contact:
+    name: Max Muley
+    email: max@salesforce.com
+    url: http://www.salesforce.com
+defaultContentType: application/json
 tags:
   - name: Orders API
     description: API for orders
@@ -95,7 +103,7 @@ servers:
     url: localhost:9092
     protocol: kafka
     description: kafka broker
-channels:
+channels: 
   order-placed:
     description: new orders channel
     servers:
@@ -110,6 +118,22 @@ channels:
       operationId: publish-order-placed
       description: publish new order events
       summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+  order-updated:
+    description: updated orders channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-updated
+      description: listen for updated order events
+      summary: Order updated Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+    subscribe:
+      operationId: publish-order-updated
+      description: publish updated order events
+      summary: Order updated Event
       message:
         $ref: '#/components/messages/OrderPlaced'
   order-cancelled:
