@@ -44,7 +44,7 @@ You can use the mocking service for RAML or OAS APIs to:
 
 == Share in Exchange and API Manager
 
-You can publish an API specification to Anypoint Exchange for use in API Manager, Anypoint Studio, or Flow Designer. You can also add an API specification directly to API Manager.
+You can publish an API specification to Anypoint Exchange for use in API Manager, or Anypoint Studio. You can also add an API specification directly to API Manager.
 
 == Use Specifications and Fragments Across MuleSoft Products
 
