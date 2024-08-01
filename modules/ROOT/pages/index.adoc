@@ -21,7 +21,7 @@ You must meet the following requirements for accessing Design Center, using its 
 To deploy to the production environment from Design Center, your user account also needs to be assigned to a CloudHub Developer role specifically for the production environment.
 
 == Where to Start Using Design Center
-To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears. See the documentation for API Designer and for Flow Designer for the steps to create projects for those tools.
+To start using Design Center, click Design Center after signing into Anypoint Platform. The Projects list appears. See the documentation for API Designer for the steps to create projects for those tools.
 
 == See Also
 
