@@ -22,7 +22,7 @@ To install the GitHub Synchronization application as a GitHub organization admin
 
 * In the email settings for the GitHub account you want to use with GitHub Synchronization, if you select *Keep my email addresses private*, ensure you do not select *Block command line pushes that expose my email*. The block setting prevents you from pushing commits in your synchronized project.
 
-* The GitHub integration supports only non-enterprise accounts.
+* The GitHub integration supports only non-enterprise accounts. For more information, refer to https://docs.github.com/en/enterprise-cloud@latest/get-started/learning-about-github/types-of-github-accounts[Types of Github Accounts].
 
 --
 
