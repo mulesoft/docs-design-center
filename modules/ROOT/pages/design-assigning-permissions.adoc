@@ -27,7 +27,6 @@ From the Design Center home page, you can select between three types of views fo
 
 *API Projects*: Lists all the projects you have access to.
 *Shared with me*: Lists only the projects shared with you by other users.
-*Mule flows*: Lists the Mule applications created by you. This view is available only if you have the Design Center Developer permission.
 
 == Sharing Projects from Design Center
 
