@@ -1,4 +1,4 @@
-= API Designer
+= Getting Started with API Designer
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,23 +12,6 @@ You can use the API Designer web UI to design API specifications in:
 * AsyncAPI 2.6 and AsyncAPI 2.0
 
 You can also design API fragments in RESTful API Modeling Language (RAML) version 0.8 or 1.0.
-
-== Design Using the Text or Visual Editor
-
-You can use either the text editor or the visual editor to create API specifications.
-
-With the text editor, you can:
-
-* Design according to best practices with a context-aware shelf that auto-populates with the appropriate methods, resources, parameters, and security components.
-* Include RAML API fragments, such as security schemas and data types, from Exchange or write your own.
-* Apply rulesets from Exchange to validate the governance conformance of your projects.
-* Import existing API specifications.
-
-With the visual editor, you can:
-
-* Create a specification for use cases in which you do not need to include RAML fragments.
-* Scaffold a specification that you can complete and customize in the text editor.
-
 
 == Add and View Documentation
 
