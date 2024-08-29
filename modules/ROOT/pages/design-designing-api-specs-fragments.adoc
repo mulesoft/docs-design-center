@@ -1,4 +1,4 @@
-== Designing API Specs and Fragments
+= Designing API Specs and Fragments
 
 Use API Designer to create, design, test, and publish new API Specifications.
 
