@@ -27,7 +27,7 @@
  ** xref:design-view-source-from-exchange.adoc[View the Source Project for Assets Published to Exchange]
  ** xref:design-publish.adoc[Publish an API Specification]
  ** xref:design-share-oas3-as-raml.adoc[Sharing an OAS 3.0 API Specification as RAML]
- * xref:placeholder.adoc[Managing API Specs and Fragments]
+ * xref:design-manage-api-specs-fragments.adoc[Managing API Specs and Fragments]
  ** xref:design-rename-project.adoc[Rename a Project]
  ** xref:design-delete-project.adoc[Delete a Project]
  ** xref:design-ghs-merge-branches.adoc[Merge Branches]
