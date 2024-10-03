@@ -258,25 +258,25 @@ channels:
           fields:
             - name: ID
               type: int
-              example: 1
+              default: 1
             - name: code
               type: string
-              example: ER38sd
+              default: ER38sd
             - name: price
               type: int
-              example: 400
+              default: 400
             - name: departureDate
               type: string
-              example: 2017/07/26
+              default: 2017/07/26
             - name: origin
               type: string
-              example: CLE
+              default: CLE
             - name: destination
               type: string
-              example: SFO
+              default: SFO
             - name: emptySeats
               type: int
-              example: 0
+              default: 0
             - name: plane
               type:
                 name: Plane
@@ -297,13 +297,13 @@ If you created an Avro Schema fragment, you can replace the initial API fragment
   "name": "AmericanFlightDataType",
   "type": "record",
   "fields": [
-    {"name": "ID", "type": "int", "example": 1},
-    {"name": "code", "type": "string", "example": "ER38sd"},
-    {"name": "price", "type": "int", "example": 400},
-    {"name": "departureDate", "type": "string", "example": "2017/07/26"},
-    {"name": "origin", "type": "string", "example": "CLE"},
-    {"name": "destination", "type": "string", "example": "SFO"},
-    {"name": "emptySeats", "type": "int", "example": 0},
+    {"name": "ID", "type": "int", "default": 1},
+    {"name": "code", "type": "string", "default": "ER38sd"},
+    {"name": "price", "type": "int", "default": 400},
+    {"name": "departureDate", "type": "string", "default": "2017/07/26"},
+    {"name": "origin", "type": "string", "default": "CLE"},
+    {"name": "destination", "type": "string", "default": "SFO"},
+    {"name": "emptySeats", "type": "int", "default": 0},
     {
       "name": "plane",
       "type": {
@@ -317,6 +317,23 @@ If you created an Avro Schema fragment, you can replace the initial API fragment
     }
   ]
 }
+----
+== Example Referencing an Avro Fragment from an Async API
+
+[source,yaml]
+----
+asyncapi: 2.6.0
+info:
+  title: Example AsyncAPI Spec (Inline Avro)
+  version: '1.0.0'
+channels:
+  myChannel:
+    publish:
+      message:
+        schemaFormat: application/vnd.apache.avro;version=1.9.0
+        payload:
+          $ref: AmericanFlightDataType.avsc
+
 ----
 
 == Example AsyncAPI 2.0 Specification
