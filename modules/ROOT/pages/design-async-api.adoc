@@ -44,7 +44,7 @@ To import AsyncAPI specifications from Anypoint Exchange or from your filesystem
 * View documentation that is included in AsyncAPI specifications.
 * Publish AsyncAPI specifications to Anypoint Exchange.
 
-== Example AsyncAPI 2.6 specification
+== Example AsyncAPI 2.6 Specification
 
 Following is an example that you can copy into API Designer to get started with event-driven APIs. 
 
@@ -236,8 +236,109 @@ components:
           email:
             type: string
 ----
+== Example AsyncAPI 2.6.0 Specification (Inline Avro)
 
-== Example AsyncAPI 2.0 specification
+If you created an AsyncAPI specification project, you can replace the initial API specification with following example code to test inlining the API specification fragments:
+
+
+[source,yaml]
+----
+asyncapi: 2.6.0
+info:
+  title: Example AsyncAPI Spec (Inline Avro)
+  version: '1.0.0'
+channels:
+  myChannel:
+    publish:
+      message:
+        schemaFormat: 'application/vnd.apache.avro;version=1.9.0'
+        payload:
+          name: AmericanFlightDataType
+          type: record
+          fields:
+            - name: ID
+              type: int
+              default: 1
+            - name: code
+              type: string
+              default: ER38sd
+            - name: price
+              type: int
+              default: 400
+            - name: departureDate
+              type: string
+              default: 2017/07/26
+            - name: origin
+              type: string
+              default: CLE
+            - name: destination
+              type: string
+              default: SFO
+            - name: emptySeats
+              type: int
+              default: 0
+            - name: plane
+              type:
+                name: Plane
+                type: record
+                fields:
+                  - name: type
+                    type: string
+                  - name: totalSeats
+                    type: int
+----
+== Example AsyncAPI Specification Fragment (Avro Schema)
+
+If you created an Avro Schema fragment, you can replace the initial API fragment with following example code:
+
+[source,yaml]
+----
+{
+  "name": "AmericanFlightDataType",
+  "type": "record",
+  "fields": [
+    {"name": "ID", "type": "int", "default": 1},
+    {"name": "code", "type": "string", "default": "ER38sd"},
+    {"name": "price", "type": "int", "default": 400},
+    {"name": "departureDate", "type": "string", "default": "2017/07/26"},
+    {"name": "origin", "type": "string", "default": "CLE"},
+    {"name": "destination", "type": "string", "default": "SFO"},
+    {"name": "emptySeats", "type": "int", "default": 0},
+    {
+      "name": "plane",
+      "type": {
+        "name": "Plane",
+        "type": "record",
+        "fields": [
+          {"name": "type", "type": "string"},
+          {"name": "totalSeats", "type": "int"}
+        ]
+      }
+    }
+  ]
+}
+----
+== Example Referencing an Avro Fragment from an Async API
+
+[source,yaml]
+----
+asyncapi: 2.6.0
+info:
+  title: Example AsyncAPI Spec (Inline Avro)
+  version: '1.0.0'
+channels:
+  myChannel:
+    publish:
+      message:
+        schemaFormat: application/vnd.apache.avro;version=1.9.0
+        payload:
+          $ref: AmericanFlightDataType.avsc
+
+----
+
+NOTE: For AVRO schema documents, `.avsc` is the default extension, but `.json` files are also supported.
+
+== Example AsyncAPI 2.0 Specification
 
 This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
 
