@@ -75,8 +75,7 @@ You can publish the API fragment to Anypoint Exchange.
 . Click the *Publish* button that is in the top-right corner of the text editor, and then click *Publish to Exchange*.
 . Specify a version number for the project, which Exchange treats as an _asset_. This number is displayed in Exchange in the *Version* section of the right pane in the page for the project.
 
-.In Anypoint Exchange, the asset version of your API-fragment project appears here.
-image:apid-location-of-asset-version-in-exchange.png[The location of the Versions section]
+.In Anypoint Exchange, you can see the asset version of your API-fragment project by clicking *View versions*.
 
 After you publish the API-fragment project, other developers can include its fragments as dependencies in their own API-specification projects.
 
