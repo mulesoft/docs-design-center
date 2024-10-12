@@ -13,7 +13,7 @@ The visual API editor is divided into three panels:
 
 === The Left Panel
 
-This panel displays the the name of the API specification being developed. It also provides controls that allow you to create resources, data types, and security schemes. These components all are included within the body of the specification and are not created as separate files.
+This panel displays the name of the API specification being developed. It also provides controls that allow you to create resources, data types, and security schemes. These components all are included within the body of the specification and are not created as separate files.
 
 === The Middle Panel
 
