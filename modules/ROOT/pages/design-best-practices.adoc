@@ -1,0 +1,23 @@
+= Best Practices when using API Designer
+
+When you perform tasks on Design Center, you might encounter issues. Use the following topics to help you resolve them.
+
+== API Designer Best Practices
+
+include::anypoint-code-builder::partial$acb-api-design.adoc[tag="apid-best-practices"]
+
+=== API Designer Resources
+
+When using API Designer, the required resources to parse the specification depend on the users own resources. For API Designer to function properly, ensure your computer has the following minimum resources available when using API Designer:
+
+include::anypoint-code-builder::partial$acb-api-design.adoc[tag="apid-resource-reqs"]
+
+
+=== OAS Specification Best Practices
+
+include::anypoint-code-builder::partial$acb-api-design.adoc[tag="apid-best-practices-oas"]
+
+
+=== RAML Specification Best Practices
+
+include::anypoint-code-builder::partial$acb-api-design.adoc[tag="apid-best-practices-raml"]

@@ -21,17 +21,20 @@ To install the GitHub Synchronization application as a GitHub organization admin
 * You cannot install and use GitHub Synchronization if your GitHub account uses an IP allow list. 
 
 * In the email settings for the GitHub account you want to use with GitHub Synchronization, if you select *Keep my email addresses private*, ensure you do not select *Block command line pushes that expose my email*. The block setting prevents you from pushing commits in your synchronized project.
+
+* The GitHub integration supports only non-enterprise accounts. See https://docs.github.com/en/enterprise-cloud@latest/get-started/learning-about-github/types-of-github-accounts[Types of Github Accounts].
+
 --
 
 === Install the GitHub Synchronization application
 
-. Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Synchronization application page^].
+. Navigate to the https://github.com/apps/mulesoft-github-integration[US GitHub Synchronization application page] or https://github.com/apps/mulesoft-github-integration-eu[EU Github Synchronization application page] depending on your region.
 . Click *Install*.
 . In the *Install MuleSoft GitHub Integration* dialog, select an organization in which to install the application.
 . Click *All repositories* to make all repositories available, or click *Only select repositories* and specify individual repositories.
 . Click *Install*.
 
-The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-sync-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
+The application must be authorized in API Designer to complete the integration with GitHub. See xref:design-ghs-install-authorize.adoc#authorize-the-github-synchronization-application-in-api-designer[Authorize the GitHub Sync Application in API Designer].
 
 == Install the GitHub Synchronization Application as a GitHub User
 
@@ -49,7 +52,7 @@ In the email settings for the GitHub account you want to use with GitHub Synchro
 
 === Install the GitHub Synchronization Application
 
-. Navigate to the https://github.com/apps/mulesoft-github-integration[GitHub Synchronization application page^].
+. Navigate to the https://github.com/apps/mulesoft-github-integration[US GitHub Synchronization application page ] or https://github.com/apps/muesoft-github-integration-eu[EU Github Synchronization application page] depending on your region.
 . Click *Install*.
 . In the *Install MuleSoft GitHub Integration* dialog, select a GitHub user account (typically the first items in the displayed list).
 . Click *All repositories* to make all repositories available or click *Only select repositories* and specify individual repositories.

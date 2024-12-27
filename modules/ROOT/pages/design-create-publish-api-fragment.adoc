@@ -1,4 +1,5 @@
 = Create and Publish an API Fragment in the Text Editor in API Designer
+:page-aliases: create-reuse-part-task.adoc, design-api-frag-revisions-concept.adoc
 
 You can create API fragments directly in RAML, OAS 3.0, and JSON Schema with the help of code suggestions that appear within the text editor. 
 
@@ -74,12 +75,21 @@ You can publish the API fragment to Anypoint Exchange.
 . Click the *Publish* button that is in the top-right corner of the text editor, and then click *Publish to Exchange*.
 . Specify a version number for the project, which Exchange treats as an _asset_. This number is displayed in Exchange in the *Version* section of the right pane in the page for the project.
 
-.In Anypoint Exchange, the asset version of your API-fragment project appears here.
-image:apid-location-of-asset-version-in-exchange.png[The location of the Versions section]
+.In Anypoint Exchange, you can see the asset version of your API-fragment project by clicking *View versions*.
 
 After you publish the API-fragment project, other developers can include its fragments as dependencies in their own API-specification projects.
 
 When you publish the API-fragment project, Exchange automatically creates an API portal for it.
+
+== OAS Components Limitations
+
+The following list displays OAS 3.0 limitations you must consider when writing your API Fragments:
+
+* Valid fields at the document root level are: `openapi`, `info`, `components`, and `paths`.
+
+* Valid fields in the `info` object are `title` and `version`.
+
+* The `paths` key must be an empty object.
 
 == See Also
 

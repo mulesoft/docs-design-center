@@ -140,11 +140,11 @@ To select a range, click an element and press Control + Shift + [Left Arrow | Ri
 
 For example, clicking `body:` in the following code, and pressing Control + Shift + Right Arrow creates a selection range that includes only `body:`:
 
-image:apid-helpful-text-editor-1.png[30%,30%]
+image:apid-helpful-text-editor-1.png["Example of a JSON response containing a person's first name.", <30%,30%>]
 
 Pressing Control + Shift + Right Arrow again results in the following selection range:
 
-image:apid-helpful-text-editor-2.png[30%,30%]
+image:apid-helpful-text-editor-2.png["A code snippet that demonstrates a JSON object with a key named firstname.", <30%,30%>]
 
 Pressing Control + Shift + Left Arrow collapses the selection range, leaving only `body:` selected again.
 
@@ -152,7 +152,7 @@ Pressing Control + Shift + Left Arrow collapses the selection range, leaving onl
 
 You can right-click anywhere in the document and select *Go to Symbol*, which presents the list of defined symbols: 
 
-image:apid-helpful-text-editor-3.png[75%,75%]
+image:apid-helpful-text-editor-3.png["A RAML code that defines a type and resource for a person.", <75%,75%>]
 
 Selecting a symbol navigates you to its location in the document.
 
@@ -162,11 +162,11 @@ You can take advantage of refactoring helpers to ease the continuous improvement
 
 When you select a range that matches an inline declarable element, an icon appears to the left of the element:
 
-image:apid-helpful-text-editor-4.png[37%,37%]
+image:apid-helpful-text-editor-4.png["A code that shows the definition of a "person" type, including a description, properties, and a manager type.", <37%,37%>]
 
 Click the icon and select *Extract to Declaration*, which results in the following two changes to the document:
 
-image:apid-helpful-text-editor-5.png[37%,37%]
+image:apid-helpful-text-editor-5.png["Code showcasing RAML for a test refactoring project.", <37%,37%>]
 
 The first callout shows that `type: lib.manager` is replaced with `type: newtype`. A `newtype` declaration now exists outside of the `manager` scope (as shown at the second callout), thereby making `newtype` reusable.
 

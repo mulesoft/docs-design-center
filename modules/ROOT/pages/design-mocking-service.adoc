@@ -1,4 +1,5 @@
 = Simulate API Calls with the Mocking Service
+:page-aliases: mocking-reference.adoc, publish-and-test-v-task.adoc, simulate-api-task.adoc
 
 The API mocking service enables you simulate the behavior of an API specification. The mocking service provides a test link to an API. The mocking service returns the responses (both HTTP status codes and example payloads) that are defined in your API specification, and is valuable for testing or for simply exploring how your API behaves.
 

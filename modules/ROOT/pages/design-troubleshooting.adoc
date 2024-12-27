@@ -1,0 +1,12 @@
+= Troubleshooting
+
+Troubleshoot errors you recieve when using API Designer:
+
+ ** xref:design-common-problems-raml-08.adoc[Common Problems in Conforming to RAML 0.8]
+ ** xref:design-common-problems-raml-10.adoc[Common Problems in Conforming to RAML 1.0]
+ ** xref:design-named-examples.adoc[Guide to Defining Examples in RAML 1.0]
+ ** xref:design-best-practices.adoc[Best Practices when using API Designer]
+ ** xref:design-json-schema-required-error.adoc[Common Errors in Specifying Required Fields in JSON Schemas]
+ ** xref:design-documentation.adoc[Differences for OAS 3.0 in Rendered Documentation]
+ ** xref:design-mocking-service.adoc[Simulate Calls to an API]
+ ** xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]

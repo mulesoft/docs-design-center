@@ -57,7 +57,7 @@ In Draft 4, you specify that fields are `required` by creating an array that is 
          50
          ]
       },
-    "required": [
+  "required": [
       "pageNum",
       "pageSize"
       ]
@@ -80,7 +80,7 @@ Here is another example of the method used in Draft 4:
         "city": {
           "type": "string"
         },
-        "required": [
+  "required": [
           "streetAddress",
           "city"
         ]

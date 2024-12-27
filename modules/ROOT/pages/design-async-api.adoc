@@ -1,0 +1,424 @@
+= AsyncAPI Specifications   
+
+You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
+
+AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/getting-started[AsyncAPI documentation]. 
+
+AsyncAPI makes it easy to work with event-driven architecture by separating the API into three layers:
+
+* Events: Message or data to be shared with other services
+* Channels: Destination of the message to be sent or received
+* Transport: Technology that transports the message, such as RabbitMQ, Kafka, or Anypoint MQ
+
+You can create or import an API specification in API Designer.
+
+== Create an AsyncAPI Specification in API Designer
+
+To create an AsyncAPI specification in API Designer:
+
+. In Design Center, click *Create New*.
+. Select *New AsyncAPI*.
+. In the *New AsyncAPI* dialog, name your project.
+. Select the AsyncAPI language under *Specification Language*.
+
+The text editor opens. 
+
+For more information about how to use API Designer, refer to xref:design-create-publish-api-raml-editor.adoc[].
+
+
+== Import AsyncAPI Specifications
+
+To import AsyncAPI specifications from Anypoint Exchange or from your filesystem:
+
+. Click the gear icon at the top right of the text editor.
+. Select from the following options:
++
+** Select *Import from Exchange* to see the following lists:
+*** API specifications that are available from the business organization that your user ID belongs to in Anypoint Platform
+*** API specifications that are published by MuleSoft
+** Select *Import* to import an API specification from your local filesystem.
++
+. As appropriate, continue to work with your AsyncAPI specification in API Designer:
+
+* Develop and edit AsyncAPI specifications.
+* View documentation that is included in AsyncAPI specifications.
+* Publish AsyncAPI specifications to Anypoint Exchange.
+
+== Example AsyncAPI 2.6 Specification
+
+Following is an example that you can copy into API Designer to get started with event-driven APIs. 
+
+The following API specification example defines a typical event-driven process that uses Anypoint MQ and Kafka protocols.
+Sections in the example specification are: 
+
+* AsyncAPI  
++ 
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec  
+* Servers
+Defines message brokers that determine the connectors to use (indirectly) when publishing events or subscribing to events through operations in the AsyncAPI module:
+** `AMQ-prod` configures an Anypoint MQ Broker
+** `Kafka-prod` configures a locally hosted Kafka broker
++
+* Operation 
+Defines the action that the application takes and whether the event is consumed or published
++
+* Channels
+Defines the bindings:
+** `order-placed`, `order-cancelled`, and `order-confirmed` configures Anypoint MQ channels for publishing and subscribing to orders
+** `order-backordered` configures a Kafka channel for publishing and subscribing to backorders
++
+* Components
++
+Defines the structure of messages for the different types of orders, which include `OrderPlaced`, `OrderCancelled`, `OrderConfirmed`, and `BackOrder`
+
+
+To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
+
+[source,yaml]
+----
+asyncapi: '2.6.0'
+info:
+  title: Async-AMQ-Kafka-Orders
+  version: '1.0.0'
+  description: Orders API
+  license:
+    name: Anypoint MQ
+    url: https://license.com
+  contact:
+    name: Max Muley
+    email: max@salesforce.com
+    url: http://www.salesforce.com
+defaultContentType: application/json
+tags:
+  - name: Orders API
+    description: API for orders
+servers:
+  AMQ-prod:
+    url: https:://your_MQ_server_URL_here
+    protocol: anypointmq
+    protocolVersion: v1
+    description: Anypoint MQ broker
+  Kafka-prod:
+    url: localhost:9092
+    protocol: kafka
+    description: kafka broker
+channels: 
+  order-placed:
+    description: new orders channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-placed
+      description: listen for new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+    subscribe:
+      operationId: publish-order-placed
+      description: publish new order events
+      summary: Order Placed Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+  order-updated:
+    description: updated orders channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-updated
+      description: listen for updated order events
+      summary: Order updated Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+    subscribe:
+      operationId: publish-order-updated
+      description: publish updated order events
+      summary: Order updated Event
+      message:
+        $ref: '#/components/messages/OrderPlaced'
+  order-cancelled:
+    description: orders cancelled channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-cancellations
+      description: listen for order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+    subscribe:
+      operationId: publish-order-cancellations
+      description: publish order cancellation events
+      summary: Order Cancelled Event
+      message:
+        $ref: '#/components/messages/OrderCancelled'
+  order-confirmed:
+    description: orders confirmed channel
+    servers:
+      - AMQ-prod
+    publish:
+      operationId: listen-order-confirmations
+      description: listen for order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+    subscribe:
+      operationId: publish-order-confirmations
+      description: publish order confirmation events
+      summary: Order Confirmed Event
+      message:
+        $ref: '#/components/messages/OrderConfirmed'
+  order-backordered:
+    servers:
+      - Kafka-prod
+    description: orders backordered channel
+    publish:
+      operationId: listen-order-backordered
+      description: listen for backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
+    subscribe:
+      operationId: publish-order-backordered
+      description: publish backorder events
+      summary: Backorder Event
+      message:
+        $ref: '#/components/messages/BackOrder'
+components:
+  messages:
+    OrderPlaced:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          customerName:
+            type: string
+          email:
+            type: string
+          items:
+            type: array
+            items:
+              type: object
+              properties:
+                productId:
+                  type: string
+                productName:
+                  type: string
+                quantity:
+                  type: integer
+                price:
+                  type: number
+    OrderConfirmed:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+    OrderCancelled:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+          reason:
+            type: string
+    BackOrder:
+      payload:
+        type: object
+        properties:
+          orderId:
+            type: string
+          email:
+            type: string
+----
+== Example AsyncAPI 2.6.0 Specification (Inline Avro)
+
+If you created an AsyncAPI specification project, you can replace the initial API specification with following example code to test inlining the API specification fragments:
+
+
+[source,yaml]
+----
+asyncapi: 2.6.0
+info:
+  title: Example AsyncAPI Spec (Inline Avro)
+  version: '1.0.0'
+channels:
+  myChannel:
+    publish:
+      message:
+        schemaFormat: 'application/vnd.apache.avro;version=1.9.0'
+        payload:
+          name: AmericanFlightDataType
+          type: record
+          fields:
+            - name: ID
+              type: int
+              default: 1
+            - name: code
+              type: string
+              default: ER38sd
+            - name: price
+              type: int
+              default: 400
+            - name: departureDate
+              type: string
+              default: 2017/07/26
+            - name: origin
+              type: string
+              default: CLE
+            - name: destination
+              type: string
+              default: SFO
+            - name: emptySeats
+              type: int
+              default: 0
+            - name: plane
+              type:
+                name: Plane
+                type: record
+                fields:
+                  - name: type
+                    type: string
+                  - name: totalSeats
+                    type: int
+----
+== Example AsyncAPI Specification Fragment (Avro Schema)
+
+If you created an Avro Schema fragment, you can replace the initial API fragment with following example code:
+
+[source,yaml]
+----
+{
+  "name": "AmericanFlightDataType",
+  "type": "record",
+  "fields": [
+    {"name": "ID", "type": "int", "default": 1},
+    {"name": "code", "type": "string", "default": "ER38sd"},
+    {"name": "price", "type": "int", "default": 400},
+    {"name": "departureDate", "type": "string", "default": "2017/07/26"},
+    {"name": "origin", "type": "string", "default": "CLE"},
+    {"name": "destination", "type": "string", "default": "SFO"},
+    {"name": "emptySeats", "type": "int", "default": 0},
+    {
+      "name": "plane",
+      "type": {
+        "name": "Plane",
+        "type": "record",
+        "fields": [
+          {"name": "type", "type": "string"},
+          {"name": "totalSeats", "type": "int"}
+        ]
+      }
+    }
+  ]
+}
+----
+== Example Referencing an Avro Fragment from an Async API
+
+[source,yaml]
+----
+asyncapi: 2.6.0
+info:
+  title: Example AsyncAPI Spec (Inline Avro)
+  version: '1.0.0'
+channels:
+  myChannel:
+    publish:
+      message:
+        schemaFormat: application/vnd.apache.avro;version=1.9.0
+        payload:
+          $ref: AmericanFlightDataType.avsc
+
+----
+
+NOTE: For AVRO schema documents, `.avsc` is the default extension, but `.json` files are also supported.
+
+== Example AsyncAPI 2.0 Specification
+
+This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
+
+Sections in the example specification are: 
+
+* AsyncAPI  
++ 
+Identifies the API model as AsyncAPI and specifies the title and version of the API spec.  
++ 
+* Channels
+** The book_trade channel enables you to specify the buy/sell order, symbol, and number of shares you would like to purchase.
+** The trade_result channel returns the result of the transaction.
+
+To try the example, create a new AsyncAPI specification in Design Center and copy the following code directly into API Designer:
+
+[source,yaml]
+----
+asyncapi: 2.0.0
+info:
+  title: Async Request/Trade API
+  version: 0.1.0
+
+channels:
+  book_trade:
+    publish:
+      message:
+        payload:
+          type: object
+          properties:
+            trade-id:
+              type: integer
+              minimum: 0
+              description: the order id of the message coming
+            trade-symbol:
+              type: string
+              minimum: 0
+              Description: ticker symbol of the stock.
+            trade-type:
+              type: string
+              format: string
+              description: BUY or SELL 
+            trade-amount:
+              type: number
+              format: float
+              description: the number of shares to be traded.
+  trade_result:
+    subscribe:
+      message:
+        payload:
+          type: object
+          properties:
+            trade-id:
+              type: integer
+              minimum: 0
+              description: the order id of the message coming
+            trade-symbol:
+              type: string
+              format: string
+              description: ticker symbol of the stock.
+            trade-time:
+              format: date-time
+              description: date and time of the order.
+            trade-amount:
+              type: number
+              format: float
+              description: the number of shares to be traded.
+            trade-type:
+              type: string
+              format: string
+              description: BUY or SELL 
+            trade-status:
+              type: string
+              format: string
+              description: PENDING, PROCESSED and FAILED
+----
+
+For documentation on using API Designer to work with your specification, see xref:design-center::design-create-publish-api-specs.adoc[API Designer].
+
+== See Also
+
+* xref:design-create-publish-api-specs.adoc[Design APIs in API Designer]
+* xref:exchange::to-configure-api-settings.adoc[Configure API Instances in Exchange]
+* https://www.asyncapi.com/docs/getting-started[AsyncAPI]
