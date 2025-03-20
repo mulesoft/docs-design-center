@@ -68,6 +68,9 @@ The text editor suggests RAML nodes, methods, and other elements that you can ad
 +
 You can import files into your project, either separately or bundled in .zip files. The files can be RAML 1.0 files, JSON files, OpenAPI Specification (OAS) 2.0, or OAS 3.0 files. The files can be on your computer or you can specify a URL for them if they are located online.
 
+WARNING: File uploads are restricted to supported formats. 
+
+
 == What to Do Next
 
 You can publish the API fragment to Anypoint Exchange.

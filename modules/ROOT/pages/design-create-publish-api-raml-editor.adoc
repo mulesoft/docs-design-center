@@ -67,6 +67,8 @@ For more information about importing files and steps for how to import them, see
 +
 For information about adding API fragments to your project, see "Add a RAML API Fragment to an API-Specification Project as a Dependency", which is linked to from the *See also* section at the end of this topic.
 
+WARNING: File uploads are restricted to supported formats. 
+
 * *Simulate calls to your API* 
 +
 When you draft a REST API specification, you can simulate calls to the specified endpoints.
