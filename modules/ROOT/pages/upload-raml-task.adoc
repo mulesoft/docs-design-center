@@ -5,6 +5,8 @@ endif::[]
 
 You cannot publish an API specification to Anypoint Exchange without going through API Designer. If you want to publish a specification that you have already authored outside of API Designer, you must create an API-specification project in API Designer, import your specification, and then publish to Anypoint Exchange.
 
+WARNING: File uploads are restricted to supported formats. 
+
 == Before You Begin
 
 Within Anypoint Platform, your user ID must be assigned the Design Center Developer permission.

@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :page-aliases: design-import-oas-task.adoc, design-import-raml-task.adoc, designing-api-reference.adoc
 
+WARNING: File uploads are restricted to supported formats. 
+
 You can import RAML fragments, OAS components, and JSON schemas into an API-specification project.
 
 You can include more than one API specification in an API-specification project. You might want to have more than one specification in a project if the specifications are closely related in functionality. You must set one of the specifications as the root file of the project. However, you can change which file is the root file whenever you need to.
