@@ -919,7 +919,6 @@ Here are examples that would generate these errors:
 | Incorrect | Correct
 
 |
-[Incorrect examples]
 ----
 #%RAML 1.0
 title: Test
@@ -930,7 +929,6 @@ types:
 
 ----
 |
-[Fixed example]
 ----
 #%RAML 1.0
 title: Test
@@ -947,7 +945,6 @@ types:
 | Incorrect | Correct
 
 |
-[Incorrect examples]
 ----
 #%RAML 1.0
 title: Test
@@ -955,7 +952,6 @@ invalidfacet:
 version:
 ----
 |
-[Fixed example]
 ----
 #%RAML 1.0
 title: Test
@@ -969,7 +965,6 @@ version:
 | Incorrect | Correct
 
 |
-[Incorrect examples]
 ----
 #%RAML 1.0
 title: Test
@@ -985,7 +980,6 @@ types:
         type: Prop
 ----
 |
-[Fixed example]
 ----
 #%RAML 1.0
 title: Test
@@ -1028,7 +1022,6 @@ The following example both tries to merge two undefined types and uses incorrect
 | Incorrect | Correct
 
 |
-[Incorrect example]
 ----
 #%RAML 1.0
 title: test
@@ -1043,7 +1036,6 @@ types:
         type: string
 ----
 |
-[Fixed example]
 ----
 #%RAML 1.0
 title: test
@@ -1101,7 +1093,6 @@ In the incorrect example below, the value for the header `myHeader` has a typo. 
 | Incorrect | Correct
 
 |
-[Incorrect example]
 ----
 #%RAML 1.0
 title: test
@@ -1113,7 +1104,6 @@ types:
       MyHeader: someTypo
 ----
 |
-[Fixed example]
 ----
 #%RAML 1.0
 title: test
