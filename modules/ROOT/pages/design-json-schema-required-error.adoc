@@ -1,8 +1,12 @@
-= Common Mistake in Specifying Required Fields in JSON Schemas
+== Specifying Required Fields in JSON Schema Drafts
 
-Design Center supports both JSON Schema Draft 3 and JSON Schema Draft 4. The method of specifying fields as `required` differs in Draft 3 from the method used in Draft 4. In your API specifications, an error is indicated if you mix the method that you are using with a declaration of the wrong draft.
+Design Center supports JSON Schema Draft 3, Draft 4, and Draft 7. The way you specify `required` differs across drafts. You see an error if the draft you declare doesn't match the syntax you're using.
 
-In Draft 3, you specify fields as `required` in the definition of each field, as in this example:
+
+=== Draft 3
+
+In Draft 3, you specify that a field is `required` inside the definition of each field:
+
 ----
 {
   "$schema": "http://json-schema.org/draft-03/schema#",
@@ -11,82 +15,75 @@ In Draft 3, you specify fields as `required` in the definition of each field, as
     "pageNum": {
       "type": "integer",
       "title": "Page number",
-      "description": "...",
+      "description": "The number of the page to retrieve",
       "default": 1,
       "required": true
     },
     "pageSize": {
       "type": "integer",
       "title": "Page size",
-      "description": "...",
-      "required": true,
+      "description": "The number of items per page",
       "default": 50,
-      "enum": [
-         10,
-         20,
-         30,
-         40,
-         50
-         ]
-      }
-...
+      "enum": [10, 20, 30, 40, 50],
+      "required": true
+    }
+  }
+}
 ----
 
-In Draft 4, you specify that fields are `required` by creating an array that is at the same level as the definitions of the fields, like this:
+=== Draft 4
+
+In Draft 4, you specify that fields are `required` by creating an array at the same level as the `properties` definition:
+
 ----
 {
-  "$schema": "http://json-schema.org/draft-4/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
     "pageNum": {
       "type": "integer",
       "title": "Page number",
-      "description": "...",
+      "description": "The number of the page to retrieve",
       "default": 1
     },
     "pageSize": {
       "type": "integer",
       "title": "Page size",
-      "description": "...",
+      "description": "The number of items per page",
       "default": 50,
-      "enum": [
-         10,
-         20,
-         30,
-         40,
-         50
-         ]
-      },
-  "required": [
-      "pageNum",
-      "pageSize"
-      ]
-    },
-...
-----
-
-Here is another example of the method used in Draft 4:
-----
-{
-  "$schema": "http://json-schema.org/draft-4/schema#",
-  "type": "object",
-  "properties": {
-    "address": {
-      "type": "object",
-      "properties": {
-        "streetAddress": {
-          "type": "string"
-        },
-        "city": {
-          "type": "string"
-        },
-  "required": [
-          "streetAddress",
-          "city"
-        ]
-      },
-      "phoneNumber": {
-...
+      "enum": [10, 20, 30, 40, 50]
+    }
+  },
+  "required": ["pageNum", "pageSize"]
+}
 ----
 
 If you have used the Draft 3 method after declaring that the schema uses Draft 4, or vice versa, in most cases you can simply change the schema declaration. For example, if you declared that your schema uses Draft 3, but the schema uses the method from Draft 4, you can change your schema declaration to point to Draft 4.
+
+=== Draft 7
+
+In Draft 7, the `required` syntax is the same as in Draft 4. You create an array at the same level as the `properties` definition:
+
+----
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "pageNum": {
+      "type": "integer",
+      "title": "Page number",
+      "description": "The number of the page to retrieve",
+      "default": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "title": "Page size",
+      "description": "The number of items per page",
+      "default": 50,
+      "enum": [10, 20, 30, 40, 50]
+    }
+  },
+  "required": ["pageNum", "pageSize"]
+}
+----
+
