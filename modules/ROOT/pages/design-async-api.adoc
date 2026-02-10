@@ -2,7 +2,7 @@
 
 You can create or import your AsyncAPI specifications in API Designer and then edit, document, and publish them. 
 
-AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/getting-started[AsyncAPI documentation]. 
+AsyncAPI is a language that describes messaging interfaces. This open-source, industry-standard language is agnostic to any technology. To learn more, see the https://www.asyncapi.com/docs/tutorials/getting-started[AsyncAPI documentation]. 
 
 AsyncAPI makes it easy to work with event-driven architecture by separating the API into three layers:
 
@@ -421,4 +421,4 @@ For documentation on using API Designer to work with your specification, see xre
 
 * xref:design-create-publish-api-specs.adoc[Design APIs in API Designer]
 * xref:exchange::to-configure-api-settings.adoc[Configure API Instances in Exchange]
-* https://www.asyncapi.com/docs/getting-started[AsyncAPI]
+* https://www.asyncapi.com/docs/tutorials/getting-started[AsyncAPI]
