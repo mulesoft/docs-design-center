@@ -1,0 +1,40 @@
+= API Designer Troubleshooting
+
+This page describes common issues that you might encounter when working in API Designer, along with their causes and recommended troubleshooting steps.
+
+== Preparing to publish" status persists
+
+While working in API Designer, you might experience one or more of the following:
+
+* The *Preparing to publish* dialog does not complete when publishing to Exchange
+* API specifications do not display validation errors, warnings, or suggestions
+* The API Console does not render or remains blank
+* The browser console shows a `NetworkError` related to loading the `anypoint-als.js` library
+
+This issue typically occurs when a required API Designer component fails to load due to network restrictions.
+
+API Designer relies on a background service (API Language Services) to enable validation and rendering. In some environments, corporate firewalls, VPNs, or proxies can block or interrupt the download of this component, preventing the editor from functioning correctly.
+
+=== Verification and diagnostics
+
+To verify whether your network is correctly delivering the required resources:
+
+* *Compare file delivery via cURL*  
+Run the following command and confirm the response is successful and the file size is approximately 1.5 MB:
+
+[source,bash]
+----
+curl -I https://cdn.anypoint.mulesoft.com/artifacts/api-designer-ui/app/static/js/anypoint-als.01bd90ee2cb9622ee518fcb3e30c444e.js
+----
+
+==== Troubleshooting
+
+To identify and resolve the issue:
+
+* *Test outside restricted networks*: try accessing API Designer without a corporate VPN or proxy.
+
+* *Use a clean browser session*: open a private or incognito window and disable browser extensions.
+
+* *Try a different browser*: switch to another browser (for example, Chrome, Edge, Firefox, or Safari).
+
+* *Check local security software*: ensure antivirus or endpoint protection tools are not blocking background scripts or service workers.
