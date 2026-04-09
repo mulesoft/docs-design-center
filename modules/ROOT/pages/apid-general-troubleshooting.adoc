@@ -2,7 +2,7 @@
 
 This page describes common issues that sometimes occur when working in API Designer, along with their causes and recommended troubleshooting steps.
 
-== Preparing to publish" status persists
+== Preparing to publish status persists
 
 While working in API Designer, these issues sometimes occur:
 
