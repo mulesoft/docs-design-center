@@ -15,6 +15,8 @@ Studio does not support OAS 3.0 fragments.
 [[add-dependencies-to-api-project]]
 == Add Dependencies to an API-Specification Project
 
+NOTE: You can add up to **100 dependencies** (Fragments and Rulesets) per project.  
+
 To add dependencies to an API-specification project:
 
 . In the text editor navigation menu, click the *Exchange dependencies* icon (image:manage-dependency-versions-design-center-d96c7.png[title="Exchange Dependencies icon"]).
@@ -110,4 +112,3 @@ After you add the rulesets as dependencies, you can view the conformance message
 
 * xref:api-governance::find-conformance-issues.adoc[Finding API Conformance Issues in API Specifications]
 * xref:exchange::to-create-an-asset.adoc[Create an Asset]
-
