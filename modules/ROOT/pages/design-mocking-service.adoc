@@ -45,7 +45,7 @@ API Designer displays the HTTP return code as specified in your API. Alternately
 When using the mocking service internal URL, you must provide authorization headers as part of the URL. To avoid this, use the mocking service public url.
 
 
-[#set-mocking-service-as-default]
+[[set-mocking-service-as-default]]
 == Setting the Mocking Service as the Default Server
 
 You can set the Mocking Service as the default server used in the *Documentation* panel. This is the default value that appears in the *Select server* drop-down.
