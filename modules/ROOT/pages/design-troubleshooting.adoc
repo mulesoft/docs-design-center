@@ -10,4 +10,4 @@ Troubleshoot errors you recieve when using API Designer:
  ** xref:design-documentation.adoc[Differences for OAS 3.0 in Rendered Documentation]
  ** xref:design-mocking-service.adoc[Simulate Calls to an API]
  ** xref:apid-behavioral-headers.adoc[Add Behavioral Headers to Simulated API Calls]
- ** xref:apid-general-troubleshooting.adoc [API Designer Troubleshooting]
+ ** xref:apid-general-troubleshooting.adoc[API Designer Troubleshooting]
