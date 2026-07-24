@@ -38,3 +38,7 @@ To identify and resolve the issue:
 * *Try a different browser*: Switch to another browser, such as Chrome, Edge, Firefox, or Safari.
 
 * *Check local security software*: Ensure antivirus or endpoint protection tools aren't blocking background scripts or service workers.
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
