@@ -1,4 +1,4 @@
-= Creating New GitHub Repositories Synchronized from an Existing Projects
+= Creating New GitHub Repositories Synchronized from Existing Projects
 
 You can create a new GitHub repository and synchronize it with an existing API Designer project. 
 
