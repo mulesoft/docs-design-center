@@ -338,6 +338,20 @@ channels:
 
 NOTE: For AVRO schema documents, `.avsc` is the default extension, but `.json` files are also supported.
 
+== Referencing RAML Fragments 
+
+AsyncAPI supports referencing external RAML content using the `$ref` mechanism, enabling the reuse of RAML data types and fragments stored in YAML or JSON files. 
+
+WARNING: `$ref` can only be used at the root of the payload definition. Nested `$ref` usage within RAML content is not valid.
+
+Example: 
+[source,yaml]
+----
+schemaFormat: application/raml+yaml;version=1.0
+payload:
+  $ref: "./types.raml#test"
+----
+
 == Example AsyncAPI 2.0 Specification
 
 This example is a typical event-driven process that is documented for easy reuse. It has a service with two channels, one that books the trade and another that gets the result of the booking asynchronously.
