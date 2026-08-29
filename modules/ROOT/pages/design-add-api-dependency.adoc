@@ -15,7 +15,7 @@ Studio does not support OAS 3.0 fragments.
 [[add-dependencies-to-api-project]]
 == Add Dependencies to an API-Specification Project
 
-NOTE: You can add up to **100 dependencies** (Fragments and Rulesets) per project.  
+NOTE: You can add up to 100 dependencies (Fragments and Rulesets) per project. 
 
 To add dependencies to an API-specification project:
 
