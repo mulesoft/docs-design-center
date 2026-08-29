@@ -15,7 +15,7 @@ When creating a RAML API fragment you can choose one of the following types defi
 
 * Library
 
-* Type
+* Data Type
 
 * User Documentation
 
