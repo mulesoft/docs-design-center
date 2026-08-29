@@ -31,7 +31,7 @@ types:
 
 .fragment.yaml
 ----
-givenName: ”Chiaki”
+givenName: "Chiaki"
 familyName: "Mukai"
 ----
 
@@ -57,7 +57,7 @@ types:
 ----
 #%RAML 1.0 NamedExample
 fullName:
-  givenName: ”Chiaki”
+  givenName: "Chiaki"
   familyName: "Mukai"
 ----
 
@@ -66,7 +66,7 @@ Do not use a fragment that looks like this:
 .fragment.raml
 ----
 #%RAML 1.0 NamedExample
-givenName: ”Chiaki”
+givenName: "Chiaki"
 familyName: "Mukai"
 ----
 
@@ -95,7 +95,7 @@ types:
 
 .fragment1.yaml
 ----
-givenName: ”Chiaki”
+givenName: "Chiaki"
 familyName: "Mukai"
 ----
 
@@ -127,7 +127,7 @@ types:
 ----
 #%RAML 1.0 NamedExample
 fullName:
-  givenName: ”Chiaki”
+  givenName: "Chiaki"
   familyName: "Mukai"
 
 otherFullName:
