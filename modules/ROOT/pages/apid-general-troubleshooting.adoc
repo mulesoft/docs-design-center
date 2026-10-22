@@ -33,7 +33,7 @@ To identify and resolve the issue:
 
 * *Test outside restricted networks*: Try accessing API Designer without a corporate VPN or proxy.
 
-* *Use a clean browser session*: Open a private or incognito window and disable browser extensions.
+* *Use a clean browser session*: Clear your browser's cache and cookies, then reload the page. Alternatively, open a private or incognito window and disable browser extensions.
 
 * *Try a different browser*: Switch to another browser, such as Chrome, Edge, Firefox, or Safari.
 
